@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generatedAt": "2026-11-26T18:34:53+00:00",
+ "generatedAt": "2026-11-26T18:58:27+00:00",
  "works": [
   {
    "id": "arensky-piano-trio-1",
@@ -4485,6 +4485,25 @@
      "oldSiteUrl": "http://www.mukkoo0701music.jp/2014/07/24/コレルリ-クリスマス協奏曲/",
      "assets": [
       {
+       "id": "solo-1",
+       "part": "solo",
+       "file": "/scores/corelli-christmas-concerto/solo-1.pdf",
+       "remote": "https://github.com/mukkoo0701office-max/SONARIA-Website/releases/download/scores-v1/corelli-christmas-concerto--solo-1.pdf",
+       "filename": "コレルリ：クリスマス協奏曲#soloVn1譜.pdf",
+       "preview": {
+        "file": "/scores/corelli-christmas-concerto/solo-1-p1.jpg",
+        "width": 600,
+        "height": 875
+       },
+       "sha256": "b339cac47f7a06bd45315549d04377e12165623e77ad3366f4b130f35fc65ea4",
+       "pages": 3,
+       "bytes": 901137,
+       "label": {
+        "ja": "1",
+        "en": "1"
+       }
+      },
+      {
        "id": "solo-2",
        "part": "solo",
        "file": "/scores/corelli-christmas-concerto/solo-2.pdf",
@@ -8884,6 +8903,21 @@
      },
      "oldSiteUrl": "http://www.mukkoo0701music.jp/2013/02/24/%E3%83%A2%E3%83%BC%E3%83%84%E3%82%A1%E3%83%AB%E3%83%88-%E3%83%87%E3%82%A3%E3%83%B4%E3%82%A7%E3%83%AB%E3%83%86%E3%82%A3%E3%83%A1%E3%83%B3%E3%83%88-k137/",
      "assets": [
+      {
+       "id": "violin1",
+       "part": "violin1",
+       "file": "/scores/mozart-divertimento-k137/violin1.pdf",
+       "remote": "https://github.com/mukkoo0701office-max/SONARIA-Website/releases/download/scores-v1/mozart-divertimento-k137--violin1.pdf",
+       "filename": "violin1.pdf",
+       "preview": {
+        "file": "/scores/mozart-divertimento-k137/violin1-p1.jpg",
+        "width": 600,
+        "height": 850
+       },
+       "sha256": "f7379a6c04f22bc7c3f3d8a646fd328d30781858a4d0a655039bc608ebb94d20",
+       "pages": 5,
+       "bytes": 195600
+      },
       {
        "id": "violin2",
        "part": "violin2",
