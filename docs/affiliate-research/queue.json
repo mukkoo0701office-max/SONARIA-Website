@@ -588,7 +588,10 @@
       "priority": "S",
       "status": "pending_review",
       "verification": "Publisher official product page verified title, ISMN, editors, content and format, but Amazon.co.jp matching ASIN and product listing unverified. Never fabricate a tagged link.",
-      "date_checked": "2026-11-27"
+      "date_checked": "2026-11-27",
+      "last_amazon_search_at": "2026-11-27",
+      "amazon_verification_status": "unverified_no_exact_listing",
+      "amazon_search_note": "Targeted web searches restricted to amazon.co.jp for publisher identifiers and exact ISMN yielded no trustworthy matching Amazon.co.jp/dp/ individual product page. Do not treat absent web result as proof unavailable. Re-check via authorized Associates product link tool."
     },
     {
       "id": "haydn-henle-hn9213",
@@ -619,7 +622,10 @@
       "priority": "S",
       "status": "pending_review",
       "verification": "Publisher official product page verified title, ISMN, editors, content and format, but Amazon.co.jp matching ASIN and product listing unverified. Never fabricate a tagged link.",
-      "date_checked": "2026-11-27"
+      "date_checked": "2026-11-27",
+      "last_amazon_search_at": "2026-11-27",
+      "amazon_verification_status": "unverified_no_exact_listing",
+      "amazon_search_note": "Targeted web searches restricted to amazon.co.jp for publisher identifiers and exact ISMN yielded no trustworthy matching Amazon.co.jp/dp/ individual product page. Do not treat absent web result as proof unavailable. Re-check via authorized Associates product link tool."
     },
     {
       "id": "haydn-henle-hn214",
@@ -755,9 +761,10 @@
       "status": "pending_review",
       "verification": "Henle publisher catalog 2026/27 independently confirms The Seven Last Words of Christ Hob.XX/1B string quartet, editor Christin Heitmann and separate HN851 performance parts vs HN9771 study score. Targeted Amazon.co.jp exact ISMN/HN searches did not produce a reliable item detail URL/ASIN; not Amazon-verified. Do not generate tagged links.",
       "date_checked": "2026-11-27",
-      "amazon_verification_status": "not_found",
+      "amazon_verification_status": "unverified_no_exact_listing",
       "last_amazon_search_at": "2026-11-27",
-      "publisher_catalog_evidence": "https://www.henle.de/media/b0/63/c1/1772528772/2026-2027%20GC.pdf"
+      "publisher_catalog_evidence": "https://www.henle.de/media/b0/63/c1/1772528772/2026-2027%20GC.pdf",
+      "amazon_search_note": "Targeted web searches restricted to amazon.co.jp for publisher identifiers and exact ISMN yielded no trustworthy matching Amazon.co.jp/dp/ individual product page. Do not treat absent web result as proof unavailable. Re-check via authorized Associates product link tool."
     },
     {
       "id": "haydn-henle-hn9771",
@@ -783,9 +790,10 @@
       "status": "pending_review",
       "verification": "Henle publisher catalog 2026/27 independently confirms The Seven Last Words of Christ Hob.XX/1B string quartet, editor Christin Heitmann and separate HN851 performance parts vs HN9771 study score. Targeted Amazon.co.jp exact ISMN/HN searches did not produce a reliable item detail URL/ASIN; not Amazon-verified. Do not generate tagged links.",
       "date_checked": "2026-11-27",
-      "amazon_verification_status": "not_found",
+      "amazon_verification_status": "unverified_no_exact_listing",
       "last_amazon_search_at": "2026-11-27",
-      "publisher_catalog_evidence": "https://www.henle.de/media/b0/63/c1/1772528772/2026-2027%20GC.pdf"
+      "publisher_catalog_evidence": "https://www.henle.de/media/b0/63/c1/1772528772/2026-2027%20GC.pdf",
+      "amazon_search_note": "Targeted web searches restricted to amazon.co.jp for publisher identifiers and exact ISMN yielded no trustworthy matching Amazon.co.jp/dp/ individual product page. Do not treat absent web result as proof unavailable. Re-check via authorized Associates product link tool."
     }
   ],
   "implementation_ready": 0,
@@ -793,19 +801,24 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Amazon.co.jp exact HN851/HN9771 and ISMN 9790201808512/9790201897714; Henle 2026/27 catalogue cross-check",
-    "result": "No trustworthy Amazon.co.jp individual product detail or ASIN for these two exact quartet publications. Cross-checked work identity and edition format in Henle's 2026/27 general catalogue. Both records remain pending_review; no tagged links, no price or availability claims.",
+    "focus": "Exact Amazon.co.jp individual detail/ASIN lookup HN851/HN9771 and Op.71/74 publisher items HN213/HN9213",
+    "result": "No exact Amazon.co.jp product detail page and matching ASIN was verified. Four preexisting Henle publisher-confirmed records audited; kept pending_review with null ASIN and URLs, no invented affiliate links. No new products added.",
     "new_publisher_confirmed": 0,
-    "existing_records_enriched": 2,
     "new_amazon_verified": 0,
+    "new_candidates": 0,
+    "existing_records_enriched": 4,
     "checked_candidates": [
       "haydn-henle-hn851",
-      "haydn-henle-hn9771"
+      "haydn-henle-hn9771",
+      "haydn-henle-hn213",
+      "haydn-henle-hn9213"
     ],
-    "sources": [
-      "https://www.henle.de/media/b0/63/c1/1772528772/2026-2027%20GC.pdf",
-      "https://www.henle.de/en/Haydn-Joseph/?order=name-asc&p=1&properties=06a08cf3dae645df844fdacd2b1e92b9"
+    "evidence_urls": [
+      "https://www.henle.de/jp/String-Quartets-Book-IX-op.-71-and-74-Apponyi-Quartets/HN-213",
+      "https://www.henle.de/jp/String-Quartets-Book-IX-op.-71-and-74-Apponyi-Quartets/HN-9213",
+      "https://www.henle.de/en/The-Seven-Last-Words-of-Christ-Arrangement-for-String-Quartet-Hob.-XX-1B/HN-851",
+      "https://www.henle.de/The-Seven-Last-Words-of-Christ-Arrangement-for-String-Quartet-Hob.-XX-1B/HN-9771"
     ],
-    "next": "Continue verified Amazon.co.jp search using Associates Product Linking / SiteStripe for exact ISMN, cross-check against HN851 (parts) and HN9771 (study score); avoid guessed ASIN."
+    "next": "Use official Amazon Associates product-link creation or Product Advertising API for exact ISMN/HN numbers. Confirm seller item format and ASIN before generating tag=mukkoo-22; do not repeatedly add only publisher-confirmed listings without Amazon matches."
   }
 }
