@@ -915,7 +915,7 @@
       "priority": "S",
       "status": "pending_review",
       "date_checked": "2026-11-27",
-      "amazon_verification_status": "not_verified",
+      "amazon_verification_status": "exact_amazon_co_jp_item_not_found",
       "last_amazon_search_at": "2026-11-27",
       "work_scope_note": "Henle HN216 is violin+viola ensemble, not violin+piano; do not recommend for historical Violin Sonatas Nos.2–8 that have a piano part.",
       "affiliate_note": "Amazon.co.jp direct edition listing and ASIN unresolved in exact ISMN / product search; a third-party Yamaha Sheet Music Store Haydn violin sonatas volume listing does not establish Amazon availability or exact edition match. Leave links empty until confirmed Amazon detail page.",
@@ -929,7 +929,22 @@
         "not": "violin+piano anthology; not six individually sold publications",
         "imslp_source_warning": "IMSLP Doblinger 1957 Hob.VI:1–3 lists separate Vn and Va parts but no suitable full score; the commercial Henle edition does not grant reuse or redistributable PDF"
       },
-      "retail_alternative_note": "A Sheet Music Store reseller result for a Henle violin/viola volume is not an Amazon.co.jp product detail page and cannot be used as Amazon affiliate URL or inferred Amazon ASIN."
+      "retail_alternative_note": "A Sheet Music Store reseller result for a Henle violin/viola volume is not an Amazon.co.jp product detail page and cannot be used as Amazon affiliate URL or inferred Amazon ASIN.",
+      "full_repertoire_check": {
+        "catalog": "HN216",
+        "instrumentation": "violin and viola",
+        "work_ids": [
+          "Hob.VI:1 F major",
+          "Hob.VI:2 A major",
+          "Hob.VI:3 B-flat major",
+          "Hob.VI:4 D major",
+          "Hob.VI:5 E-flat major",
+          "Hob.VI:6 C major"
+        ],
+        "product_count": "one commercial book covering all six sonatas",
+        "comparison_note": "Unrelated to 2-violin Op.6 duos. Missing free historical two-staff score and Vn/Va parts does NOT justify reusing commercial Henle publication."
+      },
+      "asin_verification_note": "Live Amazon.co.jp site-specific searches for catalogue HN216 and ISMN 9790201802169 returned no matching trustworthy direct Amazon.co.jp/dp detail URL; use authorized Associates Product Linking or official API. Do not manufacture ASIN, link, stock or price."
     },
     {
       "id": "haydn-peters-ep190-eight-violin-sonatas",
@@ -990,20 +1005,18 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Haydn Hob.VI:1-6 violin+viola performance edition HN216 verified against IMSLP parts-only sources, Amazon.co.jp ASIN lookup",
-    "result": "Henle confirms HN216 104pp, violin/viola all six duos, separate editors and ISMN 9790201802169. IMSLP Hob.VI:1–3 lists Doblinger 1957 both performing parts without full score, so SONARIA free score-plus-parts set remains incomplete, unlike commercial Henle alternative. Retailers outside Amazon advertise HN216 but exact Amazon.co.jp individual detail-page/ASIN was not verified. No affiliate link.",
+    "focus": "HN216 Hob.VI:4-6 authentic violin+viola duet coverage, exact Amazon Japan listing validation",
+    "result": "Publisher Henle HN216 confirms correct all-six work/key mapping. No matching Amazon.co.jp individual item ASIN identified for ISMN 9790201802169 or HN216, and no new commercial products added. 3 additional free-source candidates remain blocked without verifiable scan file IDs. Keep affiliate pending_review.",
+    "existing_records_enriched": 1,
     "new_candidates": 0,
     "new_amazon_verified": 0,
-    "existing_records_enriched": 1,
     "checked_candidates": [
       "haydn-henle-hn216-violin-viola"
     ],
-    "source_urls": [
+    "evidence_urls": [
       "https://www.henle.de/jp/Six-Sonatas-Hob.-VI-1-6-for-Violin-and-Viola/HN-216",
-      "https://imslp.org/wiki/String_Duo_in_F_major%2C_Hob.VI%3A1_%28Haydn%2C_Joseph%29",
-      "https://imslp.org/wiki/String_Duo_in_A_major%2C_Hob.VI%3A2_%28Haydn%2C_Joseph%29",
-      "https://imslp.org/wiki/String_Duo_in_B-flat_major%2C_Hob.VI%3A3_%28Haydn%2C_Joseph%29"
+      "https://imslp.org/wiki/List_of_works_by_Joseph_Haydn"
     ],
-    "next": "Before recommending any Amazon.co.jp HN216, independently obtain and validate exact-item Amazon ASIN via Amazon Associates SiteStripe or official product API. For IMSLP identify 2-staff score in appropriate publication or leave free download held; audit Hob.VI:4–6 next."
+    "next": "Verify exact HN216 Amazon.co.jp item through signed-in Associates or official API, with ASIN/edition/format proof. For future research proceed cello-sonata category; do not add unrelated products solely for queue growth."
   }
 }
