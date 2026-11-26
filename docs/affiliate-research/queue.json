@@ -80,7 +80,7 @@
       "priority": "S",
       "last_research_at": "2026-11-27",
       "amazon_verification_status": "unverified_exact_amazon_japan_item",
-      "verification_notes": "2026-11-27: Amazon.co.jp site-targeted catalog-number and ISMN search returned no verifiable direct Amazon product detail page/ASIN. Do not generate affiliate URL.",
+      "verification_notes": "2026-11-27 recheck: site:amazon.co.jp/dp/ exact Henle catalogue numbers HN205, HN208, HN9205, HN9216, HN211 and Japanese Amazon + exact ISMN queries produced no independently verifiable matching individual Amazon.co.jp product page or ASIN. Publisher identity only; keep pending_review. Do not use unrelated Haydn piano sonata books, CDs or marketplace search results as a match.",
       "ismn": "979-0-2018-0205-3",
       "editor": [
         "Georg Feder",
@@ -118,8 +118,8 @@
       "status": "pending_review",
       "priority": "S",
       "last_research_at": "2026-11-27",
-      "amazon_verification_status": "not_confirmed",
-      "verification_notes": "2026-11-27: Amazon.co.jpのHN205/HN208/HN211商品詳細とASINを照合するためウェブ検索したが、信頼できる個別商品結果を確認できず。公式商品情報との対応は保留。",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
+      "verification_notes": "2026-11-27 recheck: site:amazon.co.jp/dp/ exact Henle catalogue numbers HN205, HN208, HN9205, HN9216, HN211 and Japanese Amazon + exact ISMN queries produced no independently verifiable matching individual Amazon.co.jp product page or ASIN. Publisher identity only; keep pending_review. Do not use unrelated Haydn piano sonata books, CDs or marketplace search results as a match.",
       "product_format": "set_of_parts",
       "additional_source": "https://www.tapestrymusic.com/p-30939-haydn-string-quartets-vol-iv-op-20-sun-quartets-set-of-parts-edition-without-fingering-henle-hn-208.aspx",
       "ismn": "979-0-2018-0208-4",
@@ -127,7 +127,8 @@
         "Georg Feder",
         "Sonja Gerlach"
       ],
-      "preface": "Christin Heitmann"
+      "preface": "Christin Heitmann",
+      "last_amazon_search_at": "2026-11-27"
     },
     {
       "id": "haydn-henle-hn9205",
@@ -153,7 +154,7 @@
       "priority": "S",
       "last_research_at": "2026-11-27",
       "amazon_verification_status": "unverified_exact_amazon_japan_item",
-      "verification_notes": "2026-11-27: Amazon.co.jp site-targeted catalog-number and ISMN search returned no verifiable direct Amazon product detail page/ASIN. Do not generate affiliate URL.",
+      "verification_notes": "2026-11-27 recheck: site:amazon.co.jp/dp/ exact Henle catalogue numbers HN205, HN208, HN9205, HN9216, HN211 and Japanese Amazon + exact ISMN queries produced no independently verifiable matching individual Amazon.co.jp product page or ASIN. Publisher identity only; keep pending_review. Do not use unrelated Haydn piano sonata books, CDs or marketplace search results as a match.",
       "ismn": "979-0-2018-9205-4",
       "editor": [
         "Georg Feder",
@@ -184,12 +185,13 @@
       "status": "pending_review",
       "priority": "A",
       "last_research_at": "2026-11-27",
-      "amazon_verification_status": "not_confirmed",
-      "verification_notes": "2026-11-27: Amazon.co.jp site-targeted catalog-number and ISMN search returned no verifiable direct Amazon product detail page/ASIN. Do not generate affiliate URL.",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
+      "verification_notes": "2026-11-27 recheck: site:amazon.co.jp/dp/ exact Henle catalogue numbers HN205, HN208, HN9205, HN9216, HN211 and Japanese Amazon + exact ISMN queries produced no independently verifiable matching individual Amazon.co.jp product page or ASIN. Publisher identity only; keep pending_review. Do not use unrelated Haydn piano sonata books, CDs or marketplace search results as a match.",
       "ismn": "979-0-2018-9216-0",
       "product_format": "12-volume study-score slipcase",
       "pages": 1273,
-      "collection_includes": "HN 9205–9215 and HN 9771"
+      "collection_includes": "HN 9205–9215 and HN 9771",
+      "last_amazon_search_at": "2026-11-27"
     },
     {
       "id": "haydn-henle-hn211",
@@ -214,12 +216,13 @@
       "status": "pending_review",
       "priority": "S",
       "last_research_at": "2026-11-27",
-      "amazon_verification_status": "not_confirmed",
-      "verification_notes": "2026-11-27: Amazon.co.jp site-targeted catalog-number and ISMN search returned no verifiable direct Amazon product detail page/ASIN. Do not generate affiliate URL.",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
+      "verification_notes": "2026-11-27 recheck: site:amazon.co.jp/dp/ exact Henle catalogue numbers HN205, HN208, HN9205, HN9216, HN211 and Japanese Amazon + exact ISMN queries produced no independently verifiable matching individual Amazon.co.jp product page or ASIN. Publisher identity only; keep pending_review. Do not use unrelated Haydn piano sonata books, CDs or marketplace search results as a match.",
       "ismn": "979-0-2018-0211-4",
       "editor": "James Webster",
       "product_format": "four instrumental parts",
-      "pages": 187
+      "pages": 187,
+      "last_amazon_search_at": "2026-11-27"
     },
     {
       "id": "haydn-henle-hn9208",
@@ -1073,19 +1076,25 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Mozart K.80 and Italian string quartets K.155-160; Henle modern playing parts HN1120 versus pocket score HN7120 Amazon Japan exact matching",
-    "result": "Added two confirmed publisher-volume SKUs, HN1120 9790201811208 (187pp quartet performance parts), HN7120 9790201871202 (138pp pocket study score), which each include Lodi K.80, Salzburg divertimenti K.136–138, and Italian quartets K.155–160. These are separately sold formats, not one bundled product. Open Amazon.co.jp exact ISMN and /dp searches returned no verified product detail / ASIN, so hold as pending_review with null affiliate URLs. Modern Henle edition not used as free IMSLP download.",
-    "new_candidates": 2,
-    "new_publisher_confirmed": 2,
-    "new_amazon_verified": 0,
+    "focus": "Recheck requested Haydn Henle HN205/HN208/HN9205/HN9216/HN211 on Amazon.co.jp, direct /dp and ISMN exact search",
+    "result": "All five remain publisher-confirmed but no independently verifiable Amazon.co.jp product-detail page and ASIN found. Both targeted site:amazon.co.jp/dp/ HN catalogue-number searches and broader Japanese Amazon+ISMN searches failed to return matching individual product listings. Broad results are unrelated Haydn keyboard sonata publications and audio. Zero affiliate links generated; statuses remain pending_review. Queue retains 33 unique items.",
     "checked_candidates": [
-      "mozart-henle-hn1120-quartets-vol1-parts",
-      "mozart-henle-hn7120-quartets-vol1-study-score"
+      "haydn-henle-hn205",
+      "haydn-henle-hn208",
+      "haydn-henle-hn9205",
+      "haydn-henle-hn9216",
+      "haydn-henle-hn211"
     ],
+    "new_candidates": 0,
+    "new_publisher_confirmed": 0,
+    "new_amazon_verified": 0,
     "source_urls": [
-      "https://www.henle.de/String-Quartets-Volume-I-Salzburg-Divertimenti-Italian-Quartets/HN-1120",
-      "https://www.henle.de/jp/String-Quartets-Volume-I-Salzburg-Divertimenti-Italian-Quartets/HN-7120"
+      "https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-205",
+      "https://www.henle.de/jp/String-Quartets-Book-IV-op.-20-Sun-Quartets/HN-208",
+      "https://www.henle.de/String-Quartets-Book-I-Early-String-Quartets/HN-9205",
+      "https://www.henle.de/jp/The-String-Quartets-12-Volumes-in-a-Slipcase/HN-9216",
+      "https://www.henle.de/en/String-Quartets-Book-VII-op.-54-and-55-Tost-Quartets/HN-211"
     ],
-    "next": "For HN1120 / HN7120, use authenticated Amazon Associates Product Linking or authorized PA API to establish exact Japanese ASIN, seller/book edition and format. Avoid recording Amazon Music performances as printed scores. Next research K.155 and K.156 score and parts."
+    "next": "Continue with HN9208/HN206/HN9206 or use authenticated Amazon Associates link builder/authorized PA API to validate exact Amazon Japan ASIN; do not infer ASIN from ISMN, EAN or ISBN. Keep two ad slots max, disclose PR, and never expose price, stock, ratings or images without permitted integration."
   }
 }
