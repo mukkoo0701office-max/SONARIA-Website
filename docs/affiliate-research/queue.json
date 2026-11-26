@@ -809,10 +809,13 @@
       "status": "pending_review",
       "verification": "Henle publisher catalog 2026/27 independently confirms The Seven Last Words of Christ Hob.XX/1B string quartet, editor Christin Heitmann and separate HN851 performance parts vs HN9771 study score. Targeted Amazon.co.jp exact ISMN/HN searches did not produce a reliable item detail URL/ASIN; not Amazon-verified. Do not generate tagged links.",
       "date_checked": "2026-11-27",
-      "amazon_verification_status": "not_verified",
+      "amazon_verification_status": "not_confirmed_from_amazon_co_jp",
       "last_amazon_search_at": "2026-11-27",
       "publisher_catalog_evidence": "https://www.henle.de/media/b0/63/c1/1772528772/2026-2027%20GC.pdf",
-      "amazon_search_note": "Exact-match queries on Amazon.co.jp by HN number and ISMN returned no trustworthy Amazon.co.jp/dp/ listing; no product page/ASIN established. Publisher catalog/third party hits cannot authorize affiliate tagged URL. Use Associates link tool under signed-in account or authenticated official Product Advertising API for exact matching."
+      "amazon_search_note": "Exact-match queries on Amazon.co.jp by HN number and ISMN returned no trustworthy Amazon.co.jp/dp/ listing; no product page/ASIN established. Publisher catalog/third party hits cannot authorize affiliate tagged URL. Use Associates link tool under signed-in account or authenticated official Product Advertising API for exact matching.",
+      "related_free_imslp_candidate": "haydn-op51-seven-last-words-quartet-version-edition-review",
+      "repertoire_note": "Haydn Op.51 / Hob.XX/1B / Hob.III:50–56 is ONE multi-section string-quartet cycle, not seven separate quartets. The historical authorship/approval of quartet adaptation is discussed as disputed in IMSLP, avoid unsupported attribution claims.",
+      "affiliate_note": "Do not add Amazon link until verified exact Amazon.co.jp product detail page/ASIN for publisher item and actual format (HN851 parts; HN9771 study score). Open-web exact ISMN queries produced no matching Amazon.co.jp item. The separate modern Henle editions are not necessarily the same edition as historical free PDFs."
     },
     {
       "id": "haydn-henle-hn9771",
@@ -838,10 +841,13 @@
       "status": "pending_review",
       "verification": "Henle publisher catalog 2026/27 independently confirms The Seven Last Words of Christ Hob.XX/1B string quartet, editor Christin Heitmann and separate HN851 performance parts vs HN9771 study score. Targeted Amazon.co.jp exact ISMN/HN searches did not produce a reliable item detail URL/ASIN; not Amazon-verified. Do not generate tagged links.",
       "date_checked": "2026-11-27",
-      "amazon_verification_status": "not_verified",
+      "amazon_verification_status": "not_confirmed_from_amazon_co_jp",
       "last_amazon_search_at": "2026-11-27",
       "publisher_catalog_evidence": "https://www.henle.de/media/b0/63/c1/1772528772/2026-2027%20GC.pdf",
-      "amazon_search_note": "Exact-match queries on Amazon.co.jp by HN number and ISMN returned no trustworthy Amazon.co.jp/dp/ listing; no product page/ASIN established. Publisher catalog/third party hits cannot authorize affiliate tagged URL. Use Associates link tool under signed-in account or authenticated official Product Advertising API for exact matching."
+      "amazon_search_note": "Exact-match queries on Amazon.co.jp by HN number and ISMN returned no trustworthy Amazon.co.jp/dp/ listing; no product page/ASIN established. Publisher catalog/third party hits cannot authorize affiliate tagged URL. Use Associates link tool under signed-in account or authenticated official Product Advertising API for exact matching.",
+      "related_free_imslp_candidate": "haydn-op51-seven-last-words-quartet-version-edition-review",
+      "repertoire_note": "Haydn Op.51 / Hob.XX/1B / Hob.III:50–56 is ONE multi-section string-quartet cycle, not seven separate quartets. The historical authorship/approval of quartet adaptation is discussed as disputed in IMSLP, avoid unsupported attribution claims.",
+      "affiliate_note": "Do not add Amazon link until verified exact Amazon.co.jp product detail page/ASIN for publisher item and actual format (HN851 parts; HN9771 study score). Open-web exact ISMN queries produced no matching Amazon.co.jp item. The separate modern Henle editions are not necessarily the same edition as historical free PDFs."
     }
   ],
   "implementation_ready": 0,
@@ -849,22 +855,20 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Haydn Op.77/unfinished Op.103 Henle HN215/HN9215 paired edition audit; exact Amazon.co.jp ASIN search",
-    "result": "Henle original publisher confirms printed HN215 as quartet playing parts and HN9215 as separate study score; both include Op.77 two completed quartets and extant Op.103, which is unfinished as a composition. No direct Amazon.co.jp product page or ASIN verified via exact ISMN and title searches; held pending_review.",
+    "focus": "Haydn Op.51 free score+parts candidate linkage to commercial Henle HN851 and HN9771; Amazon Japan exact identifier audit",
+    "result": "Verified IMSLP historical Trautwein score and Le Duc individual quartet parts metadata. Cross-linked HN851 and HN9771 commercial candidates to ONE Op.51 cycle and flagged contested quartet-adaptation provenance; exact searches for 9790201808512 and 9790201897714 returned no confirmed Amazon.co.jp product detail / ASIN. Publisher editions remain pending_review.",
     "new_candidates": 0,
-    "new_publisher_confirmed": 0,
     "new_amazon_verified": 0,
     "existing_records_enriched": 2,
     "checked_candidates": [
-      "haydn-henle-hn215",
-      "haydn-henle-hn9215"
+      "haydn-henle-hn851",
+      "haydn-henle-hn9771"
     ],
-    "source_urls": [
-      "https://www.henle.de/jp/String-Quartets-Book-XI-op.-77-and-103-Lobkowitz-Quartets-and-last-Quartet/HN-215",
-      "https://www.henle.de/en/String-Quartets-Book-XI-op.-77-and-103-Lobkowitz-Quartets-and-last-Quartet/HN-9215",
-      "https://imslp.org/wiki/String_Quartets%2C_Op.77_%28Haydn%2C_Joseph%29",
-      "https://imslp.org/wiki/String_Quartet_in_D_minor%2C_Op.103_%28Haydn%2C_Joseph%29"
+    "evidence_urls": [
+      "https://imslp.org/wiki/Die_Worte_des_Erl%C3%B6sers_am_Kreuze%2C_Hob.III%3A50-56_%28Haydn%2C_Joseph%29",
+      "https://www.henle.de/en/The-Seven-Last-Words-of-Christ-Arrangement-for-String-Quartet-Hob.-XX-1B/HN-851",
+      "https://www.henle.de/The-Seven-Last-Words-of-Christ-Arrangement-for-String-Quartet-Hob.-XX-1B/HN-9771"
     ],
-    "next": "Verify exact Amazon.co.jp product listing using signed-in Associates Product Linking/SiteStripe or authorized API, retaining distinct performance-parts vs study-score products and Op.103 unfinished label. Do not invent ASIN or link."
+    "next": "For HN851/HN9771 obtain direct Amazon.co.jp item URLs using signed-in Amazon Associates Product Linking or official product API; then validate ASIN, edition format, relevant composer work and disclosure before approval."
   }
 }
