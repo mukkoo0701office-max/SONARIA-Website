@@ -37,12 +37,22 @@ jobs:
       - run: npm run lint
       - run: npm run build
 
-      # 静的書き出しで / と /ja /en の主要ページが生成されたかを確認する
+      # 静的書き出しで全ページが生成されたかを確認する（直接アクセス・リロードで表示できること）
       - name: Check exported pages
         run: |
-          for f in out/index.html out/ja/index.html out/en/index.html out/ja/scores/index.html out/en/scores/index.html out/ja/teachers/index.html out/ja/about/index.html out/.htaccess; do
-            test -f "$f" || { echo "missing: $f"; exit 1; }
+          test -f out/index.html || { echo "missing: out/index.html"; exit 1; }
+          test -f out/.htaccess || { echo "missing: out/.htaccess"; exit 1; }
+          for lang in ja en; do
+            for p in "" scores teachers teachers/profile bowing lessons recording performance community profile about contact legal/privacy; do
+              f="out/$lang/${p:+$p/}index.html"
+              test -f "$f" || { echo "missing: $f"; exit 1; }
+            done
           done
+
+      # 本番ビルドに講師のデモデータ（架空の講師）が入っていないことを確認する
+      - name: No demo teachers in production build
+        run: |
+          if grep -rq "デモ講師" out/; then echo "demo teacher data leaked into production build"; exit 1; fi
 
       - name: Upload lockfile
         if: always() && hashFiles('frontend/package-lock.json') != ''
@@ -59,6 +69,8 @@ jobs:
           grep -q '/SONARIA-Website/_next/' out/ja/index.html || { echo "basePath not applied"; exit 1; }
           grep -q 'href="/SONARIA-Website/ja/scores/"' out/ja/index.html || { echo "links missing basePath"; exit 1; }
           grep -q 'noindex' out/ja/index.html || { echo "preview noindex missing"; exit 1; }
+          grep -rq "デモ講師" out/ || { echo "preview should include demo teachers"; exit 1; }
+          grep -q '/SONARIA-Website/images/placeholders/home.svg' out/ja/index.html || { echo "image basePath missing"; exit 1; }
         env:
           NEXT_PUBLIC_BASE_PATH: /SONARIA-Website
           NEXT_PUBLIC_PREVIEW: "1"

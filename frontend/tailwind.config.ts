@@ -30,6 +30,7 @@ const config: Config = {
       },
       maxWidth: {
         content: "780px",
+        wide: "1200px",
       },
     },
   },

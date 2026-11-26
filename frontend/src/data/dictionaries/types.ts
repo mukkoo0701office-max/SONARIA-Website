@@ -1,6 +1,19 @@
+import type { ImageKey } from "@/data/images";
+import type { ServiceKey } from "@/data/services";
+import type { PageKey } from "@/data/site";
+import type { Audience, Instrument, InstrumentCategory, LessonFormat } from "@/data/teachers";
 import type { Ensemble, Era, MusicalForm } from "@/data/works";
 
+// 仮ページ（未完成のページ）の文言
+export type PlaceholderCopy = {
+  title: string;
+  lead: string;
+  body: readonly string[];
+};
+
 // 日英の文言は必ずこの型に沿って同じ構造で持つ（CLAUDE.md: 日英の文言は同じ構造のデータで持つ）
+// 関数を含むため、サーバーコンポーネントからクライアントコンポーネントへ辞書を props で渡さない。
+// クライアント側では getDictionary(locale) を直接呼ぶ。
 export type Dictionary = {
   meta: {
     siteTitle: string;
@@ -12,27 +25,59 @@ export type Dictionary = {
     languageNames: { ja: string; en: string };
     comingSoon: string;
     skipToContent: string;
+    learnMore: string;
+    externalSite: string;
+    backToHome: string;
   };
-  nav: {
-    home: string;
-    scores: string;
-    teachers: string;
-    about: string;
+  // ページ名（ナビ・パンくず・フッターで共通）
+  pages: Record<PageKey, string>;
+  header: {
     mainNavLabel: string;
+    menuOpen: string;
+    menuClose: string;
+    homeLinkLabel: string;
   };
   footer: {
+    siteLinksHeading: string;
+    supportHeading: string;
+    snsHeading: string;
+    snsPending: string;
     copyright: string;
-    legalPending: string;
   };
-  home: {
-    headline: string;
+  images: {
+    alt: Record<ImageKey, string>;
+  };
+  hero: {
+    label: string;
+    prev: string;
+    next: string;
+    pause: string;
+    play: string;
+    goTo: (index: number, title: string) => string;
+    slideOf: (index: number, total: number) => string;
+    slides: Record<PageKey, { title: string; catchCopy: string; cta: string }>;
+  };
+  homeTeacherSearch: {
+    heading: string;
     lead: string;
-    scoresCardTitle: string;
-    scoresCardBody: string;
-    scoresCardAction: string;
-    teachersCardTitle: string;
-    teachersCardBody: string;
-    teachersCardAction: string;
+    instrument: string;
+    region: string;
+    format: string;
+    formatAny: string;
+    formatInPerson: string;
+    formatOnline: string;
+    visiting: string;
+    submit: string;
+    detailLink: string;
+    freeNote: string;
+  };
+  servicesPickup: {
+    heading: string;
+    lead: string;
+    prev: string;
+    next: string;
+    note: string;
+    items: Record<ServiceKey, { title: string; body: string }>;
   };
   scores: {
     pageTitle: string;
@@ -71,12 +116,68 @@ export type Dictionary = {
   teachers: {
     pageTitle: string;
     headline: string;
-    body: string;
+    lead: string;
+    keyword: string;
+    keywordPlaceholder: string;
+    category: string;
+    categoryAll: string;
+    categories: Record<InstrumentCategory, string>;
+    instruments: Record<Instrument, string>;
+    prefecture: string;
+    prefectureAll: string;
+    format: string;
+    formats: Record<LessonFormat, string>;
+    gender: string;
+    genderOptions: { any: string; female: string; male: string };
+    audience: string;
+    audiences: Record<Audience, string>;
+    advanced: string;
+    count: string;
+    reset: string;
+    sort: string;
+    sortOptions: { name: string; area: string };
+    viewProfile: string;
+    empty: string;
+    noneYet: string;
+    demoNotice: string;
     rules: readonly string[];
+    travel: (minutes: number) => string;
+    nearestStation: (station: string) => string;
+    online: string;
+    pagePrev: string;
+    pageNext: string;
+    resultsLabel: string;
+    demoBadge: string;
+  };
+  teacherProfile: {
+    pageTitle: string;
+    breadcrumbLabel: string;
+    notFound: string;
+    instruments: string;
+    area: string;
+    formats: string;
+    audiences: string;
+    education: string;
+    selfDeclared: string;
+    intro: string;
+    externalLinks: string;
+    externalNote: string;
+    noExternalLinks: string;
+    backToSearch: string;
   };
   about: {
     pageTitle: string;
     headline: string;
     body: string;
+  };
+  placeholders: Record<
+    "bowing" | "lessons" | "recording" | "performance" | "community" | "profile" | "contact" | "privacy",
+    PlaceholderCopy
+  >;
+  community: {
+    externalLinkLabel: string;
+  };
+  services: {
+    priceLater: string;
   };
 };

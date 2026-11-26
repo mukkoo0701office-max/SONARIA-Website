@@ -1,9 +1,83 @@
-import type { Dictionary } from "@/data/dictionaries/types";
+import type { ImageKey } from "@/data/images";
 
-// ナビゲーション。表示名は dictionaries の nav から取る
-export const navItems: readonly { key: Exclude<keyof Dictionary["nav"], "mainNavLabel">; path: string }[] = [
-  { key: "home", path: "/" },
-  { key: "scores", path: "/scores/" },
-  { key: "teachers", path: "/teachers/" },
-  { key: "about", path: "/about/" },
+// ページの一覧。ナビ・スライド・フッター・仮ページはここを参照する
+export type PageKey =
+  | "home"
+  | "scores"
+  | "bowing"
+  | "lessons"
+  | "recording"
+  | "performance"
+  | "community"
+  | "profile"
+  | "teachers"
+  | "about"
+  | "contact"
+  | "privacy";
+
+export const pagePaths: Record<PageKey, string> = {
+  home: "/",
+  scores: "/scores/",
+  bowing: "/bowing/",
+  lessons: "/lessons/",
+  recording: "/recording/",
+  performance: "/performance/",
+  community: "/community/",
+  profile: "/profile/",
+  teachers: "/teachers/",
+  about: "/about/",
+  contact: "/contact/",
+  privacy: "/legal/privacy/",
+};
+
+// ヘッダーのナビ（トップページ改修指示書 v1.0 §2 の順序）
+export const headerNav: readonly PageKey[] = [
+  "home",
+  "scores",
+  "bowing",
+  "lessons",
+  "recording",
+  "performance",
+  "community",
+  "profile",
 ];
+
+// トップページのメインビジュアル（指示書 §3 の順序）。文言は dictionaries の hero.slides
+export const heroSlides: readonly { key: PageKey; image: ImageKey }[] = [
+  { key: "home", image: "home" },
+  { key: "scores", image: "scores" },
+  { key: "bowing", image: "bowing" },
+  { key: "lessons", image: "lessons" },
+  { key: "recording", image: "recording" },
+  { key: "performance", image: "performance" },
+  { key: "community", image: "community" },
+  { key: "profile", image: "profile" },
+];
+
+// フッターのサイト内リンク
+export const footerNav: readonly PageKey[] = [
+  "scores",
+  "teachers",
+  "bowing",
+  "lessons",
+  "recording",
+  "performance",
+  "community",
+  "about",
+  "profile",
+];
+
+// SNS。url が null のものはリンクにしない（クリックしても移動しない）
+// TODO: 正式な URL が決まったら設定する（https:// のみ）
+export type SocialKey = "x" | "instagram" | "youtube";
+export const socialLinks: readonly { key: SocialKey; label: string; url: string | null }[] = [
+  { key: "x", label: "X", url: null },
+  { key: "instagram", label: "Instagram", url: null },
+  { key: "youtube", label: "YouTube", url: null },
+];
+
+// 外部サイト
+export const externalLinks = {
+  // 向山弦楽コミュニティの既存サイト（docs/SONARIA_PROJECT_VISION.md §5）
+  community: "https://mukstrings.mints.ne.jp/",
+} as const;

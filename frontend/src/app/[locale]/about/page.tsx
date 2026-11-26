@@ -1,23 +1,33 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import Container from "@/components/layout/Container";
 import { getDictionary } from "@/data/dictionaries";
-import { isLocale, type Locale } from "@/lib/i18n";
+import { pagePaths } from "@/data/site";
+import { isLocale, localizedPath, type Locale } from "@/lib/i18n";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  return isLocale(locale) ? { title: getDictionary(locale).about.pageTitle } : {};
+  if (!isLocale(locale)) return {};
+  const t = getDictionary(locale).about;
+  return { title: t.pageTitle, description: t.body };
 }
 
-// TODO: 管理人プロフィールは別ページに分ける（個人を前面に出さない方針）
+// 管理人のプロフィールは別ページ（/profile/）に分ける（個人を前面に出さない方針）
 export default async function AboutPage({ params }: Props) {
-  const { locale } = await params;
-  const t = getDictionary(locale as Locale).about;
+  const { locale: raw } = await params;
+  const locale = raw as Locale;
+  const dict = getDictionary(locale);
+  const t = dict.about;
 
   return (
-    <section className="my-6">
+    <Container className="py-8 lg:py-12">
       <h1 className="mb-3 text-2xl font-bold">{t.headline}</h1>
       <p className="text-sm leading-relaxed">{t.body}</p>
-    </section>
+      <Link href={localizedPath(locale, pagePaths.profile)} className="mt-6 inline-block text-[13px] text-navy underline">
+        {dict.pages.profile}
+      </Link>
+    </Container>
   );
 }
