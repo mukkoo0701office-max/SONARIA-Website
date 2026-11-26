@@ -113,6 +113,18 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   await page.goto(`${base}/en/scores/`, { waitUntil: "networkidle" });
   await shot(page, `${vpName}-en-scores`);
 
+  // 楽譜ライブラリ（プレビューの表示確認用サンプル）
+  for (const [path, name] of [["ja/scores/sample-beethoven-violin-sonata-5", "ja-work"], ["ja/composers/beethoven", "ja-composer"], ["ja/composers", "ja-composers"]]) {
+    const res = await page.goto(`${base}/${path}/`, { waitUntil: "networkidle" });
+    check(`${vpName}: /${path}/ loads`, res && res.status() === 200, String(res && res.status()));
+    await shot(page, `${vpName}-${name}`);
+  }
+  await page.goto(`${base}/ja/scores/sample-beethoven-violin-sonata-5/`, { waitUntil: "networkidle" });
+  await page.getByRole("button", { name: "プレビュー" }).first().click();
+  await page.waitForTimeout(1500);
+  check(`${vpName}: PDF preview iframe opens`, (await page.locator("iframe[title*='PDF']").count()) === 1, "");
+  await shot(page, `${vpName}-ja-work-preview`);
+
   check(`${vpName}: no page errors`, errors.length === 0, errors.slice(0, 3).join(" | "));
   await context.close();
 }
