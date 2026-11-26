@@ -289,7 +289,8 @@ def merge_mode(base: str, parts: list[str]) -> None:
     for p in parts:
         deep.update(load_json(p))
     save_state(base, deep)
-    print(json.dumps({"total": len(deep), "ok": sum(1 for v in deep.values() if v.get("status") == "ok")}))
+    recs = [v for v in deep.values() if isinstance(v, dict)]
+    print(json.dumps({"total": len(recs), "ok": sum(1 for v in recs if v.get("status") == "ok")}))
 
 
 def main() -> int:
