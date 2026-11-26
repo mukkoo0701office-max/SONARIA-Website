@@ -915,10 +915,21 @@
       "priority": "S",
       "status": "pending_review",
       "date_checked": "2026-11-27",
-      "amazon_verification_status": "not_matched_exact_amazon_co_jp_asin",
+      "amazon_verification_status": "not_verified",
       "last_amazon_search_at": "2026-11-27",
       "work_scope_note": "Henle HN216 is violin+viola ensemble, not violin+piano; do not recommend for historical Violin Sonatas Nos.2–8 that have a piano part.",
-      "affiliate_note": "Amazon.co.jp direct edition listing and ASIN unresolved in exact ISMN / product search; a third-party Yamaha Sheet Music Store Haydn violin sonatas volume listing does not establish Amazon availability or exact edition match. Leave links empty until confirmed Amazon detail page."
+      "affiliate_note": "Amazon.co.jp direct edition listing and ASIN unresolved in exact ISMN / product search; a third-party Yamaha Sheet Music Store Haydn violin sonatas volume listing does not establish Amazon availability or exact edition match. Leave links empty until confirmed Amazon detail page.",
+      "product_format_check": {
+        "publisher": "G. Henle Verlag",
+        "publisher_catalog": "HN216",
+        "ismn": "979-0-2018-0216-9",
+        "editor": "Andreas Friesenhagen; Ulrich Mazurowicz; cadenzas Kurt Guntner",
+        "pages": 104,
+        "contains": "six violin+viola duos; full score and individual playing parts according to specialist music vendor",
+        "not": "violin+piano anthology; not six individually sold publications",
+        "imslp_source_warning": "IMSLP Doblinger 1957 Hob.VI:1–3 lists separate Vn and Va parts but no suitable full score; the commercial Henle edition does not grant reuse or redistributable PDF"
+      },
+      "retail_alternative_note": "A Sheet Music Store reseller result for a Henle violin/viola volume is not an Amazon.co.jp product detail page and cannot be used as Amazon affiliate URL or inferred Amazon ASIN."
     },
     {
       "id": "haydn-peters-ep190-eight-violin-sonatas",
@@ -979,18 +990,20 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Edition Peters EP190 validation for Haydn historical violin+piano sonatas Nos.6–8 and exact Amazon.co.jp ASIN",
-    "result": "Reconfirmed official Peters EP190 ISMN 9790300700755, 136pp, piano score+separate violin part, all 8 pieces. IMSLP No.6 after Hob.II:11 and Peters after Hob.XVI:15 are compatible as related historic versions (not yet note-comparison verified). Nos.7–8 transcribe Op.77 quartets without Minuet/Trio. Amazon.co.jp exact ISMN EP190 searches did not yield verifiable single product page/ASIN; pending_review.",
+    "focus": "Haydn Hob.VI:1-6 violin+viola performance edition HN216 verified against IMSLP parts-only sources, Amazon.co.jp ASIN lookup",
+    "result": "Henle confirms HN216 104pp, violin/viola all six duos, separate editors and ISMN 9790201802169. IMSLP Hob.VI:1–3 lists Doblinger 1957 both performing parts without full score, so SONARIA free score-plus-parts set remains incomplete, unlike commercial Henle alternative. Retailers outside Amazon advertise HN216 but exact Amazon.co.jp individual detail-page/ASIN was not verified. No affiliate link.",
     "new_candidates": 0,
     "new_amazon_verified": 0,
     "existing_records_enriched": 1,
     "checked_candidates": [
-      "haydn-peters-ep190-eight-violin-sonatas"
+      "haydn-henle-hn216-violin-viola"
     ],
-    "evidence_urls": [
-      "https://www.editionpeterspublications.us/products/haydn-8-violin-sonatas-peters",
-      "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29"
+    "source_urls": [
+      "https://www.henle.de/jp/Six-Sonatas-Hob.-VI-1-6-for-Violin-and-Viola/HN-216",
+      "https://imslp.org/wiki/String_Duo_in_F_major%2C_Hob.VI%3A1_%28Haydn%2C_Joseph%29",
+      "https://imslp.org/wiki/String_Duo_in_A_major%2C_Hob.VI%3A2_%28Haydn%2C_Joseph%29",
+      "https://imslp.org/wiki/String_Duo_in_B-flat_major%2C_Hob.VI%3A3_%28Haydn%2C_Joseph%29"
     ],
-    "next": "Use signed-in Amazon Associates Product Linking/SiteStripe or official PA-API to resolve EP190's exact item and ASIN. For related recommendations avoid implying separate sheet music for each sonata; link one anthology once and preserve work ID mappings."
+    "next": "Before recommending any Amazon.co.jp HN216, independently obtain and validate exact-item Amazon ASIN via Amazon Associates SiteStripe or official product API. For IMSLP identify 2-staff score in appropriate publication or leave free download held; audit Hob.VI:4–6 next."
   }
 }
