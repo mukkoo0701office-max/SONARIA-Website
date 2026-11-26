@@ -197,6 +197,58 @@
       "verification": "出版社公式ページでISMN・編者・収録6作品とスタディスコアを確認。Amazon.co.jp販売・ASIN未確認",
       "status": "pending_review",
       "priority": "S"
+    },
+    {
+      "id": "haydn-henle-hn206",
+      "category": "printed_score",
+      "title": "String Quartets Book II op. 9 (Urtext parts edition)",
+      "publisher_catalog": "HN 206",
+      "ismn": "979-0-2018-0206-0",
+      "source": "https://www.henle.de/cn/String-Quartets-Book-II-op.-9/HN-206",
+      "verification": "G. Henle publisher page confirms Op.9 Nos.1–6, Georg Feder editor, parts edition HN206 and ISMN. Amazon.co.jp product detail page / ASIN not confirmed.",
+      "composer": "Haydn",
+      "publisher": "G. Henle Verlag",
+      "editor": "Georg Feder",
+      "work_ids": [
+        "Op.9 No.1",
+        "Op.9 No.2",
+        "Op.9 No.3",
+        "Op.9 No.4",
+        "Op.9 No.5",
+        "Op.9 No.6"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "priority": "S",
+      "status": "pending_review",
+      "date_checked": "2026-11-27"
+    },
+    {
+      "id": "haydn-henle-hn9206",
+      "category": "pocket_score",
+      "title": "String Quartets Book II op. 9 (Study Score)",
+      "publisher_catalog": "HN 9206",
+      "ismn": "979-0-2018-9206-1",
+      "source": "https://www.henle.de/en/String-Quartets-Book-II-op.-9/HN-9206",
+      "verification": "G. Henle publisher page confirms Georg Feder editor, Op.9 Nos.1–6, 78pp study score, HN9206 and ISMN. Amazon.co.jp product detail page / ASIN not confirmed.",
+      "composer": "Haydn",
+      "publisher": "G. Henle Verlag",
+      "editor": "Georg Feder",
+      "work_ids": [
+        "Op.9 No.1",
+        "Op.9 No.2",
+        "Op.9 No.3",
+        "Op.9 No.4",
+        "Op.9 No.5",
+        "Op.9 No.6"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "priority": "S",
+      "status": "pending_review",
+      "date_checked": "2026-11-27"
     }
   ],
   "implementation_ready": 0,
@@ -204,10 +256,16 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Haydn Henle Op.20 compare printed parts HN208 and study score HN9208",
-    "result": "Publisher-confirmed distinct formats and identifiers; no trustworthy Amazon.co.jp item URL/ASIN, so no tagged link issued.",
-    "new_publisher_confirmed": 1,
+    "focus": "Haydn Op.9 Henle editions HN206 and HN9206 plus Op.20 ISBN/ISMN Amazon Japan matching",
+    "result": "Henle confirmed two distinct Op.9 editions with ISMNs, editor and complete scope; direct Amazon.co.jp ASIN for each not found reliably. Additional exact ISMN searches for HN208/HN9208 returned non-Amazon merchants but no verified Amazon Japan product pages.",
+    "new_publisher_confirmed": 2,
     "new_amazon_verified": 0,
-    "next": "Locate official Amazon Japan individual listing by ISMN 9790201802084 or 9790201892085, do not infer ASIN."
+    "verification_urls": [
+      "https://www.henle.de/cn/String-Quartets-Book-II-op.-9/HN-206",
+      "https://www.henle.de/en/String-Quartets-Book-II-op.-9/HN-9206",
+      "https://www.henle.de/jp/String-Quartets-Book-IV-op.-20-Sun-Quartets/HN-208",
+      "https://www.henle.de/en/String-Quartets-Book-IV-op.-20-Sun-Quartets/HN-9208"
+    ],
+    "next": "Seek Amazon.co.jp direct product detail by Op.9 ISMN 9790201802060 / 9790201892061; verify each ASIN and price display policy before generating tagged links."
   }
 }
