@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "string_quartet",
-    "last_work": "Op.74 No.3 / Hob.III:74",
-    "note": "Next Op.76 Nos.1–3. Op.74 excludes Litolff cello #106775 due to missing pp.4–5; choose and verify complete Imbault/Hummel sets. Rights unknown, do not publish."
+    "last_work": "Op.76 No.3 / Hob.III:77",
+    "note": "Next Op.76 Nos.4–6 (Sunrise, D major, E-flat major). The all-six Eulenburg score #454963 explicitly lacks printed p.216 in No.5; prefer comparing Heckel #892429 and Longman & Clementi parts; Japanese re-use rights remain unapproved."
   },
   "items": [
     {
@@ -2925,6 +2925,144 @@
       },
       "rights_status": "unknown",
       "notes": "Do not use Litolff cello #106775 as complete parts; missing pages 4–5 are explicitly flagged by IMSLP. Bundle PDFs across 3 works should be referenced once with page ranges. Claude must visually inspect all pages, correctness, instrument parts, scan clarity, rights in Japan, and inventory duplication. No PDF downloaded, no rights changed.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op76-no1-hummel-1799-parts",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in G major",
+      "opus_catalog": "Op.76 No.1; Hob.III:75",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "J. J. Hummel 1799 Amsterdam (Nos.1–3 separate historical parts); K. Ferd. Heckel 1855 (all-six full score); Ernst Eulenburg c.1930–35 (all-six score, incomplete No.5)",
+        "publication_date": "Hummel 1799; Heckel c.1855; Eulenburg c.1930–35",
+        "editor": "Wilhelm Altmann (Eulenburg score); historical Hummel first edition",
+        "scope": "Op.76 Nos.1–3 Dutch first edition four-part set (shared three-work assets); complete Op.76 six-work scores shared across all works",
+        "imslp_file_id": "472935",
+        "file_pages": 76,
+        "edition_comparison": "Primary historical performance source: J. J. Hummel Amsterdam 1799 color Complete Parts #472935 (76pp), Violin1 #476419 (21pp), Violin2 #476420 (17pp), Viola #476421 (15pp), Cello #476418 (13pp). Monochrome parallel #472936, parts #476423/#476424/#476425/#476422. Full score Heckel #892429 (240pp), Eulenburg/Altmann #454963 (162 PDF pp). WARNING IMSLP notes missing printed page 216 (quartet No.5) in Eulenburg #454963: incomplete for full Op.76, do NOT select as clean all-six set; consider Heckel. Other complete-parts first edition Longman & Clementi 1799–1800 #472937 (130pp) contains all 6; separate #476440/#476441/#476442/#476439. Need visually compare page ranges, print fidelity and instrumental integrity before any acceptance."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP source identifies Op.76 No.1 (G major) Hob.III:75; Hummel 1799 edition #472935 and four component part IDs; Heckel #892429 and Eulenburg #454963 (missing p.216 applies to No.5, not the current Nos.1–3). PDFs not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "confirmed_imslp",
+        "edition": "historical_publisher_and_file_ids_checked_no_pdf_review",
+        "parts": "four_hummel_1799_parts_listed_pdf_uninspected",
+        "pdf_integrity": "unchecked_eulenburg_454963_known_missing_page_216_in_no5",
+        "duplication": "shared_collection_file_must_not_be_duplicate_uploaded_site_inventory_unchecked",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Avoid assigning IMSLP's missing Eulenburg No.5 page to Nos.1–3; collection-level integrity defect affects whether to adopt the full six-piece compilation. Claude verify all 4 Hummel first-edition part scans for Nos.1–3, movement boundaries, quality, and legal rights for public distribution. No downloads, no rights changes, no publishing.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op76-no2-hummel-1799-parts",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in D minor (Fifths)",
+      "opus_catalog": "Op.76 No.2; Hob.III:76",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "J. J. Hummel 1799 Amsterdam (Nos.1–3 separate historical parts); K. Ferd. Heckel 1855 (all-six full score); Ernst Eulenburg c.1930–35 (all-six score, incomplete No.5)",
+        "publication_date": "Hummel 1799; Heckel c.1855; Eulenburg c.1930–35",
+        "editor": "Wilhelm Altmann (Eulenburg score); historical Hummel first edition",
+        "scope": "Op.76 Nos.1–3 Dutch first edition four-part set (shared three-work assets); complete Op.76 six-work scores shared across all works",
+        "imslp_file_id": "472935",
+        "file_pages": 76,
+        "edition_comparison": "Primary historical performance source: J. J. Hummel Amsterdam 1799 color Complete Parts #472935 (76pp), Violin1 #476419 (21pp), Violin2 #476420 (17pp), Viola #476421 (15pp), Cello #476418 (13pp). Monochrome parallel #472936, parts #476423/#476424/#476425/#476422. Full score Heckel #892429 (240pp), Eulenburg/Altmann #454963 (162 PDF pp). WARNING IMSLP notes missing printed page 216 (quartet No.5) in Eulenburg #454963: incomplete for full Op.76, do NOT select as clean all-six set; consider Heckel. Other complete-parts first edition Longman & Clementi 1799–1800 #472937 (130pp) contains all 6; separate #476440/#476441/#476442/#476439. Need visually compare page ranges, print fidelity and instrumental integrity before any acceptance."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP source identifies Op.76 No.2 (D minor) Hob.III:76; Hummel 1799 edition #472935 and four component part IDs; Heckel #892429 and Eulenburg #454963 (missing p.216 applies to No.5, not the current Nos.1–3). PDFs not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "confirmed_imslp",
+        "edition": "historical_publisher_and_file_ids_checked_no_pdf_review",
+        "parts": "four_hummel_1799_parts_listed_pdf_uninspected",
+        "pdf_integrity": "unchecked_eulenburg_454963_known_missing_page_216_in_no5",
+        "duplication": "shared_collection_file_must_not_be_duplicate_uploaded_site_inventory_unchecked",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Avoid assigning IMSLP's missing Eulenburg No.5 page to Nos.1–3; collection-level integrity defect affects whether to adopt the full six-piece compilation. Claude verify all 4 Hummel first-edition part scans for Nos.1–3, movement boundaries, quality, and legal rights for public distribution. No downloads, no rights changes, no publishing.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op76-no3-hummel-1799-parts",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in C major (Emperor)",
+      "opus_catalog": "Op.76 No.3; Hob.III:77",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "J. J. Hummel 1799 Amsterdam (Nos.1–3 separate historical parts); K. Ferd. Heckel 1855 (all-six full score); Ernst Eulenburg c.1930–35 (all-six score, incomplete No.5)",
+        "publication_date": "Hummel 1799; Heckel c.1855; Eulenburg c.1930–35",
+        "editor": "Wilhelm Altmann (Eulenburg score); historical Hummel first edition",
+        "scope": "Op.76 Nos.1–3 Dutch first edition four-part set (shared three-work assets); complete Op.76 six-work scores shared across all works",
+        "imslp_file_id": "472935",
+        "file_pages": 76,
+        "edition_comparison": "Primary historical performance source: J. J. Hummel Amsterdam 1799 color Complete Parts #472935 (76pp), Violin1 #476419 (21pp), Violin2 #476420 (17pp), Viola #476421 (15pp), Cello #476418 (13pp). Monochrome parallel #472936, parts #476423/#476424/#476425/#476422. Full score Heckel #892429 (240pp), Eulenburg/Altmann #454963 (162 PDF pp). WARNING IMSLP notes missing printed page 216 (quartet No.5) in Eulenburg #454963: incomplete for full Op.76, do NOT select as clean all-six set; consider Heckel. Other complete-parts first edition Longman & Clementi 1799–1800 #472937 (130pp) contains all 6; separate #476440/#476441/#476442/#476439. Need visually compare page ranges, print fidelity and instrumental integrity before any acceptance."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP source identifies Op.76 No.3 (C major) Hob.III:77; Hummel 1799 edition #472935 and four component part IDs; Heckel #892429 and Eulenburg #454963 (missing p.216 applies to No.5, not the current Nos.1–3). PDFs not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "confirmed_imslp",
+        "edition": "historical_publisher_and_file_ids_checked_no_pdf_review",
+        "parts": "four_hummel_1799_parts_listed_pdf_uninspected",
+        "pdf_integrity": "unchecked_eulenburg_454963_known_missing_page_216_in_no5",
+        "duplication": "shared_collection_file_must_not_be_duplicate_uploaded_site_inventory_unchecked",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Avoid assigning IMSLP's missing Eulenburg No.5 page to Nos.1–3; collection-level integrity defect affects whether to adopt the full six-piece compilation. Claude verify all 4 Hummel first-edition part scans for Nos.1–3, movement boundaries, quality, and legal rights for public distribution. No downloads, no rights changes, no publishing.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
