@@ -154,8 +154,8 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   await page.locator('input[type="checkbox"]').check();
   await shot(page, `${vpName}-ja-apply-bowing`);
   await page.locator('form button[type="submit"]').click();
-  await page.locator("text=この内容で申し込む").click();
-  check(`${vpName}: submission shows not-connected`, await page.locator("text=オンライン送信は準備中です").isVisible());
+  await page.getByRole("button", { name: "この内容で申し込む" }).click();
+  check(`${vpName}: submission shows not-connected`, await page.getByRole("heading", { name: "オンライン送信は準備中です" }).isVisible());
   await shot(page, `${vpName}-ja-apply-not-connected`);
   await page.goto(`${base}/ja/apply/?service=lesson`, { waitUntil: "networkidle" });
   await page.locator('label:has(input[name="trial"][value="yes"])').click();
