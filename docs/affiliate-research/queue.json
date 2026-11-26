@@ -699,8 +699,10 @@
       "isbn": null,
       "status": "pending_review",
       "priority": "S",
-      "verification": "G. Henle official product page confirms edition, content, format, editor and exact ISMN. Amazon.co.jp individual listing/ASIN not verified: must not generate affiliate URL.",
-      "date_checked": "2026-11-27"
+      "verification": "Henle publisher confirms title and ISMN; exact Amazon.co.jp item page/ASIN remains unverified after searches by HN, Japanese title and ISMN. No tagged affiliate link.",
+      "date_checked": "2026-11-27",
+      "last_amazon_search_at": "2026-11-27",
+      "amazon_verification_status": "not_found"
     },
     {
       "id": "haydn-henle-hn9215",
@@ -724,8 +726,10 @@
       "isbn": null,
       "status": "pending_review",
       "priority": "S",
-      "verification": "G. Henle official product page confirms edition, content, format, editor and exact ISMN. Amazon.co.jp individual listing/ASIN not verified: must not generate affiliate URL.",
-      "date_checked": "2026-11-27"
+      "verification": "Henle publisher confirms title and ISMN; exact Amazon.co.jp item page/ASIN remains unverified after searches by HN, Japanese title and ISMN. No tagged affiliate link.",
+      "date_checked": "2026-11-27",
+      "last_amazon_search_at": "2026-11-27",
+      "amazon_verification_status": "not_found"
     }
   ],
   "implementation_ready": 0,
@@ -733,14 +737,18 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "HN214/HN9214 Amazon.co.jp detail and next Henle Op.77/103 HN215/HN9215",
-    "result": "Search by exact HN214/HN9214 and ISMN did not establish a verifiable Amazon.co.jp detail/ASIN. Henle official publisher confirmed HN215 and HN9215 as distinct print formats with contents Op.77 Nos.1–2 and Op.103; no Amazon link approved.",
-    "new_publisher_confirmed": 2,
+    "focus": "Haydn HN215/HN9215: Amazon.co.jp direct catalog lookup",
+    "result": "Amazon.co.jp searches by catalogue number HN215/HN9215, ISMN 9790201802152 / 9790201892153 and Japanese/English edition title did not yield a trustworthy matching Amazon.co.jp individual detail page. Amazon Music results and third-party retail are not substitutes for verified Amazon bookstore pages. Both remain pending_review.",
+    "new_publisher_confirmed": 0,
     "new_amazon_verified": 0,
-    "source_urls": [
-      "https://www.henle.de/en/String-Quartets-Book-XI-op.-77-and-103-Lobkowitz-Quartets-and-last-Quartet/HN-215",
-      "https://www.henle.de/en/String-Quartets-Book-XI-op.-77-and-103-Lobkowitz-Quartets-and-last-Quartet/HN-9215"
+    "new_candidates": 0,
+    "checked_candidates": [
+      "haydn-henle-hn215",
+      "haydn-henle-hn9215"
     ],
-    "next": "Find Amazon.co.jp individual item by ISMN 9790201802152 and 9790201892153. Only after exact ASIN match create compliant mukkoo-22 tagged links; no invented links."
+    "next": "Try Amazon's official site search or permitted Associates link tools for exact print edition by publisher ISMN; verify ASIN and four-part versus study score format before constructing mukkoo-22 affiliate links.",
+    "sources": [
+      "https://www.henle.de/en/Haydn-Joseph/?order=name-asc&p=1&properties=06a08cf3dae645df844fdacd2b1e92b9"
+    ]
   }
 }
