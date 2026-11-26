@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Mozart",
     "stage": "string_quartet",
-    "last_work": "K.80/73f G major (Lodi)",
-    "note": "Next Mozart K.155/134a D major and K.156/134b G major Italian quartets, preferably score and four parts from one public-domain historical edition. K.136–138 are quartet-divertimenti also covered by Henle volume I; inventory them separately when warranted, do not silently count as 1772–73 six-quartet cycle. Verify Japan rights and PDF musical integrity."
+    "last_work": "K.156/134b",
+    "note": "Next Mozart K.157; existing SONARIA catalog duplication remains unverified."
   },
   "items": [
     {
@@ -5663,6 +5663,176 @@
       },
       "rights_status": "unknown",
       "notes": "Do not treat modern Henle as distributable scan. Quality-check all four movements and part endings; the surviving autograph contains Leopold Mozart's annotations/trio, and Rondo may have been added later. Compare 1881 B&H score and reprint parts for variant measure omissions, editorial dynamics, clef, articulations, repeat endings. No PDFs downloaded, rights verified or publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-k155-134a-breitkopf1881-score-parts",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.2 in D major",
+      "opus_catalog": "K.155/134a",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.2_in_D_major%2C_K.155%2F134a_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1881",
+        "editor": "Series XIV editors (exact editor not specified)",
+        "scope": "Complete score and four individually listed parts; three movements",
+        "imslp_file_id": "01782",
+        "file_pages": 7,
+        "edition_comparison": "Compare historical parts #181174–181177 with B&H 1881 score #01782 or #64042; publisher/plate compatibility of parts not verified."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.2_in_D_major%2C_K.155%2F134a_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "01782",
+            "edition": "Breitkopf & Härtel 1881 Mozarts Werke Serie XIV",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_1": {
+            "imslp_file_id": "181174",
+            "edition": "historic printed parts, exact edition match unverified",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_2": {
+            "imslp_file_id": "181175",
+            "edition": "historic printed parts, exact edition match unverified",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "viola": {
+            "imslp_file_id": "181176",
+            "edition": "historic printed parts, exact edition match unverified",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "181177",
+            "edition": "historic printed parts, exact edition match unverified",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "not_musically_verified",
+        "complete_set_verified": false,
+        "page_ranges_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.2_in_D_major%2C_K.155%2F134a_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists K.155/134a quartet, B&H 1881 score #01782 and parts 181174, 181175, 181176, 181177. Score/parts PDF not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "imslp_catalog_verified",
+        "edition": "historic_score_metadata_verified",
+        "parts": "four_parts_listed_pdf_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "site_inventory_unverified",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Compare historical parts #181174–181177 with B&H 1881 score #01782 or #64042; publisher/plate compatibility of parts not verified. Check all three movements, page order, part compatibility, legibility, original editions and Japan republication rights. Existing SONARIA catalog not confirmed. No PDF retrieved.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-k156-134b-breitkopf1881-score-parts",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.3 in G major",
+      "opus_catalog": "K.156/134b",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.3_in_G_major%2C_K.156%2F134b_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1881",
+        "editor": "Series XIV editors (exact editor not specified)",
+        "scope": "Complete score and four individually listed parts; three movements",
+        "imslp_file_id": "01783",
+        "file_pages": 7,
+        "edition_comparison": "IMSLP lists alternate 1st version of second movement; inspect score/parts to determine which version is used."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.3_in_G_major%2C_K.156%2F134b_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "01783",
+            "edition": "Breitkopf & Härtel 1881 Mozarts Werke Serie XIV",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_1": {
+            "imslp_file_id": "44599",
+            "edition": "historic printed parts, exact edition match unverified",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_2": {
+            "imslp_file_id": "44600",
+            "edition": "historic printed parts, exact edition match unverified",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "viola": {
+            "imslp_file_id": "44601",
+            "edition": "historic printed parts, exact edition match unverified",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "44602",
+            "edition": "historic printed parts, exact edition match unverified",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "not_musically_verified",
+        "complete_set_verified": false,
+        "page_ranges_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.3_in_G_major%2C_K.156%2F134b_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists K.156/134b quartet, B&H 1881 score #01783 and parts 44599, 44600, 44601, 44602. Score/parts PDF not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "imslp_catalog_verified",
+        "edition": "historic_score_metadata_verified",
+        "parts": "four_parts_listed_pdf_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "site_inventory_unverified",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "IMSLP lists alternate 1st version of second movement; inspect score/parts to determine which version is used. Check all three movements, page order, part compatibility, legibility, original editions and Japan republication rights. Existing SONARIA catalog not confirmed. No PDF retrieved.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
