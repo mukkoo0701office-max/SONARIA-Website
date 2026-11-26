@@ -1,0 +1,52 @@
+# プレビュー用ビルドをブラウザで開いて撮影・操作確認する（PR 用）。
+# 撮影した画像と確認結果は ci/screenshots ブランチに保存する（レビュー用。本番には関係しない）。
+name: Visual check
+
+on:
+  pull_request:
+    paths:
+      - "frontend/**"
+      - ".github/workflows/visual-check.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build (preview mode)
+        working-directory: frontend
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install --no-audit --no-fund; fi
+          npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /SONARIA-Website
+          NEXT_PUBLIC_PREVIEW: "1"
+
+      - name: Serve and capture
+        working-directory: frontend
+        run: |
+          mkdir -p /tmp/site && cp -r out /tmp/site/SONARIA-Website
+          npx -y serve@14 /tmp/site -l 4173 >/tmp/serve.log 2>&1 &
+          npm install --no-save --no-audit --no-fund playwright@1
+          npx playwright install --with-deps chromium
+          sleep 2
+          node scripts/screenshots.mjs http://localhost:4173/SONARIA-Website /tmp/shots
+
+      - name: Save to ci/screenshots branch
+        if: always()
+        run: |
+          [ -d /tmp/shots ] || exit 0
+          cd /tmp/shots
+          git init -q
+          git checkout -q -b ci/screenshots
+          git add -A
+          git -c user.name="github-actions" -c user.email="github-actions@users.noreply.github.com" commit -q -m "screenshots for ${GITHUB_SHA}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" ci/screenshots
