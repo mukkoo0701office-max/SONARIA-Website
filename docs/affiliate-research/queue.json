@@ -730,19 +730,26 @@
       "publisher": "G. Henle Verlag",
       "editor": "Horst Walter",
       "work_ids": [
-        "Op.77 No.1",
-        "Op.77 No.2",
-        "Op.103"
+        "Op.77 No.1 / Hob.III:81",
+        "Op.77 No.2 / Hob.III:82",
+        "Op.103 / Hob.III:83 (unfinished, two surviving movements)"
       ],
       "amazon_url": null,
       "asin": null,
       "isbn": null,
       "status": "pending_review",
       "priority": "S",
-      "verification": "Henle publisher confirms title and ISMN; exact Amazon.co.jp item page/ASIN remains unverified after searches by HN, Japanese title and ISMN. No tagged affiliate link.",
+      "verification": "Henle official catalog confirms HN215 parts ISMN 979-0-2018-0215-2 and HN9215 study score ISMN 979-0-2018-9215-3, editorial credit Horst Walter and contents Op.77 No.1, No.2 and unfinished Op.103. Targeted Amazon.co.jp identifier searches yielded no exact verified product detail/ASIN; no tagged links.",
       "date_checked": "2026-11-27",
       "last_amazon_search_at": "2026-11-27",
-      "amazon_verification_status": "not_found"
+      "amazon_verification_status": "not_found_open_web_exact_match",
+      "format_relationship": {
+        "pair_group_id": "haydn-op77-op103-henle-urtext",
+        "sold_separately": true,
+        "package_status": "not_one_bundle",
+        "item_format": "four_instrument_performance_parts"
+      },
+      "work_completeness_note": "Op.103 is composer-unfinished; printed edition contains extant movements only, not a completed traditional four-movement quartet."
     },
     {
       "id": "haydn-henle-hn9215",
@@ -757,19 +764,26 @@
       "publisher": "G. Henle Verlag",
       "editor": "Horst Walter",
       "work_ids": [
-        "Op.77 No.1",
-        "Op.77 No.2",
-        "Op.103"
+        "Op.77 No.1 / Hob.III:81",
+        "Op.77 No.2 / Hob.III:82",
+        "Op.103 / Hob.III:83 (unfinished, two surviving movements)"
       ],
       "amazon_url": null,
       "asin": null,
       "isbn": null,
       "status": "pending_review",
       "priority": "S",
-      "verification": "Henle publisher confirms title and ISMN; exact Amazon.co.jp item page/ASIN remains unverified after searches by HN, Japanese title and ISMN. No tagged affiliate link.",
+      "verification": "Henle official catalog confirms HN215 parts ISMN 979-0-2018-0215-2 and HN9215 study score ISMN 979-0-2018-9215-3, editorial credit Horst Walter and contents Op.77 No.1, No.2 and unfinished Op.103. Targeted Amazon.co.jp identifier searches yielded no exact verified product detail/ASIN; no tagged links.",
       "date_checked": "2026-11-27",
       "last_amazon_search_at": "2026-11-27",
-      "amazon_verification_status": "not_found"
+      "amazon_verification_status": "not_found_open_web_exact_match",
+      "format_relationship": {
+        "pair_group_id": "haydn-op77-op103-henle-urtext",
+        "sold_separately": true,
+        "package_status": "not_one_bundle",
+        "item_format": "study_score"
+      },
+      "work_completeness_note": "Op.103 is composer-unfinished; printed edition contains extant movements only, not a completed traditional four-movement quartet."
     },
     {
       "id": "haydn-henle-hn851",
@@ -835,20 +849,22 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Haydn Op.76 HN214 and HN9214 Amazon Japan ASIN audit plus clear score/parts relationship",
-    "result": "No matching Amazon.co.jp individual detail-page ASIN verified by exact ISMN and catalogue queries. Both publisher-confirmed candidates kept pending_review without links. Documented printed performance parts and study score are two separately sold products rather than one package; unrelated to the chosen free IMSLP historical-edition set.",
-    "existing_records_enriched": 2,
+    "focus": "Haydn Op.77/unfinished Op.103 Henle HN215/HN9215 paired edition audit; exact Amazon.co.jp ASIN search",
+    "result": "Henle original publisher confirms printed HN215 as quartet playing parts and HN9215 as separate study score; both include Op.77 two completed quartets and extant Op.103, which is unfinished as a composition. No direct Amazon.co.jp product page or ASIN verified via exact ISMN and title searches; held pending_review.",
     "new_candidates": 0,
+    "new_publisher_confirmed": 0,
     "new_amazon_verified": 0,
+    "existing_records_enriched": 2,
     "checked_candidates": [
-      "haydn-henle-hn214",
-      "haydn-henle-hn9214"
+      "haydn-henle-hn215",
+      "haydn-henle-hn9215"
     ],
-    "sources": [
-      "https://www.henle.de/String-Quartets-Book-X-op.-76-Erdoedy-Quartets/HN-214",
-      "https://www.henle.de/de/Streichquartette-Heft-X-op.-76-Erdoedy-Quartette/HN-9214",
-      "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29"
+    "source_urls": [
+      "https://www.henle.de/jp/String-Quartets-Book-XI-op.-77-and-103-Lobkowitz-Quartets-and-last-Quartet/HN-215",
+      "https://www.henle.de/en/String-Quartets-Book-XI-op.-77-and-103-Lobkowitz-Quartets-and-last-Quartet/HN-9215",
+      "https://imslp.org/wiki/String_Quartets%2C_Op.77_%28Haydn%2C_Joseph%29",
+      "https://imslp.org/wiki/String_Quartet_in_D_minor%2C_Op.103_%28Haydn%2C_Joseph%29"
     ],
-    "next": "For Amazon use authenticated Associates Product Linking, SiteStripe, or official API to confirm ISBN/ISMN and ASIN before affiliate links. Continue IMSLP Op.77 and Op.103 score-plus-parts provenance and completeness."
+    "next": "Verify exact Amazon.co.jp product listing using signed-in Associates Product Linking/SiteStripe or authorized API, retaining distinct performance-parts vs study-score products and Op.103 unfinished label. Do not invent ASIN or link."
   }
 }
