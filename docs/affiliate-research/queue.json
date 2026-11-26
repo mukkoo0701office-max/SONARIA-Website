@@ -602,7 +602,11 @@
       "ismn": "979-0-2018-0212-1",
       "pages": 144,
       "source": "https://www.henle.de/jp/String-Quartets-Book-VIII-op.-64-Second-Tost-Quartets/HN-212",
-      "verification": "Henle official catalog confirms HN212 ISMN, 144 pages, editing team and Op.64 scope. Amazon.co.jp ASIN and product detail not confirmed."
+      "verification": "Henle official catalog confirms HN212 ISMN, 144 pages, editing team and Op.64 scope. Amazon.co.jp ASIN and product detail not confirmed.",
+      "last_amazon_search_at": "2026-11-27",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
+      "verification_notes": "2026-11-27: searched Amazon.co.jp exact Henle catalogue number, ISMN/EAN, Haydn Op.64, and site:amazon.co.jp/dp/; no independently verifiable matching Amazon.co.jp product detail/ASIN. Publisher confirms six Op.64 quartets; HN212 is 4 performing parts and HN9212 is study score, not interchangeable. Do not infer ASIN or generate tagged link.",
+      "product_format": "four separate playing parts (Vn1 Vn2 Va Vc)"
     },
     {
       "composer": "Haydn",
@@ -634,7 +638,11 @@
       "ismn": "979-0-2018-9212-2",
       "pages": 114,
       "source": "https://www.henle.de/jp/String-Quartets-Book-VIII-op.-64-Second-Tost-Quartets/HN-9212",
-      "verification": "Henle official catalog confirms HN9212 ISMN, 114 pages, editing team and Op.64 scope. Amazon.co.jp ASIN and product detail not confirmed."
+      "verification": "Henle official catalog confirms HN9212 ISMN, 114 pages, editing team and Op.64 scope. Amazon.co.jp ASIN and product detail not confirmed.",
+      "last_amazon_search_at": "2026-11-27",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
+      "verification_notes": "2026-11-27: searched Amazon.co.jp exact Henle catalogue number, ISMN/EAN, Haydn Op.64, and site:amazon.co.jp/dp/; no independently verifiable matching Amazon.co.jp product detail/ASIN. Publisher confirms six Op.64 quartets; HN212 is 4 performing parts and HN9212 is study score, not interchangeable. Do not infer ASIN or generate tagged link.",
+      "product_format": "pocket study score (not playing parts)"
     },
     {
       "id": "haydn-henle-hn213",
@@ -1138,22 +1146,19 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Haydn Henle HN9208/HN206/HN9206 exact Amazon.co.jp product page search and edition-to-work cross-check",
-    "result": "Reconfirmed official Henle ISMN and exact 6-work Hoboken mappings for HN9208 (Op.20 Hob.III:31-36, study score 115 pages), HN206 (Op.9 Hob.III:19-24, performance parts), HN9206 (same Op.9 works, study score 78 pages). HN206/HN9206 are distinct retail formats; HN9208 complements HN208 parts. Exact site:amazon.co.jp/dp/ and ISMN searches yielded no verified Amazon.co.jp ASIN/product detail. All 3 remain pending_review; no tagged URLs generated. Queue 33 unique products.",
+    "focus": "Haydn Henle HN212 and HN9212 Op.64 exact Amazon Japan edition verification",
+    "result": "Henle catalogued Op.64 Nos.1–6 in two distinct editions: HN212 9790201802121 (144 pages, playing parts) and HN9212 9790201892122 (114 pages, study score). Amazon.co.jp targeted product detail /dp/ searches by catalog number and ISMN found no independently verified matching ASIN. Both remain pending_review; no affiliate URLs. Queue remains 33.",
     "checked_candidates": [
-      "haydn-henle-hn9208",
-      "haydn-henle-hn206",
-      "haydn-henle-hn9206"
+      "haydn-henle-hn212",
+      "haydn-henle-hn9212"
     ],
     "new_candidates": 0,
     "new_publisher_confirmed": 0,
     "new_amazon_verified": 0,
     "source_urls": [
-      "https://www.henle.de/en/String-Quartets-Book-IV-op.-20-Sun-Quartets/HN-9208",
-      "https://www.henle.de/String-Quartets-Book-II-op.-9/HN-206",
-      "https://www.henle.de/en/String-Quartets-Book-II-op.-9/HN-9206",
-      "https://www.haydn-institut.de/index.php/gesamtausgabe/praktische-ausgaben/97-prakt-reihe-xii"
+      "https://www.henle.de/jp/String-Quartets-Book-VIII-op.-64-Second-Tost-Quartets/HN-212",
+      "https://www.henle.de/jp/String-Quartets-Book-VIII-op.-64-Second-Tost-Quartets/HN-9212"
     ],
-    "next": "Continue remaining Haydn HN207/HN9207 and Op.33 pair HN209/HN9209. Prefer verified Amazon Associates item detail / PA API for ASIN; if not available retain pending_review. Claude must only display approved_for_implementation records, max 2 ads per score page, label PR, and not display price, stock or images without authorized integration."
+    "next": "Continue Haydn HN213/HN9213, then HN214/HN9214. Do not advertise pending_review. Verify ASIN and exact format before generating mukkoo-22 link."
   }
 }
