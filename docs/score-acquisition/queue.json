@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Mozart",
     "stage": "string_quartet",
-    "last_work": "K.159",
-    "note": "Next K.160/159a; queue candidates require site duplicate verification and Claude PDF/rights checks."
+    "last_work": "K.169",
+    "note": "Next K.170. K.160, K.168, K.169 are research_needed; existing SONARIA published inventory not fully reconciled."
   },
   "items": [
     {
@@ -6025,6 +6025,162 @@
       },
       "rights_status": "unknown",
       "notes": "For Claude: validate each part and score contains all three movements, compare Breitkopf score vs Peters parts for musical consistency; NMA scholarly version may have additional copyright issues in Japan. Existing SONARIA site inventory not located; not confirmed unpublished. No download or publish authorized.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-string-quartet-no7-k160159a-breitkopf-1881",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.7 in E-flat major",
+      "opus_catalog": "K.160/159a",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.7%2C_K.160_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1881",
+        "editor": "Mozarts Werke, Serie XIV editors (specific editor attribution unverified)",
+        "plate": "W.A.M. 160",
+        "imslp_file_id": "64127",
+        "edition_comparison": "Historical Breitkopf complete score is preliminary preferred candidate. Separately listed part scans may be from another edition; compare source plate, editorial differences, legibility and full movement coverage. Avoid modern Neue Mozart-Ausgabe until rights individually cleared.",
+        "movements": 3,
+        "part_file_ids": {
+          "violin_1": "01830",
+          "violin_2": "01831",
+          "viola": "01832",
+          "cello": "01833"
+        }
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.7%2C_K.160_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.7%2C_K.160_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists Mozart String Quartet No.7, K.160/159a, E-flat major, 2 violins, viola, cello, 3 movements; historical Breitkopf score #64127. Part identifiers listed only where inspected in page metadata."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "historical_publisher_metadata_checked_pdf_uninspected",
+        "parts": "some_identifiers_listed_full_set_not_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_id_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Verify score and all four parts (same edition where possible), page order, scan quality, score/part differences, Japanese redistribution rights and existing SONARIA catalog before any download/publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-string-quartet-no8-k168-breitkopf-1881",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.8 in F major",
+      "opus_catalog": "K.168",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.8_in_F_major%2C_K.168_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1881",
+        "editor": "Mozarts Werke, Serie XIV editors (specific editor attribution unverified)",
+        "plate": "W.A.M. 168",
+        "imslp_file_id": "64129",
+        "edition_comparison": "Historical Breitkopf complete score is preliminary preferred candidate. Separately listed part scans may be from another edition; compare source plate, editorial differences, legibility and full movement coverage. Avoid modern Neue Mozart-Ausgabe until rights individually cleared.",
+        "movements": 4,
+        "part_file_ids": {
+          "violin_1": "01834",
+          "violin_2": "01835",
+          "viola": null,
+          "cello": null
+        }
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.8_in_F_major%2C_K.168_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.8_in_F_major%2C_K.168_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists Mozart String Quartet No.8, K.168, F major, 2 violins, viola, cello, 4 movements; historical Breitkopf score #64129. Part identifiers listed only where inspected in page metadata."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "historical_publisher_metadata_checked_pdf_uninspected",
+        "parts": "some_identifiers_listed_full_set_not_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_id_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Verify score and all four parts (same edition where possible), page order, scan quality, score/part differences, Japanese redistribution rights and existing SONARIA catalog before any download/publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-string-quartet-no9-k169-breitkopf-1881",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.9 in A major",
+      "opus_catalog": "K.169",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.9_in_A_major%2C_K.169_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1881",
+        "editor": "Mozarts Werke, Serie XIV editors (specific editor attribution unverified)",
+        "plate": "W.A.M. 169",
+        "imslp_file_id": "387510",
+        "edition_comparison": "Historical Breitkopf complete score is preliminary preferred candidate. Separately listed part scans may be from another edition; compare source plate, editorial differences, legibility and full movement coverage. Avoid modern Neue Mozart-Ausgabe until rights individually cleared.",
+        "movements": 4,
+        "part_file_ids": {
+          "violin_1": "01838",
+          "violin_2": "01839",
+          "viola": null,
+          "cello": null
+        }
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.9_in_A_major%2C_K.169_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.9_in_A_major%2C_K.169_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists Mozart String Quartet No.9, K.169, A major, 2 violins, viola, cello, 4 movements; historical Breitkopf score #387510. Part identifiers listed only where inspected in page metadata."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "historical_publisher_metadata_checked_pdf_uninspected",
+        "parts": "some_identifiers_listed_full_set_not_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_id_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Verify score and all four parts (same edition where possible), page order, scan quality, score/part differences, Japanese redistribution rights and existing SONARIA catalog before any download/publication.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
