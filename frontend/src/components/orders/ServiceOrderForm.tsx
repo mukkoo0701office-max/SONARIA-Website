@@ -559,7 +559,7 @@ export default function ServiceOrderForm({ locale }: Props) {
             <label className="flex items-start gap-2 text-[14px]">
               <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} aria-invalid={!!err("consent")} aria-describedby={err("consent") ? "err-consent" : undefined} className="mt-1 h-4 w-4 accent-navy" />
               <span>
-                {t.common.consent}（<Link href={localizedPath(locale, pagePaths.privacy)} className="underline" target="_blank">{t.common.privacyLink}</Link>）
+                {t.common.consent}{locale === "ja" ? "（" : " ("}<Link href={localizedPath(locale, pagePaths.privacy)} className="underline" target="_blank">{t.common.privacyLink}</Link>{locale === "ja" ? "）" : ")"}
               </span>
             </label>
             <FieldError id="err-consent" text={err("consent")} />
