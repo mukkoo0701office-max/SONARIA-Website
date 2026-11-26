@@ -149,6 +149,25 @@ def title_seen(text: str, en: str, ja: str) -> bool:
 PART_WORDS = {"violin1": "violin1", "violin2": "violin2", "viola": "viola", "cello": "cello", "bass": "bass", "piano": "piano", "score": "score", "violin": "violin"}
 
 
+def page_gap(page_numbers: list[list[int]]) -> int | None:
+    """ページ番号の飛びを調べる。読み取った番号と PDF 上の位置の差（ずれ）が途中で増え、
+    増える前と後のどちらも 2 ページ以上続くときだけ「欠落の疑い」とする（小節番号などの読み違いを除く）。
+    1 ページ目は番号が無い・題名の数字を拾うことが多いため使わない。飛び始めのページ番号を返す"""
+    offs = [{v - (i + 1) for v in nums if -3 <= v - (i + 1) <= 10} for i, nums in enumerate(page_numbers)]
+    pages = range(1, len(offs))  # 2 ページ目以降
+    counts = collections.Counter(o for i in pages for o in offs[i])
+    common = [o for o, c in counts.items() if c >= 2]
+    for a in common:
+        for b in common:
+            if b <= a:
+                continue
+            ia = [i for i in pages if a in offs[i] and b not in offs[i]]
+            ib = [i for i in pages if b in offs[i] and a not in offs[i]]
+            if len(ia) >= 2 and len(ib) >= 2 and max(ia) < min(ib):
+                return min(ib) + 1
+    return None
+
+
 def part_conflict(file_part: str, labels: list[str]) -> bool:
     """中身のパート表記がファイル名のパートと明らかに食い違うか（表記が無い・複数あるときは食い違いとしない）"""
     if not labels or file_part in ("score", "other", "solo"):
@@ -244,9 +263,9 @@ def main() -> int:
                 r["reasons"].append(f"パート不一致（ファイル名: {part}、中身の表記: {', '.join(d.get('part_label'))}）")
             # 5) ページ欠落
             seq = (d.get("sequence") or {}).get("result")
-            if seq == "gap_suspected":
-                jumps = d["sequence"].get("jumps", [])
-                r["reasons"].append("ページ欠落の疑い（ページ番号の飛び: " + ", ".join(f"{j['page']}ページ目" for j in jumps[:3]) + "）")
+            gap = page_gap(d.get("page_numbers") or [])
+            if gap:
+                r["reasons"].append(f"ページ欠落の疑い（{gap}ページ目からページ番号が飛んでいる）")
             if not d:
                 r["reasons"].append("詳細検査が未実施")
             # 権利の判断材料（判定には使わない）
