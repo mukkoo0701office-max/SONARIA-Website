@@ -63,17 +63,31 @@
       "title": "String Quartets Book I (Early String Quartets)",
       "publisher": "G. Henle Verlag",
       "publisher_catalog": "HN 205",
-      "work_ids": [],
+      "work_ids": [
+        "Op.1 No.1",
+        "Op.1 No.2",
+        "Op.1 No.3",
+        "Op.1 No.4",
+        "Op.1 No.6",
+        "Op.1 No.0 (Hob.II:6)"
+      ],
       "amazon_url": null,
       "asin": null,
       "isbn": null,
       "source": "https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-205",
-      "verification": "出版社の商品は確認。Amazon.co.jpでの販売、ASIN、作品ページとの対応は未確認",
+      "verification": "Henle official catalog identifies early quartet volume, parts format, editors, ISMN and listed works. Publisher online contents show six items, not all Op.2. Amazon.co.jp individual page/ASIN not found; pending_review.",
       "status": "pending_review",
       "priority": "S",
       "last_research_at": "2026-11-27",
       "amazon_verification_status": "not_confirmed",
-      "verification_notes": "2026-11-27: Amazon.co.jpのHN205/HN208/HN211商品詳細とASINを照合するためウェブ検索したが、信頼できる個別商品結果を確認できず。公式商品情報との対応は保留。"
+      "verification_notes": "2026-11-27: Amazon.co.jp site-targeted catalog-number and ISMN search returned no verifiable direct Amazon product detail page/ASIN. Do not generate affiliate URL.",
+      "ismn": "979-0-2018-0205-3",
+      "editor": [
+        "Georg Feder",
+        "Gottfried Greiner"
+      ],
+      "product_format": "four instrumental parts",
+      "pages": 187
     },
     {
       "id": "haydn-henle-hn208",
@@ -116,17 +130,31 @@
       "title": "String Quartets Book I (Early String Quartets) Study Score",
       "publisher": "G. Henle Verlag",
       "publisher_catalog": "HN 9205",
-      "work_ids": [],
+      "work_ids": [
+        "Op.1 No.1",
+        "Op.1 No.2",
+        "Op.1 No.3",
+        "Op.1 No.4",
+        "Op.1 No.6",
+        "Op.1 No.0 (Hob.II:6)"
+      ],
       "amazon_url": null,
       "asin": null,
       "isbn": null,
-      "source": "https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-9205",
-      "verification": "出版社商品確認、Amazon.co.jp/作品単位対応は未確認",
+      "source": "https://www.henle.de/String-Quartets-Book-I-Early-String-Quartets/HN-9205",
+      "verification": "Henle official catalog confirms pocket score, editors, ISMN and listed six items. Amazon.co.jp individual page/ASIN not found; pending_review.",
       "status": "pending_review",
       "priority": "S",
       "last_research_at": "2026-11-27",
       "amazon_verification_status": "not_confirmed",
-      "verification_notes": "2026-11-27: Amazon.co.jpのHN205/HN208/HN211商品詳細とASINを照合するためウェブ検索したが、信頼できる個別商品結果を確認できず。公式商品情報との対応は保留。"
+      "verification_notes": "2026-11-27: Amazon.co.jp site-targeted catalog-number and ISMN search returned no verifiable direct Amazon product detail page/ASIN. Do not generate affiliate URL.",
+      "ismn": "979-0-2018-9205-4",
+      "editor": [
+        "Georg Feder",
+        "Gottfried Greiner"
+      ],
+      "product_format": "study score (pocket score)",
+      "pages": 118
     },
     {
       "id": "haydn-henle-hn9216",
@@ -140,12 +168,16 @@
       "asin": null,
       "isbn": null,
       "source": "https://www.henle.de/jp/The-String-Quartets-12-Volumes-in-a-Slipcase/HN-9216",
-      "verification": "出版社商品確認、Amazon.co.jp販売とASIN未確認。全集のため原則作曲家ページ対象",
+      "verification": "Henle confirms 12 study-score volumes, 69 quartets, ISMN and set composition. Composer-level related item, not single-work match; Amazon.co.jp ASIN not confirmed.",
       "status": "pending_review",
       "priority": "A",
       "last_research_at": "2026-11-27",
       "amazon_verification_status": "not_confirmed",
-      "verification_notes": "2026-11-27: Amazon.co.jpのHN205/HN208/HN211商品詳細とASINを照合するためウェブ検索したが、信頼できる個別商品結果を確認できず。公式商品情報との対応は保留。"
+      "verification_notes": "2026-11-27: Amazon.co.jp site-targeted catalog-number and ISMN search returned no verifiable direct Amazon product detail page/ASIN. Do not generate affiliate URL.",
+      "ismn": "979-0-2018-9216-0",
+      "product_format": "12-volume study-score slipcase",
+      "pages": 1273,
+      "collection_includes": "HN 9205–9215 and HN 9771"
     },
     {
       "id": "haydn-henle-hn211",
@@ -155,19 +187,29 @@
       "publisher": "G. Henle Verlag",
       "publisher_catalog": "HN 211",
       "work_ids": [
-        "Op.54",
-        "Op.55"
+        "Op.54 No.1",
+        "Op.54 No.2",
+        "Op.54 No.3",
+        "Op.55 No.1",
+        "Op.55 No.2",
+        "Op.55 No.3"
       ],
       "amazon_url": null,
       "asin": null,
       "isbn": null,
       "source": "https://www.henle.de/en/String-Quartets-Book-VII-op.-54-and-55-Tost-Quartets/HN-211",
-      "verification": "出版社商品確認、Amazon.co.jp/ASIN未確認",
+      "verification": "Henle official catalog confirms Op.54/55 six quartets, editor, four-part edition and ISMN. Amazon.co.jp ASIN not confirmed.",
       "status": "pending_review",
       "priority": "S",
       "last_research_at": "2026-11-27",
       "amazon_verification_status": "not_confirmed",
-      "verification_notes": "2026-11-27: Amazon.co.jpのHN205/HN208/HN211商品詳細とASINを照合するためウェブ検索したが、信頼できる個別商品結果を確認できず。公式商品情報との対応は保留。"
+      "verification_notes": "2026-11-27: Amazon.co.jp site-targeted catalog-number and ISMN search returned no verifiable direct Amazon product detail page/ASIN. Do not generate affiliate URL.",
+      "ismn": "979-0-2018-0211-4",
+      "editor": [
+        "James Webster"
+      ],
+      "product_format": "four instrumental parts",
+      "pages": 187
     },
     {
       "id": "haydn-henle-hn9208",
@@ -376,14 +418,17 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Haydn HN207 HN9207 Amazon Japan lookup; expanding publisher-confirmed Op.33 sets",
-    "result": "No reliable Amazon.co.jp detail listing matched HN207/HN9207 or ISMN using targeted searches. Henle Op.33 HN209 and HN9209 verified on official product pages and added pending Amazon listing verification.",
-    "new_publisher_confirmed": 2,
+    "focus": "Resolve publisher identifiers and exact work scope for Haydn HN205, HN9205, HN9216, HN211; Amazon Japan search for HN205/HN9205/HN211",
+    "result": "Four existing records enriched with publisher-confirmed ISMN, edition format, editors, pages and work scope. No exact Amazon.co.jp ASIN found; zero new affiliate links.",
+    "new_publisher_confirmed": 0,
+    "existing_records_enriched": 4,
     "new_amazon_verified": 0,
-    "next": "Verify Amazon.co.jp ASIN and actual listing for ISMN 9790201802091 and 9790201892092; do not publish guessed affiliate URLs.",
+    "next": "Continue Amazon.co.jp direct ASIN lookup using publisher ISMN and alternate Japanese titles. Check discrepancy between Henle website's six-item HN205/HN9205 contents and independent retailer expanded Op.2 listing; keep narrower verified publisher list until resolved.",
     "evidence_urls": [
-      "https://www.henle.de/jp/String-Quartets-Book-V-op.-33-Russian-Quartets/HN-209",
-      "https://www.henle.de/String-Quartets-Book-V-op.-33-Russian-Quartets/HN-9209"
+      "https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-205",
+      "https://www.henle.de/String-Quartets-Book-I-Early-String-Quartets/HN-9205",
+      "https://www.henle.de/jp/The-String-Quartets-12-Volumes-in-a-Slipcase/HN-9216",
+      "https://www.henle.de/en/String-Quartets-Book-VII-op.-54-and-55-Tost-Quartets/HN-211"
     ]
   }
 }
