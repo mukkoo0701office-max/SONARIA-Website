@@ -64,22 +64,22 @@
       "publisher": "G. Henle Verlag",
       "publisher_catalog": "HN 205",
       "work_ids": [
-        "Op.1 No.1",
-        "Op.1 No.2",
-        "Op.1 No.3",
-        "Op.1 No.4",
-        "Op.1 No.6",
-        "Op.1 No.0 (Hob.II:6)"
+        "Op.1 No.0 / Hob.II:6",
+        "Op.1 No.1 / Hob.III:1",
+        "Op.1 No.2 / Hob.III:2",
+        "Op.1 No.3 / Hob.III:3",
+        "Op.1 No.4 / Hob.III:4",
+        "Op.1 No.6 / Hob.III:6"
       ],
       "amazon_url": null,
       "asin": null,
       "isbn": null,
       "source": "https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-205",
-      "verification": "Henle official catalog identifies early quartet volume, parts format, editors, ISMN and listed works. Publisher online contents show six items, not all Op.2. Amazon.co.jp individual page/ASIN not found; pending_review.",
+      "verification": "Henle HN205/HN9205 official edition scope and ISMN checked, including Op.1 No.0 and exclusion of spurious Op.1 No.5. No trustworthy matching Amazon.co.jp product detail URL/ASIN from exact publisher/ISMN searches; do not generate mukkoo-22 links.",
       "status": "pending_review",
       "priority": "S",
       "last_research_at": "2026-11-27",
-      "amazon_verification_status": "not_confirmed",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
       "verification_notes": "2026-11-27: Amazon.co.jp site-targeted catalog-number and ISMN search returned no verifiable direct Amazon product detail page/ASIN. Do not generate affiliate URL.",
       "ismn": "979-0-2018-0205-3",
       "editor": [
@@ -87,7 +87,13 @@
         "Gottfried Greiner"
       ],
       "product_format": "four instrumental parts",
-      "pages": 187
+      "pages": 187,
+      "last_amazon_search_at": "2026-11-27",
+      "publisher_authenticity_note": "Henle HN205/HN9205 Book I Early Quartets lists genuine early four-part Haydn works Op.1 Nos.1,2,3,4,6 plus Op.1 No.0 Hob.II:6; excludes symphony printed as Op.1 No.5. Op.1 No.0 is NOT Op.1 No.1. This is one volume per format (parts or study score), not six separately sold publications.",
+      "imslp_related_work_ids": [
+        "haydn-op1-no0-hobii6-early-quartet",
+        "haydn-op1-no1-peters-merton"
+      ]
     },
     {
       "id": "haydn-henle-hn208",
@@ -131,22 +137,22 @@
       "publisher": "G. Henle Verlag",
       "publisher_catalog": "HN 9205",
       "work_ids": [
-        "Op.1 No.1",
-        "Op.1 No.2",
-        "Op.1 No.3",
-        "Op.1 No.4",
-        "Op.1 No.6",
-        "Op.1 No.0 (Hob.II:6)"
+        "Op.1 No.0 / Hob.II:6",
+        "Op.1 No.1 / Hob.III:1",
+        "Op.1 No.2 / Hob.III:2",
+        "Op.1 No.3 / Hob.III:3",
+        "Op.1 No.4 / Hob.III:4",
+        "Op.1 No.6 / Hob.III:6"
       ],
       "amazon_url": null,
       "asin": null,
       "isbn": null,
       "source": "https://www.henle.de/String-Quartets-Book-I-Early-String-Quartets/HN-9205",
-      "verification": "Henle official catalog confirms pocket score, editors, ISMN and listed six items. Amazon.co.jp individual page/ASIN not found; pending_review.",
+      "verification": "Henle HN205/HN9205 official edition scope and ISMN checked, including Op.1 No.0 and exclusion of spurious Op.1 No.5. No trustworthy matching Amazon.co.jp product detail URL/ASIN from exact publisher/ISMN searches; do not generate mukkoo-22 links.",
       "status": "pending_review",
       "priority": "S",
       "last_research_at": "2026-11-27",
-      "amazon_verification_status": "not_confirmed",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
       "verification_notes": "2026-11-27: Amazon.co.jp site-targeted catalog-number and ISMN search returned no verifiable direct Amazon product detail page/ASIN. Do not generate affiliate URL.",
       "ismn": "979-0-2018-9205-4",
       "editor": [
@@ -154,7 +160,13 @@
         "Gottfried Greiner"
       ],
       "product_format": "study score (pocket score)",
-      "pages": 118
+      "pages": 118,
+      "last_amazon_search_at": "2026-11-27",
+      "publisher_authenticity_note": "Henle HN205/HN9205 Book I Early Quartets lists genuine early four-part Haydn works Op.1 Nos.1,2,3,4,6 plus Op.1 No.0 Hob.II:6; excludes symphony printed as Op.1 No.5. Op.1 No.0 is NOT Op.1 No.1. This is one volume per format (parts or study score), not six separately sold publications.",
+      "imslp_related_work_ids": [
+        "haydn-op1-no0-hobii6-early-quartet",
+        "haydn-op1-no1-peters-merton"
+      ]
     },
     {
       "id": "haydn-henle-hn9216",
@@ -855,20 +867,21 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Haydn Op.51 free score+parts candidate linkage to commercial Henle HN851 and HN9771; Amazon Japan exact identifier audit",
-    "result": "Verified IMSLP historical Trautwein score and Le Duc individual quartet parts metadata. Cross-linked HN851 and HN9771 commercial candidates to ONE Op.51 cycle and flagged contested quartet-adaptation provenance; exact searches for 9790201808512 and 9790201897714 returned no confirmed Amazon.co.jp product detail / ASIN. Publisher editions remain pending_review.",
+    "focus": "Early Haydn genuine quartet catalogue: Henle HN205/HN9205 vs spurious old printed opus references and Amazon Japan exact ASIN",
+    "result": "Corrected work_ids for two existing Henle Book I editions to match publisher contents: Op.1 Nos.1–4,6 and Op.1 No.0 (Hob.II:6), excluding Op.1 No.5 symphony. Distinct parts/study score formats confirmed; searches did not return a verified Amazon.co.jp exact product listing or ASIN. Search results on music.amazon.co.jp were recordings and unsuitable as printed sheet-music product IDs.",
     "new_candidates": 0,
+    "new_publisher_confirmed": 0,
     "new_amazon_verified": 0,
     "existing_records_enriched": 2,
     "checked_candidates": [
-      "haydn-henle-hn851",
-      "haydn-henle-hn9771"
+      "haydn-henle-hn205",
+      "haydn-henle-hn9205"
     ],
-    "evidence_urls": [
-      "https://imslp.org/wiki/Die_Worte_des_Erl%C3%B6sers_am_Kreuze%2C_Hob.III%3A50-56_%28Haydn%2C_Joseph%29",
-      "https://www.henle.de/en/The-Seven-Last-Words-of-Christ-Arrangement-for-String-Quartet-Hob.-XX-1B/HN-851",
-      "https://www.henle.de/The-Seven-Last-Words-of-Christ-Arrangement-for-String-Quartet-Hob.-XX-1B/HN-9771"
+    "sources": [
+      "https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-205",
+      "https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-9205",
+      "https://imslp.org/wiki/Divertimento_in_E-flat_major%2C_Hob.II%3A6_%28Haydn%2C_Joseph%29"
     ],
-    "next": "For HN851/HN9771 obtain direct Amazon.co.jp item URLs using signed-in Amazon Associates Product Linking or official product API; then validate ASIN, edition format, relevant composer work and disclosure before approval."
+    "next": "Use authenticated Amazon Associates Product Linking or authorized product API to verify HN205 ISMN 9790201802053 and HN9205 ISMN 9790201892054 on an exact print edition page. Meanwhile prioritize accurate work matching over expanding unverified Amazon leads."
   }
 }
