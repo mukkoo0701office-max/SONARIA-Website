@@ -1005,22 +1005,21 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Haydn cello sonata genre audit; original concerto versus 8 historical Friedrich Grützmacher cello+piano transcriptions and affiliate exact-ASIN checks",
-    "result": "The Haydn IMSLP catalog does not identify an authentic standalone original cello+piano sonata. Grützmacher's historical eight-sonata cello+piano arrangement edition is documented by IMSLP score #141285 and part #141286; the underlying material was itself issued as violin/piano arrangements. Henle HN417 (ISMN 9790201804170, C-major concerto Hob.VIIb:1) and HN418 (ISMN 9790201804187, D-major concerto Hob.VIIb:2) are commercial piano reductions of cello concertos, NOT cello sonatas and thus unsuitable as exact matches for Grützmacher sonata pages. Exact Amazon.co.jp individual product-page/ASIN verification not obtained for HN417/HN418 via site-specific search. No new product added to avoid false-relevance recommendations.",
+    "focus": "Haydn historical Grützmacher cello-piano arrangement Nos.3-5 exact edition screening against Amazon.co.jp",
+    "result": "IMSLP confirms Breitkopf & Härtel historic V.A.482 Grützmacher cello-piano score/part pairs #141292/141293 (No.3), #141294/141295 (No.4), #141296/141297 (No.5). Broader web catalogs and University of Rochester historical library record corroborate score-and-parts format but did not identify any trustworthy currently sold exact matching individual Amazon.co.jp item, ASIN or ISMN. A Japanese music metadata listing for a Grützmacher-edited Haydn CELLO CONCERTO is unrelated and must not be misidentified as one of these cello SONATA transcriptions. New affiliate products 0; prefer no ads to false matches.",
     "new_candidates": 0,
+    "new_publisher_confirmed": 0,
     "new_amazon_verified": 0,
     "existing_records_enriched": 0,
     "checked_candidates": [
-      "Henle HN417 cello concerto piano reduction - not a cello sonata product",
-      "Henle HN418 cello concerto piano reduction - not a cello sonata product",
-      "Grützmacher 8 cello+piano sonatas - public-domain IMSLP source, no verified currently sold matching Amazon edition"
+      "Breitkopf & Härtel V.A.482 Haydn/Grützmacher cello-piano adaptations Nos.3-5 - historic score, no current Amazon item confirmed"
     ],
     "source_urls": [
-      "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
-      "https://imslp.org/wiki/List_of_works_by_Joseph_Haydn",
-      "https://www.henle.de/en/Violoncello-Concerto-C-major-Hob.-VIIb-1/HN-417",
-      "https://www.henle.de/en/Violoncello-Concerto-D-major-Hob.-VIIb-2/HN-418"
+      "https://imslp.org/wiki/Keyboard_Sonata_in_E-flat_major%2C_Hob.XVI%3A25_%28Haydn%2C_Joseph%29",
+      "https://imslp.org/wiki/Keyboard_Sonata_in_A_major%2C_Hob.XVI%3A26_%28Haydn%2C_Joseph%29",
+      "https://imslp.org/wiki/Keyboard_Sonata_in_A-flat_major%2C_Hob.XVI%3A43_%28Haydn%2C_Joseph%29",
+      "https://urresearch.rochester.edu/institutionalPublicationPublicView.action?institutionalItemId=16582&versionNumber=1"
     ],
-    "next": "Prioritize exact Amazon.co.jp catalog-matched printed Grützmacher cello/piano edition if genuinely available, not cello concerto piano reduction. If none, keep cello-sonata pages ad-free rather than irrelevant links. Future new concerto-category research may separately register HN417/HN418 after checking Amazon ASIN via Associates."
+    "next": "If the exact Breitkopf historical collection is available as a verified contemporary retail item, identify exact publisher catalogue and Amazon.co.jp ASIN through authenticated Associates or official API; otherwise no affiliate listing for these cello adaptations. Next IMSLP individual source audit Nos.6-8."
   }
 }
