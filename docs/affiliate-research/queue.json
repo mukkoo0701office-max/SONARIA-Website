@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "updated_at": "2026-11-27",
+  "status": "research_only",
+  "max_items_per_score_page": 2,
+  "affiliate_tag": "NOT_CONFIGURED",
+  "items": [
+    {
+      "id": "mozart-quartets-henle-168-173",
+      "composer": "Mozart",
+      "category": "printed_score",
+      "title": "String Quartets 2: KV 168-173 (Henle)",
+      "work_ids": [
+        "KV168",
+        "KV169",
+        "KV170",
+        "KV171",
+        "KV172",
+        "KV173"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "source": "商品検索結果 2026-11-27",
+      "verification": "Amazon.co.jp個別商品URL/版/ISBN未確認",
+      "status": "pending_review",
+      "priority": "S"
+    },
+    {
+      "id": "beethoven-quartet-4-pocket",
+      "composer": "Beethoven",
+      "category": "pocket_score",
+      "title": "String Quartet No. 4: Pocket Score",
+      "work_ids": [
+        "Op.18 No.4"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "source": "Amazon商品検索結果 2026-11-27",
+      "verification": "Amazon.co.jp個別商品URL/出版社/ASIN未確認",
+      "status": "pending_review",
+      "priority": "S"
+    },
+    {
+      "id": "beethoven-complete-quartets-vol3",
+      "composer": "Beethoven",
+      "category": "printed_score",
+      "title": "Complete String Quartets 3",
+      "work_ids": [],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "source": "商品検索結果 2026-11-27",
+      "verification": "収録曲/巻/版/ASIN未確認",
+      "status": "pending_review",
+      "priority": "A"
+    }
+  ],
+  "implementation_ready": 0
+}
