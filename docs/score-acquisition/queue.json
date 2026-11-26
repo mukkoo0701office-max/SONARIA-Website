@@ -37,9 +37,9 @@
   ],
   "cursor": {
     "composer": "Haydn",
-    "stage": "violin_sonata",
-    "last_work": "Historical Violin Sonatas collection No.8 G major / after Op.77 No.1 Hob.III:81",
-    "note": "Eight historical violin+piano pieces now individually catalogued; only No.1 considered likely original. Next audit authentic Haydn violin+viola sonatas Hob.VI:1–6 (different instrumentation), and check whether genuine original violin+piano repertoire is exhausted, before cello sonatas. EP190/IMSLP No.6 cite related Hob.II:11 and Hob.XVI:15; movement/source comparison needed."
+    "stage": "violin_viola_duo",
+    "last_work": "Hob.VI:3 / B-flat major (Doblinger parts, full score missing)",
+    "note": "Next Hob.VI:4 D major, :5 E-flat, :6 C major. IMSLP Hob.VI:1–3 Doblinger 1957 listed only two performance parts, no full original two-staff score; do not approve complete SONARIA sets or redistribution on metadata alone. Evaluate separate original public-domain score and rights."
   },
   "items": [
     {
@@ -4497,6 +4497,234 @@
       },
       "rights_status": "unknown",
       "notes": "Four-movement quartet reduced to three movement arrangement (excludes Minuet and Trio); verify all three surviving movements and transcription/part correspondence. Not an original standalone Haydn violin-piano work. Preserve relevant instrumental source and alterations; if No.6 is substantially modified between Hob.II:11 and Hob.XVI:15, document differences explicitly. Full score + violin part required, page range, engraving, rights, site duplication not verified. No PDF downloaded, rights approved or publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-violin-viola-hobvi1-doblinger-parts",
+      "composer": "Joseph Haydn",
+      "category": "string_duo_violin_viola",
+      "work_title": "Sonata (String Duo) in F major for Violin and Viola",
+      "opus_catalog": "Hob.VI:1",
+      "work_url": "https://imslp.org/wiki/String_Duo_in_F_major%2C_Hob.VI%3A1_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Ludwig Doblinger, Vienna (Diletto musicale No.10)",
+        "publication_date": "1957",
+        "editor": "Gerhard Zatschek",
+        "scope": "Original violin and viola performing parts only; no matching two-staff full score identified in the checked IMSLP edition",
+        "imslp_file_id": "326562",
+        "file_pages": 4,
+        "edition_comparison": "Doblinger Diletto musicale 10 (plate D.9404); Vn #326562 (4pp), Va #326563 (3pp); covers #326564 2pp. Source IMSLP listing lacks a two-staff original score. Separate Henle HN216 modern 6-duo edition does include score and parts commercially but must not be copied as an unapproved PDF. Review alternate public-domain historical sources or original score reconstructed under controlled process only after permissions."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Duo_in_F_major%2C_Hob.VI%3A1_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "viola"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": null,
+            "edition": null,
+            "metadata_verified": false,
+            "pdf_inspected": false
+          },
+          "violin": {
+            "imslp_file_id": "326562",
+            "edition": "Doblinger/Zatschek 1957",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "viola": {
+            "imslp_file_id": "326563",
+            "edition": "Doblinger/Zatschek 1957",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "same_edition_parts_only_missing_matching_score",
+        "complete_set_verified": false,
+        "rights_verified": false,
+        "score_missing": true
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Duo_in_F_major%2C_Hob.VI%3A1_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP Hob.VI:1 F major violin+viola, three movements, Doblinger 1957 Gerhard Zatschek parts #326562 violin and #326563 viola, cover #326564; no full original score under listed source files. Scans not reviewed."
+        },
+        {
+          "url": "https://www.henle.de/jp/Six-Sonatas-Hob.-VI-1-6-for-Violin-and-Viola/HN-216",
+          "verified": "Henle modern commercial HN216 includes all Hob.VI:1–6, violin solo and viola accompaniment, modern Urtext; not a public-domain source."
+        }
+      ],
+      "checklist": {
+        "work_identity": "IMSLP_instrumentation_and_catalog_confirmed",
+        "edition": "doblinger_1957_publisher_editor_confirmed",
+        "parts": "both_part_IDs_confirmed_pdf_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "sonaria_live_inventory_unverified",
+        "rights": "japan_1957_critical_editor_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "blocked_missing_full_score"
+      },
+      "rights_status": "unknown",
+      "notes": "SONARIA complete-set requirement for duo: two-staff full score + Vn + Va parts, not simply two parts. Scanned Doblinger 1957 urtext may have editorial rights in Japan; don't assume IMSLP availability authorizes local distribution. Modern Henle commercial HN216 is comparison only. Validate copyright and original source, score completeness and editorial apparatus before Claude imports. No downloads.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-violin-viola-hobvi2-doblinger-parts",
+      "composer": "Joseph Haydn",
+      "category": "string_duo_violin_viola",
+      "work_title": "Sonata (String Duo) in A major for Violin and Viola",
+      "opus_catalog": "Hob.VI:2",
+      "work_url": "https://imslp.org/wiki/String_Duo_in_A_major%2C_Hob.VI%3A2_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Ludwig Doblinger, Vienna (Diletto musicale No.11)",
+        "publication_date": "1957",
+        "editor": "Gerhard Zatschek",
+        "scope": "Original violin and viola performing parts only; no matching two-staff full score identified in the checked IMSLP edition",
+        "imslp_file_id": "326466",
+        "file_pages": 4,
+        "edition_comparison": "Doblinger Diletto musicale 11 (plate D.9403); Vn #326466 (4pp), Va #326467 (3pp); covers #326468 2pp. Source IMSLP listing lacks a two-staff original score. Separate Henle HN216 modern 6-duo edition does include score and parts commercially but must not be copied as an unapproved PDF. Review alternate public-domain historical sources or original score reconstructed under controlled process only after permissions."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Duo_in_A_major%2C_Hob.VI%3A2_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "viola"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": null,
+            "edition": null,
+            "metadata_verified": false,
+            "pdf_inspected": false
+          },
+          "violin": {
+            "imslp_file_id": "326466",
+            "edition": "Doblinger/Zatschek 1957",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "viola": {
+            "imslp_file_id": "326467",
+            "edition": "Doblinger/Zatschek 1957",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "same_edition_parts_only_missing_matching_score",
+        "complete_set_verified": false,
+        "rights_verified": false,
+        "score_missing": true
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Duo_in_A_major%2C_Hob.VI%3A2_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP Hob.VI:2 A major violin+viola, three movements, Doblinger 1957 Gerhard Zatschek parts #326466 violin and #326467 viola, cover #326468; no full original score under listed source files. Scans not reviewed."
+        },
+        {
+          "url": "https://www.henle.de/jp/Six-Sonatas-Hob.-VI-1-6-for-Violin-and-Viola/HN-216",
+          "verified": "Henle modern commercial HN216 includes all Hob.VI:1–6, violin solo and viola accompaniment, modern Urtext; not a public-domain source."
+        }
+      ],
+      "checklist": {
+        "work_identity": "IMSLP_instrumentation_and_catalog_confirmed",
+        "edition": "doblinger_1957_publisher_editor_confirmed",
+        "parts": "both_part_IDs_confirmed_pdf_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "sonaria_live_inventory_unverified",
+        "rights": "japan_1957_critical_editor_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "blocked_missing_full_score"
+      },
+      "rights_status": "unknown",
+      "notes": "SONARIA complete-set requirement for duo: two-staff full score + Vn + Va parts, not simply two parts. Scanned Doblinger 1957 urtext may have editorial rights in Japan; don't assume IMSLP availability authorizes local distribution. Modern Henle commercial HN216 is comparison only. Validate copyright and original source, score completeness and editorial apparatus before Claude imports. No downloads.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-violin-viola-hobvi3-doblinger-parts",
+      "composer": "Joseph Haydn",
+      "category": "string_duo_violin_viola",
+      "work_title": "Sonata (String Duo) in B-flat major for Violin and Viola",
+      "opus_catalog": "Hob.VI:3",
+      "work_url": "https://imslp.org/wiki/String_Duo_in_B-flat_major%2C_Hob.VI%3A3_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Ludwig Doblinger, Vienna (Diletto musicale No.12)",
+        "publication_date": "1957",
+        "editor": "Gerhard Zatschek",
+        "scope": "Original violin and viola performing parts only; no matching two-staff full score identified in the checked IMSLP edition",
+        "imslp_file_id": "326575",
+        "file_pages": 4,
+        "edition_comparison": "Doblinger Diletto musicale 12 (plate D.9402); Vn #326575 (4pp), Va #326576 (2pp); covers #326577 2pp. Source IMSLP listing lacks a two-staff original score. Separate Henle HN216 modern 6-duo edition does include score and parts commercially but must not be copied as an unapproved PDF. Review alternate public-domain historical sources or original score reconstructed under controlled process only after permissions."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Duo_in_B-flat_major%2C_Hob.VI%3A3_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "viola"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": null,
+            "edition": null,
+            "metadata_verified": false,
+            "pdf_inspected": false
+          },
+          "violin": {
+            "imslp_file_id": "326575",
+            "edition": "Doblinger/Zatschek 1957",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "viola": {
+            "imslp_file_id": "326576",
+            "edition": "Doblinger/Zatschek 1957",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "same_edition_parts_only_missing_matching_score",
+        "complete_set_verified": false,
+        "rights_verified": false,
+        "score_missing": true
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Duo_in_B-flat_major%2C_Hob.VI%3A3_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP Hob.VI:3 B-flat major violin+viola, three movements, Doblinger 1957 Gerhard Zatschek parts #326575 violin and #326576 viola, cover #326577; no full original score under listed source files. Scans not reviewed."
+        },
+        {
+          "url": "https://www.henle.de/jp/Six-Sonatas-Hob.-VI-1-6-for-Violin-and-Viola/HN-216",
+          "verified": "Henle modern commercial HN216 includes all Hob.VI:1–6, violin solo and viola accompaniment, modern Urtext; not a public-domain source."
+        }
+      ],
+      "checklist": {
+        "work_identity": "IMSLP_instrumentation_and_catalog_confirmed",
+        "edition": "doblinger_1957_publisher_editor_confirmed",
+        "parts": "both_part_IDs_confirmed_pdf_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "sonaria_live_inventory_unverified",
+        "rights": "japan_1957_critical_editor_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "blocked_missing_full_score"
+      },
+      "rights_status": "unknown",
+      "notes": "SONARIA complete-set requirement for duo: two-staff full score + Vn + Va parts, not simply two parts. Scanned Doblinger 1957 urtext may have editorial rights in Japan; don't assume IMSLP availability authorizes local distribution. Modern Henle commercial HN216 is comparison only. Validate copyright and original source, score completeness and editorial apparatus before Claude imports. No downloads.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
