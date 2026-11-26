@@ -93,7 +93,8 @@ export type ScoreAsset = {
   remote?: string | null; // PDF 本体の保存先（GitHub のリリースの添付ファイル）。プレビューではここから取得する
   filename: string; // ダウンロード時のファイル名
   preview?: { file: string; width: number; height: number } | null; // 1 ページ目の画像
-  sha256: string;
+  sha256: string; // SONARIA で文書情報を書き込んだ後の値
+  originalSha256?: string; // 旧サイトの PDF の値（検査記録との照合用）
   pages: number;
   bytes: number;
 };

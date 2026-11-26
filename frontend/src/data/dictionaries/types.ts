@@ -73,6 +73,17 @@ export type Dictionary = {
     slideOf: (index: number, total: number) => string;
     slides: Record<PageKey, { title: string; catchCopy: string; cta: string }>;
   };
+  homeScoreSearch: {
+    heading: string;
+    lead: string;
+    leadWithCount: (n: number) => string;
+    keyword: string;
+    placeholder: string;
+    submit: string;
+    detailLink: string;
+    byComposer: string;
+    freeNote: string;
+  };
   homeTeacherSearch: {
     heading: string;
     lead: string;
@@ -228,16 +239,21 @@ export type Dictionary = {
       difficulty: string;
       difficultyLevels: Record<1 | 2 | 3 | 4 | 5, string>;
       faqTitle: string;
-      qComposer: (title: string) => string;
-      aComposer: (title: string, composer: string, composed: string | null) => string;
-      qInstrumentation: string;
-      aInstrumentation: (title: string, instrumentation: string) => string;
+      qContents: string;
+      aContents: (score: string | null, parts: string[]) => string;
+      scoreItem: (pages: number) => string;
+      partItem: (label: string, pages: number) => string;
+      qPlayers: string;
+      playersByScoring: Partial<Record<Scoring, string>>;
+      soloWithPiano: (solo: string) => string;
+      soloWithEnsemble: string;
+      qPrint: string;
+      aPrint: (total: number, files: number, perPlayer: string | null) => string;
+      perPlayer: (label: string, pages: number) => string;
       qMovements: string;
-      aMovements: (title: string, n: number) => string;
+      aMovements: (n: number, list: string) => string;
       qFree: string;
       aFree: (title: string, files: number, rightsConfirmed: boolean) => string;
-      qParts: string;
-      aParts: (hasScore: boolean, parts: string) => string;
       scoresTitle: string;
       scoresLead: string;
       scoresLeadRemote: string;

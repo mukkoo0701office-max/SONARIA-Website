@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """
-楽譜 PDF を旧サイトから取得し、GitHub のリリース（添付ファイル）に保存してカタログを作る（GitHub Actions 専用）。
+楽譜 PDF を GitHub のリリース（添付ファイル）に保存し、カタログを作る（GitHub Actions 専用）。
 
 - 入力: tools/score-migration/approvals.json（analyze.py の出力。rights.status が rejected の版は扱わない）
-- 検査（audit.py）で記録した SHA-256 と一致しないファイルは保存しない（差し替え・誤リンクの防止）
-- 同じ内容（同じ SHA-256）のファイルは 1 つだけ保存する
-- PDF 本体はリポジトリに入れず、リリース（--release-tag）の添付ファイルにする
-  （合計約 1.7GB で GitHub Pages の上限 1GB を超えるため。リリースの添付は後から完全に削除・差し替えできる）
+- PDF は旧サイトから取得し、検査（audit.py）で記録した SHA-256 と一致するものだけを使う（差し替え・誤リンクの防止）
+- 保存する PDF には統一した文書情報（タイトル・作曲者・件名・キーワード）を書き込み、
+  統一ファイル名（naming.py。例: Beethoven_Violin-Sonata-No5-Op24_Violin.pdf）でリリースに置く
+- 以前の名前（<作品ID>--<ファイルID>.pdf）で置いた添付ファイルは、取り直さずに文書情報を書き込んで改名し、古いものを消す
+- PDF 本体はリポジトリに入れない（合計約 1.5GB で GitHub Pages の上限 1GB を超えるため。リリースの添付は後から完全に削除・差し替えできる）
 - 1 ページ目の画像（幅 600px の JPEG）は frontend/public/scores/<作品ID>/<ファイルID>-p1.jpg に保存する
-- 出力: frontend/src/data/scores/catalog.json（各ファイルに、本番用のパス file と、リリースの URL remote を記録）
-- 作曲家の情報は frontend/src/data/scores/composers.json（作曲家マスター）で管理し、作品は composerId で参照する
-- 旧サイトのデータは読むだけで、変更・削除しない。途中で止まっても、保存済みのファイルは取り直さない
+- 出力: frontend/src/data/scores/catalog.json
+- 旧サイトのデータは読むだけで、変更・削除しない。途中で止まっても、処理済みのファイルはやり直さない
 
 使い方: python migrate.py --approvals approvals.json --repo <リポジトリのルート> --release-tag scores-v1
 環境変数: GH_TOKEN（リリースへの書き込み）、GITHUB_REPOSITORY（owner/repo）
@@ -28,8 +28,12 @@ import tempfile
 import time
 from datetime import datetime, timezone
 
+import pikepdf
 import requests
 from PIL import Image
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from naming import doc_info, unique_names  # noqa: E402
 
 USER_AGENT = "SONARIA-score-migration/1.0 (site owner's migration)"
 DELAY_SECONDS = 5.0  # 旧サイトの robots.txt の Crawl-Delay に合わせる
@@ -67,6 +71,22 @@ def make_preview(pdf_path: str, jpg_path: str) -> None:
     subprocess.run(["pdftoppm", "-f", "1", "-l", "1", "-singlefile", "-scale-to-x", "600", "-scale-to-y", "-1", "-jpeg", "-jpegopt", "quality=72", pdf_path, stem], capture_output=True)
 
 
+def stamp(src: str, dst: str, info: dict[str, str]) -> None:
+    """文書情報を書き込む（ページの中身は変えない）"""
+    with pikepdf.open(src) as pdf:
+        for k, v in info.items():
+            pdf.docinfo[k] = v
+        pdf.save(dst)
+
+
+def sha256_of(path: str) -> str:
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--approvals", required=True)
@@ -78,13 +98,24 @@ def main() -> int:
 
     approvals = json.load(open(args.approvals, encoding="utf-8"))
     public_dir = os.path.join(args.repo, "frontend", "public")
-    catalog_path = os.path.join(args.repo, "frontend", "src", "data", "scores", "catalog.json")
+    data_dir = os.path.join(args.repo, "frontend", "src", "data", "scores")
+    catalog_path = os.path.join(data_dir, "catalog.json")
+    composers = {c["id"]: c for c in json.load(open(os.path.join(data_dir, "composers.json"), encoding="utf-8"))}
+    # 前回のカタログ（処理済みの判定と、書き込み済み PDF の SHA-256 を引き継ぐ）
+    previous: dict[tuple[str, str], dict] = {}
+    if os.path.exists(catalog_path):
+        for w in json.load(open(catalog_path, encoding="utf-8")).get("works", []):
+            for e in w["editions"]:
+                for a in e["assets"]:
+                    previous[(w["id"], a["id"])] = a
+    names = unique_names([(w, composers[w["composerId"]], a) for w in approvals["works"] for e in w["editions"] if e["rights"]["status"] != "rejected" for a in e["assets"]])
+
     repo = os.environ["GITHUB_REPOSITORY"]
-    released = ensure_release(args.release_tag)
+    tag = args.release_tag
+    released = ensure_release(tag)
     session = requests.Session()
     session.headers["User-Agent"] = USER_AGENT
-    remote_by_hash: dict[str, str] = {}
-    report = {"downloaded": 0, "already_released": 0, "reused_same_content": 0, "skipped_rejected": 0, "failed": [], "out_of_time": 0}
+    report = {"from_old_site": 0, "renamed": 0, "unchanged": 0, "skipped_rejected": 0, "failed": [], "out_of_time": 0}
     last = 0.0
     works_out = []
     tmp = tempfile.mkdtemp()
@@ -92,6 +123,7 @@ def main() -> int:
     for work in approvals["works"]:
         if not ID_RE.match(work["id"]):
             raise SystemExit(f"invalid work id: {work['id']}")
+        composer = composers[work["composerId"]]
         editions_out = []
         for ed in work["editions"]:
             if ed["rights"]["status"] == "rejected":
@@ -101,54 +133,58 @@ def main() -> int:
             for asset in ed["assets"]:
                 if not ID_RE.match(asset["id"]) or asset["part"] not in PARTS:
                     raise SystemExit(f"invalid asset: {asset['id']} / {asset['part']} ({work['id']})")
-                expected = asset["sha256"]
-                name = f"{work['id']}--{asset['id']}.pdf"
+                original_sha = asset["sha256"]
+                name = names[(work["id"], asset["id"])]
+                old_name = f"{work['id']}--{asset['id']}.pdf"
+                remote = f"https://github.com/{repo}/releases/download/{tag}/{name}"
                 jpg_rel = f"/scores/{work['id']}/{asset['id']}-p1.jpg"
                 jpg_abs = os.path.join(public_dir, jpg_rel.lstrip("/"))
-                remote = remote_by_hash.get(expected)
-                if remote:
-                    report["reused_same_content"] += 1
-                    if not os.path.exists(jpg_abs):
-                        # 同じ内容の画像を別の作品でも使えるよう複製する
-                        src = next((p for h, p in preview_by_hash.items() if h == expected), None)
-                        if src and os.path.exists(src):
-                            os.makedirs(os.path.dirname(jpg_abs), exist_ok=True)
-                            with open(src, "rb") as fi, open(jpg_abs, "wb") as fo:
-                                fo.write(fi.read())
-                elif name in released and os.path.exists(jpg_abs):
-                    remote = f"https://github.com/{repo}/releases/download/{args.release_tag}/{name}"
-                    report["already_released"] += 1
+                prev = previous.get((work["id"], asset["id"]), {})
+                stamped = os.path.join(tmp, name)
+
+                if name in released and prev.get("remote") == remote and prev.get("sha256") and os.path.exists(jpg_abs):
+                    # 処理済み
+                    sha, size = prev["sha256"], prev["bytes"]
+                    report["unchanged"] += 1
                 else:
                     if time.time() > deadline:
                         report["out_of_time"] += 1
                         continue
-                    wait = DELAY_SECONDS - (time.time() - last)
-                    if wait > 0:
-                        time.sleep(wait)
-                    try:
-                        r = session.get(asset["url"], timeout=(30, 600))  # 旧サイトの応答が遅いことがあるため読み込みは長めに待つ
-                        data = r.content if r.status_code == 200 else b""
-                        status = r.status_code
-                    except requests.RequestException as ex:
-                        data, status = b"", type(ex).__name__
-                    finally:
-                        last = time.time()
-                    actual = hashlib.sha256(data).hexdigest()
-                    if actual != expected or not data.startswith(b"%PDF-"):
-                        report["failed"].append({"asset": f"{work['id']}/{asset['id']}", "url": asset["url"], "status": status, "sha256": actual})
+                    raw = os.path.join(tmp, "raw.pdf")
+                    if old_name in released:
+                        # 以前の名前で置いたファイルを取り出す（旧サイトにはアクセスしない）
+                        gh("release", "download", tag, "-p", old_name, "-O", raw, "--clobber")
+                        source = "release"
+                    else:
+                        wait = DELAY_SECONDS - (time.time() - last)
+                        if wait > 0:
+                            time.sleep(wait)
+                        try:
+                            r = session.get(asset["url"], timeout=(30, 600))  # 旧サイトの応答が遅いことがあるため読み込みは長めに待つ
+                            data = r.content if r.status_code == 200 else b""
+                            status = r.status_code
+                        except requests.RequestException as ex:
+                            data, status = b"", type(ex).__name__
+                        finally:
+                            last = time.time()
+                        with open(raw, "wb") as f:
+                            f.write(data)
+                        source = f"old_site (HTTP {status})"
+                    if sha256_of(raw) != original_sha:
+                        report["failed"].append({"asset": f"{work['id']}/{asset['id']}", "source": source, "reason": "SHA-256 が検査時と違う"})
                         continue
-                    pdf_path = os.path.join(tmp, name)
-                    with open(pdf_path, "wb") as f:
-                        f.write(data)
-                    make_preview(pdf_path, jpg_abs)
-                    if name not in released:
-                        gh("release", "upload", args.release_tag, pdf_path, "--clobber")
-                        released.add(name)
-                    os.remove(pdf_path)
-                    remote = f"https://github.com/{repo}/releases/download/{args.release_tag}/{name}"
-                    report["downloaded"] += 1
-                remote_by_hash.setdefault(expected, remote)
-                preview_by_hash.setdefault(expected, jpg_abs)
+                    stamp(raw, stamped, doc_info(work, composer, asset))
+                    if not os.path.exists(jpg_abs):
+                        make_preview(stamped, jpg_abs)
+                    gh("release", "upload", tag, stamped, "--clobber")
+                    released.add(name)
+                    if source == "release" and old_name != name:  # 改名前の添付ファイルを消す
+                        gh("release", "delete-asset", tag, old_name, "--yes")
+                        released.discard(old_name)
+                    sha, size = sha256_of(stamped), os.path.getsize(stamped)
+                    os.remove(stamped)
+                    report["renamed" if source == "release" else "from_old_site"] += 1
+
                 dims = None
                 if os.path.exists(jpg_abs):
                     with Image.open(jpg_abs) as im:
@@ -156,13 +192,14 @@ def main() -> int:
                 out = {
                     "id": asset["id"],
                     "part": asset["part"],
-                    "file": f"/scores/{work['id']}/{asset['id']}.pdf",  # 本番（さくら）に置くときのパス
+                    "file": f"/scores/{work['id']}/{name}",  # 本番（さくら）に置くときのパス
                     "remote": remote,  # リリースの添付ファイル（プレビューではここからダウンロードする）
-                    "filename": asset["filename"],
+                    "filename": name,
                     "preview": {"file": jpg_rel, "width": dims["w"], "height": dims["h"]} if dims else None,
-                    "sha256": expected,
+                    "sha256": sha,  # 文書情報を書き込んだ後の値
+                    "originalSha256": original_sha,  # 旧サイトの PDF の値（検査記録との照合用）
                     "pages": asset["pages"],
-                    "bytes": asset["bytes"],
+                    "bytes": size,
                 }
                 if asset.get("label"):
                     out["label"] = asset["label"]
@@ -173,7 +210,6 @@ def main() -> int:
             works_out.append({k: v for k, v in work.items() if k != "editions"} | {"editions": editions_out})
 
     catalog = {"version": 1, "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"), "works": works_out}
-    os.makedirs(os.path.dirname(catalog_path), exist_ok=True)
     with open(catalog_path, "w", encoding="utf-8") as f:
         json.dump(catalog, f, ensure_ascii=False, indent=1)
         f.write("\n")
@@ -181,8 +217,6 @@ def main() -> int:
     # 時間切れは次回の実行で続きから。取得失敗は記録して続行（無理に代替しない）
     return 0
 
-
-preview_by_hash: dict[str, str] = {}
 
 if __name__ == "__main__":
     sys.exit(main())

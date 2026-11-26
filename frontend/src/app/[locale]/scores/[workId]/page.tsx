@@ -81,20 +81,38 @@ export default async function WorkPage({ params }: Props) {
   const composerPage = localizedPath(composerLocales(c).includes(locale) ? locale : "ja", `/composers/${c.id}/`);
   const assets = work.editions.flatMap((e) => e.assets);
   const fileCount = assets.length;
-  const hasScore = assets.some((a) => a.part === "score");
   const partNames = [...new Set(assets.filter((a) => a.part !== "score").sort((a, b) => partOrder.indexOf(a.part) - partOrder.indexOf(b.part)).map((a) => partLabel(t, locale, a)))];
   const sep = locale === "ja" ? "、" : ", ";
   const related = relatedWorks(work);
   const catalogText = catalogLabel(work);
   const pageUrl = absoluteUrl(localizedPath(locale, `/scores/${work.id}/`));
 
-  // 「この楽譜について」: データから確実に言えることだけを質問と回答の形で示す
+  // 「この楽譜について」: 収録内容・演奏人数・印刷量・楽章など、データから確実に言える実用情報を質問と回答の形で示す
+  const sortedAssets = [...assets].sort((a, b) => partOrder.indexOf(a.part) - partOrder.indexOf(b.part));
+  const scoreAssets = sortedAssets.filter((a) => a.part === "score");
+  const partAssets = sortedAssets.filter((a) => a.part !== "score");
+  const scoreText = scoreAssets.length ? scoreAssets.map((a) => (scoreAssets.length > 1 ? tw.partItem(partLabel(t, locale, a), a.pages) : tw.scoreItem(a.pages))).join(sep) : null;
+  const partsText = partAssets.map((a) => tw.partItem(partLabel(t, locale, a), a.pages));
+  const totalPages = assets.reduce((n, a) => n + a.pages, 0);
+  // 1 人分の目安: 合奏・室内楽で、パートごとに 1 ファイルずつある場合だけ示す（曲集・複数版は人によって違うため出さない）
+  const perPlayerParts = partAssets.filter((a) => !a.label);
+  const perPlayer =
+    perPlayerParts.length >= 2 && perPlayerParts.length === partAssets.length && new Set(perPlayerParts.map((a) => a.part)).size === perPlayerParts.length
+      ? perPlayerParts.map((a) => tw.perPlayer(t.parts[a.part], a.pages)).join(sep)
+      : null;
+  const soloAsset = partAssets.find((a) => a.part === "solo" || a.part === "violin" || a.part === "cello" || a.part === "viola");
+  const playersAnswer =
+    work.scoring === "solo-orchestra"
+      ? partAssets.some((a) => a.part === "piano") && soloAsset
+        ? tw.soloWithPiano(t.instruments[work.instruments.find((i) => i !== "piano") ?? "violin"] ?? t.parts.solo)
+        : tw.soloWithEnsemble
+      : tw.playersByScoring[work.scoring];
   const faq: { q: string; a: string }[] = [
-    { q: tw.qComposer(work.title[locale]), a: tw.aComposer(work.title[locale], c.name[locale], work.composed ?? null) },
-    { q: tw.qInstrumentation, a: tw.aInstrumentation(work.title[locale], instrumentation(t, work)) },
-    ...(work.movements && work.movements.length > 1 ? [{ q: tw.qMovements, a: tw.aMovements(work.title[locale], work.movements.length) }] : []),
+    { q: tw.qContents, a: tw.aContents(scoreText, partsText) },
+    ...(playersAnswer ? [{ q: tw.qPlayers, a: playersAnswer }] : []),
+    { q: tw.qPrint, a: tw.aPrint(totalPages, assets.length, perPlayer) },
+    ...(work.movements && work.movements.length > 1 ? [{ q: tw.qMovements, a: tw.aMovements(work.movements.length, work.movements.map((m) => m[locale]).join(sep)) }] : []),
     { q: tw.qFree, a: tw.aFree(work.title[locale], fileCount, work.editions.every((e) => e.rights.status === "approved")) },
-    { q: tw.qParts, a: tw.aParts(hasScore, partNames.join(sep)) },
   ];
 
   const ld = {
