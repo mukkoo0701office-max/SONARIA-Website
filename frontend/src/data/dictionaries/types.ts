@@ -127,6 +127,19 @@ export type Dictionary = {
     pagePrev: string;
     pageNext: string;
     resultsLabel: string;
+    work: {
+      pageTitle: string;
+      back: string;
+      notFound: string;
+      opus: string;
+      instrumentation: string;
+      editions: string;
+      source: { imslp: string; own: string; other: string };
+      rightsApproved: string;
+      pages: (n: number) => string;
+      download: string;
+      fileNote: string;
+    };
   };
   teachers: {
     pageTitle: string;

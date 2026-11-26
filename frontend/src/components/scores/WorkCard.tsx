@@ -1,9 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import Tag from "@/components/ui/Tag";
 import type { Dictionary } from "@/data/dictionaries/types";
 import type { WorkSummary } from "@/data/works";
-import type { Locale } from "@/lib/i18n";
+import { localizedPath, type Locale } from "@/lib/i18n";
 
 type Props = {
   work: WorkSummary;
@@ -50,6 +51,15 @@ export default function WorkCard({ work, locale, t, open, favorite, onToggleOpen
         </Tag>
       </div>
 
+      {work.slug ? (
+        // 権利確認済みの実データ: 作品詳細ページ（PDF のダウンロードはそこで行う）
+        <Link
+          href={`${localizedPath(locale, "/scores/work/")}?id=${encodeURIComponent(work.slug)}`}
+          className="block w-full rounded-button border border-navy bg-navy p-[11px] text-center text-[13px] text-white transition-[filter] hover:brightness-95"
+        >
+          {t.view}
+        </Link>
+      ) : (
       <button
         type="button"
         onClick={onToggleOpen}
@@ -59,8 +69,9 @@ export default function WorkCard({ work, locale, t, open, favorite, onToggleOpen
       >
         {open ? t.close : t.view}
       </button>
+      )}
 
-      {open && (
+      {open && !work.slug && (
         <div id={detailsId} className="mt-3 rounded-button bg-paper p-[13px] text-[13px]">
           <strong>{t.details}</strong>
           <p className="my-2">{t.detailText}</p>

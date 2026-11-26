@@ -1,0 +1,34 @@
+# 権利確認済み（approved）の楽譜だけを旧サイトから取得してリポジトリに保存する。
+# 手動実行のみ。approvals.json は運営者が承認した内容だけを書く（承認の代行はしない）。
+name: Score migrate (approved only)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: score-migrate
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r tools/score-migration/requirements.txt
+      - name: Migrate approved scores
+        run: python tools/score-migration/migrate.py --approvals tools/score-migration/approvals.json --repo .
+      - name: Commit to the current branch (not main)
+        if: github.ref != 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/public/scores frontend/src/data/scores/catalog.json
+          git diff --cached --quiet || git commit -m "chore(scores): 権利確認済みの楽譜を移行"
+          git push

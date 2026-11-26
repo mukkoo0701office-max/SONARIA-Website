@@ -21,6 +21,8 @@ export type WorkSummary = {
   form: MusicalForm;
   era: Era;
   pdfCount: number;
+  // カタログの作品 ID（公開済みの実データのとき。デモデータには無い）
+  slug?: string;
 };
 
 export const ensembles: readonly Ensemble[] = ["strings", "piano", "orchestra", "mixed"];

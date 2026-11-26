@@ -6,13 +6,18 @@ import Chip from "@/components/ui/Chip";
 import Pagination from "@/components/ui/Pagination";
 import SelectField from "@/components/ui/SelectField";
 import { getDictionary } from "@/data/dictionaries";
-import { ensembles, eras, isDemoData, musicalForms, works, type Ensemble, type Era, type MusicalForm } from "@/data/works";
+import { hasPublishedWorks, publishedWorks, toSummary } from "@/data/scores/catalog";
+import { ensembles, eras, musicalForms, works as demoWorks, type Ensemble, type Era, type MusicalForm } from "@/data/works";
 import type { Locale } from "@/lib/i18n";
 
 // 承認済みプロトタイプ（prototypes/score-search-ui-v1.html）の検索 UI を部品化したもの。
 // 振る舞いの基準: docs/SONARIA_UI_DESIGN_SYSTEM_v1.0.md「Search page reference interaction contract」
 
 const PER_PAGE = 5;
+
+// 権利確認済みの作品が 1 件でもあればカタログを使う。まだ無いあいだは説明用のデモデータ（画面に明記）
+const works = hasPublishedWorks ? publishedWorks.map(toSummary) : demoWorks;
+const isDemoData = !hasPublishedWorks;
 
 type PlayersFilter = "all" | "1" | "2" | "3" | "4" | "5plus";
 type SortKey = "title" | "composer" | "pdfCount";
