@@ -20,9 +20,8 @@ import re
 import subprocess
 import sys
 import time
-import urllib.robotparser
 from datetime import datetime, timezone
-from urllib.parse import unquote, urldefrag, urljoin, urlparse
+from urllib.parse import quote, unquote, urldefrag, urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -96,23 +95,92 @@ def save_state(path: str, state: dict) -> None:
     os.replace(tmp, path)
 
 
+class Robots:
+    """robots.txt を RFC 9309（Google と同じ）規則で判定する。
+
+    標準ライブラリの urllib.robotparser は「最初に一致した行」を採用するため、
+    旧サイトの `Disallow: /app/` より後ろにある `Allow: /app/download/` を無視してしまう。
+    RFC 9309 では「最も長く一致した規則」を採用し、同じ長さなら Allow を優先する。
+    """
+
+    def __init__(self, text: str, agent: str) -> None:
+        groups: list[tuple[list[str], list[tuple[str, str]], float | None]] = []
+        agents: list[str] = []
+        rules: list[tuple[str, str]] = []
+        delay: float | None = None
+        last_was_agent = False
+        for raw in text.splitlines():
+            line = raw.split("#", 1)[0].strip()
+            if ":" not in line:
+                continue
+            k, v = (x.strip() for x in line.split(":", 1))
+            k = k.lower()
+            if k == "user-agent":
+                if not last_was_agent and agents:
+                    groups.append((agents, rules, delay))
+                    agents, rules, delay = [], [], None
+                agents.append(v.lower())
+                last_was_agent = True
+                continue
+            last_was_agent = False
+            if k in ("allow", "disallow"):
+                rules.append((k, v))
+            elif k == "crawl-delay":
+                try:
+                    delay = float(v)
+                except ValueError:
+                    pass
+        if agents:
+            groups.append((agents, rules, delay))
+        token = agent.split("/")[0].lower()
+        mine = [g for g in groups if any(a != "*" and a in token for a in g[0])]
+        chosen = mine or [g for g in groups if "*" in g[0]]
+        self.rules = [r for g in chosen for r in g[1]]
+        delays = [g[2] for g in chosen if g[2] is not None]
+        self.crawl_delay = max(delays) if delays else None
+
+    @staticmethod
+    def _match(pattern: str, path: str) -> int:
+        """一致すれば規則の長さ、しなければ -1（* と末尾 $ に対応）。"""
+        if not pattern:
+            return -1
+        rx = "".join(".*" if c == "*" else re.escape(c) for c in pattern.rstrip("$"))
+        rx = "^" + rx + ("$" if pattern.endswith("$") else "")
+        return len(pattern) if re.match(rx, path) else -1
+
+    def allowed(self, url: str) -> bool:
+        u = urlparse(url)
+        path = quote(unquote(u.path), safe="/%*$") + (("?" + u.query) if u.query else "")
+        best_len, best_allow = -1, True
+        for kind, pat in self.rules:
+            n = self._match(quote(unquote(pat), safe="/%*$?=&"), path)
+            if n < 0:
+                continue
+            allow = kind == "allow"
+            if n > best_len or (n == best_len and allow):
+                best_len, best_allow = n, allow
+        return best_allow
+
+
 class Fetcher:
     def __init__(self) -> None:
         self.s = requests.Session()
         self.s.headers["User-Agent"] = USER_AGENT
         self.last = 0.0
-        self.robots = urllib.robotparser.RobotFileParser()
         try:
             r = self.s.get(BASE + "/robots.txt", timeout=30)
-            self.robots.parse(r.text.splitlines() if r.ok else [])
+            text = r.text if r.ok else ""
         except requests.RequestException:
-            self.robots.parse([])
+            text = ""
+        self.robots = Robots(text, USER_AGENT)
+        # robots.txt の Crawl-Delay がこちらの既定値より長ければ、そちらに従う
+        self.delay = max(DELAY_SECONDS, self.robots.crawl_delay or 0)
 
     def allowed(self, url: str) -> bool:
-        return self.robots.can_fetch(USER_AGENT, url)
+        return self.robots.allowed(url)
 
     def get(self, url: str, stream: bool = False) -> requests.Response:
-        wait = DELAY_SECONDS - (time.time() - self.last)
+        wait = self.delay - (time.time() - self.last)
         if wait > 0:
             time.sleep(wait)
         try:
@@ -356,6 +424,18 @@ def summarize(state: dict) -> dict:
     return s
 
 
+def reopen_robots_skips(state: dict, fetcher: Fetcher) -> None:
+    """以前の版（urllib.robotparser）が誤って「robots.txt で禁止」とした項目を、現在の判定でやり直す。"""
+    for url, e in state["pdfs"].items():
+        if e.get("status") == "skipped" and e.get("reason") == "robots.txt で禁止" and fetcher.allowed(e.get("href_original", url)):
+            e["status"] = "pending"
+            e.pop("reason", None)
+    for url in [u for u, p in state["pages"].items() if p.get("status") == "skipped" and p.get("reason") == "robots.txt で禁止"]:
+        if fetcher.allowed(url):
+            p = state["pages"].pop(url)
+            state["queue"].append([url, p["depth"], p["found_on"]])
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--state", required=True)
@@ -366,6 +446,7 @@ def main() -> int:
     deadline = time.time() + args.time_budget
     state = load_state(args.state)
     fetcher = Fetcher()
+    reopen_robots_skips(state, fetcher)
     crawl(state, fetcher, deadline, args.state)
     if not state["queue"]:
         download_and_inspect(state, fetcher, args.workdir, deadline, args.max_pdfs, args.state)
