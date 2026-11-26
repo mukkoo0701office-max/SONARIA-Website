@@ -505,7 +505,10 @@
       "priority": "S",
       "status": "pending_review",
       "verification": "Publisher-confirmed format, work scope, ISMN and editor. No verified Amazon.co.jp individual product detail URL or ASIN; no generated affiliate link.",
-      "date_checked": "2026-11-27"
+      "date_checked": "2026-11-27",
+      "last_amazon_search_at": "2026-11-27",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
+      "verification_notes": "2026-11-27 follow-up: searched Amazon-related product listings and exact site:amazon.co.jp/dp/ catalogue-number queries for HN210, HN9210, HN9211. No independently verified Amazon.co.jp detail page or ASIN matching exact Henle edition. Other retailer and recording matches are insufficient. Keep pending_review; no tagged URL."
     },
     {
       "id": "haydn-henle-hn9210",
@@ -534,7 +537,10 @@
       "priority": "S",
       "status": "pending_review",
       "verification": "Publisher-confirmed format, work scope, ISMN and editor. No verified Amazon.co.jp individual product detail URL or ASIN; no generated affiliate link.",
-      "date_checked": "2026-11-27"
+      "date_checked": "2026-11-27",
+      "last_amazon_search_at": "2026-11-27",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
+      "verification_notes": "2026-11-27 follow-up: searched Amazon-related product listings and exact site:amazon.co.jp/dp/ catalogue-number queries for HN210, HN9210, HN9211. No independently verified Amazon.co.jp detail page or ASIN matching exact Henle edition. Other retailer and recording matches are insufficient. Keep pending_review; no tagged URL."
     },
     {
       "id": "haydn-henle-hn9211",
@@ -561,7 +567,10 @@
       "priority": "S",
       "status": "pending_review",
       "verification": "Official Henle product confirms pocket study score, 130 pages, works Op.54/55 and editor James Webster. No direct Amazon.co.jp product page/ASIN verified.",
-      "date_checked": "2026-11-27"
+      "date_checked": "2026-11-27",
+      "last_amazon_search_at": "2026-11-27",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
+      "verification_notes": "2026-11-27 follow-up: searched Amazon-related product listings and exact site:amazon.co.jp/dp/ catalogue-number queries for HN210, HN9210, HN9211. No independently verified Amazon.co.jp detail page or ASIN matching exact Henle edition. Other retailer and recording matches are insufficient. Keep pending_review; no tagged URL."
     },
     {
       "composer": "Haydn",
