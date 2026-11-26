@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "string_quartet",
-    "last_work": "Op.17 No.3 / Hob.III:27",
-    "note": "Next Op.17 Nos.4–6. Review grouped Eulenburg score #455858, Litolff parts #105714–105717, disallow incomplete Hummel set as full parts."
+    "last_work": "Op.17 No.6 / Hob.III:30",
+    "note": "Next Op.20 Nos.1–3 (Sun quartets). Inspect candidate editions and rights, especially shared collection assets."
   },
   "items": [
     {
@@ -1043,6 +1043,147 @@
       },
       "rights_status": "unknown",
       "notes": "Research only: do not claim Op.17 PDF is a single quartet; grouped score and parts serve all six works. Avoid duplicate assets and identify correct pages. Hummel scans are incomplete and unsuitable as complete set. Confirm actual PDF, edition quality and rights with Claude before download/publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op17-no4-eulenburg-litolff",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in C minor",
+      "opus_catalog": "Op.17 No.4; Hob.III:28",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Ernst Eulenburg (score), Collection Litolff (parts)",
+        "publication_date": "Eulenburg ca.1930; Litolff ca.1870",
+        "editor": "Wilhelm Altmann (score); Litolff editor unknown",
+        "scope": "Complete collection of six Op.17 quartets",
+        "imslp_file_id": "455858",
+        "file_pages": 125,
+        "file_size_mb": 20.4,
+        "edition_comparison": "Eulenburg/Altmann full-score collection #455858 (125pp), alternative Heckel complete score #887819 (183pp). Litolff four parts #105714-105717: Vn1 28pp, Vn2 20pp, Viola 18pp, Cello 16pp. Hummel 1772 incomplete first-edition #471043/471044 covers Vn1 and Cello only: must not use as a full parts set. PDFs not inspected."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "verified": "Work list explicitly identifies Op.17 No.4 Hob.III:28 (C minor); Eulenburg #455858 and Litolff #105714–105717 metadata listed, PDFs not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_pdf_uninspected",
+        "parts": "four_part_collection_listed_not_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "unverified_existing_site_inventory_not_located",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Both score and parts are shared assets across all six Op.17 works; do not duplicate file downloads. Validate original pages, complete quartet instrumentation, readability, and legal reuse. Hummel original incomplete parts must not be presented as complete.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op17-no5-eulenburg-litolff",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in G major",
+      "opus_catalog": "Op.17 No.5; Hob.III:29",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Ernst Eulenburg (score), Collection Litolff (parts)",
+        "publication_date": "Eulenburg ca.1930; Litolff ca.1870",
+        "editor": "Wilhelm Altmann (score); Litolff editor unknown",
+        "scope": "Complete collection of six Op.17 quartets",
+        "imslp_file_id": "455858",
+        "file_pages": 125,
+        "file_size_mb": 20.4,
+        "edition_comparison": "Eulenburg/Altmann full-score collection #455858 (125pp), alternative Heckel complete score #887819 (183pp). Litolff four parts #105714-105717: Vn1 28pp, Vn2 20pp, Viola 18pp, Cello 16pp. Hummel 1772 incomplete first-edition #471043/471044 covers Vn1 and Cello only: must not use as a full parts set. PDFs not inspected."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "verified": "Work list explicitly identifies Op.17 No.5 Hob.III:29 (G major); Eulenburg #455858 and Litolff #105714–105717 metadata listed, PDFs not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_pdf_uninspected",
+        "parts": "four_part_collection_listed_not_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "unverified_existing_site_inventory_not_located",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Both score and parts are shared assets across all six Op.17 works; do not duplicate file downloads. Validate original pages, complete quartet instrumentation, readability, and legal reuse. Hummel original incomplete parts must not be presented as complete.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op17-no6-eulenburg-litolff",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in D major",
+      "opus_catalog": "Op.17 No.6; Hob.III:30",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Ernst Eulenburg (score), Collection Litolff (parts)",
+        "publication_date": "Eulenburg ca.1930; Litolff ca.1870",
+        "editor": "Wilhelm Altmann (score); Litolff editor unknown",
+        "scope": "Complete collection of six Op.17 quartets",
+        "imslp_file_id": "455858",
+        "file_pages": 125,
+        "file_size_mb": 20.4,
+        "edition_comparison": "Eulenburg/Altmann full-score collection #455858 (125pp), alternative Heckel complete score #887819 (183pp). Litolff four parts #105714-105717: Vn1 28pp, Vn2 20pp, Viola 18pp, Cello 16pp. Hummel 1772 incomplete first-edition #471043/471044 covers Vn1 and Cello only: must not use as a full parts set. PDFs not inspected."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "verified": "Work list explicitly identifies Op.17 No.6 Hob.III:30 (D major); Eulenburg #455858 and Litolff #105714–105717 metadata listed, PDFs not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_pdf_uninspected",
+        "parts": "four_part_collection_listed_not_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "unverified_existing_site_inventory_not_located",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Both score and parts are shared assets across all six Op.17 works; do not duplicate file downloads. Validate original pages, complete quartet instrumentation, readability, and legal reuse. Hummel original incomplete parts must not be presented as complete.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
