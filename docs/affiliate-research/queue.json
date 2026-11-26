@@ -620,6 +620,62 @@
       "status": "pending_review",
       "verification": "Publisher official product page verified title, ISMN, editors, content and format, but Amazon.co.jp matching ASIN and product listing unverified. Never fabricate a tagged link.",
       "date_checked": "2026-11-27"
+    },
+    {
+      "id": "haydn-henle-hn214",
+      "title": "String Quartets Book X op.76 (Erdödy Quartets) — Urtext playing parts",
+      "category": "printed_score",
+      "publisher_catalog": "HN 214",
+      "ismn": "979-0-2018-0214-5",
+      "format": "performance parts",
+      "pages": 185,
+      "source": "https://www.henle.de/String-Quartets-Book-X-op.-76-Erdoedy-Quartets/HN-214",
+      "composer": "Haydn",
+      "publisher": "G. Henle Verlag",
+      "editor": "Horst Walter",
+      "work_ids": [
+        "Op.76 No.1",
+        "Op.76 No.2",
+        "Op.76 No.3",
+        "Op.76 No.4",
+        "Op.76 No.5",
+        "Op.76 No.6"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "status": "pending_review",
+      "priority": "S",
+      "verification": "G. Henle official product details: exact ISMN, format, editor, six quartets Op.76, printed pages verified. Amazon.co.jp direct product detail and ASIN not confirmed; do not generate affiliate link.",
+      "date_checked": "2026-11-27"
+    },
+    {
+      "id": "haydn-henle-hn9214",
+      "title": "String Quartets Book X op.76 (Erdödy Quartets) — Study Score",
+      "category": "pocket_score",
+      "publisher_catalog": "HN 9214",
+      "ismn": "979-0-2018-9214-6",
+      "format": "pocket study score",
+      "pages": 122,
+      "source": "https://www.henle.de/de/Streichquartette-Heft-X-op.-76-Erdoedy-Quartette/HN-9214",
+      "composer": "Haydn",
+      "publisher": "G. Henle Verlag",
+      "editor": "Horst Walter",
+      "work_ids": [
+        "Op.76 No.1",
+        "Op.76 No.2",
+        "Op.76 No.3",
+        "Op.76 No.4",
+        "Op.76 No.5",
+        "Op.76 No.6"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "status": "pending_review",
+      "priority": "S",
+      "verification": "G. Henle official product details: exact ISMN, format, editor, six quartets Op.76, printed pages verified. Amazon.co.jp direct product detail and ASIN not confirmed; do not generate affiliate link.",
+      "date_checked": "2026-11-27"
     }
   ],
   "implementation_ready": 0,
@@ -627,14 +683,14 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Amazon Japan direct ASIN lookups for HN212/HN9212 and Henle product catalogue extension HN213/HN9213",
-    "result": "Direct Amazon.co.jp item and ASIN were not verifiably located for HN212/HN9212. Publisher listings confirmed HN213 and HN9213 editions and ISBN-like ISMN identifiers. No affiliate URL authorized.",
+    "focus": "Haydn HN213/HN9213 Amazon.co.jp search; Henle Op.76 HN214/HN9214 publisher verification",
+    "result": "No sufficiently confirmed Amazon.co.jp individual listing/ASIN for HN213 or HN9213. Two new Henle Op.76 editions verified from original publisher (parts and study score) but their Amazon.co.jp availability is unverified. No affiliate URL made.",
     "new_publisher_confirmed": 2,
     "new_amazon_verified": 0,
-    "source_urls": [
-      "https://www.henle.de/jp/String-Quartets-Book-IX-op.-71-and-74-Apponyi-Quartets/HN-213",
-      "https://www.henle.de/jp/String-Quartets-Book-IX-op.-71-and-74-Apponyi-Quartets/HN-9213"
+    "evidence_urls": [
+      "https://www.henle.de/String-Quartets-Book-X-op.-76-Erdoedy-Quartets/HN-214",
+      "https://www.henle.de/de/Streichquartette-Heft-X-op.-76-Erdoedy-Quartette/HN-9214"
     ],
-    "next": "Search Amazon.co.jp by exact ISMN 9790201802138 and 9790201892139; compare physical formats and seller detail before tagging mukkoo-22."
+    "next": "Search Amazon.co.jp official product listings using ISMN 9790201802145 / 9790201892146; distinguish HN214 parts vs HN9214 study score; no ASIN guessing."
   }
 }
