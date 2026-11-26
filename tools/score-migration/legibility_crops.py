@@ -29,14 +29,18 @@ def main() -> int:
     ap.add_argument("--legibility", required=True)
     ap.add_argument("--out-dir", required=True)
     ap.add_argument("--tag", default="scores-v1")
+    ap.add_argument("--extra", nargs="*", default=[], help="追加で見るページ（作品ID/ファイルID:ページ）")
     args = ap.parse_args()
     leg = json.load(open(args.legibility, encoding="utf-8"))
     os.makedirs(args.out_dir, exist_ok=True)
     tmp = tempfile.mkdtemp()
     index = []
+    extra = {e.rsplit(":", 1)[0]: int(e.rsplit(":", 1)[1]) for e in args.extra}
     for key, v in sorted(leg.items()):
-        if not flagged(v):
+        if not flagged(v) and key not in extra:
             continue
+        if key in extra:
+            v = dict(v, worst_page=extra[key])
         pdf = os.path.join(tmp, v["filename"])
         subprocess.run(["gh", "release", "download", args.tag, "-p", v["filename"], "-O", pdf, "--clobber"], capture_output=True)
         page = v["worst_page"]

@@ -33,7 +33,7 @@ jobs:
             git fetch -q --depth=1 origin ci/score-legibility && (git show FETCH_HEAD:legibility.json > /tmp/out/legibility.json 2>/dev/null || rm -f /tmp/out/legibility.json)
           fi
       - run: python tools/score-migration/legibility.py --repo . --out /tmp/out/legibility.json
-      - run: python tools/score-migration/legibility_crops.py --repo . --legibility /tmp/out/legibility.json --out-dir /tmp/out/crops
+      - run: python tools/score-migration/legibility_crops.py --repo . --legibility /tmp/out/legibility.json --out-dir /tmp/out/crops --extra sevcik-violin-studies/violin-op-2:13
         shell: bash
       - name: Save to ci/score-legibility
         if: always()
