@@ -126,7 +126,7 @@ def main() -> int:
                     if wait > 0:
                         time.sleep(wait)
                     try:
-                        r = session.get(asset["url"], timeout=180)
+                        r = session.get(asset["url"], timeout=(30, 600))  # 旧サイトの応答が遅いことがあるため読み込みは長めに待つ
                         data = r.content if r.status_code == 200 else b""
                         status = r.status_code
                     except requests.RequestException as ex:
