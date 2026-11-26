@@ -216,7 +216,7 @@ export default async function WorkPage({ params }: Props) {
               {[...e.assets]
                 .sort((a, b) => partOrder.indexOf(a.part) - partOrder.indexOf(b.part))
                 .map((a) => (
-                  <PdfFile key={a.id} label={partLabel(t, locale, a)} file={a.file} filename={a.filename} pages={a.pages} bytes={a.bytes} preview={a.preview} t={tw} />
+                  <PdfFile key={a.id} label={partLabel(t, locale, a)} file={a.file} filename={a.filename} pages={a.pages} bytes={a.bytes} preview={a.preview} locale={locale} />
                 ))}
             </ul>
           </div>

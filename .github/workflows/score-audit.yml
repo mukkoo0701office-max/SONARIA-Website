@@ -5,7 +5,9 @@
 name: Score audit
 
 on:
-  pull_request:
+  # pull_request だと PR 全体の差分で判定され、フロントエンドを直すたびに再実行されるため push で判定する
+  push:
+    branches: [feature/score-migration]
     paths:
       - "tools/score-migration/audit.py"
       - ".github/workflows/score-audit.yml"

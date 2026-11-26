@@ -4,7 +4,9 @@
 name: Score deep inspect
 
 on:
-  pull_request:
+  # pull_request だと PR 全体の差分で判定され、フロントエンドを直すたびに再実行されるため push で判定する
+  push:
+    branches: [feature/score-migration]
     paths:
       - "tools/score-migration/deep_inspect.py"
       - ".github/workflows/score-deep.yml"

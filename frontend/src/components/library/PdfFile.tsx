@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import type { Dictionary } from "@/data/dictionaries/types";
+import { getDictionary } from "@/data/dictionaries";
+import type { Locale } from "@/lib/i18n";
 import { withBasePath } from "@/lib/paths";
 
 type Props = {
@@ -11,7 +12,7 @@ type Props = {
   pages: number;
   bytes: number;
   preview?: { file: string; width: number; height: number } | null;
-  t: Dictionary["library"]["work"];
+  locale: Locale; // 辞書に関数を含むため、文言はこのコンポーネント内で取得する
 };
 
 function formatSize(bytes: number): string {
@@ -20,7 +21,8 @@ function formatSize(bytes: number): string {
 
 // 1 ファイル（1 パート）の表示。PDF は「プレビュー」を押すまで読み込まない（通信量と表示速度のため）。
 // 1 ページ目の画像があれば先に表示する（幅・高さを指定してレイアウトのずれを防ぐ）
-export default function PdfFile({ label, file, filename, pages, bytes, preview, t }: Props) {
+export default function PdfFile({ label, file, filename, pages, bytes, preview, locale }: Props) {
+  const t = getDictionary(locale).library.work;
   const [open, setOpen] = useState(false);
   const src = withBasePath(file);
   const frameId = `pdf-${file.replace(/[^a-z0-9]/gi, "-")}`;
