@@ -50,3 +50,15 @@ jobs:
         with:
           name: package-lock
           path: frontend/package-lock.json
+
+      # プレビュー（GitHub Pages）用のサブパス配下ビルドも通ることを確認する
+      - name: Build with preview base path
+        run: |
+          rm -rf out .next
+          npm run build
+          grep -q '/SONARIA-Website/_next/' out/ja/index.html || { echo "basePath not applied"; exit 1; }
+          grep -q 'href="/SONARIA-Website/ja/scores/"' out/ja/index.html || { echo "links missing basePath"; exit 1; }
+          grep -q 'noindex' out/ja/index.html || { echo "preview noindex missing"; exit 1; }
+        env:
+          NEXT_PUBLIC_BASE_PATH: /SONARIA-Website
+          NEXT_PUBLIC_PREVIEW: "1"

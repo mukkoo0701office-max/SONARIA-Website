@@ -36,6 +36,14 @@ npm run dev
 
 [要決定] 公開ディレクトリのパス、アップロード方法（FTP／SFTP／自動化）。
 
+## 試作版のプレビュー（GitHub Pages）
+
+main に取り込まれると、試作版が自動で公開されます（確認用・検索エンジンには載せない）。
+
+- URL: https://mukkoo0701office-max.github.io/SONARIA-Website/
+- 仕組み: `.github/workflows/preview-pages.yml`
+- 事前設定（1回だけ）: リポジトリの Settings → Pages → Source を「GitHub Actions」にする
+
 ## プロトタイプを見る
 
 `prototypes/score-search-ui-v1.html` をブラウザで直接開くと、承認済みの検索 UI を操作できます。
