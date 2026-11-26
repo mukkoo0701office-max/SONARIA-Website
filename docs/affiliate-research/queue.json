@@ -652,8 +652,12 @@
       "isbn": null,
       "status": "pending_review",
       "priority": "S",
-      "verification": "G. Henle official product details: exact ISMN, format, editor, six quartets Op.76, printed pages verified. Amazon.co.jp direct product detail and ASIN not confirmed; do not generate affiliate link.",
-      "date_checked": "2026-11-27"
+      "verification": "Henle official catalog confirms opus scope and separate modern urtext parts/study-score editions. Amazon.co.jp queries by exact printed Henle HN214/HN9214 numbers and ISMNs did not yield a defensible corresponding product-detail ASIN; keep Amazon URL null.",
+      "date_checked": "2026-11-27",
+      "last_amazon_search_at": "2026-11-27",
+      "amazon_verification_status": "exact_amazon_listing_not_verified",
+      "imslp_repertoire_url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+      "quality_comparison_note": "Official Henle HN214 parts/HN9214 study score cover complete Op.76 Nos.1–6; IMSLP Eulenburg #454963 reports missing printed p.216 in No.5, so Henle Urtext is a potentially useful commercial alternative, but do not imply publisher edition is an Amazon listing. Amazon ASIN unverified."
     },
     {
       "id": "haydn-henle-hn9214",
@@ -680,8 +684,12 @@
       "isbn": null,
       "status": "pending_review",
       "priority": "S",
-      "verification": "G. Henle official product details: exact ISMN, format, editor, six quartets Op.76, printed pages verified. Amazon.co.jp direct product detail and ASIN not confirmed; do not generate affiliate link.",
-      "date_checked": "2026-11-27"
+      "verification": "Henle official catalog confirms opus scope and separate modern urtext parts/study-score editions. Amazon.co.jp queries by exact printed Henle HN214/HN9214 numbers and ISMNs did not yield a defensible corresponding product-detail ASIN; keep Amazon URL null.",
+      "date_checked": "2026-11-27",
+      "last_amazon_search_at": "2026-11-27",
+      "amazon_verification_status": "exact_amazon_listing_not_verified",
+      "imslp_repertoire_url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+      "quality_comparison_note": "Official Henle HN214 parts/HN9214 study score cover complete Op.76 Nos.1–6; IMSLP Eulenburg #454963 reports missing printed p.216 in No.5, so Henle Urtext is a potentially useful commercial alternative, but do not imply publisher edition is an Amazon listing. Amazon ASIN unverified."
     },
     {
       "id": "haydn-henle-hn215",
@@ -801,22 +809,21 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Amazon.co.jp exact ASIN lookup for Haydn Apponyi Henle HN213 / HN9213 and quartet arrangement HN851 / HN9771",
-    "result": "Targeted site:amazon.co.jp product detail searches by ISMN and catalogue number did not verify any exact-item Amazon.co.jp ASIN. 4 existing candidate records audited with explicit not_verified; no affiliate URLs generated. Follow-up requires signed-in Amazon Associates tools; repeated open-web searches alone have yielded no usable product matches.",
-    "new_amazon_verified": 0,
-    "new_publisher_confirmed": 0,
+    "focus": "Haydn Op.76: commercially printed Henle HN214 parts and HN9214 study score cross-linked against IMSLP source deficiencies; Amazon ASIN lookup",
+    "result": "Publisher pages confirm modern performing parts versus study score for Op.76; identified value of clean paid edition because IMSLP Eulenburg #454963 has missing printed p.216 in Op.76 No.5. Exact Amazon.co.jp product listings/ASIN unavailable in open web search; no valid referral URL, no Amazon-verified candidates.",
+    "existing_records_enriched": 2,
     "new_candidates": 0,
-    "existing_records_enriched": 4,
+    "new_publisher_confirmed": 0,
+    "new_amazon_verified": 0,
     "checked_candidates": [
-      "haydn-henle-hn213",
-      "haydn-henle-hn9213",
-      "haydn-henle-hn851",
-      "haydn-henle-hn9771"
+      "haydn-henle-hn214",
+      "haydn-henle-hn9214"
     ],
-    "publisher_sources": [
-      "https://www.henle.de/jp/String-Quartets-Book-IX-op.-71-and-74-Apponyi-Quartets/HN-213",
-      "https://www.henle.de/jp/String-Quartets-Book-IX-op.-71-and-74-Apponyi-Quartets/HN-9213"
+    "source_urls": [
+      "https://www.henle.de/en/String-Quartets-Book-X-op.-76-Erdoedy-Quartets/HN-214",
+      "https://www.henle.de/de/Streichquartette-Heft-X-op.-76-Erdoedy-Quartette/HN-9214",
+      "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29"
     ],
-    "next": "Pause repeat speculative ASIN searches for these exact editions; use signed-in Associates SiteStripe/Product Linking, official PA-API, or user-provided specific Amazon.co.jp item links to verify full ASIN and edition. Maintain pending_review until verified."
+    "next": "Request exact Amazon.co.jp detail URL generated from authorized Associates SiteStripe/Product Linking or PA-API for HN214/HN9214; retain status pending_review until matching ASIN is independently confirmed."
   }
 }
