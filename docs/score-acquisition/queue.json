@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "string_quartet",
-    "last_work": "Op.51 / Hob.III:50–56 (edition candidates identified)",
-    "note": "Op.51 is ONE cycle; Trautwein #106808 score plus Le Duc quartet parts #477583/#477584/#477585/#477582 candidate set requires PDF cross-edition audit. Next check Op.0 Hob.II:6 and early Op.1/2 genre misclassifications, then proceed violin sonatas after authentic corpus audit."
+    "last_work": "Op.1 No.0 / Hob.II:6 (early authentic quartet recovered)",
+    "note": "The main early historical omissions are addressed. Op.1 No.5 and Op.2 Nos.3/5 held as non-original quartet genres, Op.3 assigned to Hoffstetter. Next verify remaining Hob.III:D3 or other doubtful quartet candidates and compare valid corpus; then progress to Haydn violin sonatas. All PDF/rights checks pending."
   },
   "items": [
     {
@@ -293,10 +293,18 @@
         "publish": "not_approved"
       },
       "rights_status": "unknown",
-      "notes": "Candidate only. Existing SONARIA catalog not fully located or checked; no claim of confirmed absence. Peters/Merton collection files cover 3 works; do not duplicate downloads. Validate full movements, accurate work-to-page segmentation and publication rights; IMSLP public-domain tag alone does not establish Japan republication rights. IMPORTANT AUTHENTICITY AUDIT: Henle scholarly preface identifies Op.1 No.5 as early symphony Hob.I:107, not an authentic quartet. Hold and do not send for publication without source-level verification.",
+      "notes": "Candidate only. Existing SONARIA catalog not fully located or checked; no claim of confirmed absence. Peters/Merton collection files cover 3 works; do not duplicate downloads. Validate full movements, accurate work-to-page segmentation and publication rights; IMSLP public-domain tag alone does not establish Japan republication rights. IMPORTANT AUTHENTICITY AUDIT: Henle scholarly preface identifies Op.1 No.5 as early symphony Hob.I:107, not an authentic quartet. Hold and do not send for publication without source-level verification. DISTINCT GENRE AUDIT: Symphony A, Hob.I:107, published under Op.1 No.5. Do not present this as an original genuine four-string Haydn quartet. Preserve historic printed opus attribution in alternate titles but not original-work genre. No publication approval.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "original_work_genre": "symphony",
+      "authenticity_audit": {
+        "source": "https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-205",
+        "secondary_source": "https://academic.oup.com/book/36386/chapter-abstract/319980127",
+        "classification": "Symphony A, Hob.I:107, published under Op.1 No.5",
+        "eligible_for_authentic_original_string_quartets": false,
+        "allow_as_labeled_arrangement_only_after_review": false
+      }
     },
     {
       "id": "haydn-op1-no6-peters-merton",
@@ -489,10 +497,18 @@
         "publish": "not_approved"
       },
       "rights_status": "unknown",
-      "notes": "Candidate only. Confirm exact pages, score and parts completeness, quality and Japan rights. Op.2 collection bundle shared across three works; no duplicated PDF asset. No claim of absence from SONARIA. IMPORTANT AUTHENTICITY AUDIT: Henle scholarly preface identifies Op.2 No.3 as early sextet with two horns Hob.II:21, not a genuine string quartet. Hold.",
+      "notes": "Candidate only. Confirm exact pages, score and parts completeness, quality and Japan rights. Op.2 collection bundle shared across three works; no duplicated PDF asset. No claim of absence from SONARIA. IMPORTANT AUTHENTICITY AUDIT: Henle scholarly preface identifies Op.2 No.3 as early sextet with two horns Hob.II:21, not a genuine string quartet. Hold. DISTINCT GENRE AUDIT: Sextet Hob.II:21 for 2 horns plus 4 strings, retrospectively arranged as 4-part Op.2 No.3. Do not present this as an original genuine four-string Haydn quartet. Preserve historic printed opus attribution in alternate titles but not original-work genre. No publication approval.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "original_work_genre": "sextet_not_original_quartet",
+      "authenticity_audit": {
+        "source": "https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-205",
+        "secondary_source": "https://academic.oup.com/book/36386/chapter-abstract/319980127",
+        "classification": "Sextet Hob.II:21 for 2 horns plus 4 strings, retrospectively arranged as 4-part Op.2 No.3",
+        "eligible_for_authentic_original_string_quartets": false,
+        "allow_as_labeled_arrangement_only_after_review": true
+      }
     },
     {
       "id": "haydn-op2-no4-peters-merton",
@@ -589,10 +605,18 @@
         "publish": "not_approved"
       },
       "rights_status": "unknown",
-      "notes": "Research-only candidate. Peters/Merton PDF groups three quartets: register one shared asset, not three duplicate PDFs. Actual score contents, print quality, Japanese rights, and SONARIA inventory need independent review by Claude. IMPORTANT AUTHENTICITY AUDIT: Henle scholarly preface identifies Op.2 No.5 as early sextet with two horns Hob.II:22, not a genuine string quartet. Hold.",
+      "notes": "Research-only candidate. Peters/Merton PDF groups three quartets: register one shared asset, not three duplicate PDFs. Actual score contents, print quality, Japanese rights, and SONARIA inventory need independent review by Claude. IMPORTANT AUTHENTICITY AUDIT: Henle scholarly preface identifies Op.2 No.5 as early sextet with two horns Hob.II:22, not a genuine string quartet. Hold. DISTINCT GENRE AUDIT: Sextet Hob.II:22 for 2 horns plus 4 strings, retrospectively arranged as 4-part Op.2 No.5. Do not present this as an original genuine four-string Haydn quartet. Preserve historic printed opus attribution in alternate titles but not original-work genre. No publication approval.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "original_work_genre": "sextet_not_original_quartet",
+      "authenticity_audit": {
+        "source": "https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-205",
+        "secondary_source": "https://academic.oup.com/book/36386/chapter-abstract/319980127",
+        "classification": "Sextet Hob.II:22 for 2 horns plus 4 strings, retrospectively arranged as 4-part Op.2 No.5",
+        "eligible_for_authentic_original_string_quartets": false,
+        "allow_as_labeled_arrangement_only_after_review": true
+      }
     },
     {
       "id": "haydn-op2-no6-peters-merton",
@@ -3694,7 +3718,119 @@
         "complete_set_verified": false,
         "rights_verified": false
       }
+    },
+    {
+      "id": "haydn-op1-no0-hobii6-early-quartet",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "Divertimento (early string quartet) in E-flat major",
+      "opus_catalog": "Op.1 No.0 (Op.0); Hob.II:6",
+      "work_url": "https://imslp.org/wiki/Divertimento_in_E-flat_major%2C_Hob.II%3A6_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Nagel's Musik-Archiv, Hannover (score and parts); Longman & Broderip and Preston (historical parts)",
+        "publication_date": "Nagel 1931; Longman & Broderip after 1782; Preston 1789–98",
+        "editor": "Karl Geiringer (Nagel 1931)",
+        "scope": "One five-movement early quartet/divertimento for two violins, viola, bass (cello/double-bass); Nagel same-edition score+4 part scans",
+        "imslp_file_id": "100239",
+        "file_pages": 7,
+        "edition_comparison": "Nagel/Geiringer score #100239, 7 pp; matched same-edition violin1 #100346 4pp, violin2 #100347 4pp, viola #100348 4pp, cello/double bass #100349 4pp. Alternative older Longman & Broderip instrumental parts #475153 Vn1, #475154 Vn2, #475155 Va, #475156 Vc (2pp each). Preston complete parts #246920 and four parts #456973/#456974/#456975/#456972. 1973 Henle urtext score #784747 is region restricted and shouldn't be default redistributable source. Part labels 'cello/double bass' require editorial notation and performance checks."
+      },
+      "edition_url": "https://imslp.org/wiki/Divertimento_in_E-flat_major%2C_Hob.II%3A6_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "100239",
+            "edition": "Nagel/Geiringer 1931",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_1": {
+            "imslp_file_id": "100346",
+            "edition": "Nagel/Geiringer 1931",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_2": {
+            "imslp_file_id": "100347",
+            "edition": "Nagel/Geiringer 1931",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "viola": {
+            "imslp_file_id": "100348",
+            "edition": "Nagel/Geiringer 1931",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "100349",
+            "edition": "Nagel/Geiringer 1931 cello/double-bass",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "same_publisher_editor_metadata_match_unverified_music",
+        "page_ranges_verified": false,
+        "complete_set_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Divertimento_in_E-flat_major%2C_Hob.II%3A6_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP identifies E-flat Hob.II:6, 5 movements, 2 violins viola bass, Nagel 1931 score #100239 and four same-editor parts #100346–100349; Longman & Broderip 4 parts #475153–475156. PDFs not visually inspected."
+        },
+        {
+          "url": "https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-205",
+          "verified": "Henle early string quartets HN205 includes E-flat Op.1 No.0 Hob.II:6, separate from Op.1 Nos.1–4 and 6."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_confirmed_early_quartet_divertimento",
+        "edition": "same_edition_score_and_parts_metadata_matched_pdf_not_inspected",
+        "parts": "four_Nagel_parts_listed_cello_double_bass_label",
+        "pdf_integrity": "unchecked",
+        "duplication": "existing_SONARIA_catalog_not_looked_up",
+        "rights": "japan_republication_unverified_Nagel_editor_1931",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "five_asset_candidate_metadata_only"
+      },
+      "rights_status": "unknown",
+      "notes": "Distinct Op.1 No.0 (Hob.II:6), NOT Op.1 No.1 Hob.III:1. Count 1 work, 5 movements; extra early authentic quartet candidate. Nagel 1931 same-editor score/parts preferable for matching; double-bass part may be alternative to cello and must be inspected; no PDF downloaded, rights approval or publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
     }
   ],
-  "last_updated": "2026-11-27"
+  "last_updated": "2026-11-27",
+  "authenticity_audit": {
+    "date": "2026-11-27",
+    "scope": "early Haydn quartets Op.0, Op.1 and Op.2 plus historically misattributed Op.3",
+    "verified_findings": [
+      "Op.1 No.0 Hob.II:6 is an early E-flat major five-movement 4-string divertimento distinct from Op.1 No.1 Hob.III:1",
+      "Op.1 No.5 is symphony Hob.I:107, not an original string quartet",
+      "Op.2 Nos.3 and 5 are originally 2-horn+string sextets Hob.II:21 and Hob.II:22, not original string quartets",
+      "Op.3 Nos.1–6 traditionally ascribed to Haydn are attributed to Roman Hoffstetter in IMSLP; do not count under original Haydn quartet corpus"
+    ],
+    "sources": [
+      "https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-205",
+      "https://imslp.org/wiki/Divertimento_in_E-flat_major%2C_Hob.II%3A6_%28Haydn%2C_Joseph%29",
+      "https://imslp.org/wiki/String_Quartets%2C_Op.3_%28Hoffstetter%2C_Roman%29",
+      "https://academic.oup.com/book/36386/chapter-abstract/319980127"
+    ],
+    "incomplete_checks": [
+      "all Haydn early scores/parts PDF inspection",
+      "rights in Japan",
+      "actual SONARIA installed score assets",
+      "other spurious or doubtful catalogue entries"
+    ]
+  }
 }
