@@ -186,7 +186,12 @@ def snippet_around(text: str, rx: str) -> list[str]:
 
 def inspect(pdf: str, n: int) -> dict:
     _, fonts = run(["pdffonts", pdf])
-    text_based = len(fonts.strip().splitlines()) > 2 and len(page_text(pdf, 1).strip()) > 40
+    t1 = page_text(pdf, 1)
+    # 文字を持つ PDF でも、独自のフォント符号化で読めない文字列しか取れないことがある（浄書ソフトの出力など）。
+    # 読める単語が少なければ画像として OCR する
+    words = re.findall(r"[A-Za-zÀ-ÿ]{3,}", t1)
+    readable = sum(1 for w in words if re.search(r"[aeiouyAEIOUY]", w)) / max(1, len(re.findall(r"\S+", t1)))
+    text_based = len(fonts.strip().splitlines()) > 2 and len(t1.strip()) > 40 and readable >= 0.25
     k = min(n, MAX_PAGES)
     with ThreadPoolExecutor(max_workers=4) as ex:
         pages = list(ex.map(lambda i: inspect_page(pdf, i, n, text_based), range(1, k + 1)))

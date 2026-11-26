@@ -127,6 +127,25 @@ def composer_seen(text: str, composer_id: str) -> bool:
     return False
 
 
+# 曲名の照合に使わない一般的な語
+TITLE_STOP = {"concerto", "concertos", "sonata", "sonatas", "violin", "viola", "cello", "piano", "major", "minor", "string", "strings", "quartet", "trio", "suite", "serenade", "for", "and", "the", "two", "four", "from", "version", "book", "books", "nos", "flat", "sharp", "with", "theme", "variations", "pieces", "solo", "duos", "duo", "studies", "etudes", "caprices", "romance", "dance"}
+
+
+def title_seen(text: str, en: str, ja: str) -> bool:
+    """1 ページ目に曲名の特徴的な語（例: Liebesleid、Zigeunerweisen）が出てくるか"""
+    fold = lambda x: unicodedata.normalize("NFKD", x).encode("ascii", "ignore").decode().lower()
+    t = fold(text)
+    words = re.findall(r"[a-z]{3,}", t)
+    for w in re.findall(r"[A-Za-zÀ-ÿ’']{5,}", en):
+        k = re.sub(r"[^a-z]", "", fold(w))
+        if len(k) < 5 or k in TITLE_STOP:
+            continue
+        if k in t or any(difflib.SequenceMatcher(None, k, x).ratio() >= 0.8 for x in words):
+            return True
+    core = re.sub(r"[（(《「].*$", "", ja).strip()
+    return len(core) >= 3 and core in text
+
+
 PART_WORDS = {"violin1": "violin1", "violin2": "violin2", "viola": "viola", "cello": "cello", "bass": "bass", "piano": "piano", "score": "score", "violin": "violin"}
 
 
@@ -218,8 +237,8 @@ def main() -> int:
                 r["reasons"].append(f"誤リンク（ファイル名は Op.{'/'.join(sorted(fn_ops))}、掲載ページは Op.{'/'.join(sorted(hd_ops))}）")
             # 3) 中身の確認（作曲者名）
             head = " ".join([d.get("page1_head", ""), e.get("text_first") or "", e.get("ocr_first") or ""])
-            if not composer_seen(head, cid):
-                r["reasons"].append("中身（1 ページ目）で作曲者を確認できない")
+            if not composer_seen(head, cid) and not title_seen(head, en, ja):
+                r["reasons"].append("中身（1 ページ目）で作曲者・曲名を確認できない")
             # 4) パート
             if part_conflict(part, d.get("part_label") or []):
                 r["reasons"].append(f"パート不一致（ファイル名: {part}、中身の表記: {', '.join(d.get('part_label'))}）")
