@@ -11,10 +11,9 @@ type Props = {
 };
 
 // 運指・ボウイング付けサービス（SONARIA の有料サービス）への導線。広告ではないので PR 表記は付けない。
-// TODO: 申し込みフォーム（PR #7 の /bowing/apply/）が公開されたら、遷移先をフォームに変え、
-//       クエリ（title / composer / work / part / asset）を初期値として読み込む
+// 遷移先は統合申込フォーム（/apply/?service=bowing）。title / composer / part を「対象の楽譜」の初期値として読み込む（Issue #13）
 export default function BowingBanner({ locale, t, context }: Props) {
-  const params = new URLSearchParams({ title: context.title, composer: context.composer, work: context.workId });
+  const params = new URLSearchParams({ service: "bowing", title: context.title, composer: context.composer, work: context.workId });
   for (const p of context.parts) params.append("part", p);
   for (const a of context.assets) params.append("asset", a);
   return (
@@ -27,7 +26,7 @@ export default function BowingBanner({ locale, t, context }: Props) {
         ))}
       </ul>
       <Link
-        href={`${localizedPath(locale, pagePaths.bowing)}?${params.toString()}`}
+        href={`${localizedPath(locale, pagePaths.apply)}?${params.toString()}`}
         className="mt-3 inline-block rounded-button border border-navy bg-navy px-4 py-2.5 text-[13px] font-semibold text-white hover:brightness-95"
       >
         {t.cta}

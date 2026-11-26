@@ -22,7 +22,8 @@ export default async function RecordingPage({ params }: Props) {
 
   return (
     <ContentPage locale={locale} copy={dict.contentPages.recording} image="recording">
-        <ButtonLink href={localizedPath(locale, pagePaths.contact)}>{dict.contentCta.contact}</ButtonLink>
+        <ButtonLink href={`${localizedPath(locale, pagePaths.apply)}?service=recording`}>{dict.contentCta.apply}</ButtonLink>
+        <ButtonLink href={localizedPath(locale, pagePaths.contact)} variant="secondary">{dict.contentCta.contact}</ButtonLink>
         <ButtonLink href={localizedPath(locale, pagePaths.profile)} variant="secondary">{dict.contentCta.profile}</ButtonLink>
     </ContentPage>
   );

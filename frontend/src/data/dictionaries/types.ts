@@ -205,6 +205,7 @@ export type Dictionary = {
     contact: string;
     profile: string;
     teachers: string;
+    apply: string;
   };
   community: {
     externalLinkLabel: string;
@@ -213,6 +214,101 @@ export type Dictionary = {
     priceLater: string;
   };
   // 楽譜ライブラリ（作品・作曲家・カテゴリの自動生成ページ）
+  orderForm: {
+    pageTitle: string;
+    pageLead: string;
+    tabsLabel: string;
+    tabs: Record<"lesson" | "bowing" | "recording", string>;
+    estimateNote: string;
+    taxNote: string;
+    required: string;
+    optional: string;
+    lesson: {
+      heading: string;
+      trialQuestion: string;
+      trialYes: string;
+      trialNo: string;
+      trialUsedNote: string;
+      plan: string;
+      plans: Record<"trial" | "single" | "intensive" | "visiting", string>;
+      minutes: (m: number) => string;
+      firstTimeOnly: string;
+      candidates: string;
+      candidatesHelp: string;
+      dayLabel: (month: number, day: number, weekday: string) => string;
+      weekdays: readonly string[];
+      today: string;
+      selected: string;
+      priority: (n: number) => string;
+      moveUp: string;
+      moveDown: string;
+      remove: string;
+      endsLateNote: string;
+      noCandidates: string;
+      candidatesMax: (n: number) => string;
+      notBooking: string;
+    };
+    bowing: {
+      heading: string;
+      type: string;
+      types: Record<"bowing" | "fingering" | "both", string>;
+      perPage: (yen: string) => string;
+      setDeal: (list: string, set: string, save: string) => string;
+      pages: string;
+      score: string;
+      scorePlaceholder: string;
+    };
+    recording: {
+      heading: string;
+      instruments: Record<"violin" | "viola" | "cello" | "other", string>;
+      perTrack: (yen: string) => string;
+      outsourced: string;
+      tracks: string;
+      otherDetail: string;
+      otherDetailPlaceholder: string;
+      noTracks: string;
+    };
+    delivery: {
+      heading: string;
+      options: Record<"nextDay" | "twoDays" | "threePlus", string>;
+      factor: (x: string) => string;
+      startNote: string;
+    };
+    common: {
+      heading: string;
+      name: string;
+      email: string;
+      emailInvalid: string;
+      remarks: string;
+      remarksPlaceholder: string;
+      consent: string;
+      privacyLink: string;
+      consentRequired: string;
+      nameRequired: string;
+    };
+    summary: {
+      heading: string;
+      subtotal: string;
+      base: string;
+      deliveryFactor: string;
+      total: string;
+      lineBowing: (type: string, unit: string, pages: number) => string;
+      lineTrack: (inst: string, unit: string, tracks: number) => string;
+      lineLesson: (plan: string) => string;
+      empty: string;
+    };
+    stepper: { decrease: string; increase: string };
+    actions: { review: string; back: string; submit: string; submitting: string; copy: string; copied: string; fixErrors: string };
+    confirm: { heading: string; lead: string };
+    result: {
+      notConnectedTitle: string;
+      notConnectedBody: string;
+      sentTitle: string;
+      sentBody: string;
+      errorTitle: string;
+      errorBody: string;
+    };
+  };
   library: {
     breadcrumb: string;
     home: string;

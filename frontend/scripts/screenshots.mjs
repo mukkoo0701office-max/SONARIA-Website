@@ -134,6 +134,41 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   const dl = await page.locator("a[download]").first().getAttribute("href");
   check(`${vpName}: PDF download points to release asset`, Boolean(dl && dl.includes("/releases/download/scores-v1/")), String(dl));
 
+  // 統合申込フォーム（Issue #13）。料金の受け入れテストと、送信先未設定時に「未接続」を表示することを確かめる
+  const yenText = async () => (await page.locator("#order-summary + dl, section[aria-labelledby='order-summary'] dl").first().innerText()).replace(/\s+/g, " ").trim();
+  await page.goto(`${base}/ja/apply/?service=recording`, { waitUntil: "networkidle" });
+  const inc = (id, n) => page.locator(`button[aria-label^="${id}"][aria-label$="1つ増やす"]`).first();
+  for (const [inst, n] of [["ヴァイオリン", 2], ["ヴィオラ", 1], ["チェロ", 1]]) for (let i = 0; i < n; i++) await inc(inst).click();
+  const totalBase = await yenText();
+  check(`${vpName}: recording Vn2+Va1+Vc1 = ¥41,000`, /合計 ¥41,000$/.test(totalBase), totalBase);
+  await page.locator('label:has(input[name="delivery-recording"][value="nextDay"])').click();
+  const totalNext = await yenText();
+  check(`${vpName}: recording next-day = ¥49,200`, /合計 ¥49,200$/.test(totalNext), totalNext);
+  await shot(page, `${vpName}-ja-apply-recording`);
+  await page.goto(`${base}/ja/apply/?service=bowing&composer=Beethoven&title=Spring&part=Violin`, { waitUntil: "networkidle" });
+  check(`${vpName}: bowing prefill from score page`, (await page.locator("#score").inputValue()) === "Beethoven Spring (Violin)");
+  const bowTotal = await yenText();
+  check(`${vpName}: bowing set 1 page = ¥1,500`, /合計 ¥1,500$/.test(bowTotal), bowTotal);
+  await page.fill("#name", "テスト");
+  await page.fill("#email", "test@example.invalid");
+  await page.locator('input[type="checkbox"]').check();
+  await shot(page, `${vpName}-ja-apply-bowing`);
+  await page.locator('form button[type="submit"]').click();
+  await page.locator("text=この内容で申し込む").click();
+  check(`${vpName}: submission shows not-connected`, await page.locator("text=オンライン送信は準備中です").isVisible());
+  await shot(page, `${vpName}-ja-apply-not-connected`);
+  await page.goto(`${base}/ja/apply/?service=lesson`, { waitUntil: "networkidle" });
+  await page.locator('label:has(input[name="trial"][value="yes"])').click();
+  check(`${vpName}: trial disabled after yes`, await page.locator('input[name="plan"][value="trial"]').isDisabled());
+  await page.locator('label:has(input[name="plan"][value="single"])').click();
+  await page.locator('[role="tabpanel"] button[aria-pressed]').nth(1).click();
+  await page.locator('[role="tabpanel"] [role="group"] button:not([disabled])').first().click();
+  await page.locator('[role="tabpanel"] [role="group"] button:not([disabled])').nth(2).click();
+  check(`${vpName}: lesson candidates listed with priority`, (await page.locator("text=第2希望").count()) === 1);
+  await shot(page, `${vpName}-ja-apply-lesson`);
+  await page.goto(`${base}/en/apply/?service=recording`, { waitUntil: "networkidle" });
+  await shot(page, `${vpName}-en-apply-recording`);
+
   check(`${vpName}: no page errors`, errors.length === 0, errors.slice(0, 3).join(" | "));
   await context.close();
 }

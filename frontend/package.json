@@ -8,7 +8,8 @@
     "start": "npx serve out",
     "lint": "next lint",
     "postbuild": "node scripts/postbuild.mjs",
-    "check": "node scripts/check-site.mjs out"
+    "check": "node scripts/check-site.mjs out",
+    "test": "node --experimental-strip-types --test \"tests/*.test.mjs\""
   },
   "dependencies": {
     "next": "^15.3.0",

@@ -22,7 +22,8 @@ export default async function BowingPage({ params }: Props) {
 
   return (
     <ContentPage locale={locale} copy={dict.contentPages.bowing} image="bowing">
-        <ButtonLink href={localizedPath(locale, pagePaths.contact)}>{dict.contentCta.contact}</ButtonLink>
+        <ButtonLink href={`${localizedPath(locale, pagePaths.apply)}?service=bowing`}>{dict.contentCta.apply}</ButtonLink>
+        <ButtonLink href={localizedPath(locale, pagePaths.contact)} variant="secondary">{dict.contentCta.contact}</ButtonLink>
         <ButtonLink href={localizedPath(locale, pagePaths.scores)} variant="secondary">{dict.pages.scores}</ButtonLink>
     </ContentPage>
   );
