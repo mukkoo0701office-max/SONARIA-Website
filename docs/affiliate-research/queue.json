@@ -305,6 +305,70 @@
       "status": "pending_review",
       "verification": "Henle official catalog confirms identity, edition format, ISMN, editor and contents. Amazon.co.jp listing and ASIN not verified; do not create tagged link.",
       "date_checked": "2026-11-27"
+    },
+    {
+      "id": "haydn-henle-hn209",
+      "title": "String Quartets Book V op.33 Russian Quartets (Urtext playing parts)",
+      "category": "printed_score",
+      "publisher_catalog": "HN 209",
+      "ismn": "979-0-2018-0209-1",
+      "source": "https://www.henle.de/jp/String-Quartets-Book-V-op.-33-Russian-Quartets/HN-209",
+      "format": "Urtext performing parts",
+      "pages": 131,
+      "composer": "Haydn",
+      "publisher": "G. Henle Verlag",
+      "editor": [
+        "Georg Feder",
+        "Sonja Gerlach"
+      ],
+      "preface": "Christin Heitmann",
+      "work_ids": [
+        "Op.33 No.1",
+        "Op.33 No.2",
+        "Op.33 No.3",
+        "Op.33 No.4",
+        "Op.33 No.5",
+        "Op.33 No.6"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "status": "pending_review",
+      "priority": "S",
+      "verification": "Verified direct publisher page, exact ISMN, format, editor and Op.33 collection. Amazon.co.jp listing/ASIN could not be verified; do not generate affiliate link.",
+      "date_checked": "2026-11-27"
+    },
+    {
+      "id": "haydn-henle-hn9209",
+      "title": "String Quartets Book V op.33 Russian Quartets (study score)",
+      "category": "pocket_score",
+      "publisher_catalog": "HN 9209",
+      "ismn": "979-0-2018-9209-2",
+      "source": "https://www.henle.de/String-Quartets-Book-V-op.-33-Russian-Quartets/HN-9209",
+      "format": "Study score",
+      "pages": 100,
+      "composer": "Haydn",
+      "publisher": "G. Henle Verlag",
+      "editor": [
+        "Georg Feder",
+        "Sonja Gerlach"
+      ],
+      "preface": "Christin Heitmann",
+      "work_ids": [
+        "Op.33 No.1",
+        "Op.33 No.2",
+        "Op.33 No.3",
+        "Op.33 No.4",
+        "Op.33 No.5",
+        "Op.33 No.6"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "status": "pending_review",
+      "priority": "S",
+      "verification": "Verified direct publisher page, exact ISMN, format, editor and Op.33 collection. Amazon.co.jp listing/ASIN could not be verified; do not generate affiliate link.",
+      "date_checked": "2026-11-27"
     }
   ],
   "implementation_ready": 0,
@@ -312,14 +376,14 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Amazon Japan identification by HN206/HN9206 ISMN and extension to Haydn Op.17 publisher editions",
-    "result": "Search did not establish exact Amazon.co.jp product listing for HN206/HN9206. Henle official catalog confirms two distinct Op.17 publications HN207/HN9207 and identifiers; 2 publisher-confirmed research candidates added, no Amazon listing verified.",
+    "focus": "Haydn HN207 HN9207 Amazon Japan lookup; expanding publisher-confirmed Op.33 sets",
+    "result": "No reliable Amazon.co.jp detail listing matched HN207/HN9207 or ISMN using targeted searches. Henle Op.33 HN209 and HN9209 verified on official product pages and added pending Amazon listing verification.",
     "new_publisher_confirmed": 2,
     "new_amazon_verified": 0,
-    "next": "Search official Amazon Japan product pages for ISMN 9790201802077 and 9790201892078, checking correct format and publisher before building mukkoo-22 affiliate links.",
+    "next": "Verify Amazon.co.jp ASIN and actual listing for ISMN 9790201802091 and 9790201892092; do not publish guessed affiliate URLs.",
     "evidence_urls": [
-      "https://www.henle.de/jp/String-Quartets-Book-III-op.-17/HN-207",
-      "https://www.henle.de/jp/String-Quartets-Book-III-op.-17/HN-9207"
+      "https://www.henle.de/jp/String-Quartets-Book-V-op.-33-Russian-Quartets/HN-209",
+      "https://www.henle.de/String-Quartets-Book-V-op.-33-Russian-Quartets/HN-9209"
     ]
   }
 }
