@@ -70,7 +70,10 @@
       "source": "https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-205",
       "verification": "出版社の商品は確認。Amazon.co.jpでの販売、ASIN、作品ページとの対応は未確認",
       "status": "pending_review",
-      "priority": "S"
+      "priority": "S",
+      "last_research_at": "2026-11-27",
+      "amazon_verification_status": "not_confirmed",
+      "verification_notes": "2026-11-27: Amazon.co.jpのHN205/HN208/HN211商品詳細とASINを照合するためウェブ検索したが、信頼できる個別商品結果を確認できず。公式商品情報との対応は保留。"
     },
     {
       "id": "haydn-henle-hn208",
@@ -88,7 +91,10 @@
       "source": "https://www.henle.de/jp/String-Quartets-Book-IV-op.-20-Sun-Quartets/HN-208",
       "verification": "出版社の商品は確認。Amazon.co.jpのASINと販売ページは未確認",
       "status": "pending_review",
-      "priority": "S"
+      "priority": "S",
+      "last_research_at": "2026-11-27",
+      "amazon_verification_status": "not_confirmed",
+      "verification_notes": "2026-11-27: Amazon.co.jpのHN205/HN208/HN211商品詳細とASINを照合するためウェブ検索したが、信頼できる個別商品結果を確認できず。公式商品情報との対応は保留。"
     },
     {
       "id": "haydn-henle-hn9205",
@@ -104,7 +110,10 @@
       "source": "https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-9205",
       "verification": "出版社商品確認、Amazon.co.jp/作品単位対応は未確認",
       "status": "pending_review",
-      "priority": "S"
+      "priority": "S",
+      "last_research_at": "2026-11-27",
+      "amazon_verification_status": "not_confirmed",
+      "verification_notes": "2026-11-27: Amazon.co.jpのHN205/HN208/HN211商品詳細とASINを照合するためウェブ検索したが、信頼できる個別商品結果を確認できず。公式商品情報との対応は保留。"
     },
     {
       "id": "haydn-henle-hn9216",
@@ -120,7 +129,10 @@
       "source": "https://www.henle.de/jp/The-String-Quartets-12-Volumes-in-a-Slipcase/HN-9216",
       "verification": "出版社商品確認、Amazon.co.jp販売とASIN未確認。全集のため原則作曲家ページ対象",
       "status": "pending_review",
-      "priority": "A"
+      "priority": "A",
+      "last_research_at": "2026-11-27",
+      "amazon_verification_status": "not_confirmed",
+      "verification_notes": "2026-11-27: Amazon.co.jpのHN205/HN208/HN211商品詳細とASINを照合するためウェブ検索したが、信頼できる個別商品結果を確認できず。公式商品情報との対応は保留。"
     },
     {
       "id": "haydn-henle-hn211",
@@ -139,10 +151,21 @@
       "source": "https://www.henle.de/en/String-Quartets-Book-VII-op.-54-and-55-Tost-Quartets/HN-211",
       "verification": "出版社商品確認、Amazon.co.jp/ASIN未確認",
       "status": "pending_review",
-      "priority": "S"
+      "priority": "S",
+      "last_research_at": "2026-11-27",
+      "amazon_verification_status": "not_confirmed",
+      "verification_notes": "2026-11-27: Amazon.co.jpのHN205/HN208/HN211商品詳細とASINを照合するためウェブ検索したが、信頼できる個別商品結果を確認できず。公式商品情報との対応は保留。"
     }
   ],
   "implementation_ready": 0,
   "store_id": "mukkoo-22",
-  "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot"
+  "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
+  "last_research": {
+    "date": "2026-11-27",
+    "focus": "Haydn Henle HN205, HN208, HN211, plus existing HN9205/HN9216",
+    "result": "No confirmed Amazon.co.jp product detail URL/ASIN in this run; do not generate tag links from guessed ASIN.",
+    "next": "Search Amazon catalog by EAN/ISBN on publisher product pages and verify with official detail pages.",
+    "research_source": "Amazon.co.jp target-domain web search (negative result; no definitive product match)",
+    "new_verified_products": 0
+  }
 }
