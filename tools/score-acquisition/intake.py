@@ -241,7 +241,7 @@ def main() -> int:
     rows = sorted(done.values(), key=lambda r: (r.get("verdict", ""), r["file"]))
     lines = ["# 楽譜 PDF 受け入れ検査（Claude）", "", f"- 検査したファイル: {len(rows)} 件（下書きリリース score-intake の添付）", "- 自動検査を通過しても公開・権利承認はしていない。権利ステータスの承認は管理人が行う", ""]
     if not rows:
-        lines.append("まだファイルがありません。`docs/score-acquisition/INTAKE.md` の手順で PDF を添付してください。")
+        lines.append("まだファイルがありません。`docs/score-acquisition-intake.md` の手順で PDF を添付してください。")
     else:
         lines += ["| 判定 | ファイル | キュー候補 / パート | ページ | 気になる点 |", "|---|---|---|---|---|"]
         for r in rows:
