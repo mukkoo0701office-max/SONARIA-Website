@@ -23,9 +23,7 @@ enabled = false
 enabled = true
 site_url = "http://127.0.0.1:3000"
 # 一般の新規登録は受け付けない（管理人はダッシュボードで作成する。講師ログインは第3段階で設定）
-enable_signup = false
-
-[auth.email]
+# 注意: [auth.email] の enable_signup を false にするとメールでのログイン自体が無効になるので設定しない
 enable_signup = false
 
 [storage]
