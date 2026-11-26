@@ -949,7 +949,29 @@
       "priority": "S",
       "status": "pending_review",
       "date_checked": "2026-11-27",
-      "verification": "Current Edition Peters publisher direct page confirms EP190, ISMN 9790300700755, 136 pages, instrumentation violin and piano, 8-sonata anthology and separate violin part. Targeted Amazon.co.jp direct ASIN/ISBN searches returned no reliable verified listing. Not approved for affiliate placement."
+      "verification": "Current Edition Peters publisher direct page confirms EP190, ISMN 9790300700755, 136 pages, instrumentation violin and piano, 8-sonata anthology and separate violin part. Targeted Amazon.co.jp direct ASIN/ISBN searches returned no reliable verified listing. Not approved for affiliate placement.",
+      "amazon_verification_status": "no_verified_amazon_co_jp_detail_or_ASIN",
+      "last_amazon_search_at": "2026-11-27",
+      "arrangement_contents_audit": {
+        "violin_sonata_no6": {
+          "key": "C major",
+          "imslp_source": "Divertimento Hob.II:11, related keyboard guise Hob.XVI:15",
+          "publisher_source": "Keyboard Sonata Hob.XVI:15",
+          "reconciliation": "related historical versions; no music-notation comparison yet"
+        },
+        "violin_sonata_no7": {
+          "key": "F major",
+          "source": "Op.77 No.2 Hob.III:82",
+          "modification": "quartet minuet and trio omitted"
+        },
+        "violin_sonata_no8": {
+          "key": "G major",
+          "source": "Op.77 No.1 Hob.III:81",
+          "modification": "quartet minuet and trio omitted"
+        },
+        "format": "piano score and separate violin part; one EP190 volume includes 8 sonatas, not 8 separate published books"
+      },
+      "notes": " EP190 matches all eight historical violin-piano arrangements, Nos.6-8 included. IMSLP No.6 after Hob.II:11, also relates to keyboard Hob.XVI:15 listed by Peters; do not claim simple source error. Nos.7-8 omit original Op.77 quartet minuet/trio. Exact Amazon.co.jp ASIN not verified; no affiliate link."
     }
   ],
   "implementation_ready": 0,
@@ -957,18 +979,18 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Edition Peters EP190 Haydn 8 Violin Sonatas original publisher product verification and Amazon.co.jp ASIN match",
-    "result": "Verified direct Edition Peters EP190 ISMN 9790300700755; piano score and separate violin part, 136pp, eight adapted violin sonatas including Nos.4–5. Amazon.co.jp targeted exact identifier searches did not find a verified matching product detail page/ASIN; leave pending_review. Publisher listing for No.6 gives Hob.XVI:15 while IMSLP anthology indicates Hob.II:11 origin; record as unresolved discrepancy.",
-    "new_candidates": 1,
-    "new_publisher_confirmed": 1,
+    "focus": "Edition Peters EP190 validation for Haydn historical violin+piano sonatas Nos.6–8 and exact Amazon.co.jp ASIN",
+    "result": "Reconfirmed official Peters EP190 ISMN 9790300700755, 136pp, piano score+separate violin part, all 8 pieces. IMSLP No.6 after Hob.II:11 and Peters after Hob.XVI:15 are compatible as related historic versions (not yet note-comparison verified). Nos.7–8 transcribe Op.77 quartets without Minuet/Trio. Amazon.co.jp exact ISMN EP190 searches did not yield verifiable single product page/ASIN; pending_review.",
+    "new_candidates": 0,
     "new_amazon_verified": 0,
+    "existing_records_enriched": 1,
     "checked_candidates": [
       "haydn-peters-ep190-eight-violin-sonatas"
     ],
-    "source_urls": [
+    "evidence_urls": [
       "https://www.editionpeterspublications.us/products/haydn-8-violin-sonatas-peters",
       "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29"
     ],
-    "next": "Use official Amazon Associates Product Linking/SiteStripe or authorized Product Advertising API to verify direct Amazon.co.jp detail-page ASIN matching ISMN 9790300700755 and EP190. Do not display as unrelated Henle HN437/HN216 and don't infer availability, price or author of arrangements."
+    "next": "Use signed-in Amazon Associates Product Linking/SiteStripe or official PA-API to resolve EP190's exact item and ASIN. For related recommendations avoid implying separate sheet music for each sonata; link one anthology once and preserve work ID mappings."
   }
 }
