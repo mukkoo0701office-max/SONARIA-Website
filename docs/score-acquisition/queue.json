@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "policy": "candidate_only_no_auto_publish",
+  "target_order": [
+    {
+      "composer": "Haydn",
+      "stages": [
+        "string_quartet",
+        "violin_sonata",
+        "cello_sonata"
+      ]
+    },
+    {
+      "composer": "Mozart",
+      "stages": [
+        "string_quartet",
+        "violin_sonata",
+        "cello_sonata"
+      ]
+    },
+    {
+      "composer": "Beethoven",
+      "stages": [
+        "string_quartet",
+        "violin_sonata",
+        "cello_sonata"
+      ]
+    },
+    {
+      "composer": "Brahms",
+      "stages": [
+        "string_quartet",
+        "violin_sonata",
+        "cello_sonata"
+      ]
+    }
+  ],
+  "cursor": {
+    "composer": "Haydn",
+    "stage": "string_quartet",
+    "last_work": null
+  },
+  "items": [],
+  "last_updated": null
+}
