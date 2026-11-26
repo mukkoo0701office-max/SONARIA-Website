@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "string_quartet",
-    "last_work": "Op.33 No.6 / Hob.III:42",
-    "note": "Next investigate Haydn Op.42 and Op.50 Nos.1-3, verifying collection edition and part sets. All Op.33 PDFs and rights remain unapproved."
+    "last_work": "Op.50 No.3 / Hob.III:46",
+    "note": "Next Op.50 Nos.4–6. Op.42 and Op.50 candidate PDFs require Claude visual, completeness and Japan rights checks."
   },
   "items": [
     {
@@ -1760,6 +1760,190 @@
       },
       "rights_status": "unknown",
       "notes": "Claude must validate all four parts, page grouping, ordering, legibility and Japanese republication rights. Historic bundle PDFs represent multiple quartets; do not duplicate assets per work or mistake publication order for opus numbering.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op42-imslp-edition-research",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in D minor",
+      "opus_catalog": "Op.42; Hob.III:43",
+      "work_url": "https://imslp.org/wiki/String_Quartet_in_D_minor%2C_Hob.III%3A43_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Leipzig: Ernst Eulenburg, No.154, c.1930, ed. Wilhelm Altmann; alternate original autograph #818361 (28pp), Trautwein score #479260 (14pp), Heckel #889020 (20pp).",
+        "publication_date": "See edition source metadata",
+        "editor": "Wilhelm Altmann (Eulenburg), other edition editors unconfirmed",
+        "scope": "Op.42 single quartet or Op.50 six-quartet shared collection, as applicable",
+        "imslp_file_id": "05774",
+        "file_pages": 15,
+        "edition_comparison": "IMSLP lists 33 part files; choose true quartet Vn1/Vn2/Va/Vc, not flute or piano arrangements."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_in_D_minor%2C_Hob.III%3A43_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_in_D_minor%2C_Hob.III%3A43_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP work catalogue Op.42, Hob.III:43, D minor; source lists score #05774 and alternative IMSLP lists 33 part files; choose true quartet Vn1/Vn2/Va/Vc, not flute or piano arrangements.; physical files uninspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_pdf_uninspected",
+        "parts": "listed_not_visually_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "SONARIA_site_catalog_unverified",
+        "rights": "unverified_Japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Op.50 score/parts bundles must be represented as shared assets, not duplicated per work. Claude to verify page ranges, parts, scan quality, rights and catalogue status. No PDF downloaded.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op50-1-imslp-edition-research",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in B-flat major",
+      "opus_catalog": "Op.50 No.1; Hob.III:44",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.50_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Ernst Eulenburg c.1930, W. Altmann complete Op.50 score #455213 (142pp); Heckel c.1855 #889021 (234pp).",
+        "publication_date": "See edition source metadata",
+        "editor": "Wilhelm Altmann (Eulenburg), other edition editors unconfirmed",
+        "scope": "Op.42 single quartet or Op.50 six-quartet shared collection, as applicable",
+        "imslp_file_id": "455213",
+        "file_pages": 142,
+        "edition_comparison": "Artaria Vienna 1787 complete color parts #472410 (100pp) / individual Vn1 #475883, Vn2 #475884, Va #475885, Vc #475882; Litolff c.1870 alternative Vn1 #106764 Vn2 #106765 Va #106766 Vc #106767."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.50_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.50_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP work catalogue Op.50 No.1, Hob.III:44, B-flat major; source lists score #455213 and alternative Artaria Vienna 1787 complete color parts #472410 (100pp) / individual Vn1 #475883, Vn2 #475884, Va #475885, Vc #475882; Litolff c.1870 alternative Vn1 #106764 Vn2 #106765 Va #106766 Vc #106767.; physical files uninspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_pdf_uninspected",
+        "parts": "listed_not_visually_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "SONARIA_site_catalog_unverified",
+        "rights": "unverified_Japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Op.50 score/parts bundles must be represented as shared assets, not duplicated per work. Claude to verify page ranges, parts, scan quality, rights and catalogue status. No PDF downloaded.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op50-2-imslp-edition-research",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in C major",
+      "opus_catalog": "Op.50 No.2; Hob.III:45",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.50_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Ernst Eulenburg c.1930, W. Altmann complete Op.50 score #455213 (142pp); Heckel c.1855 #889021 (234pp).",
+        "publication_date": "See edition source metadata",
+        "editor": "Wilhelm Altmann (Eulenburg), other edition editors unconfirmed",
+        "scope": "Op.42 single quartet or Op.50 six-quartet shared collection, as applicable",
+        "imslp_file_id": "455213",
+        "file_pages": 142,
+        "edition_comparison": "Artaria Vienna 1787 complete parts #472410 and individual Vn1 #475883, Vn2 #475884, Va #475885, Vc #475882; Litolff c.1870 #106764–106767."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.50_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.50_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP work catalogue Op.50 No.2, Hob.III:45, C major; source lists score #455213 and alternative Artaria Vienna 1787 complete parts #472410 and individual Vn1 #475883, Vn2 #475884, Va #475885, Vc #475882; Litolff c.1870 #106764–106767.; physical files uninspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_pdf_uninspected",
+        "parts": "listed_not_visually_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "SONARIA_site_catalog_unverified",
+        "rights": "unverified_Japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Op.50 score/parts bundles must be represented as shared assets, not duplicated per work. Claude to verify page ranges, parts, scan quality, rights and catalogue status. No PDF downloaded.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op50-3-imslp-edition-research",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in E-flat major",
+      "opus_catalog": "Op.50 No.3; Hob.III:46",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.50_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Ernst Eulenburg c.1930, W. Altmann complete Op.50 score #455213 (142pp); Heckel c.1855 #889021 (234pp).",
+        "publication_date": "See edition source metadata",
+        "editor": "Wilhelm Altmann (Eulenburg), other edition editors unconfirmed",
+        "scope": "Op.42 single quartet or Op.50 six-quartet shared collection, as applicable",
+        "imslp_file_id": "455213",
+        "file_pages": 142,
+        "edition_comparison": "Artaria Vienna 1787 complete parts #472410 and individual Vn1 #475883, Vn2 #475884, Va #475885, Vc #475882; Litolff c.1870 #106764–106767."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.50_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.50_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP work catalogue Op.50 No.3, Hob.III:46, E-flat major; source lists score #455213 and alternative Artaria Vienna 1787 complete parts #472410 and individual Vn1 #475883, Vn2 #475884, Va #475885, Vc #475882; Litolff c.1870 #106764–106767.; physical files uninspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_pdf_uninspected",
+        "parts": "listed_not_visually_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "SONARIA_site_catalog_unverified",
+        "rights": "unverified_Japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Op.50 score/parts bundles must be represented as shared assets, not duplicated per work. Claude to verify page ranges, parts, scan quality, rights and catalogue status. No PDF downloaded.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
