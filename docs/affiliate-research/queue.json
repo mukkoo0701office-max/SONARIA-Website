@@ -198,16 +198,14 @@
       "asin": null,
       "isbn": null,
       "source": "https://www.henle.de/en/String-Quartets-Book-VII-op.-54-and-55-Tost-Quartets/HN-211",
-      "verification": "Henle official catalog confirms Op.54/55 six quartets, editor, four-part edition and ISMN. Amazon.co.jp ASIN not confirmed.",
+      "verification": "Henle official listing HN211 ISBN/ISMN and Op.54/55 scope confirmed; Amazon.co.jp ASIN/direct product URL not verified",
       "status": "pending_review",
       "priority": "S",
       "last_research_at": "2026-11-27",
       "amazon_verification_status": "not_confirmed",
       "verification_notes": "2026-11-27: Amazon.co.jp site-targeted catalog-number and ISMN search returned no verifiable direct Amazon product detail page/ASIN. Do not generate affiliate URL.",
       "ismn": "979-0-2018-0211-4",
-      "editor": [
-        "James Webster"
-      ],
+      "editor": "James Webster",
       "product_format": "four instrumental parts",
       "pages": 187
     },
@@ -469,6 +467,33 @@
       "status": "pending_review",
       "verification": "Publisher-confirmed format, work scope, ISMN and editor. No verified Amazon.co.jp individual product detail URL or ASIN; no generated affiliate link.",
       "date_checked": "2026-11-27"
+    },
+    {
+      "id": "haydn-henle-hn9211",
+      "composer": "Haydn",
+      "category": "pocket_score",
+      "title": "String Quartets Book VII op.54 and 55 (Tost Quartets), Study Score",
+      "publisher": "G. Henle Verlag",
+      "publisher_catalog": "HN 9211",
+      "ismn": "979-0-2018-9211-5",
+      "editor": "James Webster",
+      "pages": 130,
+      "work_ids": [
+        "Op.54 No.1",
+        "Op.54 No.2",
+        "Op.54 No.3",
+        "Op.55 No.1",
+        "Op.55 No.2",
+        "Op.55 No.3"
+      ],
+      "source": "https://www.henle.de/en/String-Quartets-Book-VII-op.-54-and-55-Tost-Quartets/HN-9211",
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "priority": "S",
+      "status": "pending_review",
+      "verification": "Official Henle product confirms pocket study score, 130 pages, works Op.54/55 and editor James Webster. No direct Amazon.co.jp product page/ASIN verified.",
+      "date_checked": "2026-11-27"
     }
   ],
   "implementation_ready": 0,
@@ -476,14 +501,15 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Henle Op.33 HN209/HN9209 Amazon.co.jp exact ISMN matching and Op.42/50 HN210/HN9210 publisher verification",
-    "result": "Targeted Amazon.co.jp exact identifier search failed to resolve a reliable ASIN for HN209/HN9209. Henle official publisher verifies new HN210/HN9210 parts/study score, ISMN, editor James Webster and repertoire Op.42/50.",
-    "new_publisher_confirmed": 2,
+    "focus": "Amazon.co.jp ASIN verification HN210/HN9210 and Henle Op.54-55 complementary study score HN9211",
+    "result": "Targeted Amazon.co.jp queries did not yield a reliable individual product page or ASIN for HN210/HN9210. Henle official publisher verifies HN9211 study score and ISMN; enriched matching HN211 parts identifier.",
+    "new_publisher_confirmed": 1,
+    "existing_records_enriched": 1,
     "new_amazon_verified": 0,
-    "next": "Inspect Amazon.co.jp individual listings of HN210/HN9210 and prior HN209/HN9209, by ISMN/EAN and Japanese title. No affiliate URL until ASIN confirmed.",
-    "evidence_urls": [
-      "https://www.henle.de/jp/String-Quartets-Book-VI-op.-42-and-op.-50-Prussian-Quartets/HN-210",
-      "https://www.henle.de/jp/String-Quartets-Book-VI-op.-42-and-op.-50-Prussian-Quartets/HN-9210"
-    ]
+    "source_urls": [
+      "https://www.henle.de/en/String-Quartets-Book-VII-op.-54-and-55-Tost-Quartets/HN-9211",
+      "https://www.henle.de/jp/String-Quartets-Book-VII-op.-54-and-55-Tost-Quartets/HN-211"
+    ],
+    "next": "Search Amazon.co.jp by exact 9790201892115 and 9790201802114 and verify actual product pages, distinguish playing parts vs study score."
   }
 }
