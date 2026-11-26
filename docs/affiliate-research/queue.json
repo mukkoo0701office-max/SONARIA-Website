@@ -676,6 +676,56 @@
       "priority": "S",
       "verification": "G. Henle official product details: exact ISMN, format, editor, six quartets Op.76, printed pages verified. Amazon.co.jp direct product detail and ASIN not confirmed; do not generate affiliate link.",
       "date_checked": "2026-11-27"
+    },
+    {
+      "id": "haydn-henle-hn215",
+      "category": "printed_score",
+      "title": "String Quartets Book XI op.77 and 103 (Lobkowitz Quartets and last Quartet), Urtext Parts",
+      "publisher_catalog": "HN 215",
+      "ismn": "979-0-2018-0215-2",
+      "pages": 105,
+      "format": "performing parts",
+      "source": "https://www.henle.de/en/String-Quartets-Book-XI-op.-77-and-103-Lobkowitz-Quartets-and-last-Quartet/HN-215",
+      "composer": "Haydn",
+      "publisher": "G. Henle Verlag",
+      "editor": "Horst Walter",
+      "work_ids": [
+        "Op.77 No.1",
+        "Op.77 No.2",
+        "Op.103"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "status": "pending_review",
+      "priority": "S",
+      "verification": "G. Henle official product page confirms edition, content, format, editor and exact ISMN. Amazon.co.jp individual listing/ASIN not verified: must not generate affiliate URL.",
+      "date_checked": "2026-11-27"
+    },
+    {
+      "id": "haydn-henle-hn9215",
+      "category": "pocket_score",
+      "title": "String Quartets Book XI op.77 and 103, Urtext Study Score",
+      "publisher_catalog": "HN 9215",
+      "ismn": "979-0-2018-9215-3",
+      "pages": 64,
+      "format": "study score",
+      "source": "https://www.henle.de/en/String-Quartets-Book-XI-op.-77-and-103-Lobkowitz-Quartets-and-last-Quartet/HN-9215",
+      "composer": "Haydn",
+      "publisher": "G. Henle Verlag",
+      "editor": "Horst Walter",
+      "work_ids": [
+        "Op.77 No.1",
+        "Op.77 No.2",
+        "Op.103"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "status": "pending_review",
+      "priority": "S",
+      "verification": "G. Henle official product page confirms edition, content, format, editor and exact ISMN. Amazon.co.jp individual listing/ASIN not verified: must not generate affiliate URL.",
+      "date_checked": "2026-11-27"
     }
   ],
   "implementation_ready": 0,
@@ -683,14 +733,14 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Haydn HN213/HN9213 Amazon.co.jp search; Henle Op.76 HN214/HN9214 publisher verification",
-    "result": "No sufficiently confirmed Amazon.co.jp individual listing/ASIN for HN213 or HN9213. Two new Henle Op.76 editions verified from original publisher (parts and study score) but their Amazon.co.jp availability is unverified. No affiliate URL made.",
+    "focus": "HN214/HN9214 Amazon.co.jp detail and next Henle Op.77/103 HN215/HN9215",
+    "result": "Search by exact HN214/HN9214 and ISMN did not establish a verifiable Amazon.co.jp detail/ASIN. Henle official publisher confirmed HN215 and HN9215 as distinct print formats with contents Op.77 Nos.1–2 and Op.103; no Amazon link approved.",
     "new_publisher_confirmed": 2,
     "new_amazon_verified": 0,
-    "evidence_urls": [
-      "https://www.henle.de/String-Quartets-Book-X-op.-76-Erdoedy-Quartets/HN-214",
-      "https://www.henle.de/de/Streichquartette-Heft-X-op.-76-Erdoedy-Quartette/HN-9214"
+    "source_urls": [
+      "https://www.henle.de/en/String-Quartets-Book-XI-op.-77-and-103-Lobkowitz-Quartets-and-last-Quartet/HN-215",
+      "https://www.henle.de/en/String-Quartets-Book-XI-op.-77-and-103-Lobkowitz-Quartets-and-last-Quartet/HN-9215"
     ],
-    "next": "Search Amazon.co.jp official product listings using ISMN 9790201802145 / 9790201892146; distinguish HN214 parts vs HN9214 study score; no ASIN guessing."
+    "next": "Find Amazon.co.jp individual item by ISMN 9790201802152 and 9790201892153. Only after exact ASIN match create compliant mukkoo-22 tagged links; no invented links."
   }
 }
