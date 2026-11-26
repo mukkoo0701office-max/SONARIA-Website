@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "cello_sonata",
-    "last_work": "Violin+Viola Hob.VI:6 C major (six duo works catalogued; complete-set source unresolved)",
-    "note": "Hob.VI:4–6 music catalogue confirmed but no verifiable IMSLP score/parts file IDs; their free set remains blocked pending discovery. Violin+viola HN216 is commercial only. Proceed Haydn cello sonata taxonomy; distinguish cello concerto, cello+keyboard arrangements, and 2-cellos or cello+bass duos. Do not claim 6 duos published."
+    "last_work": "Grützmacher cello+piano transcriptions of historical Haydn Violin Sonatas Nos.1–2",
+    "note": "Next Grützmacher 8-work collection Nos.3–5; do not claim original Haydn cello sonatas exist or misfile Hob.VIIb concertos as sonatas. Cello score #141285 and part #141286 shared by all arrangements; each piece requires actual music/page verification and Japan rights approval."
   },
   "items": [
     {
@@ -4959,6 +4959,152 @@
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
+    },
+    {
+      "id": "haydn-arr-cello-piano-grutzmacher-sonata-no1",
+      "composer": "Joseph Haydn (underlying musical material); Friedrich Grützmacher (cello and piano arranger)",
+      "category": "cello_sonata_arrangement",
+      "work_title": "Cello and Piano Sonata arrangement in G major (Grützmacher; source historical Violin Sonatas No.1)",
+      "opus_catalog": "Grützmacher cello adaptation of Haydn Violin Sonatas collection No.1; underlying Hob.XV:32",
+      "original_work": {
+        "composer": "Joseph Haydn",
+        "catalog": "Hob.XV:32",
+        "instrumentation": "piano trio / historical violin-piano sonata",
+        "relation": "historical Violin Sonata collection No.1 related to Piano Trio"
+      },
+      "arranger": "Friedrich Grützmacher (1832–1903)",
+      "work_url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel, Leipzig",
+        "publication_date": "circa 1874–1876",
+        "editor": "Friedrich Grützmacher (arranger)",
+        "scope": "Historical eight-piece cello+piano arrangement collection; individual works share the same two source PDFs",
+        "imslp_file_id": "141285",
+        "file_pages": 96,
+        "edition_comparison": "Grützmacher full piano/cello score #141285 (96pp), cello part #141286 (43pp), cover #141287 (2pp). 1874–76, plate V.A.482. These are distinct cello arrangements from Peters violin parts #479522. Exact per-work ranges, variant/tempo/key correspondence and all movements require inspecting actual PDFs; never pair source violin part with cello arrangement score."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "cello",
+        "piano"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "141285",
+            "edition": "Breitkopf & Härtel Grützmacher circa 1874–1876",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "141286",
+            "edition": "same Grützmacher Breitkopf edition",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "same_arranger_and_edition_on_IMSLP_page_pdf_not_compared",
+        "page_ranges_verified": false,
+        "complete_set_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP Grützmacher Cello and Piano section lists #141285 96pp piano/cello score, #141286 43pp cello part, historical Breitkopf 1874–76; collection has 8 adapted sonatas. Source No.1 origin mapped from same page, not individual PDF inspection."
+        }
+      ],
+      "checklist": {
+        "work_identity": "underlying_Haydn_vs_cello_arranger_distinguished",
+        "edition": "Grutzmacher_publisher_file_metadata_checked",
+        "parts": "separate_cello_part_listed_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "single_eight_item_edition_asset_reused_never_copy_eight_times",
+        "rights": "Japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "unverified_pending_actual_pdf_content"
+      },
+      "rights_status": "unknown",
+      "notes": "Not an original cello sonata by Haydn. Explicitly credited as Grützmacher arrangement of a historically published violin/piano sonata, whose source has further instrument history. Source contains all eight adaptations; use original collection file once with page ranges if rights approved. Never substitute cello concerto piano reduction, source violin part or modern copyrighted editions. PDFs not downloaded or inspected.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-arr-cello-piano-grutzmacher-sonata-no2",
+      "composer": "Joseph Haydn (underlying musical material); Friedrich Grützmacher (cello and piano arranger)",
+      "category": "cello_sonata_arrangement",
+      "work_title": "Cello and Piano Sonata arrangement in D major (Grützmacher; source historical Violin Sonatas No.2)",
+      "opus_catalog": "Grützmacher cello adaptation of Haydn Violin Sonatas collection No.2; underlying Hob.XVI:24",
+      "original_work": {
+        "composer": "Joseph Haydn",
+        "catalog": "Hob.XVI:24",
+        "instrumentation": "keyboard solo / historical violin-piano arrangement",
+        "relation": "historical Violin Sonata collection No.2 after Keyboard Sonata"
+      },
+      "arranger": "Friedrich Grützmacher (1832–1903)",
+      "work_url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel, Leipzig",
+        "publication_date": "circa 1874–1876",
+        "editor": "Friedrich Grützmacher (arranger)",
+        "scope": "Historical eight-piece cello+piano arrangement collection; individual works share the same two source PDFs",
+        "imslp_file_id": "141285",
+        "file_pages": 96,
+        "edition_comparison": "Grützmacher full piano/cello score #141285 (96pp), cello part #141286 (43pp), cover #141287 (2pp). 1874–76, plate V.A.482. These are distinct cello arrangements from Peters violin parts #479522. Exact per-work ranges, variant/tempo/key correspondence and all movements require inspecting actual PDFs; never pair source violin part with cello arrangement score."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "cello",
+        "piano"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "141285",
+            "edition": "Breitkopf & Härtel Grützmacher circa 1874–1876",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "141286",
+            "edition": "same Grützmacher Breitkopf edition",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "same_arranger_and_edition_on_IMSLP_page_pdf_not_compared",
+        "page_ranges_verified": false,
+        "complete_set_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP Grützmacher Cello and Piano section lists #141285 96pp piano/cello score, #141286 43pp cello part, historical Breitkopf 1874–76; collection has 8 adapted sonatas. Source No.2 origin mapped from same page, not individual PDF inspection."
+        }
+      ],
+      "checklist": {
+        "work_identity": "underlying_Haydn_vs_cello_arranger_distinguished",
+        "edition": "Grutzmacher_publisher_file_metadata_checked",
+        "parts": "separate_cello_part_listed_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "single_eight_item_edition_asset_reused_never_copy_eight_times",
+        "rights": "Japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "unverified_pending_actual_pdf_content"
+      },
+      "rights_status": "unknown",
+      "notes": "Not an original cello sonata by Haydn. Explicitly credited as Grützmacher arrangement of a historically published violin/piano sonata, whose source has further instrument history. Source contains all eight adaptations; use original collection file once with page ranges if rights approved. Never substitute cello concerto piano reduction, source violin part or modern copyrighted editions. PDFs not downloaded or inspected.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
     }
   ],
   "last_updated": "2026-11-27",
@@ -4997,5 +5143,42 @@
       "edition_peters": "Hob.XVI:15 piano-sonata source",
       "resolution": "related versions, not proven identical note-for-note; preserve both claims and review primary musical sources before publication"
     }
+  },
+  "cello_sonata_repertoire_audit": {
+    "date": "2026-11-27",
+    "original_cello_piano_sonatas": "No independently identified authentic original cello+keyboard sonata in IMSLP Haydn works catalogue; absence in indexed catalog is not proof of absolute absence",
+    "known_cello_piano_arrangements": {
+      "arranger": "Friedrich Grützmacher",
+      "collection": "8 Haydn historical violin/piano sonatas, transcribed for cello and piano",
+      "score_imslp_id": "141285",
+      "cello_part_imslp_id": "141286",
+      "first_two_work_records": [
+        "haydn-arr-cello-piano-grutzmacher-sonata-no1",
+        "haydn-arr-cello-piano-grutzmacher-sonata-no2"
+      ]
+    },
+    "not_sonatas": [
+      {
+        "catalog": "Hob.VIIb:1",
+        "title": "Cello Concerto in C major",
+        "genre": "cello_concerto_original_orchestra; cello+piano publication is piano reduction"
+      },
+      {
+        "catalog": "Hob.VIIb:2",
+        "title": "Cello Concerto in D major",
+        "genre": "cello_concerto_original_orchestra; cello+piano publication is piano reduction"
+      }
+    ],
+    "authenticity_cautions": [
+      "Hob.VIIb:3 may be a mistaken thematic-catalogue entry / no surviving secure work",
+      "Hob.VIIb:4 traditionally Haydn but now attributed to Giovanni Battista Costanzi",
+      "Hob.VIIb:5 historically Haydn but attributed to David Popper"
+    ],
+    "sources": [
+      "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+      "https://imslp.org/wiki/List_of_works_by_Joseph_Haydn",
+      "https://www.henle.de/en/Violoncello-Concerto-C-major-Hob.-VIIb-1/HN-417",
+      "https://www.henle.de/en/Violoncello-Concerto-D-major-Hob.-VIIb-2/HN-418"
+    ]
   }
 }
