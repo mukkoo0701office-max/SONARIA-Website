@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Mozart",
     "stage": "string_quartet",
-    "last_work": "K.169",
-    "note": "Next K.170. K.160, K.168, K.169 are research_needed; existing SONARIA published inventory not fully reconciled."
+    "last_work": "K.172",
+    "note": "Next K.173; 3 candidate records K.170–172 added pending existing SONARIA catalog and Claude PDF/rights verification."
   },
   "items": [
     {
@@ -6181,6 +6181,162 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Verify score and all four parts (same edition where possible), page order, scan quality, score/part differences, Japanese redistribution rights and existing SONARIA catalog before any download/publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-string-quartet-no10-k170-breitkopf-1882",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.10 in C major",
+      "opus_catalog": "K.170",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.10%2C_K.170_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1882",
+        "editor": "Mozarts Werke, Serie XIV collective editors (Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee); exact editor not specified",
+        "plate": "W.A.M. 170",
+        "scope": "Complete score and historical parts; score/part edition matching requires verification",
+        "imslp_file_id": "64132",
+        "part_file_ids": {
+          "violin_1": "178855",
+          "violin_2": "178856",
+          "viola": "178857",
+          "cello": "178858"
+        },
+        "edition_comparison": "Historical Breitkopf edition preferred for further examination. Compare other scans/part editions and autograph where available. Modern NMA edition not cleared for Japanese republication."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.10%2C_K.170_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.10%2C_K.170_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP identifies K.170, C major, four movements, 2 violins viola cello; Breitkopf & Härtel 1882 Serie XIV plate W.A.M. 170. Score and parts IDs only when individually visible."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "historical_publisher_metadata_checked_pdf_uninspected",
+        "parts": "listed_not_pdf_inspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_id_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Check existing SONARIA inventory, exact score/part edition and all movements, source PDF integrity, legibility and Japan republication rights. Do not download or publish automatically.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-string-quartet-no11-k171-breitkopf-1882",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.11 in E-flat major",
+      "opus_catalog": "K.171",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.11_in_E-flat_major%2C_K.171_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1882",
+        "editor": "Mozarts Werke, Serie XIV collective editors (Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee); exact editor not specified",
+        "plate": "W.A.M. 171",
+        "scope": "Complete score and historical parts; score/part edition matching requires verification",
+        "imslp_file_id": null,
+        "part_file_ids": {
+          "violin_1": "01846",
+          "violin_2": null,
+          "viola": null,
+          "cello": null
+        },
+        "edition_comparison": "Historical Breitkopf edition preferred for further examination. Compare other scans/part editions and autograph where available. Modern NMA edition not cleared for Japanese republication."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.11_in_E-flat_major%2C_K.171_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.11_in_E-flat_major%2C_K.171_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP identifies K.171, E-flat major, four movements, 2 violins viola cello; Breitkopf & Härtel 1882 Serie XIV plate W.A.M. 171. Score and parts IDs only when individually visible."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "historical_publisher_metadata_checked_pdf_uninspected",
+        "parts": "listed_not_pdf_inspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_id_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Check existing SONARIA inventory, exact score/part edition and all movements, source PDF integrity, legibility and Japan republication rights. Do not download or publish automatically.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-string-quartet-no12-k172-breitkopf-1882",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.12 in B-flat major",
+      "opus_catalog": "K.172",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.12%2C_K.172_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1882",
+        "editor": "Mozarts Werke, Serie XIV collective editors (Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee); exact editor not specified",
+        "plate": "W.A.M. 172",
+        "scope": "Complete score and historical parts; score/part edition matching requires verification",
+        "imslp_file_id": "64134",
+        "part_file_ids": {
+          "violin_1": "01850",
+          "violin_2": "01851",
+          "viola": "01852",
+          "cello": "01853"
+        },
+        "edition_comparison": "Historical Breitkopf edition preferred for further examination. Compare other scans/part editions and autograph where available. Modern NMA edition not cleared for Japanese republication."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.12%2C_K.172_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.12%2C_K.172_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP identifies K.172, B-flat major, four movements, 2 violins viola cello; Breitkopf & Härtel 1882 Serie XIV plate W.A.M. 172. Score and parts IDs only when individually visible."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "historical_publisher_metadata_checked_pdf_uninspected",
+        "parts": "listed_not_pdf_inspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_id_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Check existing SONARIA inventory, exact score/part edition and all movements, source PDF integrity, legibility and Japan republication rights. Do not download or publish automatically.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
