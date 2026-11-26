@@ -730,6 +730,56 @@
       "date_checked": "2026-11-27",
       "last_amazon_search_at": "2026-11-27",
       "amazon_verification_status": "not_found"
+    },
+    {
+      "id": "haydn-henle-hn851",
+      "category": "printed_score",
+      "title": "The Seven Last Words of Christ for String Quartet Hob.XX/1B — Urtext parts",
+      "publisher_catalog": "HN 851",
+      "ismn": "979-0-2018-0851-2",
+      "pages": 80,
+      "format": "four instrument performance parts",
+      "source": "https://www.henle.de/en/The-Seven-Last-Words-of-Christ-Arrangement-for-String-Quartet-Hob.-XX-1B/HN-851",
+      "composer": "Haydn",
+      "publisher": "G. Henle Verlag",
+      "editor": "Christin Heitmann",
+      "work_ids": [
+        "Hob.XX/1B",
+        "Op.51",
+        "Hob.III:50-56"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "priority": "S",
+      "status": "pending_review",
+      "verification": "Official Henle publisher listing verifies title, Hob.XX/1B quartet arrangement, editor, format and ISMN. No confirmed Amazon.co.jp ASIN or individual listing. Must not generate tagged affiliate URL.",
+      "date_checked": "2026-11-27"
+    },
+    {
+      "id": "haydn-henle-hn9771",
+      "category": "pocket_score",
+      "title": "The Seven Last Words of Christ for String Quartet Hob.XX/1B — Urtext Study Score",
+      "publisher_catalog": "HN 9771",
+      "ismn": "979-0-2018-9771-4",
+      "pages": 52,
+      "format": "study score",
+      "source": "https://www.henle.de/The-Seven-Last-Words-of-Christ-Arrangement-for-String-Quartet-Hob.-XX-1B/HN-9771",
+      "composer": "Haydn",
+      "publisher": "G. Henle Verlag",
+      "editor": "Christin Heitmann",
+      "work_ids": [
+        "Hob.XX/1B",
+        "Op.51",
+        "Hob.III:50-56"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "priority": "S",
+      "status": "pending_review",
+      "verification": "Official Henle publisher listing verifies title, Hob.XX/1B quartet arrangement, editor, format and ISMN. No confirmed Amazon.co.jp ASIN or individual listing. Must not generate tagged affiliate URL.",
+      "date_checked": "2026-11-27"
     }
   ],
   "implementation_ready": 0,
@@ -737,18 +787,18 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Haydn HN215/HN9215: Amazon.co.jp direct catalog lookup",
-    "result": "Amazon.co.jp searches by catalogue number HN215/HN9215, ISMN 9790201802152 / 9790201892153 and Japanese/English edition title did not yield a trustworthy matching Amazon.co.jp individual detail page. Amazon Music results and third-party retail are not substitutes for verified Amazon bookstore pages. Both remain pending_review.",
-    "new_publisher_confirmed": 0,
+    "focus": "HN215 HN9215 Amazon listing recheck; verification of Henle's Seven Last Words for String Quartet Hob.XX/1B formats",
+    "result": "No exact Amazon.co.jp product detail/ASIN for HN215/9215 verified. Two distinct Henle original quartet arrangement editions HN851 performing parts and HN9771 study score confirmed on publisher primary pages with ISMN and editor Christin Heitmann; new research candidates held for Amazon verification.",
+    "new_publisher_confirmed": 2,
     "new_amazon_verified": 0,
-    "new_candidates": 0,
     "checked_candidates": [
       "haydn-henle-hn215",
       "haydn-henle-hn9215"
     ],
-    "next": "Try Amazon's official site search or permitted Associates link tools for exact print edition by publisher ISMN; verify ASIN and four-part versus study score format before constructing mukkoo-22 affiliate links.",
-    "sources": [
-      "https://www.henle.de/en/Haydn-Joseph/?order=name-asc&p=1&properties=06a08cf3dae645df844fdacd2b1e92b9"
-    ]
+    "source_urls": [
+      "https://www.henle.de/en/The-Seven-Last-Words-of-Christ-Arrangement-for-String-Quartet-Hob.-XX-1B/HN-851",
+      "https://www.henle.de/The-Seven-Last-Words-of-Christ-Arrangement-for-String-Quartet-Hob.-XX-1B/HN-9771"
+    ],
+    "next": "Check verified Amazon.co.jp exact item pages/ASIN by ISMN 9790201808512 or 9790201897714; keep parts HN851 and study score HN9771 separate. Do not infer stock/price from publisher sites."
   }
 }
