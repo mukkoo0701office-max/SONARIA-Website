@@ -1005,21 +1005,21 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Haydn historical Grützmacher cello-piano arrangement Nos.3-5 exact edition screening against Amazon.co.jp",
-    "result": "IMSLP confirms Breitkopf & Härtel historic V.A.482 Grützmacher cello-piano score/part pairs #141292/141293 (No.3), #141294/141295 (No.4), #141296/141297 (No.5). Broader web catalogs and University of Rochester historical library record corroborate score-and-parts format but did not identify any trustworthy currently sold exact matching individual Amazon.co.jp item, ASIN or ISMN. A Japanese music metadata listing for a Grützmacher-edited Haydn CELLO CONCERTO is unrelated and must not be misidentified as one of these cello SONATA transcriptions. New affiliate products 0; prefer no ads to false matches.",
+    "focus": "Grützmacher/Haydn historical 8 Cello and Piano arrangements Nos.6–8, original-versus-arrangement audit and Japan Amazon exact-item search",
+    "result": "IMSLP independently lists the original 1874–76 Breitkopf cello/piano arrangements with score+cello part Nos.6 #141298/#141299, No.7 #141300/#141301, No.8 #141302/#141303. Historical plate V.A.482 and shared anthology #141285/#141286 confirmed. Targeted open-web Amazon.co.jp searches identified only unrelated recordings, playlists and concerto products, with no exact purchasable printed edition product detail or ASIN for these 8 transcriptions. Do not add fabricated commercial editions or affiliate links. Future Mozart quartet research may identify separate authentic print products, but preserve existing publisher and Amazon verification rules.",
     "new_candidates": 0,
     "new_publisher_confirmed": 0,
     "new_amazon_verified": 0,
     "existing_records_enriched": 0,
     "checked_candidates": [
-      "Breitkopf & Härtel V.A.482 Haydn/Grützmacher cello-piano adaptations Nos.3-5 - historic score, no current Amazon item confirmed"
+      "Haydn/Grützmacher Cello and Piano transcriptions Nos.6–8 (Breitkopf V.A.482, historic, no contemporary Amazon edition verified)"
     ],
-    "source_urls": [
-      "https://imslp.org/wiki/Keyboard_Sonata_in_E-flat_major%2C_Hob.XVI%3A25_%28Haydn%2C_Joseph%29",
-      "https://imslp.org/wiki/Keyboard_Sonata_in_A_major%2C_Hob.XVI%3A26_%28Haydn%2C_Joseph%29",
-      "https://imslp.org/wiki/Keyboard_Sonata_in_A-flat_major%2C_Hob.XVI%3A43_%28Haydn%2C_Joseph%29",
-      "https://urresearch.rochester.edu/institutionalPublicationPublicView.action?institutionalItemId=16582&versionNumber=1"
+    "evidence_urls": [
+      "https://imslp.org/wiki/Keyboard_Sonata_in_C_major%2C_Hob.XVI%3A15_%28Haydn%2C_Joseph%29",
+      "https://imslp.org/wiki/String_Quartet_in_F_major%2C_Hob.III%3A82_%28Haydn%2C_Joseph%29",
+      "https://imslp.org/wiki/String_Quartet_in_G_major%2C_Hob.III%3A81_%28Haydn%2C_Joseph%29",
+      "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29"
     ],
-    "next": "If the exact Breitkopf historical collection is available as a verified contemporary retail item, identify exact publisher catalogue and Amazon.co.jp ASIN through authenticated Associates or official API; otherwise no affiliate listing for these cello adaptations. Next IMSLP individual source audit Nos.6-8."
+    "next": "No advertising links for the historic Grützmacher cello sonatas until exact Amazon.co.jp product detail/ASIN confirmed. Next authentic commercial score research follows Mozart string quartets starting K.80/73f; verify printed quartet score and four-part editions separately before recording Amazon candidates."
   }
 }
