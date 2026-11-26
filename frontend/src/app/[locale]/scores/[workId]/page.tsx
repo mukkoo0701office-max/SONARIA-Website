@@ -13,6 +13,7 @@ import { catalogLabel, composerLocales, usesRemotePdf, composerOf, getWork, isSa
 import type { Work } from "@/data/scores/types";
 import { pagePaths } from "@/data/site";
 import { isLocale, localizedPath, type Locale } from "@/lib/i18n";
+import { withBasePath } from "@/lib/paths";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
 
 // 作品詳細ページ。catalog.json の公開済み作品（承認済みの版があるもの）から自動で静的生成する。
@@ -168,7 +169,11 @@ export default async function WorkPage({ params }: Props) {
           {catalogText && <span className="ml-2 text-lg font-semibold text-muted">{catalogText}</span>}
         </h1>
         {work.title.original && work.title.original !== work.title[locale] && <p className="mt-1 text-sm text-muted" lang="und">{work.title.original}</p>}
-        <p className="mt-2 text-sm">
+        <p className="mt-2 flex items-center gap-2 text-sm">
+          {c.portrait && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={withBasePath(c.portrait.file)} width={36} height={48} alt={c.portrait.alt[locale]} className="aspect-[3/4] w-9 rounded border border-line object-cover" />
+          )}
           <Link href={composerPage} className="text-navy underline">
             {c.name[locale]}
           </Link>

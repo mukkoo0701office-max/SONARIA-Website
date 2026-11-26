@@ -1,5 +1,6 @@
 import rawCatalog from "./catalog.json";
 import rawComposers from "./composers.json";
+import rawPortraits from "./portraits.json";
 import { categoryDefs, MIN_CATEGORY_WORKS, type CategoryDef } from "./categories";
 import type { Catalog, Composer, Era, Part, Scoring, Work } from "./types";
 import type { Ensemble, MusicalForm, WorkSummary } from "@/data/works";
@@ -34,7 +35,28 @@ const ID_RE = /^[a-z0-9][a-z0-9-]{1,80}$/;
 // /scores/category/ と作品ページの URL がぶつからないよう、作品 ID に使えない語
 const RESERVED_IDS = new Set(["category", "composers", "work"]);
 
-const allComposers: Composer[] = demo ? demo.composers : composerMaster;
+// 肖像画（運営者が用意した画像）。frontend/public/composers/<作曲家ID>.<拡張子> に置き、portraits.json に出典・ライセンスを書く。
+// 出典とライセンスの無い画像は表示しない（記録を必須にする）
+type PortraitEntry = { id: string; file: string; source: string; license: string; author?: string };
+const portraitById = new Map((rawPortraits as PortraitEntry[]).filter((p) => p.source && p.license).map((p) => [p.id, p]));
+
+const allComposers: Composer[] = (demo ? demo.composers : composerMaster).map((c) => {
+  const p = portraitById.get(c.id);
+  if (!p) return c;
+  return {
+    ...c,
+    portrait: {
+      file: p.file,
+      // 実際の縦横比は画像ごとに違うため、表示側で 3:4 の枠に収める（レイアウトのずれを防ぐ）
+      width: 300,
+      height: 400,
+      alt: { ja: `${c.name.ja}の肖像`, en: `Portrait of ${c.name.en}` },
+      source: p.source,
+      license: p.license,
+      ...(p.author ? { author: p.author } : {}),
+    },
+  };
+});
 const composerById = new Map(allComposers.map((c) => [c.id, c]));
 
 // 表示する版の権利の状態。
