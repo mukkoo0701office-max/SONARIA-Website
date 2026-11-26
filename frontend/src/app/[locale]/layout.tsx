@@ -25,11 +25,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   // TODO: 本番ドメインが決まったら NEXT_PUBLIC_SITE_URL を設定し、canonical・hreflang を有効にする
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  // プレビュー（GitHub Pages）は検索エンジンに載せない
+  const isPreview = process.env.NEXT_PUBLIC_PREVIEW === "1";
 
   return {
     title: { default: dict.meta.siteTitle, template: `%s | ${dict.meta.siteTitle}` },
     description: dict.meta.siteDescription,
     ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
+    ...(isPreview ? { robots: { index: false, follow: false } } : {}),
   };
 }
 
