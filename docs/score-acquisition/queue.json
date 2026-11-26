@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "string_quartet",
-    "last_work": "Op.51 / Hob.III:50–56 (retrospective gap audit)",
-    "note": "Audit historical 83-count and authentic quartet corpus. Op.51 is ONE cycle, not seven independent quartets. Op.1 No.5 and Op.2 Nos.3/5 held as nonquartet reclassifications per Henle. Next check Op.0 Hob.II:6, Op.3 spurious attributions, and remaining missing works before violin sonatas."
+    "last_work": "Op.51 / Hob.III:50–56 (edition candidates identified)",
+    "note": "Op.51 is ONE cycle; Trautwein #106808 score plus Le Duc quartet parts #477583/#477584/#477585/#477582 candidate set requires PDF cross-edition audit. Next check Op.0 Hob.II:6 and early Op.1/2 genre misclassifications, then proceed violin sonatas after authentic corpus audit."
   },
   "items": [
     {
@@ -3602,16 +3602,17 @@
       "category": "string_quartet",
       "work_title": "The Seven Last Words of Christ — string quartet version",
       "opus_catalog": "Op.51; Hob.III:50–56; related orchestral Hob.XX:1",
-      "work_url": "https://imslp.org/wiki/S%C3%A4mmtliche_Quartette_%28Haydn%2C_Joseph%29",
+      "work_url": "https://imslp.org/wiki/Die_Worte_des_Erl%C3%B6sers_am_Kreuze%2C_Hob.III%3A50-56_%28Haydn%2C_Joseph%29",
       "edition": {
-        "publisher": "unknown; compare historic editions in IMSLP collection",
-        "publication_date": "unknown",
-        "editor": "unknown",
-        "scope": "Single cycle with introduction, seven sonatas, earthquake finale; quartet version only",
-        "imslp_file_id": null,
-        "edition_comparison": "Use IMSLP Sämmtliche Quartette and historical collection pages to identify a verifiable complete string quartet score and four parts. Avoid modern Henle critical edition (1958–2022) as presumed public domain. Confirm original quartet arrangement rather than orchestral or choral versions."
+        "publisher": "Trautwein (Berlin full score); Le Duc (Paris complete quartet parts); I. Pleyel (Paris historical alternative parts)",
+        "publication_date": "Trautwein c.1840–45; Le Duc 1788; Pleyel c.1820",
+        "editor": "Historical arranger uncertain / unidentified; not to claim autograph of quartet adaptation",
+        "scope": "One work: original orchestral-derived seven-part cycle plus introduction and earthquake finale; source labels must be verified across quartet score and parts",
+        "imslp_file_id": "106808",
+        "file_pages": 45,
+        "edition_comparison": "IMSLP quartet arrangement Trautwein complete score #106808 (45pp); Heckel alternate full score #889028 (79pp). Le Duc Paris 1788 complete color quartet parts bundle #472418 (48pp), individual Vn1 #477583 (10pp), Vn2 #477584 (10pp), Va #477585 (10pp), Vc #477582 (10pp); black/white bundle #472419 and separate #477588, #477589, #477590, #477587. Pleyel c.1820 parts #477573/477574/477575/477576 also possible. Compare score and parts bar-by-bar; independent historic editions may have different movement/repeat structure. Listed attribution of quartet arrangement is disputed on IMSLP; do not assume Haydn author/autograph."
       },
-      "edition_url": "https://imslp.org/wiki/S%C3%A4mmtliche_Quartette_%28Haydn%2C_Joseph%29",
+      "edition_url": "https://imslp.org/wiki/Die_Worte_des_Erl%C3%B6sers_am_Kreuze%2C_Hob.III%3A50-56_%28Haydn%2C_Joseph%29",
       "source_file_url": null,
       "score_parts": [
         "violin_1",
@@ -3632,22 +3633,67 @@
         {
           "url": "https://www.henle.de/media/96/aa/3c/1697725871/0205-1697725871-sync.pdf",
           "verified": "Henle critical preface cautions 83-quartet historical count includes seven sections of Op.51 counted separately, spurious Op.3, and nonquartet early works"
+        },
+        {
+          "url": "https://imslp.org/wiki/Die_Worte_des_Erl%C3%B6sers_am_Kreuze%2C_Hob.III%3A50-56_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP quartet arrangement section lists Trautwein full score #106808 (45pp), Heckel full score #889028 (79pp), Le Duc 1788 full color parts #472418 (48pp) and individual Vn1 #477583, Vn2 #477584, viola #477585, cello #477582. Notes explicitly question authorship or approval of quartet arrangement; candidates only, PDF pages uninspected."
         }
       ],
       "checklist": {
         "work_identity": "catalog_verified",
-        "edition": "specific_historical_edition_not_selected",
-        "parts": "unchecked",
+        "edition": "specific_score_and_part_metadata_identified_no_pdf_inspection",
+        "parts": "four_Le_Duc_parts_listed_uninspected",
         "pdf_integrity": "unchecked",
         "duplication": "unverified_existing_site_inventory_not_located",
         "rights": "unverified_japan_republication",
-        "publish": "not_approved"
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "unverified_cross_edition_match_pending",
+        "arrangement_authorship": "historically_disputed"
       },
       "rights_status": "unknown",
-      "notes": "Model as ONE Work with seven internal sonatas plus introduction and earthquake, not seven separate quartet works. Historic Hob.III:50–56 enumeration is a movement grouping; distinguish string-quartet adaptation from original orchestral/choral versions. Exact public-domain edition/file not yet verified.",
+      "notes": "Treat Op.51 as one multi-section cycle and 5 candidate PDF assets, not 7 independent quartets. IMSLP remarks quartet adaptation/authorship or approval are disputed; do not state that arrangement is definitively by Haydn. Existing printed materials are not necessarily identical between Trautwein and Le Duc. Check introductions, 7 sonatas, Earthquake ending, repeats, scan completeness, copyright, and Japanese re-use. Do not select modern urtext or orchestral arrangement as free quartet asset without independent review.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "106808",
+            "edition": "Trautwein c.1840–45",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_1": {
+            "imslp_file_id": "477583",
+            "edition": "Le Duc 1788",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_2": {
+            "imslp_file_id": "477584",
+            "edition": "Le Duc 1788",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "viola": {
+            "imslp_file_id": "477585",
+            "edition": "Le Duc 1788",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "477582",
+            "edition": "Le Duc 1788",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "historic_score_plus_distinct_parts_unverified",
+        "page_ranges_verified": false,
+        "complete_set_verified": false,
+        "rights_verified": false
+      }
     }
   ],
   "last_updated": "2026-11-27"
