@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "cello_sonata",
-    "last_work": "Grützmacher cello+piano transcriptions of historical Haydn Violin Sonatas Nos.1–2",
-    "note": "Next Grützmacher 8-work collection Nos.3–5; do not claim original Haydn cello sonatas exist or misfile Hob.VIIb concertos as sonatas. Cello score #141285 and part #141286 shared by all arrangements; each piece requires actual music/page verification and Japan rights approval."
+    "last_work": "Grützmacher cello+piano adaptations Nos.3–5 (after Hob.XVI:25/26/43)",
+    "note": "Next Grützmacher adaptations Nos.6–8. Individual cello score+part scan IDs located for Nos.3–5, but physical PDFs and Japan legal rights not inspected. No.5 transposed from source A-flat to G major; match music before publication."
   },
   "items": [
     {
@@ -5105,6 +5105,243 @@
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
+    },
+    {
+      "id": "haydn-arr-cello-piano-grutzmacher-sonata-no3",
+      "composer": "Joseph Haydn (musical original); Friedrich Grützmacher (cello-piano transcriber)",
+      "category": "cello_sonata_arrangement",
+      "work_title": "Cello and Piano Sonata arrangement No.3 in E-flat major (Grützmacher, after Hob.XVI:25)",
+      "opus_catalog": "Grützmacher cello adaptation of Haydn historical Violin Sonatas collection No.3; underlying Hob.XVI:25",
+      "original_work": {
+        "composer": "Joseph Haydn",
+        "catalog": "Hob.XVI:25",
+        "key": "E-flat major",
+        "instrumentation": "keyboard solo",
+        "relation": "Historical violin+piano sonata derived from keyboard original and then adapted for cello+piano by Grützmacher"
+      },
+      "arranger": "Friedrich Grützmacher (1832–1903)",
+      "arrangement_key": "E-flat major",
+      "work_url": "https://imslp.org/wiki/Keyboard_Sonata_in_E-flat_major%2C_Hob.XVI%3A25_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel, Leipzig",
+        "publication_date": "ca.1874–1876",
+        "editor": "Friedrich Grützmacher (arranger)",
+        "scope": "Individually scanned solo cello+piano adaptation No.3 of 8-work collection. Score and separate cello part; original piano version is not the cello arrangement.",
+        "imslp_file_id": "141292",
+        "file_pages": 10,
+        "edition_comparison": "IMSLP individual Cello and Piano (Grützmacher) section lists #141292 (10pp) complete score and #141293 (5pp) cello part. Collective compilation uses #141285 (96pp) score and #141286 (43pp) part; avoid duplicating the shared asset. Color cover #141287 (2pp). Breitkopf plate V.A.482, approximately 1874–76. Cello parts must be matched only with the Grützmacher cello-piano score, not Peters violin score or solo-keyboard original."
+      },
+      "edition_url": "https://imslp.org/wiki/Keyboard_Sonata_in_E-flat_major%2C_Hob.XVI%3A25_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "piano",
+        "cello"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "141292",
+            "edition": "Grützmacher/Breitkopf 1874–76",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "141293",
+            "edition": "Grützmacher/Breitkopf 1874–76",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "same_arranger_edition_by_IMSLP_metadata_not_music_compared",
+        "complete_set_verified": false,
+        "page_ranges_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Keyboard_Sonata_in_E-flat_major%2C_Hob.XVI%3A25_%28Haydn%2C_Joseph%29",
+          "verified": "Individual IMSLP cello+piano Grützmacher No.3: full score #141292 10pp, cello #141293 5pp, Breitkopf circa 1874–76 plate V.A.482. Related original Hob.XVI:25; PDF images not inspected."
+        },
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP historical 8-piece violin sonata anthology No.3 source: Hob.XVI:25, Grützmacher historical arrangement of same collection; not an original Haydn cello sonata."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_haydn_keyboard_and_grutzmacher_cello_arrangement_distinguished",
+        "edition": "breitkopf_1874_76_metadata_confirmed",
+        "parts": "separate_cello_part_verified_by_catalog_not_pdf",
+        "pdf_integrity": "unchecked",
+        "duplication": "individual_file_ids_available; compilation_shared_assets_not_to_duplicate",
+        "rights": "Japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "2_assets_found_but_not_pdf_verified"
+      },
+      "rights_status": "unknown",
+      "notes": "Do not list as original Haydn cello sonata.  Claude to compare each movement, 2-file score/part correspondence, print quality, scanning completeness and Japanese copyright. 8-work anthology is shared across works; do not duplicate PDFs. No download or publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-arr-cello-piano-grutzmacher-sonata-no4",
+      "composer": "Joseph Haydn (musical original); Friedrich Grützmacher (cello-piano transcriber)",
+      "category": "cello_sonata_arrangement",
+      "work_title": "Cello and Piano Sonata arrangement No.4 in A major (Grützmacher, after Hob.XVI:26)",
+      "opus_catalog": "Grützmacher cello adaptation of Haydn historical Violin Sonatas collection No.4; underlying Hob.XVI:26",
+      "original_work": {
+        "composer": "Joseph Haydn",
+        "catalog": "Hob.XVI:26",
+        "key": "A major",
+        "instrumentation": "keyboard solo",
+        "relation": "Historical violin+piano sonata derived from keyboard original and then adapted for cello+piano by Grützmacher"
+      },
+      "arranger": "Friedrich Grützmacher (1832–1903)",
+      "arrangement_key": "A major",
+      "work_url": "https://imslp.org/wiki/Keyboard_Sonata_in_A_major%2C_Hob.XVI%3A26_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel, Leipzig",
+        "publication_date": "ca.1874–1876",
+        "editor": "Friedrich Grützmacher (arranger)",
+        "scope": "Individually scanned solo cello+piano adaptation No.4 of 8-work collection. Score and separate cello part; original piano version is not the cello arrangement.",
+        "imslp_file_id": "141294",
+        "file_pages": 10,
+        "edition_comparison": "IMSLP individual Cello and Piano (Grützmacher) section lists #141294 (10pp) complete score and #141295 (5pp) cello part. Collective compilation uses #141285 (96pp) score and #141286 (43pp) part; avoid duplicating the shared asset. Color cover #141287 (2pp). Breitkopf plate V.A.482, approximately 1874–76. Cello parts must be matched only with the Grützmacher cello-piano score, not Peters violin score or solo-keyboard original."
+      },
+      "edition_url": "https://imslp.org/wiki/Keyboard_Sonata_in_A_major%2C_Hob.XVI%3A26_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "piano",
+        "cello"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "141294",
+            "edition": "Grützmacher/Breitkopf 1874–76",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "141295",
+            "edition": "Grützmacher/Breitkopf 1874–76",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "same_arranger_edition_by_IMSLP_metadata_not_music_compared",
+        "complete_set_verified": false,
+        "page_ranges_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Keyboard_Sonata_in_A_major%2C_Hob.XVI%3A26_%28Haydn%2C_Joseph%29",
+          "verified": "Individual IMSLP cello+piano Grützmacher No.4: full score #141294 10pp, cello #141295 5pp, Breitkopf circa 1874–76 plate V.A.482. Related original Hob.XVI:26; PDF images not inspected."
+        },
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP historical 8-piece violin sonata anthology No.4 source: Hob.XVI:26, Grützmacher historical arrangement of same collection; not an original Haydn cello sonata."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_haydn_keyboard_and_grutzmacher_cello_arrangement_distinguished",
+        "edition": "breitkopf_1874_76_metadata_confirmed",
+        "parts": "separate_cello_part_verified_by_catalog_not_pdf",
+        "pdf_integrity": "unchecked",
+        "duplication": "individual_file_ids_available; compilation_shared_assets_not_to_duplicate",
+        "rights": "Japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "2_assets_found_but_not_pdf_verified"
+      },
+      "rights_status": "unknown",
+      "notes": "Do not list as original Haydn cello sonata.  Claude to compare each movement, 2-file score/part correspondence, print quality, scanning completeness and Japanese copyright. 8-work anthology is shared across works; do not duplicate PDFs. No download or publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-arr-cello-piano-grutzmacher-sonata-no5",
+      "composer": "Joseph Haydn (musical original); Friedrich Grützmacher (cello-piano transcriber)",
+      "category": "cello_sonata_arrangement",
+      "work_title": "Cello and Piano Sonata arrangement No.5 in G major (Grützmacher, after Hob.XVI:43)",
+      "opus_catalog": "Grützmacher cello adaptation of Haydn historical Violin Sonatas collection No.5; underlying Hob.XVI:43",
+      "original_work": {
+        "composer": "Joseph Haydn",
+        "catalog": "Hob.XVI:43",
+        "key": "A-flat major",
+        "instrumentation": "keyboard solo",
+        "relation": "Historical violin+piano sonata derived from keyboard original and then adapted for cello+piano by Grützmacher"
+      },
+      "arranger": "Friedrich Grützmacher (1832–1903)",
+      "arrangement_key": "G major",
+      "work_url": "https://imslp.org/wiki/Keyboard_Sonata_in_A-flat_major%2C_Hob.XVI%3A43_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel, Leipzig",
+        "publication_date": "ca.1874–1876",
+        "editor": "Friedrich Grützmacher (arranger)",
+        "scope": "Individually scanned solo cello+piano adaptation No.5 of 8-work collection. Score and separate cello part; original piano version is not the cello arrangement.",
+        "imslp_file_id": "141296",
+        "file_pages": 14,
+        "edition_comparison": "IMSLP individual Cello and Piano (Grützmacher) section lists #141296 (14pp) complete score and #141297 (7pp) cello part. Collective compilation uses #141285 (96pp) score and #141286 (43pp) part; avoid duplicating the shared asset. Color cover #141287 (2pp). Breitkopf plate V.A.482, approximately 1874–76. Cello parts must be matched only with the Grützmacher cello-piano score, not Peters violin score or solo-keyboard original."
+      },
+      "edition_url": "https://imslp.org/wiki/Keyboard_Sonata_in_A-flat_major%2C_Hob.XVI%3A43_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "piano",
+        "cello"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "141296",
+            "edition": "Grützmacher/Breitkopf 1874–76",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "141297",
+            "edition": "Grützmacher/Breitkopf 1874–76",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "same_arranger_edition_by_IMSLP_metadata_not_music_compared",
+        "complete_set_verified": false,
+        "page_ranges_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Keyboard_Sonata_in_A-flat_major%2C_Hob.XVI%3A43_%28Haydn%2C_Joseph%29",
+          "verified": "Individual IMSLP cello+piano Grützmacher No.5: full score #141296 14pp, cello #141297 7pp, Breitkopf circa 1874–76 plate V.A.482. Related original Hob.XVI:43; PDF images not inspected."
+        },
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP historical 8-piece violin sonata anthology No.5 source: Hob.XVI:43, Grützmacher historical arrangement of same collection; not an original Haydn cello sonata."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_haydn_keyboard_and_grutzmacher_cello_arrangement_distinguished",
+        "edition": "breitkopf_1874_76_metadata_confirmed",
+        "parts": "separate_cello_part_verified_by_catalog_not_pdf",
+        "pdf_integrity": "unchecked",
+        "duplication": "individual_file_ids_available; compilation_shared_assets_not_to_duplicate",
+        "rights": "Japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "2_assets_found_but_not_pdf_verified"
+      },
+      "rights_status": "unknown",
+      "notes": "Do not list as original Haydn cello sonata. Grützmacher arrangement is in G major; keyboard Hob.XVI:43 original in A-flat major—must inspect to confirm pitches/transposition. Claude to compare each movement, 2-file score/part correspondence, print quality, scanning completeness and Japanese copyright. 8-work anthology is shared across works; do not duplicate PDFs. No download or publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
     }
   ],
   "last_updated": "2026-11-27",
@@ -5179,6 +5416,37 @@
       "https://imslp.org/wiki/List_of_works_by_Joseph_Haydn",
       "https://www.henle.de/en/Violoncello-Concerto-C-major-Hob.-VIIb-1/HN-417",
       "https://www.henle.de/en/Violoncello-Concerto-D-major-Hob.-VIIb-2/HN-418"
-    ]
+    ],
+    "grutzmacher_per_work_checked": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "new_individual_file_pairs": [
+      {
+        "number": 3,
+        "source": "Hob.XVI:25",
+        "score": "141292",
+        "part": "141293",
+        "source_url": "https://imslp.org/wiki/Keyboard_Sonata_in_E-flat_major%2C_Hob.XVI%3A25_%28Haydn%2C_Joseph%29"
+      },
+      {
+        "number": 4,
+        "source": "Hob.XVI:26",
+        "score": "141294",
+        "part": "141295",
+        "source_url": "https://imslp.org/wiki/Keyboard_Sonata_in_A_major%2C_Hob.XVI%3A26_%28Haydn%2C_Joseph%29"
+      },
+      {
+        "number": 5,
+        "source": "Hob.XVI:43",
+        "score": "141296",
+        "part": "141297",
+        "source_url": "https://imslp.org/wiki/Keyboard_Sonata_in_A-flat_major%2C_Hob.XVI%3A43_%28Haydn%2C_Joseph%29"
+      }
+    ],
+    "rights_status": "unknown"
   }
 }
