@@ -249,9 +249,23 @@
       "asin": null,
       "isbn": null,
       "source": "https://www.henle.de/en/String-Quartets-Book-IV-op.-20-Sun-Quartets/HN-9208",
-      "verification": "出版社公式ページでISMN・編者・収録6作品とスタディスコアを確認。Amazon.co.jp販売・ASIN未確認",
+      "verification": "Official Henle catalogue confirms the precise printed format, editor, ISMN and six Hoboken works; Amazon.co.jp direct item / ASIN remains unverified.",
       "status": "pending_review",
-      "priority": "S"
+      "priority": "S",
+      "product_format": "study score (pocket score), not playing parts",
+      "work_hob_ids": [
+        "Hob.III:31",
+        "Hob.III:32",
+        "Hob.III:33",
+        "Hob.III:34",
+        "Hob.III:35",
+        "Hob.III:36"
+      ],
+      "pages": 115,
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
+      "last_amazon_search_at": "2026-11-27",
+      "last_research_at": "2026-11-27",
+      "verification_notes": "2026-11-27 targeted exact ISMN, HN catalog and site:amazon.co.jp/dp/ searches found no trustworthy matching Amazon.co.jp product detail URL or ASIN. Verified publisher edition/format and Hoboken work mapping via official Henle. Do not infer Amazon ASIN from ISMN or attach affiliate tag without Amazon verification."
     },
     {
       "id": "haydn-henle-hn206",
@@ -259,8 +273,8 @@
       "title": "String Quartets Book II op. 9 (Urtext parts edition)",
       "publisher_catalog": "HN 206",
       "ismn": "979-0-2018-0206-0",
-      "source": "https://www.henle.de/cn/String-Quartets-Book-II-op.-9/HN-206",
-      "verification": "G. Henle publisher page confirms Op.9 Nos.1–6, Georg Feder editor, parts edition HN206 and ISMN. Amazon.co.jp product detail page / ASIN not confirmed.",
+      "source": "https://www.henle.de/String-Quartets-Book-II-op.-9/HN-206",
+      "verification": "Official Henle catalogue confirms the precise printed format, editor, ISMN and six Hoboken works; Amazon.co.jp direct item / ASIN remains unverified.",
       "composer": "Haydn",
       "publisher": "G. Henle Verlag",
       "editor": "Georg Feder",
@@ -277,7 +291,20 @@
       "isbn": null,
       "priority": "S",
       "status": "pending_review",
-      "date_checked": "2026-11-27"
+      "date_checked": "2026-11-27",
+      "product_format": "four instrumental playing parts (Vn1, Vn2, Va, Vc); not pocket score",
+      "work_hob_ids": [
+        "Hob.III:19",
+        "Hob.III:20",
+        "Hob.III:21",
+        "Hob.III:22",
+        "Hob.III:23",
+        "Hob.III:24"
+      ],
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
+      "last_amazon_search_at": "2026-11-27",
+      "last_research_at": "2026-11-27",
+      "verification_notes": "2026-11-27 targeted exact ISMN, HN catalog and site:amazon.co.jp/dp/ searches found no trustworthy matching Amazon.co.jp product detail URL or ASIN. Verified publisher edition/format and Hoboken work mapping via official Henle. Do not infer Amazon ASIN from ISMN or attach affiliate tag without Amazon verification."
     },
     {
       "id": "haydn-henle-hn9206",
@@ -286,7 +313,7 @@
       "publisher_catalog": "HN 9206",
       "ismn": "979-0-2018-9206-1",
       "source": "https://www.henle.de/en/String-Quartets-Book-II-op.-9/HN-9206",
-      "verification": "G. Henle publisher page confirms Georg Feder editor, Op.9 Nos.1–6, 78pp study score, HN9206 and ISMN. Amazon.co.jp product detail page / ASIN not confirmed.",
+      "verification": "Official Henle catalogue confirms the precise printed format, editor, ISMN and six Hoboken works; Amazon.co.jp direct item / ASIN remains unverified.",
       "composer": "Haydn",
       "publisher": "G. Henle Verlag",
       "editor": "Georg Feder",
@@ -303,7 +330,21 @@
       "isbn": null,
       "priority": "S",
       "status": "pending_review",
-      "date_checked": "2026-11-27"
+      "date_checked": "2026-11-27",
+      "product_format": "study score (pocket score), not playing parts",
+      "work_hob_ids": [
+        "Hob.III:19",
+        "Hob.III:20",
+        "Hob.III:21",
+        "Hob.III:22",
+        "Hob.III:23",
+        "Hob.III:24"
+      ],
+      "pages": 78,
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
+      "last_amazon_search_at": "2026-11-27",
+      "last_research_at": "2026-11-27",
+      "verification_notes": "2026-11-27 targeted exact ISMN, HN catalog and site:amazon.co.jp/dp/ searches found no trustworthy matching Amazon.co.jp product detail URL or ASIN. Verified publisher edition/format and Hoboken work mapping via official Henle. Do not infer Amazon ASIN from ISMN or attach affiliate tag without Amazon verification."
     },
     {
       "id": "haydn-henle-hn207",
@@ -1076,25 +1117,22 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Recheck requested Haydn Henle HN205/HN208/HN9205/HN9216/HN211 on Amazon.co.jp, direct /dp and ISMN exact search",
-    "result": "All five remain publisher-confirmed but no independently verifiable Amazon.co.jp product-detail page and ASIN found. Both targeted site:amazon.co.jp/dp/ HN catalogue-number searches and broader Japanese Amazon+ISMN searches failed to return matching individual product listings. Broad results are unrelated Haydn keyboard sonata publications and audio. Zero affiliate links generated; statuses remain pending_review. Queue retains 33 unique items.",
+    "focus": "Haydn Henle HN9208/HN206/HN9206 exact Amazon.co.jp product page search and edition-to-work cross-check",
+    "result": "Reconfirmed official Henle ISMN and exact 6-work Hoboken mappings for HN9208 (Op.20 Hob.III:31-36, study score 115 pages), HN206 (Op.9 Hob.III:19-24, performance parts), HN9206 (same Op.9 works, study score 78 pages). HN206/HN9206 are distinct retail formats; HN9208 complements HN208 parts. Exact site:amazon.co.jp/dp/ and ISMN searches yielded no verified Amazon.co.jp ASIN/product detail. All 3 remain pending_review; no tagged URLs generated. Queue 33 unique products.",
     "checked_candidates": [
-      "haydn-henle-hn205",
-      "haydn-henle-hn208",
-      "haydn-henle-hn9205",
-      "haydn-henle-hn9216",
-      "haydn-henle-hn211"
+      "haydn-henle-hn9208",
+      "haydn-henle-hn206",
+      "haydn-henle-hn9206"
     ],
     "new_candidates": 0,
     "new_publisher_confirmed": 0,
     "new_amazon_verified": 0,
     "source_urls": [
-      "https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-205",
-      "https://www.henle.de/jp/String-Quartets-Book-IV-op.-20-Sun-Quartets/HN-208",
-      "https://www.henle.de/String-Quartets-Book-I-Early-String-Quartets/HN-9205",
-      "https://www.henle.de/jp/The-String-Quartets-12-Volumes-in-a-Slipcase/HN-9216",
-      "https://www.henle.de/en/String-Quartets-Book-VII-op.-54-and-55-Tost-Quartets/HN-211"
+      "https://www.henle.de/en/String-Quartets-Book-IV-op.-20-Sun-Quartets/HN-9208",
+      "https://www.henle.de/String-Quartets-Book-II-op.-9/HN-206",
+      "https://www.henle.de/en/String-Quartets-Book-II-op.-9/HN-9206",
+      "https://www.haydn-institut.de/index.php/gesamtausgabe/praktische-ausgaben/97-prakt-reihe-xii"
     ],
-    "next": "Continue with HN9208/HN206/HN9206 or use authenticated Amazon Associates link builder/authorized PA API to validate exact Amazon Japan ASIN; do not infer ASIN from ISMN, EAN or ISBN. Keep two ad slots max, disclose PR, and never expose price, stock, ratings or images without permitted integration."
+    "next": "Continue remaining Haydn HN207/HN9207 and Op.33 pair HN209/HN9209. Prefer verified Amazon Associates item detail / PA API for ASIN; if not available retain pending_review. Claude must only display approved_for_implementation records, max 2 ads per score page, label PR, and not display price, stock or images without authorized integration."
   }
 }
