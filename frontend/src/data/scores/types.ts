@@ -111,6 +111,7 @@ export type Edition = {
     status: RightsStatus;
     basis: string; // 承認の根拠（作曲者・校訂者の没年、出典のライセンスなど）
     license?: string | null; // 表示が必要なライセンス（例: CC BY-SA 4.0）
+    evidence?: string[]; // 権利確認の判断材料（検査で見つかった著作権表記・出版社など）。画面には出さない
     approvedBy?: string;
     approvedAt?: string;
   };

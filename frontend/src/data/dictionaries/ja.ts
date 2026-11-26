@@ -495,11 +495,15 @@ export const ja: Dictionary = {
       qMovements: "何楽章ありますか？",
       aMovements: (title, n) => `「${title}」は${n}つの楽章で構成されています。`,
       qFree: "楽譜は無料で入手できますか？",
-      aFree: (title, files) => `はい。SONARIA では、公開の権利を確認した「${title}」の楽譜 PDF（${files}ファイル）を無料でダウンロードできます。`,
+      aFree: (title, files, confirmed) =>
+        confirmed
+          ? `はい。SONARIA では、公開の権利を確認した「${title}」の楽譜 PDF（${files}ファイル）を無料でダウンロードできます。`
+          : `はい。SONARIA では「${title}」の楽譜 PDF（${files}ファイル）を無料でダウンロードできます。`,
       qParts: "スコアとパート譜はありますか？",
       aParts: (hasScore, parts) => `${hasScore ? "スコアがあります。" : "スコアは収録していません。"}${parts ? `収録しているパート譜: ${parts}。` : ""}`,
       scoresTitle: "楽譜（PDF）",
       scoresLead: "プレビューを開くまで PDF は読み込みません。スマートフォンでは「ブラウザで開く」が便利です。",
+      scoresLeadRemote: "各ファイルの1ページ目を表示しています。PDF はダウンロードしてご覧ください。",
       publisher: "出版社",
       year: "出版年",
       editor: "校訂・編集",

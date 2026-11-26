@@ -93,7 +93,7 @@ export default async function WorkPage({ params }: Props) {
     { q: tw.qComposer(work.title[locale]), a: tw.aComposer(work.title[locale], c.name[locale], work.composed ?? null) },
     { q: tw.qInstrumentation, a: tw.aInstrumentation(work.title[locale], instrumentation(t, work)) },
     ...(work.movements && work.movements.length > 1 ? [{ q: tw.qMovements, a: tw.aMovements(work.title[locale], work.movements.length) }] : []),
-    { q: tw.qFree, a: tw.aFree(work.title[locale], fileCount) },
+    { q: tw.qFree, a: tw.aFree(work.title[locale], fileCount, work.editions.every((e) => e.rights.status === "approved")) },
     { q: tw.qParts, a: tw.aParts(hasScore, partNames.join(sep)) },
   ];
 
@@ -191,7 +191,7 @@ export default async function WorkPage({ params }: Props) {
         <h2 id="scores" className="text-lg font-bold">
           {tw.scoresTitle}
         </h2>
-        <p className="mt-1 text-xs text-muted">{tw.scoresLead}</p>
+        <p className="mt-1 text-xs text-muted">{usesRemotePdf ? tw.scoresLeadRemote : tw.scoresLead}</p>
         {work.editions.map((e) => (
           <div key={e.id} className="mt-4">
             <h3 className="text-[15px] font-bold">{e.label[locale]}</h3>
@@ -213,7 +213,7 @@ export default async function WorkPage({ params }: Props) {
                 {e.source.note && <> – {e.source.note}</>}
               </Meta>
               {e.rights.license && <Meta term={tw.license}>{e.rights.license}</Meta>}
-              <Meta term={tw.rightsBasis}>{e.rights.basis}</Meta>
+              {e.rights.status === "approved" && <Meta term={tw.rightsBasis}>{e.rights.basis}</Meta>}
             </dl>
             <ul className="mt-3 grid gap-2.5">
               {[...e.assets]

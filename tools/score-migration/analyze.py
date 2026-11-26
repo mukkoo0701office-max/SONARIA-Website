@@ -430,8 +430,9 @@ def main() -> int:
             {
                 "id": "old-site",
                 "label": {"ja": "旧サイト掲載の楽譜", "en": "Score from the former SONARIA site"},
-                "source": {"type": "other", "note": "旧サイト（向山弦楽器塾）の無料楽譜ライブラリから移行"},
-                "rights": {"status": "pending", "basis": "権利確認前（運営者が公開前に確認する）。判断材料: " + (" | ".join(notes)[:600] if notes else "記録なし")},
+                "source": {"type": "other", "note": "旧サイトの無料楽譜ライブラリから移行"},
+                # 判断材料（OCR の抜粋を含む）は画面に出さず evidence に残す。運営者が権利を確認するときに使う
+                "rights": {"status": "pending", "basis": "権利確認前（運営者が公開前に確認する）", "evidence": notes[:20]},
                 "assets": out_assets,
                 "oldSiteUrl": page_url,
             }

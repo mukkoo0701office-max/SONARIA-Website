@@ -235,11 +235,12 @@ export type Dictionary = {
       qMovements: string;
       aMovements: (title: string, n: number) => string;
       qFree: string;
-      aFree: (title: string, files: number) => string;
+      aFree: (title: string, files: number, rightsConfirmed: boolean) => string;
       qParts: string;
       aParts: (hasScore: boolean, parts: string) => string;
       scoresTitle: string;
       scoresLead: string;
+      scoresLeadRemote: string;
       publisher: string;
       year: string;
       editor: string;
