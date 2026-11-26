@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "violin_sonata",
-    "last_work": "Historical Violin Sonatas collection No.3 E-flat / after Hob.XVI:25",
-    "note": "Next anthology Nos.4–5 (after keyboard sonatas Hob.XVI:26 and Hob.XVI:43); continue distinguish adaptations from original Haydn violin sonatas. Peters score #479521 and violin #479522 shared for Nos.1–8; PDF page ranges and legal rights not reviewed."
+    "last_work": "Historical Violin Sonatas collection No.5 G major (arr. after A-flat major Hob.XVI:43)",
+    "note": "Next Nos.6–8, distinguish arrangements from other instrumental works. Source discrepancy for No.6: IMSLP calls original Hob.II:11, current Peters EP190 lists keyboard Hob.XVI:15; retain both source statements and resolve before any publication. All eight-sonata PDFs and rights unreviewed."
   },
   "items": [
     {
@@ -4110,6 +4110,162 @@
       },
       "rights_status": "unknown",
       "notes": "CATALOGUE ACCURACY: Do not list as Haydn original violin-piano composition. Publish only as explicitly labeled historical arrangement if source and rights are verified. Individual original source is a keyboard sonata; original piano score without violin part is not the adapted violin-piano set. Claude to inspect correct page ranges, all movements, violin relevance/optional status, engraving and copyright. No PDF download or approval.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-arr-violin-sonata-no4-after-hobxvi26",
+      "composer": "Joseph Haydn (keyboard original); historical violin/piano adaptation author unresolved",
+      "category": "violin_sonata_arrangement",
+      "work_title": "Violin Sonatas collection No.4 in A major (arranged from keyboard sonata Hob.XVI:26)",
+      "opus_catalog": "Violin Sonatas collection No.4 (arr. after Hob.XVI:26)",
+      "original_work": {
+        "composer": "Joseph Haydn",
+        "catalog": "Hob.XVI:26",
+        "key": "A major",
+        "instrumentation": "keyboard solo",
+        "relation": "historical arrangement, not distinct original violin/piano sonata"
+      },
+      "arrangement_key": "A major",
+      "work_url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "C.F. Peters (historical violin-piano anthology); Henry Litolff's Verlag (alternate)",
+        "publication_date": "Peters n.d., plate 6604; Litolff ca.1870",
+        "editor": "Ferdinand David (Peters); arranger not established",
+        "scope": "Eight historical sonatas, shared anthology assets; No.4 and No.5 are respectively adapted from Hob.XVI:26 and XVI:43",
+        "imslp_file_id": "479521",
+        "file_pages": 93,
+        "edition_comparison": "Peters/Ferdinand David 8-work complete score #479521 (93pp) with violin part #479522 (34pp), or combined #244000 (127pp). Alternative Litolff score #344937 and violin part #344938. Current Peters retailer lists printed EP190, ISMN 9790300700755, 136pp as score plus separate violin part, but exact relation between current printing and historical scan must be checked. The original keyboard source cannot replace the violin+piano arrangement's piano score."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "piano",
+        "violin"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "479521",
+            "edition": "C.F. Peters / Ferdinand David anthology",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin": {
+            "imslp_file_id": "479522",
+            "edition": "C.F. Peters / Ferdinand David anthology",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "same_peters_anthology_metadata_only",
+        "page_ranges_verified": false,
+        "complete_set_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP General Information 8 arrangements: No.4 is A major after Hob.XVI:26 originally A major; original keyboard sonata, not independent original violin sonata. Complete Peters score #479521 and violin part #479522 listed; PDFs uninspected."
+        },
+        {
+          "url": "https://www.editionpeterspublications.us/products/haydn-8-violin-sonatas-peters",
+          "verified": "Current Edition Peters publication EP190 ISMN 9790300700755 lists all eight adapted sonatas including A major from Hob.XVI:26 and G major from A-flat major Hob.XVI:43, including piano score and separate violin part."
+        }
+      ],
+      "checklist": {
+        "work_identity": "keyboard_original_vs_transposed_violin_arrangement_explicit",
+        "edition": "publisher_metadata_confirmed_pdf_uninspected",
+        "parts": "piano_score_and_separate_violin_part_listed_not_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "eight_work_Peters_files_shared_do_not_duplicate",
+        "rights": "unverified_Japan_republication",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "unverified_piano_score_and_violin_part"
+      },
+      "rights_status": "unknown",
+      "notes": "No.4 must be labeled historical arrangement from keyboard Hob.XVI and distinct from original violin+piano. No.4 retains A major of Hob.XVI:26. Claude inspect correct movement and page ranges, violin part fit, score, printing, and Japan rights. No download or publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-arr-violin-sonata-no5-after-hobxvi43",
+      "composer": "Joseph Haydn (keyboard original); historical violin/piano adaptation author unresolved",
+      "category": "violin_sonata_arrangement",
+      "work_title": "Violin Sonatas collection No.5 in G major (arranged from keyboard sonata Hob.XVI:43)",
+      "opus_catalog": "Violin Sonatas collection No.5 (arr. after Hob.XVI:43)",
+      "original_work": {
+        "composer": "Joseph Haydn",
+        "catalog": "Hob.XVI:43",
+        "key": "A-flat major",
+        "instrumentation": "keyboard solo",
+        "relation": "historical arrangement, not distinct original violin/piano sonata"
+      },
+      "arrangement_key": "G major",
+      "work_url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "C.F. Peters (historical violin-piano anthology); Henry Litolff's Verlag (alternate)",
+        "publication_date": "Peters n.d., plate 6604; Litolff ca.1870",
+        "editor": "Ferdinand David (Peters); arranger not established",
+        "scope": "Eight historical sonatas, shared anthology assets; No.4 and No.5 are respectively adapted from Hob.XVI:26 and XVI:43",
+        "imslp_file_id": "479521",
+        "file_pages": 93,
+        "edition_comparison": "Peters/Ferdinand David 8-work complete score #479521 (93pp) with violin part #479522 (34pp), or combined #244000 (127pp). Alternative Litolff score #344937 and violin part #344938. Current Peters retailer lists printed EP190, ISMN 9790300700755, 136pp as score plus separate violin part, but exact relation between current printing and historical scan must be checked. The original keyboard source cannot replace the violin+piano arrangement's piano score."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "piano",
+        "violin"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "479521",
+            "edition": "C.F. Peters / Ferdinand David anthology",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin": {
+            "imslp_file_id": "479522",
+            "edition": "C.F. Peters / Ferdinand David anthology",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "same_peters_anthology_metadata_only",
+        "page_ranges_verified": false,
+        "complete_set_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP General Information 8 arrangements: No.5 is G major after Hob.XVI:43 originally A-flat major; original keyboard sonata, not independent original violin sonata. Complete Peters score #479521 and violin part #479522 listed; PDFs uninspected."
+        },
+        {
+          "url": "https://www.editionpeterspublications.us/products/haydn-8-violin-sonatas-peters",
+          "verified": "Current Edition Peters publication EP190 ISMN 9790300700755 lists all eight adapted sonatas including A major from Hob.XVI:26 and G major from A-flat major Hob.XVI:43, including piano score and separate violin part."
+        }
+      ],
+      "checklist": {
+        "work_identity": "keyboard_original_vs_transposed_violin_arrangement_explicit",
+        "edition": "publisher_metadata_confirmed_pdf_uninspected",
+        "parts": "piano_score_and_separate_violin_part_listed_not_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "eight_work_Peters_files_shared_do_not_duplicate",
+        "rights": "unverified_Japan_republication",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "unverified_piano_score_and_violin_part"
+      },
+      "rights_status": "unknown",
+      "notes": "No.5 must be labeled historical arrangement from keyboard Hob.XVI and distinct from original violin+piano. No.5 has G-major arrangement versus A-flat-major keyboard original; transposition should be visually confirmed in Peters printed music. Claude inspect correct movement and page ranges, violin part fit, score, printing, and Japan rights. No download or publication.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
