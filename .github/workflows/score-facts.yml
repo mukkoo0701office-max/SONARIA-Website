@@ -25,7 +25,7 @@ jobs:
         run: |
           mkdir -p /tmp/out
           if git ls-remote --exit-code --heads origin ci/score-facts > /dev/null 2>&1; then
-            git fetch -q --depth=1 origin ci/score-facts && git show FETCH_HEAD:imslp_facts_v2.json > /tmp/out/imslp_facts_v2.json
+            git fetch -q --depth=1 origin ci/score-facts && (git show FETCH_HEAD:imslp_facts_v2.json > /tmp/out/imslp_facts_v2.json 2>/dev/null || rm -f /tmp/out/imslp_facts_v2.json)
           fi
       - run: python tools/score-migration/imslp_facts.py --repo . --out /tmp/out/imslp_facts_v2.json
       - name: Save to ci/score-facts
