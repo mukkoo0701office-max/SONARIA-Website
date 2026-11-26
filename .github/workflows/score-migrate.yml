@@ -21,7 +21,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -r tools/score-migration/requirements.txt
+      - run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils > /dev/null
+          pip install -r tools/score-migration/requirements.txt
       - name: Migrate approved scores
         run: python tools/score-migration/migrate.py --approvals tools/score-migration/approvals.json --repo .
       - name: Commit to the current branch (not main)

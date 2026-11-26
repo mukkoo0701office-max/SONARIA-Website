@@ -6,7 +6,7 @@ import Chip from "@/components/ui/Chip";
 import Pagination from "@/components/ui/Pagination";
 import SelectField from "@/components/ui/SelectField";
 import { getDictionary } from "@/data/dictionaries";
-import { hasPublishedWorks, publishedWorks, toSummary } from "@/data/scores/catalog";
+import { isSampleCatalog, workSummaries } from "@/data/scores/catalog";
 import { ensembles, eras, musicalForms, works as demoWorks, type Ensemble, type Era, type MusicalForm } from "@/data/works";
 import type { Locale } from "@/lib/i18n";
 
@@ -15,9 +15,11 @@ import type { Locale } from "@/lib/i18n";
 
 const PER_PAGE = 5;
 
-// 権利確認済みの作品が 1 件でもあればカタログを使う。まだ無いあいだは説明用のデモデータ（画面に明記）
-const works = hasPublishedWorks ? publishedWorks.map(toSummary) : demoWorks;
-const isDemoData = !hasPublishedWorks;
+// 権利確認済みの作品が 1 件でもあればカタログを使う。まだ無いあいだは説明用のデモデータ（画面に明記）。
+// 実在しない楽譜を本番の検索結果に出さないため、本番でカタログが空なら結果も空にする
+const isPreviewBuild = process.env.NEXT_PUBLIC_PREVIEW === "1";
+const works = workSummaries.length > 0 ? workSummaries : isPreviewBuild ? demoWorks : [];
+const isDemoData = workSummaries.length === 0 || isSampleCatalog;
 
 type PlayersFilter = "all" | "1" | "2" | "3" | "4" | "5plus";
 type SortKey = "title" | "composer" | "pdfCount";
@@ -95,7 +97,7 @@ export default function ScoreSearch({ locale }: { locale: Locale }) {
     const q = filters.q.trim().toLocaleLowerCase();
     return works
       .filter((w) => {
-        const text = [w.title.ja, w.title.en, w.composer.ja, w.composer.en].join(" ").toLocaleLowerCase();
+        const text = [w.title.ja, w.title.en, w.composer.ja, w.composer.en, w.searchText ?? ""].join(" ").toLocaleLowerCase();
         if (q && !text.includes(q)) return false;
         if (filters.players !== "all") {
           if (filters.players === "5plus" ? w.players < 5 : w.players !== Number(filters.players)) return false;

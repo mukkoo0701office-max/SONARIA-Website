@@ -45,7 +45,7 @@ export default function WorkCard({ work, locale, t, open, favorite, onToggleOpen
       <div className="my-3 flex flex-wrap items-center gap-1.5">
         <Tag>{work.players >= 5 ? t.playersOptions["5plus"] : t.playersCount(work.players)}</Tag>
         <Tag>{t.ensembleOptions[work.ensemble]}</Tag>
-        <Tag>{t.formOptions[work.form]}</Tag>
+        {work.form && <Tag>{t.formOptions[work.form]}</Tag>}
         <Tag>
           {work.pdfCount} {t.pdf}
         </Tag>
@@ -54,7 +54,7 @@ export default function WorkCard({ work, locale, t, open, favorite, onToggleOpen
       {work.slug ? (
         // 権利確認済みの実データ: 作品詳細ページ（PDF のダウンロードはそこで行う）
         <Link
-          href={`${localizedPath(locale, "/scores/work/")}?id=${encodeURIComponent(work.slug)}`}
+          href={localizedPath(work.hasEnglish ? locale : "ja", `/scores/${work.slug}/`)}
           className="block w-full rounded-button border border-navy bg-navy p-[11px] text-center text-[13px] text-white transition-[filter] hover:brightness-95"
         >
           {t.view}

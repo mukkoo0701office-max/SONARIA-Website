@@ -9,7 +9,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
   const copy = getDictionary(locale).placeholders.performance;
-  return { title: copy.title, description: copy.lead };
+  // 準備中のページは検索エンジンに載せない
+  return { title: copy.title, description: copy.lead, robots: { index: false, follow: true } };
 }
 
 // 仮ページ（準備中）

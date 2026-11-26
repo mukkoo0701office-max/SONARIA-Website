@@ -1,0 +1,38 @@
+import Link from "next/link";
+import type { Dictionary } from "@/data/dictionaries/types";
+import { pagePaths } from "@/data/site";
+import { localizedPath, type Locale } from "@/lib/i18n";
+
+type Props = {
+  locale: Locale;
+  t: Dictionary["library"]["bowing"];
+  // 申し込み時に引き継ぐ情報（同じ内容を再入力しなくて済むようにする）
+  context: { title: string; composer: string; workId: string; parts: string[]; assets: string[] };
+};
+
+// 運指・ボウイング付けサービス（SONARIA の有料サービス）への導線。広告ではないので PR 表記は付けない。
+// TODO: 申し込みフォーム（PR #7 の /bowing/apply/）が公開されたら、遷移先をフォームに変え、
+//       クエリ（title / composer / work / part / asset）を初期値として読み込む
+export default function BowingBanner({ locale, t, context }: Props) {
+  const params = new URLSearchParams({ title: context.title, composer: context.composer, work: context.workId });
+  for (const p of context.parts) params.append("part", p);
+  for (const a of context.assets) params.append("asset", a);
+  return (
+    <aside className="my-6 rounded-card border border-navy bg-subtle p-[17px]">
+      <h3 className="text-base font-bold text-navy">{t.title}</h3>
+      <p className="mt-1.5 text-[13px]">{t.lead}</p>
+      <ul className="mt-2 grid gap-0.5 text-[13px]">
+        {t.prices.map((p) => (
+          <li key={p}>・{p}</li>
+        ))}
+      </ul>
+      <Link
+        href={`${localizedPath(locale, pagePaths.bowing)}?${params.toString()}`}
+        className="mt-3 inline-block rounded-button border border-navy bg-navy px-4 py-2.5 text-[13px] font-semibold text-white hover:brightness-95"
+      >
+        {t.cta}
+      </Link>
+      <p className="mt-2 text-xs text-muted">{t.note}</p>
+    </aside>
+  );
+}
