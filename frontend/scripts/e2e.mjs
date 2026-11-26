@@ -96,9 +96,12 @@ async function run(viewport, label) {
   check(`${label}: confirm screen shows plan with price`, (await page.getByText("単発レッスン（60分 6,000円）").count()) === 1);
   await page.screenshot({ path: `${outDir}/${label}-lesson-confirm.png`, fullPage: true });
 
-  // 二重送信: ボタンを素早く 2 回押す
+  // 二重送信: 同じ瞬間に 2 回押す（画面のボタン無効化が間に合わない状況。サーバー側の二重送信防止で 1 件になること）
   const submitBtn = page.getByRole("button", { name: "この内容で申し込む" });
-  await Promise.all([submitBtn.click(), submitBtn.click({ force: true }).catch(() => {})]);
+  await submitBtn.evaluate((el) => {
+    el.click();
+    el.click();
+  });
   await page.getByText("お申し込みを受け付けました").waitFor({ timeout: 20000 });
   const receipt = (await page.locator("p.font-mono").first().textContent())?.trim();
   check(`${label}: lesson done screen shows receipt`, /^SON-\d{6}-\d{5}$/.test(receipt ?? ""), receipt);
