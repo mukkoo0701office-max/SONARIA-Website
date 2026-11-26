@@ -1,0 +1,37 @@
+# 作品情報（調性・作曲年・楽章など）を IMSLP から取得し、ci/score-facts ブランチに保存する（人が確認してから catalog に反映）
+name: Score facts (IMSLP)
+
+on:
+  push:
+    branches: [feature/score-migration]
+    paths:
+      - "tools/score-migration/imslp_facts.py"
+      - ".github/workflows/score-facts.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  facts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q -r tools/score-migration/requirements.txt
+      - name: Restore previous results
+        run: |
+          mkdir -p /tmp/out
+          if git ls-remote --exit-code --heads origin ci/score-facts > /dev/null 2>&1; then
+            git fetch -q --depth=1 origin ci/score-facts && git show FETCH_HEAD:imslp_facts.json > /tmp/out/imslp_facts.json
+          fi
+      - run: python tools/score-migration/imslp_facts.py --repo . --out /tmp/out/imslp_facts.json
+      - name: Save to ci/score-facts
+        if: always()
+        run: |
+          [ -f /tmp/out/imslp_facts.json ] || exit 0
+          cd /tmp/out && git init -q && git checkout -q -b ci/score-facts && git add imslp_facts.json
+          git -c user.name="github-actions" -c user.email="github-actions@users.noreply.github.com" commit -q -m "imslp facts"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" ci/score-facts
