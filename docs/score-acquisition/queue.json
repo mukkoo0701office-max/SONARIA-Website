@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Mozart",
     "stage": "string_quartet",
-    "last_work": "K.172",
-    "note": "Next K.173; 3 candidate records K.170–172 added pending existing SONARIA catalog and Claude PDF/rights verification."
+    "last_work": "K.421/417b",
+    "note": "Next K.428/421b. New K.173, K.387, K.421 candidates await Claude PDF inspection, site duplication and Japan rights checks."
   },
   "items": [
     {
@@ -6337,6 +6337,168 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Check existing SONARIA inventory, exact score/part edition and all movements, source PDF integrity, legibility and Japan republication rights. Do not download or publish automatically.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-string-quartet-no13-k173-breitkopf-1882",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.13 in D minor",
+      "opus_catalog": "K.173",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.13_in_D_minor%2C_K.173_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1882",
+        "editor": "Mozarts Werke Serie XIV editors (exact editor for this work not specified)",
+        "scope": "Complete score (historical edition); separate historical parts require edition reconciliation",
+        "plate": "W.A.M. 173",
+        "imslp_file_id": "64135",
+        "part_file_ids": {
+          "violin_1": "01854",
+          "violin_2": "01855",
+          "viola": "01856",
+          "cello": "01857"
+        },
+        "parts_publisher": "C.F. Peters, ca.1890, plate 8285",
+        "parts_editor": "Andreas Moser; Hugo Becker",
+        "edition_comparison": "Historical Breitkopf score versus C.F. Peters, ca.1890, plate 8285 parts. NMA includes first version of last set (#481982); distinguish variant from primary score. PDF legibility and completeness not checked."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.13_in_D_minor%2C_K.173_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.13_in_D_minor%2C_K.173_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP page lists String Quartet No.13, K.173, D minor, 4 movements, 2 violins/viola/cello, Breitkopf 1882 score #64135, C.F. Peters, ca.1890, plate 8285 four-part set #01854, #01855, #01856, #01857. PDF contents not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_and_editor_metadata_checked_pdf_uninspected",
+        "parts": "all_four_identifiers_listed_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. NMA includes first version of last set (#481982); distinguish variant from primary score. Confirm SONARIA catalog duplication, page quality, all movements, editorial matching, rights in Japan and PDF checksums. Do not download or publish automatically.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-string-quartet-no14-k387-breitkopf-1882",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.14 in G major",
+      "opus_catalog": "K.387",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.14_K.387_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1882",
+        "editor": "Mozarts Werke Serie XIV editors (exact editor for this work not specified)",
+        "scope": "Complete score (historical edition); separate historical parts require edition reconciliation",
+        "plate": "W.A.M. 387",
+        "imslp_file_id": "64136",
+        "part_file_ids": {
+          "violin_1": "33149",
+          "violin_2": "33150",
+          "viola": "33151",
+          "cello": "33152"
+        },
+        "parts_publisher": "Artaria & Co., Vienna, ca.1785, plate 59 (first edition)",
+        "parts_editor": "First edition",
+        "edition_comparison": "Historical Breitkopf score versus Artaria & Co., Vienna, ca.1785, plate 59 (first edition) parts. Compare early Artaria parts with Breitkopf score; alternative Peters/Moser-Becker #01858-01861. PDF legibility and completeness not checked."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.14_K.387_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.14_K.387_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP page lists String Quartet No.14, K.387, G major, 4 movements, 2 violins/viola/cello, Breitkopf 1882 score #64136, Artaria & Co., Vienna, ca.1785, plate 59 (first edition) four-part set #33149, #33150, #33151, #33152. PDF contents not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_and_editor_metadata_checked_pdf_uninspected",
+        "parts": "all_four_identifiers_listed_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Compare early Artaria parts with Breitkopf score; alternative Peters/Moser-Becker #01858-01861. Confirm SONARIA catalog duplication, page quality, all movements, editorial matching, rights in Japan and PDF checksums. Do not download or publish automatically.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-string-quartet-no15-k421-breitkopf-1882",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.15 in D minor",
+      "opus_catalog": "K.421/417b",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.15%2C_K.421_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1882",
+        "editor": "Mozarts Werke Serie XIV editors (exact editor for this work not specified)",
+        "scope": "Complete score (historical edition); separate historical parts require edition reconciliation",
+        "plate": "W.A.M. 421",
+        "imslp_file_id": "64137",
+        "part_file_ids": {
+          "violin_1": "33153",
+          "violin_2": "33154",
+          "viola": "33155",
+          "cello": "33156"
+        },
+        "parts_publisher": "Artaria & Co., Vienna, ca.1785, plate 59 (first edition)",
+        "parts_editor": "First edition",
+        "edition_comparison": "Historical Breitkopf score versus Artaria & Co., Vienna, ca.1785, plate 59 (first edition) parts. Compare early Artaria parts with Breitkopf score; alternative Peters/Moser-Becker #01862-01865. PDF legibility and completeness not checked."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.15%2C_K.421_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.15%2C_K.421_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP page lists String Quartet No.15, K.421/417b, D minor, 4 movements, 2 violins/viola/cello, Breitkopf 1882 score #64137, Artaria & Co., Vienna, ca.1785, plate 59 (first edition) four-part set #33153, #33154, #33155, #33156. PDF contents not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_and_editor_metadata_checked_pdf_uninspected",
+        "parts": "all_four_identifiers_listed_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Compare early Artaria parts with Breitkopf score; alternative Peters/Moser-Becker #01862-01865. Confirm SONARIA catalog duplication, page quality, all movements, editorial matching, rights in Japan and PDF checksums. Do not download or publish automatically.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
