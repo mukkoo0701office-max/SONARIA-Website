@@ -21,3 +21,7 @@ Thumbs.db
 
 # ログ
 *.log
+
+# Supabase CLI のローカル作業ファイル
+supabase/.temp/
+supabase/.branches/
