@@ -71,27 +71,18 @@ export type Teacher = {
 // 本番に載せる講師（審査済み・公開済み）。現在は 0 件
 export const publishedTeachers: readonly Teacher[] = [];
 
-const demoIntro = {
-  ja: "これは表示確認用の架空データです。実在の講師ではありません。",
-  en: "This is fictional sample data for layout testing. Not a real teacher.",
-};
+// 表示確認用のデモデータ（src/data/teachers.demo.ts）。
+// プレビューのビルドでだけ読み込む。条件はビルド時に定数（next.config.ts の env）になるため、
+// 本番ビルドではこの require 自体が消え、デモデータはバンドルに含まれない（CI で確認している）。
+const demoTeachers: readonly Teacher[] =
+  process.env.NEXT_PUBLIC_PREVIEW === "1"
+    ? // eslint-disable-next-line @typescript-eslint/no-require-imports
+      (require("./teachers.demo") as { demoTeachers: readonly Teacher[] }).demoTeachers
+    : [];
 
-const demoTeachers: readonly Teacher[] = [
-  { id: "demo-a", isDemo: true, displayName: { ja: "デモ講師 A", en: "Demo Teacher A" }, nameKana: "でもこうし えー", nameRomaji: "demo teacher a", instruments: ["violin", "viola"], prefectureCode: "13", station: { ja: "新宿", en: "Shinjuku" }, travel: { mode: "transit", minutes: 30 }, formats: ["in_person", "visiting"], audiences: ["beginner", "adult"], gender: "female", education: { ja: "音楽大学 卒業（自己申告）", en: "Music university graduate (self-declared)", verified: false }, intro: demoIntro, externalLinks: [] },
-  { id: "demo-b", isDemo: true, displayName: { ja: "デモ講師 B", en: "Demo Teacher B" }, nameKana: "でもこうし びー", nameRomaji: "demo teacher b", instruments: ["piano"], prefectureCode: "14", station: { ja: "横浜", en: "Yokohama" }, travel: null, formats: ["in_person", "online"], audiences: ["children", "exam"], gender: "male", education: { ja: "音楽大学 在学中（自己申告）", en: "Current music university student (self-declared)", verified: false }, intro: demoIntro, externalLinks: [] },
-  { id: "demo-c", isDemo: true, displayName: { ja: "デモ講師 C", en: "Demo Teacher C" }, nameKana: "でもこうし しー", nameRomaji: "demo teacher c", instruments: ["cello"], prefectureCode: "27", station: { ja: "梅田", en: "Umeda" }, travel: { mode: "transit", minutes: 45 }, formats: ["visiting"], audiences: ["adult"], gender: "undisclosed", education: { ja: "音楽大学 卒業（自己申告）", en: "Music university graduate (self-declared)", verified: false }, intro: demoIntro, externalLinks: [] },
-  { id: "demo-d", isDemo: true, displayName: { ja: "デモ講師 D", en: "Demo Teacher D" }, nameKana: "でもこうし でぃー", nameRomaji: "demo teacher d", instruments: ["flute"], prefectureCode: "23", station: { ja: "名古屋", en: "Nagoya" }, travel: null, formats: ["online"], audiences: ["beginner", "adult"], gender: "female", education: { ja: "音楽大学 卒業（自己申告）", en: "Music university graduate (self-declared)", verified: false }, intro: demoIntro, externalLinks: [] },
-  { id: "demo-e", isDemo: true, displayName: { ja: "デモ講師 E", en: "Demo Teacher E" }, nameKana: "でもこうし いー", nameRomaji: "demo teacher e", instruments: ["trumpet"], prefectureCode: "40", station: { ja: "博多", en: "Hakata" }, travel: { mode: "transit", minutes: 20 }, formats: ["in_person", "visiting"], audiences: ["children", "beginner"], gender: "male", education: { ja: "音楽大学 在学中（自己申告）", en: "Current music university student (self-declared)", verified: false }, intro: demoIntro, externalLinks: [] },
-  { id: "demo-f", isDemo: true, displayName: { ja: "デモ講師 F", en: "Demo Teacher F" }, nameKana: "でもこうし えふ", nameRomaji: "demo teacher f", instruments: ["violin"], prefectureCode: "13", station: { ja: "吉祥寺", en: "Kichijoji" }, travel: { mode: "transit", minutes: 40 }, formats: ["in_person", "online"], audiences: ["exam", "children"], gender: "other", education: { ja: "音楽大学 卒業（自己申告）", en: "Music university graduate (self-declared)", verified: false }, intro: demoIntro, externalLinks: [] },
-  { id: "demo-g", isDemo: true, displayName: { ja: "デモ講師 G", en: "Demo Teacher G" }, nameKana: "でもこうし じー", nameRomaji: "demo teacher g", instruments: ["clarinet", "bassoon"], prefectureCode: "26", station: { ja: "京都", en: "Kyoto" }, travel: null, formats: ["in_person"], audiences: ["adult"], gender: "undisclosed", education: { ja: "音楽大学 卒業（自己申告）", en: "Music university graduate (self-declared)", verified: false }, intro: demoIntro, externalLinks: [] },
-  { id: "demo-h", isDemo: true, displayName: { ja: "デモ講師 H", en: "Demo Teacher H" }, nameKana: "でもこうし えいち", nameRomaji: "demo teacher h", instruments: ["horn", "tuba"], prefectureCode: "11", station: { ja: "大宮", en: "Omiya" }, travel: { mode: "transit", minutes: 60 }, formats: ["visiting", "online"], audiences: ["beginner", "exam"], gender: "female", education: { ja: "音楽大学 在学中（自己申告）", en: "Current music university student (self-declared)", verified: false }, intro: demoIntro, externalLinks: [] },
-];
-
-// 画面で使う講師一覧。プレビューのときだけデモデータを使う。
-// 環境変数をここで直接比較するのは、本番ビルドで条件が定数（false）に置き換わり、デモデータがバンドルから除かれるようにするため
-const usesDemo = process.env.NEXT_PUBLIC_PREVIEW === "1";
-export const teachers: readonly Teacher[] = usesDemo ? [...publishedTeachers, ...demoTeachers] : publishedTeachers;
-export const showsDemoTeachers = usesDemo;
+// 画面で使う講師一覧
+export const teachers: readonly Teacher[] = [...publishedTeachers, ...demoTeachers];
+export const showsDemoTeachers = demoTeachers.length > 0;
 
 export function findTeacher(id: string): Teacher | undefined {
   return teachers.find((t) => t.id === id);

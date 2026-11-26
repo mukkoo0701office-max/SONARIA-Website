@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
   basePath,
   trailingSlash: true,
   images: { unoptimized: true },
+  // 未設定でも必ず値を持たせ、ビルド時に定数として埋め込む（本番ビルドでデモデータを除くため）
+  env: {
+    NEXT_PUBLIC_PREVIEW: process.env.NEXT_PUBLIC_PREVIEW ?? "0",
+  },
 };
 
 export default nextConfig;
