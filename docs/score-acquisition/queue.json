@@ -37,9 +37,9 @@
   ],
   "cursor": {
     "composer": "Haydn",
-    "stage": "string_quartet",
-    "last_work": "Op.1 No.0 / Hob.II:6 (early authentic quartet recovered)",
-    "note": "The main early historical omissions are addressed. Op.1 No.5 and Op.2 Nos.3/5 held as non-original quartet genres, Op.3 assigned to Hoffstetter. Next verify remaining Hob.III:D3 or other doubtful quartet candidates and compare valid corpus; then progress to Haydn violin sonatas. All PDF/rights checks pending."
+    "stage": "violin_sonata",
+    "last_work": "Violin Sonata No.1 G major / Op.70 (Hob.XV:32 relation)",
+    "note": "Hob.III:D3 recorded with same-source manuscript score and parts pending authenticity, quality and rights review. Violin Sonatas collection eight works mostly transcriptions; prioritize one potential original G major sonata and separately classify Nos.2–8. Next investigate historical arrangements No.2–3 only with explicit arrangement labeling, then other authentic violin-viola duos Hob.VI if appropriate. Do not mark quartet corpus legally complete."
   },
   "items": [
     {
@@ -3808,6 +3808,167 @@
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
+    },
+    {
+      "id": "haydn-divertimento-hobiii-d3-manuscript-quartet",
+      "composer": "Joseph Haydn (IMSLP attribution; authenticity not independently established)",
+      "category": "string_quartet",
+      "work_title": "Divertimento in D major for two violins, viola and cello (five movements)",
+      "opus_catalog": "Hob.III:D3",
+      "work_url": "https://imslp.org/wiki/Divertimento_in_D_major%2C_Hob.III%3AD3_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Undated manuscript copied by Balthasar Hegedüs (score and parts); Schott 1955 Hans Erdmann edition EU-only",
+        "publication_date": "Manuscript dated by IMSLP to between 1760 and 1802; Schott 1955 modern alternative",
+        "editor": "Balthasar Hegedüs (copyist); Hans Erdmann for Schott 1955",
+        "scope": "5 movements: Theme and 5 Variations, Minuet/Trio, Andante, Minuet/Trio, Presto",
+        "imslp_file_id": "843016",
+        "file_pages": 12,
+        "edition_comparison": "Basel UBH kr IV 154-2 manuscript score #843016 12pp; Basel UBH kr IV 154-1 manuscript parts Vn1 #843014 6pp, Vn2 #843015 4pp, Viola #843012 4pp, Cello #843013 4pp (double bass #843011 optional alternative, not substitute without review). Schott 1955 Hans Erdmann Vn1 #306278 9pp, Vn2 #306420 7pp, Va #306421 7pp, Vc #306422 7pp EU-tagged; do not assume safe for Japan."
+      },
+      "edition_url": "https://imslp.org/wiki/Divertimento_in_D_major%2C_Hob.III%3AD3_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "843016",
+            "edition": "Basel manuscript Hegedüs",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_1": {
+            "imslp_file_id": "843014",
+            "edition": "Basel manuscript Hegedüs",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_2": {
+            "imslp_file_id": "843015",
+            "edition": "Basel manuscript Hegedüs",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "viola": {
+            "imslp_file_id": "843012",
+            "edition": "Basel manuscript Hegedüs",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "843013",
+            "edition": "Basel manuscript Hegedüs",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "manuscript_score_and_parts_separate_shelfmarks_not_verified_bar_by_bar",
+        "complete_set_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Divertimento_in_D_major%2C_Hob.III%3AD3_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP lists five movements for 2 violins viola cello and Basel manuscripts #843016 score; #843014/843015/843012/843013 four separate parts, with optional double bass #843011. Schott 1955 EU-tagged parts #306278/306420/306421/306422. PDF not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "catalog_and_instrumentation_verified_authenticity_unresolved",
+        "edition": "manuscript_metadata_checked_pdf_uninspected",
+        "parts": "four_manuscript_parts_identified_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "site_inventory_unverified",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "unverified_5_manuscript_assets"
+      },
+      "rights_status": "unknown",
+      "notes": "Catalogued as separate Hob.III:D3 early five-movement Divertimento (NOT Op.1 No.0 Hob.II:6). IMSLP attributes to Haydn but authenticity beyond listing needs specialist verification. Score manuscript shelfmark UBH kr IV 154-2 differs from part shelfmark 154-1; check notes, performance compatibility and completeness, rights and scan quality. Do not use 1955 editorial parts by default or publish without approval.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-violin-sonata-g-hobxv32-op70",
+      "composer": "Joseph Haydn (attribution discussed by modern scholarship)",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata No.1 in G major (published as Op.70; related to Hob.XV:32)",
+      "opus_catalog": "Op.70; after Hob.XV:32 (see scholarly attribution notes)",
+      "work_url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "C.F. Peters, Leipzig (historical score and violin part), Henry Litolff's Verlag alternative",
+        "publication_date": "Peters undated plate 6604; Litolff circa 1870 plates 2131–2138",
+        "editor": "Ferdinand David (Peters); Litolff editorial credit not verified",
+        "scope": "Collection of eight published violin-and-piano sonatas; violin sonata No.1 in G is the only one identified by IMSLP as likely originally composed for this duo, though connection to piano trio Hob.XV:32 needs scholarly evaluation",
+        "imslp_file_id": "479521",
+        "file_pages": 93,
+        "edition_comparison": "Peters/Ferdinand David all-eight complete score #479521 (93pp) and complete violin part #479522 (34pp), alternative combined score+violin #244000 (127pp). Litolff complete score #344937 (98pp) violin part #344938 (34pp). Both are multi-work bundles, so identify No.1 page ranges and confirm the piano+violin score includes correct part and edition. Exclude 2–8 as assumed original compositions; mostly arrangements of Haydn keyboard, trio, divertimento, quartet works."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "479521",
+            "edition": "Peters Ferdinand David",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin": {
+            "imslp_file_id": "479522",
+            "edition": "Peters Ferdinand David",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "piano": {
+            "imslp_file_id": "479521",
+            "edition": "Peters score contains keyboard staff",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "same_collected_edition_source_metadata_only",
+        "page_ranges_verified": false,
+        "complete_set_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP authentic-composition note says No.1 only of eight violin/piano pieces believed written for this medium, published as Op.70; notes other 7 arrangements, No.1 after piano trio Hob.XV:32. Peters complete score #479521 and violin part #479522, alternative combined #244000."
+        },
+        {
+          "url": "https://www.henle.de/en/Violin-Sonata-G-major-Hob.-XV-32/HN-437",
+          "verified": "Henle HN437 Urtext describes uncertain Haydn violin-sonata corpus authorship, mentions G major Hob.XV:32 may be the only original violin sonata, and sells violin-piano edition."
+        }
+      ],
+      "checklist": {
+        "work_identity": "originality_and_relation_to_HobXV32_needs_scholarly_review",
+        "edition": "historical_edition_metadata_checked",
+        "parts": "violin_part_plus_piano_score_listed_not_inspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "site_inventory_unverified",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "unverified_score_and_violin_part"
+      },
+      "rights_status": "unknown",
+      "notes": "Do not assume all eight historical Violin Sonatas are original Haydn violin-piano compositions. No.1 G major Op.70 / Hob.XV:32 relation scholarly contested/complex: label and review before publication. Multi-sonata Peters PDF needs No.1 page ranges, violin-piano correspondence, rights, legibility and scan checks. No downloads or approval.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
     }
   ],
   "last_updated": "2026-11-27",
@@ -3832,5 +3993,14 @@
       "actual SONARIA installed score assets",
       "other spurious or doubtful catalogue entries"
     ]
+  },
+  "violin_sonata_repertoire_audit": {
+    "date": "2026-11-27",
+    "source": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+    "source_identifies_eight": 8,
+    "only_likely_original_number": 1,
+    "other_numbers_classification": "No.2-5 based on keyboard sonatas Hob.XVI:24,25,26,43; No.6 based on divertimento Hob.II:11; Nos.7-8 based on Op.77 string quartets Hob.III:82,81",
+    "status": "source_metadata_checked_not_published",
+    "notes": "Eight-source collection is not eight independent original Haydn sonatas; distinguish original performance repertoire from historical arrangements. Future review may add arrangements under separate categorization, not original sonatas."
   }
 }
