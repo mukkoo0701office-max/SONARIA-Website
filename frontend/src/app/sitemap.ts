@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
-import { categories, composerLocales, publishedComposers, workLocales, works } from "@/data/scores/catalog";
-import { MIN_CATEGORY_WORKS } from "@/data/scores/categories";
+import { categories, categoryLocales, composerLocales, publishedComposers, workLocales, works } from "@/data/scores/catalog";
 import { libraryPaths } from "@/data/scores/paths";
 import { pagePaths, type PageKey } from "@/data/site";
 import { locales, type Locale } from "@/lib/i18n";
@@ -35,9 +34,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const w of works) add(libraryPaths.work(w.id), workLocales(w), w.updatedAt);
   if (publishedComposers.length > 0) add(libraryPaths.composers, locales);
   for (const c of publishedComposers) add(libraryPaths.composer(c.id), composerLocales(c));
-  for (const cat of categories) {
-    const en = cat.works.filter((w) => workLocales(w).includes("en")).length >= MIN_CATEGORY_WORKS;
-    add(libraryPaths.category(cat.id), en ? ["ja", "en"] : ["ja"]);
-  }
+  for (const cat of categories) add(libraryPaths.category(cat.id), categoryLocales(cat.id));
   return entries;
 }

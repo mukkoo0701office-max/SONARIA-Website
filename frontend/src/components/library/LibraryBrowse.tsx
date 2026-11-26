@@ -1,7 +1,7 @@
 import Link from "next/link";
 import WorkList from "@/components/library/WorkList";
 import { getDictionary } from "@/data/dictionaries";
-import { categories, composerLocales, featuredWorks, newestWorks, publishedComposers, worksByComposer } from "@/data/scores/catalog";
+import { categories, categoryLocales, composerLocales, featuredWorks, newestWorks, publishedComposers, worksByComposer } from "@/data/scores/catalog";
 import { libraryPaths } from "@/data/scores/paths";
 import { localizedPath, type Locale } from "@/lib/i18n";
 
@@ -51,7 +51,7 @@ export default function LibraryBrowse({ locale }: { locale: Locale }) {
           <ul className="flex flex-wrap gap-2">
             {categories.map((c) => (
               <li key={c.id}>
-                <Link href={localizedPath(locale, libraryPaths.category(c.id))} className={chip}>
+                <Link href={localizedPath(categoryLocales(c.id).includes(locale) ? locale : "ja", libraryPaths.category(c.id))} className={chip}>
                   {c.name[locale]} <span className="text-muted">({c.works.length})</span>
                 </Link>
               </li>

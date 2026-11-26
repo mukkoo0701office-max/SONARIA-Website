@@ -112,6 +112,13 @@ export const categories: (CategoryDef & { works: Work[] })[] = (() => {
   return out;
 })();
 
+/** カテゴリページがある言語。英語ページは、英語ページのある作品が MIN_CATEGORY_WORKS 件以上あるときだけ */
+export function categoryLocales(id: string): Locale[] {
+  const cat = categories.find((c) => c.id === id);
+  if (!cat) return [];
+  return cat.works.filter((w) => workLocales(w).includes("en")).length >= MIN_CATEGORY_WORKS ? ["ja", "en"] : ["ja"];
+}
+
 export function getCategory(id: string) {
   return categories.find((c) => c.id === id);
 }

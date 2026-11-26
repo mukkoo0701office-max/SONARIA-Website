@@ -6,11 +6,10 @@ import WorkList, { workHref } from "@/components/library/WorkList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import JsonLd from "@/components/seo/JsonLd";
 import { getDictionary } from "@/data/dictionaries";
-import { categories, getCategory, workLocales } from "@/data/scores/catalog";
-import { MIN_CATEGORY_WORKS } from "@/data/scores/categories";
+import { categories, categoryLocales, getCategory } from "@/data/scores/catalog";
 import { libraryPaths } from "@/data/scores/paths";
 import { pagePaths } from "@/data/site";
-import { isLocale, localizedPath, type Locale } from "@/lib/i18n";
+import { isLocale, localizedPath } from "@/lib/i18n";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
 
 // 編成別・曲種別のカテゴリページ（catalog.ts の categories から自動生成）。
@@ -21,13 +20,6 @@ type Props = { params: Promise<Params> };
 
 export const dynamicParams = false;
 const NONE = "_none";
-
-function categoryLocales(id: string): Locale[] {
-  const cat = getCategory(id);
-  if (!cat) return [];
-  const enWorks = cat.works.filter((w) => workLocales(w).includes("en")).length;
-  return enWorks >= MIN_CATEGORY_WORKS ? ["ja", "en"] : ["ja"];
-}
 
 export function generateStaticParams({ params }: { params: { locale: string } }): { categoryId: string }[] {
   if (!isLocale(params.locale)) return [{ categoryId: NONE }];
