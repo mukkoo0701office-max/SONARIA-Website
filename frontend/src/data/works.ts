@@ -8,7 +8,7 @@
 
 export type Ensemble = "strings" | "piano" | "orchestra" | "mixed";
 export type MusicalForm = "chamber" | "sonata" | "concerto" | "symphony" | "suite";
-export type Era = "baroque" | "classical" | "romantic";
+export type Era = "baroque" | "classical" | "romantic" | "modern";
 
 export type Localized = { ja: string; en: string };
 
@@ -18,14 +18,18 @@ export type WorkSummary = {
   composer: Localized;
   players: number;
   ensemble: Ensemble;
-  form: MusicalForm;
+  form: MusicalForm | null; // ソナタ・協奏曲などに当てはまらない小品・練習曲は null（「すべて」のときだけ表示）
   era: Era;
   pdfCount: number;
+  // カタログの作品 ID（公開済みの実データのとき。デモデータには無い）
+  slug?: string;
+  hasEnglish?: boolean; // 英語の作品ページがあるか
+  searchText?: string; // 別名・原語名・作品番号など、検索で一致させる追加の文字列
 };
 
 export const ensembles: readonly Ensemble[] = ["strings", "piano", "orchestra", "mixed"];
 export const musicalForms: readonly MusicalForm[] = ["chamber", "sonata", "concerto", "symphony", "suite"];
-export const eras: readonly Era[] = ["baroque", "classical", "romantic"];
+export const eras: readonly Era[] = ["baroque", "classical", "romantic", "modern"];
 
 export const isDemoData = true;
 

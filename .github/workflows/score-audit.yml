@@ -1,0 +1,59 @@
+# 旧サイトの無料楽譜ライブラリを巡回し、PDF を検査する（移行前の調査）。
+# - PDF そのものはリポジトリに保存しない。検査結果（state.json）だけを ci/score-audit ブランチに保存する
+# - 会員限定ページは巡回しない
+# - 1 件ずつ 3 秒以上の間隔を空けてアクセスする。途中で止まっても次回は続きから再開する
+name: Score audit
+
+on:
+  # pull_request だと PR 全体の差分で判定され、フロントエンドを直すたびに再実行されるため push で判定する
+  push:
+    branches: [feature/score-migration]
+    paths:
+      - "tools/score-migration/audit.py"
+      - ".github/workflows/score-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: score-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq qpdf poppler-utils tesseract-ocr tesseract-ocr-jpn tesseract-ocr-deu tesseract-ocr-fra tesseract-ocr-ita > /dev/null
+          pip install -q -r tools/score-migration/requirements.txt
+
+      - name: Restore previous state (resume)
+        run: |
+          mkdir -p /tmp/audit
+          if git ls-remote --exit-code --heads origin ci/score-audit > /dev/null 2>&1; then
+            git fetch -q --depth=1 origin ci/score-audit
+            git show FETCH_HEAD:state.json > /tmp/audit/state.json && echo "resumed"
+          else
+            echo "fresh start"
+          fi
+
+      - name: Crawl and inspect
+        run: python tools/score-migration/audit.py --state /tmp/audit/state.json --workdir /tmp/pdfs --time-budget 18000
+
+      - name: Save state to ci/score-audit
+        if: always()
+        run: |
+          [ -f /tmp/audit/state.json ] || exit 0
+          cd /tmp/audit
+          python3 -c "import json;print(json.dumps(json.load(open('state.json')).get('summary',{}),ensure_ascii=False,indent=1))" > summary.json || true
+          git init -q
+          git checkout -q -b ci/score-audit
+          git add state.json summary.json
+          git -c user.name="github-actions" -c user.email="github-actions@users.noreply.github.com" commit -q -m "score audit state ${GITHUB_SHA}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" ci/score-audit

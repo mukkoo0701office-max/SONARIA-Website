@@ -43,16 +43,42 @@ jobs:
           test -f out/index.html || { echo "missing: out/index.html"; exit 1; }
           test -f out/.htaccess || { echo "missing: out/.htaccess"; exit 1; }
           for lang in ja en; do
-            for p in "" scores teachers teachers/profile bowing lessons recording performance community profile about contact legal/privacy; do
+            for p in "" scores composers teachers teachers/profile bowing lessons recording performance community profile about contact legal/privacy; do
               f="out/$lang/${p:+$p/}index.html"
               test -f "$f" || { echo "missing: $f"; exit 1; }
             done
           done
 
-      # 本番ビルドに講師のデモデータ（架空の講師）が入っていないことを確認する
-      - name: No demo teachers in production build
+      # 本番ビルドに講師のデモデータ（架空の講師）・楽譜の表示確認用サンプルが入っていないことを確認する
+      - name: No demo data in production build
         run: |
           if grep -rq "デモ講師" out/; then echo "demo teacher data leaked into production build"; exit 1; fi
+          if grep -rq "表示確認用サンプル" out/; then echo "sample score data leaked into production build"; exit 1; fi
+          test ! -e out/samples || { echo "sample files leaked into production build"; exit 1; }
+          # 権利確認前（pending）の版は本番ビルドに出さない
+          if grep -rq "権利確認前" out/ja/scores/ 2>/dev/null; then echo "pending-rights scores leaked into production build"; exit 1; fi
+
+      # 品質検査（title・description・lang・JSON-LD・リンク切れ・sitemap）
+      - name: Site check (production, before launch)
+        run: |
+          node scripts/check-site.mjs out
+          grep -q "Disallow: /" out/robots.txt || { echo "robots.txt must block crawlers before launch"; exit 1; }
+          grep -q 'name="robots" content="noindex' out/ja/index.html || { echo "noindex missing before launch"; exit 1; }
+
+      # 正式公開時の設定（掲載許可・公開 URL あり）でも検査する。URL は検査用の仮の値
+      - name: Site check (production, launch settings)
+        run: |
+          rm -rf out .next
+          npm run build
+          node scripts/check-site.mjs out
+          grep -q "Sitemap: https://example.invalid/sitemap.xml" out/robots.txt || { echo "sitemap missing in robots.txt"; exit 1; }
+          grep -q "GPTBot" out/robots.txt || { echo "AI crawler policy missing"; exit 1; }
+          grep -q '<link rel="canonical" href="https://example.invalid/ja/scores/"' out/ja/scores/index.html || { echo "canonical missing"; exit 1; }
+          if grep -q 'name="robots" content="noindex' out/ja/scores/index.html; then echo "launch build must be indexable"; exit 1; fi
+          grep -q "<loc>https://example.invalid/ja/scores/</loc>" out/sitemap.xml || { echo "sitemap missing pages"; exit 1; }
+        env:
+          NEXT_PUBLIC_INDEXABLE: "1"
+          NEXT_PUBLIC_SITE_URL: https://example.invalid
 
       - name: Upload lockfile
         if: always() && hashFiles('frontend/package-lock.json') != ''
@@ -65,7 +91,17 @@ jobs:
       - name: Build with preview base path
         run: |
           rm -rf out .next
+          cp -r preview-assets/samples public/samples
           npm run build
+          node scripts/check-site.mjs out
+          # カタログの作品ページ（実データ。プレビューでは権利確認前の版も表示する）
+          W=$(node -e 'const c=require("./src/data/scores/catalog.json");console.log(c.works.length?c.works[0].id:"sample-beethoven-violin-sonata-5")')
+          C=$(node -e 'const c=require("./src/data/scores/catalog.json");console.log(c.works.length?c.works[0].composerId:"beethoven")')
+          echo "checking work $W / composer $C"
+          test -f "out/ja/scores/$W/index.html" || { echo "work page missing"; exit 1; }
+          test -f "out/ja/composers/$C/index.html" || { echo "composer page missing"; exit 1; }
+          grep -q '"@type":"MusicComposition"' "out/ja/scores/$W/index.html" || { echo "JSON-LD missing"; exit 1; }
+          test ! -e "out/en/scores/$W" || { echo "English page must not exist without English text"; exit 1; }
           grep -q '/SONARIA-Website/_next/' out/ja/index.html || { echo "basePath not applied"; exit 1; }
           grep -q 'href="/SONARIA-Website/ja/scores/"' out/ja/index.html || { echo "links missing basePath"; exit 1; }
           grep -q 'noindex' out/ja/index.html || { echo "preview noindex missing"; exit 1; }
@@ -74,3 +110,4 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: /SONARIA-Website
           NEXT_PUBLIC_PREVIEW: "1"
+          NEXT_PUBLIC_SITE_URL: https://mukkoo0701office-max.github.io/SONARIA-Website

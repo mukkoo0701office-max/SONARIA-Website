@@ -44,11 +44,15 @@ jobs:
             npm install --no-audit --no-fund
           fi
 
+      # 表示確認用のサンプル PDF（プレビューだけに入れる。本番ビルドには入れない）
+      - run: cp -r preview-assets/samples public/samples
+
       - name: Build
         run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /SONARIA-Website
           NEXT_PUBLIC_PREVIEW: "1"
+          NEXT_PUBLIC_SITE_URL: https://mukkoo0701office-max.github.io/SONARIA-Website
 
       # .htaccess はさくら用。GitHub Pages では使わないので除く
       - run: rm -f out/.htaccess

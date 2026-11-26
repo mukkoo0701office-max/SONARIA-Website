@@ -4,6 +4,7 @@ import SiteFooter from "@/components/layout/SiteFooter";
 import SiteHeader from "@/components/layout/SiteHeader";
 import { getDictionary } from "@/data/dictionaries";
 import { isLocale, locales } from "@/lib/i18n";
+import { isIndexable, siteUrl } from "@/lib/seo";
 import "../globals.css";
 
 // 静的書き出しのため、/ja と /en だけを事前に生成し、それ以外の言語は 404 にする
@@ -23,10 +24,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   if (!isLocale(locale)) return {};
   const dict = getDictionary(locale);
 
-  // TODO: 本番ドメインが決まったら NEXT_PUBLIC_SITE_URL を設定し、canonical・hreflang を有効にする
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  // プレビュー（GitHub Pages）は検索エンジンに載せない
-  const isPreview = process.env.NEXT_PUBLIC_PREVIEW === "1";
 
   return {
     title: { default: dict.meta.siteTitle, template: `%s | ${dict.meta.siteTitle}` },
@@ -39,7 +36,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       locale: locale === "ja" ? "ja_JP" : "en_US",
     },
     ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
-    ...(isPreview ? { robots: { index: false, follow: false } } : {}),
+    // 検索エンジンへの掲載は NEXT_PUBLIC_INDEXABLE=1 の本番ビルドだけ（lib/seo.ts）。プレビューは常に noindex
+    ...(isIndexable ? {} : { robots: { index: false, follow: true } }),
   };
 }
 

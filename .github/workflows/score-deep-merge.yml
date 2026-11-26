@@ -1,0 +1,53 @@
+# 詳細検査の結果（各並列ジョブの part-*.json）だけをまとめ直す。検査をやり直さずに済ませるための補助。
+# 対象の実行 ID は RUN_ID に書く（成果物は 1 日で消える）
+name: Score deep merge
+
+on:
+  push:
+    branches: [feature/score-migration]
+    paths:
+      - ".github/workflows/score-deep-merge.yml"
+
+permissions:
+  contents: write
+  actions: read
+
+env:
+  RUN_ID: "45859870514"
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q -r tools/score-migration/requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: deep-base
+          path: /tmp/base
+          run-id: ${{ env.RUN_ID }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: part-*
+          path: /tmp/parts
+          merge-multiple: true
+          run-id: ${{ env.RUN_ID }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Merge
+        run: |
+          mkdir -p /tmp/deepout
+          cp /tmp/base/deepout/deep.json /tmp/deepout/deep.json 2>/dev/null || cp /tmp/base/deep.json /tmp/deepout/deep.json 2>/dev/null || echo '{}' > /tmp/deepout/deep.json
+          ls /tmp/parts | wc -l
+          python tools/score-migration/deep_inspect.py --state /tmp/base/state.json --out /tmp/deepout/deep.json --merge /tmp/parts/*.json
+      - name: Save results to ci/score-deep
+        run: |
+          cd /tmp/deepout
+          git init -q
+          git checkout -q -b ci/score-deep
+          git add deep.json
+          git -c user.name="github-actions" -c user.email="github-actions@users.noreply.github.com" commit -q -m "score deep merge ${RUN_ID}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" ci/score-deep

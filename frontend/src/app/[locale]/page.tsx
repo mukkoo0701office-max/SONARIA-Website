@@ -2,7 +2,9 @@ import Container from "@/components/layout/Container";
 import HeroCarousel from "@/components/home/HeroCarousel";
 import ServicePickup from "@/components/home/ServicePickup";
 import TeacherQuickSearch from "@/components/home/TeacherQuickSearch";
+import JsonLd from "@/components/seo/JsonLd";
 import { getDictionary } from "@/data/dictionaries";
+import { absoluteUrl } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -14,8 +16,16 @@ export default async function HomePage({ params }: Props) {
   const locale = raw as Locale;
   const dict = getDictionary(locale);
 
+  const url = absoluteUrl(`/${locale}/`);
+  // サイト全体の構造化データ（運営者は SONARIA という名称で表す。個人名は出さない）
+  const ld = [
+    { "@context": "https://schema.org", "@type": "WebSite", name: dict.meta.siteTitle, inLanguage: locale, ...(url ? { url } : {}) },
+    { "@context": "https://schema.org", "@type": "Organization", name: "SONARIA", ...(absoluteUrl("/") ? { url: absoluteUrl("/") } : {}) },
+  ];
+
   return (
     <>
+      <JsonLd data={ld} />
       <h1 className="sr-only">
         {dict.meta.siteTitle} — {dict.meta.siteDescription}
       </h1>

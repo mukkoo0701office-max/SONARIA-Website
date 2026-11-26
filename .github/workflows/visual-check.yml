@@ -25,6 +25,7 @@ jobs:
         working-directory: frontend
         run: |
           if [ -f package-lock.json ]; then npm ci; else npm install --no-audit --no-fund; fi
+          cp -r preview-assets/samples public/samples
           npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: /SONARIA-Website

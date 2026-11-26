@@ -2,6 +2,7 @@ import type { ImageKey } from "@/data/images";
 import type { ServiceKey } from "@/data/services";
 import type { PageKey } from "@/data/site";
 import type { Audience, Instrument, InstrumentCategory, LessonFormat } from "@/data/teachers";
+import type { Genre, Part, Scoring } from "@/data/scores/types";
 import type { Ensemble, Era, MusicalForm } from "@/data/works";
 
 // 仮ページ（未完成のページ）の文言
@@ -199,5 +200,114 @@ export type Dictionary = {
   };
   services: {
     priceLater: string;
+  };
+  // 楽譜ライブラリ（作品・作曲家・カテゴリの自動生成ページ）
+  library: {
+    breadcrumb: string;
+    home: string;
+    scores: string;
+    composers: string;
+    sampleNotice: string;
+    onlyJapanese: string;
+    parts: Record<Part, string>;
+    scoring: Record<Scoring, string>;
+    genre: Record<Genre, string>;
+    instruments: Record<string, string>;
+    work: {
+      metaTitle: (composer: string, title: string, catalog: string) => string;
+      metaDescription: (composer: string, title: string, catalog: string, files: string) => string;
+      facts: string;
+      composer: string;
+      catalogNumber: string;
+      key: string;
+      composed: string;
+      instrumentation: string;
+      movements: string;
+      duration: string;
+      durationValue: (minutes: number) => string;
+      difficulty: string;
+      difficultyLevels: Record<1 | 2 | 3 | 4 | 5, string>;
+      faqTitle: string;
+      qComposer: (title: string) => string;
+      aComposer: (title: string, composer: string, composed: string | null) => string;
+      qInstrumentation: string;
+      aInstrumentation: (title: string, instrumentation: string) => string;
+      qMovements: string;
+      aMovements: (title: string, n: number) => string;
+      qFree: string;
+      aFree: (title: string, files: number, rightsConfirmed: boolean) => string;
+      qParts: string;
+      aParts: (hasScore: boolean, parts: string) => string;
+      scoresTitle: string;
+      scoresLead: string;
+      scoresLeadRemote: string;
+      publisher: string;
+      year: string;
+      editor: string;
+      source: string;
+      sourceTypes: { imslp: string; own: string; other: string };
+      license: string;
+      rightsBasis: string;
+      pages: (n: number) => string;
+      preview: string;
+      closePreview: string;
+      open: string;
+      download: string;
+      previewAlt: (label: string) => string;
+      iframeTitle: (label: string) => string;
+      overview: string;
+      features: string;
+      performanceTips: string;
+      videos: string;
+      sources: string;
+      published: string;
+      updated: string;
+      changelog: string;
+      reportTitle: string;
+      reportLead: string;
+      reportCta: string;
+      related: string;
+      pendingRights: string;
+      remoteNote: string;
+    };
+    composer: {
+      metaTitle: (name: string) => string;
+      metaDescription: (name: string, works: number) => string;
+      lifespan: string;
+      nationality: string;
+      position: string;
+      life: string;
+      style: string;
+      notableWorks: string;
+      worksInLibrary: (n: number) => string;
+      related: string;
+      portraitAlt: (name: string) => string;
+      portraitCredit: string;
+      sources: string;
+      indexTitle: string;
+      indexLead: string;
+    };
+    category: {
+      metaTitle: (name: string) => string;
+      metaDescription: (name: string, works: number) => string;
+      works: (n: number) => string;
+    };
+    browse: {
+      byComposer: string;
+      byCategory: string;
+      newest: string;
+      featured: string;
+    };
+    bowing: {
+      title: string;
+      lead: string;
+      prices: readonly string[];
+      cta: string;
+      note: string;
+    };
+    ad: {
+      label: string;
+      placeholder: string;
+    };
   };
 };

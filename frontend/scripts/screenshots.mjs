@@ -113,6 +113,17 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   await page.goto(`${base}/en/scores/`, { waitUntil: "networkidle" });
   await shot(page, `${vpName}-en-scores`);
 
+  // 楽譜ライブラリ（カタログの作品ページ・作曲家ページ）
+  for (const [path, name] of [["ja/scores/beethoven-violin-sonata-5", "ja-work"], ["ja/scores/tchaikovsky-serenade-for-strings", "ja-work-strings"], ["ja/composers/beethoven", "ja-composer"], ["ja/composers", "ja-composers"], ["ja/scores/category/string-quartet", "ja-category"]]) {
+    const res = await page.goto(`${base}/${path}/`, { waitUntil: "networkidle" });
+    check(`${vpName}: /${path}/ loads`, res && res.status() === 200, String(res && res.status()));
+    await shot(page, `${vpName}-${name}`);
+  }
+  // プレビュー環境では PDF をリリースの添付ファイルから取得する（ダウンロードのリンクが外部 URL になる）
+  await page.goto(`${base}/ja/scores/beethoven-violin-sonata-5/`, { waitUntil: "networkidle" });
+  const dl = await page.locator("a[download]").first().getAttribute("href");
+  check(`${vpName}: PDF download points to release asset`, Boolean(dl && dl.includes("/releases/download/scores-v1/")), String(dl));
+
   check(`${vpName}: no page errors`, errors.length === 0, errors.slice(0, 3).join(" | "));
   await context.close();
 }
