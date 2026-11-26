@@ -36,10 +36,10 @@
     }
   ],
   "cursor": {
-    "composer": "Haydn",
-    "stage": "cello_sonata",
-    "last_work": "Grützmacher cello+piano adaptations Nos.3–5 (after Hob.XVI:25/26/43)",
-    "note": "Next Grützmacher adaptations Nos.6–8. Individual cello score+part scan IDs located for Nos.3–5, but physical PDFs and Japan legal rights not inspected. No.5 transposed from source A-flat to G major; match music before publication."
+    "composer": "Mozart",
+    "stage": "string_quartet",
+    "last_work": "Haydn Grützmacher cello+piano arrangement No.8 after Op.77 No.1 Hob.III:81",
+    "note": "Haydn cycle of repertoire candidate research reached end of cello-sonata arrangements (8 historical Grützmacher adaptations); no confirmed original cello sonatas. Next composer Mozart, string quartets, ascending catalogue starting K.80/73f, then K.155–160. All entries are research candidates only and rights/PDF checks are open."
   },
   "items": [
     {
@@ -5342,6 +5342,240 @@
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
+    },
+    {
+      "id": "haydn-arr-cello-piano-grutzmacher-sonata-no6",
+      "composer": "Joseph Haydn (underlying work); Friedrich Grützmacher (cello/piano transcription)",
+      "category": "cello_sonata_arrangement",
+      "work_title": "Cello and Piano Sonata transcription No.6 in C major (Grützmacher)",
+      "opus_catalog": "Grützmacher arrangement of Haydn historical Violin Sonata collection No.6; after Hob.II:11 / Hob.XVI:15",
+      "original_work": {
+        "composer": "Joseph Haydn",
+        "catalog": "Hob.II:11 / Hob.XVI:15",
+        "key": "C major",
+        "instrumentation": "divertimento and related keyboard sonata",
+        "relation": "Arrangement source is historically related C major Divertimento Hob.II:11 and related keyboard version Hob.XVI:15; do not claim one fixed source edition without comparison."
+      },
+      "arranger": "Friedrich Grützmacher (1832–1903)",
+      "work_url": "https://imslp.org/wiki/Keyboard_Sonata_in_C_major%2C_Hob.XVI%3A15_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel, Leipzig",
+        "publication_date": "ca.1874–1876",
+        "editor": "Friedrich Grützmacher (arranger)",
+        "scope": "Separately scanned Grützmacher cello/piano transcription No.6 plus cello part, from eight-work V.A.482 collection.",
+        "imslp_file_id": "141298",
+        "file_pages": 8,
+        "edition_comparison": "IMSLP arranged Cello and Piano (Grützmacher): Complete Score #141298 (8pp), Cello Part #141299 (5pp); Breitkopf und Härtel plate V.A.482, c.1874–76. Shared anthology score #141285 (96pp) and cello part #141286 (43pp), do not duplicate PDFs. Musical movements and page integrity not visually inspected. Arrangement source is historically related C major Divertimento Hob.II:11 and related keyboard version Hob.XVI:15; do not claim one fixed source edition without comparison."
+      },
+      "edition_url": "https://imslp.org/wiki/Keyboard_Sonata_in_C_major%2C_Hob.XVI%3A15_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "piano",
+        "cello"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "141298",
+            "edition": "Breitkopf/Grützmacher c.1874–76",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "141299",
+            "edition": "Breitkopf/Grützmacher c.1874–76",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "matching_catalogue_arranger_and_publisher_metadata_not_musically_inspected",
+        "complete_set_verified": false,
+        "page_ranges_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Keyboard_Sonata_in_C_major%2C_Hob.XVI%3A15_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP Cello and Piano (Grützmacher) transcription of historical Violin Sonata No.6: full score #141298 (8pp), cello part #141299 (5pp), Breitkopf c.1874–76 plate V.A.482. PDF pages have not been inspected."
+        },
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP eight-work collection source identities: no.6 after Hob.II:11 and related Hob.XVI:15; nos.7–8 after Op.77 quartets and omit minuet/trio."
+        }
+      ],
+      "checklist": {
+        "work_identity": "original_haydn_source_and_grutzmacher_transcription_distinguished",
+        "edition": "historical_edition_and_scan_metadata_checked",
+        "parts": "separate_cello_part_scanned_listed_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "shared_eight_work_collection_pdf_do_not_copy_multiple_times",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "two_assets_located_musical_integrity_pending"
+      },
+      "rights_status": "unknown",
+      "notes": "NOT original Haydn cello sonata. Arrangement source is historically related C major Divertimento Hob.II:11 and related keyboard version Hob.XVI:15; do not claim one fixed source edition without comparison. Claude should inspect movement count, score and part exact agreement, repeat endings, music quality, scans and Japan public-republication legal status. Source PDFs not retrieved, rights not approved.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-arr-cello-piano-grutzmacher-sonata-no7",
+      "composer": "Joseph Haydn (underlying work); Friedrich Grützmacher (cello/piano transcription)",
+      "category": "cello_sonata_arrangement",
+      "work_title": "Cello and Piano Sonata transcription No.7 in F major (Grützmacher)",
+      "opus_catalog": "Grützmacher arrangement of Haydn historical Violin Sonata collection No.7; after Hob.III:82 / Op.77 No.2",
+      "original_work": {
+        "composer": "Joseph Haydn",
+        "catalog": "Hob.III:82 / Op.77 No.2",
+        "key": "F major",
+        "instrumentation": "string quartet",
+        "relation": "Historical violin and Grützmacher cello transcriptions exclude original quartet Minuet-Trio; shortened transcription, not complete four-movement quartet."
+      },
+      "arranger": "Friedrich Grützmacher (1832–1903)",
+      "work_url": "https://imslp.org/wiki/String_Quartet_in_F_major%2C_Hob.III%3A82_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel, Leipzig",
+        "publication_date": "ca.1874–1876",
+        "editor": "Friedrich Grützmacher (arranger)",
+        "scope": "Separately scanned Grützmacher cello/piano transcription No.7 plus cello part, from eight-work V.A.482 collection.",
+        "imslp_file_id": "141300",
+        "file_pages": 22,
+        "edition_comparison": "IMSLP arranged Cello and Piano (Grützmacher): Complete Score #141300 (22pp), Cello Part #141301 (10pp); Breitkopf und Härtel plate V.A.482, c.1874–76. Shared anthology score #141285 (96pp) and cello part #141286 (43pp), do not duplicate PDFs. Musical movements and page integrity not visually inspected. Historical violin and Grützmacher cello transcriptions exclude original quartet Minuet-Trio; shortened transcription, not complete four-movement quartet."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_in_F_major%2C_Hob.III%3A82_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "piano",
+        "cello"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "141300",
+            "edition": "Breitkopf/Grützmacher c.1874–76",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "141301",
+            "edition": "Breitkopf/Grützmacher c.1874–76",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "matching_catalogue_arranger_and_publisher_metadata_not_musically_inspected",
+        "complete_set_verified": false,
+        "page_ranges_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_in_F_major%2C_Hob.III%3A82_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP Cello and Piano (Grützmacher) transcription of historical Violin Sonata No.7: full score #141300 (22pp), cello part #141301 (10pp), Breitkopf c.1874–76 plate V.A.482. PDF pages have not been inspected."
+        },
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP eight-work collection source identities: no.6 after Hob.II:11 and related Hob.XVI:15; nos.7–8 after Op.77 quartets and omit minuet/trio."
+        }
+      ],
+      "checklist": {
+        "work_identity": "original_haydn_source_and_grutzmacher_transcription_distinguished",
+        "edition": "historical_edition_and_scan_metadata_checked",
+        "parts": "separate_cello_part_scanned_listed_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "shared_eight_work_collection_pdf_do_not_copy_multiple_times",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "two_assets_located_musical_integrity_pending"
+      },
+      "rights_status": "unknown",
+      "notes": "NOT original Haydn cello sonata. Historical violin and Grützmacher cello transcriptions exclude original quartet Minuet-Trio; shortened transcription, not complete four-movement quartet. Claude should inspect movement count, score and part exact agreement, repeat endings, music quality, scans and Japan public-republication legal status. Source PDFs not retrieved, rights not approved.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-arr-cello-piano-grutzmacher-sonata-no8",
+      "composer": "Joseph Haydn (underlying work); Friedrich Grützmacher (cello/piano transcription)",
+      "category": "cello_sonata_arrangement",
+      "work_title": "Cello and Piano Sonata transcription No.8 in G major (Grützmacher)",
+      "opus_catalog": "Grützmacher arrangement of Haydn historical Violin Sonata collection No.8; after Hob.III:81 / Op.77 No.1",
+      "original_work": {
+        "composer": "Joseph Haydn",
+        "catalog": "Hob.III:81 / Op.77 No.1",
+        "key": "G major",
+        "instrumentation": "string quartet",
+        "relation": "Historical violin and Grützmacher cello transcriptions exclude original quartet Minuet-Trio; shortened transcription, not complete four-movement quartet."
+      },
+      "arranger": "Friedrich Grützmacher (1832–1903)",
+      "work_url": "https://imslp.org/wiki/String_Quartet_in_G_major%2C_Hob.III%3A81_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel, Leipzig",
+        "publication_date": "ca.1874–1876",
+        "editor": "Friedrich Grützmacher (arranger)",
+        "scope": "Separately scanned Grützmacher cello/piano transcription No.8 plus cello part, from eight-work V.A.482 collection.",
+        "imslp_file_id": "141302",
+        "file_pages": 18,
+        "edition_comparison": "IMSLP arranged Cello and Piano (Grützmacher): Complete Score #141302 (18pp), Cello Part #141303 (9pp); Breitkopf und Härtel plate V.A.482, c.1874–76. Shared anthology score #141285 (96pp) and cello part #141286 (43pp), do not duplicate PDFs. Musical movements and page integrity not visually inspected. Historical violin and Grützmacher cello transcriptions exclude original quartet Minuet-Trio; shortened transcription, not complete four-movement quartet."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_in_G_major%2C_Hob.III%3A81_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "piano",
+        "cello"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "141302",
+            "edition": "Breitkopf/Grützmacher c.1874–76",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "141303",
+            "edition": "Breitkopf/Grützmacher c.1874–76",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "matching_catalogue_arranger_and_publisher_metadata_not_musically_inspected",
+        "complete_set_verified": false,
+        "page_ranges_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_in_G_major%2C_Hob.III%3A81_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP Cello and Piano (Grützmacher) transcription of historical Violin Sonata No.8: full score #141302 (18pp), cello part #141303 (9pp), Breitkopf c.1874–76 plate V.A.482. PDF pages have not been inspected."
+        },
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP eight-work collection source identities: no.6 after Hob.II:11 and related Hob.XVI:15; nos.7–8 after Op.77 quartets and omit minuet/trio."
+        }
+      ],
+      "checklist": {
+        "work_identity": "original_haydn_source_and_grutzmacher_transcription_distinguished",
+        "edition": "historical_edition_and_scan_metadata_checked",
+        "parts": "separate_cello_part_scanned_listed_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "shared_eight_work_collection_pdf_do_not_copy_multiple_times",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "two_assets_located_musical_integrity_pending"
+      },
+      "rights_status": "unknown",
+      "notes": "NOT original Haydn cello sonata. Historical violin and Grützmacher cello transcriptions exclude original quartet Minuet-Trio; shortened transcription, not complete four-movement quartet. Claude should inspect movement count, score and part exact agreement, repeat endings, music quality, scans and Japan public-republication legal status. Source PDFs not retrieved, rights not approved.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
     }
   ],
   "last_updated": "2026-11-27",
@@ -5422,31 +5656,35 @@
       2,
       3,
       4,
-      5
+      5,
+      6,
+      7,
+      8
     ],
     "new_individual_file_pairs": [
       {
-        "number": 3,
-        "source": "Hob.XVI:25",
-        "score": "141292",
-        "part": "141293",
-        "source_url": "https://imslp.org/wiki/Keyboard_Sonata_in_E-flat_major%2C_Hob.XVI%3A25_%28Haydn%2C_Joseph%29"
+        "number": 6,
+        "source": "Hob.II:11 / Hob.XVI:15",
+        "score": "141298",
+        "part": "141299",
+        "source_url": "https://imslp.org/wiki/Keyboard_Sonata_in_C_major%2C_Hob.XVI%3A15_%28Haydn%2C_Joseph%29"
       },
       {
-        "number": 4,
-        "source": "Hob.XVI:26",
-        "score": "141294",
-        "part": "141295",
-        "source_url": "https://imslp.org/wiki/Keyboard_Sonata_in_A_major%2C_Hob.XVI%3A26_%28Haydn%2C_Joseph%29"
+        "number": 7,
+        "source": "Hob.III:82 / Op.77 No.2",
+        "score": "141300",
+        "part": "141301",
+        "source_url": "https://imslp.org/wiki/String_Quartet_in_F_major%2C_Hob.III%3A82_%28Haydn%2C_Joseph%29"
       },
       {
-        "number": 5,
-        "source": "Hob.XVI:43",
-        "score": "141296",
-        "part": "141297",
-        "source_url": "https://imslp.org/wiki/Keyboard_Sonata_in_A-flat_major%2C_Hob.XVI%3A43_%28Haydn%2C_Joseph%29"
+        "number": 8,
+        "source": "Hob.III:81 / Op.77 No.1",
+        "score": "141302",
+        "part": "141303",
+        "source_url": "https://imslp.org/wiki/String_Quartet_in_G_major%2C_Hob.III%3A81_%28Haydn%2C_Joseph%29"
       }
     ],
-    "rights_status": "unknown"
+    "rights_status": "unknown",
+    "note": "The 8 historical cello transcriptions have now been catalogued, but exact source scan and music quality remain uninspected. No original Haydn cello sonata was identified. Nos.7 and 8 omit Minuet and Trio."
   }
 }
