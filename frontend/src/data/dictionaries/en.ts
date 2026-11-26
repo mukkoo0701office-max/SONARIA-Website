@@ -576,6 +576,8 @@ export const en: Dictionary = {
     ad: {
       label: "PR",
       placeholder: "Advertising / affiliate slot (preview only; shown once a partner is configured)",
+      amazonHeading: "Related printed music and books",
+      amazonDisclosure: "As an Amazon Associate, SONARIA earns from qualifying purchases.",
     },
   },
 };

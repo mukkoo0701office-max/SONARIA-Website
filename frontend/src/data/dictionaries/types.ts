@@ -324,6 +324,8 @@ export type Dictionary = {
     ad: {
       label: string;
       placeholder: string;
+      amazonHeading: string;
+      amazonDisclosure: string;
     };
   };
 };

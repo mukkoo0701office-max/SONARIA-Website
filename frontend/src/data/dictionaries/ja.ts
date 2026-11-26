@@ -604,6 +604,8 @@ export const ja: Dictionary = {
     ad: {
       label: "PR",
       placeholder: "広告・アフィリエイト枠（プレビュー表示のみ。提携先の設定後に表示されます）",
+      amazonHeading: "関連する市販楽譜・書籍",
+      amazonDisclosure: "Amazonのアソシエイトとして、SONARIAは適格販売により収入を得ています。",
     },
   },
 };

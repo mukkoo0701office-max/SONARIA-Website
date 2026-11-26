@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "@/components/layout/Container";
 import AffiliateSlot from "@/components/library/AffiliateSlot";
+import AmazonRelated from "@/components/library/AmazonRelated";
+import { amazonItemsFor } from "@/data/affiliate/amazon";
 import BowingBanner from "@/components/library/BowingBanner";
 import PdfFile from "@/components/library/PdfFile";
 import WorkList from "@/components/library/WorkList";
@@ -85,6 +87,7 @@ export default async function WorkPage({ params }: Props) {
   const partNames = [...new Set(assets.filter((a) => a.part !== "score").sort((a, b) => partOrder.indexOf(a.part) - partOrder.indexOf(b.part)).map((a) => partLabel(t, locale, a)))];
   const sep = locale === "ja" ? "、" : ", ";
   const related = relatedWorks(work);
+  const amazonItems = amazonItemsFor(work.id);
   const catalogText = catalogLabel(work);
   const pageUrl = absoluteUrl(localizedPath(locale, `/scores/${work.id}/`));
 
@@ -331,8 +334,8 @@ export default async function WorkPage({ params }: Props) {
         </Link>
       </section>
 
-      {/* 広告はダウンロードの操作ボタンから離し、本文の後に置く */}
-      <AffiliateSlot placement="work" t={t.ad} links={work.affiliate} />
+      {/* 広告はダウンロードの操作ボタンから離し、本文の後に置く。Amazon の確認済み商品があればそれを、無ければ共通の枠を出す */}
+      {amazonItems.length > 0 ? <AmazonRelated items={amazonItems} locale={locale} t={t.ad} /> : <AffiliateSlot placement="work" t={t.ad} links={work.affiliate} />}
 
       {related.length > 0 && (
         <section aria-labelledby="related" className="mt-8">
