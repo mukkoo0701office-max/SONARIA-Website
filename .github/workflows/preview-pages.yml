@@ -49,6 +49,10 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: /SONARIA-Website
           NEXT_PUBLIC_PREVIEW: "1"
+          # 公開してよい値だけ（Settings → Secrets and variables → Actions → Variables）。未設定ならフォームは「未接続」表示
+          NEXT_PUBLIC_SUPABASE_URL: ${{ vars.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ vars.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+          NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ vars.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
 
       # .htaccess はさくら用。GitHub Pages では使わないので除く
       - run: rm -f out/.htaccess

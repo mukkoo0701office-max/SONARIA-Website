@@ -17,6 +17,7 @@ const config: Config = {
         subtle: "rgb(var(--rgb-subtle) / <alpha-value>)",
         ink: "rgb(var(--rgb-ink) / <alpha-value>)",
         "icon-muted": "rgb(var(--rgb-icon-muted) / <alpha-value>)",
+        danger: "rgb(var(--rgb-danger) / <alpha-value>)",
       },
       borderRadius: {
         card: "17px",

@@ -1,4 +1,5 @@
 import type { ImageKey } from "@/data/images";
+import type { FormsDictionary } from "./forms/types";
 import type { ServiceKey } from "@/data/services";
 import type { PageKey } from "@/data/site";
 import type { Audience, Instrument, InstrumentCategory, LessonFormat } from "@/data/teachers";
@@ -186,7 +187,7 @@ export type Dictionary = {
     body: string;
   };
   // 準備中のページ
-  placeholders: Record<"performance" | "contact" | "privacy", PlaceholderCopy>;
+  placeholders: Record<"performance" | "contact", PlaceholderCopy>;
   // 内容のあるページ（旧サイト https://www.mukkoo0701music.jp/ の文章をもとに作成）
   contentPages: Record<"bowing" | "lessons" | "recording" | "community" | "profile", ContentCopy>;
   contentCta: {
@@ -199,5 +200,13 @@ export type Dictionary = {
   };
   services: {
     priceLater: string;
+  };
+  // プライバシーポリシー（草案）
+  privacyPolicy: ContentCopy;
+  // 申し込みフォーム（src/data/dictionaries/forms/）
+  forms: FormsDictionary;
+  apply: {
+    lessonCta: string;
+    bowingCta: string;
   };
 };

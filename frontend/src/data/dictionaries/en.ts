@@ -1,3 +1,4 @@
+import { formsEn } from "./forms/en";
 import type { Dictionary } from "./types";
 
 // Search UI copy follows the approved prototype (prototypes/score-search-ui-v1.html).
@@ -218,11 +219,6 @@ export const en: Dictionary = {
       lead: "How to contact SONARIA.",
       body: ["Contact options are in preparation and will be announced on this page."],
     },
-    privacy: {
-      title: "Privacy policy",
-      lead: "How we handle personal information.",
-      body: ["The privacy policy is in preparation and will be published here before launch."],
-    },
   },
   // Based on the previous site (https://www.mukkoo0701music.jp/). 仮: pricing and payment methods are not listed yet.
   contentPages: {
@@ -386,5 +382,56 @@ export const en: Dictionary = {
   },
   services: {
     priceLater: "Pricing will be announced soon.",
+  },
+  privacyPolicy: {
+    title: "Privacy policy (draft)",
+    lead: "SONARIA (\"the Site\") handles personal information received through applications and inquiries as follows.",
+    sections: [
+      { heading: "1. Operator", paragraphs: ["SONARIA operator (name, address and representative to be published before launch)."] },
+      {
+        heading: "2. Information we collect",
+        items: [
+          "Information you enter when applying or contacting us (name, email, phone, details of your request, etc.)",
+          "Files you attach to an application (such as scores)",
+          "A transformed value of your IP address to prevent abuse (the IP address itself is not stored)",
+          "Information stored in your browser (language setting; login data if the curator signs in)",
+        ],
+      },
+      {
+        heading: "3. Purposes",
+        items: [
+          "Responding to applications and inquiries, contacting you, scheduling, quoting and providing services",
+          "Preventing abuse and spam",
+          "Aggregate statistics needed to run the Site (without identifying individuals)",
+        ],
+      },
+      { heading: "4. Disclosure to third parties", paragraphs: ["We do not provide personal information to third parties without your consent, except as required by law."] },
+      {
+        heading: "5. External services (processors)",
+        paragraphs: ["The Site uses the following services to store and send information. These providers are located outside Japan (mainly in the United States)."],
+        items: [
+          "Supabase (Supabase Inc.): storing applications and attachments, curator login",
+          "Resend (Resend, Inc.): sending notification and confirmation emails",
+          "GitHub Pages (GitHub, Inc.): hosting the website (preview)",
+        ],
+      },
+      {
+        heading: "6. Security",
+        items: [
+          "Applications and attachments are stored with database access controls so that only the curator can view them",
+          "Connections are encrypted (HTTPS)",
+          "Attachments are stored in a non-public location",
+        ],
+      },
+      { heading: "7. Retention and deletion", paragraphs: ["Information is deleted after the necessary period following completion of your request (retention period to be determined). We delete your information on request, except where retention is required by law."] },
+      { heading: "8. Requests for disclosure, correction or deletion", paragraphs: ["To request disclosure, correction, suspension of use or deletion of your personal information, please contact us (contact details to be published)."] },
+      { heading: "9. Changes", paragraphs: ["We may revise this policy as needed and will announce changes on this page."] },
+    ],
+    footnote: "This document is a draft. Before launch, the operator details, retention period and contact point must be finalized and reviewed by a professional if necessary.",
+  },
+  forms: formsEn,
+  apply: {
+    lessonCta: "Apply for lessons",
+    bowingCta: "Request bowing & fingering",
   },
 };

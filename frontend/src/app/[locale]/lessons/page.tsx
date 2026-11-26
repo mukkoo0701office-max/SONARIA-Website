@@ -22,7 +22,8 @@ export default async function LessonsPage({ params }: Props) {
 
   return (
     <ContentPage locale={locale} copy={dict.contentPages.lessons} image="lessons">
-        <ButtonLink href={localizedPath(locale, pagePaths.contact)}>{dict.contentCta.contact}</ButtonLink>
+        <ButtonLink href={localizedPath(locale, `${pagePaths.lessons}apply/`)}>{dict.apply.lessonCta}</ButtonLink>
+        <ButtonLink href={localizedPath(locale, pagePaths.contact)} variant="secondary">{dict.contentCta.contact}</ButtonLink>
         <ButtonLink href={localizedPath(locale, pagePaths.profile)} variant="secondary">{dict.contentCta.profile}</ButtonLink>
         <ButtonLink href={localizedPath(locale, pagePaths.teachers)} variant="secondary">{dict.contentCta.teachers}</ButtonLink>
     </ContentPage>
