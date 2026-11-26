@@ -17,6 +17,44 @@ const check = (name, ok, detail = "") => {
 
 const browser = await chromium.launch();
 
+// 直前の結合テストで送信回数制限を使い切っているため、テスト用に記録を消す（ローカルの Supabase のみ）
+async function resetRateLimit() {
+  await service.from("rate_limits").delete().neq("key", "");
+}
+
+// 送信回数制限に達したとき、画面に案内が出て受付番号が出ないこと
+{
+  const ctx = await browser.newContext({ locale: "ja-JP" });
+  const p = await ctx.newPage();
+  await p.route("**/functions/v1/submit-application", (route) =>
+    route.fulfill({ status: 429, contentType: "application/json", body: JSON.stringify({ error: "rate_limited" }) }),
+  );
+  await p.goto(`${base}/ja/lessons/apply/`, { waitUntil: "networkidle" });
+  await p.fill("#field-name", "テスト");
+  await p.fill("#field-email", "e2e-rl@example.com");
+  await p.fill("#field-phone", "090-0000-0000");
+  await p.getByRole("button", { name: "次へ" }).click();
+  await p.getByLabel(/体験レッスン/).check();
+  await p.getByLabel(/教室で受ける/).check();
+  await p.fill("#field-preferred1", "2026-12-05T10:00");
+  await p.getByRole("button", { name: "次へ" }).click();
+  await p.selectOption("#field-experience", "none");
+  await p.fill("#field-goals", "テスト");
+  await p.locator("#field-consent").check();
+  await p.getByRole("button", { name: "入力内容を確認する" }).click();
+  await p.getByRole("button", { name: "この内容で申し込む" }).click();
+  await p.getByText("短時間に送信が集中したため").waitFor({ timeout: 10000 });
+  check("ui: rate-limit message shown, stays on confirm screen", (await p.getByText("お申し込みを受け付けました").count()) === 0);
+  // 通信エラー → 再送信の案内
+  await p.unroute("**/functions/v1/submit-application");
+  await p.route("**/functions/v1/submit-application", (route) => route.abort("failed"));
+  await p.getByRole("button", { name: "この内容で申し込む" }).click();
+  await p.getByText("通信状況を確認して、もう一度").waitFor({ timeout: 10000 });
+  check("ui: network error shows retry guidance", true);
+  await ctx.close();
+}
+await resetRateLimit();
+
 async function run(viewport, label) {
   const context = await browser.newContext({ viewport, locale: "ja-JP" });
   const page = await context.newPage();
@@ -117,6 +155,7 @@ async function run(viewport, label) {
 }
 
 const receipt = await run({ width: 1440, height: 900 }, "desktop");
+await resetRateLimit();
 await run({ width: 390, height: 844 }, "mobile");
 
 // ---------- 管理画面 ----------

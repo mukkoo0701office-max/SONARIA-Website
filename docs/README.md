@@ -19,6 +19,7 @@ SONARIA Website の仕様・運用ドキュメントをまとめたディレク�
 |---|---|
 | [workflow.md](./workflow.md) | ブランチ運用・PR・コミット規約・承認が必要な操作 |
 | [setup.md](./setup.md) | 開発環境の準備・よく使うコマンド・デプロイ |
+| [setup-backend.md](./setup-backend.md) | 申し込みシステム（Supabase・Resend）の設定手順 |
 | [decisions/](./decisions/) | 決定記録（1件1ファイル） |
 
 ## AI コーディングについて
