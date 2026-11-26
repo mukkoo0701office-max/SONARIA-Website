@@ -55,6 +55,8 @@ jobs:
           if grep -rq "デモ講師" out/; then echo "demo teacher data leaked into production build"; exit 1; fi
           if grep -rq "表示確認用サンプル" out/; then echo "sample score data leaked into production build"; exit 1; fi
           test ! -e out/samples || { echo "sample files leaked into production build"; exit 1; }
+          # 権利確認前（pending）の版は本番ビルドに出さない
+          if grep -rq "権利確認前" out/ja/scores/ 2>/dev/null; then echo "pending-rights scores leaked into production build"; exit 1; fi
 
       # 品質検査（title・description・lang・JSON-LD・リンク切れ・sitemap）
       - name: Site check (production, before launch)
@@ -92,10 +94,14 @@ jobs:
           cp -r preview-assets/samples public/samples
           npm run build
           node scripts/check-site.mjs out
-          test -f out/ja/scores/sample-beethoven-violin-sonata-5/index.html || { echo "sample work page missing"; exit 1; }
-          test -f out/ja/composers/beethoven/index.html || { echo "sample composer page missing"; exit 1; }
-          grep -q '"@type":"MusicComposition"' out/ja/scores/sample-beethoven-violin-sonata-5/index.html || { echo "JSON-LD missing"; exit 1; }
-          test ! -e out/en/scores/sample-beethoven-violin-sonata-5 || { echo "English page must not exist without English text"; exit 1; }
+          # カタログの作品ページ（実データ。プレビューでは権利確認前の版も表示する）
+          W=$(node -e 'const c=require("./src/data/scores/catalog.json");console.log(c.works.length?c.works[0].id:"sample-beethoven-violin-sonata-5")')
+          C=$(node -e 'const c=require("./src/data/scores/catalog.json");console.log(c.works.length?c.works[0].composerId:"beethoven")')
+          echo "checking work $W / composer $C"
+          test -f "out/ja/scores/$W/index.html" || { echo "work page missing"; exit 1; }
+          test -f "out/ja/composers/$C/index.html" || { echo "composer page missing"; exit 1; }
+          grep -q '"@type":"MusicComposition"' "out/ja/scores/$W/index.html" || { echo "JSON-LD missing"; exit 1; }
+          test ! -e "out/en/scores/$W" || { echo "English page must not exist without English text"; exit 1; }
           grep -q '/SONARIA-Website/_next/' out/ja/index.html || { echo "basePath not applied"; exit 1; }
           grep -q 'href="/SONARIA-Website/ja/scores/"' out/ja/index.html || { echo "links missing basePath"; exit 1; }
           grep -q 'noindex' out/ja/index.html || { echo "preview noindex missing"; exit 1; }
