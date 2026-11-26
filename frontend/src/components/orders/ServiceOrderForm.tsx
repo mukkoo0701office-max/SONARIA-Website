@@ -341,7 +341,8 @@ export default function ServiceOrderForm({ locale }: Props) {
   // ---- 入力 ----------------------------------------------------------------
   return (
     <form onSubmit={goReview} noValidate className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
-      <div className="grid gap-6">
+      {/* fieldset の既定 min-inline-size: min-content で横スクロール行がページ幅を広げないよう min-w-0 を付ける */}
+      <div className="grid min-w-0 gap-6">
         <div role="tablist" aria-label={t.tabsLabel} className="grid grid-cols-3 gap-1 rounded-card border border-line bg-card p-1">
           {services.map((s, i) => (
             <button
@@ -362,10 +363,10 @@ export default function ServiceOrderForm({ locale }: Props) {
           ))}
         </div>
 
-        <div id="order-panel" role="tabpanel" aria-labelledby={`tab-${service}`} className="grid gap-6 rounded-card border border-line bg-card p-5 sm:p-6">
+        <div id="order-panel" role="tabpanel" aria-labelledby={`tab-${service}`} className="grid min-w-0 gap-6 rounded-card border border-line bg-card p-5 sm:p-6">
           {service === "lesson" && (
             <>
-              <fieldset>
+              <fieldset className="min-w-0">
                 <legend className="text-[15px] font-bold">{t.lesson.trialQuestion} <Req t={t.required} /></legend>
                 <div className="mt-3 flex gap-3">
                   {(["no", "yes"] as const).map((v) => (
@@ -378,7 +379,7 @@ export default function ServiceOrderForm({ locale }: Props) {
                 <FieldError id="err-trial" text={err("trial") && t.actions.fixErrors} />
               </fieldset>
 
-              <fieldset>
+              <fieldset className="min-w-0">
                 <legend className="text-[15px] font-bold">{t.lesson.plan} <Req t={t.required} /></legend>
                 <div className="mt-3 grid gap-2 sm:grid-cols-2">
                   {lessonPlans.map((p) => {
@@ -402,7 +403,7 @@ export default function ServiceOrderForm({ locale }: Props) {
                 <FieldError id="err-plan" text={err("plan") && t.actions.fixErrors} />
               </fieldset>
 
-              <fieldset>
+              <fieldset className="min-w-0">
                 <legend className="text-[15px] font-bold">{t.lesson.candidates} <Req t={t.required} /></legend>
                 <p className="mt-1 text-[13px] text-muted">{t.lesson.candidatesHelp}</p>
                 <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
@@ -479,7 +480,7 @@ export default function ServiceOrderForm({ locale }: Props) {
 
           {service === "bowing" && (
             <>
-              <fieldset>
+              <fieldset className="min-w-0">
                 <legend className="text-[15px] font-bold">{t.bowing.type} <Req t={t.required} /></legend>
                 <div className="mt-3 grid gap-2 sm:grid-cols-3">
                   {(Object.keys(bowingUnitPrice) as BowingType[]).map((k) => (
@@ -507,7 +508,7 @@ export default function ServiceOrderForm({ locale }: Props) {
 
           {service === "recording" && (
             <>
-              <fieldset>
+              <fieldset className="min-w-0">
                 <legend className="text-[15px] font-bold">{t.recording.heading} <Req t={t.required} /></legend>
                 <div className="mt-3 grid gap-3 sm:grid-cols-2">
                   {recordingInstruments.map((inst) => (
@@ -545,7 +546,7 @@ export default function ServiceOrderForm({ locale }: Props) {
           )}
         </div>
 
-        <fieldset className="grid gap-4 rounded-card border border-line bg-card p-5 sm:grid-cols-2 sm:p-6">
+        <fieldset className="min-w-0 grid gap-4 rounded-card border border-line bg-card p-5 sm:grid-cols-2 sm:p-6">
           <legend className="sr-only">{t.common.heading}</legend>
           <h2 className="text-base font-bold sm:col-span-2" aria-hidden="true">{t.common.heading}</h2>
           <TextField id="name" label={t.common.name} value={name} onChange={setName} required t={t} error={err("name")} autoComplete="name" />
@@ -633,7 +634,7 @@ function Stepper({ id, label, value, min, max, onChange, t, compact }: { id: str
 
 function DeliveryField({ value, onChange, t, name }: { value: DeliveryId; onChange: (v: DeliveryId) => void; t: T; name: string }) {
   return (
-    <fieldset>
+    <fieldset className="min-w-0">
       <legend className="text-[15px] font-bold">{t.delivery.heading} <Req t={t.required} /></legend>
       <div className="mt-3 grid gap-2 sm:grid-cols-3">
         {deliveryOptions.map((o) => (

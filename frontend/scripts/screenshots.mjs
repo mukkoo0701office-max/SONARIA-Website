@@ -164,6 +164,8 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   await page.locator('[role="tabpanel"] button[aria-pressed]').nth(1).click();
   await page.locator('[role="tabpanel"] [role="group"] button:not([disabled])').first().click();
   await page.locator('[role="tabpanel"] [role="group"] button:not([disabled])').nth(2).click();
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+  check(`${vpName}: apply page has no horizontal overflow`, overflow <= 0, String(overflow));
   check(`${vpName}: lesson candidates listed with priority`, (await page.locator("text=第2希望").count()) === 1);
   await shot(page, `${vpName}-ja-apply-lesson`);
   await page.goto(`${base}/en/apply/?service=recording`, { waitUntil: "networkidle" });
