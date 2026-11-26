@@ -919,6 +919,37 @@
       "last_amazon_search_at": "2026-11-27",
       "work_scope_note": "Henle HN216 is violin+viola ensemble, not violin+piano; do not recommend for historical Violin Sonatas Nos.2–8 that have a piano part.",
       "affiliate_note": "Amazon.co.jp direct edition listing and ASIN unresolved in exact ISMN / product search; a third-party Yamaha Sheet Music Store Haydn violin sonatas volume listing does not establish Amazon availability or exact edition match. Leave links empty until confirmed Amazon detail page."
+    },
+    {
+      "id": "haydn-peters-ep190-eight-violin-sonatas",
+      "composer": "Haydn",
+      "publisher": "Edition Peters",
+      "title": "Haydn: 8 Violin Sonatas (historical violin & piano arrangements)",
+      "category": "printed_score",
+      "publisher_catalog": "EP190",
+      "ismn": "9790300700755",
+      "source": "https://www.editionpeterspublications.us/products/haydn-8-violin-sonatas-peters",
+      "format": "piano score and separate violin part",
+      "pages": 136,
+      "editor": "Ferdinand David (historical Peters edition, exact current printing editorial relationship to confirm)",
+      "work_ids": [
+        "Violin Sonatas collection No.1",
+        "Violin Sonatas collection No.2",
+        "Violin Sonatas collection No.3",
+        "Violin Sonatas collection No.4",
+        "Violin Sonatas collection No.5",
+        "Violin Sonatas collection No.6",
+        "Violin Sonatas collection No.7",
+        "Violin Sonatas collection No.8"
+      ],
+      "originality_note": "Mostly transcriptions of Haydn keyboard and string quartet works; only No.1 regarded as likely original violin-piano composition by IMSLP. No.5 violin sonata in G major after A-flat keyboard Hob.XVI:43. Publisher source EP190 lists No.6 after keyboard Hob.XVI:15 while IMSLP describes a source based on Divertimento Hob.II:11; do not silently reconcile until scholarly check.",
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "priority": "S",
+      "status": "pending_review",
+      "date_checked": "2026-11-27",
+      "verification": "Current Edition Peters publisher direct page confirms EP190, ISMN 9790300700755, 136 pages, instrumentation violin and piano, 8-sonata anthology and separate violin part. Targeted Amazon.co.jp direct ASIN/ISBN searches returned no reliable verified listing. Not approved for affiliate placement."
     }
   ],
   "implementation_ready": 0,
@@ -926,20 +957,18 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Haydn violin sonata collection Nos.2-3, original keyboard source versus arrangements; affiliate match against HN437 and HN216",
-    "result": "Publisher-confirmed HN437 (Hob.XV:32 violin+piano single Urtext) and HN216 (Hob.VI:1–6 violin+viola duet) are NOT matching commercial editions of eight-item Peters historical violin+piano collection. Third-party Yamaha vendor lists a Haydn violin sonatas volume but its publisher/catalog identity versus Peters anthology and any Amazon.co.jp ASIN remain unverified. No new Amazon affiliate candidates or links.",
-    "new_candidates": 0,
-    "existing_records_enriched": 2,
+    "focus": "Edition Peters EP190 Haydn 8 Violin Sonatas original publisher product verification and Amazon.co.jp ASIN match",
+    "result": "Verified direct Edition Peters EP190 ISMN 9790300700755; piano score and separate violin part, 136pp, eight adapted violin sonatas including Nos.4–5. Amazon.co.jp targeted exact identifier searches did not find a verified matching product detail page/ASIN; leave pending_review. Publisher listing for No.6 gives Hob.XVI:15 while IMSLP anthology indicates Hob.II:11 origin; record as unresolved discrepancy.",
+    "new_candidates": 1,
+    "new_publisher_confirmed": 1,
     "new_amazon_verified": 0,
     "checked_candidates": [
-      "haydn-henle-hn437-violin-sonata-g",
-      "haydn-henle-hn216-violin-viola"
+      "haydn-peters-ep190-eight-violin-sonatas"
     ],
     "source_urls": [
-      "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
-      "https://www.henle.de/en/Violin-Sonata-G-major-Hob.-XV-32/HN-437",
-      "https://www.henle.de/jp/Six-Sonatas-Hob.-VI-1-6-for-Violin-and-Viola/HN-216"
+      "https://www.editionpeterspublications.us/products/haydn-8-violin-sonatas-peters",
+      "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29"
     ],
-    "next": "Search exact Amazon.co.jp publisher/ISMN for correct 8-sonata violin+piano anthology (not violin+viola) and obtain verified ASIN through Associates SiteStripe/official API; only then affiliate match Nos.2–3. Preserve distinct arrangement classification."
+    "next": "Use official Amazon Associates Product Linking/SiteStripe or authorized Product Advertising API to verify direct Amazon.co.jp detail-page ASIN matching ISMN 9790300700755 and EP190. Do not display as unrelated Henle HN437/HN216 and don't infer availability, price or author of arrangements."
   }
 }
