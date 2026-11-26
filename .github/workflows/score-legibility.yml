@@ -1,0 +1,36 @@
+# 掲載中の楽譜 PDF の視認性（解像度・くっきり度・濃淡）を測り、ci/score-legibility ブランチに保存する
+name: Score legibility
+
+on:
+  push:
+    branches: [feature/score-migration]
+    paths:
+      - "tools/score-migration/legibility.py"
+      - ".github/workflows/score-legibility.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils > /dev/null
+          pip install -q pillow==11.0.0
+      - run: mkdir -p /tmp/out && python tools/score-migration/legibility.py --repo . --out /tmp/out/legibility.json
+        shell: bash
+      - name: Save to ci/score-legibility
+        if: always()
+        run: |
+          mkdir -p /tmp/out && [ -f /tmp/out/legibility.json ] || exit 0
+          cd /tmp/out && git init -q && git checkout -q -b ci/score-legibility && git add legibility.json
+          git -c user.name="github-actions" -c user.email="github-actions@users.noreply.github.com" commit -q -m "legibility"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" ci/score-legibility
