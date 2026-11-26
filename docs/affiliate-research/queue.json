@@ -998,6 +998,74 @@
         "format": "piano score and separate violin part; one EP190 volume includes 8 sonatas, not 8 separate published books"
       },
       "notes": " EP190 matches all eight historical violin-piano arrangements, Nos.6-8 included. IMSLP No.6 after Hob.II:11, also relates to keyboard Hob.XVI:15 listed by Peters; do not claim simple source error. Nos.7-8 omit original Op.77 quartet minuet/trio. Exact Amazon.co.jp ASIN not verified; no affiliate link."
+    },
+    {
+      "id": "mozart-henle-hn1120-quartets-vol1-parts",
+      "title": "Mozart String Quartets Volume I (Salzburg Divertimenti, Italian Quartets) - Playing Parts",
+      "publisher_catalog": "HN1120",
+      "ismn": "979-0-2018-1120-8",
+      "format": "four individual string quartet playing parts",
+      "source": "https://www.henle.de/String-Quartets-Volume-I-Salzburg-Divertimenti-Italian-Quartets/HN-1120",
+      "pages": 187,
+      "composer": "Wolfgang Amadeus Mozart",
+      "publisher": "G. Henle Verlag",
+      "category": "printed_score",
+      "editor": "Wolf-Dieter Seiffert",
+      "work_ids": [
+        "K.80/73f",
+        "K.136/125a",
+        "K.137/125b",
+        "K.138/125c",
+        "K.155/134a",
+        "K.156/134b",
+        "K.157",
+        "K.158",
+        "K.159",
+        "K.160/159a"
+      ],
+      "related_free_work_id": "mozart-k80-73f-breitkopf-1881-score-parts",
+      "originality_note": "K.80 Lodi Quartet and K.155–160 Italian Quartets; K.136–138 are independent Salzburg Quartet Divertimenti, not part of K.155–160 cycle.",
+      "amazon_url": null,
+      "asin": null,
+      "status": "pending_review",
+      "priority": "S",
+      "amazon_verification_status": "no_confirmed_matching_Amazon_co_jp_ASIN",
+      "date_checked": "2026-11-27",
+      "verification": "Original Henle catalogue verifies volume, ISMN, Wolf-Dieter Seiffert, exact format and pages; site:amazon.co.jp/dp/ exact ISMN searches did not yield an identifiable matching Amazon.co.jp individual product page, so no affiliate link. Printed modern commercial Henle is not the same public-domain score as IMSLP Breitkopf 1881."
+    },
+    {
+      "id": "mozart-henle-hn7120-quartets-vol1-study-score",
+      "title": "Mozart String Quartets Volume I (Salzburg Divertimenti, Italian Quartets) - Study Score",
+      "publisher_catalog": "HN7120",
+      "ismn": "979-0-2018-7120-2",
+      "format": "pocket study score (not playing parts)",
+      "source": "https://www.henle.de/jp/String-Quartets-Volume-I-Salzburg-Divertimenti-Italian-Quartets/HN-7120",
+      "pages": 138,
+      "composer": "Wolfgang Amadeus Mozart",
+      "publisher": "G. Henle Verlag",
+      "category": "printed_score",
+      "editor": "Wolf-Dieter Seiffert",
+      "work_ids": [
+        "K.80/73f",
+        "K.136/125a",
+        "K.137/125b",
+        "K.138/125c",
+        "K.155/134a",
+        "K.156/134b",
+        "K.157",
+        "K.158",
+        "K.159",
+        "K.160/159a"
+      ],
+      "related_free_work_id": "mozart-k80-73f-breitkopf-1881-score-parts",
+      "originality_note": "K.80 Lodi Quartet and K.155–160 Italian Quartets; K.136–138 are independent Salzburg Quartet Divertimenti, not part of K.155–160 cycle.",
+      "amazon_url": null,
+      "asin": null,
+      "status": "pending_review",
+      "priority": "S",
+      "amazon_verification_status": "no_confirmed_matching_Amazon_co_jp_ASIN",
+      "date_checked": "2026-11-27",
+      "verification": "Original Henle catalogue verifies volume, ISMN, Wolf-Dieter Seiffert, exact format and pages; site:amazon.co.jp/dp/ exact ISMN searches did not yield an identifiable matching Amazon.co.jp individual product page, so no affiliate link. Printed modern commercial Henle is not the same public-domain score as IMSLP Breitkopf 1881."
     }
   ],
   "implementation_ready": 0,
@@ -1005,21 +1073,19 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Grützmacher/Haydn historical 8 Cello and Piano arrangements Nos.6–8, original-versus-arrangement audit and Japan Amazon exact-item search",
-    "result": "IMSLP independently lists the original 1874–76 Breitkopf cello/piano arrangements with score+cello part Nos.6 #141298/#141299, No.7 #141300/#141301, No.8 #141302/#141303. Historical plate V.A.482 and shared anthology #141285/#141286 confirmed. Targeted open-web Amazon.co.jp searches identified only unrelated recordings, playlists and concerto products, with no exact purchasable printed edition product detail or ASIN for these 8 transcriptions. Do not add fabricated commercial editions or affiliate links. Future Mozart quartet research may identify separate authentic print products, but preserve existing publisher and Amazon verification rules.",
-    "new_candidates": 0,
-    "new_publisher_confirmed": 0,
+    "focus": "Mozart K.80 and Italian string quartets K.155-160; Henle modern playing parts HN1120 versus pocket score HN7120 Amazon Japan exact matching",
+    "result": "Added two confirmed publisher-volume SKUs, HN1120 9790201811208 (187pp quartet performance parts), HN7120 9790201871202 (138pp pocket study score), which each include Lodi K.80, Salzburg divertimenti K.136–138, and Italian quartets K.155–160. These are separately sold formats, not one bundled product. Open Amazon.co.jp exact ISMN and /dp searches returned no verified product detail / ASIN, so hold as pending_review with null affiliate URLs. Modern Henle edition not used as free IMSLP download.",
+    "new_candidates": 2,
+    "new_publisher_confirmed": 2,
     "new_amazon_verified": 0,
-    "existing_records_enriched": 0,
     "checked_candidates": [
-      "Haydn/Grützmacher Cello and Piano transcriptions Nos.6–8 (Breitkopf V.A.482, historic, no contemporary Amazon edition verified)"
+      "mozart-henle-hn1120-quartets-vol1-parts",
+      "mozart-henle-hn7120-quartets-vol1-study-score"
     ],
-    "evidence_urls": [
-      "https://imslp.org/wiki/Keyboard_Sonata_in_C_major%2C_Hob.XVI%3A15_%28Haydn%2C_Joseph%29",
-      "https://imslp.org/wiki/String_Quartet_in_F_major%2C_Hob.III%3A82_%28Haydn%2C_Joseph%29",
-      "https://imslp.org/wiki/String_Quartet_in_G_major%2C_Hob.III%3A81_%28Haydn%2C_Joseph%29",
-      "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29"
+    "source_urls": [
+      "https://www.henle.de/String-Quartets-Volume-I-Salzburg-Divertimenti-Italian-Quartets/HN-1120",
+      "https://www.henle.de/jp/String-Quartets-Volume-I-Salzburg-Divertimenti-Italian-Quartets/HN-7120"
     ],
-    "next": "No advertising links for the historic Grützmacher cello sonatas until exact Amazon.co.jp product detail/ASIN confirmed. Next authentic commercial score research follows Mozart string quartets starting K.80/73f; verify printed quartet score and four-part editions separately before recording Amazon candidates."
+    "next": "For HN1120 / HN7120, use authenticated Amazon Associates Product Linking or authorized PA API to establish exact Japanese ASIN, seller/book edition and format. Avoid recording Amazon Music performances as printed scores. Next research K.155 and K.156 score and parts."
   }
 }
