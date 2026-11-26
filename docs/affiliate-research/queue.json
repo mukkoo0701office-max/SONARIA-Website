@@ -590,8 +590,8 @@
       "verification": "Publisher official product page verified title, ISMN, editors, content and format, but Amazon.co.jp matching ASIN and product listing unverified. Never fabricate a tagged link.",
       "date_checked": "2026-11-27",
       "last_amazon_search_at": "2026-11-27",
-      "amazon_verification_status": "unverified_no_exact_listing",
-      "amazon_search_note": "Targeted web searches restricted to amazon.co.jp for publisher identifiers and exact ISMN yielded no trustworthy matching Amazon.co.jp/dp/ individual product page. Do not treat absent web result as proof unavailable. Re-check via authorized Associates product link tool."
+      "amazon_verification_status": "not_verified",
+      "amazon_search_note": "Exact-match queries on Amazon.co.jp by HN number and ISMN returned no trustworthy Amazon.co.jp/dp/ listing; no product page/ASIN established. Publisher catalog/third party hits cannot authorize affiliate tagged URL. Use Associates link tool under signed-in account or authenticated official Product Advertising API for exact matching."
     },
     {
       "id": "haydn-henle-hn9213",
@@ -624,8 +624,8 @@
       "verification": "Publisher official product page verified title, ISMN, editors, content and format, but Amazon.co.jp matching ASIN and product listing unverified. Never fabricate a tagged link.",
       "date_checked": "2026-11-27",
       "last_amazon_search_at": "2026-11-27",
-      "amazon_verification_status": "unverified_no_exact_listing",
-      "amazon_search_note": "Targeted web searches restricted to amazon.co.jp for publisher identifiers and exact ISMN yielded no trustworthy matching Amazon.co.jp/dp/ individual product page. Do not treat absent web result as proof unavailable. Re-check via authorized Associates product link tool."
+      "amazon_verification_status": "not_verified",
+      "amazon_search_note": "Exact-match queries on Amazon.co.jp by HN number and ISMN returned no trustworthy Amazon.co.jp/dp/ listing; no product page/ASIN established. Publisher catalog/third party hits cannot authorize affiliate tagged URL. Use Associates link tool under signed-in account or authenticated official Product Advertising API for exact matching."
     },
     {
       "id": "haydn-henle-hn214",
@@ -761,10 +761,10 @@
       "status": "pending_review",
       "verification": "Henle publisher catalog 2026/27 independently confirms The Seven Last Words of Christ Hob.XX/1B string quartet, editor Christin Heitmann and separate HN851 performance parts vs HN9771 study score. Targeted Amazon.co.jp exact ISMN/HN searches did not produce a reliable item detail URL/ASIN; not Amazon-verified. Do not generate tagged links.",
       "date_checked": "2026-11-27",
-      "amazon_verification_status": "unverified_no_exact_listing",
+      "amazon_verification_status": "not_verified",
       "last_amazon_search_at": "2026-11-27",
       "publisher_catalog_evidence": "https://www.henle.de/media/b0/63/c1/1772528772/2026-2027%20GC.pdf",
-      "amazon_search_note": "Targeted web searches restricted to amazon.co.jp for publisher identifiers and exact ISMN yielded no trustworthy matching Amazon.co.jp/dp/ individual product page. Do not treat absent web result as proof unavailable. Re-check via authorized Associates product link tool."
+      "amazon_search_note": "Exact-match queries on Amazon.co.jp by HN number and ISMN returned no trustworthy Amazon.co.jp/dp/ listing; no product page/ASIN established. Publisher catalog/third party hits cannot authorize affiliate tagged URL. Use Associates link tool under signed-in account or authenticated official Product Advertising API for exact matching."
     },
     {
       "id": "haydn-henle-hn9771",
@@ -790,10 +790,10 @@
       "status": "pending_review",
       "verification": "Henle publisher catalog 2026/27 independently confirms The Seven Last Words of Christ Hob.XX/1B string quartet, editor Christin Heitmann and separate HN851 performance parts vs HN9771 study score. Targeted Amazon.co.jp exact ISMN/HN searches did not produce a reliable item detail URL/ASIN; not Amazon-verified. Do not generate tagged links.",
       "date_checked": "2026-11-27",
-      "amazon_verification_status": "unverified_no_exact_listing",
+      "amazon_verification_status": "not_verified",
       "last_amazon_search_at": "2026-11-27",
       "publisher_catalog_evidence": "https://www.henle.de/media/b0/63/c1/1772528772/2026-2027%20GC.pdf",
-      "amazon_search_note": "Targeted web searches restricted to amazon.co.jp for publisher identifiers and exact ISMN yielded no trustworthy matching Amazon.co.jp/dp/ individual product page. Do not treat absent web result as proof unavailable. Re-check via authorized Associates product link tool."
+      "amazon_search_note": "Exact-match queries on Amazon.co.jp by HN number and ISMN returned no trustworthy Amazon.co.jp/dp/ listing; no product page/ASIN established. Publisher catalog/third party hits cannot authorize affiliate tagged URL. Use Associates link tool under signed-in account or authenticated official Product Advertising API for exact matching."
     }
   ],
   "implementation_ready": 0,
@@ -801,24 +801,22 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Exact Amazon.co.jp individual detail/ASIN lookup HN851/HN9771 and Op.71/74 publisher items HN213/HN9213",
-    "result": "No exact Amazon.co.jp product detail page and matching ASIN was verified. Four preexisting Henle publisher-confirmed records audited; kept pending_review with null ASIN and URLs, no invented affiliate links. No new products added.",
-    "new_publisher_confirmed": 0,
+    "focus": "Amazon.co.jp exact ASIN lookup for Haydn Apponyi Henle HN213 / HN9213 and quartet arrangement HN851 / HN9771",
+    "result": "Targeted site:amazon.co.jp product detail searches by ISMN and catalogue number did not verify any exact-item Amazon.co.jp ASIN. 4 existing candidate records audited with explicit not_verified; no affiliate URLs generated. Follow-up requires signed-in Amazon Associates tools; repeated open-web searches alone have yielded no usable product matches.",
     "new_amazon_verified": 0,
+    "new_publisher_confirmed": 0,
     "new_candidates": 0,
     "existing_records_enriched": 4,
     "checked_candidates": [
-      "haydn-henle-hn851",
-      "haydn-henle-hn9771",
       "haydn-henle-hn213",
-      "haydn-henle-hn9213"
+      "haydn-henle-hn9213",
+      "haydn-henle-hn851",
+      "haydn-henle-hn9771"
     ],
-    "evidence_urls": [
+    "publisher_sources": [
       "https://www.henle.de/jp/String-Quartets-Book-IX-op.-71-and-74-Apponyi-Quartets/HN-213",
-      "https://www.henle.de/jp/String-Quartets-Book-IX-op.-71-and-74-Apponyi-Quartets/HN-9213",
-      "https://www.henle.de/en/The-Seven-Last-Words-of-Christ-Arrangement-for-String-Quartet-Hob.-XX-1B/HN-851",
-      "https://www.henle.de/The-Seven-Last-Words-of-Christ-Arrangement-for-String-Quartet-Hob.-XX-1B/HN-9771"
+      "https://www.henle.de/jp/String-Quartets-Book-IX-op.-71-and-74-Apponyi-Quartets/HN-9213"
     ],
-    "next": "Use official Amazon Associates product-link creation or Product Advertising API for exact ISMN/HN numbers. Confirm seller item format and ASIN before generating tag=mukkoo-22; do not repeatedly add only publisher-confirmed listings without Amazon matches."
+    "next": "Pause repeat speculative ASIN searches for these exact editions; use signed-in Associates SiteStripe/Product Linking, official PA-API, or user-provided specific Amazon.co.jp item links to verify full ASIN and edition. Maintain pending_review until verified."
   }
 }
