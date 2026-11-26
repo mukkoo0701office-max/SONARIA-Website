@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "string_quartet",
-    "last_work": "Op.54 No.3 / Hob.III:59",
-    "note": "Next research Op.55 Nos.1–3, checking work number vs Hob numbering and comparing historical parts and score sources. PDF and Japanese rights remain unreviewed."
+    "last_work": "Op.55 No.3 / Hob.III:62",
+    "note": "Next Op.64 Nos.1–3; note Hob.III catalogue order differs from opus numbering. Continue comparing full scores with Pleyel original four parts. Review actual PDF scans and legal permissions."
   },
   "items": [
     {
@@ -2226,6 +2226,144 @@
       },
       "rights_status": "unknown",
       "notes": "Shared Op.54 collection assets; must not download or publish duplicate files for each quartet. Check page ranges, completeness, print legibility, provenance and Japan republication rights. Hob order is not identical to Op numbering: Op.54 Nos.1–3 = Hob.III:58,57,59.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op55-no1-pleyel-score-parts",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in A major",
+      "opus_catalog": "Op.55 No.1; Hob.III:60",
+      "work_url": "https://imslp.org/wiki/String_Quartet_in_A_major%2C_Hob.III%3A60_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "I. Pleyel (historical parts); Trautwein (alternative full score)",
+        "publication_date": "Pleyel circa 1820; Trautwein circa 1840–45",
+        "editor": "not established from source metadata",
+        "scope": "Op.55 No.1, individual quartet score and 4 part scans",
+        "imslp_file_id": "479125",
+        "file_pages": null,
+        "edition_comparison": "Trautwein score #479125 (22 pp); original historic I. Pleyel part set #477641-477644 (Vn1 4, Vn2 4, Viola 4, Cello 3 pp)."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_in_A_major%2C_Hob.III%3A60_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_in_A_major%2C_Hob.III%3A60_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP source metadata: Op.55 No.1, Hob.III:60, A major. Candidate part file IDs 477641, 477642, 477643, 477644; PDF images not checked."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "historic_publisher_metadata_checked_pdf_uninspected",
+        "parts": "4_historical_parts_listed_not_visually_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "unverified_existing_site_inventory",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Historical Pleyel scans have four instrumental files. Claude to inspect page integrity, legibility, movements, source attribution, duplication and Japan republication rights; no PDF download or approval.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op55-no2-pleyel-score-parts",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in F minor (The Razor)",
+      "opus_catalog": "Op.55 No.2; Hob.III:61",
+      "work_url": "https://imslp.org/wiki/String_Quartet_in_F_minor%2C_Hob.III%3A61_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "I. Pleyel (historical parts); Trautwein (alternative full score)",
+        "publication_date": "Pleyel circa 1820; Trautwein circa 1840–45",
+        "editor": "not established from source metadata",
+        "scope": "Op.55 No.2, individual quartet score and 4 part scans",
+        "imslp_file_id": "479263",
+        "file_pages": null,
+        "edition_comparison": "Trautwein color score #479263 (26 pp); Pleyel first part grouping #477649-477652 (Vn1 6, Vn2 5, Viola 4, Cello 4 pp); alternate Eulenburg/Altmann #06494 (28 pp)."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_in_F_minor%2C_Hob.III%3A61_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_in_F_minor%2C_Hob.III%3A61_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP source metadata: Op.55 No.2, Hob.III:61, F minor. Candidate part file IDs 477649, 477650, 477651, 477652; PDF images not checked."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "historic_publisher_metadata_checked_pdf_uninspected",
+        "parts": "4_historical_parts_listed_not_visually_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "unverified_existing_site_inventory",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Historical Pleyel scans have four instrumental files. Claude to inspect page integrity, legibility, movements, source attribution, duplication and Japan republication rights; no PDF download or approval.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op55-no3-pleyel-score-parts",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in B-flat major",
+      "opus_catalog": "Op.55 No.3; Hob.III:62",
+      "work_url": "https://imslp.org/wiki/String_Quartet_in_B-flat_major%2C_Hob.III%3A62_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "I. Pleyel (historical parts); Trautwein (alternative full score)",
+        "publication_date": "Pleyel circa 1820; Trautwein circa 1840–45",
+        "editor": "not established from source metadata",
+        "scope": "Op.55 No.3, individual quartet score and 4 part scans",
+        "imslp_file_id": null,
+        "file_pages": null,
+        "edition_comparison": "I. Pleyel historical parts #477657-477660 (Vn1 4, Vn2 3, Viola 2, Cello 4 pp); confirm original score file and publisher before selecting. Alternate Collard/Litolff scans listed."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_in_B-flat_major%2C_Hob.III%3A62_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_in_B-flat_major%2C_Hob.III%3A62_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP source metadata: Op.55 No.3, Hob.III:62, B-flat major. Candidate part file IDs 477657, 477658, 477659, 477660; PDF images not checked."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "historic_publisher_metadata_checked_pdf_uninspected",
+        "parts": "4_historical_parts_listed_not_visually_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "unverified_existing_site_inventory",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Historical Pleyel scans have four instrumental files. Claude to inspect page integrity, legibility, movements, source attribution, duplication and Japan republication rights; no PDF download or approval.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
