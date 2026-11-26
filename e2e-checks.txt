@@ -1,0 +1,40 @@
+OK   ui: rate-limit message shown, stays on confirm screen
+OK   ui: network error shows retry guidance
+OK   desktop: lesson form shows no 'not connected' notice
+OK   desktop: lesson step1 shows required errors
+OK   desktop: invalid email blocked
+OK   desktop: travel area appears for visiting
+OK   desktop: confirm screen shows plan with price
+OK   desktop: lesson done screen shows receipt — SON-261126-00009
+OK   desktop: lesson saved once in DB — rows=1
+OK   desktop: lesson payload saved
+OK   desktop: price fingering 3p = 3,000円
+OK   desktop: price both 3p = 4,500円 (recalculated)
+OK   desktop: >10 pages shows consultation, no auto discount
+OK   desktop: PDF page count hint
+OK   desktop: bowing done (no upload failure) — SON-261126-00011
+OK   desktop: bowing price stored server-side
+OK   desktop: attachment uploaded to private storage
+OK   desktop: English form renders
+OK   desktop: no page errors
+OK   mobile: lesson form shows no 'not connected' notice
+OK   mobile: lesson step1 shows required errors
+OK   mobile: invalid email blocked
+OK   mobile: travel area appears for visiting
+OK   mobile: confirm screen shows plan with price
+OK   mobile: lesson done screen shows receipt — SON-261126-00012
+OK   mobile: lesson saved once in DB — rows=2
+OK   mobile: lesson payload saved
+OK   mobile: price fingering 3p = 3,000円
+OK   mobile: price both 3p = 4,500円 (recalculated)
+OK   mobile: >10 pages shows consultation, no auto discount
+OK   mobile: PDF page count hint
+OK   mobile: bowing done (no upload failure) — SON-261126-00014
+OK   mobile: bowing price stored server-side
+OK   mobile: attachment uploaded to private storage
+OK   mobile: English form renders
+OK   mobile: no page errors
+OK   admin: non-admin user is refused
+OK   admin: application appears in list
+OK   admin: detail shows applicant data
+OK   admin: status change saved
