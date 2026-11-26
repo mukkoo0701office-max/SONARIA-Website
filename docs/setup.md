@@ -3,7 +3,7 @@
 ## 必要なもの
 
 - Git
-- Node.js 20 以上（LTS 推奨）と npm
+- Node.js 22 以上（LTS）と npm
 
 ## クローンと起動
 

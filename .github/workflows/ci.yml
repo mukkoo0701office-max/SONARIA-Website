@@ -23,7 +23,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       # TODO: package-lock.json をコミットしたら npm ci だけにする
       - name: Install
