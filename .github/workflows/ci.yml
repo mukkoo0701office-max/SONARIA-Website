@@ -1,0 +1,52 @@
+# アプリ本体（frontend/）の lint と build を確認する。
+# frontend/ に変更があるときだけ動く。
+name: CI
+
+on:
+  pull_request:
+    paths:
+      - "frontend/**"
+      - ".github/workflows/ci.yml"
+  push:
+    branches: [main]
+    paths:
+      - "frontend/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # TODO: package-lock.json をコミットしたら npm ci だけにする
+      - name: Install
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install --no-audit --no-fund
+          fi
+
+      - run: npm run lint
+      - run: npm run build
+
+      # 静的書き出しで / と /ja /en の主要ページが生成されたかを確認する
+      - name: Check exported pages
+        run: |
+          for f in out/index.html out/ja/index.html out/en/index.html out/ja/scores/index.html out/en/scores/index.html out/ja/teachers/index.html out/ja/about/index.html out/.htaccess; do
+            test -f "$f" || { echo "missing: $f"; exit 1; }
+          done
+
+      - name: Upload lockfile
+        if: always() && hashFiles('frontend/package-lock.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: package-lock
+          path: frontend/package-lock.json

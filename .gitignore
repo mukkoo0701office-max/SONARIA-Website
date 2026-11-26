@@ -1,0 +1,23 @@
+# 個人用メモ・作業ログ（git管理対象外）
+# 正式なドキュメントは docs/ に配置すること
+# 実体は iCloud Drive 配下に置き、シンボリックリンクで参照している
+memo
+memo/
+
+# 環境変数（フォームのエンドポイント等を置く場合）
+.env
+.env*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# エディタ
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ログ
+*.log
