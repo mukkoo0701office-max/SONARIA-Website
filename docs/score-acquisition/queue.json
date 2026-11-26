@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "violin_sonata",
-    "last_work": "Violin Sonata No.1 G major / Op.70 (Hob.XV:32 relation)",
-    "note": "Hob.III:D3 recorded with same-source manuscript score and parts pending authenticity, quality and rights review. Violin Sonatas collection eight works mostly transcriptions; prioritize one potential original G major sonata and separately classify Nos.2–8. Next investigate historical arrangements No.2–3 only with explicit arrangement labeling, then other authentic violin-viola duos Hob.VI if appropriate. Do not mark quartet corpus legally complete."
+    "last_work": "Historical Violin Sonatas collection No.3 E-flat / after Hob.XVI:25",
+    "note": "Next anthology Nos.4–5 (after keyboard sonatas Hob.XVI:26 and Hob.XVI:43); continue distinguish adaptations from original Haydn violin sonatas. Peters score #479521 and violin #479522 shared for Nos.1–8; PDF page ranges and legal rights not reviewed."
   },
   "items": [
     {
@@ -3966,6 +3966,150 @@
       },
       "rights_status": "unknown",
       "notes": "Do not assume all eight historical Violin Sonatas are original Haydn violin-piano compositions. No.1 G major Op.70 / Hob.XV:32 relation scholarly contested/complex: label and review before publication. Multi-sonata Peters PDF needs No.1 page ranges, violin-piano correspondence, rights, legibility and scan checks. No downloads or approval.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-arr-violin-sonata-no2-after-hobxvi24",
+      "composer": "Joseph Haydn (original keyboard sonata); violin-piano adaptation by historical arranger not confirmed",
+      "category": "violin_sonata_arrangement",
+      "work_title": "Violin Sonata collection No.2 in D major (arranged from Keyboard Sonata Hob.XVI:24)",
+      "opus_catalog": "Violin Sonatas collection No.2 (arr. after Hob.XVI:24)",
+      "original_work": {
+        "composer": "Joseph Haydn",
+        "catalog": "Hob.XVI:24",
+        "instrumentation": "solo keyboard",
+        "work_relation": "violin-piano adaptation; not distinct original Haydn violin sonata"
+      },
+      "work_url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "C. F. Peters, Leipzig (complete sonata collection), Henry Litolff's Verlag (alternative edition)",
+        "publication_date": "Peters undated, plate 6604; Litolff ca.1870",
+        "editor": "Ferdinand David (Peters), Litolff arranger/editor uncertain",
+        "scope": "Historical Violin Sonatas Nos.1–8 shared collection: No.2 and No.3 are arrangements from keyboard sonatas Hob.XVI:24/25",
+        "imslp_file_id": "479521",
+        "file_pages": 93,
+        "edition_comparison": "Peters complete score #479521 (93pp) + separately bound violin part #479522 (34pp) for the eight-piece anthology; combined score+part #244000 (127pp). Litolff complete score #344937 (98pp) + violin #344938 (34pp). No per-work page ranges or proof violin part's exact editorial agreement yet; don't assume both paired without PDF check."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "piano_violin_score": {
+            "imslp_file_id": "479521",
+            "edition": "Peters/Ferdinand David",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin": {
+            "imslp_file_id": "479522",
+            "edition": "Peters/Ferdinand David",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "same_peters_collection_metadata_only",
+        "complete_set_verified": false,
+        "page_ranges_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP General Information identifies Violin Sonatas collection No.2 in D major after Keyboard Sonata Hob.XVI:24; notes Nos.2–5 originated as keyboard sonatas with optional/added violin parts. Peters anthology file IDs #479521 score and #479522 violin part, scans uninspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "keyboard_original_and_violin_adaptation_distinguished",
+        "edition": "peters_collection_metadata_verified_not_inspected",
+        "parts": "piano_score_plus_violin_part_listed_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "shared_anthology_pdf_do_not_duplicate",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "unverified_for_each_arrangement"
+      },
+      "rights_status": "unknown",
+      "notes": "CATALOGUE ACCURACY: Do not list as Haydn original violin-piano composition. Publish only as explicitly labeled historical arrangement if source and rights are verified. Individual original source is a keyboard sonata; original piano score without violin part is not the adapted violin-piano set. Claude to inspect correct page ranges, all movements, violin relevance/optional status, engraving and copyright. No PDF download or approval.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-arr-violin-sonata-no3-after-hobxvi25",
+      "composer": "Joseph Haydn (original keyboard sonata); violin-piano adaptation by historical arranger not confirmed",
+      "category": "violin_sonata_arrangement",
+      "work_title": "Violin Sonata collection No.3 in E-flat major (arranged from Keyboard Sonata Hob.XVI:25)",
+      "opus_catalog": "Violin Sonatas collection No.3 (arr. after Hob.XVI:25)",
+      "original_work": {
+        "composer": "Joseph Haydn",
+        "catalog": "Hob.XVI:25",
+        "instrumentation": "solo keyboard",
+        "work_relation": "violin-piano adaptation; not distinct original Haydn violin sonata"
+      },
+      "work_url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "C. F. Peters, Leipzig (complete sonata collection), Henry Litolff's Verlag (alternative edition)",
+        "publication_date": "Peters undated, plate 6604; Litolff ca.1870",
+        "editor": "Ferdinand David (Peters), Litolff arranger/editor uncertain",
+        "scope": "Historical Violin Sonatas Nos.1–8 shared collection: No.2 and No.3 are arrangements from keyboard sonatas Hob.XVI:24/25",
+        "imslp_file_id": "479521",
+        "file_pages": 93,
+        "edition_comparison": "Peters complete score #479521 (93pp) + separately bound violin part #479522 (34pp) for the eight-piece anthology; combined score+part #244000 (127pp). Litolff complete score #344937 (98pp) + violin #344938 (34pp). No per-work page ranges or proof violin part's exact editorial agreement yet; don't assume both paired without PDF check."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "piano_violin_score": {
+            "imslp_file_id": "479521",
+            "edition": "Peters/Ferdinand David",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin": {
+            "imslp_file_id": "479522",
+            "edition": "Peters/Ferdinand David",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "same_peters_collection_metadata_only",
+        "complete_set_verified": false,
+        "page_ranges_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonatas_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP General Information identifies Violin Sonatas collection No.3 in E-flat major after Keyboard Sonata Hob.XVI:25; notes Nos.2–5 originated as keyboard sonatas with optional/added violin parts. Peters anthology file IDs #479521 score and #479522 violin part, scans uninspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "keyboard_original_and_violin_adaptation_distinguished",
+        "edition": "peters_collection_metadata_verified_not_inspected",
+        "parts": "piano_score_plus_violin_part_listed_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "shared_anthology_pdf_do_not_duplicate",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "unverified_for_each_arrangement"
+      },
+      "rights_status": "unknown",
+      "notes": "CATALOGUE ACCURACY: Do not list as Haydn original violin-piano composition. Publish only as explicitly labeled historical arrangement if source and rights are verified. Individual original source is a keyboard sonata; original piano score without violin part is not the adapted violin-piano set. Claude to inspect correct page ranges, all movements, violin relevance/optional status, engraving and copyright. No PDF download or approval.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
