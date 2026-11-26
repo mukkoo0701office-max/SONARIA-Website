@@ -6,8 +6,7 @@ import Chip from "@/components/ui/Chip";
 import Pagination from "@/components/ui/Pagination";
 import SelectField from "@/components/ui/SelectField";
 import { getDictionary } from "@/data/dictionaries";
-import { isSampleCatalog, workSummaries } from "@/data/scores/catalog";
-import { ensembles, eras, musicalForms, works as demoWorks, type Ensemble, type Era, type MusicalForm } from "@/data/works";
+import { ensembles, eras, musicalForms, type Ensemble, type Era, type MusicalForm, type WorkSummary } from "@/data/works";
 import type { Locale } from "@/lib/i18n";
 
 // 承認済みプロトタイプ（prototypes/score-search-ui-v1.html）の検索 UI を部品化したもの。
@@ -17,9 +16,6 @@ const PER_PAGE = 5;
 
 // 権利確認済みの作品が 1 件でもあればカタログを使う。まだ無いあいだは説明用のデモデータ（画面に明記）。
 // 実在しない楽譜を本番の検索結果に出さないため、本番でカタログが空なら結果も空にする
-const isPreviewBuild = process.env.NEXT_PUBLIC_PREVIEW === "1";
-const works = workSummaries.length > 0 ? workSummaries : isPreviewBuild ? demoWorks : [];
-const isDemoData = workSummaries.length === 0 || isSampleCatalog;
 
 type PlayersFilter = "all" | "1" | "2" | "3" | "4" | "5plus";
 type SortKey = "title" | "composer" | "pdfCount";
@@ -68,7 +64,8 @@ function filtersToSearch(filters: Filters): string {
   return query ? `?${query}` : "";
 }
 
-export default function ScoreSearch({ locale }: { locale: Locale }) {
+// works・isDemoData はページ（サーバー側）から受け取る。カタログ全体をブラウザに読み込ませないため
+export default function ScoreSearch({ locale, works, isDemoData }: { locale: Locale; works: readonly WorkSummary[]; isDemoData: boolean }) {
   const t = getDictionary(locale).scores;
   const [filters, setFilters] = useState<Filters>(initialFilters);
   const [ready, setReady] = useState(false);
@@ -112,7 +109,7 @@ export default function ScoreSearch({ locale }: { locale: Locale }) {
         if (filters.sort === "composer") return a.composer.en.localeCompare(b.composer.en);
         return a.title[locale].localeCompare(b.title[locale], locale);
       });
-  }, [filters, locale]);
+  }, [filters, locale, works]);
 
   const totalPages = Math.max(1, Math.ceil(results.length / PER_PAGE));
   const page = Math.min(filters.page, totalPages);

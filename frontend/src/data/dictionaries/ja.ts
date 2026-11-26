@@ -526,6 +526,8 @@ export const ja: Dictionary = {
       reportLead: "ページの抜け・パートの取り違え・曲名と中身の違いなどにお気づきの場合は、お知らせください。",
       reportCta: "誤りを報告する",
       related: "関連する楽譜",
+      pendingRights: "権利確認前（プレビュー環境だけで表示しています。正式公開前に運営者が確認し、差し替える場合があります）",
+      remoteNote: "プレビュー環境では PDF のダウンロードのみ利用できます（ブラウザ内のプレビューは正式公開後に使えます）。",
     },
     composer: {
       metaTitle: (name) => `${name}｜作曲家と無料楽譜`,

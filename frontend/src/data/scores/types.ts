@@ -89,7 +89,8 @@ export type ScoreAsset = {
   id: string;
   part: Part;
   label?: Localized; // part が "other" のとき、または補足が必要なとき（例: 第2楽章のみ）
-  file: string; // public/ からのパス（例: /scores/kreisler-liebesleid/violin.pdf）
+  file: string; // 本番で置くパス（public/ からのパス。例: /scores/kreisler-liebesleid/violin.pdf）
+  remote?: string | null; // PDF 本体の保存先（GitHub のリリースの添付ファイル）。プレビューではここから取得する
   filename: string; // ダウンロード時のファイル名
   preview?: { file: string; width: number; height: number } | null; // 1 ページ目の画像
   sha256: string;

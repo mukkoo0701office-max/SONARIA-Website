@@ -8,6 +8,7 @@ import { withBasePath } from "@/lib/paths";
 type Props = {
   label: string;
   file: string; // public/ からのパス
+  remote?: string | null; // リリースの添付ファイル。渡されたときはこちらから取得する（プレビュー環境）。カタログ全体をクライアントに読み込ませないため、判定はページ側で行う
   filename: string;
   pages: number;
   bytes: number;
@@ -21,10 +22,13 @@ function formatSize(bytes: number): string {
 
 // 1 ファイル（1 パート）の表示。PDF は「プレビュー」を押すまで読み込まない（通信量と表示速度のため）。
 // 1 ページ目の画像があれば先に表示する（幅・高さを指定してレイアウトのずれを防ぐ）
-export default function PdfFile({ label, file, filename, pages, bytes, preview, locale }: Props) {
+export default function PdfFile({ label, file, remote, filename, pages, bytes, preview, locale }: Props) {
   const t = getDictionary(locale).library.work;
   const [open, setOpen] = useState(false);
-  const src = withBasePath(file);
+  // プレビュー環境では PDF をサイトに含めず、リリースの添付ファイルから取得する。
+  // 添付ファイルはブラウザ内表示ができない（必ずダウンロードになる）ため、そのときはプレビュー・ブラウザで開くを出さない
+  const useRemote = Boolean(remote);
+  const src = useRemote ? remote! : withBasePath(file);
   const frameId = `pdf-${file.replace(/[^a-z0-9]/gi, "-")}`;
 
   return (
@@ -49,6 +53,7 @@ export default function PdfFile({ label, file, filename, pages, bytes, preview, 
             {t.pages(pages)} ・ {formatSize(bytes)}
           </p>
           <div className="mt-2.5 flex flex-wrap gap-2">
+            {!useRemote && (
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
@@ -58,13 +63,17 @@ export default function PdfFile({ label, file, filename, pages, bytes, preview, 
             >
               {open ? t.closePreview : t.preview}
             </button>
-            <a href={src} target="_blank" rel="noopener" className="rounded-button border border-navy bg-card px-3 py-2 text-[12px] font-semibold text-navy hover:bg-subtle">
-              {t.open}
-            </a>
+            )}
+            {!useRemote && (
+              <a href={src} target="_blank" rel="noopener" className="rounded-button border border-navy bg-card px-3 py-2 text-[12px] font-semibold text-navy hover:bg-subtle">
+                {t.open}
+              </a>
+            )}
             <a href={src} download={filename} className="rounded-button border border-navy bg-navy px-3 py-2 text-[12px] font-semibold text-white hover:brightness-95">
               {t.download}
             </a>
           </div>
+          {useRemote && <p className="mt-1.5 text-[11px] text-muted">{t.remoteNote}</p>}
         </div>
       </div>
       {open && <iframe id={frameId} src={src} title={t.iframeTitle(label)} className="mt-3 h-[75vh] w-full rounded border border-line bg-white" />}

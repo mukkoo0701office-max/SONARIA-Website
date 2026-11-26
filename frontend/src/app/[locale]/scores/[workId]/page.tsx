@@ -9,7 +9,7 @@ import WorkList from "@/components/library/WorkList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import JsonLd from "@/components/seo/JsonLd";
 import { getDictionary } from "@/data/dictionaries";
-import { catalogLabel, composerLocales, composerOf, getWork, isSampleCatalog, partOrder, relatedWorks, workLocales, worksForLocale } from "@/data/scores/catalog";
+import { catalogLabel, composerLocales, usesRemotePdf, composerOf, getWork, isSampleCatalog, partOrder, relatedWorks, workLocales, worksForLocale } from "@/data/scores/catalog";
 import type { Work } from "@/data/scores/types";
 import { pagePaths } from "@/data/site";
 import { isLocale, localizedPath, type Locale } from "@/lib/i18n";
@@ -195,6 +195,9 @@ export default async function WorkPage({ params }: Props) {
         {work.editions.map((e) => (
           <div key={e.id} className="mt-4">
             <h3 className="text-[15px] font-bold">{e.label[locale]}</h3>
+            {e.rights.status === "pending" && (
+              <p className="mt-1.5 rounded-button border border-navy bg-subtle px-2.5 py-1.5 text-xs font-semibold text-navy">{tw.pendingRights}</p>
+            )}
             <dl className="mt-1 grid gap-0.5 text-xs text-muted">
               {e.publisher && <Meta term={tw.publisher}>{e.publisher}</Meta>}
               {e.year && <Meta term={tw.year}>{e.year}</Meta>}
@@ -216,7 +219,7 @@ export default async function WorkPage({ params }: Props) {
               {[...e.assets]
                 .sort((a, b) => partOrder.indexOf(a.part) - partOrder.indexOf(b.part))
                 .map((a) => (
-                  <PdfFile key={a.id} label={partLabel(t, locale, a)} file={a.file} filename={a.filename} pages={a.pages} bytes={a.bytes} preview={a.preview} locale={locale} />
+                  <PdfFile key={a.id} label={partLabel(t, locale, a)} file={a.file} remote={usesRemotePdf ? a.remote : null} filename={a.filename} pages={a.pages} bytes={a.bytes} preview={a.preview} locale={locale} />
                 ))}
             </ul>
           </div>

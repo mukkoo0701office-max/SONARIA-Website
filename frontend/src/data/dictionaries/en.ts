@@ -500,6 +500,8 @@ export const en: Dictionary = {
       reportLead: "Please let us know about missing pages, mixed-up parts or a title that does not match the music.",
       reportCta: "Report a problem",
       related: "Related scores",
+      pendingRights: "Rights not yet confirmed (shown only in the preview; the operator will check and may replace this before launch)",
+      remoteNote: "In the preview, PDFs can only be downloaded (in-browser preview will be available after launch).",
     },
     composer: {
       metaTitle: (name) => `${name} | Composer and Free Sheet Music`,

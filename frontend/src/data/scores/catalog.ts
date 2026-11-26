@@ -24,6 +24,9 @@ const demo: DemoData | null =
       (require("./demo") as { demoData: DemoData }).demoData
     : null;
 
+/** プレビューでは PDF 本体をリリースの添付ファイルから取得する（PDF はサイトの書き出しに含めない） */
+export const usesRemotePdf = process.env.NEXT_PUBLIC_PREVIEW === "1";
+
 /** 表示確認用のサンプルを表示しているか（画面に明記する） */
 export const isSampleCatalog = demo !== null;
 
@@ -34,9 +37,16 @@ const RESERVED_IDS = new Set(["category", "composers", "work"]);
 const allComposers: Composer[] = demo ? demo.composers : composerMaster;
 const composerById = new Map(allComposers.map((c) => [c.id, c]));
 
-// 公開してよい版・ファイルだけを残した作品一覧（承認済みの版が 1 つもない作品は除く）
+// 表示する版の権利の状態。
+// 本番: 承認済み（approved）だけ。
+// プレビュー: 権利確認前（pending）も表示する（運営者の指示 2026-11-26「いったん権利は気にせず反映。公開前にチェックして差し替える」）。
+//   pending の版は画面に「権利確認前」と明記し、本番ビルドには含めない
+const isPreviewBuild = process.env.NEXT_PUBLIC_PREVIEW === "1";
+const visibleStatuses: ReadonlySet<string> = new Set(isPreviewBuild ? ["approved", "pending"] : ["approved"]);
+
+// 表示してよい版・ファイルだけを残した作品一覧（該当する版が 1 つもない作品は除く）
 export const works: Work[] = (demo ? demo.works : catalog.works)
-  .map((w) => ({ ...w, editions: w.editions.filter((e) => e.rights.status === "approved" && e.assets.length > 0) }))
+  .map((w) => ({ ...w, editions: w.editions.filter((e) => visibleStatuses.has(e.rights.status) && e.assets.length > 0) }))
   .filter((w) => w.editions.length > 0)
   .sort((a, b) => a.id.localeCompare(b.id));
 

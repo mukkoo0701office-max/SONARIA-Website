@@ -1,8 +1,15 @@
-# 権利確認済み（approved）の楽譜だけを旧サイトから取得してリポジトリに保存する。
-# 手動実行のみ。approvals.json は運営者が承認した内容だけを書く（承認の代行はしない）。
-name: Score migrate (approved only)
+# 楽譜 PDF を旧サイトから取得し、リリース scores-v1 の添付ファイルに保存して、catalog.json と 1 ページ目の画像をコミットする。
+# 入力は tools/score-migration/approvals.json（analyze.py の出力）。rights.status が pending の版は本番ビルドに出ない。
+# workflow_dispatch は既定ブランチに無いと使えないため、approvals.json の変更（push）で起動する。main では動かさない。
+name: Score migrate
 
 on:
+  push:
+    branches: [feature/score-migration]
+    paths:
+      - "tools/score-migration/approvals.json"
+      - "tools/score-migration/migrate.py"
+      - ".github/workflows/score-migrate.yml"
   workflow_dispatch:
 
 permissions:
@@ -14,8 +21,9 @@ concurrency:
 
 jobs:
   migrate:
+    if: github.ref != 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 340
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -23,14 +31,18 @@ jobs:
           python-version: "3.12"
       - run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils > /dev/null
-          pip install -r tools/score-migration/requirements.txt
-      - name: Migrate approved scores
-        run: python tools/score-migration/migrate.py --approvals tools/score-migration/approvals.json --repo .
-      - name: Commit to the current branch (not main)
-        if: github.ref != 'refs/heads/main'
+          pip install -q -r tools/score-migration/requirements.txt
+      - name: Migrate
+        run: python tools/score-migration/migrate.py --approvals tools/score-migration/approvals.json --repo . --release-tag scores-v1 --time-budget 18000
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit catalog and preview images
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add frontend/public/scores frontend/src/data/scores/catalog.json
-          git diff --cached --quiet || git commit -m "chore(scores): 権利確認済みの楽譜を移行"
-          git push
+          git diff --cached --quiet && exit 0
+          git commit -q -m "chore(scores): 旧サイトの楽譜を移行（権利確認前・プレビューのみ表示）"
+          git pull -q --rebase origin "${GITHUB_REF_NAME}"
+          git push -q origin "HEAD:${GITHUB_REF_NAME}"

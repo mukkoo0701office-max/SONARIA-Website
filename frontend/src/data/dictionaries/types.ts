@@ -266,6 +266,8 @@ export type Dictionary = {
       reportLead: string;
       reportCta: string;
       related: string;
+      pendingRights: string;
+      remoteNote: string;
     };
     composer: {
       metaTitle: (name: string) => string;
