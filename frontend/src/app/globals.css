@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * デザイントークンの正本: docs/SONARIA_UI_DESIGN_SYSTEM_v1.0.md
+ * コンポーネントでは色の値を直書きせず、Tailwind の navy / gold / paper などのクラスを使う。
+ */
+:root {
+  --color-navy: #182b45;
+  --color-gold: #b79656;
+  --color-bg: #faf9f6;
+  --color-card: #ffffff;
+  --color-muted: #667085;
+  --color-border: #e5e0d6;
+  --color-ink: #182b45;
+  /* タグ・アイコン背景（プロトタイプの #F1F3F5） */
+  --color-subtle: #f1f3f5;
+  /* 未選択の保存アイコン（プロトタイプの #9AA1AB） */
+  --color-icon-muted: #9aa1ab;
+}
+
+@layer base {
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+  }
+
+  /*
+   * フォーカスリング。プロトタイプはゴールドだが、背景 #FAF9F6 との比が 2.66:1 で
+   * WCAG 2.2 の非テキストのコントラスト（3:1）に届かないため、ネイビー（13.57:1）にしている。
+   */
+  :focus-visible {
+    outline: 2px solid var(--color-navy);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

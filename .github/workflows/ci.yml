@@ -1,6 +1,5 @@
 # アプリ本体（frontend/）の lint と build を確認する。
-# 技術スタック確定前で frontend/ がまだ無いため、frontend/ に変更があるときだけ動く。
-# 仮: Node.js 前提。スタックが変わったら書き換える。
+# frontend/ に変更があるときだけ動く。
 name: CI
 
 on:
@@ -25,9 +24,29 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-          cache-dependency-path: frontend/package-lock.json
 
-      - run: npm ci
+      # TODO: package-lock.json をコミットしたら npm ci だけにする
+      - name: Install
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install --no-audit --no-fund
+          fi
+
       - run: npm run lint
       - run: npm run build
+
+      # 静的書き出しで / と /ja /en の主要ページが生成されたかを確認する
+      - name: Check exported pages
+        run: |
+          for f in out/index.html out/ja/index.html out/en/index.html out/ja/scores/index.html out/en/scores/index.html out/ja/teachers/index.html out/ja/about/index.html out/.htaccess; do
+            test -f "$f" || { echo "missing: $f"; exit 1; }
+          done
+
+      - name: Upload lockfile
+        if: always() && hashFiles('frontend/package-lock.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: package-lock
+          path: frontend/package-lock.json

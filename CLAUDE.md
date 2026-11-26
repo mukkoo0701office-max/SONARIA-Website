@@ -79,13 +79,20 @@
 
 ---
 
-## 技術スタック [提案・未確定]
+## 技術スタック
 
-`docs/SONARIA_SITE_ARCHITECTURE_DRAFT_v0.2.md` §8 のとおり、**さくらインターネットの契約プランで何が動くかを調べてから決める**。
+### 第1段階 [確定]（`docs/decisions/0001-phase1-static-site.md`）
 
-- 候補の一つ: Next.js（App Router）／TypeScript／Tailwind CSS
-- 講師登録・本人確認・審査・本人による編集・管理画面は**サーバ処理と DB が必要**。静的書き出しだけでは成立しない
-- フレームワーク・CMS・DB・ホスティング構成を、運営者の承認なしに確定させない
+- Next.js 15（App Router）／TypeScript／Tailwind CSS v3、**静的書き出し**（`output: "export"`, `trailingSlash: true`）
+- さくらのレンタルサーバで静的ファイルを配信する
+- URL は `/ja/...` と `/en/...`。`/` の振り分けは `frontend/public/.htaccess`
+- 静的書き出しのため、**`next/image` の最適化・Server Actions・API Routes・ミドルウェアは使わない**。画像は通常の `<img>`
+- 講師データは管理人が審査してデータファイルに追加する（自己登録は第2段階）
+
+### 第2段階 [要決定]
+
+- 講師の自己登録・本人確認・審査・本人編集・管理画面は**サーバ処理と DB が必要**
+- さくらの契約プランで何が動くかを調べてから決める。運営者の承認なしに構成を確定させない
 
 ---
 

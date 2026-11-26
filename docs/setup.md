@@ -1,16 +1,40 @@
-# リポジトリの準備
+# 開発環境の準備
 
 ## 必要なもの
 
 - Git
-- [要決定] アプリの実行環境（Node.js など）は技術スタック確定後に追記する
+- Node.js 20 以上（LTS 推奨）と npm
 
-## クローン
+## クローンと起動
 
 ```bash
 git clone https://github.com/mukkoo0701office-max/SONARIA-Website.git
-cd SONARIA-Website
+cd SONARIA-Website/frontend
+npm install
+npm run dev
 ```
+
+ブラウザで http://localhost:3000/ja/ を開きます（開発サーバでは `.htaccess` が効かないため、`/` は簡易の振り分けページになります）。
+
+## よく使うコマンド（`frontend/` で実行）
+
+| コマンド | 内容 |
+|---|---|
+| `npm run dev` | 開発サーバ起動 |
+| `npm run lint` | ESLint チェック |
+| `npm run build` | 静的書き出し（`frontend/out/` に出力） |
+
+## デプロイ（さくらのレンタルサーバ）
+
+**本番公開は運営者の承認後に行います。**
+
+1. `npm run build` で `frontend/out/` を作る
+2. `out/` の中身（`.htaccess` を含む）を、公開ディレクトリにアップロードする
+3. `/` が言語ごとに `/ja/` か `/en/` に移動することを確認する
+
+`.htaccess` は隠しファイルです。FTP ソフトで「隠しファイルを表示」にしてからアップロードしてください。
+
+[要決定] 公開ディレクトリのパス、アップロード方法（FTP／SFTP／自動化）。
 
 ## プロトタイプを見る
 
