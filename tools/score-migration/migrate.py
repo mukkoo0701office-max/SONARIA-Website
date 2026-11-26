@@ -6,7 +6,8 @@
 - PDF は旧サイトから取得し、検査（audit.py）で記録した SHA-256 と一致するものだけを使う（差し替え・誤リンクの防止）
 - 保存する PDF には統一した文書情報（タイトル・作曲者・件名・キーワード）を書き込み、
   統一ファイル名（naming.py。例: Beethoven_Violin-Sonata-No5-Op24_Violin.pdf）でリリースに置く
-- 以前の名前（<作品ID>--<ファイルID>.pdf）で置いた添付ファイルは、取り直さずに文書情報を書き込んで改名し、古いものを消す
+- 以前の名前（<作品ID>--<ファイルID>.pdf）で置いた添付ファイルは、取り直さずに文書情報を書き込んで統一名で置き直す。
+  公開中のプレビューが以前の名前を参照しているあいだは以前の名前も残し、切り替え後に --drop-legacy で消す
 - PDF 本体はリポジトリに入れない（合計約 1.5GB で GitHub Pages の上限 1GB を超えるため。リリースの添付は後から完全に削除・差し替えできる）
 - 1 ページ目の画像（幅 600px の JPEG）は frontend/public/scores/<作品ID>/<ファイルID>-p1.jpg に保存する
 - 出力: frontend/src/data/scores/catalog.json
@@ -93,6 +94,7 @@ def main() -> int:
     ap.add_argument("--repo", required=True)
     ap.add_argument("--release-tag", default="scores-v1")
     ap.add_argument("--time-budget", type=int, default=5 * 3600)
+    ap.add_argument("--drop-legacy", dest="keep_legacy", action="store_false", help="以前の名前（<作品ID>--<ファイルID>.pdf）の添付ファイルを消す")
     args = ap.parse_args()
     deadline = time.time() + args.time_budget
 
@@ -178,10 +180,14 @@ def main() -> int:
                         make_preview(stamped, jpg_abs)
                     gh("release", "upload", tag, stamped, "--clobber")
                     released.add(name)
-                    if source == "release" and old_name != name:  # 改名前の添付ファイルを消す
-                        gh("release", "delete-asset", tag, old_name, "--yes")
-                        released.discard(old_name)
                     sha, size = sha256_of(stamped), os.path.getsize(stamped)
+                    if args.keep_legacy and old_name != name and old_name not in released:
+                        # 公開中のプレビューが以前の名前を参照しているあいだは、以前の名前のファイルも残す（--drop-legacy で消す）
+                        legacy = os.path.join(tmp, old_name)
+                        os.replace(stamped, legacy)
+                        gh("release", "upload", tag, legacy, "--clobber")
+                        released.add(old_name)
+                        stamped = legacy
                     os.remove(stamped)
                     report["renamed" if source == "release" else "from_old_site"] += 1
 
@@ -208,6 +214,14 @@ def main() -> int:
                 editions_out.append({k: v for k, v in ed.items() if k != "assets"} | {"assets": assets_out})
         if editions_out:
             works_out.append({k: v for k, v in work.items() if k != "editions"} | {"editions": editions_out})
+
+    if not args.keep_legacy:
+        legacy_names = {f"{w['id']}--{a['id']}.pdf" for w in approvals["works"] for e in w["editions"] for a in e["assets"]}
+        for n in sorted(released & legacy_names):
+            if n not in set(names.values()):
+                gh("release", "delete-asset", tag, n, "--yes")
+                report.setdefault("legacy_deleted", 0)
+                report["legacy_deleted"] += 1
 
     catalog = {"version": 1, "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"), "works": works_out}
     with open(catalog_path, "w", encoding="utf-8") as f:
