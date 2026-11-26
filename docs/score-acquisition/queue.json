@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Mozart",
     "stage": "string_quartet",
-    "last_work": "K.156/134b",
-    "note": "Next Mozart K.157; existing SONARIA catalog duplication remains unverified."
+    "last_work": "K.159",
+    "note": "Next K.160/159a; queue candidates require site duplicate verification and Claude PDF/rights checks."
   },
   "items": [
     {
@@ -5833,6 +5833,198 @@
       },
       "rights_status": "unknown",
       "notes": "IMSLP lists alternate 1st version of second movement; inspect score/parts to determine which version is used. Check all three movements, page order, part compatibility, legibility, original editions and Japan republication rights. Existing SONARIA catalog not confirmed. No PDF retrieved.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-k157-breitkopf-peters",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.4 in C major",
+      "opus_catalog": "K.157",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.4_in_C_major%2C_K.157_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel (score); C.F. Peters (parts)",
+        "publication_date": "1881 (score); ca.1890 (parts)",
+        "editor": "Breitkopf Serie XIV: Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (exact work editor unspecified); Peters parts: Andreas Moser and Hugo Becker",
+        "score_file_id": "64122",
+        "score_pages": 8,
+        "parts_file_ids": {
+          "violin_1": "01818",
+          "violin_2": "01819",
+          "viola": "01820",
+          "cello": "01821"
+        },
+        "nma_alternative": {
+          "publisher": "Bärenreiter",
+          "edition": "Neue Mozart-Ausgabe VIII/20, Band 1",
+          "year": 1966,
+          "file_id": "669084",
+          "pages": 16,
+          "editors": [
+            "Karl Heinz Füssl",
+            "Wolfgang Plath",
+            "Wolfgang Rehm"
+          ],
+          "note": "Scholarly reference only pending Japan rights review; do not auto-publish."
+        },
+        "edition_comparison": "Primary practical pairing: Breitkopf & Härtel historical score and C.F. Peters historical parts; NOT same edition. Compare dynamics, bowings, articulations, measure counts and movements. NMA for critical comparison only; rights not cleared."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.4_in_C_major%2C_K.157_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.4_in_C_major%2C_K.157_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP metadata confirms K.157, 3 movements, 2 violins/viola/cello, Breitkopf 1881 score #64122, Peters ca.1890 parts #01818, #01819, #01820, #01821, and NMA score #669084; PDF not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_not_pdf_verified",
+        "parts": "four_part_files_listed_not_opened",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_id_checked; actual_site_inventory_unverified",
+        "rights": "unknown_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "For Claude: validate each part and score contains all three movements, compare Breitkopf score vs Peters parts for musical consistency; NMA scholarly version may have additional copyright issues in Japan. Existing SONARIA site inventory not located; not confirmed unpublished. No download or publish authorized.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-k158-breitkopf-peters",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.5 in F major",
+      "opus_catalog": "K.158",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.5_in_F_major%2C_K.158_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel (score); C.F. Peters (parts)",
+        "publication_date": "1881 (score); ca.1890 (parts)",
+        "editor": "Breitkopf Serie XIV: Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (exact work editor unspecified); Peters parts: Andreas Moser and Hugo Becker",
+        "score_file_id": "64125",
+        "score_pages": 7,
+        "parts_file_ids": {
+          "violin_1": "01822",
+          "violin_2": "01823",
+          "viola": "01824",
+          "cello": "01825"
+        },
+        "nma_alternative": {
+          "publisher": "Bärenreiter",
+          "edition": "Neue Mozart-Ausgabe VIII/20, Band 1",
+          "year": 1966,
+          "file_id": "481961",
+          "pages": 12,
+          "editors": [
+            "Karl Heinz Füssl",
+            "Wolfgang Plath",
+            "Wolfgang Rehm"
+          ],
+          "note": "Scholarly reference only pending Japan rights review; do not auto-publish."
+        },
+        "edition_comparison": "Primary practical pairing: Breitkopf & Härtel historical score and C.F. Peters historical parts; NOT same edition. Compare dynamics, bowings, articulations, measure counts and movements. NMA for critical comparison only; rights not cleared."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.5_in_F_major%2C_K.158_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.5_in_F_major%2C_K.158_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP metadata confirms K.158, 3 movements, 2 violins/viola/cello, Breitkopf 1881 score #64125, Peters ca.1890 parts #01822, #01823, #01824, #01825, and NMA score #481961; PDF not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_not_pdf_verified",
+        "parts": "four_part_files_listed_not_opened",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_id_checked; actual_site_inventory_unverified",
+        "rights": "unknown_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "For Claude: validate each part and score contains all three movements, compare Breitkopf score vs Peters parts for musical consistency; NMA scholarly version may have additional copyright issues in Japan. Existing SONARIA site inventory not located; not confirmed unpublished. No download or publish authorized.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-k159-breitkopf-peters",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.6 in B-flat major",
+      "opus_catalog": "K.159",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.6_in_B-flat_major%2C_K.159_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel (score); C.F. Peters (parts)",
+        "publication_date": "1881 (score); ca.1890 (parts)",
+        "editor": "Breitkopf Serie XIV: Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (exact work editor unspecified); Peters parts: Andreas Moser and Hugo Becker",
+        "score_file_id": "64126",
+        "score_pages": 9,
+        "parts_file_ids": {
+          "violin_1": "01826",
+          "violin_2": "01827",
+          "viola": "01828",
+          "cello": "01829"
+        },
+        "nma_alternative": {
+          "publisher": "Bärenreiter",
+          "edition": "Neue Mozart-Ausgabe VIII/20, Band 1",
+          "year": 1966,
+          "file_id": "481962",
+          "pages": 16,
+          "editors": [
+            "Karl Heinz Füssl",
+            "Wolfgang Plath",
+            "Wolfgang Rehm"
+          ],
+          "note": "Scholarly reference only pending Japan rights review; do not auto-publish."
+        },
+        "edition_comparison": "Primary practical pairing: Breitkopf & Härtel historical score and C.F. Peters historical parts; NOT same edition. Compare dynamics, bowings, articulations, measure counts and movements. NMA for critical comparison only; rights not cleared."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.6_in_B-flat_major%2C_K.159_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.6_in_B-flat_major%2C_K.159_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP metadata confirms K.159, 3 movements, 2 violins/viola/cello, Breitkopf 1881 score #64126, Peters ca.1890 parts #01826, #01827, #01828, #01829, and NMA score #481962; PDF not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_not_pdf_verified",
+        "parts": "four_part_files_listed_not_opened",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_id_checked; actual_site_inventory_unverified",
+        "rights": "unknown_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "For Claude: validate each part and score contains all three movements, compare Breitkopf score vs Peters parts for musical consistency; NMA scholarly version may have additional copyright issues in Japan. Existing SONARIA site inventory not located; not confirmed unpublished. No download or publish authorized.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
