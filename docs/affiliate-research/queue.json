@@ -89,12 +89,14 @@
       "asin": null,
       "isbn": null,
       "source": "https://www.henle.de/jp/String-Quartets-Book-IV-op.-20-Sun-Quartets/HN-208",
-      "verification": "出版社の商品は確認。Amazon.co.jpのASINと販売ページは未確認",
+      "verification": "HN208 described as Haydn Op.20 Sun Quartets set of parts in third-party music shop; Amazon.co.jp ASIN and direct URL still not verified.",
       "status": "pending_review",
       "priority": "S",
       "last_research_at": "2026-11-27",
       "amazon_verification_status": "not_confirmed",
-      "verification_notes": "2026-11-27: Amazon.co.jpのHN205/HN208/HN211商品詳細とASINを照合するためウェブ検索したが、信頼できる個別商品結果を確認できず。公式商品情報との対応は保留。"
+      "verification_notes": "2026-11-27: Amazon.co.jpのHN205/HN208/HN211商品詳細とASINを照合するためウェブ検索したが、信頼できる個別商品結果を確認できず。公式商品情報との対応は保留。",
+      "product_format": "set_of_parts",
+      "additional_source": "https://www.tapestrymusic.com/p-30939-haydn-string-quartets-vol-iv-op-20-sun-quartets-set-of-parts-edition-without-fingering-henle-hn-208.aspx"
     },
     {
       "id": "haydn-henle-hn9205",
@@ -162,10 +164,13 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Haydn Henle HN205, HN208, HN211, plus existing HN9205/HN9216",
-    "result": "No confirmed Amazon.co.jp product detail URL/ASIN in this run; do not generate tag links from guessed ASIN.",
-    "next": "Search Amazon catalog by EAN/ISBN on publisher product pages and verify with official detail pages.",
-    "research_source": "Amazon.co.jp target-domain web search (negative result; no definitive product match)",
-    "new_verified_products": 0
+    "focus": "Haydn G. Henle HN205/HN208/HN211 and possible Amazon.co.jp catalog matches",
+    "results": "Amazon.co.jp domain-targeted search with exact publisher/catalog numbers produced no verifiable individual Amazon product page or ASIN. Independent merchant Tapestry lists HN208 as an Op.20 Sun Quartets parts set, but not evidence of Amazon Japan availability.",
+    "evidence_urls": [
+      "https://www.tapestrymusic.com/p-30939-haydn-string-quartets-vol-iv-op-20-sun-quartets-set-of-parts-edition-without-fingering-henle-hn-208.aspx"
+    ],
+    "new_amazon_verified": 0,
+    "existing_candidates": 8,
+    "next": "Use original publisher catalog ISBN/EAN to identify specific Amazon.co.jp ASIN and verify details directly before generating tagged links."
   }
 }
