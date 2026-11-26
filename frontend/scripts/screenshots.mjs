@@ -29,6 +29,21 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   }
 
   await page.goto(`${base}/ja/`, { waitUntil: "networkidle" });
+  // 透明になってはいけない部分（色の透明度指定が効いているか）
+  const transparent = "rgba(0, 0, 0, 0)";
+  const dotBg = await page.locator('[aria-roledescription="carousel"] ul button span').nth(1).evaluate((el) => getComputedStyle(el).backgroundColor);
+  check(`${vpName}: inactive indicator dot visible`, dotBg !== transparent, dotBg);
+  const headerBg = await page.locator("header").first().evaluate((el) => getComputedStyle(el).backgroundColor);
+  check(`${vpName}: sticky header has background`, headerBg !== transparent, headerBg);
+  if (vpName === "desktop") {
+    const arrowBg = await page.locator(`[aria-roledescription="carousel"] button[aria-label="前のスライド"]`).first().evaluate((el) => getComputedStyle(el).backgroundColor);
+    check("desktop: hero arrow visible", arrowBg !== transparent, arrowBg);
+  }
+  await page.mouse.wheel(0, 900);
+  await page.waitForTimeout(400);
+  await shot(page, `${vpName}-ja-scrolled`, false);
+  await page.mouse.wheel(0, -2000);
+
   // スライダー: 次へ・インジケーター
   const indicator = page.locator('[aria-roledescription="carousel"] ul button').nth(2);
   await indicator.click();

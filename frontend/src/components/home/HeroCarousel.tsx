@@ -159,11 +159,11 @@ export default function HeroCarousel({ locale }: { locale: Locale }) {
                     className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent sm:bg-gradient-to-r sm:from-navy/85 sm:via-navy/45 sm:to-transparent"
                     aria-hidden="true"
                   />
-                  <div className="absolute inset-x-0 bottom-0 px-6 pb-16 pt-6 text-white sm:inset-y-0 sm:flex sm:max-w-[60%] sm:flex-col sm:justify-center sm:px-12 sm:pb-12 lg:px-16">
+                  <div className="absolute inset-x-0 bottom-0 px-6 pb-16 pt-6 text-white sm:inset-y-0 sm:flex sm:max-w-[68%] sm:flex-col sm:justify-center sm:px-12 sm:pb-12 lg:px-16">
                     <p className="text-[11px] tracking-[0.25em] text-gold" aria-hidden="true">
                       {String(i + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
                     </p>
-                    <p className="mt-2 font-brand text-[26px] leading-tight sm:text-[34px] lg:text-[42px]">{copy.title}</p>
+                    <p className="mt-2 text-balance font-brand text-[26px] leading-tight sm:text-[34px] lg:text-[42px]">{copy.title}</p>
                     <p className="mt-3 text-sm leading-relaxed text-white/90 sm:text-base">{copy.catchCopy}</p>
                     <span className="mt-5 inline-flex w-fit items-center gap-2 rounded-full bg-card px-5 py-2.5 text-[13px] font-semibold text-navy transition-colors group-hover:bg-paper">
                       {copy.cta}
