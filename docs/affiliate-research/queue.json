@@ -494,6 +494,70 @@
       "status": "pending_review",
       "verification": "Official Henle product confirms pocket study score, 130 pages, works Op.54/55 and editor James Webster. No direct Amazon.co.jp product page/ASIN verified.",
       "date_checked": "2026-11-27"
+    },
+    {
+      "composer": "Haydn",
+      "publisher": "G. Henle Verlag",
+      "work_ids": [
+        "Op.64 No.1",
+        "Op.64 No.2",
+        "Op.64 No.3",
+        "Op.64 No.4",
+        "Op.64 No.5",
+        "Op.64 No.6"
+      ],
+      "editor": [
+        "Warren Kirkendale",
+        "Isidor Saslav",
+        "Georg Feder"
+      ],
+      "preface": "Christin Heitmann",
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "priority": "S",
+      "status": "pending_review",
+      "date_checked": "2026-11-27",
+      "id": "haydn-henle-hn212",
+      "category": "printed_score",
+      "title": "String Quartets Book VIII op.64 (Second Tost Quartets) Urtext Playing Parts",
+      "publisher_catalog": "HN 212",
+      "ismn": "979-0-2018-0212-1",
+      "pages": 144,
+      "source": "https://www.henle.de/jp/String-Quartets-Book-VIII-op.-64-Second-Tost-Quartets/HN-212",
+      "verification": "Henle official catalog confirms HN212 ISMN, 144 pages, editing team and Op.64 scope. Amazon.co.jp ASIN and product detail not confirmed."
+    },
+    {
+      "composer": "Haydn",
+      "publisher": "G. Henle Verlag",
+      "work_ids": [
+        "Op.64 No.1",
+        "Op.64 No.2",
+        "Op.64 No.3",
+        "Op.64 No.4",
+        "Op.64 No.5",
+        "Op.64 No.6"
+      ],
+      "editor": [
+        "Warren Kirkendale",
+        "Isidor Saslav",
+        "Georg Feder"
+      ],
+      "preface": "Christin Heitmann",
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "priority": "S",
+      "status": "pending_review",
+      "date_checked": "2026-11-27",
+      "id": "haydn-henle-hn9212",
+      "category": "pocket_score",
+      "title": "String Quartets Book VIII op.64 (Second Tost Quartets) Study Score",
+      "publisher_catalog": "HN 9212",
+      "ismn": "979-0-2018-9212-2",
+      "pages": 114,
+      "source": "https://www.henle.de/jp/String-Quartets-Book-VIII-op.-64-Second-Tost-Quartets/HN-9212",
+      "verification": "Henle official catalog confirms HN9212 ISMN, 114 pages, editing team and Op.64 scope. Amazon.co.jp ASIN and product detail not confirmed."
     }
   ],
   "implementation_ready": 0,
@@ -501,22 +565,14 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Amazon.co.jp direct product-page lookup for HN205 HN208 HN9205 HN9216 HN211",
-    "result": "Five targeted site:amazon.co.jp searches for exact Henle catalog numbers and Haydn yielded no matching Amazon.co.jp product detail pages; search results were unrelated Amazon Music pages. No ASIN or affiliate URL verified. Preserve pending_review for all five.",
-    "new_publisher_confirmed": 0,
+    "focus": "Identify Haydn HN211/HN9211 Amazon Japan product detail and publisher-confirmed Op.64 HN212/HN9212",
+    "result": "No verifiable Amazon.co.jp direct ASIN for HN211 or HN9211 in targeted searches. Added HN212/HN9212 as verified Henle publisher items (not Amazon-verified); ISBN-style ISMN and editorial details checked.",
+    "new_publisher_confirmed": 2,
     "new_amazon_verified": 0,
-    "existing_records_enriched": 0,
-    "next": "Try exact ISMN/EAN searches and alternative Japanese/German titles through direct Amazon catalog or permitted Product Advertising API; require actual individual Amazon product detail page before verification.",
-    "checked_ids": [
-      "haydn-henle-hn205",
-      "haydn-henle-hn208",
-      "haydn-henle-hn9205",
-      "haydn-henle-hn9216",
-      "haydn-henle-hn211"
-    ],
-    "source_urls": [
-      "https://www.amazon.co.jp/",
-      "https://affiliate.amazon.co.jp/help/operating/policies/"
+    "next": "Try direct Amazon Japan lookup using ISMN 9790201802121 and 9790201892122. Only create affiliate links after ASIN/detail listing verified.",
+    "evidence_urls": [
+      "https://www.henle.de/jp/String-Quartets-Book-VIII-op.-64-Second-Tost-Quartets/HN-212",
+      "https://www.henle.de/jp/String-Quartets-Book-VIII-op.-64-Second-Tost-Quartets/HN-9212"
     ]
   }
 }
