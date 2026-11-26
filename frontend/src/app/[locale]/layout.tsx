@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
+import SiteFooter from "@/components/layout/SiteFooter";
+import SiteHeader from "@/components/layout/SiteHeader";
 import { getDictionary } from "@/data/dictionaries";
 import { isLocale, locales } from "@/lib/i18n";
 import "../globals.css";
@@ -31,6 +31,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: { default: dict.meta.siteTitle, template: `%s | ${dict.meta.siteTitle}` },
     description: dict.meta.siteDescription,
+    openGraph: {
+      siteName: dict.meta.siteTitle,
+      title: dict.meta.siteTitle,
+      description: dict.meta.siteDescription,
+      type: "website",
+      locale: locale === "ja" ? "ja_JP" : "en_US",
+    },
     ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
     ...(isPreview ? { robots: { index: false, follow: false } } : {}),
   };
@@ -43,18 +50,19 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale}>
-      <body>
+      <body className="flex min-h-dvh flex-col">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:rounded-button focus:bg-card focus:px-4 focus:py-2"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-button focus:bg-card focus:px-4 focus:py-2"
         >
           {dict.common.skipToContent}
         </a>
-        <div className="mx-auto max-w-content px-3 pb-12 pt-3.5 sm:px-4 sm:pb-16 sm:pt-[22px]">
-          <Header locale={locale} />
-          <main id="main">{children}</main>
-          <Footer locale={locale} />
-        </div>
+        <SiteHeader locale={locale} />
+        {/* 各ページが自分で幅を決める（トップは広め、検索ページは承認済みの 780px） */}
+        <main id="main" className="flex-1">
+          {children}
+        </main>
+        <SiteFooter locale={locale} />
       </body>
     </html>
   );
