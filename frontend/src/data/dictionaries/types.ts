@@ -11,6 +11,21 @@ export type PlaceholderCopy = {
   body: readonly string[];
 };
 
+// 内容のあるサービス・紹介ページの文言（見出しごとの段落・箇条書き）
+export type ContentSection = {
+  heading: string;
+  paragraphs?: readonly string[];
+  items?: readonly string[];
+  ordered?: boolean; // 手順など番号付きの箇条書きにする
+};
+
+export type ContentCopy = {
+  title: string;
+  lead: string;
+  sections: readonly ContentSection[];
+  footnote?: string;
+};
+
 // 日英の文言は必ずこの型に沿って同じ構造で持つ（CLAUDE.md: 日英の文言は同じ構造のデータで持つ）
 // 関数を含むため、サーバーコンポーネントからクライアントコンポーネントへ辞書を props で渡さない。
 // クライアント側では getDictionary(locale) を直接呼ぶ。
@@ -170,10 +185,15 @@ export type Dictionary = {
     headline: string;
     body: string;
   };
-  placeholders: Record<
-    "bowing" | "lessons" | "recording" | "performance" | "community" | "profile" | "contact" | "privacy",
-    PlaceholderCopy
-  >;
+  // 準備中のページ
+  placeholders: Record<"performance" | "contact" | "privacy", PlaceholderCopy>;
+  // 内容のあるページ（旧サイト https://www.mukkoo0701music.jp/ の文章をもとに作成）
+  contentPages: Record<"bowing" | "lessons" | "recording" | "community" | "profile", ContentCopy>;
+  contentCta: {
+    contact: string;
+    profile: string;
+    teachers: string;
+  };
   community: {
     externalLinkLabel: string;
   };

@@ -92,9 +92,9 @@ export const en: Dictionary = {
     next: "Next cards",
     note: "These are paid SONARIA services. They do not affect teacher search listings or order.",
     items: {
-      bowing: { title: "Bowing & fingering", body: "We mark bowings and fingerings in the parts you plan to perform." },
-      lessons: { title: "Lessons", body: "Lessons for beginners through advanced players, tailored to your goals." },
-      recording: { title: "Recording", body: "Performance recordings for works, CDs and video." },
+      bowing: { title: "Bowing & fingering", body: "Violin parts marked with fingerings and bowings that balance playability and musicality." },
+      lessons: { title: "Lessons", body: "Violin lessons for children and adults, at our studio in Unoki, Tokyo, or at your home." },
+      recording: { title: "Recording", body: "Live violin for songs, video and BGM, recorded remotely through file exchange." },
       performance: { title: "Performance", body: "Live performances for concerts, events and ceremonies." },
     },
   },
@@ -208,38 +208,10 @@ export const en: Dictionary = {
     body: "SONARIA (SONG × ARIA) is an independent, neutral music platform centered on classical music. It values the convenience and quality of works, scores, performers and teachers, communities and music education.",
   },
   placeholders: {
-    bowing: {
-      title: "Bowing & fingering",
-      lead: "We mark bowings and fingerings in the parts you plan to perform.",
-      body: ["How to order, supported instruments and ensembles, turnaround and pricing will be announced on this page."],
-    },
-    lessons: {
-      title: "Lessons",
-      lead: "SONARIA lessons tailored to your goals and level.",
-      body: [
-        "Lesson content, formats and pricing will be announced on this page.",
-        "To find teachers who are music university students or graduates, use Find teachers (free).",
-      ],
-    },
-    recording: {
-      title: "Recording",
-      lead: "Performance recordings for works, CDs and video.",
-      body: ["How to order, what we can record and pricing will be announced on this page."],
-    },
     performance: {
       title: "Performance",
       lead: "Live performances for concerts, events and ceremonies.",
       body: ["Available ensembles, areas, how to book and pricing will be announced on this page."],
-    },
-    community: {
-      title: "Mukoyama Strings Community",
-      lead: "Play in an ensemble with fellow string players.",
-      body: ["Activities, rehearsal schedule and how to join will be announced on this page. For current information, see the official site."],
-    },
-    profile: {
-      title: "About the curator",
-      lead: "Profile of the curator who oversees SONARIA.",
-      body: ["The profile will be published on this page."],
     },
     contact: {
       title: "Contact",
@@ -251,6 +223,163 @@ export const en: Dictionary = {
       lead: "How we handle personal information.",
       body: ["The privacy policy is in preparation and will be published here before launch."],
     },
+  },
+  // Based on the previous site (https://www.mukkoo0701music.jp/). 仮: pricing and payment methods are not listed yet.
+  contentPages: {
+    bowing: {
+      title: "Bowing & fingering",
+      lead: "Stuck because you can't settle on fingerings or bowings? We mark them in your part in advance so you can get on with practicing.",
+      sections: [
+        {
+          heading: "Who it's for",
+          items: [
+            "Players whose practice stalls because fingerings and bowings aren't decided",
+            "Players who take lessons only to decide fingerings and bowings (this saves time and cost)",
+            "Anyone who wants markings that balance playability and musical expression",
+          ],
+        },
+        { heading: "Instruments", paragraphs: ["Currently available for violin."] },
+        {
+          heading: "Our approach",
+          paragraphs: ["We choose fingerings and bowings that most players can manage comfortably, balancing playability with the flow of the music. We start work as soon as possible after receiving your request."],
+        },
+        {
+          heading: "How to order",
+          ordered: true,
+          items: [
+            "Tell us the piece via the contact page",
+            "We confirm the details by email",
+            "Send us the score data",
+            "We deliver the part with fingerings and bowings marked",
+          ],
+        },
+        {
+          heading: "About scores",
+          paragraphs: ["For copyright reasons, please provide score data without copyright issues, such as scores available on IMSLP. You can also use SONARIA's score search."],
+        },
+      ],
+      footnote: "Pricing, turnaround and payment methods will be announced on this page.",
+    },
+    lessons: {
+      title: "Lessons",
+      lead: "Violin lessons for children, students and working adults, regardless of age or experience. Adult beginners are welcome.",
+      sections: [
+        {
+          heading: "Our approach",
+          items: [
+            "We work back from your goals to set concrete tasks, and plan lessons together with you",
+            "You can learn from the basics, including reading music",
+            "Beyond technique, we cover the background and history of pieces, music theory and scientific perspectives",
+            "We focus on helping you assess your own playing accurately",
+          ],
+        },
+        {
+          heading: "Method books & genres",
+          paragraphs: [
+            "Children mainly use Shinozaki's New Violin Method or the Suzuki Violin School; adults mainly use the Hohmann method.",
+            "Not only classical: players inspired by pop artists are welcome too.",
+          ],
+        },
+        {
+          heading: "Location & format",
+          items: [
+            "Studio: Unoki, Ota-ku, Tokyo (5 min walk from Unoki Sta., Tokyu Tamagawa Line)",
+            "Visiting lessons: within Tokyo and Kanagawa",
+            "Hours: between 9:00 and 22:00, usually one hour per lesson",
+          ],
+        },
+        {
+          heading: "Fractional violin rental",
+          paragraphs: ["1/8, 1/4, 1/2 and 3/4 sizes are available (with case, bow and shoulder rest). Let us know when you apply."],
+        },
+        { heading: "Trial lesson", paragraphs: ["Trial lessons are available. Please apply via the contact page."] },
+        { heading: "Teacher", paragraphs: ["Lessons are taught directly by a graduate of Tokyo University of the Arts (the SONARIA curator)."] },
+      ],
+      footnote: "Pricing will be announced on this page. To find teachers who are music university students or graduates, also try Find teachers (free).",
+    },
+    recording: {
+      title: "Recording",
+      lead: "Live violin for songs, film and video, BGM and scores, demos and competition tracks. A remote recording service handled entirely through file exchange. Any genre.",
+      sections: [
+        {
+          heading: "Who it's for",
+          items: [
+            "Songs and visual works that need live strings to carry the emotional core",
+            "BGM and soundtracks that need subtle but effective strings",
+            "Projects where synths or AI-generated sounds aren't convincing enough",
+            "Demos and competition tracks that need a higher level of finish",
+          ],
+        },
+        { heading: "Our approach", paragraphs: ["We read the context of your track and add only the notes it needs, where it needs them."] },
+        {
+          heading: "Recording environment",
+          paragraphs: ["We record with a fine violin at Kamekichi Ongakudo studio (3 min walk from Unoki Sta., Tokyu Tamagawa Line)."],
+        },
+        {
+          heading: "How to order",
+          ordered: true,
+          items: [
+            "Tell us the image and purpose of your track via the contact page",
+            "Send a 2-mix and a score or MIDI data (please quantize and trim MIDI where possible)",
+            "We record based on your data",
+            "We deliver WAV files (one track per part) by email or a file transfer service",
+          ],
+        },
+      ],
+      footnote: "Pricing, turnaround and payment methods will be announced on this page. We are happy to discuss your project.",
+    },
+    community: {
+      // 要確認: 「向山」のローマ字表記
+      title: "Mukoyama Strings Community",
+      lead: "A string ensemble based in the Tama and Kawasaki area. We aim to enjoy ensemble playing with genuinely good sound, as a community where people can keep making music happily.",
+      sections: [
+        {
+          heading: "Activities",
+          items: [
+            "Rehearsals: basically twice a month, at a comfortable pace, building the sound carefully from the basics",
+            "Concerts: once or twice a year, volunteer appearances at free local music festivals and events",
+            "Member activities: small ensembles such as string quartets, and social gatherings",
+            "Optional online club activities on Discord",
+          ],
+        },
+        { heading: "Where we rehearse", paragraphs: ["Community centers in Kawasaki (such as Takatsu and Tama Shimin-kan)."] },
+        { heading: "Instruments", paragraphs: ["Violin, viola, cello and double bass. Beginners and returning players are welcome."] },
+        { heading: "Joining", paragraphs: ["Membership is currently by referral from existing members. See the official site for fees and details."] },
+        { heading: "Organizer", paragraphs: ["Organized by the SONARIA curator."] },
+      ],
+    },
+    profile: {
+      title: "About the curator",
+      lead: "Profile of the curator who oversees SONARIA.",
+      sections: [
+        {
+          // 要確認: ローマ字表記
+          heading: "Yuki Mukoyama",
+          paragraphs: ["Violinist. Alongside classical performance, active in recording for film and TV, live support for artists, composition and arrangement, app development and music education."],
+        },
+        {
+          heading: "Background",
+          items: [
+            "Began playing the violin at age 5",
+            "Graduated from the Department of Instrumental Music, Faculty of Music, Tokyo University of the Arts, after attending its affiliated high school. Selected as an outstanding performer in the chamber music examination and appeared in the regular chamber music concert",
+            "Studied with Katsuya Matsubara, Seiji Kageyama and Yuko Kageyama",
+            "Attended master classes at the Risonare Chamber Music Academy",
+            "2009: Invited to perform at the Embassy of Afghanistan",
+            "2018: Performed in JACOB COLLIER with BLUE NOTE Tokyo JAZZ Symphonic Orchestra",
+          ],
+        },
+        { heading: "Affiliations", items: ["Member of Tokyo Geidai Strings (TGS)", "Creator, Librast Inc."] },
+        {
+          heading: "Role at SONARIA",
+          paragraphs: ["Oversees SONARIA as curator. SONARIA is not a site for promoting any individual; it is run as a neutral music platform for works, scores, teachers and communities."],
+        },
+      ],
+    },
+  },
+  contentCta: {
+    contact: "Contact",
+    profile: "About the curator",
+    teachers: "Find teachers (free)",
   },
   community: {
     externalLinkLabel: "Mukoyama Strings Community official site",

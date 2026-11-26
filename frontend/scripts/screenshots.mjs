@@ -104,8 +104,12 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
     const res = await page.goto(`${base}/ja/${path}/`, { waitUntil: "networkidle" });
     check(`${vpName}: /ja/${path}/ loads`, res && res.status() === 200, String(res && res.status()));
   }
-  await page.goto(`${base}/ja/bowing/`, { waitUntil: "networkidle" });
-  await shot(page, `${vpName}-ja-placeholder-bowing`);
+  for (const path of ["bowing", "lessons", "recording", "community", "profile"]) {
+    await page.goto(`${base}/ja/${path}/`, { waitUntil: "networkidle" });
+    await shot(page, `${vpName}-ja-${path}`);
+  }
+  await page.goto(`${base}/en/lessons/`, { waitUntil: "networkidle" });
+  await shot(page, `${vpName}-en-lessons`);
   await page.goto(`${base}/en/scores/`, { waitUntil: "networkidle" });
   await shot(page, `${vpName}-en-scores`);
 
