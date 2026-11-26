@@ -2,7 +2,7 @@
 
 import type { Session } from "@supabase/supabase-js";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { applicationStatuses, type ApplicationStatus } from "@shared/schema";
+import { allFields, applicationStatuses, serviceDefs, type ApplicationStatus, type ServiceId } from "@shared/schema";
 import { formsJa } from "@/data/dictionaries/forms/ja";
 import { BUCKET, backendConfigured, getSupabase } from "@/lib/backend";
 
@@ -76,6 +76,14 @@ function fieldValue(service: string, key: string, v: unknown): string {
   if (typeof v === "boolean") return v ? "はい" : "いいえ";
   if (typeof v === "string") return opts?.[v] ?? v.replace(/^(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2})$/, "$1 $2");
   return v === null || v === undefined ? "" : String(v);
+}
+
+// 申し込み内容をフォームと同じ順番に並べる（定義にない項目は最後）
+function orderedEntries(service: string, payload: Record<string, unknown>): [string, unknown][] {
+  const def = serviceDefs[service as ServiceId];
+  const order = def ? allFields(def).map((f) => f.key) : [];
+  const rank = (k: string) => (order.includes(k) ? order.indexOf(k) : order.length);
+  return Object.entries(payload).sort(([a], [b]) => rank(a) - rank(b));
 }
 
 function csvEscape(v: unknown): string {
@@ -460,7 +468,7 @@ function Detail({ app, onChanged }: { app: Application; onChanged: () => void })
       <section>
         <h3 className="mb-2 text-[13px] font-semibold">申し込み内容</h3>
         <dl className="grid gap-1 text-[14px]">
-          {Object.entries(app.payload).map(([k, v]) => (
+          {orderedEntries(app.service, app.payload).map(([k, v]) => (
             <Row key={k} k={fieldLabel(app.service, k)} v={fieldValue(app.service, k, v)} />
           ))}
         </dl>
