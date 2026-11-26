@@ -558,6 +558,68 @@
       "pages": 114,
       "source": "https://www.henle.de/jp/String-Quartets-Book-VIII-op.-64-Second-Tost-Quartets/HN-9212",
       "verification": "Henle official catalog confirms HN9212 ISMN, 114 pages, editing team and Op.64 scope. Amazon.co.jp ASIN and product detail not confirmed."
+    },
+    {
+      "id": "haydn-henle-hn213",
+      "title": "String Quartets Book IX op.71 and 74 (Apponyi Quartets) Urtext Parts",
+      "category": "printed_score",
+      "publisher_catalog": "HN 213",
+      "ismn": "979-0-2018-0213-8",
+      "format": "performing parts",
+      "pages": "161 (V+47+39+35+35)",
+      "editors": [
+        "Georg Feder",
+        "Isidor Saslav"
+      ],
+      "source": "https://www.henle.de/jp/String-Quartets-Book-IX-op.-71-and-74-Apponyi-Quartets/HN-213",
+      "composer": "Haydn",
+      "publisher": "G. Henle Verlag",
+      "work_ids": [
+        "Op.71 No.1",
+        "Op.71 No.2",
+        "Op.71 No.3",
+        "Op.74 No.1",
+        "Op.74 No.2",
+        "Op.74 No.3"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "priority": "S",
+      "status": "pending_review",
+      "verification": "Publisher official product page verified title, ISMN, editors, content and format, but Amazon.co.jp matching ASIN and product listing unverified. Never fabricate a tagged link.",
+      "date_checked": "2026-11-27"
+    },
+    {
+      "id": "haydn-henle-hn9213",
+      "title": "String Quartets Book IX op.71 and 74 (Apponyi Quartets) Study Score",
+      "category": "pocket_score",
+      "publisher_catalog": "HN 9213",
+      "ismn": "979-0-2018-9213-9",
+      "format": "pocket study score",
+      "pages": "135 (VIII+127)",
+      "editors": [
+        "Georg Feder",
+        "Isidor Saslav"
+      ],
+      "source": "https://www.henle.de/jp/String-Quartets-Book-IX-op.-71-and-74-Apponyi-Quartets/HN-9213",
+      "composer": "Haydn",
+      "publisher": "G. Henle Verlag",
+      "work_ids": [
+        "Op.71 No.1",
+        "Op.71 No.2",
+        "Op.71 No.3",
+        "Op.74 No.1",
+        "Op.74 No.2",
+        "Op.74 No.3"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "priority": "S",
+      "status": "pending_review",
+      "verification": "Publisher official product page verified title, ISMN, editors, content and format, but Amazon.co.jp matching ASIN and product listing unverified. Never fabricate a tagged link.",
+      "date_checked": "2026-11-27"
     }
   ],
   "implementation_ready": 0,
@@ -565,14 +627,14 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Identify Haydn HN211/HN9211 Amazon Japan product detail and publisher-confirmed Op.64 HN212/HN9212",
-    "result": "No verifiable Amazon.co.jp direct ASIN for HN211 or HN9211 in targeted searches. Added HN212/HN9212 as verified Henle publisher items (not Amazon-verified); ISBN-style ISMN and editorial details checked.",
+    "focus": "Amazon Japan direct ASIN lookups for HN212/HN9212 and Henle product catalogue extension HN213/HN9213",
+    "result": "Direct Amazon.co.jp item and ASIN were not verifiably located for HN212/HN9212. Publisher listings confirmed HN213 and HN9213 editions and ISBN-like ISMN identifiers. No affiliate URL authorized.",
     "new_publisher_confirmed": 2,
     "new_amazon_verified": 0,
-    "next": "Try direct Amazon Japan lookup using ISMN 9790201802121 and 9790201892122. Only create affiliate links after ASIN/detail listing verified.",
-    "evidence_urls": [
-      "https://www.henle.de/jp/String-Quartets-Book-VIII-op.-64-Second-Tost-Quartets/HN-212",
-      "https://www.henle.de/jp/String-Quartets-Book-VIII-op.-64-Second-Tost-Quartets/HN-9212"
-    ]
+    "source_urls": [
+      "https://www.henle.de/jp/String-Quartets-Book-IX-op.-71-and-74-Apponyi-Quartets/HN-213",
+      "https://www.henle.de/jp/String-Quartets-Book-IX-op.-71-and-74-Apponyi-Quartets/HN-9213"
+    ],
+    "next": "Search Amazon.co.jp by exact ISMN 9790201802138 and 9790201892139; compare physical formats and seller detail before tagging mukkoo-22."
   }
 }
