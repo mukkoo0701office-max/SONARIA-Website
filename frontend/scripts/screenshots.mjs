@@ -81,11 +81,21 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
     check("mobile: swipe does not navigate", page.url().endsWith("/ja/"), page.url());
   }
 
+  // 楽譜の簡易検索 → 楽譜検索ページへ条件を引き継ぐ
+  await page.goto(`${base}/ja/`, { waitUntil: "networkidle" });
+  await page.fill("#quick-score-q", "ベートーヴェン");
+  await page.selectOption("#quick-score-players", "4");
+  await page.locator('form:has(#quick-score-q) button[type="submit"]').click();
+  await page.waitForURL(/scores\/\?/);
+  await page.waitForTimeout(500);
+  check(`${vpName}: score quick search carries query`, decodeURIComponent(page.url()).includes("q=ベートーヴェン") && page.url().includes("players=4"), page.url());
+  await shot(page, `${vpName}-ja-scores-from-home`);
+
   // 講師の簡易検索 → 講師検索ページへ条件を引き継ぐ
   await page.goto(`${base}/ja/`, { waitUntil: "networkidle" });
   await page.selectOption("#quick-category", "strings");
   await page.selectOption("#quick-pref", "13");
-  await page.click('form button[type="submit"]');
+  await page.locator('form:has(#quick-category) button[type="submit"]').click();
   await page.waitForURL(/teachers/);
   await page.waitForTimeout(500);
   check(`${vpName}: quick search carries query`, page.url().includes("category=strings") && page.url().includes("pref=13"), page.url());
