@@ -106,7 +106,7 @@ jobs:
           if-no-files-found: ignore
 
   merge:
-    needs: inspect
+    needs: [fetch, inspect]
     if: always() && needs.fetch.result == 'success'
     runs-on: ubuntu-latest
     steps:
