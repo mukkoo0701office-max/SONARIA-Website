@@ -411,6 +411,64 @@
       "priority": "S",
       "verification": "Verified direct publisher page, exact ISMN, format, editor and Op.33 collection. Amazon.co.jp listing/ASIN could not be verified; do not generate affiliate link.",
       "date_checked": "2026-11-27"
+    },
+    {
+      "id": "haydn-henle-hn210",
+      "title": "String Quartets Book VI op. 42 and op. 50 (Prussian Quartets) Urtext parts",
+      "category": "printed_score",
+      "publisher_catalog": "HN 210",
+      "ismn": "979-0-2018-0210-7",
+      "source": "https://www.henle.de/jp/String-Quartets-Book-VI-op.-42-and-op.-50-Prussian-Quartets/HN-210",
+      "pages": 198,
+      "format": "performing parts",
+      "composer": "Haydn",
+      "publisher": "G. Henle Verlag",
+      "editor": "James Webster",
+      "work_ids": [
+        "Op.42",
+        "Op.50 No.1",
+        "Op.50 No.2",
+        "Op.50 No.3",
+        "Op.50 No.4",
+        "Op.50 No.5",
+        "Op.50 No.6"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "priority": "S",
+      "status": "pending_review",
+      "verification": "Publisher-confirmed format, work scope, ISMN and editor. No verified Amazon.co.jp individual product detail URL or ASIN; no generated affiliate link.",
+      "date_checked": "2026-11-27"
+    },
+    {
+      "id": "haydn-henle-hn9210",
+      "title": "String Quartets Book VI op. 42 and op. 50 (Prussian Quartets) Study Score",
+      "category": "pocket_score",
+      "publisher_catalog": "HN 9210",
+      "ismn": "979-0-2018-9210-8",
+      "source": "https://www.henle.de/jp/String-Quartets-Book-VI-op.-42-and-op.-50-Prussian-Quartets/HN-9210",
+      "pages": 144,
+      "format": "study score",
+      "composer": "Haydn",
+      "publisher": "G. Henle Verlag",
+      "editor": "James Webster",
+      "work_ids": [
+        "Op.42",
+        "Op.50 No.1",
+        "Op.50 No.2",
+        "Op.50 No.3",
+        "Op.50 No.4",
+        "Op.50 No.5",
+        "Op.50 No.6"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "priority": "S",
+      "status": "pending_review",
+      "verification": "Publisher-confirmed format, work scope, ISMN and editor. No verified Amazon.co.jp individual product detail URL or ASIN; no generated affiliate link.",
+      "date_checked": "2026-11-27"
     }
   ],
   "implementation_ready": 0,
@@ -418,17 +476,14 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Resolve publisher identifiers and exact work scope for Haydn HN205, HN9205, HN9216, HN211; Amazon Japan search for HN205/HN9205/HN211",
-    "result": "Four existing records enriched with publisher-confirmed ISMN, edition format, editors, pages and work scope. No exact Amazon.co.jp ASIN found; zero new affiliate links.",
-    "new_publisher_confirmed": 0,
-    "existing_records_enriched": 4,
+    "focus": "Henle Op.33 HN209/HN9209 Amazon.co.jp exact ISMN matching and Op.42/50 HN210/HN9210 publisher verification",
+    "result": "Targeted Amazon.co.jp exact identifier search failed to resolve a reliable ASIN for HN209/HN9209. Henle official publisher verifies new HN210/HN9210 parts/study score, ISMN, editor James Webster and repertoire Op.42/50.",
+    "new_publisher_confirmed": 2,
     "new_amazon_verified": 0,
-    "next": "Continue Amazon.co.jp direct ASIN lookup using publisher ISMN and alternate Japanese titles. Check discrepancy between Henle website's six-item HN205/HN9205 contents and independent retailer expanded Op.2 listing; keep narrower verified publisher list until resolved.",
+    "next": "Inspect Amazon.co.jp individual listings of HN210/HN9210 and prior HN209/HN9209, by ISMN/EAN and Japanese title. No affiliate URL until ASIN confirmed.",
     "evidence_urls": [
-      "https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-205",
-      "https://www.henle.de/String-Quartets-Book-I-Early-String-Quartets/HN-9205",
-      "https://www.henle.de/jp/The-String-Quartets-12-Volumes-in-a-Slipcase/HN-9216",
-      "https://www.henle.de/en/String-Quartets-Book-VII-op.-54-and-55-Tost-Quartets/HN-211"
+      "https://www.henle.de/jp/String-Quartets-Book-VI-op.-42-and-op.-50-Prussian-Quartets/HN-210",
+      "https://www.henle.de/jp/String-Quartets-Book-VI-op.-42-and-op.-50-Prussian-Quartets/HN-9210"
     ]
   }
 }
