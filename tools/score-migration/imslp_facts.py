@@ -39,6 +39,8 @@ FIELDS = {
     "Instrumentation": "instrumentation",
     "Piece Style": "style",
     "Average Duration": "duration",
+    "Number of Movements/Sections": "movement_count",
+    "Movements Header": "movements_header",
 }
 
 last = 0.0
@@ -110,7 +112,8 @@ def catalog_matches(work: dict, text: str) -> bool:
 def parse_fields(wikitext: str) -> dict:
     out = {}
     for label, key in FIELDS.items():
-        m = re.search(r"\|\s*" + re.escape(label) + r"\s*=\s*(.*?)(?=\n\|[A-Za-z*]|\n\}\})", wikitext, re.S)
+        # 「=」の後は改行をまたがない（空欄のとき次の項目を取り込まないため）
+        m = re.search(r"\n\|[ \t]*" + re.escape(label) + r"[ \t]*=[ \t]*(.*?)(?=\n\|[ \t]*[A-Za-z*][^=\n]*=|\n\}\})", wikitext, re.S)
         if m:
             v = m.group(1).strip()
             if v:
@@ -142,7 +145,7 @@ def main() -> int:
             res = get({"action": "query", "list": "search", "srsearch": q, "srnamespace": 0, "srlimit": 8})
             for hit in (res.get("query") or {}).get("search", []):
                 title = hit["title"]
-                if title in seen or f"({surname}" not in fold(title).replace("(", "(", 1) and surname not in fold(title):
+                if title in seen or surname not in fold(title):
                     continue
                 seen.add(title)
                 rec["candidates"].append(title)
@@ -154,8 +157,11 @@ def main() -> int:
                 page = get({"action": "parse", "page": title, "prop": "wikitext"})
                 wt = ((page.get("parse") or {}).get("wikitext") or {}).get("*", "")
                 fields = parse_fields(wt)
-                if catalog_matches(w, title + " " + fields.get("catalog", "")) and surname in fold(title):
-                    rec = {"status": "matched", "page": title, "url": "https://imslp.org/wiki/" + title.replace(" ", "_"), "fields": fields, "candidates": rec["candidates"]}
+                # 編曲・トランスクリプションのページ（括弧内が別の作曲者）は採用しない
+                if catalog_matches(w, title + " " + fields.get("catalog", "")) and f"({surname}" in fold(title):
+                    i = wt.find("WORK INFO")
+                    raw = wt[i : i + 6000] if i >= 0 else wt[:6000]
+                    rec = {"status": "matched", "page": title, "url": "https://imslp.org/wiki/" + title.replace(" ", "_"), "fields": fields, "raw": raw, "candidates": rec["candidates"]}
                     break
             if rec["status"] == "matched":
                 break
