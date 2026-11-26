@@ -96,6 +96,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ニ短調",
+    "en": "D minor"
+   },
+   "composed": "1894",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro moderato",
+     "en": "I. Allegro moderato"
+    },
+    {
+     "ja": "第2楽章 Scherzo. Allegro molto",
+     "en": "II. Scherzo. Allegro molto"
+    },
+    {
+     "ja": "第3楽章 Elegia. Adagio",
+     "en": "III. Elegia. Adagio"
+    },
+    {
+     "ja": "第4楽章 Finale. Allegro non troppo",
+     "en": "IV. Finale. Allegro non troppo"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Piano Trio No.1, Op.32 (Arensky, Anton)",
+     "url": "https://imslp.org/wiki/Piano_Trio_No.1,_Op.32_(Arensky,_Anton)"
+    }
    ]
   },
   {
@@ -191,6 +220,34 @@
        "bytes": 16002924
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ヘ短調",
+    "en": "F minor"
+   },
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro moderato",
+     "en": "I. Allegro moderato"
+    },
+    {
+     "ja": "第2楽章 Romance. Andante",
+     "en": "II. Romance. Andante"
+    },
+    {
+     "ja": "第3楽章 Scherzo. Presto",
+     "en": "III. Scherzo. Presto"
+    },
+    {
+     "ja": "第4楽章 Tema con Variazioni. Allegro non troppo",
+     "en": "IV. Tema con Variazioni. Allegro non troppo"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Piano Trio No.2, Op.73 (Arensky, Anton)",
+     "url": "https://imslp.org/wiki/Piano_Trio_No.2,_Op.73_(Arensky,_Anton)"
     }
    ]
   },
@@ -495,6 +552,16 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ニ長調",
+    "en": "D major"
+   },
+   "sources": [
+    {
+     "label": "IMSLP: Orchestral Suite No.3 in D major, BWV 1068 (Bach, Johann Sebastian)",
+     "url": "https://imslp.org/wiki/Orchestral_Suite_No.3_in_D_major,_BWV_1068_(Bach,_Johann_Sebastian)"
+    }
    ]
   },
   {
@@ -626,6 +693,13 @@
       }
      ]
     }
+   ],
+   "composed": "1717–23",
+   "sources": [
+    {
+     "label": "IMSLP: 6 Cello Suites, BWV 1007-1012 (Bach, Johann Sebastian)",
+     "url": "https://imslp.org/wiki/6_Cello_Suites,_BWV_1007-1012_(Bach,_Johann_Sebastian)"
+    }
    ]
   },
   {
@@ -689,6 +763,12 @@
        "bytes": 2619410
       }
      ]
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Concerto in D minor for Two Violins, BWV 1043 (Bach, Johann Sebastian)",
+     "url": "https://imslp.org/wiki/Concerto_in_D_minor_for_Two_Violins,_BWV_1043_(Bach,_Johann_Sebastian)"
     }
    ]
   },
@@ -927,6 +1007,12 @@
       }
      ]
     }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Sonatas and Partitas for Solo Violin, BWV 1001-1006 (Bach, Johann Sebastian)",
+     "url": "https://imslp.org/wiki/Sonatas_and_Partitas_for_Solo_Violin,_BWV_1001-1006_(Bach,_Johann_Sebastian)"
+    }
    ]
   },
   {
@@ -1005,6 +1091,12 @@
        "bytes": 2925115
       }
      ]
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Concerto No.1, BWV 1041 (Bach, Johann Sebastian)",
+     "url": "https://imslp.org/wiki/Violin_Concerto_No.1,_BWV_1041_(Bach,_Johann_Sebastian)"
     }
    ]
   },
@@ -1091,6 +1183,12 @@
        }
       }
      ]
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Concerto No.2 in E major, BWV 1042 (Bach, Johann Sebastian)",
+     "url": "https://imslp.org/wiki/Violin_Concerto_No.2_in_E_major,_BWV_1042_(Bach,_Johann_Sebastian)"
     }
    ]
   },
@@ -1262,6 +1360,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "変ホ長調",
+    "en": "E-flat major"
+   },
+   "composed": "1795",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro",
+     "en": "I. Allegro"
+    },
+    {
+     "ja": "第2楽章 Adagio cantabile",
+     "en": "II. Adagio cantabile"
+    },
+    {
+     "ja": "第3楽章 Scherzo. Allegro assai - Trio",
+     "en": "III. Scherzo. Allegro assai - Trio"
+    },
+    {
+     "ja": "第4楽章 Finale. Presto",
+     "en": "IV. Finale. Presto"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Piano Trio in E-flat major, Op.1 No.1 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/Piano_Trio_in_E-flat_major,_Op.1_No.1_(Beethoven,_Ludwig_van)"
+    }
    ]
   },
   {
@@ -1355,6 +1482,39 @@
        "bytes": 2364393
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ニ長調",
+    "en": "D major"
+   },
+   "composed": "1795–97",
+   "movements": [
+    {
+     "ja": "第1楽章 Marcia. Allegro; Adagio",
+     "en": "I. Marcia. Allegro; Adagio"
+    },
+    {
+     "ja": "第2楽章 Minuet. Allegretto",
+     "en": "II. Minuet. Allegretto"
+    },
+    {
+     "ja": "第3楽章 Adagio",
+     "en": "III. Adagio"
+    },
+    {
+     "ja": "第4楽章 Allegretto alla polacca",
+     "en": "IV. Allegretto alla polacca"
+    },
+    {
+     "ja": "第5楽章 Tema con variazioni. Andante quasi allegretto",
+     "en": "V. Tema con variazioni. Andante quasi allegretto"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Serenade in D major, Op.8 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/Serenade_in_D_major,_Op.8_(Beethoven,_Ludwig_van)"
     }
    ]
   },
@@ -1470,6 +1630,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ト長調",
+    "en": "G major"
+   },
+   "composed": "1799",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro",
+     "en": "I. Allegro"
+    },
+    {
+     "ja": "第2楽章 Adagio cantabile",
+     "en": "II. Adagio cantabile"
+    },
+    {
+     "ja": "第3楽章 Scherzo. Allegro",
+     "en": "III. Scherzo. Allegro"
+    },
+    {
+     "ja": "第4楽章 Allegro molto, quasi Presto",
+     "en": "IV. Allegro molto, quasi Presto"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: String Quartet No.2, Op.18 No.2 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/String_Quartet_No.2,_Op.18_No.2_(Beethoven,_Ludwig_van)"
+    }
    ]
   },
   {
@@ -1583,6 +1772,35 @@
        "bytes": 1132165
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ニ長調",
+    "en": "D major"
+   },
+   "composed": "1798–1799",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro",
+     "en": "I. Allegro"
+    },
+    {
+     "ja": "第2楽章 Andante con moto",
+     "en": "II. Andante con moto"
+    },
+    {
+     "ja": "第3楽章 Allegro",
+     "en": "III. Allegro"
+    },
+    {
+     "ja": "第4楽章 Presto",
+     "en": "IV. Presto"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: String Quartet No.3, Op.18 No.3 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/String_Quartet_No.3,_Op.18_No.3_(Beethoven,_Ludwig_van)"
     }
    ]
   },
@@ -1699,6 +1917,35 @@
        "bytes": 857864
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ハ短調",
+    "en": "C minor"
+   },
+   "composed": "1799–1800",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro, ma non tanto",
+     "en": "I. Allegro, ma non tanto"
+    },
+    {
+     "ja": "第2楽章 Scherzo. Andante scherzoso quasi Allegretto",
+     "en": "II. Scherzo. Andante scherzoso quasi Allegretto"
+    },
+    {
+     "ja": "第3楽章 Minuet. Allegretto",
+     "en": "III. Minuet. Allegretto"
+    },
+    {
+     "ja": "第4楽章 Allegro",
+     "en": "IV. Allegro"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: String Quartet No.4, Op.18 No.4 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/String_Quartet_No.4,_Op.18_No.4_(Beethoven,_Ludwig_van)"
     }
    ]
   },
@@ -1817,6 +2064,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "イ長調",
+    "en": "A major"
+   },
+   "composed": "1799",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro",
+     "en": "I. Allegro"
+    },
+    {
+     "ja": "第2楽章 Minuet - Trio",
+     "en": "II. Minuet - Trio"
+    },
+    {
+     "ja": "第3楽章 Andante cantabile con variazioni",
+     "en": "III. Andante cantabile con variazioni"
+    },
+    {
+     "ja": "第4楽章 Allegro",
+     "en": "IV. Allegro"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: String Quartet No.5, Op.18 No.5 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/String_Quartet_No.5,_Op.18_No.5_(Beethoven,_Ludwig_van)"
+    }
    ]
   },
   {
@@ -1929,6 +2205,39 @@
        "bytes": 849673
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "変ロ長調",
+    "en": "B-flat major"
+   },
+   "composed": "1800",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro con brio",
+     "en": "I. Allegro con brio"
+    },
+    {
+     "ja": "第2楽章 Adagio, ma non troppo",
+     "en": "II. Adagio, ma non troppo"
+    },
+    {
+     "ja": "第3楽章 Scherzo. Allegro — Trio",
+     "en": "III. Scherzo. Allegro — Trio"
+    },
+    {
+     "ja": "第4楽章 La Malinconia. Adagio",
+     "en": "IV. La Malinconia. Adagio"
+    },
+    {
+     "ja": "第5楽章 Allegretto quasi Allegro",
+     "en": "V. Allegretto quasi Allegro"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: String Quartet No.6, Op.18 No.6 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/String_Quartet_No.6,_Op.18_No.6_(Beethoven,_Ludwig_van)"
     }
    ]
   },
@@ -2043,6 +2352,35 @@
        "bytes": 1742228
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ヘ長調",
+    "en": "F major"
+   },
+   "composed": "1806",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro",
+     "en": "I. Allegro"
+    },
+    {
+     "ja": "第2楽章 Allegretto vivace e sempre scherzando",
+     "en": "II. Allegretto vivace e sempre scherzando"
+    },
+    {
+     "ja": "第3楽章 Adagio molto e mesto",
+     "en": "III. Adagio molto e mesto"
+    },
+    {
+     "ja": "第4楽章 Thème russe. Allegro",
+     "en": "IV. Thème russe. Allegro"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: String Quartet No.7, Op.59 No.1 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/String_Quartet_No.7,_Op.59_No.1_(Beethoven,_Ludwig_van)"
     }
    ]
   },
@@ -2161,6 +2499,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ハ長調",
+    "en": "C major"
+   },
+   "composed": "1806",
+   "movements": [
+    {
+     "ja": "第1楽章 Introduzione. Andante con moto - Allegro vivace",
+     "en": "I. Introduzione. Andante con moto - Allegro vivace"
+    },
+    {
+     "ja": "第2楽章 Andante con moto quasi Allegretto",
+     "en": "II. Andante con moto quasi Allegretto"
+    },
+    {
+     "ja": "第3楽章 Minuet. Grazioso - Trio",
+     "en": "III. Minuet. Grazioso - Trio"
+    },
+    {
+     "ja": "第4楽章 Allegro molto",
+     "en": "IV. Allegro molto"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: String Quartet No.9, Op.59 No.3 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/String_Quartet_No.9,_Op.59_No.3_(Beethoven,_Ludwig_van)"
+    }
    ]
   },
   {
@@ -2259,6 +2626,43 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "変ホ長調",
+    "en": "E-flat major"
+   },
+   "composed": "1792–96",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro con brio",
+     "en": "I. Allegro con brio"
+    },
+    {
+     "ja": "第2楽章 Andante",
+     "en": "II. Andante"
+    },
+    {
+     "ja": "第3楽章 Minuet. Allegretto - Trio",
+     "en": "III. Minuet. Allegretto - Trio"
+    },
+    {
+     "ja": "第4楽章 Adagio",
+     "en": "IV. Adagio"
+    },
+    {
+     "ja": "第5楽章 Minuet. Moderato Trio",
+     "en": "V. Minuet. Moderato Trio"
+    },
+    {
+     "ja": "第6楽章 Finale. Allegro",
+     "en": "VI. Finale. Allegro"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: String Trio in E-flat major, Op.3 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/String_Trio_in_E-flat_major,_Op.3_(Beethoven,_Ludwig_van)"
+    }
    ]
   },
   {
@@ -2338,6 +2742,31 @@
        "bytes": 1812970
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ニ長調",
+    "en": "D major"
+   },
+   "composed": "1797–98",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro con brio",
+     "en": "I. Allegro con brio"
+    },
+    {
+     "ja": "第2楽章 Tema con variazioni. Andante con moto + 4 variations",
+     "en": "II. Tema con variazioni. Andante con moto + 4 variations"
+    },
+    {
+     "ja": "第3楽章 Rondo. Allegro",
+     "en": "III. Rondo. Allegro"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Sonata No.1, Op.12 No.1 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/Violin_Sonata_No.1,_Op.12_No.1_(Beethoven,_Ludwig_van)"
     }
    ]
   },
@@ -2419,6 +2848,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ト長調",
+    "en": "G major"
+   },
+   "composed": "1812",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro moderato",
+     "en": "I. Allegro moderato"
+    },
+    {
+     "ja": "第2楽章 Adagio espressivo",
+     "en": "II. Adagio espressivo"
+    },
+    {
+     "ja": "第3楽章 Scherzo. Allegro - Trio",
+     "en": "III. Scherzo. Allegro - Trio"
+    },
+    {
+     "ja": "第4楽章 Poco Allegretto",
+     "en": "IV. Poco Allegretto"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Sonata No.10, Op.96 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/Violin_Sonata_No.10,_Op.96_(Beethoven,_Ludwig_van)"
+    }
    ]
   },
   {
@@ -2499,6 +2957,31 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "イ長調",
+    "en": "A major"
+   },
+   "composed": "1797–98",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro vivace",
+     "en": "I. Allegro vivace"
+    },
+    {
+     "ja": "第2楽章 Andante più tosto Allegretto",
+     "en": "II. Andante più tosto Allegretto"
+    },
+    {
+     "ja": "第3楽章 Allegro piacevole",
+     "en": "III. Allegro piacevole"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Sonata No.2, Op.12 No.2 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/Violin_Sonata_No.2,_Op.12_No.2_(Beethoven,_Ludwig_van)"
+    }
    ]
   },
   {
@@ -2577,6 +3060,31 @@
        "bytes": 1652993
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "変ホ長調",
+    "en": "E-flat major"
+   },
+   "composed": "1797–98",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro con spirito",
+     "en": "I. Allegro con spirito"
+    },
+    {
+     "ja": "第2楽章 Adagio con molt' espressione",
+     "en": "II. Adagio con molt' espressione"
+    },
+    {
+     "ja": "第3楽章 Rondo. Allegro molto",
+     "en": "III. Rondo. Allegro molto"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Sonata No.3, Op.12 No.3 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/Violin_Sonata_No.3,_Op.12_No.3_(Beethoven,_Ludwig_van)"
     }
    ]
   },
@@ -2658,6 +3166,31 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "イ短調",
+    "en": "A minor"
+   },
+   "composed": "1800–01",
+   "movements": [
+    {
+     "ja": "第1楽章 Presto",
+     "en": "I. Presto"
+    },
+    {
+     "ja": "第2楽章 Andante scherzoso, più Allegretto",
+     "en": "II. Andante scherzoso, più Allegretto"
+    },
+    {
+     "ja": "第3楽章 Allegro molto",
+     "en": "III. Allegro molto"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Sonata No.4, Op.23 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/Violin_Sonata_No.4,_Op.23_(Beethoven,_Ludwig_van)"
+    }
    ]
   },
   {
@@ -2738,6 +3271,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ヘ長調",
+    "en": "F major"
+   },
+   "composed": "1800–01",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro",
+     "en": "I. Allegro"
+    },
+    {
+     "ja": "第2楽章 Adagio molto espressivo",
+     "en": "II. Adagio molto espressivo"
+    },
+    {
+     "ja": "第3楽章 Scherzo. Allegro molto — Trio",
+     "en": "III. Scherzo. Allegro molto — Trio"
+    },
+    {
+     "ja": "第4楽章 Rondo. Allegro ma non troppo",
+     "en": "IV. Rondo. Allegro ma non troppo"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Sonata No.5, Op.24 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/Violin_Sonata_No.5,_Op.24_(Beethoven,_Ludwig_van)"
+    }
    ]
   },
   {
@@ -2816,6 +3378,31 @@
        "bytes": 1439583
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "イ長調",
+    "en": "A major"
+   },
+   "composed": "1801–02",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro",
+     "en": "I. Allegro"
+    },
+    {
+     "ja": "第2楽章 Adagio molto espressivo",
+     "en": "II. Adagio molto espressivo"
+    },
+    {
+     "ja": "第3楽章 Allegretto con variazioni",
+     "en": "III. Allegretto con variazioni"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Sonata No.6, Op.30 No.1 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/Violin_Sonata_No.6,_Op.30_No.1_(Beethoven,_Ludwig_van)"
     }
    ]
   },
@@ -2897,6 +3484,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ハ短調",
+    "en": "C minor"
+   },
+   "composed": "1801–02",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro con brio",
+     "en": "I. Allegro con brio"
+    },
+    {
+     "ja": "第2楽章 Adagio cantabile",
+     "en": "II. Adagio cantabile"
+    },
+    {
+     "ja": "第3楽章 Scherzo. Allegro - Trio",
+     "en": "III. Scherzo. Allegro - Trio"
+    },
+    {
+     "ja": "第4楽章 Finale. Allegro",
+     "en": "IV. Finale. Allegro"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Sonata No.7, Op.30 No.2 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/Violin_Sonata_No.7,_Op.30_No.2_(Beethoven,_Ludwig_van)"
+    }
    ]
   },
   {
@@ -2977,6 +3593,31 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ト長調",
+    "en": "G major"
+   },
+   "composed": "1801–02",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro assai",
+     "en": "I. Allegro assai"
+    },
+    {
+     "ja": "第2楽章 Tempo di Minuetto, ma molto moderato e grazioso",
+     "en": "II. Tempo di Minuetto, ma molto moderato e grazioso"
+    },
+    {
+     "ja": "第3楽章 Allegro vivace",
+     "en": "III. Allegro vivace"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Sonata No.8, Op.30 No.3 (Beethoven, Ludwig van)",
+     "url": "https://imslp.org/wiki/Violin_Sonata_No.8,_Op.30_No.3_(Beethoven,_Ludwig_van)"
+    }
    ]
   },
   {
@@ -3039,6 +3680,30 @@
        "bytes": 2546385
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "イ短調",
+    "en": "A minor"
+   },
+   "movements": [
+    {
+     "ja": "第1楽章 Allegretto maestoso",
+     "en": "I. Allegretto maestoso"
+    },
+    {
+     "ja": "第2楽章 Adagio",
+     "en": "II. Adagio"
+    },
+    {
+     "ja": "第3楽章 Rondo. Allegretto moderato",
+     "en": "III. Rondo. Allegretto moderato"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Concerto No.9, Op.104 (Bériot, Charles-Auguste de)",
+     "url": "https://imslp.org/wiki/Violin_Concerto_No.9,_Op.104_(Bériot,_Charles-Auguste_de)"
     }
    ]
   },
@@ -3268,6 +3933,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ト短調",
+    "en": "G minor"
+   },
+   "composed": "1861",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro",
+     "en": "I. Allegro"
+    },
+    {
+     "ja": "第2楽章 Intermezzo. Allegro ma non troppo — Trio. Animato",
+     "en": "II. Intermezzo. Allegro ma non troppo — Trio. Animato"
+    },
+    {
+     "ja": "第3楽章 Andante con moto",
+     "en": "III. Andante con moto"
+    },
+    {
+     "ja": "第4楽章 Rondo alla Zingarese. Presto",
+     "en": "IV. Rondo alla Zingarese. Presto"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Piano Quartet No.1, Op.25 (Brahms, Johannes)",
+     "url": "https://imslp.org/wiki/Piano_Quartet_No.1,_Op.25_(Brahms,_Johannes)"
+    }
    ]
   },
   {
@@ -3387,6 +4081,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ハ短調",
+    "en": "C minor"
+   },
+   "composed": "1855–75",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro non troppo",
+     "en": "I. Allegro non troppo"
+    },
+    {
+     "ja": "第2楽章 Scherzo. Allegro",
+     "en": "II. Scherzo. Allegro"
+    },
+    {
+     "ja": "第3楽章 Andante",
+     "en": "III. Andante"
+    },
+    {
+     "ja": "第4楽章 Finale. Allegro comodo",
+     "en": "IV. Finale. Allegro comodo"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Piano Quartet No.3, Op.60 (Brahms, Johannes)",
+     "url": "https://imslp.org/wiki/Piano_Quartet_No.3,_Op.60_(Brahms,_Johannes)"
+    }
    ]
   },
   {
@@ -3484,6 +4207,17 @@
        "bytes": 15423693
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ロ長調",
+    "en": "B major"
+   },
+   "composed": "1853–54",
+   "sources": [
+    {
+     "label": "IMSLP: Piano Trio No.1, Op.8 (Brahms, Johannes)",
+     "url": "https://imslp.org/wiki/Piano_Trio_No.1,_Op.8_(Brahms,_Johannes)"
     }
    ]
   },
@@ -3585,6 +4319,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ハ長調",
+    "en": "C major"
+   },
+   "composed": "1880–82",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro (moderato)",
+     "en": "I. Allegro (moderato)"
+    },
+    {
+     "ja": "第2楽章 Andante con moto",
+     "en": "II. Andante con moto"
+    },
+    {
+     "ja": "第3楽章 Scherzo. Presto — Poco meno presto",
+     "en": "III. Scherzo. Presto — Poco meno presto"
+    },
+    {
+     "ja": "第4楽章 Finale. Allegro giocoso",
+     "en": "IV. Finale. Allegro giocoso"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Piano Trio No.2, Op.87 (Brahms, Johannes)",
+     "url": "https://imslp.org/wiki/Piano_Trio_No.2,_Op.87_(Brahms,_Johannes)"
+    }
    ]
   },
   {
@@ -3683,6 +4446,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ハ短調",
+    "en": "C minor"
+   },
+   "composed": "1886",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro energico",
+     "en": "I. Allegro energico"
+    },
+    {
+     "ja": "第2楽章 Presto non assai",
+     "en": "II. Presto non assai"
+    },
+    {
+     "ja": "第3楽章 Andante grazioso",
+     "en": "III. Andante grazioso"
+    },
+    {
+     "ja": "第4楽章 Allegro molto",
+     "en": "IV. Allegro molto"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Piano Trio No.3, Op.101 (Brahms, Johannes)",
+     "url": "https://imslp.org/wiki/Piano_Trio_No.3,_Op.101_(Brahms,_Johannes)"
+    }
    ]
   },
   {
@@ -3762,6 +4554,31 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ニ長調",
+    "en": "D major"
+   },
+   "composed": "1878",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro non troppo",
+     "en": "I. Allegro non troppo"
+    },
+    {
+     "ja": "第2楽章 Adagio",
+     "en": "II. Adagio"
+    },
+    {
+     "ja": "第3楽章 Allegro giocoso, ma non troppo vivace",
+     "en": "III. Allegro giocoso, ma non troppo vivace"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Concerto, Op.77 (Brahms, Johannes)",
+     "url": "https://imslp.org/wiki/Violin_Concerto,_Op.77_(Brahms,_Johannes)"
+    }
    ]
   },
   {
@@ -3838,6 +4655,31 @@
        "bytes": 6929982
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ト長調",
+    "en": "G major"
+   },
+   "composed": "1878–79",
+   "movements": [
+    {
+     "ja": "第1楽章 Vivace, ma non troppo",
+     "en": "I. Vivace, ma non troppo"
+    },
+    {
+     "ja": "第2楽章 Adagio",
+     "en": "II. Adagio"
+    },
+    {
+     "ja": "第3楽章 Allegro molto moderato",
+     "en": "III. Allegro molto moderato"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Sonata No.1, Op.78 (Brahms, Johannes)",
+     "url": "https://imslp.org/wiki/Violin_Sonata_No.1,_Op.78_(Brahms,_Johannes)"
     }
    ]
   },
@@ -3923,6 +4765,31 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "イ長調",
+    "en": "A major"
+   },
+   "composed": "1886",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro amabile",
+     "en": "I. Allegro amabile"
+    },
+    {
+     "ja": "第2楽章 Andante tranquillo — Vivace",
+     "en": "II. Andante tranquillo — Vivace"
+    },
+    {
+     "ja": "第3楽章 Allegretto grazioso, quasi Andante",
+     "en": "III. Allegretto grazioso, quasi Andante"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Sonata No.2, Op.100 (Brahms, Johannes)",
+     "url": "https://imslp.org/wiki/Violin_Sonata_No.2,_Op.100_(Brahms,_Johannes)"
+    }
    ]
   },
   {
@@ -4003,6 +4870,35 @@
        "bytes": 2144337
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ニ短調",
+    "en": "D minor"
+   },
+   "composed": "1886–88",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro",
+     "en": "I. Allegro"
+    },
+    {
+     "ja": "第2楽章 Adagio",
+     "en": "II. Adagio"
+    },
+    {
+     "ja": "第3楽章 Un poco presto e con sentimento",
+     "en": "III. Un poco presto e con sentimento"
+    },
+    {
+     "ja": "第4楽章 Presto agitato",
+     "en": "IV. Presto agitato"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Sonata No.3, Op.108 (Brahms, Johannes)",
+     "url": "https://imslp.org/wiki/Violin_Sonata_No.3,_Op.108_(Brahms,_Johannes)"
     }
    ]
   },
@@ -4147,6 +5043,13 @@
       }
      ]
     }
+   ],
+   "composed": "1880",
+   "sources": [
+    {
+     "label": "IMSLP: Kol Nidrei, Op.47 (Bruch, Max)",
+     "url": "https://imslp.org/wiki/Kol_Nidrei,_Op.47_(Bruch,_Max)"
+    }
    ]
   },
   {
@@ -4224,6 +5127,31 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ト短調",
+    "en": "G minor"
+   },
+   "composed": "1866",
+   "movements": [
+    {
+     "ja": "第1楽章 Vorspiel. Allegro moderato",
+     "en": "I. Vorspiel. Allegro moderato"
+    },
+    {
+     "ja": "第2楽章 Adagio",
+     "en": "II. Adagio"
+    },
+    {
+     "ja": "第3楽章 Finale. Allegro energico",
+     "en": "III. Finale. Allegro energico"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Concerto No.1, Op.26 (Bruch, Max)",
+     "url": "https://imslp.org/wiki/Violin_Concerto_No.1,_Op.26_(Bruch,_Max)"
+    }
    ]
   },
   {
@@ -4285,6 +5213,16 @@
        "bytes": 5764544
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ト短調",
+    "en": "G minor"
+   },
+   "sources": [
+    {
+     "label": "IMSLP: Ballade No.1, Op.23 (Chopin, Frédéric)",
+     "url": "https://imslp.org/wiki/Ballade_No.1,_Op.23_(Chopin,_Frédéric)"
     }
    ]
   },
@@ -4349,6 +5287,17 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ヘ長調",
+    "en": "F major"
+   },
+   "composed": "1836–39",
+   "sources": [
+    {
+     "label": "IMSLP: Ballade No.2, Op.38 (Chopin, Frédéric)",
+     "url": "https://imslp.org/wiki/Ballade_No.2,_Op.38_(Chopin,_Frédéric)"
+    }
    ]
   },
   {
@@ -4408,6 +5357,17 @@
        "bytes": 4828511
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "変イ長調",
+    "en": "A-flat major"
+   },
+   "composed": "1841",
+   "sources": [
+    {
+     "label": "IMSLP: Ballade No.3, Op.47 (Chopin, Frédéric)",
+     "url": "https://imslp.org/wiki/Ballade_No.3,_Op.47_(Chopin,_Frédéric)"
     }
    ]
   },
@@ -4470,6 +5430,17 @@
        "bytes": 13898853
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ヘ短調",
+    "en": "F minor"
+   },
+   "composed": "1842",
+   "sources": [
+    {
+     "label": "IMSLP: Ballade No.4, Op.52 (Chopin, Frédéric)",
+     "url": "https://imslp.org/wiki/Ballade_No.4,_Op.52_(Chopin,_Frédéric)"
     }
    ]
   },
@@ -4567,6 +5538,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ト短調",
+    "en": "G minor"
+   },
+   "composed": "1829",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro con fuoco",
+     "en": "I. Allegro con fuoco"
+    },
+    {
+     "ja": "第2楽章 Scherzo. Vivace - Trio",
+     "en": "II. Scherzo. Vivace - Trio"
+    },
+    {
+     "ja": "第3楽章 Adagio. Sostenuto",
+     "en": "III. Adagio. Sostenuto"
+    },
+    {
+     "ja": "第4楽章 Finale. Allegretto",
+     "en": "IV. Finale. Allegretto"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Piano Trio, Op.8 (Chopin, Frédéric)",
+     "url": "https://imslp.org/wiki/Piano_Trio,_Op.8_(Chopin,_Frédéric)"
+    }
    ]
   },
   {
@@ -4629,6 +5629,17 @@
        "bytes": 7022415
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ロ短調",
+    "en": "B minor"
+   },
+   "composed": "1833",
+   "sources": [
+    {
+     "label": "IMSLP: Scherzo No.1, Op.20 (Chopin, Frédéric)",
+     "url": "https://imslp.org/wiki/Scherzo_No.1,_Op.20_(Chopin,_Frédéric)"
     }
    ]
   },
@@ -4693,6 +5704,17 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "変ロ短調",
+    "en": "B-flat minor"
+   },
+   "composed": "1837",
+   "sources": [
+    {
+     "label": "IMSLP: Scherzo No.2, Op.31 (Chopin, Frédéric)",
+     "url": "https://imslp.org/wiki/Scherzo_No.2,_Op.31_(Chopin,_Frédéric)"
+    }
    ]
   },
   {
@@ -4756,6 +5778,17 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "嬰ハ短調",
+    "en": "C-sharp minor"
+   },
+   "composed": "1839",
+   "sources": [
+    {
+     "label": "IMSLP: Scherzo No.3, Op.39 (Chopin, Frédéric)",
+     "url": "https://imslp.org/wiki/Scherzo_No.3,_Op.39_(Chopin,_Frédéric)"
+    }
    ]
   },
   {
@@ -4818,6 +5851,17 @@
        "bytes": 8192525
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ホ長調",
+    "en": "E major"
+   },
+   "composed": "1842",
+   "sources": [
+    {
+     "label": "IMSLP: Scherzo No.4, Op.54 (Chopin, Frédéric)",
+     "url": "https://imslp.org/wiki/Scherzo_No.4,_Op.54_(Chopin,_Frédéric)"
     }
    ]
   },
@@ -4988,6 +6032,42 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ト短調",
+    "en": "G minor"
+   },
+   "movements": [
+    {
+     "ja": "第1楽章 Vivace – Grave",
+     "en": "I. Vivace – Grave"
+    },
+    {
+     "ja": "第2楽章 Allegro",
+     "en": "II. Allegro"
+    },
+    {
+     "ja": "第3楽章 Adagio – Allegro – Adagio",
+     "en": "III. Adagio – Allegro – Adagio"
+    },
+    {
+     "ja": "第4楽章 Vivace",
+     "en": "IV. Vivace"
+    },
+    {
+     "ja": "第5楽章 Allegro",
+     "en": "V. Allegro"
+    },
+    {
+     "ja": "第6楽章 Pastorale ad libitum. Largo",
+     "en": "VI. Pastorale ad libitum. Largo"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Concerto grosso in G minor 'Fatto per la Notte di Natale', Op.6 No.8 (Corelli, Arcangelo)",
+     "url": "https://imslp.org/wiki/Concerto_grosso_in_G_minor_'Fatto_per_la_Notte_di_Natale',_Op.6_No.8_(Corelli,_Arcangelo)"
+    }
    ]
   },
   {
@@ -5065,6 +6145,16 @@
        "bytes": 1563138
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ニ短調",
+    "en": "D minor"
+   },
+   "sources": [
+    {
+     "label": "IMSLP: Violin Sonata in D minor 'La Folia', Op.5 No.12 (Corelli, Arcangelo)",
+     "url": "https://imslp.org/wiki/Violin_Sonata_in_D_minor_'La_Folia',_Op.5_No.12_(Corelli,_Arcangelo)"
     }
    ]
   },
@@ -5165,6 +6255,39 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ハ長調",
+    "en": "C major"
+   },
+   "composed": "1902",
+   "movements": [
+    {
+     "ja": "第1楽章 Marcia (Allegro)",
+     "en": "I. Marcia (Allegro)"
+    },
+    {
+     "ja": "第2楽章 Romanza (Adagio non troppo)",
+     "en": "II. Romanza (Adagio non troppo)"
+    },
+    {
+     "ja": "第3楽章 Scherzo (Vivace)",
+     "en": "III. Scherzo (Vivace)"
+    },
+    {
+     "ja": "第4楽章 Tema con variazioni (Andante con moto)",
+     "en": "IV. Tema con variazioni (Andante con moto)"
+    },
+    {
+     "ja": "第5楽章 Rondo",
+     "en": "V. Rondo"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Serenade, Op.10 (Dohnányi, Ernő)",
+     "url": "https://imslp.org/wiki/Serenade,_Op.10_(Dohnányi,_Ernő)"
+    }
    ]
   },
   {
@@ -5227,6 +6350,12 @@
        "bytes": 3032846
       }
      ]
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: 24 Etudes or Caprices, Op.35 (Dont, Jakob)",
+     "url": "https://imslp.org/wiki/24_Etudes_or_Caprices,_Op.35_(Dont,_Jakob)"
     }
    ]
   },
@@ -5372,6 +6501,39 @@
        "bytes": 1179895
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ホ長調",
+    "en": "E major"
+   },
+   "composed": "1875",
+   "movements": [
+    {
+     "ja": "第1楽章 Moderato",
+     "en": "I. Moderato"
+    },
+    {
+     "ja": "第2楽章 Tempo di Valse, Trio. Allegro con moto",
+     "en": "II. Tempo di Valse, Trio. Allegro con moto"
+    },
+    {
+     "ja": "第3楽章 Scherzo. Vivace",
+     "en": "III. Scherzo. Vivace"
+    },
+    {
+     "ja": "第4楽章 Larghetto",
+     "en": "IV. Larghetto"
+    },
+    {
+     "ja": "第5楽章 Finale. Allegro vivace",
+     "en": "V. Finale. Allegro vivace"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Serenade for Strings, Op.22 (Dvořák, Antonín)",
+     "url": "https://imslp.org/wiki/Serenade_for_Strings,_Op.22_(Dvořák,_Antonín)"
     }
    ]
   },
@@ -5591,6 +6753,31 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "イ短調",
+    "en": "A minor"
+   },
+   "composed": "1879",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro ma non troppo",
+     "en": "I. Allegro ma non troppo"
+    },
+    {
+     "ja": "第2楽章 Adagio ma non troppo",
+     "en": "II. Adagio ma non troppo"
+    },
+    {
+     "ja": "第3楽章 Allegro giocoso, ma non troppo",
+     "en": "III. Allegro giocoso, ma non troppo"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Concerto, Op.53 (Dvořák, Antonín)",
+     "url": "https://imslp.org/wiki/Violin_Concerto,_Op.53_(Dvořák,_Antonín)"
+    }
    ]
   },
   {
@@ -5669,6 +6856,35 @@
        "bytes": 11337183
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ホ短調",
+    "en": "E minor"
+   },
+   "composed": "1919",
+   "movements": [
+    {
+     "ja": "第1楽章 Adagio; Moderato",
+     "en": "I. Adagio; Moderato"
+    },
+    {
+     "ja": "第2楽章 Lento; Allegro molto",
+     "en": "II. Lento; Allegro molto"
+    },
+    {
+     "ja": "第3楽章 Adagio",
+     "en": "III. Adagio"
+    },
+    {
+     "ja": "第4楽章 Allegro; Moderato; Allegro, ma non troppo; Poco più lento; Adagio",
+     "en": "IV. Allegro; Moderato; Allegro, ma non troppo; Poco più lento; Adagio"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Cello Concerto, Op.85 (Elgar, Edward)",
+     "url": "https://imslp.org/wiki/Cello_Concerto,_Op.85_(Elgar,_Edward)"
     }
    ]
   },
@@ -5896,6 +7112,27 @@
       }
      ]
     }
+   ],
+   "composed": "1888–1892",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro piacevole",
+     "en": "I. Allegro piacevole"
+    },
+    {
+     "ja": "第2楽章 Larghetto",
+     "en": "II. Larghetto"
+    },
+    {
+     "ja": "第3楽章 Allegretto",
+     "en": "III. Allegretto"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Serenade for String Orchestra, Op.20 (Elgar, Edward)",
+     "url": "https://imslp.org/wiki/Serenade_for_String_Orchestra,_Op.20_(Elgar,_Edward)"
+    }
    ]
   },
   {
@@ -6109,6 +7346,12 @@
       }
      ]
     }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Élégie, Op.24 (Fauré, Gabriel)",
+     "url": "https://imslp.org/wiki/Élégie,_Op.24_(Fauré,_Gabriel)"
+    }
    ]
   },
   {
@@ -6224,6 +7467,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ハ短調",
+    "en": "C minor"
+   },
+   "composed": "1876–79",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro molto moderato",
+     "en": "I. Allegro molto moderato"
+    },
+    {
+     "ja": "第2楽章 Scherzo: Allegro vivo",
+     "en": "II. Scherzo: Allegro vivo"
+    },
+    {
+     "ja": "第3楽章 Adagio",
+     "en": "III. Adagio"
+    },
+    {
+     "ja": "第4楽章 Allegro molto",
+     "en": "IV. Allegro molto"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Piano Quartet No.1, Op.15 (Fauré, Gabriel)",
+     "url": "https://imslp.org/wiki/Piano_Quartet_No.1,_Op.15_(Fauré,_Gabriel)"
+    }
    ]
   },
   {
@@ -6323,6 +7595,31 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ニ短調",
+    "en": "D minor"
+   },
+   "composed": "1922–23",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro, ma non troppo",
+     "en": "I. Allegro, ma non troppo"
+    },
+    {
+     "ja": "第2楽章 Andantino",
+     "en": "II. Andantino"
+    },
+    {
+     "ja": "第3楽章 Allegro vivo",
+     "en": "III. Allegro vivo"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Piano Trio, Op.120 (Fauré, Gabriel)",
+     "url": "https://imslp.org/wiki/Piano_Trio,_Op.120_(Fauré,_Gabriel)"
+    }
    ]
   },
   {
@@ -6403,6 +7700,17 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ト短調",
+    "en": "G minor"
+   },
+   "composed": "1893–98",
+   "sources": [
+    {
+     "label": "IMSLP: Sicilienne, Op.78 (Fauré, Gabriel)",
+     "url": "https://imslp.org/wiki/Sicilienne,_Op.78_(Fauré,_Gabriel)"
+    }
    ]
   },
   {
@@ -6479,6 +7787,17 @@
        "bytes": 3872026
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "イ短調",
+    "en": "A minor"
+   },
+   "composed": "1904",
+   "sources": [
+    {
+     "label": "IMSLP: Violin Concerto, Op.82 (Glazunov, Aleksandr)",
+     "url": "https://imslp.org/wiki/Violin_Concerto,_Op.82_(Glazunov,_Aleksandr)"
     }
    ]
   },
@@ -6982,6 +8301,35 @@
       }
      ]
     }
+   ],
+   "composed": "1884",
+   "movements": [
+    {
+     "ja": "第1楽章 PraeludiumAllegro vivace",
+     "en": "I. PraeludiumAllegro vivace"
+    },
+    {
+     "ja": "第2楽章 SarabandeAndante espressivo",
+     "en": "II. SarabandeAndante espressivo"
+    },
+    {
+     "ja": "第3楽章 Gavotte & Musette.Allegretto ;Un poco più mosso",
+     "en": "III. Gavotte & Musette.Allegretto ;Un poco più mosso"
+    },
+    {
+     "ja": "第4楽章 AirAndante religioso",
+     "en": "IV. AirAndante religioso"
+    },
+    {
+     "ja": "第5楽章 Rigaudon & TrioAllegro con brio (; )",
+     "en": "V. Rigaudon & TrioAllegro con brio (; )"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Holberg Suite, Op.40 (Grieg, Edvard)",
+     "url": "https://imslp.org/wiki/Holberg_Suite,_Op.40_(Grieg,_Edvard)"
+    }
    ]
   },
   {
@@ -7318,6 +8666,12 @@
        }
       }
      ]
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: 36 Violin Studies, Op.20 (Kayser, Heinrich Ernst)",
+     "url": "https://imslp.org/wiki/36_Violin_Studies,_Op.20_(Kayser,_Heinrich_Ernst)"
     }
    ]
   },
@@ -8197,6 +9551,12 @@
       }
      ]
     }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Symphonie Espagnole, Op.21 (Lalo, Édouard)",
+     "url": "https://imslp.org/wiki/Symphonie_Espagnole,_Op.21_(Lalo,_Édouard)"
+    }
    ]
   },
   {
@@ -8280,6 +9640,12 @@
        }
       }
      ]
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: 6 Duos for 2 Violins, Op.12 (Leclair, Jean-Marie)",
+     "url": "https://imslp.org/wiki/6_Duos_for_2_Violins,_Op.12_(Leclair,_Jean-Marie)"
     }
    ]
   },
@@ -8408,6 +9774,12 @@
       }
      ]
     }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: 6 Sonatas for 2 Violins, Op.3 (Leclair, Jean-Marie)",
+     "url": "https://imslp.org/wiki/6_Sonatas_for_2_Violins,_Op.3_(Leclair,_Jean-Marie)"
+    }
    ]
   },
   {
@@ -8507,6 +9879,35 @@
        "bytes": 23162190
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ハ短調",
+    "en": "C minor"
+   },
+   "composed": "1845",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro energico e con fuoco",
+     "en": "I. Allegro energico e con fuoco"
+    },
+    {
+     "ja": "第2楽章 Andante espressivo",
+     "en": "II. Andante espressivo"
+    },
+    {
+     "ja": "第3楽章 Scherzo. Molto Allegro quasi Presto",
+     "en": "III. Scherzo. Molto Allegro quasi Presto"
+    },
+    {
+     "ja": "第4楽章 Finale. Allegro appassionato",
+     "en": "IV. Finale. Allegro appassionato"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Piano Trio No.2, Op.66 (Mendelssohn, Felix)",
+     "url": "https://imslp.org/wiki/Piano_Trio_No.2,_Op.66_(Mendelssohn,_Felix)"
     }
    ]
   },
@@ -8620,6 +10021,35 @@
        "bytes": 7648924
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "変ホ長調",
+    "en": "E-flat major"
+   },
+   "composed": "1829",
+   "movements": [
+    {
+     "ja": "第1楽章 Adagio non troppo – Allegro non tardante",
+     "en": "I. Adagio non troppo – Allegro non tardante"
+    },
+    {
+     "ja": "第2楽章 Canzonetta. Allegretto",
+     "en": "II. Canzonetta. Allegretto"
+    },
+    {
+     "ja": "第3楽章 Andante espressivo",
+     "en": "III. Andante espressivo"
+    },
+    {
+     "ja": "第4楽章 Molto allegro e vivace",
+     "en": "IV. Molto allegro e vivace"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: String Quartet No.1, Op.12 (Mendelssohn, Felix)",
+     "url": "https://imslp.org/wiki/String_Quartet_No.1,_Op.12_(Mendelssohn,_Felix)"
     }
    ]
   },
@@ -8888,6 +10318,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ニ長調",
+    "en": "D major"
+   },
+   "composed": "1838",
+   "movements": [
+    {
+     "ja": "第1楽章 Molto allegro vivace",
+     "en": "I. Molto allegro vivace"
+    },
+    {
+     "ja": "第2楽章 Menuetto. Un poco Allegretto",
+     "en": "II. Menuetto. Un poco Allegretto"
+    },
+    {
+     "ja": "第3楽章 Andante espressivo ma con moto",
+     "en": "III. Andante espressivo ma con moto"
+    },
+    {
+     "ja": "第4楽章 Presto con brio",
+     "en": "IV. Presto con brio"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: String Quartet No.3, Op.44 No.1 (Mendelssohn, Felix)",
+     "url": "https://imslp.org/wiki/String_Quartet_No.3,_Op.44_No.1_(Mendelssohn,_Felix)"
+    }
    ]
   },
   {
@@ -9020,6 +10479,35 @@
        "bytes": 7878887
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ホ短調",
+    "en": "E minor"
+   },
+   "composed": "1837",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro assai appassionato",
+     "en": "I. Allegro assai appassionato"
+    },
+    {
+     "ja": "第2楽章 Scherzo. Allegro di molto",
+     "en": "II. Scherzo. Allegro di molto"
+    },
+    {
+     "ja": "第3楽章 Andante",
+     "en": "III. Andante"
+    },
+    {
+     "ja": "第4楽章 Presto agitato",
+     "en": "IV. Presto agitato"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: String Quartet No.4, Op.44 No.2 (Mendelssohn, Felix)",
+     "url": "https://imslp.org/wiki/String_Quartet_No.4,_Op.44_No.2_(Mendelssohn,_Felix)"
     }
    ]
   },
@@ -9250,6 +10738,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ヘ短調",
+    "en": "F minor"
+   },
+   "composed": "1847",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro vivace assai",
+     "en": "I. Allegro vivace assai"
+    },
+    {
+     "ja": "第2楽章 Allegro assai",
+     "en": "II. Allegro assai"
+    },
+    {
+     "ja": "第3楽章 Adagio",
+     "en": "III. Adagio"
+    },
+    {
+     "ja": "第4楽章 Finale: Allegro molto",
+     "en": "IV. Finale: Allegro molto"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: String Quartet No.6, Op.80 (Mendelssohn, Felix)",
+     "url": "https://imslp.org/wiki/String_Quartet_No.6,_Op.80_(Mendelssohn,_Felix)"
+    }
    ]
   },
   {
@@ -9333,6 +10850,31 @@
        "bytes": 4540665
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ホ短調",
+    "en": "E minor"
+   },
+   "composed": "1838–1844",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro molto appassionato",
+     "en": "I. Allegro molto appassionato"
+    },
+    {
+     "ja": "第2楽章 Andante - Allegretto non troppo",
+     "en": "II. Andante - Allegretto non troppo"
+    },
+    {
+     "ja": "第3楽章 Allegro molto vivace",
+     "en": "III. Allegro molto vivace"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Concerto, Op.64 (Mendelssohn, Felix)",
+     "url": "https://imslp.org/wiki/Violin_Concerto,_Op.64_(Mendelssohn,_Felix)"
     }
    ]
   },
@@ -9478,6 +11020,13 @@
       }
      ]
     }
+   ],
+   "composed": "1786",
+   "sources": [
+    {
+     "label": "IMSLP: 12 Horn Duos, K.487/496a (Mozart, Wolfgang Amadeus)",
+     "url": "https://imslp.org/wiki/12_Horn_Duos,_K.487/496a_(Mozart,_Wolfgang_Amadeus)"
+    }
    ]
   },
   {
@@ -9613,6 +11162,12 @@
       }
      ]
     }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Divertimento in D major, K.136 (Mozart, Wolfgang Amadeus)",
+     "url": "https://imslp.org/wiki/Divertimento_in_D_major,_K.136_(Mozart,_Wolfgang_Amadeus)"
+    }
    ]
   },
   {
@@ -9743,6 +11298,31 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "変ロ長調",
+    "en": "B-flat major"
+   },
+   "composed": "1772",
+   "movements": [
+    {
+     "ja": "第1楽章 1. Andante",
+     "en": "I. 1. Andante"
+    },
+    {
+     "ja": "第2楽章 2. Allegro di molto",
+     "en": "II. 2. Allegro di molto"
+    },
+    {
+     "ja": "第3楽章 3. Allegro assai",
+     "en": "III. 3. Allegro assai"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Divertimento in B-flat major, K.137/125b (Mozart, Wolfgang Amadeus)",
+     "url": "https://imslp.org/wiki/Divertimento_in_B-flat_major,_K.137/125b_(Mozart,_Wolfgang_Amadeus)"
+    }
    ]
   },
   {
@@ -9854,6 +11434,39 @@
        "bytes": 97613
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ト長調",
+    "en": "G major"
+   },
+   "composed": "1787",
+   "movements": [
+    {
+     "ja": "第1楽章 1. Allegro",
+     "en": "I. 1. Allegro"
+    },
+    {
+     "ja": "第2楽章 2. [Menuetto and Trio (lost)]",
+     "en": "II. 2. [Menuetto and Trio (lost)]"
+    },
+    {
+     "ja": "第3楽章 3. Romanze: Andante",
+     "en": "III. 3. Romanze: Andante"
+    },
+    {
+     "ja": "第4楽章 4. Menuetto: Allegretto",
+     "en": "IV. 4. Menuetto: Allegretto"
+    },
+    {
+     "ja": "第5楽章 5. Rondo: Allegro",
+     "en": "V. 5. Rondo: Allegro"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Eine kleine Nachtmusik, K.525 (Mozart, Wolfgang Amadeus)",
+     "url": "https://imslp.org/wiki/Eine_kleine_Nachtmusik,_K.525_(Mozart,_Wolfgang_Amadeus)"
     }
    ]
   },
@@ -10029,6 +11642,12 @@
       }
      ]
     }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Preludes and Fugues, K.404a (Mozart, Wolfgang Amadeus)",
+     "url": "https://imslp.org/wiki/Preludes_and_Fugues,_K.404a_(Mozart,_Wolfgang_Amadeus)"
+    }
    ]
   },
   {
@@ -10091,6 +11710,17 @@
        "bytes": 2530117
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ハ長調",
+    "en": "C major"
+   },
+   "composed": "1781",
+   "sources": [
+    {
+     "label": "IMSLP: Rondo in C major, K.373 (Mozart, Wolfgang Amadeus)",
+     "url": "https://imslp.org/wiki/Rondo_in_C_major,_K.373_(Mozart,_Wolfgang_Amadeus)"
     }
    ]
   },
@@ -10206,6 +11836,35 @@
        "bytes": 644940
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ハ長調",
+    "en": "C major"
+   },
+   "composed": "1785",
+   "movements": [
+    {
+     "ja": "第1楽章 Adagio Allegro",
+     "en": "I. Adagio Allegro"
+    },
+    {
+     "ja": "第2楽章 Andante cantabile",
+     "en": "II. Andante cantabile"
+    },
+    {
+     "ja": "第3楽章 Menuetto and Trio. Allegro",
+     "en": "III. Menuetto and Trio. Allegro"
+    },
+    {
+     "ja": "第4楽章 Allegro",
+     "en": "IV. Allegro"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: String Quartet No.19 in C major, K.465 (Mozart, Wolfgang Amadeus)",
+     "url": "https://imslp.org/wiki/String_Quartet_No.19_in_C_major,_K.465_(Mozart,_Wolfgang_Amadeus)"
     }
    ]
   },
@@ -10614,6 +12273,13 @@
       }
      ]
     }
+   ],
+   "composed": "1802–17",
+   "sources": [
+    {
+     "label": "IMSLP: 24 Caprices for Solo Violin, Op.1 (Paganini, Niccolò)",
+     "url": "https://imslp.org/wiki/24_Caprices_for_Solo_Violin,_Op.1_(Paganini,_Niccolò)"
+    }
    ]
   },
   {
@@ -10774,6 +12440,16 @@
        "bytes": 527700
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "変ロ長調",
+    "en": "B-flat major"
+   },
+   "sources": [
+    {
+     "label": "IMSLP: Il carnevale di Venezia, Op.10 (Paganini, Niccolò)",
+     "url": "https://imslp.org/wiki/Il_carnevale_di_Venezia,_Op.10_(Paganini,_Niccolò)"
     }
    ]
   },
@@ -11157,6 +12833,31 @@
        "bytes": 14112477
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ニ長調",
+    "en": "D major"
+   },
+   "composed": "1916–17",
+   "movements": [
+    {
+     "ja": "第1楽章 Andantino",
+     "en": "I. Andantino"
+    },
+    {
+     "ja": "第2楽章 Scherzo. Vivacissimo",
+     "en": "II. Scherzo. Vivacissimo"
+    },
+    {
+     "ja": "第3楽章 Moderato. Allegro moderato",
+     "en": "III. Moderato. Allegro moderato"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Concerto No.1, Op.19 (Prokofiev, Sergey)",
+     "url": "https://imslp.org/wiki/Violin_Concerto_No.1,_Op.19_(Prokofiev,_Sergey)"
     }
    ]
   },
@@ -11581,6 +13282,12 @@
       }
      ]
     }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: 24 Caprices for Solo Violin, Op.22 (Rode, Pierre)",
+     "url": "https://imslp.org/wiki/24_Caprices_for_Solo_Violin,_Op.22_(Rode,_Pierre)"
+    }
    ]
   },
   {
@@ -11680,6 +13387,31 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "イ短調",
+    "en": "A minor"
+   },
+   "composed": "1937",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro moderato",
+     "en": "I. Allegro moderato"
+    },
+    {
+     "ja": "第2楽章 Adagio",
+     "en": "II. Adagio"
+    },
+    {
+     "ja": "第3楽章 Allegro con spirito",
+     "en": "III. Allegro con spirito"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: String Trio, Op.58 (Roussel, Albert)",
+     "url": "https://imslp.org/wiki/String_Trio,_Op.58_(Roussel,_Albert)"
+    }
    ]
   },
   {
@@ -11764,6 +13496,17 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ト短調",
+    "en": "G minor"
+   },
+   "composed": "1874",
+   "sources": [
+    {
+     "label": "IMSLP: Danse macabre, Op.40 (Saint-Saëns, Camille)",
+     "url": "https://imslp.org/wiki/Danse_macabre,_Op.40_(Saint-Saëns,_Camille)"
+    }
    ]
   },
   {
@@ -11846,6 +13589,31 @@
        }
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ロ短調",
+    "en": "B minor"
+   },
+   "composed": "1879–80",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro non troppo",
+     "en": "I. Allegro non troppo"
+    },
+    {
+     "ja": "第2楽章 Andantino quasi allegretto",
+     "en": "II. Andantino quasi allegretto"
+    },
+    {
+     "ja": "第3楽章 Molto moderato e maestoso - Allegro non troppo",
+     "en": "III. Molto moderato e maestoso - Allegro non troppo"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Concerto No.3, Op.61 (Saint-Saëns, Camille)",
+     "url": "https://imslp.org/wiki/Violin_Concerto_No.3,_Op.61_(Saint-Saëns,_Camille)"
     }
    ]
   },
@@ -11931,6 +13699,35 @@
       }
      ]
     }
+   ],
+   "composed": "1881",
+   "movements": [
+    {
+     "ja": "第1楽章 Introduction. Allegro moderato",
+     "en": "I. Introduction. Allegro moderato"
+    },
+    {
+     "ja": "第2楽章 Moderato",
+     "en": "II. Moderato"
+    },
+    {
+     "ja": "第3楽章 Lento assai",
+     "en": "III. Lento assai"
+    },
+    {
+     "ja": "第4楽章 Allegro moderato",
+     "en": "IV. Allegro moderato"
+    },
+    {
+     "ja": "第5楽章 Moderato",
+     "en": "V. Moderato"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Carmen Concert Fantasy, Op.25 (Sarasate, Pablo de)",
+     "url": "https://imslp.org/wiki/Carmen_Concert_Fantasy,_Op.25_(Sarasate,_Pablo_de)"
+    }
    ]
   },
   {
@@ -12010,6 +13807,12 @@
        "bytes": 668480
       }
      ]
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Introduction et Tarentelle, Op.43 (Sarasate, Pablo de)",
+     "url": "https://imslp.org/wiki/Introduction_et_Tarentelle,_Op.43_(Sarasate,_Pablo_de)"
     }
    ]
   },
@@ -12277,6 +14080,12 @@
       }
      ]
     }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Sonata for Arpeggione and Piano in A minor, D.821 (Schubert, Franz)",
+     "url": "https://imslp.org/wiki/Sonata_for_Arpeggione_and_Piano_in_A_minor,_D.821_(Schubert,_Franz)"
+    }
    ]
   },
   {
@@ -12356,6 +14165,12 @@
       }
      ]
     }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Sonata for Arpeggione and Piano in A minor, D.821 (Schubert, Franz)",
+     "url": "https://imslp.org/wiki/Sonata_for_Arpeggione_and_Piano_in_A_minor,_D.821_(Schubert,_Franz)"
+    }
    ]
   },
   {
@@ -12434,6 +14249,17 @@
        "bytes": 682287
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "変ロ長調",
+    "en": "B-flat major"
+   },
+   "composed": "1825",
+   "sources": [
+    {
+     "label": "IMSLP: Ave Maria, D.839 (Schubert, Franz)",
+     "url": "https://imslp.org/wiki/Ave_Maria,_D.839_(Schubert,_Franz)"
     }
    ]
   },
@@ -12533,6 +14359,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "変ホ長調",
+    "en": "E-flat major"
+   },
+   "composed": "1827",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro",
+     "en": "I. Allegro"
+    },
+    {
+     "ja": "第2楽章 Andante con moto",
+     "en": "II. Andante con moto"
+    },
+    {
+     "ja": "第3楽章 Scherzando. Allegro moderato",
+     "en": "III. Scherzando. Allegro moderato"
+    },
+    {
+     "ja": "第4楽章 Allegro moderato",
+     "en": "IV. Allegro moderato"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Piano Trio in E-flat major, D.929 (Schubert, Franz)",
+     "url": "https://imslp.org/wiki/Piano_Trio_in_E-flat_major,_D.929_(Schubert,_Franz)"
+    }
    ]
   },
   {
@@ -12628,6 +14483,23 @@
        "bytes": 798210
       }
      ]
+    }
+   ],
+   "composed": "1816",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro",
+     "en": "I. Allegro"
+    },
+    {
+     "ja": "第2楽章 Andante sostenuto",
+     "en": "II. Andante sostenuto"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: String Trio in B-flat major, D.471 (Schubert, Franz)",
+     "url": "https://imslp.org/wiki/String_Trio_in_B-flat_major,_D.471_(Schubert,_Franz)"
     }
    ]
   },
@@ -12727,6 +14599,34 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "変ロ長調",
+    "en": "B-flat major"
+   },
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro moderato",
+     "en": "I. Allegro moderato"
+    },
+    {
+     "ja": "第2楽章 Andante",
+     "en": "II. Andante"
+    },
+    {
+     "ja": "第3楽章 Menuetto. Allegretto — Trio",
+     "en": "III. Menuetto. Allegretto — Trio"
+    },
+    {
+     "ja": "第4楽章 Rondo. Allegretto",
+     "en": "IV. Rondo. Allegretto"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: String Trio in B-flat major, D.581 (Schubert, Franz)",
+     "url": "https://imslp.org/wiki/String_Trio_in_B-flat_major,_D.581_(Schubert,_Franz)"
+    }
    ]
   },
   {
@@ -12809,6 +14709,12 @@
       }
      ]
     }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Cello Concerto in a minor, Op.129 (Schumann, Robert)",
+     "url": "https://imslp.org/wiki/Cello_Concerto_in_a_minor,_Op.129_(Schumann,_Robert)"
+    }
    ]
   },
   {
@@ -12888,6 +14794,31 @@
        "bytes": 7341586
       }
      ]
+    }
+   ],
+   "composed": "1851",
+   "movements": [
+    {
+     "ja": "第1楽章 Nicht schnell",
+     "en": "I. Nicht schnell"
+    },
+    {
+     "ja": "第2楽章 Lebhaft",
+     "en": "II. Lebhaft"
+    },
+    {
+     "ja": "第3楽章 Rasch",
+     "en": "III. Rasch"
+    },
+    {
+     "ja": "第4楽章 Langsam, mit melancholischen Ausdruck",
+     "en": "IV. Langsam, mit melancholischen Ausdruck"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Märchenbilder, Op.113 (Schumann, Robert)",
+     "url": "https://imslp.org/wiki/Märchenbilder,_Op.113_(Schumann,_Robert)"
     }
    ]
   },
@@ -12987,6 +14918,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ニ短調",
+    "en": "D minor"
+   },
+   "composed": "1847",
+   "movements": [
+    {
+     "ja": "第1楽章 Mit Energie und Leidenschaft",
+     "en": "I. Mit Energie und Leidenschaft"
+    },
+    {
+     "ja": "第2楽章 Lebhaft, doch nicht zu rasch",
+     "en": "II. Lebhaft, doch nicht zu rasch"
+    },
+    {
+     "ja": "第3楽章 Langsam, mit inniger Empfindung - Bewegter - Tempo I - attacca",
+     "en": "III. Langsam, mit inniger Empfindung - Bewegter - Tempo I - attacca"
+    },
+    {
+     "ja": "第4楽章 Mit Feuer - Nach und nach schneller",
+     "en": "IV. Mit Feuer - Nach und nach schneller"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Piano Trio No.1, Op.63 (Schumann, Robert)",
+     "url": "https://imslp.org/wiki/Piano_Trio_No.1,_Op.63_(Schumann,_Robert)"
+    }
    ]
   },
   {
@@ -13084,6 +15044,35 @@
        "bytes": 6780470
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ヘ長調",
+    "en": "F major"
+   },
+   "composed": "1847",
+   "movements": [
+    {
+     "ja": "第1楽章 Sehr lebhaft",
+     "en": "I. Sehr lebhaft"
+    },
+    {
+     "ja": "第2楽章 Mit innigem Ausdruck - Lebhaft",
+     "en": "II. Mit innigem Ausdruck - Lebhaft"
+    },
+    {
+     "ja": "第3楽章 In mässiger Bewegung",
+     "en": "III. In mässiger Bewegung"
+    },
+    {
+     "ja": "第4楽章 Nicht zu rasch",
+     "en": "IV. Nicht zu rasch"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Piano Trio No.2, Op.80 (Schumann, Robert)",
+     "url": "https://imslp.org/wiki/Piano_Trio_No.2,_Op.80_(Schumann,_Robert)"
     }
    ]
   },
@@ -13183,6 +15172,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ト短調",
+    "en": "G minor"
+   },
+   "composed": "1851",
+   "movements": [
+    {
+     "ja": "第1楽章 Bewegt, doch nicht zu rasch",
+     "en": "I. Bewegt, doch nicht zu rasch"
+    },
+    {
+     "ja": "第2楽章 Ziemlich langsam - Etwas bewegter - Tempo I",
+     "en": "II. Ziemlich langsam - Etwas bewegter - Tempo I"
+    },
+    {
+     "ja": "第3楽章 Rasch - Etwas Zuruckhaltend bis zum langsameren Tempo - Tempo I",
+     "en": "III. Rasch - Etwas Zuruckhaltend bis zum langsameren Tempo - Tempo I"
+    },
+    {
+     "ja": "第4楽章 Kräftig, mit Humor",
+     "en": "IV. Kräftig, mit Humor"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Piano Trio No.3, Op.110 (Schumann, Robert)",
+     "url": "https://imslp.org/wiki/Piano_Trio_No.3,_Op.110_(Schumann,_Robert)"
+    }
    ]
   },
   {
@@ -13263,6 +15281,30 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ト長調",
+    "en": "G major"
+   },
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro non troppo",
+     "en": "I. Allegro non troppo"
+    },
+    {
+     "ja": "第2楽章 Adagio",
+     "en": "II. Adagio"
+    },
+    {
+     "ja": "第3楽章 Allegretto moderato",
+     "en": "III. Allegretto moderato"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Student Concerto No.2, Op.13 (Seitz, Friedrich)",
+     "url": "https://imslp.org/wiki/Student_Concerto_No.2,_Op.13_(Seitz,_Friedrich)"
+    }
    ]
   },
   {
@@ -13339,6 +15381,30 @@
        "bytes": 1524157
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ニ長調",
+    "en": "D major"
+   },
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro moderato",
+     "en": "I. Allegro moderato"
+    },
+    {
+     "ja": "第2楽章 Andante cantabile",
+     "en": "II. Andante cantabile"
+    },
+    {
+     "ja": "第3楽章 Rondo: Allegretto",
+     "en": "III. Rondo: Allegretto"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Student Concerto No.5, Op.22 (Seitz, Friedrich)",
+     "url": "https://imslp.org/wiki/Student_Concerto_No.5,_Op.22_(Seitz,_Friedrich)"
     }
    ]
   },
@@ -13692,6 +15758,31 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ニ短調",
+    "en": "D minor"
+   },
+   "composed": "1903–04",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro moderato",
+     "en": "I. Allegro moderato"
+    },
+    {
+     "ja": "第2楽章 Adagio di molto",
+     "en": "II. Adagio di molto"
+    },
+    {
+     "ja": "第3楽章 Allegro, ma non tanto",
+     "en": "III. Allegro, ma non tanto"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Concerto, Op.47 (Sibelius, Jean)",
+     "url": "https://imslp.org/wiki/Violin_Concerto,_Op.47_(Sibelius,_Jean)"
+    }
    ]
   },
   {
@@ -13791,6 +15882,17 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "イ短調",
+    "en": "A minor"
+   },
+   "composed": "1881–82",
+   "sources": [
+    {
+     "label": "IMSLP: Piano Trio, Op.50 (Tchaikovsky, Pyotr)",
+     "url": "https://imslp.org/wiki/Piano_Trio,_Op.50_(Tchaikovsky,_Pyotr)"
+    }
    ]
   },
   {
@@ -13853,6 +15955,17 @@
        "bytes": 1389587
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "イ長調",
+    "en": "A major"
+   },
+   "composed": "1876",
+   "sources": [
+    {
+     "label": "IMSLP: Variations on a Rococo Theme, Op.33 (Tchaikovsky, Pyotr)",
+     "url": "https://imslp.org/wiki/Variations_on_a_Rococo_Theme,_Op.33_(Tchaikovsky,_Pyotr)"
     }
    ]
   },
@@ -13999,6 +16112,35 @@
       }
      ]
     }
+   ],
+   "key": {
+    "ja": "ハ長調",
+    "en": "C major"
+   },
+   "composed": "1880",
+   "movements": [
+    {
+     "ja": "第1楽章 Pezzo in forma di sonatina. Andante non troppo—Allegro moderato",
+     "en": "I. Pezzo in forma di sonatina. Andante non troppo—Allegro moderato"
+    },
+    {
+     "ja": "第2楽章 Valse. Moderato. Tempo di Valse",
+     "en": "II. Valse. Moderato. Tempo di Valse"
+    },
+    {
+     "ja": "第3楽章 Elegia. Larghetto elegiaco",
+     "en": "III. Elegia. Larghetto elegiaco"
+    },
+    {
+     "ja": "第4楽章 Finale (Tema russo). Andante — Allegro con spirito",
+     "en": "IV. Finale (Tema russo). Andante — Allegro con spirito"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Serenade for String Orchestra, Op.48 (Tchaikovsky, Pyotr)",
+     "url": "https://imslp.org/wiki/Serenade_for_String_Orchestra,_Op.48_(Tchaikovsky,_Pyotr)"
+    }
    ]
   },
   {
@@ -14058,6 +16200,31 @@
        "bytes": 5299174
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ニ長調",
+    "en": "D major"
+   },
+   "composed": "1878",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro moderato—Moderato assai",
+     "en": "I. Allegro moderato—Moderato assai"
+    },
+    {
+     "ja": "第2楽章 Canzonetta. Andante",
+     "en": "II. Canzonetta. Andante"
+    },
+    {
+     "ja": "第3楽章 Finale. Allegro vivacissimo",
+     "en": "III. Finale. Allegro vivacissimo"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Concerto, Op.35 (Tchaikovsky, Pyotr)",
+     "url": "https://imslp.org/wiki/Violin_Concerto,_Op.35_(Tchaikovsky,_Pyotr)"
     }
    ]
   },
@@ -15804,6 +17971,31 @@
        "bytes": 3554421
       }
      ]
+    }
+   ],
+   "key": {
+    "ja": "ニ短調",
+    "en": "D minor"
+   },
+   "composed": "1856–62",
+   "movements": [
+    {
+     "ja": "第1楽章 Allegro moderato",
+     "en": "I. Allegro moderato"
+    },
+    {
+     "ja": "第2楽章 'Romance. Andante non troppo",
+     "en": "II. 'Romance. Andante non troppo"
+    },
+    {
+     "ja": "第3楽章 Allegro con fuoco – Allegro moderato, à la Zingara (/major)",
+     "en": "III. Allegro con fuoco – Allegro moderato, à la Zingara (/major)"
+    }
+   ],
+   "sources": [
+    {
+     "label": "IMSLP: Violin Concerto No.2, Op.22 (Wieniawski, Henri)",
+     "url": "https://imslp.org/wiki/Violin_Concerto_No.2,_Op.22_(Wieniawski,_Henri)"
     }
    ]
   }

@@ -439,6 +439,13 @@ def main() -> int:
         ]
         approvals["works"].append(w)
 
+    # IMSLP で確認した作品情報（調性・作曲年・楽章・出典）を反映する（apply_facts.py の確認結果）
+    reviewed_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "facts_reviewed.json")
+    if os.path.exists(reviewed_path):
+        from apply_facts import patch_data
+
+        patch_data(json.load(open(reviewed_path, encoding="utf-8")), approvals)
+
     # ---- 集計 ----
     downloaded_links = [l for l in links.values() if l["status"] == "downloaded"]
     migrated = [r for r in results if r["decision"] == "migrate" and r.get("asset")]
