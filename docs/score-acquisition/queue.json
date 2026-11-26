@@ -37,9 +37,9 @@
   ],
   "cursor": {
     "composer": "Haydn",
-    "stage": "violin_viola_duo",
-    "last_work": "Hob.VI:3 / B-flat major (Doblinger parts, full score missing)",
-    "note": "Next Hob.VI:4 D major, :5 E-flat, :6 C major. IMSLP Hob.VI:1–3 Doblinger 1957 listed only two performance parts, no full original two-staff score; do not approve complete SONARIA sets or redistribution on metadata alone. Evaluate separate original public-domain score and rights."
+    "stage": "cello_sonata",
+    "last_work": "Violin+Viola Hob.VI:6 C major (six duo works catalogued; complete-set source unresolved)",
+    "note": "Hob.VI:4–6 music catalogue confirmed but no verifiable IMSLP score/parts file IDs; their free set remains blocked pending discovery. Violin+viola HN216 is commercial only. Proceed Haydn cello sonata taxonomy; distinguish cello concerto, cello+keyboard arrangements, and 2-cellos or cello+bass duos. Do not claim 6 duos published."
   },
   "items": [
     {
@@ -4725,6 +4725,237 @@
       },
       "rights_status": "unknown",
       "notes": "SONARIA complete-set requirement for duo: two-staff full score + Vn + Va parts, not simply two parts. Scanned Doblinger 1957 urtext may have editorial rights in Japan; don't assume IMSLP availability authorizes local distribution. Modern Henle commercial HN216 is comparison only. Validate copyright and original source, score completeness and editorial apparatus before Claude imports. No downloads.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-violin-viola-hobvi4-score-parts-discovery",
+      "composer": "Joseph Haydn",
+      "category": "string_duo_violin_viola",
+      "work_title": "Sonata (String Duo) in D major for Violin and Viola",
+      "opus_catalog": "Hob.VI:4",
+      "work_url": "https://imslp.org/wiki/List_of_works_by_Joseph_Haydn",
+      "edition": {
+        "publisher": "unknown; commercial comparison G. Henle HN216 is NOT the free source",
+        "publication_date": "unknown",
+        "editor": "unknown",
+        "scope": "Vn+Va two-part duo. Score and two separately verifiable parts REQUIRED by SONARIA.",
+        "imslp_file_id": null,
+        "file_pages": null,
+        "edition_comparison": "Official IMSLP Haydn works list and Henle HN216 both confirm this duet, instrumentation and key. No IMSLP original composition page and no precise full-score or part-file IDs were verifiably resolved in this research pass; never borrow Hob.VI:D1/Es2 or Op.6 two-violin files, which have different catalogue/instrumentation."
+      },
+      "edition_url": null,
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "viola"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": null,
+            "edition": null,
+            "metadata_verified": false,
+            "pdf_inspected": false
+          },
+          "violin": {
+            "imslp_file_id": null,
+            "edition": null,
+            "metadata_verified": false,
+            "pdf_inspected": false
+          },
+          "viola": {
+            "imslp_file_id": null,
+            "edition": null,
+            "metadata_verified": false,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "all_assets_missing_unverified",
+        "complete_set_verified": false,
+        "rights_verified": false,
+        "score_missing": true,
+        "parts_missing": true
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/List_of_works_by_Joseph_Haydn",
+          "verified": "IMSLP Haydn works catalogue lists Hob.VI:4, D major, violin and viola; file pages not independently located."
+        },
+        {
+          "url": "https://www.henle.de/jp/Six-Sonatas-Hob.-VI-1-6-for-Violin-and-Viola/HN-216",
+          "verified": "Official Henle HN216 lists Hob.VI:4, D major within six duet sonatas; publisher's modern score is not a cleared free PDF."
+        }
+      ],
+      "checklist": {
+        "work_identity": "composer_catalog_key_instrumentation_confirmed",
+        "edition": "unidentified",
+        "parts": "unidentified",
+        "pdf_integrity": "not_applicable_no_asset_identified",
+        "duplication": "site_inventory_unverified",
+        "rights": "Japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "blocked_score_and_parts_not_identified"
+      },
+      "rights_status": "unknown",
+      "notes": "Source research must locate matching 2-staff score and both Vn/Va part scans with defensible file IDs, then run visual quality and editorial/legal audit. 2-violin Op.6 / Hob.VI:Es2 / Hob.VI:D1 etc. are different works/instrumentations; do not confuse with Hob.VI:4–6. No PDF download, rights approval or publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-violin-viola-hobvi5-score-parts-discovery",
+      "composer": "Joseph Haydn",
+      "category": "string_duo_violin_viola",
+      "work_title": "Sonata (String Duo) in E-flat major for Violin and Viola",
+      "opus_catalog": "Hob.VI:5",
+      "work_url": "https://imslp.org/wiki/List_of_works_by_Joseph_Haydn",
+      "edition": {
+        "publisher": "unknown; commercial comparison G. Henle HN216 is NOT the free source",
+        "publication_date": "unknown",
+        "editor": "unknown",
+        "scope": "Vn+Va two-part duo. Score and two separately verifiable parts REQUIRED by SONARIA.",
+        "imslp_file_id": null,
+        "file_pages": null,
+        "edition_comparison": "Official IMSLP Haydn works list and Henle HN216 both confirm this duet, instrumentation and key. No IMSLP original composition page and no precise full-score or part-file IDs were verifiably resolved in this research pass; never borrow Hob.VI:D1/Es2 or Op.6 two-violin files, which have different catalogue/instrumentation."
+      },
+      "edition_url": null,
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "viola"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": null,
+            "edition": null,
+            "metadata_verified": false,
+            "pdf_inspected": false
+          },
+          "violin": {
+            "imslp_file_id": null,
+            "edition": null,
+            "metadata_verified": false,
+            "pdf_inspected": false
+          },
+          "viola": {
+            "imslp_file_id": null,
+            "edition": null,
+            "metadata_verified": false,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "all_assets_missing_unverified",
+        "complete_set_verified": false,
+        "rights_verified": false,
+        "score_missing": true,
+        "parts_missing": true
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/List_of_works_by_Joseph_Haydn",
+          "verified": "IMSLP Haydn works catalogue lists Hob.VI:5, E-flat major, violin and viola; file pages not independently located."
+        },
+        {
+          "url": "https://www.henle.de/jp/Six-Sonatas-Hob.-VI-1-6-for-Violin-and-Viola/HN-216",
+          "verified": "Official Henle HN216 lists Hob.VI:5, E-flat major within six duet sonatas; publisher's modern score is not a cleared free PDF."
+        }
+      ],
+      "checklist": {
+        "work_identity": "composer_catalog_key_instrumentation_confirmed",
+        "edition": "unidentified",
+        "parts": "unidentified",
+        "pdf_integrity": "not_applicable_no_asset_identified",
+        "duplication": "site_inventory_unverified",
+        "rights": "Japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "blocked_score_and_parts_not_identified"
+      },
+      "rights_status": "unknown",
+      "notes": "Source research must locate matching 2-staff score and both Vn/Va part scans with defensible file IDs, then run visual quality and editorial/legal audit. 2-violin Op.6 / Hob.VI:Es2 / Hob.VI:D1 etc. are different works/instrumentations; do not confuse with Hob.VI:4–6. No PDF download, rights approval or publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-violin-viola-hobvi6-score-parts-discovery",
+      "composer": "Joseph Haydn",
+      "category": "string_duo_violin_viola",
+      "work_title": "Sonata (String Duo) in C major for Violin and Viola",
+      "opus_catalog": "Hob.VI:6",
+      "work_url": "https://imslp.org/wiki/List_of_works_by_Joseph_Haydn",
+      "edition": {
+        "publisher": "unknown; commercial comparison G. Henle HN216 is NOT the free source",
+        "publication_date": "unknown",
+        "editor": "unknown",
+        "scope": "Vn+Va two-part duo. Score and two separately verifiable parts REQUIRED by SONARIA.",
+        "imslp_file_id": null,
+        "file_pages": null,
+        "edition_comparison": "Official IMSLP Haydn works list and Henle HN216 both confirm this duet, instrumentation and key. No IMSLP original composition page and no precise full-score or part-file IDs were verifiably resolved in this research pass; never borrow Hob.VI:D1/Es2 or Op.6 two-violin files, which have different catalogue/instrumentation."
+      },
+      "edition_url": null,
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "viola"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": null,
+            "edition": null,
+            "metadata_verified": false,
+            "pdf_inspected": false
+          },
+          "violin": {
+            "imslp_file_id": null,
+            "edition": null,
+            "metadata_verified": false,
+            "pdf_inspected": false
+          },
+          "viola": {
+            "imslp_file_id": null,
+            "edition": null,
+            "metadata_verified": false,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "all_assets_missing_unverified",
+        "complete_set_verified": false,
+        "rights_verified": false,
+        "score_missing": true,
+        "parts_missing": true
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/List_of_works_by_Joseph_Haydn",
+          "verified": "IMSLP Haydn works catalogue lists Hob.VI:6, C major, violin and viola; file pages not independently located."
+        },
+        {
+          "url": "https://www.henle.de/jp/Six-Sonatas-Hob.-VI-1-6-for-Violin-and-Viola/HN-216",
+          "verified": "Official Henle HN216 lists Hob.VI:6, C major within six duet sonatas; publisher's modern score is not a cleared free PDF."
+        }
+      ],
+      "checklist": {
+        "work_identity": "composer_catalog_key_instrumentation_confirmed",
+        "edition": "unidentified",
+        "parts": "unidentified",
+        "pdf_integrity": "not_applicable_no_asset_identified",
+        "duplication": "site_inventory_unverified",
+        "rights": "Japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "blocked_score_and_parts_not_identified"
+      },
+      "rights_status": "unknown",
+      "notes": "Source research must locate matching 2-staff score and both Vn/Va part scans with defensible file IDs, then run visual quality and editorial/legal audit. 2-violin Op.6 / Hob.VI:Es2 / Hob.VI:D1 etc. are different works/instrumentations; do not confuse with Hob.VI:4–6. No PDF download, rights approval or publication.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
