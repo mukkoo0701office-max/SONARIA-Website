@@ -501,15 +501,22 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Amazon.co.jp ASIN verification HN210/HN9210 and Henle Op.54-55 complementary study score HN9211",
-    "result": "Targeted Amazon.co.jp queries did not yield a reliable individual product page or ASIN for HN210/HN9210. Henle official publisher verifies HN9211 study score and ISMN; enriched matching HN211 parts identifier.",
-    "new_publisher_confirmed": 1,
-    "existing_records_enriched": 1,
+    "focus": "Amazon.co.jp direct product-page lookup for HN205 HN208 HN9205 HN9216 HN211",
+    "result": "Five targeted site:amazon.co.jp searches for exact Henle catalog numbers and Haydn yielded no matching Amazon.co.jp product detail pages; search results were unrelated Amazon Music pages. No ASIN or affiliate URL verified. Preserve pending_review for all five.",
+    "new_publisher_confirmed": 0,
     "new_amazon_verified": 0,
-    "source_urls": [
-      "https://www.henle.de/en/String-Quartets-Book-VII-op.-54-and-55-Tost-Quartets/HN-9211",
-      "https://www.henle.de/jp/String-Quartets-Book-VII-op.-54-and-55-Tost-Quartets/HN-211"
+    "existing_records_enriched": 0,
+    "next": "Try exact ISMN/EAN searches and alternative Japanese/German titles through direct Amazon catalog or permitted Product Advertising API; require actual individual Amazon product detail page before verification.",
+    "checked_ids": [
+      "haydn-henle-hn205",
+      "haydn-henle-hn208",
+      "haydn-henle-hn9205",
+      "haydn-henle-hn9216",
+      "haydn-henle-hn211"
     ],
-    "next": "Search Amazon.co.jp by exact 9790201892115 and 9790201802114 and verify actual product pages, distinguish playing parts vs study score."
+    "source_urls": [
+      "https://www.amazon.co.jp/",
+      "https://affiliate.amazon.co.jp/help/operating/policies/"
+    ]
   }
 }
