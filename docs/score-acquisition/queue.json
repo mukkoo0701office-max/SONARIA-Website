@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "string_quartet",
-    "last_work": "Op.20 No.6 / Hob.III:36",
-    "note": "Next Op.33 Nos.1–3 (Russian quartets) and verify actual metadata/edition PDFs. Op.20 Nos.1–6 pending visual quality and Japan rights review."
+    "last_work": "Op.33 No.3 / Hob.III:39",
+    "note": "Next Op.33 Nos.4–6. Compare Eulenburg #455448 and Heckel #888357 scores, Sieber complete parts #472399 and individual instrument PDFs. Rights and PDF quality remain unchecked."
   },
   "items": [
     {
@@ -1478,6 +1478,147 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Shared Op.20 collection assets across six works; reuse references without duplicate PDFs. Check page ranges and Japan rights before retrieval/publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op33-no1-eulenburg-sieber",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in B minor",
+      "opus_catalog": "Op.33 No.1; Hob.III:37",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.33_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Ernst Eulenburg (full score); K. Ferd. Heckel (alternate score); Sieber (historic parts)",
+        "publication_date": "Eulenburg circa 1930; Heckel circa 1855; Sieber circa 1783",
+        "editor": "Wilhelm Altmann (Eulenburg)",
+        "scope": "Op.33 six quartets, shared score and historic complete parts",
+        "imslp_file_id": "455448",
+        "file_pages": 117,
+        "file_size_mb": 20.17,
+        "edition_comparison": "Eulenburg/Altmann full score #455448 (117 pp, 20.17 MB), Heckel full score #888357 (207 pp). Sieber 1783 complete parts color #472399 (68pp), individual Violin1 #475739 (21pp), Violin2 #475740 (17pp), Viola #475741 (13pp), Cello #475738 (13pp). Collection files span multiple quartets; compare page boundaries and clarity before selection."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.33_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.33_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP general information identifies Op.33 No.1 as Hob.III:37, B minor; full scores #455448/#888357 and Sieber 1783 complete parts #472399 with individual file IDs are listed; actual PDFs not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_pdf_uninspected",
+        "parts": "complete_parts_listed_not_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "unverified_existing_SONARIA_catalog",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Claude: visually inspect the 6-work bundle and each part, compare legibility, identify page ranges, check PDF duplicates and Japanese republication rights; no download/publication authorized. Histor­ic parts and modern editorial work must be differentiated.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op33-no2-eulenburg-sieber",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in E-flat major (The Joke)",
+      "opus_catalog": "Op.33 No.2; Hob.III:38",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.33_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Ernst Eulenburg (full score); K. Ferd. Heckel (alternate score); Sieber (historic parts)",
+        "publication_date": "Eulenburg circa 1930; Heckel circa 1855; Sieber circa 1783",
+        "editor": "Wilhelm Altmann (Eulenburg)",
+        "scope": "Op.33 six quartets, shared score and historic complete parts",
+        "imslp_file_id": "455448",
+        "file_pages": 117,
+        "file_size_mb": 20.17,
+        "edition_comparison": "Eulenburg/Altmann full score #455448 (117 pp, 20.17 MB), Heckel full score #888357 (207 pp). Sieber 1783 complete parts color #472399 (68pp), individual Violin1 #475739 (21pp), Violin2 #475740 (17pp), Viola #475741 (13pp), Cello #475738 (13pp). Collection files span multiple quartets; compare page boundaries and clarity before selection."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.33_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.33_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP general information identifies Op.33 No.2 as Hob.III:38, E-flat major; full scores #455448/#888357 and Sieber 1783 complete parts #472399 with individual file IDs are listed; actual PDFs not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_pdf_uninspected",
+        "parts": "complete_parts_listed_not_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "unverified_existing_SONARIA_catalog",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Claude: visually inspect the 6-work bundle and each part, compare legibility, identify page ranges, check PDF duplicates and Japanese republication rights; no download/publication authorized. Histor­ic parts and modern editorial work must be differentiated.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op33-no3-eulenburg-sieber",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in C major (The Bird)",
+      "opus_catalog": "Op.33 No.3; Hob.III:39",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.33_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Ernst Eulenburg (full score); K. Ferd. Heckel (alternate score); Sieber (historic parts)",
+        "publication_date": "Eulenburg circa 1930; Heckel circa 1855; Sieber circa 1783",
+        "editor": "Wilhelm Altmann (Eulenburg)",
+        "scope": "Op.33 six quartets, shared score and historic complete parts",
+        "imslp_file_id": "455448",
+        "file_pages": 117,
+        "file_size_mb": 20.17,
+        "edition_comparison": "Eulenburg/Altmann full score #455448 (117 pp, 20.17 MB), Heckel full score #888357 (207 pp). Sieber 1783 complete parts color #472399 (68pp), individual Violin1 #475739 (21pp), Violin2 #475740 (17pp), Viola #475741 (13pp), Cello #475738 (13pp). Collection files span multiple quartets; compare page boundaries and clarity before selection."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.33_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.33_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP general information identifies Op.33 No.3 as Hob.III:39, C major; full scores #455448/#888357 and Sieber 1783 complete parts #472399 with individual file IDs are listed; actual PDFs not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_pdf_uninspected",
+        "parts": "complete_parts_listed_not_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "unverified_existing_SONARIA_catalog",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Claude: visually inspect the 6-work bundle and each part, compare legibility, identify page ranges, check PDF duplicates and Japanese republication rights; no download/publication authorized. Histor­ic parts and modern editorial work must be differentiated.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
