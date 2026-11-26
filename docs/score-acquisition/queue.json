@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "string_quartet",
-    "last_work": "Op.64 No.6 / Hob.III:64",
-    "note": "Next Op.71 Nos.1–3; verify historical score and all four string quartet parts, rights and duplication. The six Op.64 quartets have only source metadata candidates; none quality/rights approved."
+    "last_work": "Op.71 No.3 / Hob.III:71",
+    "note": "Next Op.74 Nos.1–3; source 3-quartet score and historic playing parts. No PDF/republication rights approved."
   },
   "items": [
     {
@@ -2649,6 +2649,144 @@
       },
       "rights_status": "unknown",
       "notes": "No PDF downloaded. Confirm parts cover all movements, non-arranged string quartet and legible pages; inspect legal reuse in Japan, not just IMSLP Public Domain indicator. No publishing. Do not use removed cover file as asset.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op71-no1-hummel-pleyel-collection",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in B-flat major",
+      "opus_catalog": "Op.71 No.1; Hob.III:69",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op._71_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Ernst Eulenburg (full score); K. Ferd. Heckel (alternate score); J. J. Hummel (historical parts); Pleyel (historical parts)",
+        "publication_date": "Eulenburg ca.1930; Heckel ca.1855; Hummel 1797; Pleyel 1797",
+        "editor": "Wilhelm Altmann (Eulenburg); historical part editor not specified",
+        "scope": "Entire three-quartet Op.71 collection, shared score and four-instrument parts",
+        "imslp_file_id": "455067",
+        "file_pages": 74,
+        "edition_comparison": "Scores: Eulenburg/Altmann complete Op.71 #455067, 74pp; Heckel #892065, 103pp; 1793 autograph holograph #535233, 93pp (large 121.54MB; compare reliability). Hummel 1797 four parts Violin1 #279592 (13pp), Violin2 #279593 (13pp), Viola #279594 (10pp), Cello #279595 (10pp). Pleyel 1797 parts Violin1 #280302 (20pp), Violin2 #280303 (19pp), Viola #280304 (15pp), Cello #280305 (13pp). Verify the PDF pages for all 3 works, instrumentation and legibility before choosing files. Avoid orchestra arrangement files #770613-770621."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op._71_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op._71_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP catalog Op.71 No.1, Hob.III:69, B-flat major; listed Eulenburg score #455067, Heckel #892065, autograph #535233; 1797 Hummel and Pleyel separate four parts file IDs. Source metadata checked, no PDF inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "historical_edition_metadata_checked_pdf_uninspected",
+        "parts": "two_complete_four_part_collections_listed_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "existing_SONARIA_site_inventory_unverified",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "All 3 works share multiple collection PDFs; one asset per PDF with per-work page range later. The 1793 autograph is a research source, not necessarily the cleanest performance material. Claude inspect score/part pagination, legibility, completeness, and Japan-specific rights; do not download/publish automatically.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op71-no2-hummel-pleyel-collection",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in D major",
+      "opus_catalog": "Op.71 No.2; Hob.III:70",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op._71_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Ernst Eulenburg (full score); K. Ferd. Heckel (alternate score); J. J. Hummel (historical parts); Pleyel (historical parts)",
+        "publication_date": "Eulenburg ca.1930; Heckel ca.1855; Hummel 1797; Pleyel 1797",
+        "editor": "Wilhelm Altmann (Eulenburg); historical part editor not specified",
+        "scope": "Entire three-quartet Op.71 collection, shared score and four-instrument parts",
+        "imslp_file_id": "455067",
+        "file_pages": 74,
+        "edition_comparison": "Scores: Eulenburg/Altmann complete Op.71 #455067, 74pp; Heckel #892065, 103pp; 1793 autograph holograph #535233, 93pp (large 121.54MB; compare reliability). Hummel 1797 four parts Violin1 #279592 (13pp), Violin2 #279593 (13pp), Viola #279594 (10pp), Cello #279595 (10pp). Pleyel 1797 parts Violin1 #280302 (20pp), Violin2 #280303 (19pp), Viola #280304 (15pp), Cello #280305 (13pp). Verify the PDF pages for all 3 works, instrumentation and legibility before choosing files. Avoid orchestra arrangement files #770613-770621."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op._71_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op._71_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP catalog Op.71 No.2, Hob.III:70, D major; listed Eulenburg score #455067, Heckel #892065, autograph #535233; 1797 Hummel and Pleyel separate four parts file IDs. Source metadata checked, no PDF inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "historical_edition_metadata_checked_pdf_uninspected",
+        "parts": "two_complete_four_part_collections_listed_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "existing_SONARIA_site_inventory_unverified",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "All 3 works share multiple collection PDFs; one asset per PDF with per-work page range later. The 1793 autograph is a research source, not necessarily the cleanest performance material. Claude inspect score/part pagination, legibility, completeness, and Japan-specific rights; do not download/publish automatically.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op71-no3-hummel-pleyel-collection",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in E-flat major",
+      "opus_catalog": "Op.71 No.3; Hob.III:71",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op._71_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Ernst Eulenburg (full score); K. Ferd. Heckel (alternate score); J. J. Hummel (historical parts); Pleyel (historical parts)",
+        "publication_date": "Eulenburg ca.1930; Heckel ca.1855; Hummel 1797; Pleyel 1797",
+        "editor": "Wilhelm Altmann (Eulenburg); historical part editor not specified",
+        "scope": "Entire three-quartet Op.71 collection, shared score and four-instrument parts",
+        "imslp_file_id": "455067",
+        "file_pages": 74,
+        "edition_comparison": "Scores: Eulenburg/Altmann complete Op.71 #455067, 74pp; Heckel #892065, 103pp; 1793 autograph holograph #535233, 93pp (large 121.54MB; compare reliability). Hummel 1797 four parts Violin1 #279592 (13pp), Violin2 #279593 (13pp), Viola #279594 (10pp), Cello #279595 (10pp). Pleyel 1797 parts Violin1 #280302 (20pp), Violin2 #280303 (19pp), Viola #280304 (15pp), Cello #280305 (13pp). Verify the PDF pages for all 3 works, instrumentation and legibility before choosing files. Avoid orchestra arrangement files #770613-770621."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op._71_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op._71_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP catalog Op.71 No.3, Hob.III:71, E-flat major; listed Eulenburg score #455067, Heckel #892065, autograph #535233; 1797 Hummel and Pleyel separate four parts file IDs. Source metadata checked, no PDF inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "historical_edition_metadata_checked_pdf_uninspected",
+        "parts": "two_complete_four_part_collections_listed_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "existing_SONARIA_site_inventory_unverified",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "All 3 works share multiple collection PDFs; one asset per PDF with per-work page range later. The 1793 autograph is a research source, not necessarily the cleanest performance material. Claude inspect score/part pagination, legibility, completeness, and Japan-specific rights; do not download/publish automatically.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
