@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "string_quartet",
-    "last_work": "Op.50 No.6 / Hob.III:49",
-    "note": "Next Op.54 Nos.1–3 and verify score/part edition metadata. Op.50 Nos.1–6 source information gathered, PDF checks/rights remain pending."
+    "last_work": "Op.54 No.3 / Hob.III:59",
+    "note": "Next research Op.55 Nos.1–3, checking work number vs Hob numbering and comparing historical parts and score sources. PDF and Japanese rights remain unreviewed."
   },
   "items": [
     {
@@ -2085,6 +2085,147 @@
       },
       "rights_status": "unknown",
       "notes": "Forster 1787 and Litolff circa 1870 are historic collection parts; Claude must check all movements and quartet part scan clarity, work ranges and Japanese republication status. Distinguish collection assets from individual works. No downloading or publishing.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op54-no1-eulenburg-historical",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in G major",
+      "opus_catalog": "Op.54 No.1; Hob.III:58",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.54_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Ernst Eulenburg (score), K. Ferd. Heckel (alternate historical score), historical complete parts",
+        "publication_date": "Eulenburg circa 1930; Heckel circa 1855; parts historical editions exact publisher to inspect",
+        "editor": "Wilhelm Altmann (Eulenburg); others unconfirmed",
+        "scope": "Op.54 three quartets in shared collection scores and part sets",
+        "imslp_file_id": "455182",
+        "file_pages": 70,
+        "file_size_mb": 12.32,
+        "edition_comparison": "Eulenburg/Altmann complete score #455182 70pp; Heckel score #889029 111pp; complete color parts #472907 (60pp), individual Violin1 #476347 (20pp), Violin2 #476348 (16pp), Viola #476349 (12pp), Cello #476346 (12pp). Alternative mono bundle #476343 40pp. Source metadata only: no visual review."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.54_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.54_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP collection lists Op.54 No.1 G major, Hob.III:58; Eulenburg score #455182, Heckel #889029, complete historical parts #472907, and four separate instrumental parts. File contents not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_pdf_uninspected",
+        "parts": "four_parts_listed_not_visually_checked",
+        "pdf_integrity": "unchecked",
+        "duplication": "unverified_existing_SONARIA_catalog",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Shared Op.54 collection assets; must not download or publish duplicate files for each quartet. Check page ranges, completeness, print legibility, provenance and Japan republication rights. Hob order is not identical to Op numbering: Op.54 Nos.1–3 = Hob.III:58,57,59.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op54-no2-eulenburg-historical",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in C major",
+      "opus_catalog": "Op.54 No.2; Hob.III:57",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.54_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Ernst Eulenburg (score), K. Ferd. Heckel (alternate historical score), historical complete parts",
+        "publication_date": "Eulenburg circa 1930; Heckel circa 1855; parts historical editions exact publisher to inspect",
+        "editor": "Wilhelm Altmann (Eulenburg); others unconfirmed",
+        "scope": "Op.54 three quartets in shared collection scores and part sets",
+        "imslp_file_id": "455182",
+        "file_pages": 70,
+        "file_size_mb": 12.32,
+        "edition_comparison": "Eulenburg/Altmann complete score #455182 70pp; Heckel score #889029 111pp; complete color parts #472907 (60pp), individual Violin1 #476347 (20pp), Violin2 #476348 (16pp), Viola #476349 (12pp), Cello #476346 (12pp). Alternative mono bundle #476343 40pp. Source metadata only: no visual review."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.54_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.54_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP collection lists Op.54 No.2 C major, Hob.III:57; Eulenburg score #455182, Heckel #889029, complete historical parts #472907, and four separate instrumental parts. File contents not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_pdf_uninspected",
+        "parts": "four_parts_listed_not_visually_checked",
+        "pdf_integrity": "unchecked",
+        "duplication": "unverified_existing_SONARIA_catalog",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Shared Op.54 collection assets; must not download or publish duplicate files for each quartet. Check page ranges, completeness, print legibility, provenance and Japan republication rights. Hob order is not identical to Op numbering: Op.54 Nos.1–3 = Hob.III:58,57,59.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op54-no3-eulenburg-historical",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in E major",
+      "opus_catalog": "Op.54 No.3; Hob.III:59",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.54_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Ernst Eulenburg (score), K. Ferd. Heckel (alternate historical score), historical complete parts",
+        "publication_date": "Eulenburg circa 1930; Heckel circa 1855; parts historical editions exact publisher to inspect",
+        "editor": "Wilhelm Altmann (Eulenburg); others unconfirmed",
+        "scope": "Op.54 three quartets in shared collection scores and part sets",
+        "imslp_file_id": "455182",
+        "file_pages": 70,
+        "file_size_mb": 12.32,
+        "edition_comparison": "Eulenburg/Altmann complete score #455182 70pp; Heckel score #889029 111pp; complete color parts #472907 (60pp), individual Violin1 #476347 (20pp), Violin2 #476348 (16pp), Viola #476349 (12pp), Cello #476346 (12pp). Alternative mono bundle #476343 40pp. Source metadata only: no visual review."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.54_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.54_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP collection lists Op.54 No.3 E major, Hob.III:59; Eulenburg score #455182, Heckel #889029, complete historical parts #472907, and four separate instrumental parts. File contents not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_pdf_uninspected",
+        "parts": "four_parts_listed_not_visually_checked",
+        "pdf_integrity": "unchecked",
+        "duplication": "unverified_existing_SONARIA_catalog",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Shared Op.54 collection assets; must not download or publish duplicate files for each quartet. Check page ranges, completeness, print legibility, provenance and Japan republication rights. Hob order is not identical to Op numbering: Op.54 Nos.1–3 = Hob.III:58,57,59.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
