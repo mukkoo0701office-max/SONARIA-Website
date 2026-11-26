@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "string_quartet",
-    "last_work": "Op.76 No.6 / Hob.III:80",
-    "note": "Next Op.77 Nos.1–2 and Op.103 incomplete quartet. For all future candidates target a complete score+4 parts package and validate edition compatibility; Op.76 Eulenburg #454963 has missing p216 in No.5."
+    "last_work": "Op.103 / Hob.III:83",
+    "note": "Core Haydn Op.77 Nos.1–2 and unfinished Op.103 candidates added; next verify remaining missed authentic Haydn string quartets (including Op.51 Hob.III:50–56 and any early works) before advancing to violin sonatas. Do not claim composer corpus complete without duplication, completeness and missing-work audit."
   },
   "items": [
     {
@@ -3321,6 +3321,265 @@
       },
       "rights_status": "unknown",
       "notes": "SONARIA policy: deliver complete 5-file score+Vn1+Vn2+Va+Vc set when verified. Heckel score differs from Longman/Clementi parts; Claude must compare section starts, endings, repeats, first/last measures, movement order, part and score completeness, page quality, site duplicates and Japan rights. Eulenburg #454963 lacks printed p216 No.5. No PDFs downloaded and no publication authorized.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op77-no1-heckel-peters-score-parts",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in G major",
+      "opus_catalog": "Op.77 No.1; Hob.III:81",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.77_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "K. Ferd. Heckel (complete score); Edition Peters (complete historical quartet parts)",
+        "publication_date": "Heckel circa 1855; Peters circa 1918",
+        "editor": "Andreas Moser and Hugo Dechert (Peters); score editor not specified",
+        "scope": "Two Op.77 Lobkowitz quartets in shared complete score and shared performing part PDFs",
+        "imslp_file_id": "892436",
+        "file_pages": 98,
+        "edition_comparison": "Heckel score #892436 (98pp), alternate Eulenburg/Altmann #455061 (64pp). Peters complete parts #455066 (58pp), Vn1 #526767 (19pp), Vn2 #526768 (13pp), Viola #526769 (13pp), Cello #526770 (13pp). Score versus parts are different editions and require musical compatibility audit."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.77_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "892436",
+            "edition": "Heckel c.1855",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_1": {
+            "imslp_file_id": "526767",
+            "edition": "Peters c.1918",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_2": {
+            "imslp_file_id": "526768",
+            "edition": "Peters c.1918",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "viola": {
+            "imslp_file_id": "526769",
+            "edition": "Peters c.1918",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "526770",
+            "edition": "Peters c.1918",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "mixed_editions_unverified",
+        "page_ranges_verified": false,
+        "complete_set_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.77_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP Op.77 source identifies No.1 Hob.III:81 G major, Heckel score #892436 and Peters complete four parts #455066/#526767–526770. PDFs not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "mixed_edition_score_parts_unreviewed",
+        "parts": "four_parts_listed_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "shared_two_quartet_assets_do_not_duplicate",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "unverified_pending_claude"
+      },
+      "rights_status": "unknown",
+      "notes": "SONARIA needs score plus all four parts, per-work page ranges, bar/movement matching between Heckel score and Peters parts, quality and Japan copyright checks. These are source candidates, not approved set. No downloads.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op77-no2-heckel-peters-score-parts",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in F major",
+      "opus_catalog": "Op.77 No.2; Hob.III:82",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.77_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "K. Ferd. Heckel (complete score); Edition Peters (complete historical quartet parts)",
+        "publication_date": "Heckel circa 1855; Peters circa 1918",
+        "editor": "Andreas Moser and Hugo Dechert (Peters); score editor not specified",
+        "scope": "Two Op.77 Lobkowitz quartets in shared complete score and shared performing part PDFs",
+        "imslp_file_id": "892436",
+        "file_pages": 98,
+        "edition_comparison": "Heckel score #892436 (98pp), alternate Eulenburg/Altmann #455061 (64pp). Peters complete parts #455066 (58pp), Vn1 #526767 (19pp), Vn2 #526768 (13pp), Viola #526769 (13pp), Cello #526770 (13pp). Score versus parts are different editions and require musical compatibility audit."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.77_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "892436",
+            "edition": "Heckel c.1855",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_1": {
+            "imslp_file_id": "526767",
+            "edition": "Peters c.1918",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_2": {
+            "imslp_file_id": "526768",
+            "edition": "Peters c.1918",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "viola": {
+            "imslp_file_id": "526769",
+            "edition": "Peters c.1918",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "526770",
+            "edition": "Peters c.1918",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "mixed_editions_unverified",
+        "page_ranges_verified": false,
+        "complete_set_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.77_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP Op.77 source identifies No.2 Hob.III:82 F major, Heckel score #892436 and Peters complete four parts #455066/#526767–526770. PDFs not inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "mixed_edition_score_parts_unreviewed",
+        "parts": "four_parts_listed_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "shared_two_quartet_assets_do_not_duplicate",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "unverified_pending_claude"
+      },
+      "rights_status": "unknown",
+      "notes": "SONARIA needs score plus all four parts, per-work page ranges, bar/movement matching between Heckel score and Peters parts, quality and Japan copyright checks. These are source candidates, not approved set. No downloads.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op103-hobiii83-incomplete-score-parts",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in D minor (unfinished, two surviving movements)",
+      "opus_catalog": "Op.103; Hob.III:83",
+      "work_url": "https://imslp.org/wiki/String_Quartet_in_D_minor%2C_Op.103_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Trautwein Berlin (score); Edition Peters Leipzig (parts); Heckel Mannheim (alternate score)",
+        "publication_date": "Trautwein 1840–45; Peters ca.1900; Heckel 1855",
+        "editor": "Andreas Moser and Hugo Dechert (Peters)",
+        "scope": "Both surviving movements: Andante grazioso; Minuet ma non troppo presto with Trio. Not a finished four-movement quartet.",
+        "imslp_file_id": "106809",
+        "file_pages": 9,
+        "edition_comparison": "Trautwein score #106809 9pp; Heckel score #892439 14pp. Peters complete surviving-work parts #219588 8pp, Vn1 #459930 2pp, Vn2 #459931 2pp, Va #459932 2pp, Vc #459933 2pp. Original unfinished Minuet sketch #113415 2pp is research evidence only, not an additional completed third movement. Avoid flute quartet or piano arrangements."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_in_D_minor%2C_Op.103_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "106809",
+            "edition": "Trautwein 1840–45",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_1": {
+            "imslp_file_id": "459930",
+            "edition": "Peters ca.1900",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_2": {
+            "imslp_file_id": "459931",
+            "edition": "Peters ca.1900",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "viola": {
+            "imslp_file_id": "459932",
+            "edition": "Peters ca.1900",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "459933",
+            "edition": "Peters ca.1900",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "mixed_editions_unverified",
+        "page_ranges_verified": false,
+        "complete_set_verified": false,
+        "rights_verified": false,
+        "work_completeness": "composer_unfinished_two_surviving_movements_only"
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_in_D_minor%2C_Op.103_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP: Op.103 Hob.III:83, D minor, 2 movements unfinished; Trautwein score #106809, Heckel #892439, Peters parts #219588 and #459930–459933. No file visually inspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked_unfinished_work",
+        "edition": "source_metadata_checked_pdf_uninspected",
+        "parts": "four_parts_listed_not_visually_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "SONARIA_site_inventory_unverified",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "unverified_for_surviving_two_movements"
+      },
+      "rights_status": "unknown",
+      "notes": "Do not call Op.103 complete four-movement work. A 'complete score and parts set' means all extant two movements, composer status 'unfinished'. Avoid creating or inventing other movements; don't use unapproved arrangement as original. Inspect mixed score/parts compatibility, page scans, rights before use.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
