@@ -3,7 +3,7 @@
   "updated_at": "2026-11-27",
   "status": "research_only",
   "max_items_per_score_page": 2,
-  "affiliate_tag": "NOT_CONFIGURED",
+  "affiliate_tag": "mukkoo-22",
   "items": [
     {
       "id": "mozart-quartets-henle-168-173",
@@ -55,7 +55,94 @@
       "verification": "収録曲/巻/版/ASIN未確認",
       "status": "pending_review",
       "priority": "A"
+    },
+    {
+      "id": "haydn-henle-hn205",
+      "composer": "Haydn",
+      "category": "printed_score",
+      "title": "String Quartets Book I (Early String Quartets)",
+      "publisher": "G. Henle Verlag",
+      "publisher_catalog": "HN 205",
+      "work_ids": [],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "source": "https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-205",
+      "verification": "出版社の商品は確認。Amazon.co.jpでの販売、ASIN、作品ページとの対応は未確認",
+      "status": "pending_review",
+      "priority": "S"
+    },
+    {
+      "id": "haydn-henle-hn208",
+      "composer": "Haydn",
+      "category": "printed_score",
+      "title": "String Quartets Book IV op. 20 (Sun Quartets)",
+      "publisher": "G. Henle Verlag",
+      "publisher_catalog": "HN 208",
+      "work_ids": [
+        "Op.20"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "source": "https://www.henle.de/jp/String-Quartets-Book-IV-op.-20-Sun-Quartets/HN-208",
+      "verification": "出版社の商品は確認。Amazon.co.jpのASINと販売ページは未確認",
+      "status": "pending_review",
+      "priority": "S"
+    },
+    {
+      "id": "haydn-henle-hn9205",
+      "composer": "Haydn",
+      "category": "pocket_score",
+      "title": "String Quartets Book I (Early String Quartets) Study Score",
+      "publisher": "G. Henle Verlag",
+      "publisher_catalog": "HN 9205",
+      "work_ids": [],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "source": "https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-9205",
+      "verification": "出版社商品確認、Amazon.co.jp/作品単位対応は未確認",
+      "status": "pending_review",
+      "priority": "S"
+    },
+    {
+      "id": "haydn-henle-hn9216",
+      "composer": "Haydn",
+      "category": "pocket_score",
+      "title": "The String Quartets – 12 Volumes in a Slipcase",
+      "publisher": "G. Henle Verlag",
+      "publisher_catalog": "HN 9216",
+      "work_ids": [],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "source": "https://www.henle.de/jp/The-String-Quartets-12-Volumes-in-a-Slipcase/HN-9216",
+      "verification": "出版社商品確認、Amazon.co.jp販売とASIN未確認。全集のため原則作曲家ページ対象",
+      "status": "pending_review",
+      "priority": "A"
+    },
+    {
+      "id": "haydn-henle-hn211",
+      "composer": "Haydn",
+      "category": "printed_score",
+      "title": "String Quartets Book VII op. 54 and 55 (Tost Quartets)",
+      "publisher": "G. Henle Verlag",
+      "publisher_catalog": "HN 211",
+      "work_ids": [
+        "Op.54",
+        "Op.55"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "source": "https://www.henle.de/en/String-Quartets-Book-VII-op.-54-and-55-Tost-Quartets/HN-211",
+      "verification": "出版社商品確認、Amazon.co.jp/ASIN未確認",
+      "status": "pending_review",
+      "priority": "S"
     }
   ],
-  "implementation_ready": 0
+  "implementation_ready": 0,
+  "store_id": "mukkoo-22",
+  "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot"
 }
