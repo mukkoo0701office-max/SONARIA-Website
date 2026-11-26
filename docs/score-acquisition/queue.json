@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "string_quartet",
-    "last_work": "Op.76 No.3 / Hob.III:77",
-    "note": "Next Op.76 Nos.4–6 (Sunrise, D major, E-flat major). The all-six Eulenburg score #454963 explicitly lacks printed p.216 in No.5; prefer comparing Heckel #892429 and Longman & Clementi parts; Japanese re-use rights remain unapproved."
+    "last_work": "Op.76 No.6 / Hob.III:80",
+    "note": "Next Op.77 Nos.1–2 and Op.103 incomplete quartet. For all future candidates target a complete score+4 parts package and validate edition compatibility; Op.76 Eulenburg #454963 has missing p216 in No.5."
   },
   "items": [
     {
@@ -3063,6 +3063,264 @@
       },
       "rights_status": "unknown",
       "notes": "Avoid assigning IMSLP's missing Eulenburg No.5 page to Nos.1–3; collection-level integrity defect affects whether to adopt the full six-piece compilation. Claude verify all 4 Hummel first-edition part scans for Nos.1–3, movement boundaries, quality, and legal rights for public distribution. No downloads, no rights changes, no publishing.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op76-no4-heckel-longman-set",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in B-flat major (Sunrise)",
+      "opus_catalog": "Op.76 No.4; Hob.III:78",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "K. Ferd. Heckel (full score), Longman & Clementi (historical performance parts), Ernst Eulenburg/Altmann (incomplete score, exclude for complete set)",
+        "publication_date": "Heckel c.1855; Longman & Clementi 1799–1800; Eulenburg c.1930–35",
+        "editor": "Heckel collection unspecified; Longman & Clementi first English edition, reprint; Eulenburg Wilhelm Altmann",
+        "scope": "Op.76 all six quartet score-and-four-part set candidates; grouped assets shared among Nos.1–6",
+        "imslp_file_id": "892429",
+        "file_pages": 240,
+        "edition_comparison": "Heckel full six-work score #892429 (240pp, 52.42MB) PLUS 1799–1800 Longman & Clementi complete color parts #472937 (130pp, 18.25MB): violin 1 #476440 (39pp), violin 2 #476441 (33pp), viola #476442 (27pp), cello #476439 (27pp); monochrome alternate #472938 with individual parts #476444/#476445/#476446/#476443. Separate editions require score/parts bar-by-bar compatibility review. Eulenburg/Altmann complete score #454963 (162 PDF pp) has explicitly missing printed p.216 in No.5; reject as complete six-work source without replacement. Hummel 1799 #472935 covers Nos.1–3 only, NOT Nos.4–6."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "892429",
+            "edition": "Heckel 1855",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_1": {
+            "imslp_file_id": "476440",
+            "edition": "Longman & Clementi 1799–1800",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_2": {
+            "imslp_file_id": "476441",
+            "edition": "Longman & Clementi 1799–1800",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "viola": {
+            "imslp_file_id": "476442",
+            "edition": "Longman & Clementi 1799–1800",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "476439",
+            "edition": "Longman & Clementi 1799–1800",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "mixed_historical_editions_unverified",
+        "page_ranges_verified": false,
+        "complete_set_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP work list Op.76 No.4, Hob.III:78, B-flat major; Heckel score #892429, Longman & Clementi all-six part set #472937 / 4 separately scanned parts, and incomplete Eulenburg score #454963 with missing No.5 p.216, metadata only."
+        }
+      ],
+      "checklist": {
+        "work_identity": "imslp_source_confirmed",
+        "edition": "cross_edition_matching_required",
+        "parts": "four_part_assets_identified_not_visually_verified",
+        "pdf_integrity": "unchecked_reject_454963_missing_p216_no5",
+        "duplication": "six_work_collection_asset_shared_no_duplicate_copy",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "unverified_5_assets_required"
+      },
+      "rights_status": "unknown",
+      "notes": "SONARIA policy: deliver complete 5-file score+Vn1+Vn2+Va+Vc set when verified. Heckel score differs from Longman/Clementi parts; Claude must compare section starts, endings, repeats, first/last measures, movement order, part and score completeness, page quality, site duplicates and Japan rights. Eulenburg #454963 lacks printed p216 No.5. No PDFs downloaded and no publication authorized.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op76-no5-heckel-longman-set",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in D major",
+      "opus_catalog": "Op.76 No.5; Hob.III:79",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "K. Ferd. Heckel (full score), Longman & Clementi (historical performance parts), Ernst Eulenburg/Altmann (incomplete score, exclude for complete set)",
+        "publication_date": "Heckel c.1855; Longman & Clementi 1799–1800; Eulenburg c.1930–35",
+        "editor": "Heckel collection unspecified; Longman & Clementi first English edition, reprint; Eulenburg Wilhelm Altmann",
+        "scope": "Op.76 all six quartet score-and-four-part set candidates; grouped assets shared among Nos.1–6",
+        "imslp_file_id": "892429",
+        "file_pages": 240,
+        "edition_comparison": "Heckel full six-work score #892429 (240pp, 52.42MB) PLUS 1799–1800 Longman & Clementi complete color parts #472937 (130pp, 18.25MB): violin 1 #476440 (39pp), violin 2 #476441 (33pp), viola #476442 (27pp), cello #476439 (27pp); monochrome alternate #472938 with individual parts #476444/#476445/#476446/#476443. Separate editions require score/parts bar-by-bar compatibility review. Eulenburg/Altmann complete score #454963 (162 PDF pp) has explicitly missing printed p.216 in No.5; reject as complete six-work source without replacement. Hummel 1799 #472935 covers Nos.1–3 only, NOT Nos.4–6."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "892429",
+            "edition": "Heckel 1855",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_1": {
+            "imslp_file_id": "476440",
+            "edition": "Longman & Clementi 1799–1800",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_2": {
+            "imslp_file_id": "476441",
+            "edition": "Longman & Clementi 1799–1800",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "viola": {
+            "imslp_file_id": "476442",
+            "edition": "Longman & Clementi 1799–1800",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "476439",
+            "edition": "Longman & Clementi 1799–1800",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "mixed_historical_editions_unverified",
+        "page_ranges_verified": false,
+        "complete_set_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP work list Op.76 No.5, Hob.III:79, D major; Heckel score #892429, Longman & Clementi all-six part set #472937 / 4 separately scanned parts, and incomplete Eulenburg score #454963 with missing No.5 p.216, metadata only."
+        }
+      ],
+      "checklist": {
+        "work_identity": "imslp_source_confirmed",
+        "edition": "cross_edition_matching_required",
+        "parts": "four_part_assets_identified_not_visually_verified",
+        "pdf_integrity": "unchecked_reject_454963_missing_p216_no5",
+        "duplication": "six_work_collection_asset_shared_no_duplicate_copy",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "unverified_5_assets_required"
+      },
+      "rights_status": "unknown",
+      "notes": "SONARIA policy: deliver complete 5-file score+Vn1+Vn2+Va+Vc set when verified. Heckel score differs from Longman/Clementi parts; Claude must compare section starts, endings, repeats, first/last measures, movement order, part and score completeness, page quality, site duplicates and Japan rights. Eulenburg #454963 lacks printed p216 No.5. No PDFs downloaded and no publication authorized.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op76-no6-heckel-longman-set",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in E-flat major",
+      "opus_catalog": "Op.76 No.6; Hob.III:80",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "K. Ferd. Heckel (full score), Longman & Clementi (historical performance parts), Ernst Eulenburg/Altmann (incomplete score, exclude for complete set)",
+        "publication_date": "Heckel c.1855; Longman & Clementi 1799–1800; Eulenburg c.1930–35",
+        "editor": "Heckel collection unspecified; Longman & Clementi first English edition, reprint; Eulenburg Wilhelm Altmann",
+        "scope": "Op.76 all six quartet score-and-four-part set candidates; grouped assets shared among Nos.1–6",
+        "imslp_file_id": "892429",
+        "file_pages": 240,
+        "edition_comparison": "Heckel full six-work score #892429 (240pp, 52.42MB) PLUS 1799–1800 Longman & Clementi complete color parts #472937 (130pp, 18.25MB): violin 1 #476440 (39pp), violin 2 #476441 (33pp), viola #476442 (27pp), cello #476439 (27pp); monochrome alternate #472938 with individual parts #476444/#476445/#476446/#476443. Separate editions require score/parts bar-by-bar compatibility review. Eulenburg/Altmann complete score #454963 (162 PDF pp) has explicitly missing printed p.216 in No.5; reject as complete six-work source without replacement. Hummel 1799 #472935 covers Nos.1–3 only, NOT Nos.4–6."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_parts_set": {
+        "require_both": true,
+        "components": {
+          "full_score": {
+            "imslp_file_id": "892429",
+            "edition": "Heckel 1855",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_1": {
+            "imslp_file_id": "476440",
+            "edition": "Longman & Clementi 1799–1800",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "violin_2": {
+            "imslp_file_id": "476441",
+            "edition": "Longman & Clementi 1799–1800",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "viola": {
+            "imslp_file_id": "476442",
+            "edition": "Longman & Clementi 1799–1800",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          },
+          "cello": {
+            "imslp_file_id": "476439",
+            "edition": "Longman & Clementi 1799–1800",
+            "metadata_verified": true,
+            "pdf_inspected": false
+          }
+        },
+        "edition_consistency": "mixed_historical_editions_unverified",
+        "page_ranges_verified": false,
+        "complete_set_verified": false,
+        "rights_verified": false
+      },
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
+          "verified": "IMSLP work list Op.76 No.6, Hob.III:80, E-flat major; Heckel score #892429, Longman & Clementi all-six part set #472937 / 4 separately scanned parts, and incomplete Eulenburg score #454963 with missing No.5 p.216, metadata only."
+        }
+      ],
+      "checklist": {
+        "work_identity": "imslp_source_confirmed",
+        "edition": "cross_edition_matching_required",
+        "parts": "four_part_assets_identified_not_visually_verified",
+        "pdf_integrity": "unchecked_reject_454963_missing_p216_no5",
+        "duplication": "six_work_collection_asset_shared_no_duplicate_copy",
+        "rights": "japan_republication_unverified",
+        "publish": "not_approved",
+        "complete_score_and_parts_set": "unverified_5_assets_required"
+      },
+      "rights_status": "unknown",
+      "notes": "SONARIA policy: deliver complete 5-file score+Vn1+Vn2+Va+Vc set when verified. Heckel score differs from Longman/Clementi parts; Claude must compare section starts, endings, repeats, first/last measures, movement order, part and score completeness, page quality, site duplicates and Japan rights. Eulenburg #454963 lacks printed p216 No.5. No PDFs downloaded and no publication authorized.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
