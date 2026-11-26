@@ -128,7 +128,12 @@ def main() -> int:
     args = ap.parse_args()
     catalog = json.load(open(os.path.join(args.repo, "frontend/src/data/scores/catalog.json"), encoding="utf-8"))
     composers = {c["id"]: c for c in json.load(open(os.path.join(args.repo, "frontend/src/data/scores/composers.json"), encoding="utf-8"))}
-    out = json.load(open(args.out, encoding="utf-8")) if os.path.exists(args.out) else {}
+    out = {}
+    if os.path.exists(args.out):
+        try:
+            out = json.load(open(args.out, encoding="utf-8"))
+        except ValueError:
+            out = {}  # 空・壊れたファイルは最初から
 
     for w in catalog["works"]:
         if w["id"] in out and out[w["id"]].get("status") in ("matched", "not_found", "no_catalog"):
