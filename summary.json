@@ -1,0 +1,15 @@
+{
+ "duplicate_hash_groups": 15,
+ "external_links": 2,
+ "pages_error": 4,
+ "pages_excluded": 0,
+ "pages_ok": 205,
+ "pages_total": 209,
+ "pages_with_pdf": 193,
+ "pdf_downloaded": 618,
+ "pdf_failed": 2,
+ "pdf_links": 620,
+ "pdf_pending": 0,
+ "pdf_qpdf_errors": 0,
+ "queue_remaining": 0
+}
