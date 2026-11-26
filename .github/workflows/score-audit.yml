@@ -7,7 +7,7 @@ name: Score audit
 on:
   pull_request:
     paths:
-      - "tools/score-migration/**"
+      - "tools/score-migration/audit.py"
       - ".github/workflows/score-audit.yml"
   workflow_dispatch:
 
