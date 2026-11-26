@@ -249,6 +249,62 @@
       "priority": "S",
       "status": "pending_review",
       "date_checked": "2026-11-27"
+    },
+    {
+      "id": "haydn-henle-hn207",
+      "title": "String Quartets Book III op. 17 (Urtext Edition, parts)",
+      "category": "printed_score",
+      "publisher_catalog": "HN 207",
+      "ismn": "979-0-2018-0207-7",
+      "source": "https://www.henle.de/jp/String-Quartets-Book-III-op.-17/HN-207",
+      "format": "four separate instrument parts",
+      "pages": "145 (V+41+35+35+29)",
+      "composer": "Haydn",
+      "publisher": "G. Henle Verlag",
+      "editor": "Georg Feder",
+      "work_ids": [
+        "Op.17 No.1",
+        "Op.17 No.2",
+        "Op.17 No.3",
+        "Op.17 No.4",
+        "Op.17 No.5",
+        "Op.17 No.6"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "priority": "S",
+      "status": "pending_review",
+      "verification": "Henle official catalog confirms identity, edition format, ISMN, editor and contents. Amazon.co.jp listing and ASIN not verified; do not create tagged link.",
+      "date_checked": "2026-11-27"
+    },
+    {
+      "id": "haydn-henle-hn9207",
+      "title": "String Quartets Book III op. 17 (Study Score)",
+      "category": "pocket_score",
+      "publisher_catalog": "HN 9207",
+      "ismn": "979-0-2018-9207-8",
+      "source": "https://www.henle.de/jp/String-Quartets-Book-III-op.-17/HN-9207",
+      "format": "study score",
+      "pages": "99 (VIII+91)",
+      "composer": "Haydn",
+      "publisher": "G. Henle Verlag",
+      "editor": "Georg Feder",
+      "work_ids": [
+        "Op.17 No.1",
+        "Op.17 No.2",
+        "Op.17 No.3",
+        "Op.17 No.4",
+        "Op.17 No.5",
+        "Op.17 No.6"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "priority": "S",
+      "status": "pending_review",
+      "verification": "Henle official catalog confirms identity, edition format, ISMN, editor and contents. Amazon.co.jp listing and ASIN not verified; do not create tagged link.",
+      "date_checked": "2026-11-27"
     }
   ],
   "implementation_ready": 0,
@@ -256,16 +312,14 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Haydn Op.9 Henle editions HN206 and HN9206 plus Op.20 ISBN/ISMN Amazon Japan matching",
-    "result": "Henle confirmed two distinct Op.9 editions with ISMNs, editor and complete scope; direct Amazon.co.jp ASIN for each not found reliably. Additional exact ISMN searches for HN208/HN9208 returned non-Amazon merchants but no verified Amazon Japan product pages.",
+    "focus": "Amazon Japan identification by HN206/HN9206 ISMN and extension to Haydn Op.17 publisher editions",
+    "result": "Search did not establish exact Amazon.co.jp product listing for HN206/HN9206. Henle official catalog confirms two distinct Op.17 publications HN207/HN9207 and identifiers; 2 publisher-confirmed research candidates added, no Amazon listing verified.",
     "new_publisher_confirmed": 2,
     "new_amazon_verified": 0,
-    "verification_urls": [
-      "https://www.henle.de/cn/String-Quartets-Book-II-op.-9/HN-206",
-      "https://www.henle.de/en/String-Quartets-Book-II-op.-9/HN-9206",
-      "https://www.henle.de/jp/String-Quartets-Book-IV-op.-20-Sun-Quartets/HN-208",
-      "https://www.henle.de/en/String-Quartets-Book-IV-op.-20-Sun-Quartets/HN-9208"
-    ],
-    "next": "Seek Amazon.co.jp direct product detail by Op.9 ISMN 9790201802060 / 9790201892061; verify each ASIN and price display policy before generating tagged links."
+    "next": "Search official Amazon Japan product pages for ISMN 9790201802077 and 9790201892078, checking correct format and publisher before building mukkoo-22 affiliate links.",
+    "evidence_urls": [
+      "https://www.henle.de/jp/String-Quartets-Book-III-op.-17/HN-207",
+      "https://www.henle.de/jp/String-Quartets-Book-III-op.-17/HN-9207"
+    ]
   }
 }
