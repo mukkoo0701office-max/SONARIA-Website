@@ -1,0 +1,25 @@
+// 申し込みフォームの検証・料金計算の単体テスト（node 22 で実行: node supabase/tests/schema.test.mts）
+import * as S from "../functions/_shared/schema.ts";
+const assert = (c: boolean, m: string) => { if (!c) { console.error("FAIL", m); process.exitCode = 1; } else console.log("ok  ", m); };
+assert(S.quoteBowing("fingering", "3")?.totalYen === 3000, "fingering 3p = 3000");
+assert(S.quoteBowing("bowing", 3)?.totalYen === 3000, "bowing 3p = 3000");
+assert(S.quoteBowing("both", "3")?.totalYen === 4500, "both 3p = 4500");
+assert(S.quoteBowing("both", "10")?.totalYen === 15000 && !S.quoteBowing("both","10")!.consultDiscount, "both 10p = 15000, no consult");
+assert(S.quoteBowing("both", "11")!.consultDiscount === true && S.quoteBowing("both","11")!.totalYen === 16500, "11p consult flag, no auto discount");
+assert(S.quoteBowing("both", "0") === null && S.quoteBowing("both", "1.5") === null && S.quoteBowing("x", "2") === null, "invalid quotes rejected");
+const lesson = S.serviceDefs.lesson;
+const good = { name: "山田", email: "a@b.jp", phone: "090-1234-5678", plan: "single", format: "in_person", preferred1: "2026-12-01T10:00", experience: "none", goals: "基礎", consent: true };
+assert(Object.keys(S.validateAll(lesson, good)).length === 0, "valid lesson passes");
+assert(S.validateAll(lesson, { ...good, email: "bad" }).email === "email", "bad email");
+assert(S.validateAll(lesson, { ...good, format: "visiting" }).travelArea === "required", "travelArea required when visiting");
+assert(S.validateAll(lesson, { ...good, consent: false }).consent === "consent", "consent required");
+assert(S.validateAll(lesson, { ...good, plan: "hack" }).plan === "invalidOption", "invalid option");
+assert(S.validateAll(lesson, { ...good, concerns: ["pitch","evil"] }).concerns === "invalidOption", "invalid checkbox");
+assert(!("evil" in S.sanitize(lesson, { ...good, evil: "x" })), "sanitize drops unknown");
+const rule = S.serviceDefs.bowing.files!;
+assert(S.validateFiles(rule, []) === "required", "files required");
+assert(S.validateFiles(rule, [{name:"a.pdf",size:100,type:"application/pdf"}]) === null, "pdf ok");
+assert(S.validateFiles(rule, [{name:"a.exe",size:100,type:"application/pdf"}]) === "type", "ext checked");
+assert(S.validateFiles(rule, [{name:"a.pdf",size:30*1024*1024,type:"application/pdf"}]) === "tooLarge", "size checked");
+assert(S.validateFiles(rule, [{name:"a.pdf",size:NaN,type:"application/pdf"}]) === "tooLarge", "NaN size rejected");
+process.on("exit", (c) => console.log(c ? "schema tests FAILED" : "schema tests passed"));

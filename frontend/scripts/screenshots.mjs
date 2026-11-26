@@ -113,6 +113,15 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   await page.goto(`${base}/en/scores/`, { waitUntil: "networkidle" });
   await shot(page, `${vpName}-en-scores`);
 
+  // 申し込みフォーム（このビルドはバックエンド未接続）: 未接続表示と送信ボタンの無効化
+  await page.goto(`${base}/ja/lessons/apply/`, { waitUntil: "networkidle" });
+  check(`${vpName}: apply form shows not-connected notice`, (await page.getByText("オンラインでのお申し込みは準備中").count()) >= 1);
+  await shot(page, `${vpName}-ja-lesson-apply`);
+  await page.goto(`${base}/ja/bowing/apply/`, { waitUntil: "networkidle" });
+  await shot(page, `${vpName}-ja-bowing-apply`);
+  await page.goto(`${base}/admin/`, { waitUntil: "networkidle" });
+  check(`${vpName}: admin shows not-connected`, (await page.getByText("バックエンドが未接続です").count()) === 1);
+
   check(`${vpName}: no page errors`, errors.length === 0, errors.slice(0, 3).join(" | "));
   await context.close();
 }

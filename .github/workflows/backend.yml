@@ -1,0 +1,102 @@
+# バックエンド（Supabase）と通しのテスト。CI の中でローカルの Supabase を起動し、
+# 申し込みの保存・入力検証・二重送信・料金計算・ファイル・アクセス制御（RLS）・管理人操作を確認する。
+# さらに、ローカルの Supabase に接続したサイトをブラウザで操作し、画面から送信 → 保存 → 管理画面まで確認する。
+# 本番の Supabase には接続しない。結果の画面は ci/e2e-screenshots ブランチに保存する。
+name: Backend
+
+on:
+  pull_request:
+    paths:
+      - "supabase/**"
+      - "frontend/**"
+      - ".github/workflows/backend.yml"
+  push:
+    branches: [main]
+    paths:
+      - "supabase/**"
+      - "frontend/**"
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Unit tests (validation & pricing)
+        run: node supabase/tests/schema.test.mts
+
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Type-check Edge Function
+        run: deno check supabase/functions/submit-application/index.ts
+
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Start Supabase (local)
+        run: supabase start
+
+      - name: Serve Edge Functions
+        run: |
+          printf 'RATE_LIMIT_PER_HOUR=15\nAPPLICANT_EMAIL_ENABLED=false\n' > /tmp/functions.env
+          nohup supabase functions serve --env-file /tmp/functions.env > /tmp/functions.log 2>&1 &
+          eval "$(supabase status -o env)"
+          for i in $(seq 1 60); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' -X OPTIONS "$API_URL/functions/v1/submit-application" || true)
+            if [ "$code" = "204" ]; then echo "functions ready"; exit 0; fi
+            sleep 2
+          done
+          echo "functions did not start"; cat /tmp/functions.log; exit 1
+
+      - name: Integration tests
+        run: |
+          eval "$(supabase status -o env)"
+          export API_URL ANON_KEY SERVICE_ROLE_KEY
+          cd supabase/tests
+          npm init -y > /dev/null
+          npm install --no-audit --no-fund @supabase/supabase-js@2 > /dev/null
+          node backend.test.mjs
+
+      - name: Build site against local Supabase
+        working-directory: frontend
+        run: |
+          eval "$(supabase status -o env)"
+          if [ -f package-lock.json ]; then npm ci; else npm install --no-audit --no-fund; fi
+          NEXT_PUBLIC_SUPABASE_URL="$API_URL" NEXT_PUBLIC_SUPABASE_ANON_KEY="$ANON_KEY" npm run build
+
+      - name: End-to-end (browser → Edge Function → DB → admin)
+        working-directory: frontend
+        run: |
+          eval "$(supabase status -o env)"
+          export API_URL SERVICE_ROLE_KEY
+          npx -y serve@14 out -l 4173 >/tmp/serve.log 2>&1 &
+          npm install --no-save --no-audit --no-fund playwright@1
+          npx playwright install --with-deps chromium
+          sleep 2
+          node scripts/e2e.mjs http://localhost:4173 /tmp/e2e
+
+      - name: Save E2E screenshots
+        if: always()
+        run: |
+          [ -d /tmp/e2e ] || exit 0
+          cd /tmp/e2e
+          git init -q
+          git checkout -q -b ci/e2e-screenshots
+          git add -A
+          git -c user.name="github-actions" -c user.email="github-actions@users.noreply.github.com" commit -q -m "e2e screenshots for ${GITHUB_SHA}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" ci/e2e-screenshots
+
+      - name: Function logs
+        if: always()
+        run: tail -n 200 /tmp/functions.log || true

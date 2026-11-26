@@ -1,0 +1,38 @@
+# Supabase CLI の設定（ローカル開発・CI のテスト用）。本番のプロジェクト設定は Supabase のダッシュボードで行う。
+# 書いていない項目は CLI の既定値を使う。
+project_id = "sonaria"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+
+[db]
+port = 54322
+
+[studio]
+enabled = false
+
+[realtime]
+enabled = false
+
+[analytics]
+enabled = false
+
+[auth]
+enabled = true
+site_url = "http://127.0.0.1:3000"
+# 一般の新規登録は受け付けない（管理人はダッシュボードで作成する。講師ログインは第3段階で設定）
+# 注意: [auth.email] の enable_signup を false にするとメールでのログイン自体が無効になるので設定しない
+enable_signup = false
+
+[storage]
+enabled = true
+file_size_limit = "50MiB"
+
+[edge_runtime]
+enabled = true
+
+# 公開の申し込み受付。JWT ではなく関数内の検証（形式・ハニーポット・送信回数制限・CAPTCHA）で守る
+[functions.submit-application]
+verify_jwt = false

@@ -18,6 +18,8 @@
   --color-subtle: #f1f3f5;
   /* 未選択の保存アイコン（プロトタイプの #9AA1AB） */
   --color-icon-muted: #9aa1ab;
+  /* 入力エラー・削除などの警告（白地で 6.6:1） */
+  --color-danger: #b42318;
 
   /*
    * 上と同じ色の RGB 値。Tailwind の透明度指定（bg-navy/80 など）を効かせるための形式。
@@ -32,6 +34,7 @@
   --rgb-ink: 24 43 69;
   --rgb-subtle: 241 243 245;
   --rgb-icon-muted: 154 161 171;
+  --rgb-danger: 180 35 24;
 }
 
 @layer base {

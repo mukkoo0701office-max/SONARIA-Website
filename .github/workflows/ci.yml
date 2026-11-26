@@ -42,8 +42,11 @@ jobs:
         run: |
           test -f out/index.html || { echo "missing: out/index.html"; exit 1; }
           test -f out/.htaccess || { echo "missing: out/.htaccess"; exit 1; }
+          test -f out/admin/index.html || { echo "missing: out/admin/index.html"; exit 1; }
+          # 秘密キーが画面側に紛れ込んでいないこと
+          if grep -rq "SERVICE_ROLE" out/; then echo "service role reference found in client output"; exit 1; fi
           for lang in ja en; do
-            for p in "" scores teachers teachers/profile bowing lessons recording performance community profile about contact legal/privacy; do
+            for p in "" scores teachers teachers/profile bowing bowing/apply lessons lessons/apply recording performance community profile about contact legal/privacy; do
               f="out/$lang/${p:+$p/}index.html"
               test -f "$f" || { echo "missing: $f"; exit 1; }
             done
