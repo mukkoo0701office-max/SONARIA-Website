@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "string_quartet",
-    "last_work": "Op.20 No.3 / Hob.III:33",
-    "note": "Next Op.20 Nos.4–6. Compare Eulenburg/Altmann #455713 vs Heckel #888350 score, Blundell 1778 parts #471065 and separate instrumental parts; retain unknown Japan rights and no automatic downloads."
+    "last_work": "Op.20 No.6 / Hob.III:36",
+    "note": "Next Op.33 Nos.1–3 (Russian quartets) and verify actual metadata/edition PDFs. Op.20 Nos.1–6 pending visual quality and Japan rights review."
   },
   "items": [
     {
@@ -1325,6 +1325,159 @@
       },
       "rights_status": "unknown",
       "notes": "Grouped complete score and parts PDFs are shared assets for all six Op.20 quartets. Do not treat a listed file as reviewed. Claude must inspect accuracy, instrumental completeness, boundaries, scan readability, local distribution rights, and existing SONARIA assets before download/publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op20-no4-source-editions",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in D major",
+      "opus_catalog": "Op.20 No.4; Hob.III:34",
+      "work_url": "https://imslp.org/wiki/String_Quartet_in_D_major%2C_Hob.III%3A34_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Eulenburg / Blundell / Heckel as collection edition candidates",
+        "publication_date": "Eulenburg undated; Blundell 1778; Heckel circa 1855",
+        "editor": "Wilhelm Altmann (Eulenburg) ; original parts editors unknown",
+        "scope": "Op.20 six quartets, shared score and parts collection",
+        "imslp_file_id": "455713",
+        "file_pages": 149,
+        "file_size_mb": 24.76,
+        "edition_comparison": "Existing collection: Eulenburg/Altmann full score #455713 (149pp); historic alternative Heckel score #888350 (247pp); 1778 Blundell combined parts #471065 and separate Vn1 #475710 Vn2 #475711 viola #475712 cello #475709. Sources listed on IMSLP Op.20 collection; actual PDF inspection and per-work pagination still required."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.20_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/List_of_Compositions_by_Joseph_Haydn/String_Quartets",
+          "verified": "Haydn Op.20 No.4, Hob.III:34, D major; instrumentation 2 violins, viola, cello"
+        },
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.20_%28Haydn%2C_Joseph%29",
+          "verified": "Collection metadata and edition/file candidate identifiers only; physical PDFs not evaluated"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "candidate_editions_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "existing_catalog_not_checked",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Shared Op.20 collection assets across six works; reuse references without duplicate PDFs. Check page ranges and Japan rights before retrieval/publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op20-no5-source-editions",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in F minor",
+      "opus_catalog": "Op.20 No.5; Hob.III:35",
+      "work_url": "https://imslp.org/wiki/String_Quartet_in_F_minor%2C_Hob.III%3A35_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Eulenburg / Blundell / Heckel as collection edition candidates",
+        "publication_date": "Eulenburg undated; Blundell 1778; Heckel circa 1855",
+        "editor": "Wilhelm Altmann (Eulenburg) ; original parts editors unknown",
+        "scope": "Op.20 six quartets, shared score and parts collection",
+        "imslp_file_id": "455713",
+        "file_pages": 149,
+        "file_size_mb": 24.76,
+        "edition_comparison": "Existing collection: Eulenburg/Altmann full score #455713 (149pp); historic alternative Heckel score #888350 (247pp); 1778 Blundell combined parts #471065 and separate Vn1 #475710 Vn2 #475711 viola #475712 cello #475709. Sources listed on IMSLP Op.20 collection; actual PDF inspection and per-work pagination still required."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.20_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/List_of_Compositions_by_Joseph_Haydn/String_Quartets",
+          "verified": "Haydn Op.20 No.5, Hob.III:35, F minor; instrumentation 2 violins, viola, cello"
+        },
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.20_%28Haydn%2C_Joseph%29",
+          "verified": "Collection metadata and edition/file candidate identifiers only; physical PDFs not evaluated"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "candidate_editions_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "existing_catalog_not_checked",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Shared Op.20 collection assets across six works; reuse references without duplicate PDFs. Check page ranges and Japan rights before retrieval/publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "haydn-op20-no6-source-editions",
+      "composer": "Joseph Haydn",
+      "category": "string_quartet",
+      "work_title": "String Quartet in A major",
+      "opus_catalog": "Op.20 No.6; Hob.III:36",
+      "work_url": "https://imslp.org/wiki/String_Quartet_in_A_major%2C_Hob.III%3A36_%28Haydn%2C_Joseph%29",
+      "edition": {
+        "publisher": "Eulenburg / Blundell / Heckel as collection edition candidates",
+        "publication_date": "Eulenburg undated; Blundell 1778; Heckel circa 1855",
+        "editor": "Wilhelm Altmann (Eulenburg) ; original parts editors unknown",
+        "scope": "Op.20 six quartets, shared score and parts collection",
+        "imslp_file_id": "455713",
+        "file_pages": 149,
+        "file_size_mb": 24.76,
+        "edition_comparison": "Existing collection: Eulenburg/Altmann full score #455713 (149pp); historic alternative Heckel score #888350 (247pp); 1778 Blundell combined parts #471065 and separate Vn1 #475710 Vn2 #475711 viola #475712 cello #475709. Sources listed on IMSLP Op.20 collection; actual PDF inspection and per-work pagination still required."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.20_%28Haydn%2C_Joseph%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/List_of_Compositions_by_Joseph_Haydn/String_Quartets",
+          "verified": "Haydn Op.20 No.6, Hob.III:36, A major; instrumentation 2 violins, viola, cello"
+        },
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.20_%28Haydn%2C_Joseph%29",
+          "verified": "Collection metadata and edition/file candidate identifiers only; physical PDFs not evaluated"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "candidate_editions_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "existing_catalog_not_checked",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Shared Op.20 collection assets across six works; reuse references without duplicate PDFs. Check page ranges and Japan rights before retrieval/publication.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
