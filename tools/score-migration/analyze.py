@@ -58,33 +58,35 @@ def key(url: str) -> str:
     return re.sub(r"^https?://", "", url)
 
 
-def part_of(filename: str) -> tuple[str, str | None]:
+def part_of(filename: str, scoring: str = "") -> tuple[str, str | None]:
     """ファイル名からパートを読む。(part, 補足ラベル)"""
-    f = norm(os.path.splitext(filename)[0])
-    f = f.replace("＃", "#")
-    tail = re.split(r"[#_]", f)[-1] if re.search(r"[#_]", f) else f
-    t = tail.replace("譜", "").replace(" ", "")
+    f = norm(os.path.splitext(filename)[0]).replace("＃", "#").strip()
+    f = re.sub(r"譜$", "", f).strip()
+    # 「Vc&Pf譜」「Vn&pf譜」= 独奏の段が入ったピアノ譜
+    m = re.search(r"(vn|vc|va|vla|violin|cello|viola)(\(ob\))?\s*&\s*(pf|piano)$", f)
+    if m:
+        inst = {"vn": "Vn", "violin": "Vn", "vc": "Vc", "cello": "Vc", "va": "Va", "vla": "Va", "viola": "Va"}[m.group(1)]
+        return "piano", f"{inst} & Pf"
+    if re.search(r"(vc|cello)\s*&\s*(cb|bass)$", f):
+        return "other", "Vc & Cb"
     rules = [
-        (r"^(スコア|score|full|全パート)", "score"),
-        (r"(cembalo|continuo|チェンバロ)", "other"),
-        (r"(vnソロ|vnsolo|solo|ソロ)", "solo"),
-        (r"(vn1|violin1|1stvn|第1)", "violin1"),
-        (r"(vn2|violin2|2ndvn|第2)", "violin2"),
-        (r"^(va|vla|viola)", "viola"),
-        (r"^(vc&cb)", "other"),
-        (r"^(vc|cello)", "cello"),
-        (r"^(cb|cbass|contrabass|bass)", "bass"),
-        (r"(pf|piano|ピアノ)", "piano"),
-        (r"^(vn|violin)", "violin"),
+        (r"(スコア|score|full|全パート)$", "score"),
+        (r"(cembalo|continuo|チェンバロ)$", "other"),
+        (r"(solo|ソロ)[^#_]*$", "solo"),
+        (r"(vn|violin)\s*1(-\d)?$|1stvn$", "violin1"),
+        (r"(vn|violin)\s*2(-\d)?$|2ndvn$", "violin2"),
+        (r"(va|vla|viola)(-\d)?$", "viola"),
+        (r"(vc|cello)(-\d)?$", "cello"),
+        (r"(cb|c ?bass|contrabass|bass)(-\d)?$", "bass"),
+        (r"(pf|piano|ピアノ伴奏|ピアノ)$", "piano"),
+        (r"(vn|violin)$", "violin"),
     ]
-    for rx, p in rules:
-        if re.search(rx, t):
-            return p, None
-    # 区切りの無いファイル名（VIOLIN 1.pdf など）
-    for rx, p in [(r"violin ?1", "violin1"), (r"violin ?2", "violin2"), (r"viola", "viola"), (r"cello", "cello"), (r"c ?bass", "bass"), (r"スコア", "score")]:
+    for rx, part in rules:
         if re.search(rx, f):
-            return p, None
-    return "other", None
+            return part, None
+    # パートの表記が無い 1 ファイルの作品（無伴奏・練習曲・ピアノ曲・独奏とピアノの合本など）
+    default = {"violin": "violin", "viola": "viola", "cello": "cello", "piano": "piano"}.get(scoring)
+    return (default, None) if default else ("other", None)
 
 
 def volume_label(filename: str) -> str | None:
@@ -128,7 +130,7 @@ def composer_seen(text: str, composer_id: str) -> bool:
 
 
 # 曲名の照合に使わない一般的な語
-TITLE_STOP = {"concerto", "concertos", "sonata", "sonatas", "violin", "viola", "cello", "piano", "major", "minor", "string", "strings", "quartet", "trio", "suite", "serenade", "for", "and", "the", "two", "four", "from", "version", "book", "books", "nos", "flat", "sharp", "with", "theme", "variations", "pieces", "solo", "duos", "duo", "studies", "etudes", "caprices", "romance", "dance"}
+TITLE_STOP = {"concerto", "concertos", "sonata", "sonatas", "violin", "viola", "cello", "piano", "major", "minor", "string", "strings", "quartet", "trio", "suite", "serenade", "for", "and", "the", "two", "four", "from", "version", "book", "books", "nos", "flat", "sharp", "with", "theme", "variations", "pieces", "solo", "duos", "duo", "studies", "etudes", "caprices", "dance"}
 
 
 def title_seen(text: str, en: str, ja: str) -> bool:
@@ -146,25 +148,56 @@ def title_seen(text: str, en: str, ja: str) -> bool:
     return len(core) >= 3 and core in text
 
 
+def fix_mojibake(text: str) -> str:
+    """ロシア語の文字（cp1251）が latin-1 として取り出された文字列を読める形に戻す（例: Ñîíàòà → Соната）"""
+    try:
+        return text.encode("latin-1", "ignore").decode("cp1251", "ignore")
+    except Exception:
+        return ""
+
+
+def catalog_seen(text: str, cat: str) -> bool:
+    """1 ページ目に作品番号（Op.76、KV 465、BWV 1007 など）が出てくるか。パート譜は作曲者名を載せないことが多い"""
+    t = norm(text).replace("№", "no")
+    for item in filter(None, cat.split("|")):
+        kind, val = item.split(":", 1)
+        nums = re.findall(r"\d+", val)
+        if not nums:
+            continue
+        first = nums[0]
+        rx = {
+            "op": rf"(?:op(?:us)?|соч)\.?\s*{first}(?!\d)",
+            "k": rf"k\.?\s*v?\.?\s*{first}(?!\d)",
+            "bwv": rf"bwv\.?\s*{first[:3]}",
+            "rv": rf"rv\.?\s*{first}(?!\d)",
+            "d": rf"\bd\.?\s*{first}(?!\d)",
+            "hob": rf"hob",
+        }.get(kind)
+        if rx and re.search(rx, t):
+            return True
+    return False
+
+
 PART_WORDS = {"violin1": "violin1", "violin2": "violin2", "viola": "viola", "cello": "cello", "bass": "bass", "piano": "piano", "score": "score", "violin": "violin"}
 
 
 def page_gap(page_numbers: list[list[int]]) -> int | None:
-    """ページ番号の飛びを調べる。読み取った番号と PDF 上の位置の差（ずれ）が途中で増え、
-    増える前と後のどちらも 2 ページ以上続くときだけ「欠落の疑い」とする（小節番号などの読み違いを除く）。
-    1 ページ目は番号が無い・題名の数字を拾うことが多いため使わない。飛び始めのページ番号を返す"""
-    offs = [{v - (i + 1) for v in nums if -3 <= v - (i + 1) <= 10} for i, nums in enumerate(page_numbers)]
-    pages = range(1, len(offs))  # 2 ページ目以降
-    counts = collections.Counter(o for i in pages for o in offs[i])
-    common = [o for o, c in counts.items() if c >= 2]
-    for a in common:
-        for b in common:
-            if b <= a:
+    """ページ番号の飛びを調べる（はっきりした証拠があるときだけ「欠落の疑い」とする）。
+    OCR は指番号・小節番号も数字として拾うため、次の形が見つかったときに限る:
+      … x-2, x-1, x | y, y+1, y+2 …（連続する 3 ページずつの番号が読めていて、その間で y ≥ x+2 に飛ぶ）
+    かつ飛んだページに本来の番号 x+1 が読めていない。飛び始めのページ番号（PDF 上の位置）を返す"""
+    C = [set(nums) for nums in page_numbers]
+    n = len(C)
+    # ずれ（番号 - 位置）がページの 3 割以上で見られるものだけを「ページ番号らしい」とみなす（1〜3 などの小さな数字の偶然の並びを除く）
+    page_offsets = collections.Counter(o for i, c in enumerate(C) for o in {v - (i + 1) for v in c})
+    plausible = {o for o, cnt in page_offsets.items() if cnt >= max(3, 0.3 * n)}
+    for k in range(3, n - 2):
+        for x in C[k - 1]:
+            if (x - k) not in plausible or (x - 1) not in C[k - 2] or (x - 2) not in C[k - 3] or (x + 1) in C[k]:
                 continue
-            ia = [i for i in pages if a in offs[i] and b not in offs[i]]
-            ib = [i for i in pages if b in offs[i] and a not in offs[i]]
-            if len(ia) >= 2 and len(ib) >= 2 and max(ia) < min(ib):
-                return min(ib) + 1
+            for y in C[k]:
+                if x + 2 <= y <= x + 6 and (y - (k + 1)) in plausible and (y + 1) in C[k + 1] and (y + 2) in C[k + 2]:
+                    return k + 1
     return None
 
 
@@ -185,6 +218,9 @@ def part_conflict(file_part: str, labels: list[str]) -> bool:
         "bass": {"bass", "cello"},
         "piano": {"piano", "violin", "cello", "viola"},  # ピアノ譜には独奏の段も載る
     }
+    # 独奏パートの表紙に「Violin and Piano」とだけ書かれていることがあるため、ピアノの表記だけでは食い違いとしない
+    if l == "piano":
+        return False
     return l not in compat.get(file_part, {l})
 
 
@@ -240,7 +276,7 @@ def main() -> int:
                 continue
             d = deep.get(e["sha256"], {})
             wid, ja, en, cid, scoring, genre, cat = meta
-            part, _ = part_of(e["filename"] or "")
+            part, plabel = part_of(e["filename"] or "", scoring)
             r["part"] = part
             # 1) 破損
             if e.get("qpdf_exit") == 2 or not e.get("pdfinfo_ok", True):  # qpdf の終了コード 3 は警告のみ（開ける）
@@ -256,7 +292,8 @@ def main() -> int:
                 r["reasons"].append(f"誤リンク（ファイル名は Op.{'/'.join(sorted(fn_ops))}、掲載ページは Op.{'/'.join(sorted(hd_ops))}）")
             # 3) 中身の確認（作曲者名）
             head = " ".join([d.get("page1_head", ""), e.get("text_first") or "", e.get("ocr_first") or ""])
-            if not composer_seen(head, cid) and not title_seen(head, en, ja):
+            head = head + " " + fix_mojibake(head)
+            if not composer_seen(head, cid) and not title_seen(head, en, ja) and not catalog_seen(head, cat):
                 r["reasons"].append("中身（1 ページ目）で作曲者・曲名を確認できない")
             # 4) パート
             if part_conflict(part, d.get("part_label") or []):
@@ -310,13 +347,22 @@ def main() -> int:
                     "_assets": [],
                 },
             )
-            w["_assets"].append({"r": r, "e": e, "part": part})
+            w["_assets"].append({"r": r, "e": e, "part": part, "plabel": plabel})
 
     # ---- 作品単位の検査（パート不足）と、ファイル ID・ラベルの付与 ----
     approvals = {"version": 1, "note": "rights.status=pending は権利確認前（運営者が公開前に確認する）。本番ビルドには表示しない", "works": []}
     for wid, w in sorted(works.items()):
-        assets = w.pop("_assets")
+        assets_all = w.pop("_assets")
         page_url = w.pop("_page")
+        # 同じ内容（SHA-256）のファイルは 1 つだけ（同じ記事が 2 つある・同じ PDF が 2 回リンクされている場合）
+        assets, seen_sha = [], set()
+        for a in assets_all:
+            if a["e"]["sha256"] in seen_sha:
+                a["r"]["notes"].append("同じ内容の PDF を重複して保存しない")
+                a["r"]["asset"] = "(duplicate)"
+                continue
+            seen_sha.add(a["e"]["sha256"])
+            assets.append(a)
         parts = {a["part"] for a in assets}
         need = REQUIRED.get(w["scoring"])
         if need and "score" not in parts:
@@ -332,14 +378,33 @@ def main() -> int:
         # ファイル ID（作品内で一意）とラベル
         used = collections.Counter()
         out_assets = []
-        multi_same_part = collections.Counter(a["part"] for a in assets)
+        # 同じパートのファイルが複数ある作品（曲集・別の版）は、曲番号・巻などのラベルで区別する。
+        # ラベルが重複する（例: 全部「No.10」）なら、ファイル名の末尾の番号、それも無ければ通し番号にする
+        labels: dict[int, str] = {}
+        by_part = collections.defaultdict(list)
+        for a in assets:
+            by_part[a["part"]].append(a)
+        for part, group in by_part.items():
+            if len(group) < 2:
+                continue
+            plabels = [a.get("plabel") for a in group]
+            if None not in plabels and len(set(plabels)) == len(plabels):
+                continue  # 「Vn & Pf」「Vc & Pf」のように補足ラベルだけで区別できる
+            cand = [volume_label(a["e"]["filename"]) for a in group]
+            if None in cand or len(set(cand)) < len(cand):
+                tails = [re.search(r"(\d+)\D*$", norm(os.path.splitext(a["e"]["filename"])[0])) for a in group]
+                tv = [t.group(1) if t else None for t in tails]
+                cand = [f"{v}" for v in tv] if None not in tv and len(set(tv)) == len(tv) else [str(k + 1) for k in range(len(group))]
+            for a, c in zip(group, cand):
+                labels[id(a)] = c
         for a in assets:
             e = a["e"]
             if e["sha256"] in seen_hash_asset and seen_hash_asset[e["sha256"]].startswith(wid + "/"):
                 a["r"]["notes"].append("同じ内容の PDF を重複して保存しない（同じ作品内）")
                 continue
-            vol = volume_label(e["filename"]) if multi_same_part[a["part"]] > 1 else None
-            base = a["part"] + ("-" + re.sub(r"[^a-z0-9]+", "-", norm(vol)).strip("-") if vol else "")
+            vol = " ".join(x for x in (labels.get(id(a)), a.get("plabel")) if x) or None
+            slug = re.sub(r"[^a-z0-9]+", "-", norm(vol)).strip("-") if vol else ""
+            base = a["part"] + ("-" + slug if slug else "")
             used[base] += 1
             aid = base if used[base] == 1 else f"{base}-{used[base]}"
             seen_hash_asset.setdefault(e["sha256"], f"{wid}/{aid}")

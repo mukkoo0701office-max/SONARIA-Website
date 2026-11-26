@@ -21,3 +21,4 @@ Thumbs.db
 
 # ログ
 *.log
+__pycache__/
