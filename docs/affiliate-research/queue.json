@@ -372,7 +372,10 @@
       "priority": "S",
       "status": "pending_review",
       "verification": "Henle official catalog confirms identity, edition format, ISMN, editor and contents. Amazon.co.jp listing and ASIN not verified; do not create tagged link.",
-      "date_checked": "2026-11-27"
+      "date_checked": "2026-11-27",
+      "last_amazon_search_at": "2026-11-27",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
+      "verification_notes": "2026-11-27 follow-up: Amazon.co.jp product search and site:amazon.co.jp/dp/ exact HN catalogue-number queries yielded no independently verifiable matching individual Amazon Japan listing/ASIN. Publisher edition details remain distinct from Amazon verification. Keep pending_review; no affiliate URL."
     },
     {
       "id": "haydn-henle-hn9207",
@@ -400,7 +403,10 @@
       "priority": "S",
       "status": "pending_review",
       "verification": "Henle official catalog confirms identity, edition format, ISMN, editor and contents. Amazon.co.jp listing and ASIN not verified; do not create tagged link.",
-      "date_checked": "2026-11-27"
+      "date_checked": "2026-11-27",
+      "last_amazon_search_at": "2026-11-27",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
+      "verification_notes": "2026-11-27 follow-up: Amazon.co.jp product search and site:amazon.co.jp/dp/ exact HN catalogue-number queries yielded no independently verifiable matching individual Amazon Japan listing/ASIN. Publisher edition details remain distinct from Amazon verification. Keep pending_review; no affiliate URL."
     },
     {
       "id": "haydn-henle-hn209",
@@ -432,7 +438,10 @@
       "status": "pending_review",
       "priority": "S",
       "verification": "Verified direct publisher page, exact ISMN, format, editor and Op.33 collection. Amazon.co.jp listing/ASIN could not be verified; do not generate affiliate link.",
-      "date_checked": "2026-11-27"
+      "date_checked": "2026-11-27",
+      "last_amazon_search_at": "2026-11-27",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
+      "verification_notes": "2026-11-27 follow-up: Amazon.co.jp product search and site:amazon.co.jp/dp/ exact HN catalogue-number queries yielded no independently verifiable matching individual Amazon Japan listing/ASIN. Publisher edition details remain distinct from Amazon verification. Keep pending_review; no affiliate URL."
     },
     {
       "id": "haydn-henle-hn9209",
@@ -464,7 +473,10 @@
       "status": "pending_review",
       "priority": "S",
       "verification": "Verified direct publisher page, exact ISMN, format, editor and Op.33 collection. Amazon.co.jp listing/ASIN could not be verified; do not generate affiliate link.",
-      "date_checked": "2026-11-27"
+      "date_checked": "2026-11-27",
+      "last_amazon_search_at": "2026-11-27",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
+      "verification_notes": "2026-11-27 follow-up: Amazon.co.jp product search and site:amazon.co.jp/dp/ exact HN catalogue-number queries yielded no independently verifiable matching individual Amazon Japan listing/ASIN. Publisher edition details remain distinct from Amazon verification. Keep pending_review; no affiliate URL."
     },
     {
       "id": "haydn-henle-hn210",
