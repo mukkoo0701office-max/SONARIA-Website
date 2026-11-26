@@ -216,16 +216,102 @@ def inspect(pdf: str, n: int) -> dict:
     return info
 
 
+def load_json(path: str) -> dict:
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            return {k: v for k, v in json.load(f).items() if isinstance(v, dict)}
+    return {}
+
+
+def targets_of(state: dict) -> dict[str, tuple[str, dict]]:
+    """内容（SHA-256）ごとに 1 件。同じ内容の PDF を何度も取りに行かない"""
+    out: dict[str, tuple[str, dict]] = {}
+    for url, e in state["pdfs"].items():
+        if e["status"] == "downloaded" and e["sha256"] not in out:
+            out[e["sha256"]] = (url, e)
+    return out
+
+
+DONE = ("ok", "changed", "failed_permanent")
+
+
+def fetch_mode(state: dict, deep: dict, out_dir: str, shards: int, out_json: str) -> None:
+    """未検査の PDF を 1 件ずつ（robots.txt・間隔を守って）取得し、shard-<n>/<sha>.pdf に振り分ける。
+    検査は並列ジョブで行う（旧サイトへのアクセスはこのジョブだけ）"""
+    fetcher = Fetcher()
+    n = 0
+    for sha, (url, e) in targets_of(state).items():
+        if deep.get(sha, {}).get("status") in DONE:
+            continue
+        try:
+            r = fetcher.get(e.get("href_original", url))
+            data = r.content if r.status_code == 200 else b""
+        except Exception as ex:
+            deep[sha] = {"url": url, "checked_at": now(), "status": "retry", "reason": type(ex).__name__}
+            continue
+        actual = hashlib.sha256(data).hexdigest()
+        if actual != sha:
+            deep[sha] = {"url": url, "checked_at": now(), "status": "changed", "reason": f"HTTP {r.status_code} / 1 回目と内容が違う", "sha256_now": actual}
+            continue
+        d = os.path.join(out_dir, f"shard-{n % shards}")
+        os.makedirs(d, exist_ok=True)
+        with open(os.path.join(d, f"{sha}.pdf"), "wb") as f:
+            f.write(data)
+        n += 1
+    save_state(out_json, deep)
+    print(json.dumps({"fetched": n}))
+
+
+def inspect_dir_mode(state: dict, files_dir: str, part_out: str) -> None:
+    """取得済みの PDF（<sha>.pdf）を検査して、結果を part_out に書く"""
+    tg = targets_of(state)
+    part: dict = {}
+    for name in sorted(os.listdir(files_dir)):
+        sha = name[:-4]
+        url, e = tg[sha]
+        rec = {"url": url, "checked_at": now()}
+        try:
+            rec.update(inspect(os.path.join(files_dir, name), e["pages"] or 0), status="ok")
+        except Exception as ex:
+            rec.update(status="failed_permanent", reason=f"検査エラー: {type(ex).__name__}: {ex}"[:200])
+        part[sha] = rec
+        save_state(part_out, part)
+    print(json.dumps({"inspected": len(part)}))
+
+
+def merge_mode(base: str, parts: list[str]) -> None:
+    deep = load_json(base)
+    for p in parts:
+        deep.update(load_json(p))
+    save_state(base, deep)
+    print(json.dumps({"total": len(deep), "ok": sum(1 for v in deep.values() if v.get("status") == "ok")}))
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--state", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--workdir", default="/tmp/deep")
     ap.add_argument("--time-budget", type=int, default=5 * 3600)
+    # 並列化用: fetch（取得して振り分け）／ inspect-dir（取得済みを検査）／ merge（結果をまとめる）
+    ap.add_argument("--fetch-to")
+    ap.add_argument("--shards", type=int, default=1)
+    ap.add_argument("--files-dir")
+    ap.add_argument("--part-out")
+    ap.add_argument("--merge", nargs="*")
     args = ap.parse_args()
     deadline = time.time() + args.time_budget
     with open(args.state, encoding="utf-8") as f:
         state = json.load(f)
+    if args.merge is not None:
+        merge_mode(args.out, args.merge)
+        return 0
+    if args.fetch_to:
+        fetch_mode(state, load_json(args.out), args.fetch_to, args.shards, args.out)
+        return 0
+    if args.files_dir:
+        inspect_dir_mode(state, args.files_dir, args.part_out)
+        return 0
     deep = {}
     if os.path.exists(args.out):
         with open(args.out, encoding="utf-8") as f:

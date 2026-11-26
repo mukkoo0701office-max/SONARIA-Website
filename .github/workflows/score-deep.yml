@@ -1,10 +1,11 @@
 # 楽譜 PDF の詳細検査（2 回目）: 全ページのページ番号・白紙・著作権／出版社表記・パート表記。
-# - 1 回目の結果（ci/score-audit の state.json）を読み、内容ごとに 1 回だけ取り直す
-# - PDF は保存しない。結果（deep.json）だけを ci/score-deep ブランチに保存する。途中で止まっても再開する
+# 1) fetch: 未検査の PDF を旧サイトから 1 件ずつ取得（robots.txt・5 秒間隔を守る。旧サイトへのアクセスはこのジョブだけ）
+#    取得した PDF は一時的な成果物（1 日で自動削除）にして、検査ジョブへ渡す
+# 2) inspect: 20 並列で検査（OCR のスレッドは 1 本に固定。並列実行時に OpenMP が CPU を奪い合って極端に遅くなるため）
+# 3) merge: 結果（deep.json）をまとめて ci/score-deep ブランチに保存する。途中で止まっても再開できる
 name: Score deep inspect
 
 on:
-  # pull_request だと PR 全体の差分で判定され、フロントエンドを直すたびに再実行されるため push で判定する
   push:
     branches: [feature/score-migration]
     paths:
@@ -19,39 +20,116 @@ concurrency:
   group: score-audit
   cancel-in-progress: false
 
+env:
+  SHARDS: 20
+
 jobs:
-  deep:
+  fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 340
+    timeout-minutes: 300
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Install tools
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq qpdf poppler-utils tesseract-ocr tesseract-ocr-jpn tesseract-ocr-deu tesseract-ocr-fra tesseract-ocr-ita > /dev/null
-          pip install -q -r tools/score-migration/requirements.txt
-
-      - name: Restore audit state and previous deep results
+      - run: pip install -q -r tools/score-migration/requirements.txt
+      - name: Restore state
         run: |
           mkdir -p /tmp/deepout
           git fetch -q --depth=1 origin ci/score-audit
           git show FETCH_HEAD:state.json > /tmp/state.json
           if git ls-remote --exit-code --heads origin ci/score-deep > /dev/null 2>&1; then
             git fetch -q --depth=1 origin ci/score-deep
-            git show FETCH_HEAD:deep.json > /tmp/deepout/deep.json && echo "resumed"
+            git show FETCH_HEAD:deep.json > /tmp/deepout/deep.json
           fi
+      - name: Fetch PDFs (sequential, polite)
+        run: python tools/score-migration/deep_inspect.py --state /tmp/state.json --out /tmp/deepout/deep.json --fetch-to /tmp/pdfs --shards "$SHARDS"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: deep-base
+          path: |
+            /tmp/deepout/deep.json
+            /tmp/state.json
+          retention-days: 1
+      - name: Upload shards
+        run: ls /tmp/pdfs || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pdfs
+          path: /tmp/pdfs
+          retention-days: 1
+          if-no-files-found: ignore
+          compression-level: 0
 
-      - name: Deep inspect
-        run: python tools/score-migration/deep_inspect.py --state /tmp/state.json --out /tmp/deepout/deep.json --time-budget 18000
-
-      - name: Save results to ci/score-deep
-        if: always()
+  inspect:
+    needs: fetch
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+    env:
+      OMP_THREAD_LIMIT: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install tools
         run: |
-          [ -f /tmp/deepout/deep.json ] || exit 0
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq qpdf poppler-utils tesseract-ocr tesseract-ocr-jpn tesseract-ocr-deu tesseract-ocr-fra tesseract-ocr-ita > /dev/null
+          pip install -q -r tools/score-migration/requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: deep-base
+          path: /tmp/base
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: pdfs
+          path: /tmp/pdfs
+      - name: Inspect shard
+        run: |
+          d="/tmp/pdfs/shard-${{ matrix.shard }}"
+          mkdir -p /tmp/part
+          if [ -d "$d" ]; then
+            python tools/score-migration/deep_inspect.py --state /tmp/base/state.json --out /tmp/unused.json --files-dir "$d" --part-out "/tmp/part/part-${{ matrix.shard }}.json"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: part-${{ matrix.shard }}
+          path: /tmp/part
+          retention-days: 1
+          if-no-files-found: ignore
+
+  merge:
+    needs: inspect
+    if: always() && needs.fetch.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q -r tools/score-migration/requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: deep-base
+          path: /tmp/base
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: part-*
+          path: /tmp/parts
+          merge-multiple: true
+      - name: Merge
+        run: |
+          mkdir -p /tmp/deepout && cp /tmp/base/deepout/deep.json /tmp/deepout/deep.json 2>/dev/null || cp /tmp/base/deep.json /tmp/deepout/deep.json 2>/dev/null || echo '{}' > /tmp/deepout/deep.json
+          python tools/score-migration/deep_inspect.py --state /tmp/base/state.json --out /tmp/deepout/deep.json --merge /tmp/parts/*.json
+      - name: Save results to ci/score-deep
+        run: |
           cd /tmp/deepout
           git init -q
           git checkout -q -b ci/score-deep
