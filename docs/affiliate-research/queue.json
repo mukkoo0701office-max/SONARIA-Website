@@ -87,9 +87,9 @@
       "verification": "Henle HN205/HN9205 official edition scope and ISMN checked, including Op.1 No.0 and exclusion of spurious Op.1 No.5. No trustworthy matching Amazon.co.jp product detail URL/ASIN from exact publisher/ISMN searches; do not generate mukkoo-22 links.",
       "status": "pending_review",
       "priority": "S",
-      "last_research_at": "2026-11-27",
+      "last_research_at": "2026-11-28",
       "amazon_verification_status": "unverified_exact_amazon_japan_item",
-      "verification_notes": "2026-11-27 recheck: site:amazon.co.jp/dp/ exact Henle catalogue numbers HN205, HN208, HN9205, HN9216, HN211 and Japanese Amazon + exact ISMN queries produced no independently verifiable matching individual Amazon.co.jp product page or ASIN. Publisher identity only; keep pending_review. Do not use unrelated Haydn piano sonata books, CDs or marketplace search results as a match. 2026-11-27 18:47 JST independent search of Amazon.co.jp exact HN205/HN208/HN9205/HN9216/HN211 and ISMN identifiers yielded no attributable product detail pages; no ASIN assigned. 2026-11-27 20:54 JST: repeated targeted site:amazon.co.jp/dp/ searches using exact Henle catalogue number and Haydn yielded no matching product details. ASIN and tagged URL remain unverified; retain pending_review.",
+      "verification_notes": "2026-11-27 recheck: site:amazon.co.jp/dp/ exact Henle catalogue numbers HN205, HN208, HN9205, HN9216, HN211 and Japanese Amazon + exact ISMN queries produced no independently verifiable matching individual Amazon.co.jp product page or ASIN. Publisher identity only; keep pending_review. Do not use unrelated Haydn piano sonata books, CDs or marketplace search results as a match. 2026-11-27 18:47 JST independent search of Amazon.co.jp exact HN205/HN208/HN9205/HN9216/HN211 and ISMN identifiers yielded no attributable product detail pages; no ASIN assigned. 2026-11-27 20:54 JST: repeated targeted site:amazon.co.jp/dp/ searches using exact Henle catalogue number and Haydn yielded no matching product details. ASIN and tagged URL remain unverified; retain pending_review. 2026-11-28: Fresh exact Amazon.co.jp /dp/ searches for HN205/HN208/HN9205/HN9216/HN211 and ISMN returned no verifiable ASIN. Independent Japanese retailer SQT102 lists Op.1+Op.2 (10 works) and must NOT be treated as a verified match for HN205 Op.1-only; retailer listing is not Amazon proof.",
       "ismn": "979-0-2018-0205-3",
       "editor": [
         "Georg Feder",
@@ -97,14 +97,15 @@
       ],
       "product_format": "four instrumental parts",
       "pages": 187,
-      "last_amazon_search_at": "2026-11-27",
+      "last_amazon_search_at": "2026-11-28",
       "publisher_authenticity_note": "Henle HN205/HN9205 Book I Early Quartets lists genuine early four-part Haydn works Op.1 Nos.1,2,3,4,6 plus Op.1 No.0 Hob.II:6; excludes symphony printed as Op.1 No.5. Op.1 No.0 is NOT Op.1 No.1. This is one volume per format (parts or study score), not six separately sold publications.",
       "imslp_related_work_ids": [
         "haydn-op1-no0-hobii6-early-quartet",
         "haydn-op1-no1-peters-merton"
       ],
       "domestic_retailer_source": "https://www.gakufu.co.jp/collections/shu-ru-xian-le-qi-soroansanburu-series__sqt-genre__xian-le-ansanburu//products/sqt102",
-      "domestic_retailer_verification": "2026-11-27: Rocket Music SQT102 lists a Henle Haydn String Quartets Book I product and quartet instrumentation. Retailer Japanese headline says Op.1 and Op.2, but the actual repertoire list begins with Op.1 Nos.1–4, No.0 and No.6 matching Henle HN205. Treat retailer headline as ambiguous; authoritative work scope is Henle HN205, NOT a confirmed Op.2 edition. This is not Amazon.co.jp evidence."
+      "domestic_retailer_verification": "2026-11-27: Rocket Music SQT102 lists a Henle Haydn String Quartets Book I product and quartet instrumentation. Retailer Japanese headline says Op.1 and Op.2, but the actual repertoire list begins with Op.1 Nos.1–4, No.0 and No.6 matching Henle HN205. Treat retailer headline as ambiguous; authoritative work scope is Henle HN205, NOT a confirmed Op.2 edition. This is not Amazon.co.jp evidence.",
+      "independent_japan_retailer_crosscheck_2026_11_28": "Rocket Music SQT102 lists Haydn String Quartets Book I, Op.1 and Op.2, 10 quartets, 187 pages, playing parts, editor Gottfried Greiner / Georg Feder. This retailer listing is not sufficient to establish identity with Henle HN205 alone: HN205 is Book I Early Quartets Op.1, while retailer grouping includes Op.2. Treat as possible bundled/different edition; verify Henle catalogue number on product itself before mapping. https://www.gakufu.co.jp/products/sqt102"
     },
     {
       "id": "haydn-henle-hn208",
@@ -1290,6 +1291,8 @@
       "https://www.henle.de/media/b0/63/c1/1772528772/2026-2027%20GC.pdf",
       "https://www.henle.de/en/String-Quartets-Book-X-op.-76-Erdoedy-Quartets/HN-214"
     ],
-    "next": "Verify Op.50 No.4 key against current Henle score; seek directly accessible Amazon.co.jp item page before recording ASIN or affiliate link."
+    "next": "Verify Op.50 No.4 key against current Henle score; seek directly accessible Amazon.co.jp item page before recording ASIN or affiliate link.",
+    "summary": "HN205 crosschecked against Japanese retailer SQT102; Op.1+Op.2 bundle differs from HN205 Op.1-only. Amazon.co.jp exact individual product/ASIN still unverified; no affiliate link.",
+    "source": "https://www.gakufu.co.jp/products/sqt102"
   }
 }
