@@ -89,7 +89,7 @@
       "priority": "S",
       "last_research_at": "2026-11-27",
       "amazon_verification_status": "unverified_exact_amazon_japan_item",
-      "verification_notes": "2026-11-27 recheck: site:amazon.co.jp/dp/ exact Henle catalogue numbers HN205, HN208, HN9205, HN9216, HN211 and Japanese Amazon + exact ISMN queries produced no independently verifiable matching individual Amazon.co.jp product page or ASIN. Publisher identity only; keep pending_review. Do not use unrelated Haydn piano sonata books, CDs or marketplace search results as a match.",
+      "verification_notes": "2026-11-27 recheck: site:amazon.co.jp/dp/ exact Henle catalogue numbers HN205, HN208, HN9205, HN9216, HN211 and Japanese Amazon + exact ISMN queries produced no independently verifiable matching individual Amazon.co.jp product page or ASIN. Publisher identity only; keep pending_review. Do not use unrelated Haydn piano sonata books, CDs or marketplace search results as a match. 2026-11-27 18:47 JST independent search of Amazon.co.jp exact HN205/HN208/HN9205/HN9216/HN211 and ISMN identifiers yielded no attributable product detail pages; no ASIN assigned.",
       "ismn": "979-0-2018-0205-3",
       "editor": [
         "Georg Feder",
@@ -102,7 +102,9 @@
       "imslp_related_work_ids": [
         "haydn-op1-no0-hobii6-early-quartet",
         "haydn-op1-no1-peters-merton"
-      ]
+      ],
+      "domestic_retailer_source": "https://www.gakufu.co.jp/collections/shu-ru-xian-le-qi-soroansanburu-series__sqt-genre__xian-le-ansanburu//products/sqt102",
+      "domestic_retailer_verification": "2026-11-27: Rocket Music SQT102 lists a Henle Haydn String Quartets Book I product and quartet instrumentation. Retailer Japanese headline says Op.1 and Op.2, but the actual repertoire list begins with Op.1 Nos.1–4, No.0 and No.6 matching Henle HN205. Treat retailer headline as ambiguous; authoritative work scope is Henle HN205, NOT a confirmed Op.2 edition. This is not Amazon.co.jp evidence."
     },
     {
       "id": "haydn-henle-hn208",
@@ -202,7 +204,8 @@
       "product_format": "12-volume study-score slipcase",
       "pages": 1273,
       "collection_includes": "HN 9205–9215 and HN 9771",
-      "last_amazon_search_at": "2026-11-27"
+      "last_amazon_search_at": "2026-11-27",
+      "publisher_collection_crosscheck": "2026-11-27 official Henle HN9216 listing reconfirms 12 study-score volumes (HN9205–9215 and HN9771), 69 quartets, and ISMN 979-0-2018-9216-0. Composer-level collection, not a direct single-work match; Amazon Japan detail remains unverified."
     },
     {
       "id": "haydn-henle-hn211",
