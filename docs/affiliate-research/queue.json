@@ -1239,6 +1239,35 @@
       "status": "pending_review",
       "priority": "S",
       "last_research_at": "2026-11-27"
+    },
+    {
+      "id": "haydn-henle-hn5322",
+      "composer": "Haydn",
+      "category": "critical_complete_edition",
+      "title": "Joseph Haydn Complete Edition Ser. 12 Vol. 4 — String Quartets op. 42, op. 50, op. 54/55",
+      "publisher": "G. Henle Verlag",
+      "publisher_catalog": "HN 5322",
+      "editor": "James Webster",
+      "ismn": "979-0-2018-5322-2",
+      "isbn": null,
+      "work_ids": [
+        "Op.42 / Hob.III:43",
+        "Op.50 Nos.1–6 / Hob.III:44–49",
+        "Op.54 Nos.1–3 / Hob.III:57–59",
+        "Op.55 Nos.1–3 / Hob.III:60–62"
+      ],
+      "product_format": "clothbound complete edition with critical report; not a playing-parts set or pocket score",
+      "pages": 317,
+      "source": "https://www.henle.de/us/Ser.-12-Vol.-4-String-Quartets-op.-42-op.-50-op.-54-55/HN-5322",
+      "verification": "Publisher confirms catalogue, ISMN, critical edition, editor and repertoire. Amazon.co.jp individual detail and ASIN not verified; do not publish affiliate link.",
+      "last_research_at": "2026-11-28",
+      "last_amazon_search_at": "2026-11-28",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
+      "amazon_url": null,
+      "asin": null,
+      "status": "pending_review",
+      "priority": "B",
+      "verification_notes": "2026-11-28: checked exact-title/edition Amazon.co.jp /dp/ discovery; no attributable product detail and ASIN. This scholarly complete edition is distinct from HN210 playing parts and HN9210 study score. Suitable only as specialized related edition if later verified."
     }
   ],
   "implementation_ready": 0,
