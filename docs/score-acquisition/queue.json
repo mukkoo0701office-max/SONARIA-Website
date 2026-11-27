@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Beethoven",
     "stage": "string_quartet",
-    "last_work": "Op.132",
-    "note": "Next Op.135, then audit Op.133 Große Fuge as related Op.130 finale and any remaining quartets before violin sonatas. Verify editions and rights; no PDF downloaded."
+    "last_work": "Op.135",
+    "note": "Next audit Große Fuge Op.133 as related Op.130 finale, avoiding duplicate Work/Edition/PDF assets, then confirm remaining quartets before violin sonatas."
   },
   "items": [
     {
@@ -12127,6 +12127,113 @@
       "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null
+    },
+    {
+      "id": "beethoven-op135-breitkopf-score-schlesinger-parts",
+      "composer": "Ludwig van Beethoven",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.16 in F major",
+      "opus_catalog": "Op.135",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.16%2C_Op.135_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1863",
+        "editor": "unknown",
+        "scope": "Complete score, Ludwig van Beethovens Werke Serie 6 Band 2 No.52",
+        "imslp_file_id": "973816",
+        "edition_comparison": "Historical Breitkopf score vs Schlesinger first-edition parts; different editions; musical concordance unverified"
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.16%2C_Op.135_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "973816",
+        "edition_url": "https://imslp.org/wiki/String_Quartet_No.16%2C_Op.135_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "unknown",
+        "publication_date": "1863",
+        "scope": "complete score; 18 pages per IMSLP",
+        "evidence": "IMSLP score listing #973816; PDF not inspected"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "51365",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.16%2C_Op.135_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Schlesinger",
+          "editor": "first edition (as listed by IMSLP)",
+          "scope": "Op.135 complete parts bundle; individual part pagination not inspected",
+          "evidence": "IMSLP #51365 complete parts metadata; PDF not opened"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "51365",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.16%2C_Op.135_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Schlesinger",
+          "editor": "first edition (as listed by IMSLP)",
+          "scope": "Op.135 complete parts bundle; individual part pagination not inspected",
+          "evidence": "IMSLP #51365 complete parts metadata; PDF not opened"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "51365",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.16%2C_Op.135_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Schlesinger",
+          "editor": "first edition (as listed by IMSLP)",
+          "scope": "Op.135 complete parts bundle; individual part pagination not inspected",
+          "evidence": "IMSLP #51365 complete parts metadata; PDF not opened"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "51365",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.16%2C_Op.135_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Schlesinger",
+          "editor": "first edition (as listed by IMSLP)",
+          "scope": "Op.135 complete parts bundle; individual part pagination not inspected",
+          "evidence": "IMSLP #51365 complete parts metadata; PDF not opened"
+        }
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.16%2C_Op.135_%28Beethoven%2C_Ludwig_van%29",
+          "imslp_file_ids": [
+            "973816",
+            "51365"
+          ],
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP listing only; PDF not inspected"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.16%2C_Op.135_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP lists Op.135 for two violins, viola, cello; Breitkopf 1863 score #973816 and Schlesinger first-edition complete parts #51365. Score and parts editions differ."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "metadata_checked_pdf_uninspected",
+        "parts": "bundle_listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unknown_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Historical source metadata only. Schlesinger part bundle has not been opened or checked for all four parts, page sequence, or alignment with Breitkopf score. Site inventory and live publication could not be verified; no assertion of unlisted status. No rights approval.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
     }
   ],
   "last_updated": "2026-11-28",
@@ -12276,5 +12383,17 @@
     "rights_status": "unknown",
     "status": "research_needed",
     "notes": "No new PDF candidates approved. Original cello/piano fragment exists, so 'Mozart never wrote any cello/piano music' is inaccurate. Check modern completion and source manuscript before any acquisition. No download, rights approval or publication."
+  },
+  "site_reconciliation_last_attempt": {
+    "checked_at": "2026-11-28",
+    "github_main": "main examined: README.md, frontend/package.json and library UI specification; canonical deployed URL and complete published Work/Edition/ScoreAsset inventory not established",
+    "published_site": "unverified; no authoritative deployment URL established",
+    "work_branch": "coordination/gpt-claude-score-queue",
+    "pr_number": 10,
+    "pr_head_at_start": "27d6f9f5f10109aac4367c27eff0db68e5e77df2",
+    "main_head_at_start": "2305de2053711364e525adf88c70c3e8f7f50af3",
+    "site_duplicate_check": "incomplete; queue ID and Op.135 checked, production site inventory not verified",
+    "publication_status_changes": "none asserted",
+    "notes": "Do not infer absence from the website; recheck main and production URL before publication or further deduplication."
   }
 }
