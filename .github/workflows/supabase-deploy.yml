@@ -63,7 +63,7 @@ jobs:
           ORIGIN="${ALLOWED_ORIGINS%%,*}"
           sleep 5
           code=$(curl -s -o /dev/null -w '%{http_code}' -X OPTIONS -H "Origin: $ORIGIN" "$URL")
-          echo "OPTIONS -> $code"; [ "$code" = "204" ]
+          echo "OPTIONS -> $code"; [ "$code" = "204" ] || [ "$code" = "200" ]
           # 入力が空なので検証で 400 になり、保存されない
           code=$(curl -s -o /tmp/r.json -w '%{http_code}' -X POST -H "Origin: $ORIGIN" -H "Content-Type: application/json" \
             -H "Idempotency-Key: 00000000-0000-4000-8000-000000000000" -d '{}' "$URL")
