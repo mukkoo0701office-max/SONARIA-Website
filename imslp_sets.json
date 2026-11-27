@@ -1,0 +1,6716 @@
+{
+ "counts": {
+  "complete_set": 98,
+  "nothing_usable": 7,
+  "score_only": 13
+ },
+ "results": [
+  {
+   "id": "haydn-op1-no1-peters-merton",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in B-flat major (La chasse) Op.1 No.1; Hob.III:1",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.1_(Haydn,_Joseph)",
+    "String_Quartet_in_B-flat_major,_Hob.III:1_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "71570"
+   ],
+   "gpt_ids_missing_on_page": [
+    "71570"
+   ],
+   "score": {
+    "id": "456935",
+    "desc": "Complete Score",
+    "pages": 84,
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.58-63 Berlin: Trautwein , n.d.[1840-45]. Plate 851-54, 856-57.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.1_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Six Quatuors, Op.1 (No.3) London: Preston , n.d.[1789-98].",
+    "rights": "pd",
+    "page": "String_Quartet_in_B-flat_major,_Hob.III:1_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "456936",
+      "desc": "Violin 1",
+      "pages": 2
+     },
+     "violin_2": {
+      "id": "456937",
+      "desc": "Violin 2",
+      "pages": 2
+     },
+     "viola": {
+      "id": "456938",
+      "desc": "Viola",
+      "pages": 2
+     },
+     "cello": {
+      "id": "456939",
+      "desc": "Cello",
+      "pages": 2
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 5,
+    "part_sets": 12
+   }
+  },
+  {
+   "id": "haydn-op1-no2-peters-merton",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in E-flat major Op.1 No.2; Hob.III:2",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.1_(Haydn,_Joseph)",
+    "String_Quartet_in_E-flat_major,_Hob.III:2_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "71570"
+   ],
+   "gpt_ids_missing_on_page": [
+    "71570"
+   ],
+   "score": {
+    "id": "456935",
+    "desc": "Complete Score",
+    "pages": 84,
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.58-63 Berlin: Trautwein , n.d.[1840-45]. Plate 851-54, 856-57.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.1_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Six Quatuors, Op.1 (No.4) London: Preston , n.d.[1789-98].",
+    "rights": "pd",
+    "page": "String_Quartet_in_E-flat_major,_Hob.III:2_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "456955",
+      "desc": "Violin 1",
+      "pages": 2
+     },
+     "violin_2": {
+      "id": "456956",
+      "desc": "Violin 2",
+      "pages": 2
+     },
+     "viola": {
+      "id": "456957",
+      "desc": "Viola",
+      "pages": 2
+     },
+     "cello": {
+      "id": "456958",
+      "desc": "Cello",
+      "pages": 2
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 5,
+    "part_sets": 12
+   }
+  },
+  {
+   "id": "haydn-op1-no3-peters-merton",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in D major Op.1 No.3; Hob.III:3",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.1_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "71570"
+   ],
+   "gpt_ids_missing_on_page": [
+    "71570"
+   ],
+   "score": {
+    "id": "887259",
+    "desc": "Complete Score",
+    "pages": 128,
+    "publisher": "Mannheim: K. Ferd. Heckel , n.d.(ca.1855). Plate 752.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.1_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Leipzig: C.F. Peters , n.d.(ca.1890).",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.1_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "1069092",
+      "desc": "Violin 1",
+      "pages": 10
+     },
+     "violin_2": {
+      "id": "1069093",
+      "desc": "Violin 2",
+      "pages": 9
+     },
+     "viola": {
+      "id": "1069094",
+      "desc": "Viola",
+      "pages": 9
+     },
+     "cello": {
+      "id": "1069095",
+      "desc": "Cello",
+      "pages": 9
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 5
+   }
+  },
+  {
+   "id": "haydn-op1-no4-peters-merton",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in G major Op.1 No.4; Hob.III:4",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.1_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "71573"
+   ],
+   "gpt_ids_missing_on_page": [
+    "71573"
+   ],
+   "score": {
+    "id": "887259",
+    "desc": "Complete Score",
+    "pages": 128,
+    "publisher": "Mannheim: K. Ferd. Heckel , n.d.(ca.1855). Plate 752.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.1_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Leipzig: C.F. Peters , n.d.(ca.1890).",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.1_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "1069096",
+      "desc": "Violin 1",
+      "pages": 9
+     },
+     "violin_2": {
+      "id": "1069097",
+      "desc": "Violin 2",
+      "pages": 11
+     },
+     "viola": {
+      "id": "1069098",
+      "desc": "Viola",
+      "pages": 11
+     },
+     "cello": {
+      "id": "1069099",
+      "desc": "Cello",
+      "pages": 9
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 5
+   }
+  },
+  {
+   "id": "haydn-op1-no5-peters-merton",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in B-flat major Op.1 No.5; Hob.III:5",
+   "category": "string_quartet",
+   "queue_status": "held",
+   "pages": [
+    "String_Quartets,_Op.1_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "71573"
+   ],
+   "gpt_ids_missing_on_page": [
+    "71573"
+   ],
+   "score": {
+    "id": "887259",
+    "desc": "Complete Score",
+    "pages": 128,
+    "publisher": "Mannheim: K. Ferd. Heckel , n.d.(ca.1855). Plate 752.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.1_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Leipzig: C.F. Peters , n.d.(ca.1890).",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.1_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "1069096",
+      "desc": "Violin 1",
+      "pages": 9
+     },
+     "violin_2": {
+      "id": "1069097",
+      "desc": "Violin 2",
+      "pages": 11
+     },
+     "viola": {
+      "id": "1069098",
+      "desc": "Viola",
+      "pages": 11
+     },
+     "cello": {
+      "id": "1069099",
+      "desc": "Cello",
+      "pages": 9
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 5
+   }
+  },
+  {
+   "id": "haydn-op1-no6-peters-merton",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in C major Op.1 No.6; Hob.III:6",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.1_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "71573"
+   ],
+   "gpt_ids_missing_on_page": [
+    "71573"
+   ],
+   "score": {
+    "id": "887259",
+    "desc": "Complete Score",
+    "pages": 128,
+    "publisher": "Mannheim: K. Ferd. Heckel , n.d.(ca.1855). Plate 752.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.1_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Leipzig: C.F. Peters , n.d.(ca.1890).",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.1_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "1069096",
+      "desc": "Violin 1",
+      "pages": 9
+     },
+     "violin_2": {
+      "id": "1069097",
+      "desc": "Violin 2",
+      "pages": 11
+     },
+     "viola": {
+      "id": "1069098",
+      "desc": "Viola",
+      "pages": 11
+     },
+     "cello": {
+      "id": "1069099",
+      "desc": "Cello",
+      "pages": 9
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 5
+   }
+  },
+  {
+   "id": "haydn-op2-no1-peters-merton",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in A major Op.2 No.1; Hob.III:7",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.2_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "71575"
+   ],
+   "gpt_ids_missing_on_page": [
+    "71575"
+   ],
+   "score": {
+    "id": "456723",
+    "desc": "Complete Score",
+    "pages": 94,
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.64-69 Berlin: Trautwein , n.d.[1840-45]. Plate 859-60, 865-68.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.2_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.7-12 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8507.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.2_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105710",
+      "desc": "Violin 1",
+      "pages": 20
+     },
+     "violin_2": {
+      "id": "105711",
+      "desc": "Violin 2",
+      "pages": 16
+     },
+     "viola": {
+      "id": "105712",
+      "desc": "Viola",
+      "pages": 16
+     },
+     "cello": {
+      "id": "105713",
+      "desc": "Cello",
+      "pages": 16
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op2-no2-peters-merton",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in E major Op.2 No.2; Hob.III:8",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.2_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "71575"
+   ],
+   "gpt_ids_missing_on_page": [
+    "71575"
+   ],
+   "score": {
+    "id": "456723",
+    "desc": "Complete Score",
+    "pages": 94,
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.64-69 Berlin: Trautwein , n.d.[1840-45]. Plate 859-60, 865-68.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.2_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.7-12 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8507.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.2_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105710",
+      "desc": "Violin 1",
+      "pages": 20
+     },
+     "violin_2": {
+      "id": "105711",
+      "desc": "Violin 2",
+      "pages": 16
+     },
+     "viola": {
+      "id": "105712",
+      "desc": "Viola",
+      "pages": 16
+     },
+     "cello": {
+      "id": "105713",
+      "desc": "Cello",
+      "pages": 16
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op2-no3-peters-merton",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in E-flat major Op.2 No.3; Hob.III:9",
+   "category": "string_quartet",
+   "queue_status": "held",
+   "pages": [
+    "String_Quartets,_Op.2_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "71575"
+   ],
+   "gpt_ids_missing_on_page": [
+    "71575"
+   ],
+   "score": {
+    "id": "456723",
+    "desc": "Complete Score",
+    "pages": 94,
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.64-69 Berlin: Trautwein , n.d.[1840-45]. Plate 859-60, 865-68.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.2_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.7-12 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8507.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.2_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105710",
+      "desc": "Violin 1",
+      "pages": 20
+     },
+     "violin_2": {
+      "id": "105711",
+      "desc": "Violin 2",
+      "pages": 16
+     },
+     "viola": {
+      "id": "105712",
+      "desc": "Viola",
+      "pages": 16
+     },
+     "cello": {
+      "id": "105713",
+      "desc": "Cello",
+      "pages": 16
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op2-no4-peters-merton",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in F major Op.2 No.4; Hob.III:10",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.2_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "71576"
+   ],
+   "gpt_ids_missing_on_page": [
+    "71576"
+   ],
+   "score": {
+    "id": "456723",
+    "desc": "Complete Score",
+    "pages": 94,
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.64-69 Berlin: Trautwein , n.d.[1840-45]. Plate 859-60, 865-68.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.2_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.7-12 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8507.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.2_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105710",
+      "desc": "Violin 1",
+      "pages": 20
+     },
+     "violin_2": {
+      "id": "105711",
+      "desc": "Violin 2",
+      "pages": 16
+     },
+     "viola": {
+      "id": "105712",
+      "desc": "Viola",
+      "pages": 16
+     },
+     "cello": {
+      "id": "105713",
+      "desc": "Cello",
+      "pages": 16
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op2-no5-peters-merton",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in D major Op.2 No.5; Hob.III:11",
+   "category": "string_quartet",
+   "queue_status": "held",
+   "pages": [
+    "String_Quartets,_Op.2_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "71576"
+   ],
+   "gpt_ids_missing_on_page": [
+    "71576"
+   ],
+   "score": {
+    "id": "456723",
+    "desc": "Complete Score",
+    "pages": 94,
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.64-69 Berlin: Trautwein , n.d.[1840-45]. Plate 859-60, 865-68.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.2_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.7-12 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8507.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.2_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105710",
+      "desc": "Violin 1",
+      "pages": 20
+     },
+     "violin_2": {
+      "id": "105711",
+      "desc": "Violin 2",
+      "pages": 16
+     },
+     "viola": {
+      "id": "105712",
+      "desc": "Viola",
+      "pages": 16
+     },
+     "cello": {
+      "id": "105713",
+      "desc": "Cello",
+      "pages": 16
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op2-no6-peters-merton",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in B-flat major Op.2 No.6; Hob.III:12",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.2_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "71576"
+   ],
+   "gpt_ids_missing_on_page": [
+    "71576"
+   ],
+   "score": {
+    "id": "456723",
+    "desc": "Complete Score",
+    "pages": 94,
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.64-69 Berlin: Trautwein , n.d.[1840-45]. Plate 859-60, 865-68.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.2_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.7-12 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8507.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.2_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105710",
+      "desc": "Violin 1",
+      "pages": 20
+     },
+     "violin_2": {
+      "id": "105711",
+      "desc": "Violin 2",
+      "pages": 16
+     },
+     "viola": {
+      "id": "105712",
+      "desc": "Viola",
+      "pages": 16
+     },
+     "cello": {
+      "id": "105713",
+      "desc": "Cello",
+      "pages": 16
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op9-no1-imslp-research",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in C major Op.9 No.1; Hob.III:19",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.9_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "887812",
+    "desc": "Complete Score",
+    "pages": 159,
+    "publisher": "Mannheim: K. Ferd. Heckel , n.d.(ca.1855). Plate 753.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.9_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.19-24 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8509.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.9_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "106760",
+      "desc": "Violin 1",
+      "pages": 24
+     },
+     "violin_2": {
+      "id": "106761",
+      "desc": "Violin 2",
+      "pages": 16
+     },
+     "viola": {
+      "id": "106762",
+      "desc": "Viola",
+      "pages": 16
+     },
+     "cello": {
+      "id": "106763",
+      "desc": "Cello",
+      "pages": 16
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 1,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "haydn-op9-no2-imslp-research",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in E-flat major Op.9 No.2; Hob.III:20",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.9_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "887812",
+    "desc": "Complete Score",
+    "pages": 159,
+    "publisher": "Mannheim: K. Ferd. Heckel , n.d.(ca.1855). Plate 753.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.9_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.19-24 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8509.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.9_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "106760",
+      "desc": "Violin 1",
+      "pages": 24
+     },
+     "violin_2": {
+      "id": "106761",
+      "desc": "Violin 2",
+      "pages": 16
+     },
+     "viola": {
+      "id": "106762",
+      "desc": "Viola",
+      "pages": 16
+     },
+     "cello": {
+      "id": "106763",
+      "desc": "Cello",
+      "pages": 16
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 1,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "haydn-op9-no3-imslp-research",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in G major Op.9 No.3; Hob.III:21",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.9_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "887812",
+    "desc": "Complete Score",
+    "pages": 159,
+    "publisher": "Mannheim: K. Ferd. Heckel , n.d.(ca.1855). Plate 753.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.9_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.19-24 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8509.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.9_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "106760",
+      "desc": "Violin 1",
+      "pages": 24
+     },
+     "violin_2": {
+      "id": "106761",
+      "desc": "Violin 2",
+      "pages": 16
+     },
+     "viola": {
+      "id": "106762",
+      "desc": "Viola",
+      "pages": 16
+     },
+     "cello": {
+      "id": "106763",
+      "desc": "Cello",
+      "pages": 16
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 1,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "haydn-op9-no4-trautwein-litolff",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in D minor Op.9 No.4; Hob.III:22",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.9_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "106805"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "887812",
+    "desc": "Complete Score",
+    "pages": 159,
+    "publisher": "Mannheim: K. Ferd. Heckel , n.d.(ca.1855). Plate 753.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.9_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.19-24 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8509.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.9_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "106760",
+      "desc": "Violin 1",
+      "pages": 24
+     },
+     "violin_2": {
+      "id": "106761",
+      "desc": "Violin 2",
+      "pages": 16
+     },
+     "viola": {
+      "id": "106762",
+      "desc": "Viola",
+      "pages": 16
+     },
+     "cello": {
+      "id": "106763",
+      "desc": "Cello",
+      "pages": 16
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 1,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "haydn-op9-no5-trautwein-litolff",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in B-flat major Op.9 No.5; Hob.III:23",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.9_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "106806"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "887812",
+    "desc": "Complete Score",
+    "pages": 159,
+    "publisher": "Mannheim: K. Ferd. Heckel , n.d.(ca.1855). Plate 753.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.9_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.19-24 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8509.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.9_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "106760",
+      "desc": "Violin 1",
+      "pages": 24
+     },
+     "violin_2": {
+      "id": "106761",
+      "desc": "Violin 2",
+      "pages": 16
+     },
+     "viola": {
+      "id": "106762",
+      "desc": "Viola",
+      "pages": 16
+     },
+     "cello": {
+      "id": "106763",
+      "desc": "Cello",
+      "pages": 16
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 1,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "haydn-op9-no6-trautwein-litolff",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in A major Op.9 No.6; Hob.III:24",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.9_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "106807"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "887812",
+    "desc": "Complete Score",
+    "pages": 159,
+    "publisher": "Mannheim: K. Ferd. Heckel , n.d.(ca.1855). Plate 753.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.9_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.19-24 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8509.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.9_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "106760",
+      "desc": "Violin 1",
+      "pages": 24
+     },
+     "violin_2": {
+      "id": "106761",
+      "desc": "Violin 2",
+      "pages": 16
+     },
+     "viola": {
+      "id": "106762",
+      "desc": "Viola",
+      "pages": 16
+     },
+     "cello": {
+      "id": "106763",
+      "desc": "Cello",
+      "pages": 16
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 1,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "haydn-op17-no1-altmann-litolff",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in E major Op.17 No.1; Hob.III:25",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.17_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455858"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455858",
+    "desc": "Complete Score",
+    "pages": 125,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 111, n.d.(ca.1930). Plate E.E. 1211.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.17_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.25-30 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8510.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.17_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105714",
+      "desc": "Violin 1",
+      "pages": 28
+     },
+     "violin_2": {
+      "id": "105715",
+      "desc": "Violin 2",
+      "pages": 20
+     },
+     "viola": {
+      "id": "105716",
+      "desc": "Viola",
+      "pages": 18
+     },
+     "cello": {
+      "id": "105717",
+      "desc": "Cello",
+      "pages": 16
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "haydn-op17-no2-altmann-litolff",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in F major Op.17 No.2; Hob.III:26",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.17_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455858"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455858",
+    "desc": "Complete Score",
+    "pages": 125,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 111, n.d.(ca.1930). Plate E.E. 1211.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.17_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.25-30 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8510.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.17_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105714",
+      "desc": "Violin 1",
+      "pages": 28
+     },
+     "violin_2": {
+      "id": "105715",
+      "desc": "Violin 2",
+      "pages": 20
+     },
+     "viola": {
+      "id": "105716",
+      "desc": "Viola",
+      "pages": 18
+     },
+     "cello": {
+      "id": "105717",
+      "desc": "Cello",
+      "pages": 16
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "haydn-op17-no3-altmann-litolff",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in E-flat major Op.17 No.3; Hob.III:27",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.17_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455858"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455858",
+    "desc": "Complete Score",
+    "pages": 125,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 111, n.d.(ca.1930). Plate E.E. 1211.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.17_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.25-30 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8510.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.17_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105714",
+      "desc": "Violin 1",
+      "pages": 28
+     },
+     "violin_2": {
+      "id": "105715",
+      "desc": "Violin 2",
+      "pages": 20
+     },
+     "viola": {
+      "id": "105716",
+      "desc": "Viola",
+      "pages": 18
+     },
+     "cello": {
+      "id": "105717",
+      "desc": "Cello",
+      "pages": 16
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "haydn-op17-no4-eulenburg-litolff",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in C minor Op.17 No.4; Hob.III:28",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.17_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455858"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455858",
+    "desc": "Complete Score",
+    "pages": 125,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 111, n.d.(ca.1930). Plate E.E. 1211.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.17_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.25-30 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8510.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.17_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105714",
+      "desc": "Violin 1",
+      "pages": 28
+     },
+     "violin_2": {
+      "id": "105715",
+      "desc": "Violin 2",
+      "pages": 20
+     },
+     "viola": {
+      "id": "105716",
+      "desc": "Viola",
+      "pages": 18
+     },
+     "cello": {
+      "id": "105717",
+      "desc": "Cello",
+      "pages": 16
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "haydn-op17-no5-eulenburg-litolff",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in G major Op.17 No.5; Hob.III:29",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.17_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455858"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455858",
+    "desc": "Complete Score",
+    "pages": 125,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 111, n.d.(ca.1930). Plate E.E. 1211.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.17_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.25-30 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8510.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.17_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105714",
+      "desc": "Violin 1",
+      "pages": 28
+     },
+     "violin_2": {
+      "id": "105715",
+      "desc": "Violin 2",
+      "pages": 20
+     },
+     "viola": {
+      "id": "105716",
+      "desc": "Viola",
+      "pages": 18
+     },
+     "cello": {
+      "id": "105717",
+      "desc": "Cello",
+      "pages": 16
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "haydn-op17-no6-eulenburg-litolff",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in D major Op.17 No.6; Hob.III:30",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.17_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455858"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455858",
+    "desc": "Complete Score",
+    "pages": 125,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 111, n.d.(ca.1930). Plate E.E. 1211.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.17_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.25-30 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8510.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.17_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105714",
+      "desc": "Violin 1",
+      "pages": 28
+     },
+     "violin_2": {
+      "id": "105715",
+      "desc": "Violin 2",
+      "pages": 20
+     },
+     "viola": {
+      "id": "105716",
+      "desc": "Viola",
+      "pages": 18
+     },
+     "cello": {
+      "id": "105717",
+      "desc": "Cello",
+      "pages": 16
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "haydn-op20-no1-eulenburg-blundell",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in E-flat major Op.20 No.1; Hob.III:31",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.20_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455713"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455713",
+    "desc": "Complete Score",
+    "pages": 149,
+    "publisher": "Leipzig: Eulenburg , No. 163, n.d. Plate E.E. 1263, 1208, 1264, 1193, 1164, 1194.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.20_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.31-36 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8511.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.20_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105765",
+      "desc": "Violin 1",
+      "pages": 32
+     },
+     "violin_2": {
+      "id": "105766",
+      "desc": "Violin 2",
+      "pages": 24
+     },
+     "viola": {
+      "id": "105767",
+      "desc": "Viola",
+      "pages": 20
+     },
+     "cello": {
+      "id": "105768",
+      "desc": "Cello",
+      "pages": 26
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op20-no2-eulenburg-blundell",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in C major Op.20 No.2; Hob.III:32",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.20_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455713"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455713",
+    "desc": "Complete Score",
+    "pages": 149,
+    "publisher": "Leipzig: Eulenburg , No. 163, n.d. Plate E.E. 1263, 1208, 1264, 1193, 1164, 1194.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.20_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.31-36 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8511.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.20_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105765",
+      "desc": "Violin 1",
+      "pages": 32
+     },
+     "violin_2": {
+      "id": "105766",
+      "desc": "Violin 2",
+      "pages": 24
+     },
+     "viola": {
+      "id": "105767",
+      "desc": "Viola",
+      "pages": 20
+     },
+     "cello": {
+      "id": "105768",
+      "desc": "Cello",
+      "pages": 26
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op20-no3-eulenburg-blundell",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in G minor Op.20 No.3; Hob.III:33",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.20_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455713"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455713",
+    "desc": "Complete Score",
+    "pages": 149,
+    "publisher": "Leipzig: Eulenburg , No. 163, n.d. Plate E.E. 1263, 1208, 1264, 1193, 1164, 1194.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.20_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.31-36 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8511.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.20_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105765",
+      "desc": "Violin 1",
+      "pages": 32
+     },
+     "violin_2": {
+      "id": "105766",
+      "desc": "Violin 2",
+      "pages": 24
+     },
+     "viola": {
+      "id": "105767",
+      "desc": "Viola",
+      "pages": 20
+     },
+     "cello": {
+      "id": "105768",
+      "desc": "Cello",
+      "pages": 26
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op20-no4-source-editions",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in D major Op.20 No.4; Hob.III:34",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.20_(Haydn,_Joseph)",
+    "String_Quartet_in_D_major,_Hob.III:34_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455713"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455713",
+    "desc": "Complete Score",
+    "pages": 149,
+    "publisher": "Leipzig: Eulenburg , No. 163, n.d. Plate E.E. 1263, 1208, 1264, 1193, 1164, 1194.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.20_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Leipzig: Fr. Kistner , n.d.[1895]. Plate 9663.",
+    "rights": "pd",
+    "page": "String_Quartet_in_D_major,_Hob.III:34_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "39679",
+      "desc": "Violin 1",
+      "pages": 7
+     },
+     "violin_2": {
+      "id": "39680",
+      "desc": "Violin 2",
+      "pages": 5
+     },
+     "viola": {
+      "id": "39681",
+      "desc": "Viola",
+      "pages": 5
+     },
+     "cello": {
+      "id": "39682",
+      "desc": "Cello",
+      "pages": 5
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 7,
+    "part_sets": 14
+   }
+  },
+  {
+   "id": "haydn-op20-no5-source-editions",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in F minor Op.20 No.5; Hob.III:35",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.20_(Haydn,_Joseph)",
+    "String_Quartet_in_F_minor,_Hob.III:35_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455713"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455713",
+    "desc": "Complete Score",
+    "pages": 149,
+    "publisher": "Leipzig: Eulenburg , No. 163, n.d. Plate E.E. 1263, 1208, 1264, 1193, 1164, 1194.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.20_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.31-36 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8511.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.20_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105765",
+      "desc": "Violin 1",
+      "pages": 32
+     },
+     "violin_2": {
+      "id": "105766",
+      "desc": "Violin 2",
+      "pages": 24
+     },
+     "viola": {
+      "id": "105767",
+      "desc": "Viola",
+      "pages": 20
+     },
+     "cello": {
+      "id": "105768",
+      "desc": "Cello",
+      "pages": 26
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 7,
+    "part_sets": 13
+   }
+  },
+  {
+   "id": "haydn-op20-no6-source-editions",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in A major Op.20 No.6; Hob.III:36",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.20_(Haydn,_Joseph)",
+    "String_Quartet_in_A_major,_Hob.III:36_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455713"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455713",
+    "desc": "Complete Score",
+    "pages": 149,
+    "publisher": "Leipzig: Eulenburg , No. 163, n.d. Plate E.E. 1263, 1208, 1264, 1193, 1164, 1194.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.20_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.31-36 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8511.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.20_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105765",
+      "desc": "Violin 1",
+      "pages": 32
+     },
+     "violin_2": {
+      "id": "105766",
+      "desc": "Violin 2",
+      "pages": 24
+     },
+     "viola": {
+      "id": "105767",
+      "desc": "Viola",
+      "pages": 20
+     },
+     "cello": {
+      "id": "105768",
+      "desc": "Cello",
+      "pages": 26
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 9,
+    "part_sets": 13
+   }
+  },
+  {
+   "id": "haydn-op33-no1-eulenburg-sieber",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in B minor Op.33 No.1; Hob.III:37",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.33_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455448"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455448",
+    "desc": "Complete Score",
+    "pages": 117,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 165, n.d.(ca.1930).",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.33_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Amsterdam: J. Schmitt , n.d.(ca.1789).",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.33_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     },
+     "violin_2": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     },
+     "viola": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     },
+     "cello": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 7
+   }
+  },
+  {
+   "id": "haydn-op33-no2-eulenburg-sieber",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in E-flat major (The Joke) Op.33 No.2; Hob.III:38",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.33_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455448"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455448",
+    "desc": "Complete Score",
+    "pages": 117,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 165, n.d.(ca.1930).",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.33_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Amsterdam: J. Schmitt , n.d.(ca.1789).",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.33_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     },
+     "violin_2": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     },
+     "viola": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     },
+     "cello": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 7
+   }
+  },
+  {
+   "id": "haydn-op33-no3-eulenburg-sieber",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in C major (The Bird) Op.33 No.3; Hob.III:39",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.33_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455448"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455448",
+    "desc": "Complete Score",
+    "pages": 117,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 165, n.d.(ca.1930).",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.33_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Amsterdam: J. Schmitt , n.d.(ca.1789).",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.33_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     },
+     "violin_2": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     },
+     "viola": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     },
+     "cello": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 7
+   }
+  },
+  {
+   "id": "haydn-op33-no4-eulenburg-sieber",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in B-flat major Op.33 No.4; Hob.III:40",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.33_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455448"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455448",
+    "desc": "Complete Score",
+    "pages": 117,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 165, n.d.(ca.1930).",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.33_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Amsterdam: J. Schmitt , n.d.(ca.1789).",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.33_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     },
+     "violin_2": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     },
+     "viola": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     },
+     "cello": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 7
+   }
+  },
+  {
+   "id": "haydn-op33-no5-eulenburg-sieber",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in G major (How do you do?) Op.33 No.5; Hob.III:41",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.33_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455448"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455448",
+    "desc": "Complete Score",
+    "pages": 117,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 165, n.d.(ca.1930).",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.33_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Amsterdam: J. Schmitt , n.d.(ca.1789).",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.33_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     },
+     "violin_2": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     },
+     "viola": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     },
+     "cello": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 7
+   }
+  },
+  {
+   "id": "haydn-op33-no6-eulenburg-sieber",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in D major Op.33 No.6; Hob.III:42",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.33_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455448"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455448",
+    "desc": "Complete Score",
+    "pages": 117,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 165, n.d.(ca.1930).",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.33_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Amsterdam: J. Schmitt , n.d.(ca.1789).",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.33_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     },
+     "violin_2": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     },
+     "viola": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     },
+     "cello": {
+      "id": "472924",
+      "desc": "Complete Parts (gray)",
+      "pages": 32
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 7
+   }
+  },
+  {
+   "id": "haydn-op42-imslp-edition-research",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in D minor Op.42; Hob.III:43",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_in_D_minor,_Hob.III:43_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "05774"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "05774",
+    "desc": "Complete Score",
+    "pages": 15,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 154, n.d.(ca.1930). Plate E.E. 1254.",
+    "rights": "pd",
+    "page": "String_Quartet_in_D_minor,_Hob.III:43_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Leipzig: Ernst Eulenburg , No. 154, n.d.(ca.1930). Plate E.E. 1254.",
+    "rights": "pd",
+    "page": "String_Quartet_in_D_minor,_Hob.III:43_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "1069108",
+      "desc": "Violin 1",
+      "pages": 5
+     },
+     "violin_2": {
+      "id": "1069109",
+      "desc": "Violin 2",
+      "pages": 4
+     },
+     "viola": {
+      "id": "1069110",
+      "desc": "Viola",
+      "pages": 4
+     },
+     "cello": {
+      "id": "1069111",
+      "desc": "Cello",
+      "pages": 3
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 6,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op50-1-imslp-edition-research",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in B-flat major Op.50 No.1; Hob.III:44",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.50_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455213"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455213",
+    "desc": "Complete Score",
+    "pages": 142,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 167, n.d.(ca.1930). Plate E.E. 1267-69, 1212, 1255-56.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.50_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.44-49 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8514.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.50_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "106764",
+      "desc": "Violin 1",
+      "pages": 32
+     },
+     "violin_2": {
+      "id": "106765",
+      "desc": "Violin 2",
+      "pages": 24
+     },
+     "viola": {
+      "id": "106766",
+      "desc": "Viola",
+      "pages": 24
+     },
+     "cello": {
+      "id": "106767",
+      "desc": "Cello",
+      "pages": 22
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op50-2-imslp-edition-research",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in C major Op.50 No.2; Hob.III:45",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.50_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455213"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455213",
+    "desc": "Complete Score",
+    "pages": 142,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 167, n.d.(ca.1930). Plate E.E. 1267-69, 1212, 1255-56.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.50_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.44-49 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8514.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.50_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "106764",
+      "desc": "Violin 1",
+      "pages": 32
+     },
+     "violin_2": {
+      "id": "106765",
+      "desc": "Violin 2",
+      "pages": 24
+     },
+     "viola": {
+      "id": "106766",
+      "desc": "Viola",
+      "pages": 24
+     },
+     "cello": {
+      "id": "106767",
+      "desc": "Cello",
+      "pages": 22
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op50-3-imslp-edition-research",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in E-flat major Op.50 No.3; Hob.III:46",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.50_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455213"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455213",
+    "desc": "Complete Score",
+    "pages": 142,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 167, n.d.(ca.1930). Plate E.E. 1267-69, 1212, 1255-56.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.50_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.44-49 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8514.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.50_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "106764",
+      "desc": "Violin 1",
+      "pages": 32
+     },
+     "violin_2": {
+      "id": "106765",
+      "desc": "Violin 2",
+      "pages": 24
+     },
+     "viola": {
+      "id": "106766",
+      "desc": "Viola",
+      "pages": 24
+     },
+     "cello": {
+      "id": "106767",
+      "desc": "Cello",
+      "pages": 22
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op50-no4-artaria-litolff",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in F-sharp minor Op.50 No.4; Hob.III:47",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.50_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455213"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455213",
+    "desc": "Complete Score",
+    "pages": 142,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 167, n.d.(ca.1930). Plate E.E. 1267-69, 1212, 1255-56.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.50_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.44-49 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8514.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.50_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "106764",
+      "desc": "Violin 1",
+      "pages": 32
+     },
+     "violin_2": {
+      "id": "106765",
+      "desc": "Violin 2",
+      "pages": 24
+     },
+     "viola": {
+      "id": "106766",
+      "desc": "Viola",
+      "pages": 24
+     },
+     "cello": {
+      "id": "106767",
+      "desc": "Cello",
+      "pages": 22
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op50-no5-artaria-litolff",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in F major (Dream) Op.50 No.5; Hob.III:48",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.50_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455213"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455213",
+    "desc": "Complete Score",
+    "pages": 142,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 167, n.d.(ca.1930). Plate E.E. 1267-69, 1212, 1255-56.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.50_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.44-49 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8514.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.50_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "106764",
+      "desc": "Violin 1",
+      "pages": 32
+     },
+     "violin_2": {
+      "id": "106765",
+      "desc": "Violin 2",
+      "pages": 24
+     },
+     "viola": {
+      "id": "106766",
+      "desc": "Viola",
+      "pages": 24
+     },
+     "cello": {
+      "id": "106767",
+      "desc": "Cello",
+      "pages": 22
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op50-no6-artaria-litolff",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in D major (La grenouille) Op.50 No.6; Hob.III:49",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.50_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455213"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455213",
+    "desc": "Complete Score",
+    "pages": 142,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 167, n.d.(ca.1930). Plate E.E. 1267-69, 1212, 1255-56.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.50_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.44-49 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8514.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.50_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "106764",
+      "desc": "Violin 1",
+      "pages": 32
+     },
+     "violin_2": {
+      "id": "106765",
+      "desc": "Violin 2",
+      "pages": 24
+     },
+     "viola": {
+      "id": "106766",
+      "desc": "Viola",
+      "pages": 24
+     },
+     "cello": {
+      "id": "106767",
+      "desc": "Cello",
+      "pages": 22
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op54-no1-eulenburg-historical",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in G major Op.54 No.1; Hob.III:58",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.54_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455182"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455182",
+    "desc": "Complete Score",
+    "pages": 70,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 113, n.d.(ca.1930). Plate E.E. 1154, 1166, 1213.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.54_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.57-59 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8516.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.54_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105769",
+      "desc": "Violin 1",
+      "pages": 18
+     },
+     "violin_2": {
+      "id": "105770",
+      "desc": "Violin 2",
+      "pages": 12
+     },
+     "viola": {
+      "id": "105771",
+      "desc": "Viola",
+      "pages": 12
+     },
+     "cello": {
+      "id": "105772",
+      "desc": "Cello",
+      "pages": 12
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op54-no2-eulenburg-historical",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in C major Op.54 No.2; Hob.III:57",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.54_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455182"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455182",
+    "desc": "Complete Score",
+    "pages": 70,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 113, n.d.(ca.1930). Plate E.E. 1154, 1166, 1213.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.54_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.57-59 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8516.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.54_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105769",
+      "desc": "Violin 1",
+      "pages": 18
+     },
+     "violin_2": {
+      "id": "105770",
+      "desc": "Violin 2",
+      "pages": 12
+     },
+     "viola": {
+      "id": "105771",
+      "desc": "Viola",
+      "pages": 12
+     },
+     "cello": {
+      "id": "105772",
+      "desc": "Cello",
+      "pages": 12
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op54-no3-eulenburg-historical",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in E major Op.54 No.3; Hob.III:59",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.54_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455182"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455182",
+    "desc": "Complete Score",
+    "pages": 70,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 113, n.d.(ca.1930). Plate E.E. 1154, 1166, 1213.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.54_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.57-59 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8516.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.54_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "105769",
+      "desc": "Violin 1",
+      "pages": 18
+     },
+     "violin_2": {
+      "id": "105770",
+      "desc": "Violin 2",
+      "pages": 12
+     },
+     "viola": {
+      "id": "105771",
+      "desc": "Viola",
+      "pages": 12
+     },
+     "cello": {
+      "id": "105772",
+      "desc": "Cello",
+      "pages": 12
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 6
+   }
+  },
+  {
+   "id": "haydn-op55-no1-pleyel-score-parts",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in A major Op.55 No.1; Hob.III:60",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_in_A_major,_Hob.III:60_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "479125"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "479125",
+    "desc": "Complete Score",
+    "pages": 22,
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.31 Berlin: Trautwein , n.d.[1840-45]. Plate 779.",
+    "rights": "pd",
+    "page": "String_Quartet_in_A_major,_Hob.III:60_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "A Complete Collection of Haydn's Quartetts , No.60 London: Collard & Collard , n.d.(1830-34).",
+    "rights": "pd",
+    "page": "String_Quartet_in_A_major,_Hob.III:60_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "478955",
+      "desc": "Violin 1",
+      "pages": 4
+     },
+     "violin_2": {
+      "id": "478956",
+      "desc": "Violin 2",
+      "pages": 4
+     },
+     "viola": {
+      "id": "478957",
+      "desc": "Viola",
+      "pages": 4
+     },
+     "cello": {
+      "id": "478958",
+      "desc": "Cello",
+      "pages": 3
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 3,
+    "part_sets": 4
+   }
+  },
+  {
+   "id": "haydn-op55-no2-pleyel-score-parts",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in F minor (The Razor) Op.55 No.2; Hob.III:61",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_in_F_minor,_Hob.III:61_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "479263"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "479263",
+    "desc": "Complete Score (color)",
+    "pages": 26,
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.52 Berlin: Trautwein , n.d.[1840-45]. Plate 837.",
+    "rights": "pd",
+    "page": "String_Quartet_in_F_minor,_Hob.III:61_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "A Complete Collection of Haydn's Quartetts , No.61 London: Collard & Collard , n.d.(1830-34).",
+    "rights": "pd",
+    "page": "String_Quartet_in_F_minor,_Hob.III:61_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "478959",
+      "desc": "Violin 1",
+      "pages": 6
+     },
+     "violin_2": {
+      "id": "478960",
+      "desc": "Violin 2",
+      "pages": 5
+     },
+     "viola": {
+      "id": "478961",
+      "desc": "Viola",
+      "pages": 4
+     },
+     "cello": {
+      "id": "478962",
+      "desc": "Cello",
+      "pages": 4
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 4
+   }
+  },
+  {
+   "id": "haydn-op55-no3-pleyel-score-parts",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in B-flat major Op.55 No.3; Hob.III:62",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_in_B-flat_major,_Hob.III:62_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "06495",
+    "desc": "Complete Score*",
+    "pages": 19,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 143, n.d.(ca.1930). Plate E.E. 1196.",
+    "rights": "pd",
+    "page": "String_Quartet_in_B-flat_major,_Hob.III:62_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "A Complete Collection of Haydn's Quartetts , No.62 London: Collard & Collard , n.d.(1830-34).",
+    "rights": "pd",
+    "page": "String_Quartet_in_B-flat_major,_Hob.III:62_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "478963",
+      "desc": "Violin 1",
+      "pages": 4
+     },
+     "violin_2": {
+      "id": "478964",
+      "desc": "Violin 2",
+      "pages": 3
+     },
+     "viola": {
+      "id": "478965",
+      "desc": "Viola",
+      "pages": 2
+     },
+     "cello": {
+      "id": "478966",
+      "desc": "Cello",
+      "pages": 4
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 5,
+    "part_sets": 4
+   }
+  },
+  {
+   "id": "haydn-op64-no1-pleyel-parts",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in C major Op.64 No.1; Hob.III:65",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_in_C_major,_Hob.III:65_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455068"
+   ],
+   "gpt_ids_missing_on_page": [
+    "455068"
+   ],
+   "score": {
+    "id": "06535",
+    "desc": "Complete Score",
+    "pages": 22,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 104, n.d.(ca.1930).. Plate E.E. 1204.",
+    "rights": "pd",
+    "page": "String_Quartet_in_C_major,_Hob.III:65_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Leipzig: C.F. Peters , n.d.(ca.1900). Plate 8476.",
+    "rights": "pd",
+    "page": "String_Quartet_in_C_major,_Hob.III:65_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "218822",
+      "desc": "Complete Parts",
+      "pages": 18
+     },
+     "violin_2": {
+      "id": "218822",
+      "desc": "Complete Parts",
+      "pages": 18
+     },
+     "viola": {
+      "id": "218822",
+      "desc": "Complete Parts",
+      "pages": 18
+     },
+     "cello": {
+      "id": "218822",
+      "desc": "Complete Parts",
+      "pages": 18
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 5
+   }
+  },
+  {
+   "id": "haydn-op64-no2-pleyel-parts",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in B minor Op.64 No.2; Hob.III:68",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_in_B_minor,_Hob.III:68_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "479088"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "479088",
+    "desc": "Complete Score",
+    "pages": 22,
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.23 Berlin: Trautwein , n.d.[1840-45]. Plate 760.",
+    "rights": "pd",
+    "page": "String_Quartet_in_B_minor,_Hob.III:68_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Leipzig: C.F. Peters , n.d.(ca.1918). Plate 10064.",
+    "rights": "pd",
+    "page": "String_Quartet_in_B_minor,_Hob.III:68_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "218823",
+      "desc": "Complete Parts",
+      "pages": 18
+     },
+     "violin_2": {
+      "id": "218823",
+      "desc": "Complete Parts",
+      "pages": 18
+     },
+     "viola": {
+      "id": "218823",
+      "desc": "Complete Parts",
+      "pages": 18
+     },
+     "cello": {
+      "id": "218823",
+      "desc": "Complete Parts",
+      "pages": 18
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 3,
+    "part_sets": 4
+   }
+  },
+  {
+   "id": "haydn-op64-no3-pleyel-parts",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in B-flat major Op.64 No.3; Hob.III:67",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_in_B-flat_major,_Hob.III:67_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455068"
+   ],
+   "gpt_ids_missing_on_page": [
+    "455068"
+   ],
+   "score": {
+    "id": "06537",
+    "desc": "Complete Score",
+    "pages": 26,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 104, n.d.(ca.1930). Plate E.E. 1165.",
+    "rights": "pd",
+    "page": "String_Quartet_in_B-flat_major,_Hob.III:67_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Leipzig: A. Payne's Musikverlag , n.d.(before 1894). Plate A.P. 36.",
+    "rights": "pd",
+    "page": "String_Quartet_in_B-flat_major,_Hob.III:67_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "38264",
+      "desc": "Violin 1",
+      "pages": 7
+     },
+     "violin_2": {
+      "id": "38265",
+      "desc": "Violin 2",
+      "pages": 7
+     },
+     "viola": {
+      "id": "38266",
+      "desc": "Viola",
+      "pages": 6
+     },
+     "cello": {
+      "id": "38267",
+      "desc": "Cello",
+      "pages": 5
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 4
+   }
+  },
+  {
+   "id": "haydn-op64-no4-pleyel-parts",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in G major Op.64 No.4; Hob.III:66",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_in_G_major,_Hob.III:66_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "479066"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "479066",
+    "desc": "Complete Score",
+    "pages": 22,
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.17 Berlin: Trautwein , n.d.[1840-45]. Plate 746.",
+    "rights": "pd",
+    "page": "String_Quartet_in_G_major,_Hob.III:66_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Leipzig: C.F. Peters , n.d.(ca.1918). Plate 10064.",
+    "rights": "pd",
+    "page": "String_Quartet_in_G_major,_Hob.III:66_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "218396",
+      "desc": "Complete Parts",
+      "pages": 22
+     },
+     "violin_2": {
+      "id": "218396",
+      "desc": "Complete Parts",
+      "pages": 22
+     },
+     "viola": {
+      "id": "218396",
+      "desc": "Complete Parts",
+      "pages": 22
+     },
+     "cello": {
+      "id": "218396",
+      "desc": "Complete Parts",
+      "pages": 22
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 5
+   }
+  },
+  {
+   "id": "haydn-op64-no5-pleyel-parts",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in D major (The Lark) Op.64 No.5; Hob.III:63",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_in_D_major,_Hob.III:63_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "06557"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "06557",
+    "desc": "Complete Score",
+    "pages": 22,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 104, n.d.(ca.1930). Plate E.E. 1155.",
+    "rights": "pd",
+    "page": "String_Quartet_in_D_major,_Hob.III:63_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Leipzig: C.F. Peters , n.d.(ca.1918). Plate 10064.",
+    "rights": "pd",
+    "page": "String_Quartet_in_D_major,_Hob.III:63_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "455073",
+      "desc": "Violin 1",
+      "pages": 6
+     },
+     "violin_2": {
+      "id": "455074",
+      "desc": "Violin 2",
+      "pages": 4
+     },
+     "viola": {
+      "id": "455075",
+      "desc": "Viola",
+      "pages": 4
+     },
+     "cello": {
+      "id": "455076",
+      "desc": "Cello",
+      "pages": 4
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 5
+   }
+  },
+  {
+   "id": "haydn-op64-no6-pleyel-parts",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in E-flat major Op.64 No.6; Hob.III:64",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_in_E-flat_major,_Hob.III:64_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "479129"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "479129",
+    "desc": "Complete Score",
+    "pages": 22,
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.35 Berlin: Trautwein , n.d.[1840-45]. Plate 784.",
+    "rights": "pd",
+    "page": "String_Quartet_in_E-flat_major,_Hob.III:64_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Leipzig: C.F. Peters , n.d.(ca.1918). Plate 10064.",
+    "rights": "pd",
+    "page": "String_Quartet_in_E-flat_major,_Hob.III:64_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "218398",
+      "desc": "Complete Parts",
+      "pages": 18
+     },
+     "violin_2": {
+      "id": "218398",
+      "desc": "Complete Parts",
+      "pages": 18
+     },
+     "viola": {
+      "id": "218398",
+      "desc": "Complete Parts",
+      "pages": 18
+     },
+     "cello": {
+      "id": "218398",
+      "desc": "Complete Parts",
+      "pages": 18
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 5
+   }
+  },
+  {
+   "id": "haydn-op71-no1-hummel-pleyel-collection",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in B-flat major Op.71 No.1; Hob.III:69",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op._71_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455067"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455067",
+    "desc": "Complete Score",
+    "pages": 74,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 110, n.d.(ca.1930). Plate E.E. 1210, 1245, 1248.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op._71_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Berlin: J. J. Hummel , n.d.[1797]. Plate 865.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op._71_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "279592",
+      "desc": "Violin 1",
+      "pages": 13
+     },
+     "violin_2": {
+      "id": "279593",
+      "desc": "Violin 2",
+      "pages": 13
+     },
+     "viola": {
+      "id": "279594",
+      "desc": "Viola",
+      "pages": 10
+     },
+     "cello": {
+      "id": "279595",
+      "desc": "Cello",
+      "pages": 10
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 3,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "haydn-op71-no2-hummel-pleyel-collection",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in D major Op.71 No.2; Hob.III:70",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op._71_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455067"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455067",
+    "desc": "Complete Score",
+    "pages": 74,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 110, n.d.(ca.1930). Plate E.E. 1210, 1245, 1248.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op._71_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Berlin: J. J. Hummel , n.d.[1797]. Plate 865.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op._71_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "279592",
+      "desc": "Violin 1",
+      "pages": 13
+     },
+     "violin_2": {
+      "id": "279593",
+      "desc": "Violin 2",
+      "pages": 13
+     },
+     "viola": {
+      "id": "279594",
+      "desc": "Viola",
+      "pages": 10
+     },
+     "cello": {
+      "id": "279595",
+      "desc": "Cello",
+      "pages": 10
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 3,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "haydn-op71-no3-hummel-pleyel-collection",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in E-flat major Op.71 No.3; Hob.III:71",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op._71_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "455067"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "455067",
+    "desc": "Complete Score",
+    "pages": 74,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 110, n.d.(ca.1930). Plate E.E. 1210, 1245, 1248.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op._71_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Berlin: J. J. Hummel , n.d.[1797]. Plate 865.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op._71_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "279592",
+      "desc": "Violin 1",
+      "pages": 13
+     },
+     "violin_2": {
+      "id": "279593",
+      "desc": "Violin 2",
+      "pages": 13
+     },
+     "viola": {
+      "id": "279594",
+      "desc": "Viola",
+      "pages": 10
+     },
+     "cello": {
+      "id": "279595",
+      "desc": "Cello",
+      "pages": 10
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 3,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "haydn-op74-no1-imslp-imbault-hummel",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in C major Op.74 No.1; Hob.III:72",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op._74_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "472116"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "472116",
+    "desc": "Complete Score",
+    "pages": 83,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 146-47, 58, n.d.(ca.1930). Plate E.E. 1246-47, 1158.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op._74_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.72-74 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8520.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op._74_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "106772",
+      "desc": "Violin 1",
+      "pages": 18
+     },
+     "violin_2": {
+      "id": "106773",
+      "desc": "Violin 2",
+      "pages": 16
+     },
+     "viola": {
+      "id": "106774",
+      "desc": "Viola",
+      "pages": 14
+     },
+     "cello": {
+      "id": "106775",
+      "desc": "*Cello",
+      "pages": 10
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 3,
+    "part_sets": 5
+   }
+  },
+  {
+   "id": "haydn-op74-no2-imslp-imbault-hummel",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in F major Op.74 No.2; Hob.III:73",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op._74_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "472116"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "472116",
+    "desc": "Complete Score",
+    "pages": 83,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 146-47, 58, n.d.(ca.1930). Plate E.E. 1246-47, 1158.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op._74_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.72-74 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8520.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op._74_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "106772",
+      "desc": "Violin 1",
+      "pages": 18
+     },
+     "violin_2": {
+      "id": "106773",
+      "desc": "Violin 2",
+      "pages": 16
+     },
+     "viola": {
+      "id": "106774",
+      "desc": "Viola",
+      "pages": 14
+     },
+     "cello": {
+      "id": "106775",
+      "desc": "*Cello",
+      "pages": 10
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 3,
+    "part_sets": 5
+   }
+  },
+  {
+   "id": "haydn-op74-no3-imslp-imbault-hummel",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in G minor (The Horseman) Op.74 No.3; Hob.III:74",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op._74_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "472116"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "472116",
+    "desc": "Complete Score",
+    "pages": 83,
+    "publisher": "Leipzig: Ernst Eulenburg , No. 146-47, 58, n.d.(ca.1930). Plate E.E. 1246-47, 1158.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op._74_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.72-74 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8520.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op._74_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "106772",
+      "desc": "Violin 1",
+      "pages": 18
+     },
+     "violin_2": {
+      "id": "106773",
+      "desc": "Violin 2",
+      "pages": 16
+     },
+     "viola": {
+      "id": "106774",
+      "desc": "Viola",
+      "pages": 14
+     },
+     "cello": {
+      "id": "106775",
+      "desc": "*Cello",
+      "pages": 10
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 3,
+    "part_sets": 5
+   }
+  },
+  {
+   "id": "haydn-op76-no1-hummel-1799-parts",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in G major Op.76 No.1; Hob.III:75",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.76_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "472935"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "454964",
+    "desc": "Complete Score",
+    "pages": 186,
+    "publisher": "Mutopia Project , 2004.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.76_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Amsterdam: J. J. Hummel , n.d.[1799]. Plate 273.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.76_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "472935",
+      "desc": "Complete Parts (color)",
+      "pages": 76
+     },
+     "violin_2": {
+      "id": "472935",
+      "desc": "Complete Parts (color)",
+      "pages": 76
+     },
+     "viola": {
+      "id": "472935",
+      "desc": "Complete Parts (color)",
+      "pages": 76
+     },
+     "cello": {
+      "id": "472935",
+      "desc": "Complete Parts (color)",
+      "pages": 76
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 3,
+    "part_sets": 7
+   }
+  },
+  {
+   "id": "haydn-op76-no2-hummel-1799-parts",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in D minor (Fifths) Op.76 No.2; Hob.III:76",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.76_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "472935"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "454964",
+    "desc": "Complete Score",
+    "pages": 186,
+    "publisher": "Mutopia Project , 2004.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.76_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Amsterdam: J. J. Hummel , n.d.[1799]. Plate 273.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.76_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "472935",
+      "desc": "Complete Parts (color)",
+      "pages": 76
+     },
+     "violin_2": {
+      "id": "472935",
+      "desc": "Complete Parts (color)",
+      "pages": 76
+     },
+     "viola": {
+      "id": "472935",
+      "desc": "Complete Parts (color)",
+      "pages": 76
+     },
+     "cello": {
+      "id": "472935",
+      "desc": "Complete Parts (color)",
+      "pages": 76
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 3,
+    "part_sets": 7
+   }
+  },
+  {
+   "id": "haydn-op76-no3-hummel-1799-parts",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in C major (Emperor) Op.76 No.3; Hob.III:77",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.76_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "472935"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "454964",
+    "desc": "Complete Score",
+    "pages": 186,
+    "publisher": "Mutopia Project , 2004.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.76_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Amsterdam: J. J. Hummel , n.d.[1799]. Plate 273.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.76_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "472935",
+      "desc": "Complete Parts (color)",
+      "pages": 76
+     },
+     "violin_2": {
+      "id": "472935",
+      "desc": "Complete Parts (color)",
+      "pages": 76
+     },
+     "viola": {
+      "id": "472935",
+      "desc": "Complete Parts (color)",
+      "pages": 76
+     },
+     "cello": {
+      "id": "472935",
+      "desc": "Complete Parts (color)",
+      "pages": 76
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 3,
+    "part_sets": 7
+   }
+  },
+  {
+   "id": "haydn-op76-no4-heckel-longman-set",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in B-flat major (Sunrise) Op.76 No.4; Hob.III:78",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.76_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "476439",
+    "476440",
+    "476441",
+    "476442",
+    "892429"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "892429",
+    "desc": "Complete Score",
+    "pages": 240,
+    "publisher": "Mannheim: K. Ferd. Heckel , n.d.[1855]. Plate 757.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.76_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Offenbach: Johann André , n.d.(ca.1825). Plate 5135.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.76_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "472930",
+      "desc": "Complete Parts (color)",
+      "pages": 62
+     },
+     "violin_2": {
+      "id": "472930",
+      "desc": "Complete Parts (color)",
+      "pages": 62
+     },
+     "viola": {
+      "id": "472930",
+      "desc": "Complete Parts (color)",
+      "pages": 62
+     },
+     "cello": {
+      "id": "472930",
+      "desc": "Complete Parts (color)",
+      "pages": 62
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 3,
+    "part_sets": 7
+   }
+  },
+  {
+   "id": "haydn-op76-no5-heckel-longman-set",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in D major Op.76 No.5; Hob.III:79",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.76_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "476439",
+    "476440",
+    "476441",
+    "476442",
+    "892429"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "892429",
+    "desc": "Complete Score",
+    "pages": 240,
+    "publisher": "Mannheim: K. Ferd. Heckel , n.d.[1855]. Plate 757.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.76_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Offenbach: Johann André , n.d.(ca.1825). Plate 5135.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.76_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "472930",
+      "desc": "Complete Parts (color)",
+      "pages": 62
+     },
+     "violin_2": {
+      "id": "472930",
+      "desc": "Complete Parts (color)",
+      "pages": 62
+     },
+     "viola": {
+      "id": "472930",
+      "desc": "Complete Parts (color)",
+      "pages": 62
+     },
+     "cello": {
+      "id": "472930",
+      "desc": "Complete Parts (color)",
+      "pages": 62
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 3,
+    "part_sets": 7
+   }
+  },
+  {
+   "id": "haydn-op76-no6-heckel-longman-set",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in E-flat major Op.76 No.6; Hob.III:80",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.76_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "476439",
+    "476440",
+    "476441",
+    "476442",
+    "892429"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "892429",
+    "desc": "Complete Score",
+    "pages": 240,
+    "publisher": "Mannheim: K. Ferd. Heckel , n.d.[1855]. Plate 757.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.76_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Offenbach: Johann André , n.d.(ca.1825). Plate 5135.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.76_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "472930",
+      "desc": "Complete Parts (color)",
+      "pages": 62
+     },
+     "violin_2": {
+      "id": "472930",
+      "desc": "Complete Parts (color)",
+      "pages": 62
+     },
+     "viola": {
+      "id": "472930",
+      "desc": "Complete Parts (color)",
+      "pages": 62
+     },
+     "cello": {
+      "id": "472930",
+      "desc": "Complete Parts (color)",
+      "pages": 62
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 3,
+    "part_sets": 7
+   }
+  },
+  {
+   "id": "haydn-op77-no1-heckel-peters-score-parts",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in G major Op.77 No.1; Hob.III:81",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.77_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "526767",
+    "526768",
+    "526769",
+    "526770",
+    "892436"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "892436",
+    "desc": "Complete Score",
+    "pages": 98,
+    "publisher": "Mannheim: K. Ferd. Heckel , n.d.[1855]. Plate 757.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.77_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "30 Berühmte Quartette Leipzig: Edition Peters , n.d.(ca.1918). Plate 10063.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.77_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "455066",
+      "desc": "Complete Parts",
+      "pages": 58
+     },
+     "violin_2": {
+      "id": "455066",
+      "desc": "Complete Parts",
+      "pages": 58
+     },
+     "viola": {
+      "id": "455066",
+      "desc": "Complete Parts",
+      "pages": 58
+     },
+     "cello": {
+      "id": "455066",
+      "desc": "Complete Parts",
+      "pages": 58
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 1
+   }
+  },
+  {
+   "id": "haydn-op77-no2-heckel-peters-score-parts",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in F major Op.77 No.2; Hob.III:82",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartets,_Op.77_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "526767",
+    "526768",
+    "526769",
+    "526770",
+    "892436"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "892436",
+    "desc": "Complete Score",
+    "pages": 98,
+    "publisher": "Mannheim: K. Ferd. Heckel , n.d.[1855]. Plate 757.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.77_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "30 Berühmte Quartette Leipzig: Edition Peters , n.d.(ca.1918). Plate 10063.",
+    "rights": "pd",
+    "page": "String_Quartets,_Op.77_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "455066",
+      "desc": "Complete Parts",
+      "pages": 58
+     },
+     "violin_2": {
+      "id": "455066",
+      "desc": "Complete Parts",
+      "pages": 58
+     },
+     "viola": {
+      "id": "455066",
+      "desc": "Complete Parts",
+      "pages": 58
+     },
+     "cello": {
+      "id": "455066",
+      "desc": "Complete Parts",
+      "pages": 58
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 1
+   }
+  },
+  {
+   "id": "haydn-op103-hobiii83-incomplete-score-parts",
+   "composer": "Joseph Haydn",
+   "title": "String Quartet in D minor (unfinished, two surviving movements) Op.103; Hob.III:83",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_in_D_minor,_Op.103_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "106809",
+    "459930",
+    "459931",
+    "459932",
+    "459933"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "106809",
+    "desc": "Complete Score",
+    "pages": 9,
+    "publisher": "Quatuors pour deux violons, alto et violoncelle , No.83 Berlin: Trautwein , n.d.[1840-45]. Plate 882.",
+    "rights": "pd",
+    "page": "String_Quartet_in_D_minor,_Op.103_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Leipzig: C.F. Peters , n.d.(ca.1900). Plate 8477.",
+    "rights": "pd",
+    "page": "String_Quartet_in_D_minor,_Op.103_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "219588",
+      "desc": "Complete Parts",
+      "pages": 8
+     },
+     "violin_2": {
+      "id": "219588",
+      "desc": "Complete Parts",
+      "pages": 8
+     },
+     "viola": {
+      "id": "219588",
+      "desc": "Complete Parts",
+      "pages": 8
+     },
+     "cello": {
+      "id": "219588",
+      "desc": "Complete Parts",
+      "pages": 8
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 2,
+    "part_sets": 4
+   }
+  },
+  {
+   "id": "haydn-op51-seven-last-words-quartet-version-edition-review",
+   "composer": "Joseph Haydn",
+   "title": "The Seven Last Words of Christ — string quartet version Op.51; Hob.III:50–56; related orchestral Hob.XX:1",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "Die_Worte_des_Erlösers_am_Kreuze,_Hob.III:50-56_(Haydn,_Joseph)"
+   ],
+   "status": "nothing_usable",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "106808",
+    "477582",
+    "477583",
+    "477584",
+    "477585"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": null,
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 0,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-op1-no0-hobii6-early-quartet",
+   "composer": "Joseph Haydn",
+   "title": "Divertimento (early string quartet) in E-flat major Op.1 No.0 (Op.0); Hob.II:6",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "Divertimento_in_E-flat_major,_Hob.II:6_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "100239",
+    "100346",
+    "100347",
+    "100348",
+    "100349"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "100239",
+    "desc": "Complete Score",
+    "pages": 7,
+    "publisher": "Nagel's Musik-Archiv, No.84 Hannover: Adolph Nagel's Verlag , 1931.",
+    "rights": "pd",
+    "page": "Divertimento_in_E-flat_major,_Hob.II:6_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Nagel's Musik-Archiv, No.84 Hannover: Adolph Nagel's Verlag , 1931.",
+    "rights": "pd",
+    "page": "Divertimento_in_E-flat_major,_Hob.II:6_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "100346",
+      "desc": "Violin 1",
+      "pages": 4
+     },
+     "violin_2": {
+      "id": "100347",
+      "desc": "Violin 2",
+      "pages": 4
+     },
+     "viola": {
+      "id": "100348",
+      "desc": "Viola",
+      "pages": 4
+     },
+     "cello": {
+      "id": "100349",
+      "desc": "Cello/Double Bass",
+      "pages": 4
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 1,
+    "part_sets": 3
+   }
+  },
+  {
+   "id": "haydn-divertimento-hobiii-d3-manuscript-quartet",
+   "composer": "Joseph Haydn (IMSLP attribution; authenticity not independently established)",
+   "title": "Divertimento in D major for two violins, viola and cello (five movements) Hob.III:D3",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "Divertimento_in_D_major,_Hob.III:D3_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "843012",
+    "843013",
+    "843014",
+    "843015",
+    "843016"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "843016",
+    "desc": "Complete Score",
+    "pages": 12,
+    "publisher": "Manuscript, n.d.",
+    "rights": "pd",
+    "page": "Divertimento_in_D_major,_Hob.III:D3_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Manuscript, n.d.(between 1760 and 1802).",
+    "rights": "pd",
+    "page": "Divertimento_in_D_major,_Hob.III:D3_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "843014",
+      "desc": "Violin 1",
+      "pages": 6
+     },
+     "violin_2": {
+      "id": "843015",
+      "desc": "Violin 2",
+      "pages": 4
+     },
+     "viola": {
+      "id": "843012",
+      "desc": "Viola",
+      "pages": 4
+     },
+     "cello": {
+      "id": "843013",
+      "desc": "Cello",
+      "pages": 4
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 1,
+    "part_sets": 1
+   }
+  },
+  {
+   "id": "haydn-violin-sonata-g-hobxv32-op70",
+   "composer": "Joseph Haydn (attribution discussed by modern scholarship)",
+   "title": "Violin Sonata No.1 in G major (published as Op.70; related to Hob.XV:32) Op.70; after Hob.XV:32 (see scholarly attribution notes)",
+   "category": "violin_sonata",
+   "queue_status": "research_needed",
+   "pages": [
+    "Violin_Sonatas_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin"
+   ],
+   "gpt_ids": [
+    "479521",
+    "479522"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "479521",
+    "desc": "Complete Score",
+    "pages": 93,
+    "publisher": "Leipzig: C.F. Peters , n.d. Plate 6604.",
+    "rights": "pd",
+    "page": "Violin_Sonatas_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "Leipzig: C.F. Peters , n.d. Plate 6604.",
+    "rights": "pd",
+    "page": "Violin_Sonatas_(Haydn,_Joseph)",
+    "files": {
+     "violin": {
+      "id": "479522",
+      "desc": "Violin",
+      "pages": 34
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 3
+   }
+  },
+  {
+   "id": "haydn-arr-violin-sonata-no2-after-hobxvi24",
+   "composer": "Joseph Haydn (original keyboard sonata); violin-piano adaptation by historical arranger not confirmed",
+   "title": "Violin Sonata collection No.2 in D major (arranged from Keyboard Sonata Hob.XVI:24) Violin Sonatas collection No.2 (arr. after Hob.XVI:24)",
+   "category": "violin_sonata_arrangement",
+   "queue_status": "research_needed",
+   "pages": [
+    "Violin_Sonatas_(Haydn,_Joseph)"
+   ],
+   "status": "score_only",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "479521",
+    "479522"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "479521",
+    "desc": "Complete Score",
+    "pages": 93,
+    "publisher": "Leipzig: C.F. Peters , n.d. Plate 6604.",
+    "rights": "pd",
+    "page": "Violin_Sonatas_(Haydn,_Joseph)"
+   },
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 5,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-arr-violin-sonata-no3-after-hobxvi25",
+   "composer": "Joseph Haydn (original keyboard sonata); violin-piano adaptation by historical arranger not confirmed",
+   "title": "Violin Sonata collection No.3 in E-flat major (arranged from Keyboard Sonata Hob.XVI:25) Violin Sonatas collection No.3 (arr. after Hob.XVI:25)",
+   "category": "violin_sonata_arrangement",
+   "queue_status": "research_needed",
+   "pages": [
+    "Violin_Sonatas_(Haydn,_Joseph)"
+   ],
+   "status": "score_only",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "479521",
+    "479522"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "479521",
+    "desc": "Complete Score",
+    "pages": 93,
+    "publisher": "Leipzig: C.F. Peters , n.d. Plate 6604.",
+    "rights": "pd",
+    "page": "Violin_Sonatas_(Haydn,_Joseph)"
+   },
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 5,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-arr-violin-sonata-no4-after-hobxvi26",
+   "composer": "Joseph Haydn (keyboard original); historical violin/piano adaptation author unresolved",
+   "title": "Violin Sonatas collection No.4 in A major (arranged from keyboard sonata Hob.XVI:26) Violin Sonatas collection No.4 (arr. after Hob.XVI:26)",
+   "category": "violin_sonata_arrangement",
+   "queue_status": "research_needed",
+   "pages": [
+    "Violin_Sonatas_(Haydn,_Joseph)"
+   ],
+   "status": "score_only",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "479521",
+    "479522"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "479521",
+    "desc": "Complete Score",
+    "pages": 93,
+    "publisher": "Leipzig: C.F. Peters , n.d. Plate 6604.",
+    "rights": "pd",
+    "page": "Violin_Sonatas_(Haydn,_Joseph)"
+   },
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 5,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-arr-violin-sonata-no5-after-hobxvi43",
+   "composer": "Joseph Haydn (keyboard original); historical violin/piano adaptation author unresolved",
+   "title": "Violin Sonatas collection No.5 in G major (arranged from keyboard sonata Hob.XVI:43) Violin Sonatas collection No.5 (arr. after Hob.XVI:43)",
+   "category": "violin_sonata_arrangement",
+   "queue_status": "research_needed",
+   "pages": [
+    "Violin_Sonatas_(Haydn,_Joseph)"
+   ],
+   "status": "score_only",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "479521",
+    "479522"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "479521",
+    "desc": "Complete Score",
+    "pages": 93,
+    "publisher": "Leipzig: C.F. Peters , n.d. Plate 6604.",
+    "rights": "pd",
+    "page": "Violin_Sonatas_(Haydn,_Joseph)"
+   },
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 5,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-arr-violin-sonata-no6-after-hobii11",
+   "composer": "Joseph Haydn (source composer); violin/piano arrangement editor not proven to be Haydn",
+   "title": "Violin Sonatas collection No.6 in C major (arrangement after Hob.II:11) Violin Sonatas collection No.6 (arr. after Hob.II:11)",
+   "category": "violin_sonata_arrangement",
+   "queue_status": "research_needed",
+   "pages": [
+    "Violin_Sonatas_(Haydn,_Joseph)"
+   ],
+   "status": "score_only",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "479521",
+    "479522"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "479521",
+    "desc": "Complete Score",
+    "pages": 93,
+    "publisher": "Leipzig: C.F. Peters , n.d. Plate 6604.",
+    "rights": "pd",
+    "page": "Violin_Sonatas_(Haydn,_Joseph)"
+   },
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 5,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-arr-violin-sonata-no7-after-hobiii82",
+   "composer": "Joseph Haydn (source composer); violin/piano arrangement editor not proven to be Haydn",
+   "title": "Violin Sonatas collection No.7 in F major (arrangement after Hob.III:82) Violin Sonatas collection No.7 (arr. after Hob.III:82)",
+   "category": "violin_sonata_arrangement",
+   "queue_status": "research_needed",
+   "pages": [
+    "Violin_Sonatas_(Haydn,_Joseph)"
+   ],
+   "status": "score_only",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "479521",
+    "479522"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "479521",
+    "desc": "Complete Score",
+    "pages": 93,
+    "publisher": "Leipzig: C.F. Peters , n.d. Plate 6604.",
+    "rights": "pd",
+    "page": "Violin_Sonatas_(Haydn,_Joseph)"
+   },
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 5,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-arr-violin-sonata-no8-after-hobiii81",
+   "composer": "Joseph Haydn (source composer); violin/piano arrangement editor not proven to be Haydn",
+   "title": "Violin Sonatas collection No.8 in G major (arrangement after Hob.III:81) Violin Sonatas collection No.8 (arr. after Hob.III:81)",
+   "category": "violin_sonata_arrangement",
+   "queue_status": "research_needed",
+   "pages": [
+    "Violin_Sonatas_(Haydn,_Joseph)"
+   ],
+   "status": "score_only",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "479521",
+    "479522"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "479521",
+    "desc": "Complete Score",
+    "pages": 93,
+    "publisher": "Leipzig: C.F. Peters , n.d. Plate 6604.",
+    "rights": "pd",
+    "page": "Violin_Sonatas_(Haydn,_Joseph)"
+   },
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 5,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-violin-viola-hobvi1-doblinger-parts",
+   "composer": "Joseph Haydn",
+   "title": "Sonata (String Duo) in F major for Violin and Viola Hob.VI:1",
+   "category": "string_duo_violin_viola",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Duo_in_F_major,_Hob.VI:1_(Haydn,_Joseph)"
+   ],
+   "status": "nothing_usable",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "326562",
+    "326563"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": null,
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 0,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-violin-viola-hobvi2-doblinger-parts",
+   "composer": "Joseph Haydn",
+   "title": "Sonata (String Duo) in A major for Violin and Viola Hob.VI:2",
+   "category": "string_duo_violin_viola",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Duo_in_A_major,_Hob.VI:2_(Haydn,_Joseph)"
+   ],
+   "status": "nothing_usable",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "326466",
+    "326467"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": null,
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 0,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-violin-viola-hobvi3-doblinger-parts",
+   "composer": "Joseph Haydn",
+   "title": "Sonata (String Duo) in B-flat major for Violin and Viola Hob.VI:3",
+   "category": "string_duo_violin_viola",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Duo_in_B-flat_major,_Hob.VI:3_(Haydn,_Joseph)"
+   ],
+   "status": "nothing_usable",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "326575",
+    "326576"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": null,
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 0,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-violin-viola-hobvi4-score-parts-discovery",
+   "composer": "Joseph Haydn",
+   "title": "Sonata (String Duo) in D major for Violin and Viola Hob.VI:4",
+   "category": "string_duo_violin_viola",
+   "queue_status": "research_needed",
+   "pages": [
+    "List_of_works_by_Joseph_Haydn"
+   ],
+   "status": "nothing_usable",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [],
+   "gpt_ids_missing_on_page": [],
+   "score": null,
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 0,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-violin-viola-hobvi5-score-parts-discovery",
+   "composer": "Joseph Haydn",
+   "title": "Sonata (String Duo) in E-flat major for Violin and Viola Hob.VI:5",
+   "category": "string_duo_violin_viola",
+   "queue_status": "research_needed",
+   "pages": [
+    "List_of_works_by_Joseph_Haydn"
+   ],
+   "status": "nothing_usable",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [],
+   "gpt_ids_missing_on_page": [],
+   "score": null,
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 0,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-violin-viola-hobvi6-score-parts-discovery",
+   "composer": "Joseph Haydn",
+   "title": "Sonata (String Duo) in C major for Violin and Viola Hob.VI:6",
+   "category": "string_duo_violin_viola",
+   "queue_status": "research_needed",
+   "pages": [
+    "List_of_works_by_Joseph_Haydn"
+   ],
+   "status": "nothing_usable",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [],
+   "gpt_ids_missing_on_page": [],
+   "score": null,
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 0,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-arr-cello-piano-grutzmacher-sonata-no1",
+   "composer": "Joseph Haydn (underlying musical material); Friedrich Grützmacher (cello and piano arranger)",
+   "title": "Cello and Piano Sonata arrangement in G major (Grützmacher; source historical Violin Sonatas No.1) Grützmacher cello adaptation of Haydn Violin Sonatas collection No.1; underlying Hob.XV:32",
+   "category": "cello_sonata_arrangement",
+   "queue_status": "research_needed",
+   "pages": [
+    "Violin_Sonatas_(Haydn,_Joseph)"
+   ],
+   "status": "score_only",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "141285",
+    "141286"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "141285",
+    "desc": "Complete Score",
+    "pages": 96,
+    "publisher": "Leipzig: Breitkopf und Härtel , n.d.(1874-76). Plate V.A. 482.",
+    "rights": "pd",
+    "page": "Violin_Sonatas_(Haydn,_Joseph)"
+   },
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 5,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-arr-cello-piano-grutzmacher-sonata-no2",
+   "composer": "Joseph Haydn (underlying musical material); Friedrich Grützmacher (cello and piano arranger)",
+   "title": "Cello and Piano Sonata arrangement in D major (Grützmacher; source historical Violin Sonatas No.2) Grützmacher cello adaptation of Haydn Violin Sonatas collection No.2; underlying Hob.XVI:24",
+   "category": "cello_sonata_arrangement",
+   "queue_status": "research_needed",
+   "pages": [
+    "Violin_Sonatas_(Haydn,_Joseph)"
+   ],
+   "status": "score_only",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "141285",
+    "141286"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "141285",
+    "desc": "Complete Score",
+    "pages": 96,
+    "publisher": "Leipzig: Breitkopf und Härtel , n.d.(1874-76). Plate V.A. 482.",
+    "rights": "pd",
+    "page": "Violin_Sonatas_(Haydn,_Joseph)"
+   },
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 5,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-arr-cello-piano-grutzmacher-sonata-no3",
+   "composer": "Joseph Haydn (musical original); Friedrich Grützmacher (cello-piano transcriber)",
+   "title": "Cello and Piano Sonata arrangement No.3 in E-flat major (Grützmacher, after Hob.XVI:25) Grützmacher cello adaptation of Haydn historical Violin Sonatas collection No.3; underlying Hob.XVI:25",
+   "category": "cello_sonata_arrangement",
+   "queue_status": "research_needed",
+   "pages": [
+    "Keyboard_Sonata_in_E-flat_major,_Hob.XVI:25_(Haydn,_Joseph)"
+   ],
+   "status": "score_only",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "141292",
+    "141293"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "141292",
+    "desc": "Complete Score",
+    "pages": 10,
+    "publisher": "Violin Sonatas No.3 Leipzig: Breitkopf und Härtel , n.d.(ca.1874-76). Plate V.A. 482.",
+    "rights": "pd",
+    "page": "Keyboard_Sonata_in_E-flat_major,_Hob.XVI:25_(Haydn,_Joseph)"
+   },
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 11,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-arr-cello-piano-grutzmacher-sonata-no4",
+   "composer": "Joseph Haydn (musical original); Friedrich Grützmacher (cello-piano transcriber)",
+   "title": "Cello and Piano Sonata arrangement No.4 in A major (Grützmacher, after Hob.XVI:26) Grützmacher cello adaptation of Haydn historical Violin Sonatas collection No.4; underlying Hob.XVI:26",
+   "category": "cello_sonata_arrangement",
+   "queue_status": "research_needed",
+   "pages": [
+    "Keyboard_Sonata_in_A_major,_Hob.XVI:26_(Haydn,_Joseph)"
+   ],
+   "status": "score_only",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "141294",
+    "141295"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "141294",
+    "desc": "Complete Score",
+    "pages": 10,
+    "publisher": "Violin Sonatas No.4 Leipzig: Breitkopf und Härtel , n.d.(ca.1874-76). Plate V.A. 482.",
+    "rights": "pd",
+    "page": "Keyboard_Sonata_in_A_major,_Hob.XVI:26_(Haydn,_Joseph)"
+   },
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 10,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-arr-cello-piano-grutzmacher-sonata-no5",
+   "composer": "Joseph Haydn (musical original); Friedrich Grützmacher (cello-piano transcriber)",
+   "title": "Cello and Piano Sonata arrangement No.5 in G major (Grützmacher, after Hob.XVI:43) Grützmacher cello adaptation of Haydn historical Violin Sonatas collection No.5; underlying Hob.XVI:43",
+   "category": "cello_sonata_arrangement",
+   "queue_status": "research_needed",
+   "pages": [
+    "Keyboard_Sonata_in_A-flat_major,_Hob.XVI:43_(Haydn,_Joseph)"
+   ],
+   "status": "score_only",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "141296",
+    "141297"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "141296",
+    "desc": "Complete Score",
+    "pages": 14,
+    "publisher": "Violin Sonatas No.5 Leipzig: Breitkopf und Härtel , n.d.(ca.1874-76). Plate V.A. 482.",
+    "rights": "pd",
+    "page": "Keyboard_Sonata_in_A-flat_major,_Hob.XVI:43_(Haydn,_Joseph)"
+   },
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 11,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-arr-cello-piano-grutzmacher-sonata-no6",
+   "composer": "Joseph Haydn (underlying work); Friedrich Grützmacher (cello/piano transcription)",
+   "title": "Cello and Piano Sonata transcription No.6 in C major (Grützmacher) Grützmacher arrangement of Haydn historical Violin Sonata collection No.6; after Hob.II:11 / Hob.XVI:15",
+   "category": "cello_sonata_arrangement",
+   "queue_status": "research_needed",
+   "pages": [
+    "Keyboard_Sonata_in_C_major,_Hob.XVI:15_(Haydn,_Joseph)"
+   ],
+   "status": "score_only",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "141298",
+    "141299"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "141298",
+    "desc": "Complete Score",
+    "pages": 8,
+    "publisher": "Violin Sonatas No.6 Leipzig: Breitkopf und Härtel , n.d.(ca.1874–76). Plate V.A. 482.",
+    "rights": "pd",
+    "page": "Keyboard_Sonata_in_C_major,_Hob.XVI:15_(Haydn,_Joseph)"
+   },
+   "parts": null,
+   "same_edition": false,
+   "alternatives": {
+    "scores": 9,
+    "part_sets": 0
+   }
+  },
+  {
+   "id": "haydn-arr-cello-piano-grutzmacher-sonata-no7",
+   "composer": "Joseph Haydn (underlying work); Friedrich Grützmacher (cello/piano transcription)",
+   "title": "Cello and Piano Sonata transcription No.7 in F major (Grützmacher) Grützmacher arrangement of Haydn historical Violin Sonata collection No.7; after Hob.III:82 / Op.77 No.2",
+   "category": "cello_sonata_arrangement",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_in_F_major,_Hob.III:82_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "141300",
+    "141301"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "141300",
+    "desc": "Complete Score",
+    "pages": 22,
+    "publisher": "Violin Sonatas No.7 Leipzig: Breitkopf und Härtel , n.d.(ca.1874–76). Plate V.A. 482.",
+    "rights": "pd",
+    "page": "String_Quartet_in_F_major,_Hob.III:82_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "30 berühmte Quartette Leipzig: Edition Peters , n.d.(ca.1918). Plate 10063.",
+    "rights": "pd",
+    "page": "String_Quartet_in_F_major,_Hob.III:82_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "220163",
+      "desc": "Complete Parts",
+      "pages": 27
+     },
+     "violin_2": {
+      "id": "220163",
+      "desc": "Complete Parts",
+      "pages": 27
+     },
+     "viola": {
+      "id": "220163",
+      "desc": "Complete Parts",
+      "pages": 27
+     },
+     "cello": {
+      "id": "220163",
+      "desc": "Complete Parts",
+      "pages": 27
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 11,
+    "part_sets": 4
+   }
+  },
+  {
+   "id": "haydn-arr-cello-piano-grutzmacher-sonata-no8",
+   "composer": "Joseph Haydn (underlying work); Friedrich Grützmacher (cello/piano transcription)",
+   "title": "Cello and Piano Sonata transcription No.8 in G major (Grützmacher) Grützmacher arrangement of Haydn historical Violin Sonata collection No.8; after Hob.III:81 / Op.77 No.1",
+   "category": "cello_sonata_arrangement",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_in_G_major,_Hob.III:81_(Haydn,_Joseph)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "141302",
+    "141303"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "141302",
+    "desc": "Complete Score",
+    "pages": 18,
+    "publisher": "Violin Sonatas No.8 Leipzig: Breitkopf und Härtel , n.d.(ca.1874-76). Plate V.A. 482.",
+    "rights": "pd",
+    "page": "String_Quartet_in_G_major,_Hob.III:81_(Haydn,_Joseph)"
+   },
+   "parts": {
+    "publisher": "30 berühmte Quartette Leipzig: Edition Peters , n.d.(ca.1918). Plate 10063.",
+    "rights": "pd",
+    "page": "String_Quartet_in_G_major,_Hob.III:81_(Haydn,_Joseph)",
+    "files": {
+     "violin_1": {
+      "id": "141908",
+      "desc": "Violin 1",
+      "pages": 10
+     },
+     "violin_2": {
+      "id": "141909",
+      "desc": "Violin 2",
+      "pages": 7
+     },
+     "viola": {
+      "id": "141910",
+      "desc": "Viola",
+      "pages": 7
+     },
+     "cello": {
+      "id": "141915",
+      "desc": "Cello",
+      "pages": 7
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 10,
+    "part_sets": 5
+   }
+  },
+  {
+   "id": "mozart-k80-73f-breitkopf-1881-score-parts",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.1 in G major (Lodi Quartet) K.80/73f",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.1_in_G_major,_K.80/73f_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "39780",
+    "39781",
+    "39782",
+    "39783",
+    "64041"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "64041",
+    "desc": "Complete Score",
+    "pages": 9,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.1, No.1 (pp.1-7) Leipzig: Breitkopf & Härtel , 1881. Plate W.A.M. 80.",
+    "rights": "pd",
+    "page": "String_Quartet_No.1_in_G_major,_K.80/73f_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für streichinstrumente, Bd.1, No.1 Leipzig: Breitkopf & Härtel , 1881. Plate W.A.M. 80.",
+    "rights": "pd",
+    "page": "String_Quartet_No.1_in_G_major,_K.80/73f_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "39780",
+      "desc": "Violin 1",
+      "pages": 8
+     },
+     "violin_2": {
+      "id": "39781",
+      "desc": "Violin 2",
+      "pages": 6
+     },
+     "viola": {
+      "id": "39782",
+      "desc": "Viola",
+      "pages": 6
+     },
+     "cello": {
+      "id": "39783",
+      "desc": "Cello",
+      "pages": 6
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "mozart-k155-134a-breitkopf1881-score-parts",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.2 in D major K.155/134a",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.2_in_D_major,_K.155/134a_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "01782",
+    "181174",
+    "181175",
+    "181176",
+    "181177"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "01782",
+    "desc": "Complete Score",
+    "pages": 7,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.1, No.2 (pp.2-8 (8-14)) Leipzig: Breitkopf & Härtel , 1881. Plate W.A.M. 155.",
+    "rights": "pd",
+    "page": "String_Quartet_No.2_in_D_major,_K.155/134a_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.1, No.1 Leipzig: Breitkopf & Härtel , 1881. Plate W.A.M. 155.",
+    "rights": "pd",
+    "page": "String_Quartet_No.2_in_D_major,_K.155/134a_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "181174",
+      "desc": "Violin 1",
+      "pages": 10
+     },
+     "violin_2": {
+      "id": "181175",
+      "desc": "Violin 2",
+      "pages": 8
+     },
+     "viola": {
+      "id": "181176",
+      "desc": "Viola",
+      "pages": 8
+     },
+     "cello": {
+      "id": "181177",
+      "desc": "Cello",
+      "pages": 6
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 5,
+    "part_sets": 4
+   }
+  },
+  {
+   "id": "mozart-k156-134b-breitkopf1881-score-parts",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.3 in G major K.156/134b",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.3_in_G_major,_K.156/134b_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "01783",
+    "44599",
+    "44600",
+    "44601",
+    "44602"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "01783",
+    "desc": "Complete Score",
+    "pages": 7,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.1, No.3 (pp.1-7 (15-20)) Leipzig: Breitkopf & Härtel , 1881. Plate W.A.M. 156.",
+    "rights": "pd",
+    "page": "String_Quartet_No.3_in_G_major,_K.156/134b_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.1, No.3 Leipzig: Breitkopf & Härtel , 1882. Plate W.A.M. 156.",
+    "rights": "pd",
+    "page": "String_Quartet_No.3_in_G_major,_K.156/134b_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "44599",
+      "desc": "Violin 1",
+      "pages": 6
+     },
+     "violin_2": {
+      "id": "44600",
+      "desc": "Violin 2",
+      "pages": 3
+     },
+     "viola": {
+      "id": "44601",
+      "desc": "Viola",
+      "pages": 3
+     },
+     "cello": {
+      "id": "44602",
+      "desc": "Cello",
+      "pages": 3
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 3
+   }
+  },
+  {
+   "id": "mozart-k157-breitkopf-peters",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.4 in C major K.157",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.4_in_C_major,_K.157_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "01818",
+    "01819",
+    "01820",
+    "01821",
+    "64122"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "64122",
+    "desc": "Complete Score",
+    "pages": 8,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.1, No.4 (pp.1-8 (21-28)) Leipzig: Breitkopf & Härtel , 1881. Plate W.A.M. 157.",
+    "rights": "pd",
+    "page": "String_Quartet_No.4_in_C_major,_K.157_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette Band 2, No.13. Leipzig: C.F. Peters , No. 16, n.d.(ca.1890). Plate 8285.",
+    "rights": "pd",
+    "page": "String_Quartet_No.4_in_C_major,_K.157_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01818",
+      "desc": "Violin 1",
+      "pages": 4
+     },
+     "violin_2": {
+      "id": "01819",
+      "desc": "Violin 2",
+      "pages": 4
+     },
+     "viola": {
+      "id": "01820",
+      "desc": "Viola",
+      "pages": 4
+     },
+     "cello": {
+      "id": "01821",
+      "desc": "Cello",
+      "pages": 4
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 5,
+    "part_sets": 3
+   }
+  },
+  {
+   "id": "mozart-k158-breitkopf-peters",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.5 in F major K.158",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.5_in_F_major,_K.158_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "01822",
+    "01823",
+    "01824",
+    "01825",
+    "64125"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "64125",
+    "desc": "Complete Score",
+    "pages": 7,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.1, No.5 (pp.1-7 (29-35)) Leipzig: Breitkopf & Härtel , 1881. Plate W.A.M. 158.",
+    "rights": "pd",
+    "page": "String_Quartet_No.5_in_F_major,_K.158_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette Band 2, No.14 Leipzig: C.F. Peters , No. 16, n.d.(ca.1890). Plate 8285.",
+    "rights": "pd",
+    "page": "String_Quartet_No.5_in_F_major,_K.158_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01822",
+      "desc": "Violin 1",
+      "pages": 4
+     },
+     "violin_2": {
+      "id": "01823",
+      "desc": "Violin 2",
+      "pages": 3
+     },
+     "viola": {
+      "id": "01824",
+      "desc": "Viola",
+      "pages": 3
+     },
+     "cello": {
+      "id": "01825",
+      "desc": "Cello",
+      "pages": 3
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 5,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "mozart-k159-breitkopf-peters",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.6 in B-flat major K.159",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.6_in_B-flat_major,_K.159_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "01826",
+    "01827",
+    "01828",
+    "01829",
+    "64126"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "64126",
+    "desc": "Complete Score",
+    "pages": 9,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.1, No.6 (pp.2-10 (36-44)) Leipzig: Breitkopf & Härtel , 1881. Plate W.A.M. 159.",
+    "rights": "pd",
+    "page": "String_Quartet_No.6_in_B-flat_major,_K.159_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette Band 2, No.15 . Leipzig: C.F. Peters , No. 16, n.d.(ca.1890). Plate 8285.",
+    "rights": "pd",
+    "page": "String_Quartet_No.6_in_B-flat_major,_K.159_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01826",
+      "desc": "Violin 1",
+      "pages": 6
+     },
+     "violin_2": {
+      "id": "01827",
+      "desc": "Violin 2",
+      "pages": 6
+     },
+     "viola": {
+      "id": "01828",
+      "desc": "Viola",
+      "pages": 5
+     },
+     "cello": {
+      "id": "01829",
+      "desc": "Cello",
+      "pages": 4
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "mozart-string-quartet-no7-k160159a-breitkopf-1881",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.7 in E-flat major K.160/159a",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.7,_K.160_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "64127"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "64127",
+    "desc": "Complete Score",
+    "pages": 7,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.1, No.7 (pp.1-7 (45-51)) Leipzig: Breitkopf & Härtel , 1881. Plate W.A.M. 160.",
+    "rights": "pd",
+    "page": "String_Quartet_No.7,_K.160_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette Band 2, No.16 Leipzig: C.F. Peters , No. 16, n.d.(ca.1890). Plate 8285.",
+    "rights": "pd",
+    "page": "String_Quartet_No.7,_K.160_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01830",
+      "desc": "Violin 1",
+      "pages": 4
+     },
+     "violin_2": {
+      "id": "01831",
+      "desc": "Violin 2",
+      "pages": 4
+     },
+     "viola": {
+      "id": "01832",
+      "desc": "Viola",
+      "pages": 3
+     },
+     "cello": {
+      "id": "01833",
+      "desc": "Cello",
+      "pages": 2
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "mozart-string-quartet-no8-k168-breitkopf-1881",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.8 in F major K.168",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.8_in_F_major,_K.168_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "64129"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "64129",
+    "desc": "Complete Score",
+    "pages": 8,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.1, No.8 (pp.2-9 (52-59)) Leipzig: Breitkopf & Härtel , 1881. Plate W.A.M. 168.",
+    "rights": "pd",
+    "page": "String_Quartet_No.8_in_F_major,_K.168_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette Band 2, No.17 Leipzig: C.F. Peters , No. 16, n.d.(ca.1890). Plate 8285.",
+    "rights": "pd",
+    "page": "String_Quartet_No.8_in_F_major,_K.168_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01834",
+      "desc": "Violin 1",
+      "pages": 4
+     },
+     "violin_2": {
+      "id": "01835",
+      "desc": "Violin 2",
+      "pages": 4
+     },
+     "viola": {
+      "id": "01836",
+      "desc": "Viola",
+      "pages": 3
+     },
+     "cello": {
+      "id": "01837",
+      "desc": "Cello",
+      "pages": 3
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 3,
+    "part_sets": 3
+   }
+  },
+  {
+   "id": "mozart-string-quartet-no9-k169-breitkopf-1881",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.9 in A major K.169",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.9_in_A_major,_K.169_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "387510"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "387510",
+    "desc": "Complete Score",
+    "pages": 26,
+    "publisher": "Holograph manuscript, 1773., dated August.",
+    "rights": "pd",
+    "page": "String_Quartet_No.9_in_A_major,_K.169_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette Band 2, No.18 Leipzig: C.F. Peters , No. 16, n.d.(ca.1890). Plate 8285.",
+    "rights": "pd",
+    "page": "String_Quartet_No.9_in_A_major,_K.169_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01838",
+      "desc": "Violin 1",
+      "pages": 4
+     },
+     "violin_2": {
+      "id": "01839",
+      "desc": "Violin 2",
+      "pages": 3
+     },
+     "viola": {
+      "id": "01840",
+      "desc": "Viola",
+      "pages": 3
+     },
+     "cello": {
+      "id": "01841",
+      "desc": "Cello",
+      "pages": 3
+     }
+    }
+   },
+   "same_edition": false,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 3
+   }
+  },
+  {
+   "id": "mozart-string-quartet-no10-k170-breitkopf-1882",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.10 in C major K.170",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.10,_K.170_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "64132"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "64132",
+    "desc": "Complete Score",
+    "pages": 8,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.2, No.10 (pp.1-8 (69-76)) Leipzig: Breitkopf & Härtel , 1882. Plate W.A.M. 170.",
+    "rights": "pd",
+    "page": "String_Quartet_No.10,_K.170_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette Band 2, No.19 . Leipzig: C.F. Peters , No. 16, n.d.(ca.1890). Plate 8285.",
+    "rights": "pd",
+    "page": "String_Quartet_No.10,_K.170_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01842",
+      "desc": "Violin 1",
+      "pages": 4
+     },
+     "violin_2": {
+      "id": "01843",
+      "desc": "Violin 2",
+      "pages": 3
+     },
+     "viola": {
+      "id": "01844",
+      "desc": "Viola",
+      "pages": 4
+     },
+     "cello": {
+      "id": "01845",
+      "desc": "Cello",
+      "pages": 4
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 3,
+    "part_sets": 3
+   }
+  },
+  {
+   "id": "mozart-string-quartet-no11-k171-breitkopf-1882",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.11 in E-flat major K.171",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.11_in_E-flat_major,_K.171_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "01791",
+    "desc": "Complete Score",
+    "pages": 9,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.2, No.11 (pp.1-9 (77-85)) Leipzig: Breitkopf & Härtel , 1882. Plate W.A.M. 171.",
+    "rights": "pd",
+    "page": "String_Quartet_No.11_in_E-flat_major,_K.171_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette Band 2, No.20 . Leipzig: C.F. Peters , No. 16, n.d.(ca.1890). Plate 8285.",
+    "rights": "pd",
+    "page": "String_Quartet_No.11_in_E-flat_major,_K.171_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01846",
+      "desc": "Violin 1",
+      "pages": 4
+     },
+     "violin_2": {
+      "id": "01847",
+      "desc": "Violin 2",
+      "pages": 4
+     },
+     "viola": {
+      "id": "01848",
+      "desc": "Viola",
+      "pages": 3
+     },
+     "cello": {
+      "id": "01849",
+      "desc": "Cello",
+      "pages": 3
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 3
+   }
+  },
+  {
+   "id": "mozart-string-quartet-no12-k172-breitkopf-1882",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.12 in B-flat major K.172",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.12,_K.172_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "64134"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "64134",
+    "desc": "Complete Score",
+    "pages": 10,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.2, No.12 (pp.2-11 (86-95)) Leipzig: Breitkopf & Härtel , 1882. Plate W.A.M. 172.",
+    "rights": "pd",
+    "page": "String_Quartet_No.12,_K.172_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette Band 2, No.21 . Leipzig: C.F. Peters , No. 16, n.d.(ca.1890). Plate 8285.",
+    "rights": "pd",
+    "page": "String_Quartet_No.12,_K.172_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01850",
+      "desc": "Violin 1",
+      "pages": 4
+     },
+     "violin_2": {
+      "id": "01851",
+      "desc": "Violin 2",
+      "pages": 6
+     },
+     "viola": {
+      "id": "01852",
+      "desc": "Viola",
+      "pages": 4
+     },
+     "cello": {
+      "id": "01853",
+      "desc": "Cello",
+      "pages": 4
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 3
+   }
+  },
+  {
+   "id": "mozart-string-quartet-no13-k173-breitkopf-1882",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.13 in D minor K.173",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.13_in_D_minor,_K.173_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "64135"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "64135",
+    "desc": "Complete Score",
+    "pages": 10,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.2, No.13 (pp.2-11 (96-105)) Leipzig: Breitkopf & Härtel , 1882. Plate W.A.M. 173.",
+    "rights": "pd",
+    "page": "String_Quartet_No.13_in_D_minor,_K.173_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette Band 2, No.22 . Leipzig: C.F. Peters , No. 16, n.d.(ca.1890). Plate 8285.",
+    "rights": "pd",
+    "page": "String_Quartet_No.13_in_D_minor,_K.173_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01854",
+      "desc": "Violin 1",
+      "pages": 6
+     },
+     "violin_2": {
+      "id": "01855",
+      "desc": "Violin 2",
+      "pages": 6
+     },
+     "viola": {
+      "id": "01856",
+      "desc": "Viola",
+      "pages": 6
+     },
+     "cello": {
+      "id": "01857",
+      "desc": "Cello",
+      "pages": 5
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 3
+   }
+  },
+  {
+   "id": "mozart-string-quartet-no14-k387-breitkopf-1882",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.14 in G major K.387",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.14_K.387_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "64136"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "64136",
+    "desc": "Complete Score",
+    "pages": 18,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.2, No.14 (pp.2-19 (106-123)) Leipzig: Breitkopf & Härtel , 1882. Plate W.A.M. 387.",
+    "rights": "pd",
+    "page": "String_Quartet_No.14_K.387_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette, Band I, No.1 Leipzig: C.F. Peters , No. 16, n.d.(ca.1882). Plate 6686.",
+    "rights": "pd",
+    "page": "String_Quartet_No.14_K.387_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01858",
+      "desc": "Violin 1",
+      "pages": 9
+     },
+     "violin_2": {
+      "id": "01859",
+      "desc": "Violin 2",
+      "pages": 6
+     },
+     "viola": {
+      "id": "01860",
+      "desc": "Viola",
+      "pages": 6
+     },
+     "cello": {
+      "id": "01861",
+      "desc": "Cello",
+      "pages": 6
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 5,
+    "part_sets": 3
+   }
+  },
+  {
+   "id": "mozart-string-quartet-no15-k421-breitkopf-1882",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.15 in D minor K.421/417b",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.15,_K.421_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "64137"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "64137",
+    "desc": "Complete Score",
+    "pages": 13,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.2, No.15 (pp.2-14 (124-136)) Leipzig: Breitkopf & Härtel , 1882. Plate W.A.M. 421.",
+    "rights": "pd",
+    "page": "String_Quartet_No.15,_K.421_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette Band 1, No.2 Leipzig: C.F. Peters , No. 16, n.d.(ca.1882). Plate 6686.",
+    "rights": "pd",
+    "page": "String_Quartet_No.15,_K.421_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01862",
+      "desc": "Violin 1",
+      "pages": 6
+     },
+     "violin_2": {
+      "id": "01863",
+      "desc": "Violin 2",
+      "pages": 6
+     },
+     "viola": {
+      "id": "01864",
+      "desc": "Viola",
+      "pages": 6
+     },
+     "cello": {
+      "id": "01865",
+      "desc": "Cello",
+      "pages": 4
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 6,
+    "part_sets": 5
+   }
+  },
+  {
+   "id": "mozart-string-quartet-no16-k428-breitkopf-1882",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.16 in E-flat major K.428/421b",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.16,_K.428_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "64138"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "64138",
+    "desc": "Complete Score",
+    "pages": 15,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.2, No.16 (pp.1-15 (137-151)) Leipzig: Breitkopf & Härtel , 1882. Plate W.A.M. 428.",
+    "rights": "pd",
+    "page": "String_Quartet_No.16,_K.428_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette Band 1, No.3 Leipzig: C.F. Peters , No. 16, n.d.(ca.1882). Plate 6686.",
+    "rights": "pd",
+    "page": "String_Quartet_No.16,_K.428_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01866",
+      "desc": "Violin 1",
+      "pages": 7
+     },
+     "violin_2": {
+      "id": "01867",
+      "desc": "Violin 2",
+      "pages": 7
+     },
+     "viola": {
+      "id": "01868",
+      "desc": "Viola",
+      "pages": 6
+     },
+     "cello": {
+      "id": "01869",
+      "desc": "Cello",
+      "pages": 6
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 3
+   }
+  },
+  {
+   "id": "mozart-string-quartet-no17-k458-breitkopf-1882",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.17 in B-flat major K.458",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.17,_K.458_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "64140"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "64140",
+    "desc": "Complete Score",
+    "pages": 16,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.2, No.17 (pp.2-17 (152-164)) Leipzig: Breitkopf & Härtel , 1882. Plate W.A.M. 458.",
+    "rights": "pd",
+    "page": "String_Quartet_No.17,_K.458_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette Band 1, No.4 Leipzig: C.F. Peters , No. 16, n.d.(ca.1882). Plate 6686.",
+    "rights": "pd",
+    "page": "String_Quartet_No.17,_K.458_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01870",
+      "desc": "Violin 1",
+      "pages": 8
+     },
+     "violin_2": {
+      "id": "01871",
+      "desc": "Violin 2",
+      "pages": 7
+     },
+     "viola": {
+      "id": "01872",
+      "desc": "Viola",
+      "pages": 6
+     },
+     "cello": {
+      "id": "01873",
+      "desc": "Cello",
+      "pages": 6
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 7,
+    "part_sets": 4
+   }
+  },
+  {
+   "id": "mozart-string-quartet-no18-k464-breitkopf-1882",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.18 in A major K.464",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.18,_K.464_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "64141"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "64141",
+    "desc": "Complete Score",
+    "pages": 18,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.2, No.18 (pp.2-19 (168-185)) Leipzig: Breitkopf & Härtel , 1882. Plate W.A.M. 464.",
+    "rights": "pd",
+    "page": "String_Quartet_No.18,_K.464_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette Band 1, No.5 Leipzig: C.F. Peters , No. 16, n.d.(ca.1882). Plate 6686.",
+    "rights": "pd",
+    "page": "String_Quartet_No.18,_K.464_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01874",
+      "desc": "Violin 1",
+      "pages": 9
+     },
+     "violin_2": {
+      "id": "01875",
+      "desc": "Violin 2",
+      "pages": 8
+     },
+     "viola": {
+      "id": "01876",
+      "desc": "Viola",
+      "pages": 8
+     },
+     "cello": {
+      "id": "01877",
+      "desc": "Cello",
+      "pages": 8
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 5,
+    "part_sets": 3
+   }
+  },
+  {
+   "id": "mozart-string-quartet-no19-k465-breitkopf-1882",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.19 in C major (Dissonance) K.465",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.19_K.465_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "482556"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "01799",
+    "desc": "Complete Score",
+    "pages": 20,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.2, No.19 (pp.2-21 (186-205)) Leipzig: Breitkopf & Härtel , 1882. Plate W.A.M. 465.",
+    "rights": "pd",
+    "page": "String_Quartet_No.19_K.465_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette, Band 1, No.6 Leipzig: C.F. Peters , No. 16, n.d.(ca.1882). Plate 6686.",
+    "rights": "pd",
+    "page": "String_Quartet_No.19_K.465_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01878",
+      "desc": "Violin 1",
+      "pages": 8
+     },
+     "violin_2": {
+      "id": "01879",
+      "desc": "Violin 2",
+      "pages": 8
+     },
+     "viola": {
+      "id": "01880",
+      "desc": "Viola",
+      "pages": 7
+     },
+     "cello": {
+      "id": "01881",
+      "desc": "Cello",
+      "pages": 7
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 5,
+    "part_sets": 3
+   }
+  },
+  {
+   "id": "mozart-string-quartet-no20-k499-breitkopf-1882",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.20 in D major (Hoffmeister) K.499",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.20_K.499_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "64144"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "64144",
+    "desc": "Complete Score",
+    "pages": 20,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.2, No.20 (pp.2-21 (206-225)) Leipzig: Breitkopf & Härtel , 1882. Plate W.A.M. 499.",
+    "rights": "pd",
+    "page": "String_Quartet_No.20_K.499_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Leipzig: Breitkopf & Härtel , 1882. Plate W.A.M. 499.",
+    "rights": "pd",
+    "page": "String_Quartet_No.20_K.499_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "422970",
+      "desc": "Violin 1",
+      "pages": 12
+     },
+     "violin_2": {
+      "id": "422971",
+      "desc": "Violin 2",
+      "pages": 8
+     },
+     "viola": {
+      "id": "422972",
+      "desc": "Viola",
+      "pages": 7
+     },
+     "cello": {
+      "id": "422973",
+      "desc": "Cello",
+      "pages": 7
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 4
+   }
+  },
+  {
+   "id": "mozart-string-quartet-no21-k575-breitkopf-1882",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.21 in D major (First Prussian) K.575",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.21_K.575_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "64145"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "64145",
+    "desc": "Complete Score",
+    "pages": 16,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.2, No.21 (pp.2-17 (226-241)) Leipzig: Breitkopf & Härtel , 1882. Plate W.A.M. 575.",
+    "rights": "pd",
+    "page": "String_Quartet_No.21_K.575_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette Band 1, No.8 Leipzig: C.F. Peters , No. 16, n.d.(ca.1882). Plate 6686.",
+    "rights": "pd",
+    "page": "String_Quartet_No.21_K.575_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01886",
+      "desc": "Violin 1",
+      "pages": 6
+     },
+     "violin_2": {
+      "id": "01887",
+      "desc": "Violin 2",
+      "pages": 6
+     },
+     "viola": {
+      "id": "01888",
+      "desc": "Viola",
+      "pages": 6
+     },
+     "cello": {
+      "id": "01889",
+      "desc": "Cello",
+      "pages": 6
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "mozart-string-quartet-no22-k589-breitkopf-1882",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.22 in B-flat major (Prussian No.2) K.589",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.22_K.589_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "64148"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "64148",
+    "desc": "Complete Score",
+    "pages": 16,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.2, No.22 (pp.2-17 (242-257)) Leipzig: Breitkopf & Härtel , 1882. Plate W.A.M. 589.",
+    "rights": "pd",
+    "page": "String_Quartet_No.22_K.589_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette Band 1, No.9 Leipzig: C.F. Peters , No. 16, n.d.(ca.1882). Plate 6686.",
+    "rights": "pd",
+    "page": "String_Quartet_No.22_K.589_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01890",
+      "desc": "Violin 1",
+      "pages": 6
+     },
+     "violin_2": {
+      "id": "01891",
+      "desc": "Violin 2",
+      "pages": 6
+     },
+     "viola": {
+      "id": "01892",
+      "desc": "Viola",
+      "pages": 6
+     },
+     "cello": {
+      "id": "01893",
+      "desc": "Cello",
+      "pages": 6
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 2
+   }
+  },
+  {
+   "id": "mozart-string-quartet-no23-k590-breitkopf-1882",
+   "composer": "Wolfgang Amadeus Mozart",
+   "title": "String Quartet No.23 in F major (Prussian No.3) K.590",
+   "category": "string_quartet",
+   "queue_status": "research_needed",
+   "pages": [
+    "String_Quartet_No.23_K.590_(Mozart,_Wolfgang_Amadeus)"
+   ],
+   "status": "complete_set",
+   "need": [
+    "violin_1",
+    "violin_2",
+    "viola",
+    "cello"
+   ],
+   "gpt_ids": [
+    "64149"
+   ],
+   "gpt_ids_missing_on_page": [],
+   "score": {
+    "id": "64149",
+    "desc": "Complete Score",
+    "pages": 20,
+    "publisher": "Mozarts Werke , Serie XIV: Quartette für Streichinstrumente, Bd.2, No.23 (pp.2-21 (258-277)) Leipzig: Breitkopf & Härtel , 1882. Plate W.A.M. 590.",
+    "rights": "pd",
+    "page": "String_Quartet_No.23_K.590_(Mozart,_Wolfgang_Amadeus)"
+   },
+   "parts": {
+    "publisher": "Quartette Band 1, No.10 Leipzig: C.F. Peters , No. 16, n.d.(ca.1882). Plate 6686.",
+    "rights": "pd",
+    "page": "String_Quartet_No.23_K.590_(Mozart,_Wolfgang_Amadeus)",
+    "files": {
+     "violin_1": {
+      "id": "01894",
+      "desc": "Violin 1",
+      "pages": 8
+     },
+     "violin_2": {
+      "id": "01895",
+      "desc": "Violin 2",
+      "pages": 7
+     },
+     "viola": {
+      "id": "01896",
+      "desc": "Viola",
+      "pages": 7
+     },
+     "cello": {
+      "id": "01897",
+      "desc": "Cello",
+      "pages": 6
+     }
+    }
+   },
+   "same_edition": true,
+   "alternatives": {
+    "scores": 4,
+    "part_sets": 2
+   }
+  }
+ ]
+}
