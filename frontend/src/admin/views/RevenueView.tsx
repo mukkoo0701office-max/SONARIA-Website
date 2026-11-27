@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { useAdmin, useAdminData } from "../AdminContext";
 import { changeRatio, lastDays, lastMonths, revenueByPeriod, summarizeRevenue, trafficByDay, ym } from "../aggregate";
@@ -7,7 +8,7 @@ import { BarChart, DonutChart, LineChart } from "../charts";
 import { fmtDate, fmtMoney, fmtMonth, fmtPercent, fmtShortDate } from "../i18n";
 import { chartPrimary, chartSecondary, revenueColor } from "../theme";
 import type { RevenueCategory, RevenueEntry } from "../types";
-import { Badge, buttonSecondary, Card, inputClass, LoadState, NotConnected, PageTitle, Segmented, StatTile, Table } from "../ui";
+import { adminRoutes, Badge, buttonSecondary, Card, inputClass, LoadState, NotConnected, PageTitle, Segmented, StatTile, Table } from "../ui";
 
 const categories: RevenueCategory[] = ["adsense", "amazon", "recording", "performance", "lesson", "donation", "digital", "other"];
 
@@ -69,6 +70,9 @@ export default function RevenueView() {
         lead={t.revenue.importNote}
         actions={
           <>
+            <Link href={adminRoutes.ads} className={buttonSecondary}>
+              {t.ads.tabs.analysis}
+            </Link>
             <button type="button" disabled className={buttonSecondary} title={t.common.notConnected}>
               {t.revenue.addManual}
             </button>

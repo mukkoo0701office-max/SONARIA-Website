@@ -4,6 +4,9 @@
 // 注: 本番のデータを静的な HTML／JavaScript に埋め込んではいけない（docs/admin/ADMIN_SYSTEM_DESIGN.md）
 
 import type {
+  AdReport,
+  AdSettings,
+  SiteDailyMetric,
   AnalyticsMetric,
   AuditLog,
   CalendarEvent,
@@ -67,6 +70,12 @@ export interface AdminRepository {
   revokeGrant(id: string): Promise<void>;
 
   listAuditLog(): Promise<AuditLog[]>;
+
+  // 広告（AdSense の指標は AdSense Management API、PV・ダウンロードはサイト内の計測から。どちらも未接続）
+  getAdReport(fromISO: string, toISO: string): Promise<AdReport>;
+  siteDaily(fromISO: string, toISO: string): Promise<SiteDailyMetric[]>;
+  getAdSettings(): Promise<AdSettings>;
+  saveAdSettings(settings: AdSettings): Promise<AdSettings>;
 }
 
 export const caseStatuses: readonly CaseStatus[] = ["new", "scheduling", "quoted", "booked", "in_progress", "delivered", "completed", "cancelled"];

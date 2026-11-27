@@ -453,6 +453,18 @@ export const ja: Dictionary = {
       ],
     },
   },
+  profileChannels: {
+    heading: "執筆・発信活動",
+    lead: "音楽や演奏、指導についての文章と、活動のお知らせを発信しています。",
+    channels: {
+      note: { name: "note", description: "演奏・指導・音楽制作についての記事やコラムを掲載しています。", cta: "note で記事を読む" },
+      x: { name: "X", description: "演奏活動や出演情報、お知らせを投稿しています。", cta: "X を見る" },
+    },
+    newTab: "新しいタブで開きます",
+    contactHeading: "お問い合わせ",
+    contactBody: "演奏・レッスン・レコーディングのご依頼や、SONARIA へのご意見は、お問い合わせページからお送りください。",
+    contactCta: "お問い合わせページへ",
+  },
   contentCta: {
     contact: "お問い合わせ",
     profile: "管理人について",
@@ -897,6 +909,7 @@ export const ja: Dictionary = {
       amazonDisclosure: "Amazonのアソシエイトとして、SONARIAは適格販売により収入を得ています。",
     },
     // 関数を含むため、ad（クライアント部品にも渡す共通の広告文言）とは分ける
+    adsense: { label: "広告", previewNote: "Google AdSense の広告枠（未接続）。プレビューのときだけ位置を表示しています。本番では、接続するまで何も表示しません。" },
     amazonSearch: {
       heading: "Amazonで関連楽譜を探す",
       lead: "市販の原典版・パート譜・ポケットスコア・解説書をAmazonで検索します。",

@@ -80,6 +80,14 @@ export const socialLinks: readonly { key: SocialKey; label: string; url: string 
   { key: "youtube", label: "YouTube", url: null },
 ];
 
+// 管理人の執筆・発信の場（管理人プロフィールのページだけで使う。CLAUDE.md: 個人を前面に出すのはプロフィールのみ）
+// 運営者の指示（2026-11-27）。X の URL は共有用の「?s=11」を除いた正規の形にしている
+export const curatorChannels = [
+  { key: "note", url: "https://note.com/2108113" },
+  { key: "x", url: "https://x.com/2108113" },
+] as const;
+export type CuratorChannelKey = (typeof curatorChannels)[number]["key"];
+
 // 外部サイト
 export const externalLinks = {
   // 向山弦楽コミュニティの既存サイト（docs/SONARIA_PROJECT_VISION.md §5）

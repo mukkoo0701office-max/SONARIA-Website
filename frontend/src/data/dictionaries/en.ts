@@ -427,6 +427,18 @@ export const en: Dictionary = {
       ],
     },
   },
+  profileChannels: {
+    heading: "Writing & Social Media",
+    lead: "Articles on music, performance and teaching, plus news about upcoming activities.",
+    channels: {
+      note: { name: "note", description: "Articles and columns on performance, teaching and music production (mostly in Japanese).", cta: "Read on note" },
+      x: { name: "X", description: "Updates on performances, appearances and announcements.", cta: "View on X" },
+    },
+    newTab: "Opens in a new tab",
+    contactHeading: "Contact",
+    contactBody: "For performance, lesson or recording requests, or feedback about SONARIA, please use the contact page.",
+    contactCta: "Go to the contact page",
+  },
   contentCta: {
     contact: "Contact",
     profile: "About the curator",
@@ -869,6 +881,7 @@ export const en: Dictionary = {
       amazonDisclosure: "As an Amazon Associate, SONARIA earns from qualifying purchases.",
     },
     // 関数を含むため、ad（クライアント部品にも渡す共通の広告文言）とは分ける
+    adsense: { label: "Advertisement", previewNote: "Google AdSense slot (not connected). Shown only in preview builds; nothing is displayed in production until it is connected." },
     amazonSearch: {
       heading: "Find related scores on Amazon",
       lead: "Search Amazon for printed urtext editions, parts, study scores and books.",

@@ -12,10 +12,11 @@ type Props = {
   image?: ImageKey;
   children?: React.ReactNode; // ページ下部のボタン・リンク
   portrait?: { image: SiteImage; alt: string }; // 本文の最初に添える人物写真（管理人プロフィールだけ）
+  after?: React.ReactNode; // 本文のセクションの後に続ける追加のセクション（ボタンより前）
 };
 
 // サービス・紹介ページの共通レイアウト（見出しごとの段落・箇条書き）
-export default function ContentPage({ locale, copy, image, children, portrait }: Props) {
+export default function ContentPage({ locale, copy, image, children, portrait, after }: Props) {
   const dict = getDictionary(locale);
   const img = image ? siteImages[image] : null;
 
@@ -76,6 +77,8 @@ export default function ContentPage({ locale, copy, image, children, portrait }:
           ))}
 
           {copy.footnote && <p className="mt-8 rounded-button bg-paper p-4 text-[13px] leading-relaxed text-muted">{copy.footnote}</p>}
+
+          {after && <div className="clear-both">{after}</div>}
 
           {children && <div className="mt-8 flex flex-wrap gap-3">{children}</div>}
 

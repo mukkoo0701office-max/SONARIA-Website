@@ -10,7 +10,7 @@ const check = (name, ok, detail = "") => log.push(`${ok ? "OK  " : "FAIL"} ${nam
 
 const browser = await chromium.launch();
 const viewports = { desktop: { width: 1440, height: 900 }, mobile: { width: 390, height: 844 } };
-const sections = ["dashboard", "inquiries", "calendar", "teachers", "revenue", "analytics", "pdf", "notifications"];
+const sections = ["dashboard", "inquiries", "calendar", "teachers", "revenue", "ads", "analytics", "pdf", "notifications"];
 
 async function shot(page, name, fullPage = true) {
   await page.waitForTimeout(400);
@@ -95,6 +95,16 @@ for (const [vp, viewport] of Object.entries(viewports)) {
   await page.locator('button[aria-pressed]', { hasText: "年別" }).click();
   await page.locator("section:has(#r-trend)").locator('button[aria-pressed]', { hasText: "表で見る" }).first().click();
   check(`${vp}: revenue table view`, (await page.locator("section:has(#r-trend) table").count()) > 0);
+
+  // 広告: 出どころ（AdSense API／サイト内の計測）の区別と、広告管理のタブ
+  await page.goto(`${base}/admin/ads/`, { waitUntil: "networkidle" });
+  await page.locator("h1", { hasText: "広告" }).waitFor();
+  check(`${vp}: ads metrics show their origin`, (await page.locator("text=AdSense API").count()) > 0 && (await page.locator("text=サイト内の計測").count()) > 0);
+  await page.locator('button[aria-pressed]', { hasText: "広告管理" }).click();
+  await page.locator("#ads-google").waitFor();
+  check(`${vp}: ad settings separate Google-managed items`, (await page.locator("#ads-site").count()) === 1 && (await page.locator("text=全画面（ビネット）広告").count()) === 1);
+  await noOverflow(page, `${vp} ads settings`);
+  await shot(page, `${vp}-ads-settings`);
 
   // 英語に切り替え
   await page.goto(`${base}/admin/dashboard/`, { waitUntil: "networkidle" });

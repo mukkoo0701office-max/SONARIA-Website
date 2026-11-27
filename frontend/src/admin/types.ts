@@ -271,3 +271,39 @@ export type CalendarEvent = {
   inquiryId?: string;
   done: boolean;
 };
+
+// ── 広告（AdSense）──────────────────────────────────────
+// 指標の出どころを区別する: adsense_api = AdSense Management API から取得（推定収益・表示回数・ページ RPM など）
+//                          site = サイト内の計測から算出（PV・PDF ダウンロード数・ダウンロード率）
+export type MetricOrigin = "adsense_api" | "site";
+
+export type AdDailyMetric = {
+  date: ISODate;
+  estimatedEarnings: number; // AdSense の推定収益（確定前。月末に調整される）
+  impressions: number; // 広告表示回数
+  adsensePageviews: number; // AdSense が数えたページビュー（ページ RPM の分母）
+  source: DataSource;
+};
+
+export type AdBreakdownRow = { key: string; label: string; estimatedEarnings: number; impressions: number; adsensePageviews: number };
+
+export type AdReport = {
+  launchDate: ISODate | null; // 広告を出し始めた日（導入前後の比較の基準）
+  daily: AdDailyMetric[];
+  byUnit: AdBreakdownRow[]; // 広告ユニット別
+  byPage: AdBreakdownRow[]; // ページ別（AdSense の URL チャネル／ページ別レポート）
+};
+
+export type SiteDailyMetric = { date: ISODate; pageviews: number; pdfDownloads: number; workPageviews: number; source: DataSource };
+
+export type AdSettings = {
+  // SONARIA 側で管理する設定（data/ads.ts に反映する）
+  adsenseEnabled: boolean;
+  publisherId: string; // ca-pub-…
+  pages: { work: boolean; composer: boolean; category: boolean };
+  units: { id: string; page: "work"; placement: "after-downloads"; slot: string; enabled: boolean }[];
+  amazonEnabled: boolean;
+  // Google 側（AdSense の管理画面）で管理する設定の控え。サイトからは変更できない
+  googleManaged: { autoAds: boolean; vignette: boolean; anchor: boolean; cmpConfigured: boolean; adsTxt: "missing" | "ok" };
+  updatedAt: ISODateTime;
+};

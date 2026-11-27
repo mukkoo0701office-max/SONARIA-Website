@@ -99,5 +99,28 @@ export function createDemoRepository(today: Date = new Date()): AdminRepository 
     },
 
     listAuditLog: () => wait(db.auditLog),
+
+    async getAdReport(fromISO, toISO) {
+      const daily = db.adDaily.filter((d) => d.date >= fromISO && d.date <= toISO);
+      const sum = (f: (d: (typeof daily)[number]) => number) => daily.reduce((a, d) => a + f(d), 0);
+      const total = { e: sum((d) => d.estimatedEarnings), i: sum((d) => d.impressions), p: sum((d) => d.adsensePageviews) };
+      // ページ別は作品ページの PV の比率で按分（デモ用の作り方）
+      const weights = [0.42, 0.33, 0.25];
+      const byPage = db.adPages.map((path, k) => ({
+        key: path,
+        label: path,
+        estimatedEarnings: Math.round(total.e * weights[k]),
+        impressions: Math.round(total.i * weights[k]),
+        adsensePageviews: Math.round(total.p * weights[k]),
+      }));
+      return wait({ launchDate: db.adLaunchDate, daily, byUnit: [{ key: "work-after-downloads", label: "work-after-downloads", estimatedEarnings: total.e, impressions: total.i, adsensePageviews: total.p }], byPage });
+    },
+    siteDaily: (fromISO, toISO) => wait(db.siteDaily.filter((d) => d.date >= fromISO && d.date <= toISO)),
+    getAdSettings: () => wait(db.adSettings),
+    async saveAdSettings(settings) {
+      db.auditLog.unshift({ id: nextId("demo-a"), at: now(), actor: "demo-admin", action: "ads.settings_changed", detail: `adsense: ${settings.adsenseEnabled ? "on" : "off"}, amazon: ${settings.amazonEnabled ? "on" : "off"}` });
+      db.adSettings = { ...settings, updatedAt: now() };
+      return wait(db.adSettings);
+    },
   };
 }

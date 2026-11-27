@@ -211,6 +211,36 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   check(`${vpName}: Amazon slot is at the bottom (after downloads and related works)`, order);
   await page.locator(adSel).first().scrollIntoViewIfNeeded();
   await shot(page, `${vpName}-ja-work-amazon-banner`, false);
+
+  // Google AdSense（未接続のためプレビューだけ枠の位置を表示）: 1 枠、表記は「広告」、
+  // ダウンロードボタンの後ろで「この楽譜について」を挟み、Amazon 枠より前
+  const adsense = page.locator("[data-ad-slot-preview]");
+  check(`${vpName}: work page has 1 AdSense slot (preview)`, (await adsense.count()) === 1, String(await adsense.count()));
+  check(`${vpName}: AdSense slot labelled 広告`, (await adsense.first().locator("p").first().innerText()).trim() === "広告");
+  const adsenseOrder = await page.evaluate((sel) => {
+    const after = (a, b) => Boolean(a && b && a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING);
+    const slot = document.querySelector("[data-ad-slot-preview]");
+    const dls = [...document.querySelectorAll("a[download]")];
+    const faq = document.querySelector("#faq");
+    const amazon = document.querySelector(sel);
+    return dls.every((d) => after(d, slot)) && after(faq, slot) && after(slot, amazon);
+  }, adSel);
+  check(`${vpName}: AdSense slot is after downloads + FAQ and before Amazon`, adsenseOrder);
+  await adsense.first().scrollIntoViewIfNeeded();
+  await shot(page, `${vpName}-ja-work-adsense`, false);
+
+  // 管理人プロフィール: note・X のカード（新しいタブ・rel）
+  for (const lang of ["ja", "en"]) {
+    await page.goto(`${base}/${lang}/profile/`, { waitUntil: "networkidle" });
+    const cards = page.locator('section[aria-labelledby="curator-channels"] a[target="_blank"]');
+    const hrefs = await cards.evaluateAll((els) => els.map((e) => `${e.getAttribute("href")} ${e.getAttribute("rel")}`));
+    check(`${vpName}: ${lang} profile has note and X links`, hrefs.length === 2 && hrefs[0].startsWith("https://note.com/2108113") && hrefs[1].startsWith("https://x.com/2108113") && hrefs.every((h) => h.includes("noopener")), hrefs.join(" | "));
+    const profileOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    check(`${vpName}: ${lang} profile has no horizontal overflow`, profileOverflow <= 0, String(profileOverflow));
+    await page.locator("#curator-channels").scrollIntoViewIfNeeded();
+    await shot(page, `${vpName}-${lang}-profile-channels`, false);
+    await shot(page, `${vpName}-${lang}-profile`);
+  }
   check(`${vpName}: PDF download points to release asset`, Boolean(dl && dl.includes("/releases/download/scores-v1/")), String(dl));
 
   // 統合申込フォーム（Issue #13）。料金の受け入れテストと、送信先未設定時に「未接続」を表示することを確かめる

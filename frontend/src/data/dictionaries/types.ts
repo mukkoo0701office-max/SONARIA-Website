@@ -223,6 +223,16 @@ export type Dictionary = {
   placeholders: Record<"performance" | "contact" | "privacy", PlaceholderCopy>;
   // 内容のあるページ（旧サイト https://www.mukkoo0701music.jp/ の文章をもとに作成）
   contentPages: Record<"bowing" | "lessons" | "recording" | "community" | "profile", ContentCopy>;
+  // 管理人プロフィールの「執筆・発信活動」と「お問い合わせ」
+  profileChannels: {
+    heading: string;
+    lead: string;
+    channels: Record<"note" | "x", { name: string; description: string; cta: string }>;
+    newTab: string;
+    contactHeading: string;
+    contactBody: string;
+    contactCta: string;
+  };
   contentCta: {
     contact: string;
     profile: string;
@@ -569,6 +579,8 @@ export type Dictionary = {
       amazonHeading: string;
       amazonDisclosure: string;
     };
+    // Google AdSense の枠（クライアント部品に渡すため関数を含めない）
+    adsense: { label: string; previewNote: string };
     // 関数を含むため、ad（クライアント部品にも渡す共通の広告文言）とは分ける
     amazonSearch: {
       heading: string;
