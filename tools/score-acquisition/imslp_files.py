@@ -244,7 +244,12 @@ def main() -> int:
         return 0
 
     queue = json.load(open(a.queue, encoding="utf-8"))
-    cache = json.load(open(a.cache, encoding="utf-8")) if a.cache and os.path.exists(a.cache) else {}
+    cache = {}
+    if a.cache and os.path.exists(a.cache) and os.path.getsize(a.cache) > 0:
+        try:
+            cache = json.load(open(a.cache, encoding="utf-8"))
+        except ValueError:
+            cache = {}
     results = []
     for item in queue["items"]:
         titles = []
