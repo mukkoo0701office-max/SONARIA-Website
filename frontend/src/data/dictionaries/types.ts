@@ -1,3 +1,4 @@
+import type { BudgetRange, PerformanceEnsemble, ScheduleMode, TimeSlot } from "@/data/orders/performance";
 import type { ImageKey } from "@/data/images";
 import type { ServiceKey } from "@/data/services";
 import type { PageKey } from "@/data/site";
@@ -84,6 +85,13 @@ export type Dictionary = {
     detailLink: string;
     byComposer: string;
     freeNote: string;
+    kicker: string; // 「無料楽譜ライブラリ」
+    narrow: string; // 「楽器・編成・種類で絞る」
+    resultCount: (n: number, total: number) => string;
+    submitWithCount: (n: number) => string;
+    viewAll: (total: number) => string;
+    clear: string;
+    noMatch: string;
   };
   homeTeacherSearch: {
     heading: string;
@@ -120,6 +128,11 @@ export type Dictionary = {
     formationOptions: Record<Formation, string>;
     genre: string;
     genreOptions: Record<ScoreGenre, string>;
+    players: string; // 演奏人数
+    playersOptions: Record<"1" | "2" | "3" | "4" | "5", string>;
+    sheet: string; // 譜面の種類
+    sheetHelp: string;
+    sheetOptions: Record<"score" | "parts" | "both", string>;
     composer: string;
     composerAll: string;
     all: string;
@@ -223,6 +236,130 @@ export type Dictionary = {
     priceLater: string;
   };
   // 楽譜ライブラリ（作品・作曲家・カテゴリの自動生成ページ）
+  // 申込・問い合わせフォームの共通の文言（演奏依頼の見積もり・講師登録）
+  forms: {
+    required: string;
+    optional: string;
+    contactHeading: string;
+    name: string;
+    email: string;
+    consent: string;
+    privacyLink: string;
+    honeypot: string;
+    submitting: string;
+    back: string;
+    copy: string;
+    copied: string;
+    fixErrors: string;
+    errors: { name: string; email: string; consent: string };
+    result: { notConnectedTitle: string; notConnectedBody: string; errorTitle: string; errorBody: string };
+  };
+  // 演奏依頼の見積もり（PR #24 §1）
+  performanceQuote: {
+    pageTitle: string;
+    pageLead: string;
+    points: readonly string[];
+    formHeading: string;
+    schedule: {
+      heading: string;
+      modes: Record<ScheduleMode, string>;
+      date: string;
+      candidate: (n: number) => string;
+      slot: string;
+      slots: Record<TimeSlot, string>;
+      time: string;
+      timePlaceholder: string;
+      add: string;
+      remove: string;
+      period: string;
+      periodPlaceholder: string;
+    };
+    budget: { heading: string; options: Record<BudgetRange, string>; note: string };
+    ensemble: { heading: string; options: Record<PerformanceEnsemble, string>; notes: Record<PerformanceEnsemble, string>; instruments: string; instrumentsPlaceholder: string };
+    remarks: { heading: string; help: string; placeholder: string };
+    review: string;
+    submit: string;
+    note: string;
+    confirm: { heading: string; lead: string };
+    result: { sentTitle: string; sentBody: string };
+    errors: { schedule: string; dates: string; budget: string; ensemble: string };
+  };
+  // 講師登録の申請（PR #24 §2）。料金の項目は作らない（CLAUDE.md）
+  teacherRegister: {
+    cta: { heading: string; body: string; button: string };
+    pageTitle: string;
+    pageLead: string;
+    stepsHeading: string;
+    steps: readonly string[];
+    rulesHeading: string;
+    rules: readonly string[];
+    publicHeading: string;
+    publicHelp: string;
+    privateHeading: string;
+    privateHelp: string;
+    displayName: string;
+    displayNamePlaceholder: string;
+    nameKana: string;
+    nameKanaPlaceholder: string;
+    nameRomaji: string;
+    nameRomajiPlaceholder: string;
+    instruments: string;
+    instrumentsHelp: string;
+    prefecture: string;
+    prefectureSelect: string;
+    station: string;
+    stationPlaceholder: string;
+    travel: string;
+    travelOptions: Record<"none" | "30" | "60" | "90", string>;
+    formats: string;
+    audiences: string;
+    ageGroup: string;
+    ageGroupOptions: Record<"undisclosed" | "10s" | "20s" | "30s" | "40s" | "50s" | "60plus", string>;
+    gender: string;
+    genderOptions: Record<"undisclosed" | "female" | "male" | "other", string>;
+    school: string;
+    schoolPlaceholder: string;
+    enrollment: string;
+    enrollmentOptions: Record<"student" | "graduate", string>;
+    department: string;
+    departmentPlaceholder: string;
+    gradYear: string;
+    gradYearPlaceholder: string;
+    intro: string;
+    introHelp: (max: number) => string;
+    introPlaceholder: string;
+    links: string;
+    linksHelp: string;
+    linkLabel: (n: number) => string;
+    legalName: string;
+    legalNameHelp: string;
+    emailHelp: string;
+    documentsNote: string;
+    photoNote: string;
+    eligibility: string;
+    publish: string;
+    review: string;
+    submit: string;
+    note: string;
+    confirm: { heading: string; lead: string };
+    result: { sentTitle: string; sentBody: string };
+    errors: {
+      displayName: string;
+      nameKana: string;
+      nameRomaji: string;
+      instruments: string;
+      prefecture: string;
+      formats: string;
+      audiences: string;
+      school: string;
+      enrollment: string;
+      intro: string;
+      links: string;
+      legalName: string;
+      eligibility: string;
+      publish: string;
+    };
+  };
   orderForm: {
     pageTitle: string;
     pageLead: string;

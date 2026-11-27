@@ -1,5 +1,6 @@
 "use client";
 
+import TeacherRegisterCta from "@/components/teachers/TeacherRegisterCta";
 import { useEffect, useMemo, useState } from "react";
 import TeacherCard from "@/components/teachers/TeacherCard";
 import Chip from "@/components/ui/Chip";
@@ -117,6 +118,11 @@ export default function TeacherSearch({ locale }: { locale: Locale }) {
         <h1 className="mb-1.5 text-2xl font-bold">{t.headline}</h1>
         <p className="text-xs text-muted">{t.lead}</p>
       </section>
+
+      {/* 講師登録の案内は検索のすぐ近くに置く（PR #24 §2） */}
+      <div className="mb-4">
+        <TeacherRegisterCta locale={locale} compact />
+      </div>
 
       {showsDemoTeachers && (
         <p role="note" className="mb-4 rounded-button border border-dashed border-gold bg-card p-3 text-[13px] leading-relaxed">

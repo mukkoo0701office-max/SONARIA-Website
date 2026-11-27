@@ -6,12 +6,15 @@
 // TODO: 試験移行（20〜30件）のデータに置き換える。その際は Work と Edition / ScoreAsset を分け、
 //       演奏人数は版・編曲ごとに持たせる。
 
+import type { SheetType } from "@/lib/scores/sheetType";
+
 // 検索の絞り込みの軸（2026-11-27 改訂）。
 // 旧: 演奏人数・楽器編成（弦楽／ピアノ／管弦楽／混合）・楽曲形式。ヴァイオリンソナタが「混合編成」になる、
 //     小品・練習曲・変奏曲が楽曲形式で選べない、人数と編成が重複する、といった問題があったため、
 //     「自分の楽器」「編成（具体的な組み合わせ）」「種類（ジャンル）」「作曲家」「時代」に分けた。
 
 /** 編成。カタログの scoring を、利用者が探す単位にまとめたもの（並びは小さい編成から） */
+
 export type Formation =
   | "solo-string" // 無伴奏（ヴァイオリン・ヴィオラ・チェロ）
   | "piano"
@@ -57,6 +60,7 @@ export type WorkSummary = {
   slug?: string;
   hasEnglish?: boolean; // 英語の作品ページがあるか
   searchText?: string; // 別名・原語名・作品番号など、検索で一致させる追加の文字列
+  sheet?: SheetType | null; // 譜面の種類（実在するファイルから判定。デモデータには無い）
 };
 
 export const isDemoData = true;

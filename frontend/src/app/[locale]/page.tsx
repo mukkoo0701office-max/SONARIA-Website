@@ -4,7 +4,7 @@ import ServicePickup from "@/components/home/ServicePickup";
 import TeacherQuickSearch from "@/components/home/TeacherQuickSearch";
 import ScoreQuickSearch from "@/components/home/ScoreQuickSearch";
 import JsonLd from "@/components/seo/JsonLd";
-import { composerLocales, publishedComposers, workSummaries, works, worksByComposer } from "@/data/scores/catalog";
+import { composerLocales, publishedComposers, workSummaries, worksByComposer } from "@/data/scores/catalog";
 import { formations } from "@/data/works";
 import { libraryPaths } from "@/data/scores/paths";
 import { getDictionary } from "@/data/dictionaries";
@@ -45,7 +45,7 @@ export default async function HomePage({ params }: Props) {
 
       <section aria-labelledby="score-search-heading" className="mt-14 lg:mt-20">
         <Container width="wide">
-          <ScoreQuickSearch locale={locale} workCount={works.length} composers={topComposers} formations={formations.filter((f) => workSummaries.some((w) => w.formation === f))} />
+          <ScoreQuickSearch locale={locale} works={workSummaries} composers={topComposers} formations={formations.filter((f) => workSummaries.some((w) => w.formation === f))} />
         </Container>
       </section>
 

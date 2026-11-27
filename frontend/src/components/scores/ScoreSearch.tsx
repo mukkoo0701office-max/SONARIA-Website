@@ -5,7 +5,9 @@ import WorkCard from "@/components/scores/WorkCard";
 import Chip from "@/components/ui/Chip";
 import Pagination from "@/components/ui/Pagination";
 import { getDictionary } from "@/data/dictionaries";
-import { eras, formations, genres, instruments, type Era, type Formation, type Genre, type Instrument, type WorkSummary } from "@/data/works";
+import { eras, formations, genres, instruments, type WorkSummary } from "@/data/works";
+import { countBy, filtersFromSearch, filtersToSearch, initialFilters, matchesFilters, playersKey, sheetKeys, sortValues, type FacetKey, type ScoreFilters, type SortKey } from "@/lib/scores/filters";
+import { playerCounts, sheetKinds } from "@/lib/scores/sheetType";
 import type { Locale } from "@/lib/i18n";
 
 // 承認済みプロトタイプ（prototypes/score-search-ui-v1.html）の検索 UI を部品化したもの。
@@ -15,78 +17,8 @@ import type { Locale } from "@/lib/i18n";
 
 const PER_PAGE = 5;
 
-type SortKey = "title" | "composer" | "pdfCount";
-
-type Filters = {
-  q: string;
-  inst: "all" | Instrument;
-  fmt: "all" | Formation;
-  genre: "all" | Genre;
-  composer: string; // "all" または作曲家 ID
-  era: "all" | Era;
-  sort: SortKey;
-  page: number;
-};
-type FacetKey = "inst" | "fmt" | "genre" | "composer" | "era";
-
-const initialFilters: Filters = { q: "", inst: "all", fmt: "all", genre: "all", composer: "all", era: "all", sort: "title", page: 1 };
-const sortValues: readonly SortKey[] = ["title", "composer", "pdfCount"];
-
-function pick<T extends string>(value: string | null, allowed: readonly T[], fallback: T): T {
-  return value !== null && (allowed as readonly string[]).includes(value) ? (value as T) : fallback;
-}
-
-// URL のクエリから検索条件を復元する（共有・戻る操作のため）。不正な値は初期値に戻す。
-// 旧形式のリンク（ensemble / form）も、対応する新しい条件に読み替える
-function filtersFromSearch(search: string): Filters {
-  const params = new URLSearchParams(search);
-  const page = Number(params.get("page"));
-  const legacyFmt: Record<string, Formation> = { piano: "piano", orchestra: "solo-orchestra" };
-  return {
-    q: params.get("q") ?? "",
-    inst: pick<"all" | Instrument>(params.get("inst"), ["all", ...instruments], "all"),
-    fmt: pick<"all" | Formation>(params.get("fmt") ?? legacyFmt[params.get("ensemble") ?? ""] ?? null, ["all", ...formations], "all"),
-    genre: pick<"all" | Genre>(params.get("genre") ?? params.get("form"), ["all", ...genres], "all"),
-    composer: /^[a-z0-9-]{1,60}$/.test(params.get("composer") ?? "") ? (params.get("composer") as string) : "all",
-    era: pick<"all" | Era>(params.get("era"), ["all", ...eras], "all"),
-    sort: pick<SortKey>(params.get("sort"), sortValues, "title"),
-    page: Number.isInteger(page) && page > 0 ? page : 1,
-  };
-}
-
-// 初期値と同じ項目はクエリに書かない（URL を短く保つ）
-function filtersToSearch(filters: Filters): string {
-  const params = new URLSearchParams();
-  for (const key of Object.keys(initialFilters) as (keyof Filters)[]) {
-    if (filters[key] !== initialFilters[key]) params.set(key, String(filters[key]));
-  }
-  const query = params.toString();
-  return query ? `?${query}` : "";
-}
-
-function matches(w: WorkSummary, f: Filters, skip?: FacetKey): boolean {
-  const q = f.q.trim().toLocaleLowerCase();
-  if (q) {
-    const text = [w.title.ja, w.title.en, w.composer.ja, w.composer.en, w.searchText ?? ""].join(" ").toLocaleLowerCase();
-    if (!text.includes(q)) return false;
-  }
-  if (skip !== "inst" && f.inst !== "all" && !w.instruments.includes(f.inst)) return false;
-  if (skip !== "fmt" && f.fmt !== "all" && w.formation !== f.fmt) return false;
-  if (skip !== "genre" && f.genre !== "all" && w.genre !== f.genre) return false;
-  if (skip !== "composer" && f.composer !== "all" && w.composerId !== f.composer) return false;
-  if (skip !== "era" && f.era !== "all" && w.era !== f.era) return false;
-  return true;
-}
-
-// ある絞り込みの各選択肢の件数（その絞り込み以外の条件をすべて適用した件数）
-function countBy(works: readonly WorkSummary[], f: Filters, facet: FacetKey, keyOf: (w: WorkSummary) => readonly string[]): Map<string, number> {
-  const out = new Map<string, number>();
-  for (const w of works) {
-    if (!matches(w, f, facet)) continue;
-    for (const k of keyOf(w)) out.set(k, (out.get(k) ?? 0) + 1);
-  }
-  return out;
-}
+// 絞り込みの条件・判定は lib/scores/filters.ts（トップページの簡易検索と共通）
+type Filters = ScoreFilters;
 
 // works・isDemoData はページ（サーバー側）から受け取る。カタログ全体をブラウザに読み込ませないため
 export default function ScoreSearch({ locale, works, isDemoData }: { locale: Locale; works: readonly WorkSummary[]; isDemoData: boolean }) {
@@ -117,7 +49,7 @@ export default function ScoreSearch({ locale, works, isDemoData }: { locale: Loc
   const results = useMemo(
     () =>
       works
-        .filter((w) => matches(w, filters))
+        .filter((w) => matchesFilters(w, filters))
         .sort((a, b) => {
           if (filters.sort === "pdfCount") return b.pdfCount - a.pdfCount;
           if (filters.sort === "composer") return a.composer[locale].localeCompare(b.composer[locale], locale) || a.title[locale].localeCompare(b.title[locale], locale);
@@ -128,6 +60,8 @@ export default function ScoreSearch({ locale, works, isDemoData }: { locale: Loc
 
   const counts = useMemo(
     () => ({
+      players: countBy(works, filters, "players", playersKey),
+      sheet: countBy(works, filters, "sheet", sheetKeys),
       inst: countBy(works, filters, "inst", (w) => w.instruments),
       fmt: countBy(works, filters, "fmt", (w) => [w.formation]),
       genre: countBy(works, filters, "genre", (w) => [w.genre]),
@@ -167,11 +101,13 @@ export default function ScoreSearch({ locale, works, isDemoData }: { locale: Loc
 
   // 選択中の条件（外すボタン付きで一覧にする）
   const active: { key: FacetKey; label: string }[] = [];
+  if (filters.players !== "all") active.push({ key: "players", label: `${t.players}: ${t.playersOptions[filters.players]}` });
   if (filters.inst !== "all") active.push({ key: "inst", label: t.instrumentOptions[filters.inst] });
   if (filters.fmt !== "all") active.push({ key: "fmt", label: t.formationOptions[filters.fmt] });
   if (filters.genre !== "all") active.push({ key: "genre", label: t.genreOptions[filters.genre] });
   if (filters.composer !== "all") active.push({ key: "composer", label: composerOptions.find((c) => c.id === filters.composer)?.name ?? filters.composer });
   if (filters.era !== "all") active.push({ key: "era", label: t.eraOptions[filters.era] });
+  if (filters.sheet !== "all") active.push({ key: "sheet", label: t.sheetOptions[filters.sheet] });
 
   return (
     <div>
@@ -193,6 +129,13 @@ export default function ScoreSearch({ locale, works, isDemoData }: { locale: Loc
       </div>
 
       <FacetChips
+        legend={t.players}
+        allLabel={t.all}
+        value={filters.players}
+        options={playerCounts.map((v) => ({ value: v, label: t.playersOptions[v], n: counts.players.get(v) ?? 0 }))}
+        onChange={(v) => update({ players: v })}
+      />
+      <FacetChips
         legend={t.instrument}
         help={t.instrumentHelp}
         allLabel={t.all}
@@ -213,6 +156,14 @@ export default function ScoreSearch({ locale, works, isDemoData }: { locale: Loc
         value={filters.genre}
         options={genres.map((v) => ({ value: v, label: t.genreOptions[v], n: counts.genre.get(v) ?? 0 }))}
         onChange={(v) => update({ genre: v })}
+      />
+      <FacetChips
+        legend={t.sheet}
+        help={t.sheetHelp}
+        allLabel={t.all}
+        value={filters.sheet}
+        options={sheetKinds.map((v) => ({ value: v, label: t.sheetOptions[v], n: counts.sheet.get(v) ?? 0 }))}
+        onChange={(v) => update({ sheet: v })}
       />
 
       {/* 作曲家・時代は件数が多い／使う頻度が低いので折りたたむ（選択中は開いておく） */}
