@@ -152,6 +152,7 @@ export default function HeroCarousel({ locale }: { locale: Locale }) {
                     loading={i === 0 ? "eager" : "lazy"}
                     fetchPriority={i === 0 ? "high" : "auto"}
                     decoding="async"
+                    style={image.focus ? { objectPosition: image.focus } : undefined}
                     className="aspect-[4/5] w-full object-cover min-[480px]:aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9]"
                   />
                   {/* 文字を読みやすくするための暗いグラデーション */}

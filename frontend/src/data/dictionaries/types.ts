@@ -62,6 +62,7 @@ export type Dictionary = {
   };
   images: {
     alt: Record<ImageKey, string>;
+    curatorPortrait: string;
   };
   hero: {
     label: string;

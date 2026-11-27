@@ -48,6 +48,7 @@ export const ja: Dictionary = {
   images: {
     // 仮画像は装飾なので alt は空。本番画像に替えたら内容を説明する文を入れる
     alt: { home: "", scores: "", bowing: "", lessons: "", recording: "", performance: "", community: "", profile: "" },
+    curatorPortrait: "管理人 向山有輝の写真",
   },
   hero: {
     label: "ピックアップ",
