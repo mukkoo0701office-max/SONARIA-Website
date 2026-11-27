@@ -52,17 +52,19 @@ jobs:
 
       - name: Apply migrations
         run: |
-          if supabase db push --help 2>&1 | grep -q -- '--remote'; then
-            supabase db push --remote
-          else
-            supabase db push --linked
-          fi
+          # 自動実行では確認の質問に答えられないため --yes を付ける（この workflow 自体が手動実行＋confirm=deploy で承認済み）
+          if supabase db push --help 2>&1 | grep -q -- '--remote'; then T=--remote; else T=--linked; fi
+          if supabase db push --help 2>&1 | grep -q -- '--yes'; then supabase db push $T --yes; else supabase db push $T; fi
 
       - name: Set function settings
-        run: supabase secrets set --project-ref "$PROJECT_REF" "ALLOWED_ORIGINS=$ALLOWED_ORIGINS" "RATE_LIMIT_PER_HOUR=10"
+        run: |
+          Y=""; supabase secrets set --help 2>&1 | grep -q -- '--yes' && Y=--yes
+          supabase secrets set --project-ref "$PROJECT_REF" $Y "ALLOWED_ORIGINS=$ALLOWED_ORIGINS" "RATE_LIMIT_PER_HOUR=10"
 
       - name: Deploy function
-        run: supabase functions deploy submit --project-ref "$PROJECT_REF" --no-verify-jwt
+        run: |
+          Y=""; supabase functions deploy --help 2>&1 | grep -q -- '--yes' && Y=--yes
+          supabase functions deploy submit --project-ref "$PROJECT_REF" --no-verify-jwt $Y
 
       - name: Smoke test (no data written)
         run: |
