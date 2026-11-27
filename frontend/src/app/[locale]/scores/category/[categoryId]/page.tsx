@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Container from "@/components/layout/Container";
+import AdSenseSlot from "@/components/ads/AdSenseSlot";
 import AffiliateSlot from "@/components/library/AffiliateSlot";
 import WorkList, { workHref } from "@/components/library/WorkList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
@@ -76,6 +77,8 @@ export default async function CategoryPage({ params }: Props) {
       />
       <h1 className="mt-5 text-2xl font-bold">{cat.name[locale]}</h1>
       <p className="mt-2 text-[15px] leading-[1.9]">{cat.intro[locale]}</p>
+      {/* Google AdSense（1 枠）。ページ下部の広告・アフィリエイト枠と並ばないよう、作品一覧の前に置く */}
+      <AdSenseSlot unit="category-before-list" t={lib.adsense} />
       <p className="mt-4 text-xs text-muted">{lib.category.works(cat.works.length)}</p>
       <div className="mt-2">
         <WorkList works={cat.works} locale={locale} />

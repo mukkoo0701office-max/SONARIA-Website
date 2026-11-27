@@ -1,0 +1,397 @@
+{
+  "_about": "作品ページの短い概要（2〜3文）・原語の曲名・通称。運営者の決定（2026-11-28）: 出典を付けて Claude が作成し、承認なしで掲載する。内容は作曲年・献呈・初演・通称の由来など広く知られた事実に限り、参考資料として作品の IMSLP ページ（catalog.json の sources）を表示する。誤りの報告があれば直す。",
+  "works": {
+    "bach-air-on-the-g-string": {
+      "original": "Air (Orchestersuite Nr. 3 D-Dur)",
+      "aliases": ["G線上のアリア", "Air on G", "Air auf der G-Saite"],
+      "summary": {
+        "ja": "バッハの管弦楽組曲第3番 BWV1068 の第2曲「エア」です。「G線上のアリア」という呼び名は、19世紀のヴァイオリン奏者アウグスト・ヴィルヘルミが、G線だけで弾けるように編曲した版に由来します。",
+        "en": "The second movement (“Air”) of Bach’s Orchestral Suite No. 3, BWV 1068. The name “Air on the G String” comes from August Wilhelmj’s 19th-century arrangement, which lets the violinist play the melody on the G string alone."
+      }
+    },
+    "bach-jesu-joy-of-mans-desiring": {
+      "original": "Jesus bleibet meine Freude (BWV 147)",
+      "aliases": ["主よ、人の望みの喜びよ", "Jesus bleibet meine Freude", "Jesu Joy"],
+      "summary": {
+        "ja": "バッハのカンタータ《心と口と行いと生活で》BWV147（1723年）のコラールです。三連符で流れる伴奏の上にコラールの旋律が重なる形で、弦楽合奏でもよく演奏されます。",
+        "en": "A chorale from Bach’s cantata Herz und Mund und Tat und Leben, BWV 147 (1723). The chorale tune sits over a flowing triplet accompaniment, and the piece is widely played by string ensembles."
+      }
+    },
+    "bach-double-violin-concerto": {
+      "original": "Konzert für zwei Violinen d-Moll BWV 1043",
+      "aliases": ["ドッペル", "2つのヴァイオリンのための協奏曲", "Bach Double", "Doppelkonzert"],
+      "summary": {
+        "ja": "2人の独奏ヴァイオリンと弦楽・通奏低音のための協奏曲で、「ドッペル」の愛称で親しまれています。2本のヴァイオリンが対等に掛け合う書法で、とくに第2楽章ラルゴは名高い緩徐楽章です。",
+        "en": "A concerto for two solo violins with strings and continuo, often simply called the “Bach Double”. The two violins converse as equals, and the slow movement (Largo ma non tanto) is especially celebrated."
+      }
+    },
+    "bach-sonatas-and-partitas": {
+      "original": "Sei Solo à Violino senza Basso accompagnato (BWV 1001–1006)",
+      "aliases": ["無伴奏ヴァイオリン", "無伴奏ソナタとパルティータ", "Sei Solo", "シャコンヌ", "Chaconne"],
+      "summary": {
+        "ja": "無伴奏ヴァイオリンのためのソナタ3曲とパルティータ3曲です。自筆譜は1720年の日付をもち、パルティータ第2番の終曲「シャコンヌ」はヴァイオリン音楽の頂点のひとつとされます。",
+        "en": "Three sonatas and three partitas for unaccompanied violin; Bach’s autograph is dated 1720. The Chaconne that ends Partita No. 2 is regarded as one of the summits of the violin repertoire."
+      }
+    },
+    "bach-cello-suites": {
+      "original": "6 Suiten für Violoncello solo (BWV 1007–1012)",
+      "aliases": ["無伴奏チェロ組曲", "Cello Suites", "Violoncello-Suiten"],
+      "summary": {
+        "ja": "無伴奏チェロのための6つの組曲で、ケーテン時代（1717〜23年ごろ）の作とされます。バッハの自筆譜は残っておらず、妻アンナ・マクダレーナなどによる筆写譜で伝わっています。",
+        "en": "Six suites for unaccompanied cello, thought to date from Bach’s Köthen years (around 1717–23). No autograph survives; the music comes down to us in copies, including one by his wife Anna Magdalena."
+      }
+    },
+    "bach-violin-concerto-1": {
+      "original": "Violinkonzert a-Moll BWV 1041",
+      "aliases": ["バッハ ヴァイオリン協奏曲 イ短調"],
+      "summary": {
+        "ja": "バッハの独奏ヴァイオリン協奏曲として現存する2曲のうちの1曲です。急・緩・急の3楽章からなるイタリア風の協奏曲で、学習者にも演奏会でも広く取り上げられます。",
+        "en": "One of Bach’s two surviving concertos for solo violin. Cast in the Italian fast–slow–fast form, it is a staple for students and concert performers alike."
+      }
+    },
+    "bach-violin-concerto-2": {
+      "original": "Violinkonzert E-Dur BWV 1042",
+      "aliases": ["バッハ ヴァイオリン協奏曲 ホ長調"],
+      "summary": {
+        "ja": "バッハの独奏ヴァイオリン協奏曲として現存する2曲のうちの1曲です。明るいホ長調の両端楽章と、深い表情をもつ嬰ハ短調の第2楽章からなります。",
+        "en": "One of Bach’s two surviving concertos for solo violin. Bright outer movements in E major frame an expressive slow movement in C-sharp minor."
+      }
+    },
+    "beethoven-romance-2": {
+      "original": "Romanze für Violine und Orchester Nr. 2 F-Dur op. 50",
+      "aliases": ["ロマンス第2番", "Romance in F"],
+      "summary": {
+        "ja": "独奏ヴァイオリンと管弦楽のためのロマンスで、1798年ごろに作曲され、1805年に出版されました。歌うような主題が繰り返し現れる、穏やかな小品です。",
+        "en": "A romance for violin and orchestra, composed around 1798 and published in 1805. A gentle piece built around a singing theme that keeps returning."
+      }
+    },
+    "beethoven-violin-sonata-5": {
+      "original": "Violinsonate Nr. 5 F-Dur op. 24 „Frühlingssonate“",
+      "aliases": ["春", "スプリング・ソナタ", "Spring Sonata", "Frühlingssonate", "Frühling"],
+      "summary": {
+        "ja": "1800〜01年に作曲され、モーリッツ・フォン・フリース伯爵に献呈されたヴァイオリン・ソナタです。「春」という愛称はベートーヴェン自身ではなく後世の命名で、ベートーヴェンのヴァイオリン・ソナタとして初めて4楽章で書かれました。",
+        "en": "Composed in 1800–01 and dedicated to Count Moritz von Fries. The nickname “Spring” was added later, not by Beethoven, and it is the first of his violin sonatas written in four movements."
+      }
+    },
+    "beethoven-violin-sonata-9": {
+      "original": "Violinsonate Nr. 9 A-Dur op. 47 „Kreutzer-Sonate“",
+      "aliases": ["クロイツェル", "クロイツェル・ソナタ", "Kreutzer Sonata", "Kreutzer-Sonate"],
+      "summary": {
+        "ja": "1803年にヴァイオリン奏者ジョージ・ブリッジタワーとベートーヴェン自身によって初演されました。のちにロドルフ・クロイツェルに献呈されたことから「クロイツェル・ソナタ」と呼ばれますが、クロイツェル自身は演奏しなかったと伝えられています。",
+        "en": "First performed in 1803 by the violinist George Bridgetower with Beethoven at the piano. It was later dedicated to Rodolphe Kreutzer, hence its name, though Kreutzer is said never to have played it."
+      }
+    },
+    "brahms-violin-concerto": {
+      "original": "Violinkonzert D-Dur op. 77",
+      "aliases": ["ブラームス ヴァイオリン協奏曲", "Brahms Violin Concerto"],
+      "summary": {
+        "ja": "1878年に作曲され、友人のヴァイオリン奏者ヨーゼフ・ヨアヒムのために書かれました。1879年1月1日にライプツィヒでヨアヒムの独奏により初演され、第1楽章のカデンツァもヨアヒムのものがよく弾かれます。",
+        "en": "Written in 1878 for Brahms’s friend, the violinist Joseph Joachim, who gave the premiere in Leipzig on 1 January 1879. Joachim’s first-movement cadenza remains the one most often played."
+      }
+    },
+    "bruch-violin-concerto-1": {
+      "original": "Violinkonzert Nr. 1 g-Moll op. 26",
+      "aliases": ["ブルッフ ヴァイオリン協奏曲", "Bruch Violin Concerto"],
+      "summary": {
+        "ja": "1866年に初演された後、ヨーゼフ・ヨアヒムの助言を受けて改訂され、1868年にヨアヒムの独奏で現在の形が初演されました。第1楽章が「前奏曲」として第2楽章へ切れ目なく続く構成です。",
+        "en": "After a first performance in 1866, Bruch revised the work with advice from Joseph Joachim, who premiered the final version in 1868. The first movement, a “Prelude”, leads straight into the second."
+      }
+    },
+    "mendelssohn-violin-concerto": {
+      "original": "Violinkonzert e-Moll op. 64",
+      "aliases": ["メンコン", "メンデルスゾーン ヴァイオリン協奏曲", "Mendelssohn Violin Concerto"],
+      "summary": {
+        "ja": "1844年に完成し、1845年にライプツィヒでフェルディナント・ダーヴィトの独奏により初演されました。3つの楽章が切れ目なく続き、独奏ヴァイオリンが冒頭からすぐに主題を弾き始めるのが特徴です。",
+        "en": "Completed in 1844 and premiered in Leipzig in 1845 by Ferdinand David. The three movements run on without a break, and the soloist enters with the main theme almost at once."
+      }
+    },
+    "tchaikovsky-violin-concerto": {
+      "original": "Концерт для скрипки с оркестром ре мажор, соч. 35",
+      "aliases": ["チャイコン", "チャイコフスキー ヴァイオリン協奏曲", "Tchaikovsky Violin Concerto"],
+      "summary": {
+        "ja": "1878年にスイスのクラランで作曲されました。1881年にウィーンでアドルフ・ブロツキーの独奏により初演され、作品はブロツキーに献呈されています。",
+        "en": "Composed in 1878 at Clarens in Switzerland. Adolph Brodsky gave the premiere in Vienna in 1881, and the concerto is dedicated to him."
+      }
+    },
+    "tchaikovsky-serenade-for-strings": {
+      "original": "Серенада для струнного оркестра до мажор, соч. 48",
+      "aliases": ["弦楽セレナーデ", "弦セレ", "Serenade for Strings"],
+      "summary": {
+        "ja": "1880年に作曲された弦楽合奏のための4楽章のセレナーデです。重厚な序奏で始まり、第2楽章のワルツが特に親しまれています。",
+        "en": "A four-movement serenade for string orchestra, composed in 1880. It opens with a weighty introduction, and the second-movement Waltz is especially well loved."
+      }
+    },
+    "sibelius-violin-concerto": {
+      "original": "Viulukonsertto d-molli op. 47",
+      "aliases": ["シベリウス ヴァイオリン協奏曲", "Sibelius Violin Concerto"],
+      "summary": {
+        "ja": "1904年に初演された後に改訂され、現在演奏される改訂版は1905年にベルリンで、カレル・ハリーシュの独奏、リヒャルト・シュトラウスの指揮で初演されました。シベリウスが書いた唯一の協奏曲です。",
+        "en": "First performed in 1904 and then revised; the revised version heard today was premiered in Berlin in 1905 by Karel Halíř, conducted by Richard Strauss. It is Sibelius’s only concerto."
+      }
+    },
+    "dvorak-cello-concerto": {
+      "original": "Koncert pro violoncello a orchestr h moll op. 104",
+      "aliases": ["ドヴォコン", "ドヴォルザーク チェロ協奏曲", "Dvořák Cello Concerto"],
+      "summary": {
+        "ja": "ドヴォルザークがアメリカに滞在していた1894〜95年にニューヨークで作曲されました。1896年にロンドンでレオ・スターンの独奏により初演されました。",
+        "en": "Written in New York in 1894–95, during Dvořák’s stay in America. Leo Stern gave the premiere in London in 1896."
+      }
+    },
+    "dvorak-serenade-for-strings": {
+      "original": "Serenáda pro smyčcový orchestr E dur op. 22",
+      "aliases": ["ドヴォルザーク 弦楽セレナーデ", "Serenade for Strings"],
+      "summary": {
+        "ja": "1875年5月に、わずか2週間ほどで書き上げられた弦楽合奏のためのセレナーデです。5つの楽章からなり、第2楽章のワルツなど親しみやすい旋律に満ちています。",
+        "en": "A serenade for string orchestra written in about two weeks in May 1875. Its five movements, including a lilting Waltz, are full of warm, singable melodies."
+      }
+    },
+    "elgar-salut-damour": {
+      "original": "Salut d’amour (Liebesgruss) op. 12",
+      "aliases": ["愛の挨拶", "Liebesgruss", "Love’s Greeting"],
+      "summary": {
+        "ja": "1888年、エルガーが婚約者キャロライン・アリス・ロバーツに贈った小品です。当初はドイツ語で「Liebesgruss（愛の挨拶）」と題され、のちにフランス語の題で出版されました。",
+        "en": "A short piece Elgar gave to his fiancée, Caroline Alice Roberts, in 1888. Originally titled “Liebesgruss” in German, it was published under its French title."
+      }
+    },
+    "elgar-cello-concerto": {
+      "original": "Cello Concerto in E minor, Op. 85",
+      "aliases": ["エルガー チェロ協奏曲", "Elgar Cello Concerto"],
+      "summary": {
+        "ja": "第一次世界大戦後の1919年に作曲され、同年10月にロンドンでフェリックス・サモンドの独奏により初演されました。エルガー晩年の代表作のひとつです。",
+        "en": "Composed in 1919, just after the First World War, and premiered in London that October by Felix Salmond. It is one of the major works of Elgar’s later years."
+      }
+    },
+    "elgar-serenade-for-strings": {
+      "original": "Serenade for Strings in E minor, Op. 20",
+      "aliases": ["エルガー 弦楽セレナーデ", "Serenade for Strings"],
+      "summary": {
+        "ja": "1892年に作曲された弦楽合奏のための3楽章のセレナーデです。演奏時間は10分あまりと短く、アマチュアの弦楽合奏でもよく取り上げられます。",
+        "en": "A three-movement serenade for string orchestra, composed in 1892. At just over ten minutes, it is a favourite of amateur string orchestras."
+      }
+    },
+    "mozart-eine-kleine-nachtmusik": {
+      "original": "Serenade Nr. 13 G-Dur KV 525 „Eine kleine Nachtmusik“",
+      "aliases": ["アイネ・クライネ・ナハトムジーク", "アイネク", "Eine kleine Nachtmusik", "A Little Night Music"],
+      "summary": {
+        "ja": "1787年8月10日にウィーンで完成したセレナーデです。モーツァルトの作品目録には5楽章と記されていますが、メヌエットの1曲は失われ、現在は4楽章で演奏されます。",
+        "en": "A serenade completed in Vienna on 10 August 1787. Mozart’s own catalogue lists five movements, but one minuet is lost, so it is played in four."
+      }
+    },
+    "mozart-divertimento-k136": {
+      "original": "Divertimento D-Dur KV 136",
+      "aliases": ["ディヴェルティメント K136", "Salzburg Symphony"],
+      "summary": {
+        "ja": "1772年にザルツブルクで書かれた3曲のディヴェルティメント（K136〜138）の1曲です。弦楽四重奏でも弦楽合奏でも演奏されます。",
+        "en": "One of three divertimenti (K. 136–138) written in Salzburg in 1772. It is played both by string quartets and by string orchestras."
+      }
+    },
+    "pachelbel-canon": {
+      "original": "Kanon und Gigue D-Dur",
+      "aliases": ["パッヘルベルのカノン", "カノン", "Pachelbel’s Canon", "Kanon"],
+      "summary": {
+        "ja": "3つのヴァイオリンと通奏低音のための「カノンとジーグ」のカノンです。同じ低音の音型が繰り返される上で、3つのヴァイオリンが同じ旋律を少しずつずらして追いかけます。",
+        "en": "The canon from Pachelbel’s Canon and Gigue for three violins and continuo. Over a repeating bass line, the three violins play the same melody, each entering a little after the last."
+      }
+    },
+    "vivaldi-four-seasons-spring": {
+      "original": "La primavera RV 269 (Il cimento dell’armonia e dell’inventione, op. 8 n. 1)",
+      "aliases": ["四季 春", "La primavera", "Spring", "四季"],
+      "summary": {
+        "ja": "1725年にアムステルダムで出版された協奏曲集《和声と創意の試み》作品8の第1曲で、「四季」の「春」です。添えられたソネット（詩）の情景、鳥のさえずりや小川のせせらぎなどが音で描かれています。",
+        "en": "The first concerto of Vivaldi’s Op. 8, Il cimento dell’armonia e dell’inventione, published in Amsterdam in 1725. The music paints the scenes of an accompanying sonnet, from birdsong to murmuring streams."
+      }
+    },
+    "vivaldi-four-seasons-summer": {
+      "original": "L’estate RV 315 (Il cimento dell’armonia e dell’inventione, op. 8 n. 2)",
+      "aliases": ["四季 夏", "L’estate", "Summer", "四季"],
+      "summary": {
+        "ja": "協奏曲集《和声と創意の試み》作品8（1725年出版）の第2曲で、「四季」の「夏」です。暑さにけだるい情景から、終楽章の激しい嵐までが描かれます。",
+        "en": "The second concerto of Vivaldi’s Op. 8 (published 1725), “Summer” from The Four Seasons. It moves from the languor of summer heat to the violent storm of the finale."
+      }
+    },
+    "vivaldi-four-seasons-autumn": {
+      "original": "L’autunno RV 293 (Il cimento dell’armonia e dell’inventione, op. 8 n. 3)",
+      "aliases": ["四季 秋", "L’autunno", "Autumn", "四季"],
+      "summary": {
+        "ja": "協奏曲集《和声と創意の試み》作品8（1725年出版）の第3曲で、「四季」の「秋」です。収穫を祝う村人の踊りと酒宴、そして狩りの情景が描かれます。",
+        "en": "The third concerto of Vivaldi’s Op. 8 (published 1725), “Autumn” from The Four Seasons. It depicts villagers celebrating the harvest, their revelry, and a hunt."
+      }
+    },
+    "vivaldi-four-seasons-winter": {
+      "original": "L’inverno RV 297 (Il cimento dell’armonia e dell’inventione, op. 8 n. 4)",
+      "aliases": ["四季 冬", "L’inverno", "Winter", "四季"],
+      "summary": {
+        "ja": "協奏曲集《和声と創意の試み》作品8（1725年出版）の第4曲で、「四季」の「冬」です。凍える寒さや氷の上を歩く様子が、鋭い和音や細かな音型で表されます。",
+        "en": "The fourth concerto of Vivaldi’s Op. 8 (published 1725), “Winter” from The Four Seasons. Biting chords and rapid figures portray freezing cold and careful steps on the ice."
+      }
+    },
+    "haydn-string-quartet-emperor": {
+      "original": "Streichquartett C-Dur op. 76 Nr. 3 Hob. III:77 „Kaiserquartett“",
+      "aliases": ["皇帝", "Emperor", "Kaiserquartett", "Kaiser"],
+      "summary": {
+        "ja": "1797年に作曲された弦楽四重奏曲です。第2楽章は、ハイドンが作曲した賛歌「神よ、皇帝フランツを守りたまえ」による変奏曲で、この旋律はのちにドイツ国歌にも用いられました。",
+        "en": "A string quartet composed in 1797. Its slow movement is a set of variations on Haydn’s own hymn “Gott erhalte Franz den Kaiser”, a melody later used for the German national anthem."
+      }
+    },
+    "haydn-string-quartet-lark": {
+      "original": "Streichquartett D-Dur op. 64 Nr. 5 Hob. III:63 „Lerchenquartett“",
+      "aliases": ["ひばり", "The Lark", "Lerchenquartett", "Lerche"],
+      "summary": {
+        "ja": "1790年に作曲された弦楽四重奏曲です。第1楽章で第1ヴァイオリンが高音域へ舞い上がるように歌い出す旋律が、ひばりのさえずりにたとえられ、この愛称が付きました。",
+        "en": "A string quartet composed in 1790. The first violin’s soaring entry in the opening movement was likened to a skylark’s song, giving the work its nickname."
+      }
+    },
+    "massenet-meditation-thais": {
+      "original": "Méditation (Thaïs)",
+      "aliases": ["タイスの瞑想曲", "瞑想曲", "Meditation from Thais", "Méditation"],
+      "summary": {
+        "ja": "マスネのオペラ《タイス》（1894年初演）の第2幕で、場面転換の間に演奏される独奏ヴァイオリンの間奏曲です。ヴァイオリンの代表的な小品として単独でも広く演奏されます。",
+        "en": "The violin solo heard between the scenes of Act II of Massenet’s opera Thaïs (premiered 1894). It is widely played on its own as one of the best-known violin pieces."
+      }
+    },
+    "monti-csardas": {
+      "original": "Csárdás",
+      "aliases": ["チャールダーシュ", "チャルダッシュ", "Czardas", "Csardas"],
+      "summary": {
+        "ja": "イタリアの作曲家ヴィットーリオ・モンティが1904年ごろに書いた、ハンガリーの民俗舞曲チャールダーシュ風の作品です。ゆったりした冒頭から急速な部分へと移り、技巧を披露する曲として人気があります。",
+        "en": "Written around 1904 by the Italian composer Vittorio Monti in the style of the Hungarian csárdás. It moves from a slow opening to a fast, brilliant section and is a popular showpiece."
+      }
+    },
+    "sarasate-zigeunerweisen": {
+      "original": "Zigeunerweisen op. 20",
+      "aliases": ["ツィゴイネルワイゼン", "Gypsy Airs", "Aires gitanos"],
+      "summary": {
+        "ja": "スペインのヴァイオリン奏者サラサーテが1878年に作曲した作品です。ハンガリーのロマ（ジプシー）の音楽に基づく旋律を用い、哀愁を帯びた前半と急速な終盤で高度な技巧を聴かせます。",
+        "en": "Composed in 1878 by the Spanish violinist Pablo de Sarasate. Built on melodies in the Hungarian Romani style, it pairs a melancholy first half with a dazzling, fast finale."
+      }
+    },
+    "kreisler-liebesleid": {
+      "original": "Liebesleid (Alt-Wiener Tanzweisen Nr. 2)",
+      "aliases": ["愛の悲しみ", "Love’s Sorrow", "Liebesleid"],
+      "summary": {
+        "ja": "クライスラーの《古いウィーンの舞曲》の1曲です。当初はヨーゼフ・ランナーの作品として発表されましたが、1935年にクライスラー自身の作曲であることが明かされました。",
+        "en": "One of Kreisler’s Alt-Wiener Tanzweisen (Old Viennese Dances). It was first presented as a piece by Joseph Lanner; in 1935 Kreisler revealed that he had written it himself."
+      }
+    },
+    "kreisler-liebesfreud": {
+      "original": "Liebesfreud (Alt-Wiener Tanzweisen Nr. 1)",
+      "aliases": ["愛の喜び", "Love’s Joy", "Liebesfreud"],
+      "summary": {
+        "ja": "クライスラーの《古いウィーンの舞曲》の1曲で、「愛の悲しみ」と対になる華やかなワルツです。当初はヨーゼフ・ランナーの作品として発表され、1935年にクライスラーの作曲と明かされました。",
+        "en": "One of Kreisler’s Alt-Wiener Tanzweisen, a bright waltz paired with Liebesleid. It was first presented as a piece by Joseph Lanner until Kreisler revealed his authorship in 1935."
+      }
+    },
+    "kreisler-schon-rosmarin": {
+      "original": "Schön Rosmarin (Alt-Wiener Tanzweisen Nr. 3)",
+      "aliases": ["美しきロスマリン", "Schön Rosmarin", "Fair Rosemary"],
+      "summary": {
+        "ja": "クライスラーの《古いウィーンの舞曲》の1曲で、軽やかで愛らしいワルツです。「愛の喜び」「愛の悲しみ」と並んでよく演奏されます。",
+        "en": "One of Kreisler’s Alt-Wiener Tanzweisen, a light and charming waltz. It is often played alongside Liebesfreud and Liebesleid."
+      }
+    },
+    "saint-saens-introduction-and-rondo-capriccioso": {
+      "original": "Introduction et Rondo capriccioso op. 28",
+      "aliases": ["序奏とロンド・カプリチオーソ", "ロンカプ", "Introduction and Rondo Capriccioso"],
+      "summary": {
+        "ja": "1863年に、スペインのヴァイオリン奏者パブロ・デ・サラサーテのために作曲されました。物憂げな序奏に続き、スペイン風の情熱的なロンドが技巧的に展開します。",
+        "en": "Composed in 1863 for the Spanish violinist Pablo de Sarasate. A wistful introduction gives way to a fiery, Spanish-flavoured rondo full of virtuoso writing."
+      }
+    },
+    "saint-saens-danse-macabre": {
+      "original": "Danse macabre op. 40",
+      "aliases": ["死の舞踏", "Danse macabre", "Dance of Death"],
+      "summary": {
+        "ja": "1874年に作曲された交響詩で、真夜中に死神が奏でるヴァイオリンに合わせて骸骨たちが踊る情景を描いています。原曲では独奏ヴァイオリンのE線を半音下げて調弦する（スコルダトゥーラ）のが特徴です。",
+        "en": "A symphonic poem from 1874 in which Death plays the fiddle at midnight while skeletons dance. In the original, the solo violin’s E string is tuned down a semitone (scordatura)."
+      }
+    },
+    "saint-saens-violin-concerto-3": {
+      "original": "Concerto pour violon n° 3 en si mineur op. 61",
+      "aliases": ["サン＝サーンス ヴァイオリン協奏曲第3番", "Saint-Saëns Violin Concerto No. 3"],
+      "summary": {
+        "ja": "1880年に作曲され、パブロ・デ・サラサーテに献呈されたヴァイオリン協奏曲です。情熱的な第1楽章、舟歌風の第2楽章、華やかな終楽章からなります。",
+        "en": "A violin concerto composed in 1880 and dedicated to Pablo de Sarasate. A passionate first movement, a barcarolle-like slow movement and a brilliant finale make up the work."
+      }
+    },
+    "paganini-24-caprices": {
+      "original": "24 Capricci per violino solo op. 1",
+      "aliases": ["24のカプリース", "パガニーニ カプリス", "24 Caprices", "Capricci"],
+      "summary": {
+        "ja": "無伴奏ヴァイオリンのための24曲のカプリースで、1820年にミラノで出版されました。重音・左手のピッツィカート・跳躍など、ヴァイオリンの超絶技巧を集めた作品で、第24番の主題は多くの作曲家の変奏曲に使われています。",
+        "en": "Twenty-four caprices for solo violin, published in Milan in 1820. They explore every kind of virtuoso technique, and the theme of No. 24 has inspired variations by many composers."
+      }
+    },
+    "corelli-la-folia": {
+      "original": "Sonata op. 5 n. 12 „La Follia“",
+      "aliases": ["ラ・フォリア", "La Follia", "Folia"],
+      "summary": {
+        "ja": "1700年にローマで出版されたコレッリのヴァイオリン・ソナタ集作品5の最後の曲です。イベリア半島に由来する「フォリア」の旋律と和声に基づく変奏曲です。",
+        "en": "The final work in Corelli’s Op. 5 violin sonatas, published in Rome in 1700. It is a set of variations on “La Folia”, a theme and chord pattern of Iberian origin."
+      }
+    },
+    "vitali-chaconne": {
+      "original": "Ciaccona in sol minore",
+      "aliases": ["ヴィターリのシャコンヌ", "シャコンヌ", "Vitali Chaconne", "Ciaccona"],
+      "summary": {
+        "ja": "トマソ・アントニオ・ヴィターリの作とされるシャコンヌで、19世紀にフェルディナント・ダーヴィトが出版した版で広く知られるようになりました。作曲者については疑問も示されています。",
+        "en": "A chaconne attributed to Tomaso Antonio Vitali, which became widely known through Ferdinand David’s 19th-century edition. Its authorship has been questioned."
+      }
+    },
+    "grieg-holberg-suite": {
+      "original": "Fra Holbergs tid op. 40",
+      "aliases": ["ホルベルク組曲", "ホルベアの時代から", "Holberg Suite", "Fra Holbergs tid"],
+      "summary": {
+        "ja": "1884年、劇作家ルズヴィ・ホルベアの生誕200年を記念して作曲されました。はじめはピアノ曲として書かれ、翌1885年に弦楽合奏用に編曲されました。バロック時代の舞曲の形式を用いた組曲です。",
+        "en": "Composed in 1884 for the bicentenary of the playwright Ludvig Holberg’s birth. First written for piano, it was arranged for string orchestra in 1885, using the forms of Baroque dances."
+      }
+    },
+    "schubert-ave-maria": {
+      "original": "Ellens dritter Gesang D 839",
+      "aliases": ["シューベルトのアヴェ・マリア", "エレンの歌第3番", "Ave Maria", "Ellens dritter Gesang"],
+      "summary": {
+        "ja": "1825年に作曲された歌曲「エレンの歌第3番」で、ウォルター・スコットの叙事詩『湖上の美人』のドイツ語訳に付けられました。歌い出しの言葉から「アヴェ・マリア」として親しまれています。",
+        "en": "The song “Ellens dritter Gesang”, composed in 1825 to a German translation of Walter Scott’s poem The Lady of the Lake. It is known as “Ave Maria” from its opening words."
+      }
+    },
+    "faure-sicilienne": {
+      "original": "Sicilienne op. 78",
+      "aliases": ["シシリエンヌ", "シチリアーノ", "Sicilienne", "Siciliano"],
+      "summary": {
+        "ja": "1893年に劇の付随音楽として書かれ、のちに《ペレアスとメリザンド》（1898年）にも使われました。チェロとピアノのための版が1898年に出版されています。",
+        "en": "Written in 1893 as incidental music for a play and later used in Pelléas et Mélisande (1898). A version for cello and piano was published in 1898."
+      }
+    },
+    "rachmaninoff-vocalise": {
+      "original": "Вокализ, соч. 34 № 14",
+      "aliases": ["ヴォカリーズ", "Vocalise", "Vokaliz"],
+      "summary": {
+        "ja": "1912年に作曲され、1915年に改訂された、歌詞のない歌曲です。ソプラノ歌手アントニーナ・ネジダーノワに献呈され、さまざまな楽器のために編曲されています。",
+        "en": "A song without words, composed in 1912 and revised in 1915. Dedicated to the soprano Antonina Nezhdanova, it has been arranged for many instruments."
+      }
+    },
+    "lalo-symphonie-espagnole": {
+      "original": "Symphonie espagnole op. 21",
+      "aliases": ["スペイン交響曲", "Symphonie espagnole", "Spanish Symphony"],
+      "summary": {
+        "ja": "1874年に作曲され、1875年にパブロ・デ・サラサーテの独奏で初演されました。「交響曲」と題されていますが、実質は5楽章からなるヴァイオリン協奏曲です。",
+        "en": "Composed in 1874 and premiered in 1875 by Pablo de Sarasate. Despite its title, it is in effect a five-movement violin concerto."
+      }
+    },
+    "glazunov-violin-concerto": {
+      "original": "Концерт для скрипки с оркестром ля минор, соч. 82",
+      "aliases": ["グラズノフ ヴァイオリン協奏曲", "Glazunov Violin Concerto"],
+      "summary": {
+        "ja": "1904年に作曲され、1905年にレオポルト・アウアーの独奏で初演されました。全体が切れ目なく演奏される単一楽章の構成です。",
+        "en": "Composed in 1904 and premiered in 1905 by Leopold Auer. The concerto is played as a single continuous span without breaks."
+      }
+    },
+    "ysaye-six-sonatas": {
+      "original": "Six Sonates pour violon seul op. 27",
+      "aliases": ["イザイ 無伴奏ソナタ", "Ysaÿe Sonatas", "Six Sonatas"],
+      "summary": {
+        "ja": "1923年に作曲された無伴奏ヴァイオリンのための6曲のソナタです。各曲はシゲティ、ティボー、エネスコ、クライスラー、クリックボーム、キロガという同時代のヴァイオリン奏者に献呈されています。",
+        "en": "Six sonatas for solo violin composed in 1923. Each is dedicated to a contemporary violinist: Szigeti, Thibaud, Enescu, Kreisler, Crickboom and Quiroga."
+      }
+    }
+  }
+}

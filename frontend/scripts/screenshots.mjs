@@ -213,7 +213,7 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   await shot(page, `${vpName}-ja-work-amazon-banner`, false);
 
   // Google AdSense（未接続のためプレビューだけ枠の位置を表示）: 1 枠、表記は「広告」、
-  // ダウンロードボタンの後ろで「この楽譜について」を挟み、Amazon 枠より前
+  // ダウンロードボタンの後ろで出典などを挟み、Amazon 枠より前
   const adsense = page.locator("[data-ad-slot-preview]");
   check(`${vpName}: work page has 1 AdSense slot (preview)`, (await adsense.count()) === 1, String(await adsense.count()));
   check(`${vpName}: AdSense slot labelled 広告`, (await adsense.first().locator("p").first().innerText()).trim() === "広告");
@@ -221,13 +221,34 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
     const after = (a, b) => Boolean(a && b && a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING);
     const slot = document.querySelector("[data-ad-slot-preview]");
     const dls = [...document.querySelectorAll("a[download]")];
-    const faq = document.querySelector("#faq");
+    const faq = document.querySelector('section[aria-labelledby="sources"]');
     const amazon = document.querySelector(sel);
     return dls.every((d) => after(d, slot)) && after(faq, slot) && after(slot, amazon);
   }, adSel);
-  check(`${vpName}: AdSense slot is after downloads + FAQ and before Amazon`, adsenseOrder);
+  check(`${vpName}: AdSense slot is after downloads + sources and before Amazon`, adsenseOrder);
   await adsense.first().scrollIntoViewIfNeeded();
   await shot(page, `${vpName}-ja-work-adsense`, false);
+
+  // 詳細ページの整理（2026-11-28）: 概要（2〜3 文）と事実の表。「この楽譜について」の質問と答えは廃止
+  check(`${vpName}: work page shows summary`, (await page.locator("text=モーリッツ・フォン・フリース").count()) === 1);
+  check(`${vpName}: work facts include contents and printing`, (await page.locator("dt", { hasText: "収録" }).count()) === 1 && (await page.locator("dt", { hasText: "印刷の目安" }).count()) === 1);
+  check(`${vpName}: FAQ section removed`, (await page.locator("#faq").count()) === 0);
+  await page.locator("h1").first().scrollIntoViewIfNeeded();
+  await shot(page, `${vpName}-ja-work-top`, false);
+  await page.goto(`${base}/en/scores/beethoven-violin-sonata-5/`, { waitUntil: "networkidle" });
+  check(`${vpName}: en work page shows summary and original title`, (await page.locator("text=Count Moritz von Fries").count()) === 1 && (await page.locator("text=Frühlingssonate").count()) >= 1);
+  await shot(page, `${vpName}-en-work-top`, false);
+
+  // 作曲家・カテゴリのページにも AdSense 枠（プレビューだけ位置を表示）
+  for (const path of ["/ja/composers/beethoven/", "/ja/scores/category/string-quartet/"]) {
+    await page.goto(`${base}${path}`, { waitUntil: "networkidle" });
+    check(`${vpName}: ${path} has 1 AdSense slot (preview)`, (await page.locator("[data-ad-slot-preview]").count()) === 1);
+  }
+
+  // プライバシーポリシー
+  await page.goto(`${base}/ja/legal/privacy/`, { waitUntil: "networkidle" });
+  check(`${vpName}: privacy policy covers GA4, AdSense and Amazon`, (await page.locator("text=Google アナリティクス").count()) > 0 && (await page.locator("text=Google AdSense").count()) > 0 && (await page.locator("text=Amazon アソシエイト").count()) > 0);
+  await shot(page, `${vpName}-ja-privacy`);
 
   // 管理人プロフィール: note・X のカード（新しいタブ・rel）
   for (const lang of ["ja", "en"]) {

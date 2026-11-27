@@ -85,41 +85,17 @@ export default async function WorkPage({ params }: Props) {
   const text = work.text?.[locale];
   const composerPage = localizedPath(composerLocales(c).includes(locale) ? locale : "ja", `/composers/${c.id}/`);
   const assets = work.editions.flatMap((e) => e.assets);
-  const fileCount = assets.length;
   const partNames = [...new Set(assets.filter((a) => a.part !== "score").sort((a, b) => partOrder.indexOf(a.part) - partOrder.indexOf(b.part)).map((a) => partLabel(t, locale, a)))];
-  const sep = locale === "ja" ? "、" : ", ";
   const related = relatedWorks(work);
   const amazonItems = amazonItemsFor(work.id);
   const catalogText = catalogLabel(work);
   const pageUrl = absoluteUrl(localizedPath(locale, `/scores/${work.id}/`));
 
-  // 「この楽譜について」: 収録内容・演奏人数・印刷量・楽章など、データから確実に言える実用情報を質問と回答の形で示す
-  const sortedAssets = [...assets].sort((a, b) => partOrder.indexOf(a.part) - partOrder.indexOf(b.part));
-  const scoreAssets = sortedAssets.filter((a) => a.part === "score");
-  const partAssets = sortedAssets.filter((a) => a.part !== "score");
-  const scoreText = scoreAssets.length ? scoreAssets.map((a) => (scoreAssets.length > 1 ? tw.partItem(partLabel(t, locale, a), a.pages) : tw.scoreItem(a.pages))).join(sep) : null;
-  const partsText = partAssets.map((a) => tw.partItem(partLabel(t, locale, a), a.pages));
+  // 事実の表に足す「収録」「印刷の目安」（以前の「この楽譜について」の質問と答えは、表と重複するため廃止。運営者の決定 2026-11-28）
+  const scoreCount = assets.filter((a) => a.part === "score").length;
+  const partCount = assets.length - scoreCount;
   const totalPages = assets.reduce((n, a) => n + a.pages, 0);
-  // 1 人分の目安: 合奏・室内楽で、パートごとに 1 ファイルずつある場合だけ示す（曲集・複数版は人によって違うため出さない）
-  const perPlayerParts = partAssets.filter((a) => !a.label);
-  const perPlayer =
-    perPlayerParts.length >= 2 && perPlayerParts.length === partAssets.length && new Set(perPlayerParts.map((a) => a.part)).size === perPlayerParts.length
-      ? perPlayerParts.map((a) => tw.perPlayer(t.parts[a.part], a.pages)).join(sep)
-      : null;
-  const soloAsset = partAssets.find((a) => a.part === "solo" || a.part === "violin" || a.part === "cello" || a.part === "viola");
-  const playersAnswer =
-    work.scoring === "solo-orchestra"
-      ? partAssets.some((a) => a.part === "piano") && soloAsset
-        ? tw.soloWithPiano(t.instruments[work.instruments.find((i) => i !== "piano") ?? "violin"] ?? t.parts.solo)
-        : tw.soloWithEnsemble
-      : tw.playersByScoring[work.scoring];
-  const faq: { q: string; a: string }[] = [
-    { q: tw.qContents, a: tw.aContents(scoreText, partsText) },
-    ...(playersAnswer ? [{ q: tw.qPlayers, a: playersAnswer }] : []),
-    { q: tw.qPrint, a: tw.aPrint(totalPages, assets.length, perPlayer) },
-    ...(work.movements && work.movements.length > 1 ? [{ q: tw.qMovements, a: tw.aMovements(work.movements.length, work.movements.map((m) => m[locale]).join(sep)) }] : []),
-    { q: tw.qFree, a: tw.aFree(work.title[locale], fileCount, work.editions.every((e) => e.rights.status === "approved")) },
-  ];
+  const reference = work.sources?.find((src) => src.url && /imslp\.org/.test(src.url)) ?? null;
 
   const ld = {
     "@context": "https://schema.org",
@@ -186,6 +162,20 @@ export default async function WorkPage({ params }: Props) {
         </p>
       </header>
 
+      {work.summary && (
+        <div className="mt-4 max-w-[68ch]">
+          <p className="text-[15px] leading-[1.9]">{work.summary[locale]}</p>
+          {reference?.url && (
+            <p className="mt-1 text-xs text-muted">
+              {tw.summaryReference}:{" "}
+              <a href={reference.url} target="_blank" rel="noopener" className="underline">
+                IMSLP
+              </a>
+            </p>
+          )}
+        </div>
+      )}
+
       <section aria-labelledby="facts" className="mt-6">
         <h2 id="facts" className="sr-only">
           {tw.facts}
@@ -212,6 +202,8 @@ export default async function WorkPage({ params }: Props) {
             </Fact>
           )}
           {work.difficulty && <Fact term={tw.difficulty}>{tw.difficultyLevels[work.difficulty.level]}</Fact>}
+          <Fact term={tw.contents}>{tw.contentsValue(scoreCount, partCount)}</Fact>
+          <Fact term={tw.printVolume}>{tw.printVolumeValue(assets.length, totalPages)}</Fact>
         </dl>
       </section>
 
@@ -223,7 +215,8 @@ export default async function WorkPage({ params }: Props) {
         {work.editions.map((e) => (
           <div key={e.id} className="mt-4">
             <h3 className="text-[15px] font-bold">{e.label[locale]}</h3>
-            {e.rights.status === "pending" && (
+            {/* 運営者の決定（2026-11-28）: 本番では権利確認前の表示をしない。プレビューだけ運営者向けに表示 */}
+            {e.rights.status === "pending" && process.env.NEXT_PUBLIC_PREVIEW === "1" && (
               <p className="mt-1.5 rounded-button border border-navy bg-subtle px-2.5 py-1.5 text-xs font-semibold text-navy">{tw.pendingRights}</p>
             )}
             <dl className="mt-1 grid gap-0.5 text-xs text-muted">
@@ -259,23 +252,7 @@ export default async function WorkPage({ params }: Props) {
         />
       </section>
 
-      <section aria-labelledby="faq" className="mt-8">
-        <h2 id="faq" className="text-lg font-bold">
-          {tw.faqTitle}
-        </h2>
-        <dl className="mt-3 grid gap-3 text-[14px]">
-          {faq.map((f) => (
-            <div key={f.q}>
-              <dt className="font-semibold">{f.q}</dt>
-              <dd className="mt-0.5">{f.a}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
 
-      {/* Google AdSense（1 枠）。ダウンロードの操作ボタンから離すため「この楽譜について」の後に置き、
-          ページ最下部の Amazon 枠とは本文・関連作品を挟んで分ける（docs/ads/ADSENSE_PLAN.md） */}
-      <AdSenseSlot unit="work-after-downloads" t={t.adsense} />
 
       {text?.overview && <Prose id="overview" title={tw.overview} body={text.overview} />}
       {text?.features && <Prose id="features" title={tw.features} body={text.features} />}
@@ -328,6 +305,10 @@ export default async function WorkPage({ params }: Props) {
           </details>
         )}
       </section>
+
+      {/* Google AdSense（1 枠）。ダウンロードの操作ボタンから離すため、出典・更新日の後に置き、
+          ページ最下部の Amazon 枠とは「誤りの報告」・関連作品を挟んで分ける（docs/ads/ADSENSE_PLAN.md） */}
+      <AdSenseSlot unit="work-after-downloads" t={t.adsense} />
 
       <section aria-labelledby="report" className="mt-8 rounded-card border border-line bg-card p-[17px]">
         <h2 id="report" className="text-[15px] font-bold">

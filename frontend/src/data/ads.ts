@@ -37,7 +37,7 @@ export const adPlacements: Record<AdPlacement, AdConfig> = {
 // - client / slot が未設定の間は広告コードを読み込まない。本番の一般利用者にはダミー広告を出さない（プレビュー時だけ枠の位置を表示）
 // TODO: AdSense の審査に通ったら client（ca-pub-…）と slot（広告ユニット ID）を設定し、enabled を true にする（運営者の承認が必要）
 
-export type AdSenseUnitId = "work-after-downloads";
+export type AdSenseUnitId = "work-after-downloads" | "composer-after-works" | "category-before-list";
 
 export type AdSenseConfig = {
   enabled: boolean;
@@ -45,6 +45,7 @@ export type AdSenseConfig = {
   units: Record<AdSenseUnitId, { slot: string; enabled: boolean }>;
   // 表示するページの種類（楽譜詳細だけ。フォーム・法務・管理画面には置かない）
   pages: { work: boolean; composer: boolean; category: boolean };
+  // ↑ ページの種類ごとの表示可否。adsenseUnitReady はユニットの属するページが false なら配信しない
   // 以下は Google 側で管理する設定の控え（サイトからは変更できない。管理画面の表示用）
   googleManaged: { autoAds: boolean; vignette: boolean; anchor: boolean };
   // 将来、自動広告を使う場合に除外するパス（AdSense の管理画面の「ページの除外」にも同じものを登録する）
@@ -54,8 +55,13 @@ export type AdSenseConfig = {
 export const adsenseConfig: AdSenseConfig = {
   enabled: false,
   client: "",
-  units: { "work-after-downloads": { slot: "", enabled: true } },
-  pages: { work: true, composer: false, category: false },
+  units: {
+    "work-after-downloads": { slot: "", enabled: true },
+    // 運営者の決定（2026-11-28）: 作曲家・カテゴリのページにも 1 枠ずつ
+    "composer-after-works": { slot: "", enabled: true },
+    "category-before-list": { slot: "", enabled: true },
+  },
+  pages: { work: true, composer: true, category: true },
   googleManaged: { autoAds: false, vignette: false, anchor: false },
   autoAdsExcludedPaths: ["/apply/", "/contact/", "/teachers/register/", "/performance/", "/legal/", "/admin/"],
 };
@@ -63,5 +69,6 @@ export const adsenseConfig: AdSenseConfig = {
 /** 広告ユニットが配信できる状態か（client・slot がそろい、有効になっている） */
 export function adsenseUnitReady(unit: AdSenseUnitId, config: AdSenseConfig = adsenseConfig): boolean {
   const u = config.units[unit];
-  return config.enabled && /^ca-pub-\d{16}$/.test(config.client) && u.enabled && /^\d{6,}$/.test(u.slot);
+  const page = unit.startsWith("work") ? "work" : unit.startsWith("composer") ? "composer" : "category";
+  return config.pages[page] && config.enabled && /^ca-pub-\d{16}$/.test(config.client) && u.enabled && /^\d{6,}$/.test(u.slot);
 }
