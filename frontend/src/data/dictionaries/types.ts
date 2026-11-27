@@ -262,7 +262,7 @@ export type Dictionary = {
     copied: string;
     fixErrors: string;
     errors: { name: string; email: string; consent: string };
-    result: { notConnectedTitle: string; notConnectedBody: string; errorTitle: string; errorBody: string };
+    result: { notConnectedTitle: string; notConnectedBody: string; errorTitle: string; errorBody: string; receiptNote: string };
   };
   // 演奏依頼の見積もり（PR #24 §1）
   performanceQuote: {

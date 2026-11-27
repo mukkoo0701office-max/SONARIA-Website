@@ -21,7 +21,7 @@ import { prefectures } from "@/data/prefectures";
 import { pagePaths } from "@/data/site";
 import { audiences, instrumentCategories, instrumentCategoryOf, lessonFormats, type Audience, type Instrument, type LessonFormat } from "@/data/teachers";
 import { localizedPath, type Locale } from "@/lib/i18n";
-import { submitTeacherApplication, type SubmitResult } from "@/lib/orders/submit";
+import { submitTeacherApplication, withReceipt, type SubmitResult } from "@/lib/orders/submit";
 
 type Step = "edit" | "confirm" | "done";
 type Travel = "none" | "30" | "60" | "90";
@@ -205,7 +205,7 @@ export default function TeacherRegistrationForm({ locale }: { locale: Locale }) 
 
   if (step !== "edit") {
     const title = step === "confirm" ? t.confirm.heading : result?.status === "sent" ? t.result.sentTitle : result?.status === "error" ? f.result.errorTitle : f.result.notConnectedTitle;
-    const body = step === "confirm" ? t.confirm.lead : result?.status === "sent" ? t.result.sentBody : result?.status === "error" ? f.result.errorBody : f.result.notConnectedBody;
+    const body = step === "confirm" ? t.confirm.lead : result?.status === "sent" ? withReceipt(t.result.sentBody, result, f.result.receiptNote) : result?.status === "error" ? f.result.errorBody : f.result.notConnectedBody;
     return (
       <FormReview
         step={step}

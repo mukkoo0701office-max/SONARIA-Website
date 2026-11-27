@@ -2,6 +2,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { isAllowedOrigin, validateSubmission } from "../functions/_shared/validate.ts";
+import { buildNotifyMail } from "../functions/_shared/notify.ts";
 
 const lesson = {
   service: "lesson",
@@ -70,4 +71,13 @@ test("Origin は完全一致だけ許可する", () => {
   assert.equal(isAllowedOrigin("https://mukkoo0701office-max.github.io", allowed), true);
   assert.equal(isAllowedOrigin("https://evil.example", allowed), false);
   assert.equal(isAllowedOrigin(null, allowed), false);
+});
+
+test("通知メールは種類・受付番号・日本時間を含み、個人情報を含まない", () => {
+  const m = buildNotifyMail("performance_quote", "SN-261128-ABCDE", new Date("2026-11-27T21:30:00Z"), "https://example.com/admin");
+  assert.match(m.subject, /演奏依頼/);
+  assert.match(m.subject, /SN-261128-ABCDE/);
+  assert.match(m.text, /2026-11-28 06:30/);
+  // 文面にメールアドレス等の個人情報が入らないこと（通知先の URL 以外に @ を含まない）
+  assert.ok(!m.text.includes("@"));
 });

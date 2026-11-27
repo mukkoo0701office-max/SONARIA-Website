@@ -8,8 +8,10 @@ export type SubmitResult =
   | { status: "not_connected" }
   | { status: "error"; message: string };
 
-const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ?? "";
-const PUBLISHABLE_KEY = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ?? "";
+// https:// が抜けた設定でも動くように補う（GitHub Variables の入力ミス対策）
+const RAW_SUPABASE_URL = (process.env.NEXT_PUBLIC_SUPABASE_URL ?? "").trim();
+const SUPABASE_URL = RAW_SUPABASE_URL && !/^https?:\/\//.test(RAW_SUPABASE_URL) ? `https://${RAW_SUPABASE_URL}` : RAW_SUPABASE_URL;
+const PUBLISHABLE_KEY = (process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ?? "").trim();
 
 /** 受付関数の URL。未設定なら undefined（未接続） */
 export function submitEndpoint(): string | undefined {
@@ -44,6 +46,12 @@ async function post(payload: unknown): Promise<SubmitResult> {
   } catch (e) {
     return { status: "error", message: e instanceof Error ? e.message : "network" };
   }
+}
+
+/** 送信完了の本文に受付番号を添える（受付番号がなければ本文のまま） */
+export function withReceipt(body: string, result: SubmitResult | null, note: string): string {
+  if (result?.status !== "sent" || !result.receipt) return body;
+  return `${body} ${note.replace("{receipt}", result.receipt)}`;
 }
 
 /** サービスの統合申込（レッスン／運指・運弓／録音） */
