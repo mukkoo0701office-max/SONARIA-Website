@@ -50,3 +50,8 @@
 - **HN216** は Henle公式で *Six Sonatas Hob. VI:1–6 for Violin and Viola*、ISMN `979-0-2018-0216-9`、ヴァイオリン＋ヴィオラの二重奏用原典版と確認。弦楽四重奏ページに関連付けない。出典: https://www.henle.de/en/Six-Sonatas-Hob.-VI-1-6-for-Violin-and-Viola/HN-216
 - **HN437** は Henle公式で *Violin Sonata G major Hob. XV:32*、ISMN `979-0-2018-0437-8`、ヴァイオリン＋ピアノ用原典版と確認。弦楽四重奏ページに関連付けない。出典: https://www.henle.de/en/Violin-Sonata-G-major-Hob.-XV-32/HN-437
 - 以上は出版社の商品同定のみで、Amazon.co.jpでの販売・ASINの検証ではない。いずれもAmazonアソシエイトリンクを生成しない。次回は同一検索の反復より、ハイドン弦楽四重奏の未調査の版・出版社を優先する。
+
+## ハイドン Op.76 版照合（2026-11-28 JST）
+- Henle公式現行ページで **HN214** は弦楽四重奏曲 Op.76 Nos.1–6（Hob. III:75–80）の**演奏用パート譜**、ISMN `979-0-2018-0214-5`、校訂 Horst Walter と確認。出典: https://www.henle.de/String-Quartets-Book-X-op.-76-Erdoedy-Quartets/HN-214
+- 同ページは **HN9214** を対応する**研究用スコア（study score）**と区別している。『皇帝』四重奏曲 Op.76 No.3（Hob. III:77）はこの6曲集の収録作品の一つであり、単独版と誤記しない。
+- Amazon.co.jpでこの版に一致する商品個別ページ・ASINは今回確認できなかったため、既存キューの `pending_review` と `amazon_url: null` を維持。出版社品番やISMNからASINを推測しない。価格・在庫・画像は掲載しない。
