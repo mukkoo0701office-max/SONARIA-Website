@@ -293,7 +293,7 @@ export function FormReview({
   return (
     <div className="mx-auto max-w-content">
       <div className={`rounded-card border p-6 ${warn ? "border-navy bg-subtle" : "border-line bg-card"}`} role={step === "done" ? "status" : undefined}>
-        <h2 ref={headingRef} tabIndex={-1} className="scroll-mt-6 text-xl font-bold">
+        <h2 ref={headingRef} tabIndex={-1} className="scroll-mt-28 text-xl font-bold md:scroll-mt-40">
           {title}
         </h2>
         <p className="mt-2 whitespace-pre-line text-[14px] leading-relaxed">{body}</p>
