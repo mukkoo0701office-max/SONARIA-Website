@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Mozart",
     "stage": "violin_sonata",
-    "last_work": "K.376/374d",
-    "note": "Next K.377/374e. K.305, K.306 and K.376 score and violin part identified from IMSLP metadata; piano in complete score, PDF uninspected. Historical audit delegated to Claude; avoid modifying prior candidates."
+    "last_work": "K.379/373a",
+    "note": "Next K.380/374f. K.377–379 score and violin part separately identified from IMSLP metadata; piano in score; PDFs and rights unverified. Prior candidates left unchanged."
   },
   "items": [
     {
@@ -9257,6 +9257,285 @@
       },
       "rights_status": "unknown",
       "notes": "Metadata candidate only. Verify all movements, score and violin part consistency, standalone piano necessity, site inventory, rights and image quality. Pleyel ca.1815: score #835026, violin #835027; Peters ca.1887 Friedrich Hermann: score #90919, violin #91022; NMA Reeser 1965 is rights-sensitive. Pleyel title mentions optional cello: verify whether cello part exists, do not mislabel arrangement.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-violin-sonata-k377-breitkopf-1879",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata in F major, K.377/374e",
+      "opus_catalog": "K.377/374e",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.377%2F374e_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1879",
+        "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (series editorial board; individual editor unknown)",
+        "series": "Mozarts Werke, Serie XVIII, Bd.2, No.33",
+        "plate": "W.A.M. 377",
+        "imslp_file_id": "63059",
+        "part_file_ids": {
+          "violin": "63060"
+        },
+        "file_pages": 16,
+        "edition_comparison": "Peters ca.1887 Friedrich Hermann score #90921, violin #91024; Schirmer 1906 Schradieck/Rihm combined #86884; autograph #834944 score only"
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.377%2F374e_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "63059",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.377%2F374e_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (series editorial board; individual editor unknown)",
+        "publication_date": "1879",
+        "scope": "complete score with piano, 16 pages per IMSLP metadata",
+        "evidence": "IMSLP listing checked 2026-11-27: Breitkopf & Härtel 1879 score #63059, violin part #63060; PDF not opened"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "63060",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.377%2F374e_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (series editorial board; individual editor unknown)",
+          "scope": "separate violin part, 6 pages per IMSLP metadata",
+          "evidence": "IMSLP listing checked 2026-11-27: Breitkopf & Härtel 1879 score #63059, violin part #63060; PDF not opened"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.377%2F374e_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": null,
+          "editor": null,
+          "scope": "Piano included in complete score; standalone piano part not identified",
+          "evidence": "Separate piano part not verified"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "same_edition",
+        "evidence": "IMSLP lists both under Breitkopf & Härtel 1879; PDF contents not cross-checked"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "standalone piano part (not identified; score contains piano)"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.377%2F374e_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "checked_at": "2026-11-27",
+          "scope": "IMSLP metadata score #63059, violin #63060; PDF not downloaded"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.377%2F374e_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP listing checked 2026-11-27: Breitkopf & Härtel 1879 score #63059, violin part #63060; PDF not opened"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "violin_identified_piano_in_score_pdf_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "no_duplicate_in_queue_existing_site_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Verify full movements, scan legibility, same-edition match, existing SONARIA Work/Edition/PDF duplication, and Japan rights. Alternatives: Peters ca.1887 Friedrich Hermann score #90921, violin #91024; Schirmer 1906 Schradieck/Rihm combined #86884; autograph #834944 score only. Do not treat NMA as automatically reusable.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-violin-sonata-k378-breitkopf-1879",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata in B-flat major, K.378/317d",
+      "opus_catalog": "K.378/317d",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_in_B-flat_major%2C_K.378%2F317d_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1879",
+        "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (series editorial board; individual editor unknown)",
+        "series": "Mozarts Werke, Serie XVIII, Bd.2, No.34",
+        "plate": "W.A.M. 378",
+        "imslp_file_id": "63061",
+        "part_file_ids": {
+          "violin": "63062"
+        },
+        "file_pages": 20,
+        "edition_comparison": "Peters ca.1887 Friedrich Hermann score #90997, violin #91025; NMA Reeser 1964 #467479/#467480 rights-sensitive"
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_B-flat_major%2C_K.378%2F317d_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "63061",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_B-flat_major%2C_K.378%2F317d_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (series editorial board; individual editor unknown)",
+        "publication_date": "1879",
+        "scope": "complete score with piano, 20 pages per IMSLP metadata",
+        "evidence": "IMSLP listing checked 2026-11-27: Breitkopf & Härtel 1879 score #63061, violin part #63062; PDF not opened"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "63062",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_B-flat_major%2C_K.378%2F317d_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (series editorial board; individual editor unknown)",
+          "scope": "separate violin part, 6 pages per IMSLP metadata",
+          "evidence": "IMSLP listing checked 2026-11-27: Breitkopf & Härtel 1879 score #63061, violin part #63062; PDF not opened"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_B-flat_major%2C_K.378%2F317d_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": null,
+          "editor": null,
+          "scope": "Piano included in complete score; standalone piano part not identified",
+          "evidence": "Separate piano part not verified"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "same_edition",
+        "evidence": "IMSLP lists both under Breitkopf & Härtel 1879; PDF contents not cross-checked"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "standalone piano part (not identified; score contains piano)"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_B-flat_major%2C_K.378%2F317d_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "checked_at": "2026-11-27",
+          "scope": "IMSLP metadata score #63061, violin #63062; PDF not downloaded"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_B-flat_major%2C_K.378%2F317d_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP listing checked 2026-11-27: Breitkopf & Härtel 1879 score #63061, violin part #63062; PDF not opened"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "violin_identified_piano_in_score_pdf_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "no_duplicate_in_queue_existing_site_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Verify full movements, scan legibility, same-edition match, existing SONARIA Work/Edition/PDF duplication, and Japan rights. Alternatives: Peters ca.1887 Friedrich Hermann score #90997, violin #91025; NMA Reeser 1964 #467479/#467480 rights-sensitive. Do not treat NMA as automatically reusable.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-violin-sonata-k379-breitkopf-1879",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata in G major, K.379/373a",
+      "opus_catalog": "K.379/373a",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_in_G_major%2C_K.379%2F373a_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1879",
+        "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (series editorial board; individual editor unknown)",
+        "series": "Mozarts Werke, Serie XVIII, Bd.2, No.35",
+        "plate": "W.A.M. 379",
+        "imslp_file_id": "63091",
+        "part_file_ids": {
+          "violin": "63092"
+        },
+        "file_pages": 12,
+        "edition_comparison": "Peters 1850 score #816262 and violin #816263; autograph #292798; NMA Reeser 1965 #468310/#468312 rights-sensitive"
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_G_major%2C_K.379%2F373a_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "63091",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_G_major%2C_K.379%2F373a_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (series editorial board; individual editor unknown)",
+        "publication_date": "1879",
+        "scope": "complete score with piano, 12 pages per IMSLP metadata",
+        "evidence": "IMSLP listing checked 2026-11-27: Breitkopf & Härtel 1879 score #63091, violin part #63092; PDF not opened"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "63092",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_G_major%2C_K.379%2F373a_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (series editorial board; individual editor unknown)",
+          "scope": "separate violin part, 4 pages per IMSLP metadata",
+          "evidence": "IMSLP listing checked 2026-11-27: Breitkopf & Härtel 1879 score #63091, violin part #63092; PDF not opened"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_G_major%2C_K.379%2F373a_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": null,
+          "editor": null,
+          "scope": "Piano included in complete score; standalone piano part not identified",
+          "evidence": "Separate piano part not verified"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "same_edition",
+        "evidence": "IMSLP lists both under Breitkopf & Härtel 1879; PDF contents not cross-checked"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "standalone piano part (not identified; score contains piano)"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_G_major%2C_K.379%2F373a_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "checked_at": "2026-11-27",
+          "scope": "IMSLP metadata score #63091, violin #63092; PDF not downloaded"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_G_major%2C_K.379%2F373a_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP listing checked 2026-11-27: Breitkopf & Härtel 1879 score #63091, violin part #63092; PDF not opened"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "violin_identified_piano_in_score_pdf_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "no_duplicate_in_queue_existing_site_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Verify full movements, scan legibility, same-edition match, existing SONARIA Work/Edition/PDF duplication, and Japan rights. Alternatives: Peters 1850 score #816262 and violin #816263; autograph #292798; NMA Reeser 1965 #468310/#468312 rights-sensitive. Do not treat NMA as automatically reusable.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
