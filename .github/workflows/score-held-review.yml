@@ -7,6 +7,8 @@ on:
     paths:
       - "tools/score-migration/held_review.py"
       - "tools/score-migration/sitemap_check.py"
+      - "tools/score-migration/detail_sheets.py"
+      - "tools/score-migration/detail_keys.json"
       - ".github/workflows/score-held-review.yml"
 
 permissions:
@@ -40,6 +42,8 @@ jobs:
           git fetch -q --depth=1 origin ci/score-audit && git show FETCH_HEAD:state.json > /tmp/state.json
           [ -f /tmp/out/new_links.json ] || python tools/score-migration/sitemap_check.py --state /tmp/state.json --report tools/score-migration/report.json --out /tmp/out/new_links.json
       - run: python tools/score-migration/held_review.py --report tools/score-migration/report.json --report /tmp/out/new_links.json --out /tmp/out
+      - name: Detail sheets
+        run: python tools/score-migration/detail_sheets.py --index /tmp/out/index.json --keys tools/score-migration/detail_keys.json --out /tmp/out
       - name: Save to ci/held-review
         if: always()
         run: |
