@@ -37,9 +37,9 @@
   ],
   "cursor": {
     "composer": "Beethoven",
-    "stage": "string_quartet",
-    "last_work": "Op.135",
-    "note": "Next audit Große Fuge Op.133 as related Op.130 finale, avoiding duplicate Work/Edition/PDF assets, then confirm remaining quartets before violin sonatas."
+    "stage": "violin_sonata",
+    "last_work": "Op.133",
+    "note": "Op.133 Große Fuge checked as related to Op.130 original finale; Beethoven string quartets Op.18, 59, 74, 95, 127, 130, 131, 132, 135 and Op.133 covered in queue; next inspect Beethoven violin sonatas against main catalog (10 entries already present) before proposing additional editions; no blanket completeness assertion."
   },
   "items": [
     {
@@ -12234,6 +12234,118 @@
       "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null
+    },
+    {
+      "id": "beethoven-op133-breitkopf-score-artaria-parts",
+      "composer": "Ludwig van Beethoven",
+      "category": "string_quartet",
+      "work_title": "Große Fuge in B-flat major (original finale of String Quartet No.13 Op.130)",
+      "opus_catalog": "Op.133",
+      "work_url": "https://imslp.org/wiki/Gro%C3%9Fe_Fuge_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1863",
+        "editor": "unknown",
+        "scope": "Complete score, Ludwig van Beethovens Werke Serie 6 Band 2 No.53 (pp.207–228), plate B.53",
+        "imslp_file_id": "978499",
+        "edition_comparison": "Alternative first-edition Artaria score #51361/#694811 (1827 plate M.A.876); selected 1863 Breitkopf score differs from Artaria first-edition parts #51362/#1007097/#1007098/#1007099. Op.133 also original finale of Op.130; verify work and movement relationship to avoid duplicate asset and page."
+      },
+      "edition_url": "https://imslp.org/wiki/Gro%C3%9Fe_Fuge_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "978499",
+        "edition_url": "https://imslp.org/wiki/Gro%C3%9Fe_Fuge_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "unknown",
+        "publication_date": "1863",
+        "scope": "complete score, 22 pages per IMSLP; PDF not inspected",
+        "evidence": "IMSLP #978499; historical collected edition metadata only"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "51362",
+          "edition_url": "https://imslp.org/wiki/Gro%C3%9Fe_Fuge_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Artaria",
+          "editor": "first edition (IMSLP label, not a named modern editor)",
+          "scope": "Op.133 original string quartet part; content uninspected",
+          "evidence": "IMSLP Parts listing, Artaria Vienna 1827 plate M.A.877; metadata only; source PDF not opened"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "1007097",
+          "edition_url": "https://imslp.org/wiki/Gro%C3%9Fe_Fuge_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Artaria",
+          "editor": "first edition (IMSLP label, not a named modern editor)",
+          "scope": "Op.133 original string quartet part; content uninspected",
+          "evidence": "IMSLP Parts listing, Artaria Vienna 1827 plate M.A.877; metadata only; source PDF not opened"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "1007098",
+          "edition_url": "https://imslp.org/wiki/Gro%C3%9Fe_Fuge_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Artaria",
+          "editor": "first edition (IMSLP label, not a named modern editor)",
+          "scope": "Op.133 original string quartet part; content uninspected",
+          "evidence": "IMSLP Parts listing, Artaria Vienna 1827 plate M.A.877; metadata only; source PDF not opened"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "1007099",
+          "edition_url": "https://imslp.org/wiki/Gro%C3%9Fe_Fuge_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Artaria",
+          "editor": "first edition (IMSLP label, not a named modern editor)",
+          "scope": "Op.133 original string quartet part; content uninspected",
+          "evidence": "IMSLP Parts listing, Artaria Vienna 1827 plate M.A.877; metadata only; source PDF not opened"
+        }
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Gro%C3%9Fe_Fuge_%28Beethoven%2C_Ludwig_van%29",
+          "imslp_file_ids": [
+            "978499",
+            "51361",
+            "694811",
+            "51362",
+            "1007097",
+            "1007098",
+            "1007099"
+          ],
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP listing only; original score, alternate first edition and individual four part listings; PDF not downloaded or inspected"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Gro%C3%9Fe_Fuge_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "Op.133, original quartet scoring 2 violins/viola/cello; related Op.130; Breitkopf 1863 full score #978499, Artaria 1827 first edition score #51361/#694811 and parts #51362/#1007097/#1007098/#1007099; publication metadata only"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked_related_op130",
+        "edition": "metadata_checked_pdf_uninspected",
+        "parts": "four_individual_files_listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_id_checked_main_catalog_checked_live_site_unverified_op130_relationship_pending",
+        "rights": "unknown_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Related to Op.130 original finale; treat Op.133 as separately catalogued publication but link relationship and avoid duplicating the same musical movement or PDF. Artaria first-edition score #51361/#694811 may match Artaria parts more closely than selected Breitkopf score; edition concordance unverified. Main catalog contains 203 works and no explicit Op.133 record at check; published production site not verified. No PDF acquisition, rights approval or publication.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
     }
   ],
   "last_updated": "2026-11-28",
@@ -12386,14 +12498,14 @@
   },
   "site_reconciliation_last_attempt": {
     "checked_at": "2026-11-28",
-    "github_main": "main examined: README.md, frontend/package.json and library UI specification; canonical deployed URL and complete published Work/Edition/ScoreAsset inventory not established",
-    "published_site": "unverified; no authoritative deployment URL established",
+    "github_main": "main frontend/src/data/scores/catalog.json read; generatedAt 2026-11-27T04:22:18+00:00; 203 Work entries, including Beethoven quartet Nos.1–9 and violin sonatas Nos.1–10; no explicit Op.133 record. Catalog source may lag main or live deployment; not evidence of absence from public site.",
+    "published_site": "unverified; canonical production URL not established from inspected README, frontend/package.json and deployment context",
     "work_branch": "coordination/gpt-claude-score-queue",
     "pr_number": 10,
-    "pr_head_at_start": "27d6f9f5f10109aac4367c27eff0db68e5e77df2",
+    "pr_head_at_start": "1420b2410441413f600be0d11f2337c8d76bb788",
     "main_head_at_start": "2305de2053711364e525adf88c70c3e8f7f50af3",
-    "site_duplicate_check": "incomplete; queue ID and Op.135 checked, production site inventory not verified",
+    "site_duplicate_check": "Op.133 absent from main catalog by explicit ID/title/opus scan; Op.130 finale relationship unresolved; all other works not exhaustively cross-matched",
     "publication_status_changes": "none asserted",
-    "notes": "Do not infer absence from the website; recheck main and production URL before publication or further deduplication."
+    "notes": "Main CLAUDE.md and decision 0004 now allow pending rights to be visible in site implementation; this acquisition task still prohibits rights approval and publishing. Existing README in queue branch retains stricter older wording; do not modify unrelated files or change policy. Demo works.ts isSampleData and not proof of published inventory."
   }
 }
