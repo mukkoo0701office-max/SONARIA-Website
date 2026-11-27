@@ -4,7 +4,7 @@ GPT が楽譜収集キュー（PR #10 の `docs/score-acquisition/queue.json`）
 
 ## 手順
 
-1. `ci/score-intake` ブランチの **`download_list.md`**（取得リスト）を開きます。候補ごとに作品ページへのリンクとファイル番号が並んでいます（作曲家の優先順）。サイトに掲載中の作品は、足りない総譜だけを載せています。
+1. `ci/score-intake` ブランチの **`download_list.md`**（取得リスト）を開きます。IMSLP の作品ページの全ファイルから Claude が選んだ「総譜＋対応するパート譜」が、作品ページごとに並んでいます（作曲家の優先順。曲集のファイルは 1 回だけ）。選んだ理由と版の違いは `imslp_sets.md` にあります。サイトに掲載中の作品は、足りない総譜だけを載せています。
    キューの候補の IMSLP ページ（`edition_url`）を開き、記録されている番号（`imslp_file_id`、例: `#39781`）のファイルをダウンロードします。
    - **ファイル名は変えないでください。** IMSLP のファイル名（`IMSLP39781-PMLP….pdf`）に入っている番号で、どの候補のどのパートかを判定します。
 2. GitHub の **Releases → 「score-intake」（Draft）→ Edit** を開き、PDF をドラッグして添付します。最後に **「Save draft」** を押します（**「Publish release」は押さない**）。

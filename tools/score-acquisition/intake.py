@@ -132,6 +132,27 @@ def index_queue(queue: dict) -> dict[str, list[dict]]:
     return out
 
 
+def index_sets(sets_path: str, queue: dict, out: dict[str, list[dict]]) -> None:
+    """imslp_sets.json（Claude が IMSLP の作品ページから選んだ総譜＋パート譜の組）の番号も対応付けに加える"""
+    if not sets_path or not os.path.exists(sets_path):
+        return
+    scope = {i["id"]: (i.get("edition") or {}).get("scope", "") for i in queue.get("items", [])}
+    for r in json.loads(Path(sets_path).read_text(encoding="utf-8")).get("results", []):
+        if r.get("status") != "complete_set":
+            continue
+        picks = []
+        if r.get("score"):
+            picks.append(("full_score", r["score"]["id"], r["score"]["pages"]))
+        for role, f in ((r.get("parts") or {}).get("files") or {}).items():
+            picks.append((role, f["id"], f["pages"]))
+        for f in (r.get("parts") or {}).get("split_volumes", []):
+            picks.append((f["role"], f["id"], f["pages"]))
+        for role, fid, pages in picks:
+            recs = out.setdefault(fid, [])
+            if not any(x["item_id"] == r["id"] and x["role"] == role for x in recs):
+                recs.append({"item_id": r["id"], "role": role, "expected_pages": pages, "scope": scope.get(r["id"], ""), "status": r.get("queue_status")})
+
+
 def detect_parts(text: str) -> list[str]:
     found = [k for k, rx in PART_PATTERNS.items() if re.search(rx, text, re.I)]
     if "violin_1" in found or "violin_2" in found:
@@ -166,11 +187,13 @@ def main() -> int:
     ap.add_argument("--files", required=True)
     ap.add_argument("--catalog", required=True)
     ap.add_argument("--prev", default="")
+    ap.add_argument("--sets", default="")
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
 
     queue = json.loads(Path(a.queue).read_text(encoding="utf-8"))
     idx = index_queue(queue)
+    index_sets(a.sets, queue, idx)
     catalog = json.loads(Path(a.catalog).read_text(encoding="utf-8"))
     site_sha = {}
     for w in catalog["works"] if isinstance(catalog, dict) else catalog:
