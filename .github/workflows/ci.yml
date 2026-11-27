@@ -73,6 +73,12 @@ jobs:
           if grep -rq --include="*.html" "pagead2.googlesyndication.com" out/; then echo "AdSense script must not load before it is connected"; exit 1; fi
           if grep -rq --include="*.html" "data-ad-slot-preview" out/; then echo "AdSense preview slot leaked into production build"; exit 1; fi
 
+      # GA4 は本番ビルドだけで読み込む（data/analytics.ts）
+      - name: GA4 tag in production build
+        run: |
+          grep -q "G-HJT4YXBKPR" out/ja/index.html || { echo "GA4 tag missing in production build"; exit 1; }
+          grep -q "googletagmanager.com/gtag/js" out/ja/index.html || { echo "gtag.js missing in production build"; exit 1; }
+
       # 品質検査（title・description・lang・JSON-LD・リンク切れ・sitemap）
       - name: Site check (production, before launch)
         run: |
@@ -126,6 +132,7 @@ jobs:
           grep -q '/SONARIA-Website/_next/' out/ja/index.html || { echo "basePath not applied"; exit 1; }
           grep -q 'href="/SONARIA-Website/ja/scores/"' out/ja/index.html || { echo "links missing basePath"; exit 1; }
           grep -q 'noindex' out/ja/index.html || { echo "preview noindex missing"; exit 1; }
+          ! grep -rq --include="*.html" "G-HJT4YXBKPR" out/ || { echo "GA4 must not load in preview"; exit 1; }
           grep -rq "デモ講師" out/ || { echo "preview should include demo teachers"; exit 1; }
           grep -q '/SONARIA-Website/images/site/violin-scroll-score.jpg' out/ja/index.html || { echo "image basePath missing"; exit 1; }
         env:
