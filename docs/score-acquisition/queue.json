@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Mozart",
     "stage": "string_quartet",
-    "last_work": "K.575",
-    "note": "Next K.589 and K.590 (remaining Prussian quartets). K.465 K.499 K.575 remain research_needed; verify site inventory, parts and rights."
+    "last_work": "K.590",
+    "note": "Completed chronological pass of Mozart numbered String Quartets Nos.1–23 in queue; next check remaining Mozart string quartet variants/other quartets and then move to violin_sonata after confirming coverage. K.589 and K.590 need Claude review and site inventory check."
   },
   "items": [
     {
@@ -6799,6 +6799,116 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Verify original PDF contents, completeness, all four parts and editorial alignment, duplicate Work/Edition/ScoreAsset, and Japan republication rights. No automatic download, approval or publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-string-quartet-no22-k589-breitkopf-1882",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.22 in B-flat major (Prussian No.2)",
+      "opus_catalog": "K.589",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.22_K.589_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1882",
+        "editor": "Mozarts Werke Serie XIV editors (Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee; exact editor not specified)",
+        "scope": "Complete score (historical) plus C.F. Peters four separate parts (different edition)",
+        "plate": "W.A.M. 589",
+        "imslp_file_id": "64148",
+        "alternative_score_file_id": "01802",
+        "part_file_ids": {
+          "violin_1": "01890",
+          "violin_2": "01891",
+          "viola": "01892",
+          "cello": "01893"
+        },
+        "parts_publisher": "C.F. Peters, Leipzig, ca.1882, plate 6686",
+        "parts_editor": "Andreas Moser; Hugo Becker",
+        "edition_comparison": "Breitkopf score #64148 vs Peters four parts #01890, #01891, #01892, #01893. Johann André 1824 complete score #428121; Neue Mozart-Ausgabe (Ludwig Finscher, Bärenreiter 1961) #484902 is research reference only pending rights. NMA #484903 is a fragment, not a complete score. Cross-edition discrepancies require inspection."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.22_K.589_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.22_K.589_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP metadata: Mozart Quartet No.22 K.589, 1790, four movements, 2 violins viola cello; Breitkopf & Härtel 1882 score #64148 plate W.A.M. 589, C.F. Peters ca.1882 parts #01890, #01891, #01892, #01893, Moser/Becker editors. PDF not opened."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "historical_publisher_editor_metadata_checked_pdf_uninspected",
+        "parts": "all_four_file_identifiers_listed_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Verify all four parts, editorial differences between Breitkopf and Peters, movement/page integrity, scan legibility, PDF hashes and SONARIA catalog duplicates, and Japanese redistribution rights. Do not download, approve or publish.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-string-quartet-no23-k590-breitkopf-1882",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.23 in F major (Prussian No.3)",
+      "opus_catalog": "K.590",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.23_K.590_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1882",
+        "editor": "Mozarts Werke Serie XIV editors (Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee; exact editor not specified)",
+        "scope": "Complete score (historical) plus C.F. Peters four separate parts (different edition)",
+        "plate": "W.A.M. 590",
+        "imslp_file_id": "64149",
+        "alternative_score_file_id": "01803",
+        "part_file_ids": {
+          "violin_1": "01894",
+          "violin_2": "01895",
+          "viola": "01896",
+          "cello": "01897"
+        },
+        "parts_publisher": "C.F. Peters, Leipzig, ca.1882, plate 6686",
+        "parts_editor": "Andreas Moser; Hugo Becker",
+        "edition_comparison": "Breitkopf score #64149 vs Peters four parts #01894, #01895, #01896, #01897. Neue Mozart-Ausgabe (Ludwig Finscher, Bärenreiter 1961) #484904 is research reference only pending rights. Autograph score #641159; verify against first/early print variants. Cross-edition discrepancies require inspection."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.23_K.590_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.23_K.590_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP metadata: Mozart Quartet No.23 K.590, 1790, four movements, 2 violins viola cello; Breitkopf & Härtel 1882 score #64149 plate W.A.M. 590, C.F. Peters ca.1882 parts #01894, #01895, #01896, #01897, Moser/Becker editors. PDF not opened."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "historical_publisher_editor_metadata_checked_pdf_uninspected",
+        "parts": "all_four_file_identifiers_listed_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Verify all four parts, editorial differences between Breitkopf and Peters, movement/page integrity, scan legibility, PDF hashes and SONARIA catalog duplicates, and Japanese redistribution rights. Do not download, approve or publish.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
