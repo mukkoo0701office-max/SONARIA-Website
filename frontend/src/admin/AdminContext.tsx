@@ -6,6 +6,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { adminAuth, type Session } from "./auth";
 import { createDemoRepository } from "./demo/demoRepository";
+import { createSupabaseRepository } from "./supabase/supabaseRepository";
 import { adminCopy, type AdminCopy } from "./i18n";
 import type { AdminRepository } from "./repository";
 import type { Locale } from "./types";
@@ -58,8 +59,8 @@ export function AdminProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  // デモのセッションのときだけデモのリポジトリを使う。サーバー接続の実装は未作成（docs/admin/ADMIN_SYSTEM_DESIGN.md）
-  const repo = useMemo<AdminRepository | null>(() => (session?.kind === "demo" ? createDemoRepository() : null), [session]);
+  // デモのセッションはデモのデータ、管理人としてログインしたら Supabase の実データ
+  const repo = useMemo<AdminRepository | null>(() => (session?.kind === "demo" ? createDemoRepository() : session?.kind === "server" ? createSupabaseRepository() : null), [session]);
 
   const value = useMemo(() => ({ locale, setLocale, t: adminCopy[locale], repo, session, ready, refreshSession }), [locale, setLocale, repo, session, ready, refreshSession]);
   return <AdminCtx.Provider value={value}>{children}</AdminCtx.Provider>;

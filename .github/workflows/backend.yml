@@ -58,7 +58,7 @@ jobs:
       - name: Integration tests
         run: |
           eval "$(supabase status -o env)"
-          export API_URL DB_URL ANON_KEY
+          export API_URL DB_URL ANON_KEY SERVICE_ROLE_KEY
           ORIGIN=http://localhost:4173 RATE_LIMIT_PER_HOUR=5 node supabase/tests/integration.mjs
 
       - name: Function logs

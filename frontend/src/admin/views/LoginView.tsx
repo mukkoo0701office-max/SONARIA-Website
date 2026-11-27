@@ -9,6 +9,7 @@ import { adminRoutes, Badge, buttonPrimary, buttonSecondary, inputClass } from "
 export default function LoginView() {
   const { t, locale, setLocale, session, ready, refreshSession } = useAdmin();
   const router = useRouter();
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [result, setResult] = useState<LoginResult | null>(null);
   const [busy, setBusy] = useState(false);
@@ -20,7 +21,7 @@ export default function LoginView() {
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     setBusy(true);
-    const r = await adminAuth.login(password);
+    const r = await adminAuth.login(email, password);
     setBusy(false);
     setPassword(""); // 入力したパスワードを画面に残さない
     setResult(r);
@@ -39,7 +40,9 @@ export default function LoginView() {
   const message =
     result?.status === "invalid"
       ? t.login.invalid
-      : result?.status === "locked"
+      : result?.status === "not_admin"
+        ? t.login.notAdmin
+        : result?.status === "locked"
         ? t.login.locked(result.retryAfterSeconds)
         : result?.status === "not_connected"
           ? t.login.notConnected
@@ -62,6 +65,19 @@ export default function LoginView() {
           <p className="mt-1 text-center text-[13px] text-muted">{t.login.lead}</p>
 
           <form onSubmit={submit} className="mt-6 grid gap-3" noValidate>
+            <label htmlFor="admin-email" className="text-[13px] font-semibold">
+              {t.login.email}
+            </label>
+            <input
+              id="admin-email"
+              type="email"
+              autoComplete="username"
+              inputMode="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              aria-invalid={result?.status === "invalid"}
+              className={inputClass}
+            />
             <label htmlFor="admin-password" className="text-[13px] font-semibold">
               {t.login.password}
             </label>
@@ -80,7 +96,7 @@ export default function LoginView() {
                 {message}
               </p>
             )}
-            <button type="submit" disabled={busy || !password} className={`${buttonPrimary} py-3`}>
+            <button type="submit" disabled={busy || !password || !email} className={`${buttonPrimary} py-3`}>
               {busy ? t.login.submitting : t.login.submit}
             </button>
             {!isAuthConnected() && (

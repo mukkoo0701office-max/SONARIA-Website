@@ -3,7 +3,7 @@
 import { execFileSync } from "node:child_process";
 import assert from "node:assert/strict";
 
-const { API_URL, DB_URL, ANON_KEY, ORIGIN } = process.env;
+const { API_URL, DB_URL, ANON_KEY, ORIGIN, SERVICE_ROLE_KEY } = process.env;
 for (const [k, v] of Object.entries({ API_URL, DB_URL, ANON_KEY, ORIGIN })) if (!v) throw new Error(`${k} is not set`);
 const endpoint = `${API_URL}/functions/v1/submit`;
 
@@ -135,6 +135,77 @@ await check("停止防止用の ping は一般利用者が呼べる", async () =
   assert.equal(r.status, 200);
   assert.equal(await r.text(), "true");
 });
+
+// ── 管理画面（管理人だけが読める・変えられる）──────────────────
+async function createUser(email, password) {
+  const r = await fetch(`${API_URL}/auth/v1/admin/users`, {
+    method: "POST",
+    headers: { apikey: SERVICE_ROLE_KEY, Authorization: `Bearer ${SERVICE_ROLE_KEY}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password, email_confirm: true }),
+  });
+  const j = await r.json();
+  if (!r.ok) throw new Error(`create user ${r.status} ${JSON.stringify(j)}`);
+  return j.id;
+}
+async function signIn(email, password) {
+  const r = await fetch(`${API_URL}/auth/v1/token?grant_type=password`, { method: "POST", headers: { apikey: ANON_KEY, "Content-Type": "application/json" }, body: JSON.stringify({ email, password }) });
+  const j = await r.json();
+  if (!r.ok) throw new Error(`sign in ${r.status}`);
+  return j.access_token;
+}
+const asUser = (token) => (path, init = {}) =>
+  fetch(`${API_URL}/rest/v1/${path}`, { ...init, headers: { apikey: ANON_KEY, Authorization: `Bearer ${token}`, "Content-Type": "application/json" } });
+
+if (SERVICE_ROLE_KEY) {
+  const adminId = await createUser("admin@example.com", "admin-pass-123456");
+  await createUser("someone@example.com", "someone-pass-123456");
+  psql(`insert into public.admins (user_id) values ('${adminId}')`);
+  const admin = asUser(await signIn("admin@example.com", "admin-pass-123456"));
+  const someone = asUser(await signIn("someone@example.com", "someone-pass-123456"));
+  const targetId = psql("select id from public.submissions where kind = 'performance_quote' limit 1");
+
+  await check("管理人は申し込みを読める・ログインしただけの人は読めない", async () => {
+    const a = await (await admin("submissions?select=id,contact_email")).json();
+    assert.ok(Array.isArray(a) && a.length > 0, JSON.stringify(a).slice(0, 100));
+    const r = await someone("submissions?select=id,contact_email");
+    const t = await r.text();
+    assert.ok(r.status !== 200 || t === "[]", `status ${r.status}: ${t.slice(0, 100)}`);
+  });
+
+  await check("管理人は状態・既読・メモ・運営側の項目を変えられ、履歴が残る", async () => {
+    const r = await admin("rpc/admin_update_submission", { method: "POST", body: JSON.stringify({ p_id: targetId, p_patch: { status: "quoted", read: true, admin_note: "見積送付済み", admin_data: { dueDate: "2027-01-10" } }, p_note: "見積を送った" }) });
+    const j = await r.json();
+    assert.equal(r.status, 200, JSON.stringify(j));
+    assert.equal(j.status, "quoted");
+    assert.ok(j.read_at);
+    assert.equal(j.admin_note, "見積送付済み");
+    assert.equal(j.admin_data.dueDate, "2027-01-10");
+    assert.equal(psql(`select to_status || ':' || coalesce(note,'') from public.submission_events where submission_id = '${targetId}'`), "quoted:見積を送った");
+    const ev = await (await admin(`submission_events?select=to_status&submission_id=eq.${targetId}`)).json();
+    assert.equal(ev.length, 1);
+  });
+
+  await check("管理人でも、お客さんの入力内容（payload・氏名・連絡先）は変えられない", async () => {
+    const before = psql(`select contact_name || payload::text from public.submissions where id = '${targetId}'`);
+    await admin("rpc/admin_update_submission", { method: "POST", body: JSON.stringify({ p_id: targetId, p_patch: { contact_name: "改ざん", payload: {} } }) });
+    const r = await admin(`submissions?id=eq.${targetId}`, { method: "PATCH", body: JSON.stringify({ contact_name: "改ざん" }) });
+    assert.notEqual(r.status, 204, "direct PATCH must be refused");
+    assert.equal(psql(`select contact_name || payload::text from public.submissions where id = '${targetId}'`), before);
+  });
+
+  await check("管理人以外は更新の関数を使えない・ありえない状態は拒否される", async () => {
+    const r = await someone("rpc/admin_update_submission", { method: "POST", body: JSON.stringify({ p_id: targetId, p_patch: { status: "completed" } }) });
+    assert.notEqual(r.status, 200);
+    const r2 = await admin("rpc/admin_update_submission", { method: "POST", body: JSON.stringify({ p_id: targetId, p_patch: { status: "hacked" } }) });
+    assert.notEqual(r2.status, 200);
+    assert.equal(psql(`select status from public.submissions where id = '${targetId}'`), "quoted");
+  });
+
+  await check("ログイン直後の管理人判定（is_admin）が正しい", async () => {
+    assert.equal(await (await admin("rpc/is_admin", { method: "POST", body: "{}" })).text(), "true");
+    assert.equal(await (await someone("rpc/is_admin", { method: "POST", body: "{}" })).text(), "false");
+  });
+}
 
 console.log(failed ? `${failed} failed` : "all passed");
 process.exit(failed ? 1 : 0);
