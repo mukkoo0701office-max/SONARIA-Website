@@ -67,11 +67,11 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
         </div>
       )}
       <header className="sticky top-0 z-30 border-b border-line bg-card/95 backdrop-blur">
-        <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-3 px-4 py-3">
-          <div className="flex items-center gap-3">
+        <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-2 px-3 py-3 sm:gap-3 sm:px-4">
+          <div className="flex min-w-0 items-center gap-2 sm:gap-3">
             <button
               type="button"
-              className="rounded-control border border-line px-2.5 py-1.5 text-[13px] lg:hidden"
+              className="whitespace-nowrap rounded-control border border-line px-2.5 py-1.5 text-[13px] lg:hidden"
               aria-expanded={menuOpen}
               aria-controls="admin-mobile-nav"
               onClick={() => setMenuOpen((o) => !o)}
@@ -80,14 +80,14 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
             </button>
             {/* 仮: ロゴの原本が来るまでテキストのロゴ（CLAUDE.md） */}
             <Link href={adminRoutes.dashboard} className="font-brand text-lg tracking-[0.12em] text-navy">
-              SONARIA <span className="ml-1 align-middle font-sans text-[12px] tracking-normal text-muted">{t.brand.replace("SONARIA ", "")}</span>
+              SONARIA <span className="ml-1 hidden align-middle font-sans text-[12px] tracking-normal text-muted sm:inline">{t.brand.replace("SONARIA ", "")}</span>
             </Link>
           </div>
-          <div className="flex items-center gap-2">
-            <button type="button" onClick={() => setLocale(locale === "ja" ? "en" : "ja")} className="rounded-control border border-line px-3 py-1.5 text-[13px] hover:bg-subtle" lang={locale === "ja" ? "en" : "ja"}>
+          <div className="flex flex-none items-center gap-1.5 sm:gap-2">
+            <button type="button" onClick={() => setLocale(locale === "ja" ? "en" : "ja")} className="whitespace-nowrap rounded-control border border-line px-2.5 py-1.5 text-[13px] hover:bg-subtle sm:px-3" lang={locale === "ja" ? "en" : "ja"}>
               {t.langSwitch}
             </button>
-            <button type="button" onClick={logout} className="rounded-control border border-navy px-3 py-1.5 text-[13px] text-navy hover:bg-subtle">
+            <button type="button" onClick={logout} className="whitespace-nowrap rounded-control border border-navy px-2.5 py-1.5 text-[13px] text-navy hover:bg-subtle sm:px-3">
               {t.logout}
             </button>
           </div>
