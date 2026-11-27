@@ -12,6 +12,7 @@ import {
   copyRows,
   emailPattern,
   inputClass,
+  showHeading,
 } from "@/components/forms/FormParts";
 import {
   budgetRanges,
@@ -126,7 +127,7 @@ export default function PerformanceQuoteForm({ locale }: { locale: Locale }) {
       return;
     }
     setStep("confirm");
-    requestAnimationFrame(() => headingRef.current?.focus());
+    requestAnimationFrame(() => showHeading(headingRef.current));
   }
 
   async function handleSubmit() {
@@ -136,7 +137,7 @@ export default function PerformanceQuoteForm({ locale }: { locale: Locale }) {
     setSubmitting(false);
     setResult(r);
     setStep("done");
-    requestAnimationFrame(() => headingRef.current?.focus());
+    requestAnimationFrame(() => showHeading(headingRef.current));
   }
 
   if (step !== "edit") {

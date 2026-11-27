@@ -144,10 +144,12 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   await page.locator("#pd-consent").check();
   await page.locator('form:has(#pd-name) button[type="submit"]').click();
   await page.locator("h2", { hasText: "入力内容の確認" }).waitFor();
+  await page.waitForTimeout(800); // スクロールと描画が終わるのを待つ
   await shot(page, `${vpName}-ja-performance-confirm`);
   await page.locator("button", { hasText: "無料で見積もりを依頼する" }).click();
   await page.locator("h2", { hasText: "オンライン送信は準備中です" }).waitFor();
   check(`${vpName}: performance form shows not-connected (no fake success)`, (await page.locator("h2", { hasText: "受け付けました" }).count()) === 0);
+  await page.waitForTimeout(800);
   await shot(page, `${vpName}-ja-performance-result`, false);
 
   // 講師登録: 講師検索の近くに登録ボタン → 登録ページ

@@ -293,7 +293,7 @@ export function FormReview({
   return (
     <div className="mx-auto max-w-content">
       <div className={`rounded-card border p-6 ${warn ? "border-navy bg-subtle" : "border-line bg-card"}`} role={step === "done" ? "status" : undefined}>
-        <h2 ref={headingRef} tabIndex={-1} className="text-xl font-bold">
+        <h2 ref={headingRef} tabIndex={-1} className="scroll-mt-6 text-xl font-bold">
           {title}
         </h2>
         <p className="mt-2 whitespace-pre-line text-[14px] leading-relaxed">{body}</p>
@@ -337,6 +337,14 @@ export function FormReview({
       </div>
     </div>
   );
+}
+
+/** 画面が切り替わったとき（確認・結果）に見出しを画面の上端に出し、フォーカスを移す（スクリーンリーダーにも伝わる） */
+export function showHeading(el: HTMLElement | null) {
+  if (!el) return;
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  el.scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" });
+  el.focus({ preventScroll: true });
 }
 
 /** 入力内容をクリップボードにコピーする（送信できなかったときの控え） */
