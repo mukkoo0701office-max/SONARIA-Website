@@ -1,0 +1,70 @@
+# 本番の Supabase へ反映する（手動実行のみ）。データベース定義（migrations）と受付関数（submit）を公開する。
+# 必要な Secrets（チャットやコードには書かない）:
+#   SUPABASE_ACCESS_TOKEN … https://supabase.com/dashboard/account/tokens で作るトークン
+#   SUPABASE_DB_PASSWORD  … プロジェクト作成時の Database password
+# 任意の Variables: ALLOWED_ORIGINS（カンマ区切り。本番ドメインが決まったら追加）
+name: Supabase deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: "本番の Supabase に反映します。よければ deploy と入力"
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: supabase-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      # プロジェクト ID は公開 URL に含まれる値で、秘密ではない
+      PROJECT_REF: oqhehjaeqjsuyblokonz
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
+      ALLOWED_ORIGINS: ${{ vars.ALLOWED_ORIGINS || 'https://mukkoo0701office-max.github.io' }}
+    steps:
+      - name: Confirm
+        run: |
+          [ "${{ inputs.confirm }}" = "deploy" ] || { echo "confirm に deploy と入力してください"; exit 1; }
+          [ -n "$SUPABASE_ACCESS_TOKEN" ] || { echo "Secrets に SUPABASE_ACCESS_TOKEN がありません"; exit 1; }
+          [ -n "$SUPABASE_DB_PASSWORD" ] || { echo "Secrets に SUPABASE_DB_PASSWORD がありません"; exit 1; }
+
+      - uses: actions/checkout@v4
+
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Link project
+        run: supabase link --project-ref "$PROJECT_REF"
+
+      - name: Show pending migrations
+        run: supabase migration list
+
+      - name: Apply migrations
+        run: supabase db push
+
+      - name: Set function settings
+        run: supabase secrets set --project-ref "$PROJECT_REF" "ALLOWED_ORIGINS=$ALLOWED_ORIGINS" "RATE_LIMIT_PER_HOUR=10"
+
+      - name: Deploy function
+        run: supabase functions deploy submit --project-ref "$PROJECT_REF" --no-verify-jwt
+
+      - name: Smoke test (no data written)
+        run: |
+          URL="https://$PROJECT_REF.supabase.co/functions/v1/submit"
+          ORIGIN="${ALLOWED_ORIGINS%%,*}"
+          sleep 5
+          code=$(curl -s -o /dev/null -w '%{http_code}' -X OPTIONS -H "Origin: $ORIGIN" "$URL")
+          echo "OPTIONS -> $code"; [ "$code" = "204" ]
+          # 入力が空なので検証で 400 になり、保存されない
+          code=$(curl -s -o /tmp/r.json -w '%{http_code}' -X POST -H "Origin: $ORIGIN" -H "Content-Type: application/json" \
+            -H "Idempotency-Key: 00000000-0000-4000-8000-000000000000" -d '{}' "$URL")
+          echo "POST {} -> $code $(cat /tmp/r.json)"; [ "$code" = "400" ]

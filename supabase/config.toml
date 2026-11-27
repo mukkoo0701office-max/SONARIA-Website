@@ -1,0 +1,41 @@
+# Supabase CLI の設定（CI のローカル検証用）。本番プロジェクトの設定はダッシュボードで行う。
+# 書いていない項目は CLI の既定値を使う。
+project_id = "sonaria"
+
+[api]
+enabled = true
+port = 54321
+# 公開 API に出すのは public スキーマだけ。private スキーマ（送信回数制限・内部設定）は API から見えない
+schemas = ["public"]
+
+[db]
+port = 54322
+major_version = 17
+
+[studio]
+enabled = false
+
+[inbucket]
+enabled = false
+
+[realtime]
+enabled = false
+
+[storage]
+enabled = false
+
+[analytics]
+enabled = false
+
+[auth]
+enabled = true
+site_url = "http://127.0.0.1:3000"
+# 一般の新規登録は受け付けない（管理人アカウントはダッシュボードで作る）
+enable_signup = false
+
+[edge_runtime]
+enabled = true
+
+# 公開の申し込み受付。JWT ではなく、関数内の検証（Origin・形式・送信回数制限・二重送信防止）で守る
+[functions.submit]
+verify_jwt = false

@@ -1,0 +1,66 @@
+# 申し込みの保存基盤（Supabase）の検証。CI の中でローカルの Supabase を起動して確かめる。
+# 本番の Supabase には接続しない（本番への反映は supabase-deploy.yml を手動で実行する）。
+name: Backend
+
+on:
+  pull_request:
+    paths:
+      - "supabase/**"
+      - ".github/workflows/backend.yml"
+  push:
+    branches: [main]
+    paths:
+      - "supabase/**"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Unit tests (validation)
+        run: node --experimental-strip-types --test supabase/tests/validate.test.mts
+
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Type-check Edge Function
+        run: deno check supabase/functions/submit/index.ts
+
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Start Supabase (local) and apply migrations
+        run: supabase start
+
+      - name: Serve Edge Functions
+        run: |
+          printf 'ALLOWED_ORIGINS=http://localhost:4173\nRATE_LIMIT_PER_HOUR=5\n' > /tmp/functions.env
+          nohup supabase functions serve --env-file /tmp/functions.env > /tmp/functions.log 2>&1 &
+          eval "$(supabase status -o env)"
+          for i in $(seq 1 60); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' -X OPTIONS -H 'Origin: http://localhost:4173' "$API_URL/functions/v1/submit" || true)
+            if [ "$code" = "204" ]; then echo "functions ready"; exit 0; fi
+            sleep 2
+          done
+          echo "functions did not start"; cat /tmp/functions.log; exit 1
+
+      - name: Integration tests
+        run: |
+          eval "$(supabase status -o env)"
+          export API_URL DB_URL ANON_KEY
+          ORIGIN=http://localhost:4173 RATE_LIMIT_PER_HOUR=5 node supabase/tests/integration.mjs
+
+      - name: Function logs
+        if: always()
+        run: tail -n 100 /tmp/functions.log || true
