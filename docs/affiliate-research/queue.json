@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-11-27",
+  "updated_at": "2026-11-28",
   "status": "research_only",
   "max_items_per_score_page": 2,
   "affiliate_tag": "mukkoo-22",
@@ -523,7 +523,9 @@
       "date_checked": "2026-11-27",
       "last_amazon_search_at": "2026-11-27",
       "amazon_verification_status": "unverified_exact_amazon_japan_item",
-      "verification_notes": "2026-11-27 follow-up: searched Amazon-related product listings and exact site:amazon.co.jp/dp/ catalogue-number queries for HN210, HN9210, HN9211. No independently verified Amazon.co.jp detail page or ASIN matching exact Henle edition. Other retailer and recording matches are insufficient. Keep pending_review; no tagged URL."
+      "verification_notes": "2026-11-27 follow-up: searched Amazon-related product listings and exact site:amazon.co.jp/dp/ catalogue-number queries for HN210, HN9210, HN9211. No independently verified Amazon.co.jp detail page or ASIN matching exact Henle edition. Other retailer and recording matches are insufficient. Keep pending_review; no tagged URL.",
+      "catalog_crosscheck_2026_11_28": "Henle 2026–27 general catalogue lists HN210 as playing parts and HN9210 as study score, both Op.42 + Op.50 (Hob.III:43–49). Key of Op.50 No.4 differs across publisher catalogue editions (2026–27 excerpt: f; 2025–26 excerpt: F-sharp); do not auto-populate key metadata until current product contents or score verified. Amazon.co.jp direct product URL/ASIN not verified.",
+      "catalog_crosscheck_source": "https://www.henle.de/media/b0/63/c1/1772528772/2026-2027%20GC.pdf"
     },
     {
       "id": "haydn-henle-hn9210",
@@ -555,7 +557,9 @@
       "date_checked": "2026-11-27",
       "last_amazon_search_at": "2026-11-27",
       "amazon_verification_status": "unverified_exact_amazon_japan_item",
-      "verification_notes": "2026-11-27 follow-up: searched Amazon-related product listings and exact site:amazon.co.jp/dp/ catalogue-number queries for HN210, HN9210, HN9211. No independently verified Amazon.co.jp detail page or ASIN matching exact Henle edition. Other retailer and recording matches are insufficient. Keep pending_review; no tagged URL."
+      "verification_notes": "2026-11-27 follow-up: searched Amazon-related product listings and exact site:amazon.co.jp/dp/ catalogue-number queries for HN210, HN9210, HN9211. No independently verified Amazon.co.jp detail page or ASIN matching exact Henle edition. Other retailer and recording matches are insufficient. Keep pending_review; no tagged URL.",
+      "catalog_crosscheck_2026_11_28": "Henle 2026–27 general catalogue lists HN210 as playing parts and HN9210 as study score, both Op.42 + Op.50 (Hob.III:43–49). Key of Op.50 No.4 differs across publisher catalogue editions (2026–27 excerpt: f; 2025–26 excerpt: F-sharp); do not auto-populate key metadata until current product contents or score verified. Amazon.co.jp direct product URL/ASIN not verified.",
+      "catalog_crosscheck_source": "https://www.henle.de/media/b0/63/c1/1772528772/2026-2027%20GC.pdf"
     },
     {
       "id": "haydn-henle-hn9211",
@@ -1241,16 +1245,22 @@
   "store_id": "mukkoo-22",
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
-    "date": "2026-11-27",
-    "focus": "Haydn next-pass Amazon.co.jp exact-product verification: Henle HN437, HN216; Peters EP190",
-    "result": "Targeted Amazon.co.jp indexed-page searches for HN437, HN216, EP190 yielded no verifiable individual Amazon.co.jp product pages or ASINs. Search results for EP190 were unrelated Amazon Music podcasts, not printed scores. Existing EP190 queue item is eight historical violin sonata arrangements, not a Haydn string quartet: do not cross-link to quartet pages. No verified products and no new tagged links. Search index alone is insufficient for negative availability claims.",
+    "date": "2026-11-28",
+    "focus": "Haydn Henle HN210/HN9210 official 2026–27 catalogue format/work crosscheck; exact Amazon Japan item search for HN214/HN9214",
+    "result": "Publisher catalogue corroborates HN210 parts and HN9210 study score for Op.42/Op.50. Publisher catalogues disagree on key notation for Op.50 No.4; flag manual verification, do not infer metadata. Targeted Amazon.co.jp indexed /dp/ searches for HN214/HN9214/ISMN yielded no verified matching ASIN or individual item. All remain pending_review; no tagged links.",
     "new_candidates": 0,
     "new_publisher_confirmed": 0,
     "new_amazon_verified": 0,
     "checked_candidates": [
-      "haydn-peters-ep190-eight-violin-sonatas"
+      "haydn-henle-hn210",
+      "haydn-henle-hn9210",
+      "haydn-henle-hn214",
+      "haydn-henle-hn9214"
     ],
-    "source_urls": [],
-    "next": "Continue Haydn with publisher-number plus ISMN/ISBN lookups; only mark verified after Amazon.co.jp /dp/ page directly identifies matching printed edition, instrumentation and publisher. Avoid repeating identical indexed searches."
+    "source_urls": [
+      "https://www.henle.de/media/b0/63/c1/1772528772/2026-2027%20GC.pdf",
+      "https://www.henle.de/en/String-Quartets-Book-X-op.-76-Erdoedy-Quartets/HN-214"
+    ],
+    "next": "Verify Op.50 No.4 key against current Henle score; seek directly accessible Amazon.co.jp item page before recording ASIN or affiliate link."
   }
 }
