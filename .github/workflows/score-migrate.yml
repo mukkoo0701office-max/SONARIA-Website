@@ -44,8 +44,9 @@ jobs:
           ls /tmp/intake | head -50
       - name: Migrate
         run: |
+          set -o pipefail
           python tools/score-migration/migrate.py --approvals tools/score-migration/approvals.json \
-            --approvals tools/score-acquisition/intake_approvals.json --intake-dir /tmp/intake \
+            --approvals tools/score-acquisition/intake_approvals.json --intake-dir /tmp/intake --intake-release-tag scores-v2 \
             --repo . --release-tag scores-v1 --time-budget 18000 | tee /tmp/migrate-report.json
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

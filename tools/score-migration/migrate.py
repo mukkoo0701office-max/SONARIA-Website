@@ -52,15 +52,15 @@ def gh(*args: str) -> str:
     return r.stdout
 
 
-def ensure_release(tag: str) -> set[str]:
+def ensure_release(tag: str, title: str = "楽譜 PDF（旧サイトから移行・権利確認前）", notes: str = "SONARIA 楽譜ライブラリの PDF。旧サイトから移行したもので、運営者が公開前に権利を確認し、必要に応じて差し替え・削除する。") -> set[str]:
     """リリースが無ければ作る。既存の添付ファイル名を返す"""
     try:
         out = gh("release", "view", tag, "--json", "assets")
     except RuntimeError:
         gh(
             "release", "create", tag,
-            "--title", "楽譜 PDF（旧サイトから移行・権利確認前）",
-            "--notes", "SONARIA 楽譜ライブラリの PDF。旧サイトから移行したもので、運営者が公開前に権利を確認し、必要に応じて差し替え・削除する。",
+            "--title", title,
+            "--notes", notes,
             "--prerelease",
             "--target", os.environ.get("GITHUB_SHA", "HEAD"),
         )
@@ -95,6 +95,8 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--approvals", required=True, action="append")
     ap.add_argument("--intake-dir", default="")
+    # 1 つのリリースに置ける添付ファイルは 1000 個まで。手動取得分は別のリリースに置く
+    ap.add_argument("--intake-release-tag", default="")
     ap.add_argument("--repo", required=True)
     ap.add_argument("--release-tag", default="scores-v1")
     ap.add_argument("--time-budget", type=int, default=5 * 3600)
@@ -122,8 +124,14 @@ def main() -> int:
     names = unique_names([(w, composers[w["composerId"]], a) for w in approvals["works"] for e in w["editions"] if e["rights"]["status"] != "rejected" for a in e["assets"]])
 
     repo = os.environ["GITHUB_REPOSITORY"]
-    tag = args.release_tag
-    released = ensure_release(tag)
+    released_by_tag = {args.release_tag: ensure_release(args.release_tag)}
+    if args.intake_release_tag and args.intake_release_tag not in released_by_tag:
+        released_by_tag[args.intake_release_tag] = ensure_release(
+            args.intake_release_tag,
+            "楽譜 PDF（管理人が取得・権利確認前）",
+            "SONARIA 楽譜ライブラリの PDF。管理人が IMSLP などから取得したもので、運営者が公開前に権利を確認し、必要に応じて差し替え・削除する。",
+        )
+    released = released_by_tag[args.release_tag]
     session = requests.Session()
     session.headers["User-Agent"] = USER_AGENT
     report = {"from_old_site": 0, "renamed": 0, "unchanged": 0, "skipped_rejected": 0, "failed": [], "out_of_time": 0}
@@ -145,6 +153,8 @@ def main() -> int:
                 if not ID_RE.match(asset["id"]) or asset["part"] not in PARTS:
                     raise SystemExit(f"invalid asset: {asset['id']} / {asset['part']} ({work['id']})")
                 original_sha = asset["sha256"]
+                tag = args.intake_release_tag if asset.get("intake_file") and args.intake_release_tag else args.release_tag
+                released = released_by_tag[tag]
                 name = names[(work["id"], asset["id"])]
                 old_name = f"{work['id']}--{asset['id']}.pdf"
                 remote = f"https://github.com/{repo}/releases/download/{tag}/{name}"
@@ -234,6 +244,8 @@ def main() -> int:
         if editions_out:
             works_out.append({k: v for k, v in work.items() if k != "editions"} | {"editions": editions_out})
 
+    tag = args.release_tag
+    released = released_by_tag[tag]
     if not args.keep_legacy:
         legacy_names = {f"{w['id']}--{a['id']}.pdf" for w in approvals["works"] for e in w["editions"] for a in e["assets"]}
         for n in sorted(released & legacy_names):
