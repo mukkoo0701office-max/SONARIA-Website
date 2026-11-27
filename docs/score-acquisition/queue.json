@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Beethoven",
     "stage": "string_quartet",
-    "last_work": "Op.18 No.3",
-    "note": "Next Op.18 No.4; verify score/parts edition consistency and SONARIA site inventory. No PDF downloads or rights approval."
+    "last_work": "Op.18 No.6",
+    "note": "Next Op.59 No.1. Confirm edition matching, score and all individual parts, and SONARIA catalog duplication; no downloads/rights approval."
   },
   "items": [
     {
@@ -10810,6 +10810,342 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Historical editions are reputable but no PDF inspection or matching-edition audit. Japan republication rights unknown. Site inventory not fully checked. No download, approval or publication.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-op18-no4-roentgen-breitkopf-parts",
+      "composer": "Ludwig van Beethoven",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.4 in C minor",
+      "opus_catalog": "Op.18 No.4",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.4%2C_Op.18%2C_No.4_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1886 (parts); 1862 (score)",
+        "editor": "Engelbert Röntgen (parts); score editor unknown",
+        "scope": "Complete parts bundle, separate historical complete score",
+        "imslp_file_id": "293521",
+        "file_pages": 46,
+        "plate": "16946",
+        "edition_comparison": "Historical Breitkopf score (1862) and Röntgen edited parts (1886) are different editions; editorial differences not collated. Compare with earlier André score and independent parts before selection."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.4%2C_Op.18%2C_No.4_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "973804",
+        "edition_url": "https://imslp.org/wiki/String_Quartet_No.4%2C_Op.18%2C_No.4_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "unknown",
+        "publication_date": "1862",
+        "scope": "Complete score listed by IMSLP; PDF not inspected",
+        "evidence": "IMSLP Ludwig van Beethovens Werke Serie 6 score listing"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "293521",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.4%2C_Op.18%2C_No.4_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Engelbert Röntgen",
+          "scope": "Listed in combined four-part PDF; exact individual pages and full movement coverage not inspected",
+          "evidence": "IMSLP Complete Parts listing, not PDF examination"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "293521",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.4%2C_Op.18%2C_No.4_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Engelbert Röntgen",
+          "scope": "Listed in combined four-part PDF; exact individual pages and full movement coverage not inspected",
+          "evidence": "IMSLP Complete Parts listing, not PDF examination"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "293521",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.4%2C_Op.18%2C_No.4_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Engelbert Röntgen",
+          "scope": "Listed in combined four-part PDF; exact individual pages and full movement coverage not inspected",
+          "evidence": "IMSLP Complete Parts listing, not PDF examination"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "293521",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.4%2C_Op.18%2C_No.4_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Engelbert Röntgen",
+          "scope": "Listed in combined four-part PDF; exact individual pages and full movement coverage not inspected",
+          "evidence": "IMSLP Complete Parts listing, not PDF examination"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "different_edition",
+        "evidence": "Breitkopf 1862 score vs Röntgen/Breitkopf 1886 parts; textual match unverified"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "verified_score_parts_textual_match",
+        "confirmed_individual_part_page_ranges",
+        "pdf_visual_quality_review"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.4%2C_Op.18%2C_No.4_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP page lists score #973804 and complete parts #293521; PDF not accessed"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.4%2C_Op.18%2C_No.4_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP score #973804 (Breitkopf 1862), complete parts #293521 (Röntgen/Breitkopf 1886), four-string instrumentation; PDF not inspected"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_and_editor_metadata_checked_pdf_uninspected",
+        "parts": "combined_four_parts_listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Score/parts are different historical editions. Verify actual four part contents, movement completeness, readability, editorial variants, file accessibility, edition/reprint and Japan redistribution rights. SONARIA site inventory not fully compared. No PDF download, rights approval, or publication.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-op18-no5-roentgen-breitkopf-parts",
+      "composer": "Ludwig van Beethoven",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.5 in A major",
+      "opus_catalog": "Op.18 No.5",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.5%2C_Op.18_No.5_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1886 (parts); 1862 (score)",
+        "editor": "Engelbert Röntgen (parts); score editor unknown",
+        "scope": "Complete parts bundle, separate historical complete score",
+        "imslp_file_id": "293602",
+        "file_pages": 48,
+        "plate": "16947",
+        "edition_comparison": "Historical Breitkopf score (1862) and Röntgen edited parts (1886) are different editions; editorial differences not collated. Compare with earlier André score and independent parts before selection."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.5%2C_Op.18_No.5_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "973805",
+        "edition_url": "https://imslp.org/wiki/String_Quartet_No.5%2C_Op.18_No.5_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "unknown",
+        "publication_date": "1862",
+        "scope": "Complete score listed by IMSLP; PDF not inspected",
+        "evidence": "IMSLP Ludwig van Beethovens Werke Serie 6 score listing"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "293602",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.5%2C_Op.18_No.5_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Engelbert Röntgen",
+          "scope": "Listed in combined four-part PDF; exact individual pages and full movement coverage not inspected",
+          "evidence": "IMSLP Complete Parts listing, not PDF examination"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "293602",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.5%2C_Op.18_No.5_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Engelbert Röntgen",
+          "scope": "Listed in combined four-part PDF; exact individual pages and full movement coverage not inspected",
+          "evidence": "IMSLP Complete Parts listing, not PDF examination"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "293602",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.5%2C_Op.18_No.5_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Engelbert Röntgen",
+          "scope": "Listed in combined four-part PDF; exact individual pages and full movement coverage not inspected",
+          "evidence": "IMSLP Complete Parts listing, not PDF examination"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "293602",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.5%2C_Op.18_No.5_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Engelbert Röntgen",
+          "scope": "Listed in combined four-part PDF; exact individual pages and full movement coverage not inspected",
+          "evidence": "IMSLP Complete Parts listing, not PDF examination"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "different_edition",
+        "evidence": "Breitkopf 1862 score vs Röntgen/Breitkopf 1886 parts; textual match unverified"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "verified_score_parts_textual_match",
+        "confirmed_individual_part_page_ranges",
+        "pdf_visual_quality_review"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.5%2C_Op.18_No.5_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP page lists score #973805 and complete parts #293602; PDF not accessed"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.5%2C_Op.18_No.5_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP score #973805 (Breitkopf 1862), complete parts #293602 (Röntgen/Breitkopf 1886), four-string instrumentation; PDF not inspected"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_and_editor_metadata_checked_pdf_uninspected",
+        "parts": "combined_four_parts_listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Score/parts are different historical editions. Verify actual four part contents, movement completeness, readability, editorial variants, file accessibility, edition/reprint and Japan redistribution rights. SONARIA site inventory not fully compared. No PDF download, rights approval, or publication.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-op18-no6-roentgen-breitkopf-parts",
+      "composer": "Ludwig van Beethoven",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.6 in B-flat major",
+      "opus_catalog": "Op.18 No.6",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.6%2C_Op.18%2C_No.6_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1886 (parts); 1862 (score)",
+        "editor": "Engelbert Röntgen (parts); score editor unknown",
+        "scope": "Complete parts bundle, separate historical complete score",
+        "imslp_file_id": "293740",
+        "file_pages": 46,
+        "plate": "16948",
+        "edition_comparison": "Historical Breitkopf score (1862) and Röntgen edited parts (1886) are different editions; editorial differences not collated. Compare with earlier André score and independent parts before selection."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.6%2C_Op.18%2C_No.6_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "973806",
+        "edition_url": "https://imslp.org/wiki/String_Quartet_No.6%2C_Op.18%2C_No.6_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "unknown",
+        "publication_date": "1862",
+        "scope": "Complete score listed by IMSLP; PDF not inspected",
+        "evidence": "IMSLP Ludwig van Beethovens Werke Serie 6 score listing"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "293740",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.6%2C_Op.18%2C_No.6_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Engelbert Röntgen",
+          "scope": "Listed in combined four-part PDF; exact individual pages and full movement coverage not inspected",
+          "evidence": "IMSLP Complete Parts listing, not PDF examination"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "293740",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.6%2C_Op.18%2C_No.6_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Engelbert Röntgen",
+          "scope": "Listed in combined four-part PDF; exact individual pages and full movement coverage not inspected",
+          "evidence": "IMSLP Complete Parts listing, not PDF examination"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "293740",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.6%2C_Op.18%2C_No.6_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Engelbert Röntgen",
+          "scope": "Listed in combined four-part PDF; exact individual pages and full movement coverage not inspected",
+          "evidence": "IMSLP Complete Parts listing, not PDF examination"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "293740",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.6%2C_Op.18%2C_No.6_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Engelbert Röntgen",
+          "scope": "Listed in combined four-part PDF; exact individual pages and full movement coverage not inspected",
+          "evidence": "IMSLP Complete Parts listing, not PDF examination"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "different_edition",
+        "evidence": "Breitkopf 1862 score vs Röntgen/Breitkopf 1886 parts; textual match unverified"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "verified_score_parts_textual_match",
+        "confirmed_individual_part_page_ranges",
+        "pdf_visual_quality_review"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.6%2C_Op.18%2C_No.6_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP page lists score #973806 and complete parts #293740; PDF not accessed"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.6%2C_Op.18%2C_No.6_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP score #973806 (Breitkopf 1862), complete parts #293740 (Röntgen/Breitkopf 1886), four-string instrumentation; PDF not inspected"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_and_editor_metadata_checked_pdf_uninspected",
+        "parts": "combined_four_parts_listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Score/parts are different historical editions. Verify actual four part contents, movement completeness, readability, editorial variants, file accessibility, edition/reprint and Japan redistribution rights. SONARIA site inventory not fully compared. No PDF download, rights approval, or publication.",
       "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null
