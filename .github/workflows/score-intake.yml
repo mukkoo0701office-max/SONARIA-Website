@@ -10,6 +10,9 @@ on:
       - "tools/score-acquisition/**"
       - ".github/workflows/score-intake.yml"
   workflow_dispatch:
+  # GPT がキューを毎時更新するため、照合と取得リストも定期的に作り直す（main にマージ後に有効）
+  schedule:
+    - cron: "17 */3 * * *"
 
 permissions:
   contents: write
@@ -69,6 +72,7 @@ jobs:
       - name: Inspect
         run: |
           python tools/score-acquisition/site_duplicates.py /tmp/queue.json /tmp/out/site_duplicates.json /tmp/out/site_duplicates.md
+          python tools/score-acquisition/download_list.py /tmp/queue.json /tmp/out/site_duplicates.json /tmp/out/download_list.md
           python tools/score-acquisition/intake.py --queue /tmp/queue.json --files /tmp/files \
             --catalog frontend/src/data/scores/catalog.json --prev /tmp/prev.json --out /tmp/out
 
