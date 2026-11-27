@@ -1,0 +1,637 @@
+{
+ "version": 1,
+ "note": "管理人が IMSLP からブラウザで取得した PDF（2026-11-27）。パート譜がそろう作品のみ。Op.1 第4〜6番は第1ヴァイオリン（#1069096）が無いため保留。",
+ "works": [
+  {
+   "id": "haydn-string-quartets-op1-1-3",
+   "composerId": "haydn",
+   "title": {
+    "ja": "弦楽四重奏曲集 Op.1（第1〜3番）",
+    "en": "String Quartets, Op. 1, Nos. 1–3"
+   },
+   "catalog": [
+    {
+     "type": "op",
+     "value": "1"
+    }
+   ],
+   "scoring": "string-quartet",
+   "players": 4,
+   "instruments": [
+    "cello",
+    "viola",
+    "violin"
+   ],
+   "genre": "chamber",
+   "era": "classical",
+   "publishedAt": "2026-11-27",
+   "updatedAt": "2026-11-27",
+   "sources": [
+    {
+     "label": "IMSLP: String Quartets, Op.1 (Haydn, Joseph)",
+     "url": "https://imslp.org/wiki/String_Quartets,_Op.1_(Haydn,_Joseph)"
+    }
+   ],
+   "editions": [
+    {
+     "id": "imslp-1069092",
+     "label": {
+      "ja": "C.F. Peters 版（Merton Music 復刻）のパート譜",
+      "en": "Parts: C.F. Peters edition (Merton Music reprint)"
+     },
+     "source": {
+      "type": "imslp",
+      "imslpFileId": "1069092",
+      "url": "https://imslp.org/wiki/String_Quartets,_Op.1_(Haydn,_Joseph)",
+      "note": null
+     },
+     "rights": {
+      "status": "pending",
+      "basis": "権利確認前（運営者が公開前に確認する）",
+      "evidence": [
+       "IMSLP の著作権表示: Public Domain",
+       "出版情報: Leipzig: C.F. Peters , n.d.(ca.1890).",
+       "復刻: London: Merton Music , No. 4526-27, 2002.",
+       "IMSLP ファイル番号: #1069092, #1069093, #1069094, #1069095"
+      ]
+     },
+     "assets": [
+      {
+       "id": "violin1",
+       "part": "violin1",
+       "intake_file": "IMSLP1069092-PMLP143602-4526.Haydn-Op001n1-3.pts_Violin_1.pdf",
+       "sha256": "8892cd016abe74ae501e4900a73b74455df6b96147182e2cfa20f8bd3413b12c",
+       "pages": 10,
+       "imslpFileId": "1069092"
+      },
+      {
+       "id": "violin2",
+       "part": "violin2",
+       "intake_file": "IMSLP1069093-PMLP143602-4526.Haydn-Op001n1-3.pts_Violin_2.pdf",
+       "sha256": "7ab1815fabd49df4d5219d2e55332060e4a8ae6a8a2a601e0d62f916efd851a8",
+       "pages": 9,
+       "imslpFileId": "1069093"
+      },
+      {
+       "id": "viola",
+       "part": "viola",
+       "intake_file": "IMSLP1069094-PMLP143602-4526.Haydn-Op001n1-3.pts_Viola.pdf",
+       "sha256": "2dde3b58a5d5a4e9cb8bfef5ede4f89df31a59293f351a2bf4d08f37868d54cc",
+       "pages": 9,
+       "imslpFileId": "1069094"
+      },
+      {
+       "id": "cello",
+       "part": "cello",
+       "intake_file": "IMSLP1069095-PMLP143602-4526.Haydn-Op001n1-3.pts_Cello.pdf",
+       "sha256": "02e3d7ca72a5eea3298668627bb6686f823c2532f7d55cd2e04646ce3ff58879",
+       "pages": 9,
+       "imslpFileId": "1069095"
+      }
+     ]
+    }
+   ],
+   "composed": "1757–62頃"
+  },
+  {
+   "id": "haydn-string-quartets-op2-1-3",
+   "composerId": "haydn",
+   "title": {
+    "ja": "弦楽四重奏曲集 Op.2（第1〜3番）",
+    "en": "String Quartets, Op. 2, Nos. 1–3"
+   },
+   "catalog": [
+    {
+     "type": "op",
+     "value": "2"
+    }
+   ],
+   "scoring": "string-quartet",
+   "players": 4,
+   "instruments": [
+    "cello",
+    "viola",
+    "violin"
+   ],
+   "genre": "chamber",
+   "era": "classical",
+   "publishedAt": "2026-11-27",
+   "updatedAt": "2026-11-27",
+   "sources": [
+    {
+     "label": "IMSLP: String Quartets, Op.2 (Haydn, Joseph)",
+     "url": "https://imslp.org/wiki/String_Quartets,_Op.2_(Haydn,_Joseph)"
+    }
+   ],
+   "editions": [
+    {
+     "id": "imslp-1069100",
+     "label": {
+      "ja": "C.F. Peters 版（Merton Music 復刻）のパート譜",
+      "en": "Parts: C.F. Peters edition (Merton Music reprint)"
+     },
+     "source": {
+      "type": "imslp",
+      "imslpFileId": "1069100",
+      "url": "https://imslp.org/wiki/String_Quartets,_Op.2_(Haydn,_Joseph)",
+      "note": "第3番・第5番は、ヘンレ版の序文で、真作の弦楽四重奏曲ではなく2本のホルンを含む六重奏曲（Hob.II:21・Hob.II:22）とされる。"
+     },
+     "rights": {
+      "status": "pending",
+      "basis": "権利確認前（運営者が公開前に確認する）",
+      "evidence": [
+       "IMSLP の著作権表示: Public Domain",
+       "出版情報: Leipzig: C.F. Peters , n.d.(ca.1890).",
+       "復刻: London: Merton Music , No. 4528-29, 2002.",
+       "IMSLP ファイル番号: #1069100, #1069101, #1069102, #1069103"
+      ]
+     },
+     "assets": [
+      {
+       "id": "violin1",
+       "part": "violin1",
+       "intake_file": "IMSLP1069100-PMLP143609-4528.Haydn-Op002n1-3.pts_Violin_1.pdf",
+       "sha256": "412647f33cf821e5bb39488ddad8ce0fb729d5388111c44d86a68a9fe93c47d5",
+       "pages": 12,
+       "imslpFileId": "1069100"
+      },
+      {
+       "id": "violin2",
+       "part": "violin2",
+       "intake_file": "IMSLP1069101-PMLP143609-4528.Haydn-Op002n1-3.pts_Violin_2.pdf",
+       "sha256": "918cc8cd45fc4c4b90f1f3633e7680dd2489ed044bb04ea032406c5c35c30a1e",
+       "pages": 12,
+       "imslpFileId": "1069101"
+      },
+      {
+       "id": "viola",
+       "part": "viola",
+       "intake_file": "IMSLP1069102-PMLP143609-4528.Haydn-Op002n1-3.pts_Viola.pdf",
+       "sha256": "481fa422a3ac266b1796bbcc31dfa1cd77515640721b76411fa09c3d63721f8b",
+       "pages": 11,
+       "imslpFileId": "1069102"
+      },
+      {
+       "id": "cello",
+       "part": "cello",
+       "intake_file": "IMSLP1069103-PMLP143609-4528.Haydn-Op002n1-3.pts_Cello.pdf",
+       "sha256": "373d5181976b796763bccf9859facf13fe377414748417ea5a827d725a3de1af",
+       "pages": 9,
+       "imslpFileId": "1069103"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "haydn-string-quartets-op2-4-6",
+   "composerId": "haydn",
+   "title": {
+    "ja": "弦楽四重奏曲集 Op.2（第4〜6番）",
+    "en": "String Quartets, Op. 2, Nos. 4–6"
+   },
+   "catalog": [
+    {
+     "type": "op",
+     "value": "2"
+    }
+   ],
+   "scoring": "string-quartet",
+   "players": 4,
+   "instruments": [
+    "cello",
+    "viola",
+    "violin"
+   ],
+   "genre": "chamber",
+   "era": "classical",
+   "publishedAt": "2026-11-27",
+   "updatedAt": "2026-11-27",
+   "sources": [
+    {
+     "label": "IMSLP: String Quartets, Op.2 (Haydn, Joseph)",
+     "url": "https://imslp.org/wiki/String_Quartets,_Op.2_(Haydn,_Joseph)"
+    }
+   ],
+   "editions": [
+    {
+     "id": "imslp-1069104",
+     "label": {
+      "ja": "C.F. Peters 版（Merton Music 復刻）のパート譜",
+      "en": "Parts: C.F. Peters edition (Merton Music reprint)"
+     },
+     "source": {
+      "type": "imslp",
+      "imslpFileId": "1069104",
+      "url": "https://imslp.org/wiki/String_Quartets,_Op.2_(Haydn,_Joseph)",
+      "note": "第3番・第5番は、ヘンレ版の序文で、真作の弦楽四重奏曲ではなく2本のホルンを含む六重奏曲（Hob.II:21・Hob.II:22）とされる。"
+     },
+     "rights": {
+      "status": "pending",
+      "basis": "権利確認前（運営者が公開前に確認する）",
+      "evidence": [
+       "IMSLP の著作権表示: Public Domain",
+       "出版情報: Leipzig: C.F. Peters , n.d.(ca.1890).",
+       "復刻: London: Merton Music , No. 4528-29, 2002.",
+       "IMSLP ファイル番号: #1069104, #1069105, #1069106, #1069107"
+      ]
+     },
+     "assets": [
+      {
+       "id": "violin1",
+       "part": "violin1",
+       "intake_file": "IMSLP1069104-PMLP143609-4529.Haydn-Op002n4-6.pts_Violin_1.pdf",
+       "sha256": "d4511487e6aae0b9ba9ac15a4fd7bb9185d39f9f96afb06b36df75a68a936d79",
+       "pages": 11,
+       "imslpFileId": "1069104"
+      },
+      {
+       "id": "violin2",
+       "part": "violin2",
+       "intake_file": "IMSLP1069105-PMLP143609-4529.Haydn-Op002n4-6.pts_Violin_2.pdf",
+       "sha256": "260544f7e59343149a69d9d344ac9eef9e5f9ba83360435fd1611a405a0eeebd",
+       "pages": 11,
+       "imslpFileId": "1069105"
+      },
+      {
+       "id": "viola",
+       "part": "viola",
+       "intake_file": "IMSLP1069106-PMLP143609-4529.Haydn-Op002n4-6.pts_Viola.pdf",
+       "sha256": "5661b18f754b5440b7fe1d15a6e68b3c9fbe2e9aed4b8ad2aaa7144958cc064f",
+       "pages": 11,
+       "imslpFileId": "1069106"
+      },
+      {
+       "id": "cello",
+       "part": "cello",
+       "intake_file": "IMSLP1069107-PMLP143609-4529.Haydn-Op002n4-6.pts_Cello.pdf",
+       "sha256": "3e6c10fea2a0dd44209f9ad23d6d3e02921c18ab737bafc9af3da2123a9d82fb",
+       "pages": 9,
+       "imslpFileId": "1069107"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "haydn-string-quartets-op9",
+   "composerId": "haydn",
+   "title": {
+    "ja": "弦楽四重奏曲集 Op.9（全6曲）",
+    "en": "String Quartets, Op. 9 (Nos. 1–6)"
+   },
+   "catalog": [
+    {
+     "type": "op",
+     "value": "9"
+    }
+   ],
+   "scoring": "string-quartet",
+   "players": 4,
+   "instruments": [
+    "cello",
+    "viola",
+    "violin"
+   ],
+   "genre": "chamber",
+   "era": "classical",
+   "publishedAt": "2026-11-27",
+   "updatedAt": "2026-11-27",
+   "sources": [
+    {
+     "label": "IMSLP: String Quartets, Op.9 (Haydn, Joseph)",
+     "url": "https://imslp.org/wiki/String_Quartets,_Op.9_(Haydn,_Joseph)"
+    }
+   ],
+   "editions": [
+    {
+     "id": "imslp-106760",
+     "label": {
+      "ja": "Litolff 版のパート譜",
+      "en": "Parts: Collection Litolff edition"
+     },
+     "source": {
+      "type": "imslp",
+      "imslpFileId": "106760",
+      "url": "https://imslp.org/wiki/String_Quartets,_Op.9_(Haydn,_Joseph)",
+      "note": null
+     },
+     "rights": {
+      "status": "pending",
+      "basis": "権利確認前（運営者が公開前に確認する）",
+      "evidence": [
+       "IMSLP の著作権表示: Public Domain",
+       "出版情報: Quatuors pour deux violons, alto et violoncelle , No.19-24 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8509.",
+       "IMSLP ファイル番号: #106760, #106761, #106762, #106763"
+      ]
+     },
+     "assets": [
+      {
+       "id": "violin1",
+       "part": "violin1",
+       "intake_file": "IMSLP106760-PMLP217525-Haydn_-_String_Quartets_Op.9_Vn1Pt.pdf",
+       "sha256": "7c49c39f8db41c8ef3139ed6051110ae3949e3c09e30e802835502e8d9ca32b9",
+       "pages": 24,
+       "imslpFileId": "106760"
+      },
+      {
+       "id": "violin2",
+       "part": "violin2",
+       "intake_file": "IMSLP106761-PMLP217525-Haydn_-_String_Quartets_Op.9_Vn2Pt.pdf",
+       "sha256": "7c512c3d79ac510a3d4f9777868e9dd77d8b86dd0b44ff3fc15000ed2a3144c8",
+       "pages": 16,
+       "imslpFileId": "106761"
+      },
+      {
+       "id": "viola",
+       "part": "viola",
+       "intake_file": "IMSLP106762-PMLP217525-Haydn_-_String_Quartets_Op.9_VaPt.pdf",
+       "sha256": "d9fc446a3c707e64892f604fd479f9d4a15bf717dd3f62da84c968586c9abb29",
+       "pages": 16,
+       "imslpFileId": "106762"
+      },
+      {
+       "id": "cello",
+       "part": "cello",
+       "intake_file": "IMSLP106763-PMLP217525-Haydn_-_String_Quartets_Op.9_VcPt.pdf",
+       "sha256": "c67245cae41593f6b9669b98cda8878f17309496710d0fd352b53996785e7c5d",
+       "pages": 16,
+       "imslpFileId": "106763"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "haydn-string-quartets-op17",
+   "composerId": "haydn",
+   "title": {
+    "ja": "弦楽四重奏曲集 Op.17（全6曲）",
+    "en": "String Quartets, Op. 17 (Nos. 1–6)"
+   },
+   "catalog": [
+    {
+     "type": "op",
+     "value": "17"
+    }
+   ],
+   "scoring": "string-quartet",
+   "players": 4,
+   "instruments": [
+    "cello",
+    "viola",
+    "violin"
+   ],
+   "genre": "chamber",
+   "era": "classical",
+   "publishedAt": "2026-11-27",
+   "updatedAt": "2026-11-27",
+   "sources": [
+    {
+     "label": "IMSLP: String Quartets, Op.17 (Haydn, Joseph)",
+     "url": "https://imslp.org/wiki/String_Quartets,_Op.17_(Haydn,_Joseph)"
+    }
+   ],
+   "editions": [
+    {
+     "id": "imslp-105714",
+     "label": {
+      "ja": "Litolff 版のパート譜",
+      "en": "Parts: Collection Litolff edition"
+     },
+     "source": {
+      "type": "imslp",
+      "imslpFileId": "105714",
+      "url": "https://imslp.org/wiki/String_Quartets,_Op.17_(Haydn,_Joseph)",
+      "note": null
+     },
+     "rights": {
+      "status": "pending",
+      "basis": "権利確認前（運営者が公開前に確認する）",
+      "evidence": [
+       "IMSLP の著作権表示: Public Domain",
+       "出版情報: Quatuors pour deux violons, alto et violoncelle , No.25-30 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8510.",
+       "IMSLP ファイル番号: #105714, #105715, #105716, #105717"
+      ]
+     },
+     "assets": [
+      {
+       "id": "violin1",
+       "part": "violin1",
+       "intake_file": "IMSLP105714-PMLP12302-Haydn_-_String_Quartets_Op.17_Vn1Pt.pdf",
+       "sha256": "347088e1e59b6bf8dae895f4c8ef2767a7d2cf2a075330e499efe49672394399",
+       "pages": 28,
+       "imslpFileId": "105714"
+      },
+      {
+       "id": "violin2",
+       "part": "violin2",
+       "intake_file": "IMSLP105715-PMLP12302-Haydn_-_String_Quartets_Op.17_Vn2Pt.pdf",
+       "sha256": "55e96d7ee4fd7e6b7db7f1d1d2053ed09e779b8bc865f3fdbeab6df2a06fa2f5",
+       "pages": 20,
+       "imslpFileId": "105715"
+      },
+      {
+       "id": "viola",
+       "part": "viola",
+       "intake_file": "IMSLP105716-PMLP12302-Haydn_-_String_Quartets_Op.17_VaPt.pdf",
+       "sha256": "de8ca22b29dccfb000cc7c940c5a9b37258fbdc2366a4bbac7df3b31fd492d9b",
+       "pages": 18,
+       "imslpFileId": "105716"
+      },
+      {
+       "id": "cello",
+       "part": "cello",
+       "intake_file": "IMSLP105717-PMLP12302-Haydn_-_String_Quartets_Op.17_VcPt.pdf",
+       "sha256": "58ebeb24f1b63dc9b274efde96b392eee96abc294a4245e558a9435c9f1c725a",
+       "pages": 16,
+       "imslpFileId": "105717"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "haydn-string-quartets-op20",
+   "composerId": "haydn",
+   "title": {
+    "ja": "弦楽四重奏曲集 Op.20（全6曲）「太陽四重奏曲」",
+    "en": "String Quartets, Op. 20 (Nos. 1–6) “Sun Quartets”"
+   },
+   "catalog": [
+    {
+     "type": "op",
+     "value": "20"
+    }
+   ],
+   "scoring": "string-quartet",
+   "players": 4,
+   "instruments": [
+    "cello",
+    "viola",
+    "violin"
+   ],
+   "genre": "chamber",
+   "era": "classical",
+   "publishedAt": "2026-11-27",
+   "updatedAt": "2026-11-27",
+   "sources": [
+    {
+     "label": "IMSLP: String Quartets, Op.20 (Haydn, Joseph)",
+     "url": "https://imslp.org/wiki/String_Quartets,_Op.20_(Haydn,_Joseph)"
+    }
+   ],
+   "editions": [
+    {
+     "id": "imslp-105765",
+     "label": {
+      "ja": "Litolff 版のパート譜",
+      "en": "Parts: Collection Litolff edition"
+     },
+     "source": {
+      "type": "imslp",
+      "imslpFileId": "105765",
+      "url": "https://imslp.org/wiki/String_Quartets,_Op.20_(Haydn,_Joseph)",
+      "note": null
+     },
+     "rights": {
+      "status": "pending",
+      "basis": "権利確認前（運営者が公開前に確認する）",
+      "evidence": [
+       "IMSLP の著作権表示: Public Domain",
+       "出版情報: Quatuors pour deux violons, alto et violoncelle , No.31-36 Braunschweig: Collection Litolff , n.d.[1870]. Plate 8511.",
+       "IMSLP ファイル番号: #105765, #105766, #105767, #105768"
+      ]
+     },
+     "assets": [
+      {
+       "id": "violin1",
+       "part": "violin1",
+       "intake_file": "IMSLP105765-PMLP12757-Haydn_-_String_Quartets_Op.20_Vn1Pt.pdf",
+       "sha256": "f3d20c2f146f6e9ae7c2bc0484d3bdfafa7f44de17f628ff5cd8bee7816e42ed",
+       "pages": 32,
+       "imslpFileId": "105765"
+      },
+      {
+       "id": "violin2",
+       "part": "violin2",
+       "intake_file": "IMSLP105766-PMLP12757-Haydn_-_String_Quartets_Op.20_Vn2Pt.pdf",
+       "sha256": "8170ac448ec09b205682c2986452de4f920d70975eeaee37a8330c48365fcfac",
+       "pages": 24,
+       "imslpFileId": "105766"
+      },
+      {
+       "id": "viola",
+       "part": "viola",
+       "intake_file": "IMSLP105767-PMLP12757-Haydn_-_String_Quartets_Op.20_VaPt.pdf",
+       "sha256": "65116f3caad467f52604b232860fb71bf58e1331f7fce44ab2b34c21f7d05018",
+       "pages": 20,
+       "imslpFileId": "105767"
+      },
+      {
+       "id": "cello",
+       "part": "cello",
+       "intake_file": "IMSLP105768-PMLP12757-Haydn_-_String_Quartets_Op.20_VcPt.pdf",
+       "sha256": "a71015f7daa25c3990a3359fc5fb160cfef6cfb9037177ddc5903f9d3ed35c24",
+       "pages": 26,
+       "imslpFileId": "105768"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "haydn-string-quartet-op20-4",
+   "composerId": "haydn",
+   "title": {
+    "ja": "弦楽四重奏曲 ニ長調",
+    "en": "String Quartet in D major"
+   },
+   "catalog": [
+    {
+     "type": "op",
+     "value": "20-4"
+    }
+   ],
+   "scoring": "string-quartet",
+   "players": 4,
+   "instruments": [
+    "cello",
+    "viola",
+    "violin"
+   ],
+   "genre": "chamber",
+   "era": "classical",
+   "publishedAt": "2026-11-27",
+   "updatedAt": "2026-11-27",
+   "sources": [
+    {
+     "label": "IMSLP: String Quartet in D major, Hob.III:34 (Haydn, Joseph)",
+     "url": "https://imslp.org/wiki/String_Quartet_in_D_major,_Hob.III:34_(Haydn,_Joseph)"
+    }
+   ],
+   "editions": [
+    {
+     "id": "imslp-39679",
+     "label": {
+      "ja": "Fr. Kistner 版のパート譜",
+      "en": "Parts: Fr. Kistner edition"
+     },
+     "source": {
+      "type": "imslp",
+      "imslpFileId": "39679",
+      "url": "https://imslp.org/wiki/String_Quartet_in_D_major,_Hob.III:34_(Haydn,_Joseph)",
+      "note": null
+     },
+     "rights": {
+      "status": "pending",
+      "basis": "権利確認前（運営者が公開前に確認する）",
+      "evidence": [
+       "IMSLP の著作権表示: Public Domain",
+       "出版情報: Leipzig: Fr. Kistner , n.d.[1895]. Plate 9663.",
+       "IMSLP ファイル番号: #39679, #39680, #39681, #39682"
+      ]
+     },
+     "assets": [
+      {
+       "id": "violin1",
+       "part": "violin1",
+       "intake_file": "IMSLP39679-SIBLEY1802.7843.52da-39087009463300violin_1.pdf",
+       "sha256": "9a9c29c6bc098aae06cec4657ddb7cdae4be79ca6a404a7dbe9e37e553112b87",
+       "pages": 7,
+       "imslpFileId": "39679"
+      },
+      {
+       "id": "violin2",
+       "part": "violin2",
+       "intake_file": "IMSLP39680-SIBLEY1802.7843.9490-39087009463300violin_2.pdf",
+       "sha256": "e7ac7e63bca62ff8b6e466a1baeab3cb3eabb573b8eafb0b9cc2029d1b7d86c2",
+       "pages": 5,
+       "imslpFileId": "39680"
+      },
+      {
+       "id": "viola",
+       "part": "viola",
+       "intake_file": "IMSLP39681-SIBLEY1802.7843.b63f-39087009463300viola.pdf",
+       "sha256": "be9e2da0b30fda48a0527ef5da9f479edd153824281ddf89d7c8edc81862ecf5",
+       "pages": 5,
+       "imslpFileId": "39681"
+      },
+      {
+       "id": "cello",
+       "part": "cello",
+       "intake_file": "IMSLP39682-SIBLEY1802.7843.2017-39087009463300cello.pdf",
+       "sha256": "9ebb3edccf491b6c0ece7a9f64d6e58a5739d7bdd4f5f82117daa6a492185fe7",
+       "pages": 5,
+       "imslpFileId": "39682"
+      }
+     ]
+    }
+   ],
+   "key": {
+    "ja": "ニ長調",
+    "en": "D major"
+   }
+  }
+ ]
+}

@@ -5,9 +5,10 @@ name: Score migrate
 
 on:
   push:
-    branches: [feature/score-migration]
+    branches: [feature/score-migration, feature/haydn-quartets]
     paths:
       - "tools/score-migration/approvals.json"
+      - "tools/score-acquisition/intake_approvals.json"
       - "tools/score-migration/migrate.py"
       - ".github/workflows/score-migrate.yml"
   workflow_dispatch:
@@ -32,8 +33,20 @@ jobs:
       - run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils > /dev/null
           pip install -q -r tools/score-migration/requirements.txt
+      # 管理人が手動で取得した PDF は一時ブランチ tmp/score-intake-pdfs で受け取る（処理後に消す）
+      - name: Intake files
+        run: |
+          mkdir -p /tmp/intake
+          if git ls-remote --exit-code --heads origin tmp/score-intake-pdfs > /dev/null 2>&1; then
+            git fetch -q --depth=1 origin tmp/score-intake-pdfs
+            git archive FETCH_HEAD | tar -x -C /tmp/intake
+          fi
+          ls /tmp/intake | head -50
       - name: Migrate
-        run: python tools/score-migration/migrate.py --approvals tools/score-migration/approvals.json --repo . --release-tag scores-v1 --time-budget 18000
+        run: |
+          python tools/score-migration/migrate.py --approvals tools/score-migration/approvals.json \
+            --approvals tools/score-acquisition/intake_approvals.json --intake-dir /tmp/intake \
+            --repo . --release-tag scores-v1 --time-budget 18000 | tee /tmp/migrate-report.json
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit catalog and preview images
@@ -43,6 +56,17 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add frontend/public/scores frontend/src/data/scores/catalog.json
           git diff --cached --quiet && exit 0
-          git commit -q -m "chore(scores): 旧サイトの楽譜を移行（権利確認前・プレビューのみ表示）"
+          git commit -q -m "chore(scores): 楽譜をカタログに登録（権利確認前・プレビューのみ表示）"
           git pull -q --rebase origin "${GITHUB_REF_NAME}"
           git push -q origin "HEAD:${GITHUB_REF_NAME}"
+      # 受け入れた PDF がすべてリリースに入ったら、一時ブランチを消す
+      - name: Remove intake branch
+        if: success()
+        run: |
+          python - <<'PY' || exit 0
+          import json, re, sys
+          txt = open("/tmp/migrate-report.json").read()
+          rep = json.loads(txt[txt.index("{"):])
+          sys.exit(0 if not rep.get("failed") and not rep.get("out_of_time") else 1)
+          PY
+          git ls-remote --exit-code --heads origin tmp/score-intake-pdfs > /dev/null 2>&1 && git push -q origin --delete tmp/score-intake-pdfs || true

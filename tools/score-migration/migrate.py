@@ -13,7 +13,10 @@
 - 出力: frontend/src/data/scores/catalog.json
 - 旧サイトのデータは読むだけで、変更・削除しない。途中で止まっても、処理済みのファイルはやり直さない
 
-使い方: python migrate.py --approvals approvals.json --repo <リポジトリのルート> --release-tag scores-v1
+- 管理人が手動で取得した PDF（tools/score-acquisition/intake_approvals.json。asset に intake_file がある）は、
+  --intake-dir のファイルを使う（記録した SHA-256 と一致するものだけ。外部サイトにはアクセスしない）
+
+使い方: python migrate.py --approvals approvals.json [--approvals intake_approvals.json --intake-dir DIR] --repo <リポジトリのルート> --release-tag scores-v1
 環境変数: GH_TOKEN（リリースへの書き込み）、GITHUB_REPOSITORY（owner/repo）
 """
 from __future__ import annotations
@@ -90,7 +93,8 @@ def sha256_of(path: str) -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--approvals", required=True)
+    ap.add_argument("--approvals", required=True, action="append")
+    ap.add_argument("--intake-dir", default="")
     ap.add_argument("--repo", required=True)
     ap.add_argument("--release-tag", default="scores-v1")
     ap.add_argument("--time-budget", type=int, default=5 * 3600)
@@ -98,7 +102,12 @@ def main() -> int:
     args = ap.parse_args()
     deadline = time.time() + args.time_budget
 
-    approvals = json.load(open(args.approvals, encoding="utf-8"))
+    approvals = {"works": []}
+    for path in args.approvals:
+        approvals["works"] += json.load(open(path, encoding="utf-8"))["works"]
+    ids = [w["id"] for w in approvals["works"]]
+    if len(ids) != len(set(ids)):
+        raise SystemExit("duplicate work id across approvals files")
     public_dir = os.path.join(args.repo, "frontend", "public")
     data_dir = os.path.join(args.repo, "frontend", "src", "data", "scores")
     catalog_path = os.path.join(data_dir, "catalog.json")
@@ -153,7 +162,16 @@ def main() -> int:
                         report["out_of_time"] += 1
                         continue
                     raw = os.path.join(tmp, "raw.pdf")
-                    if old_name in released:
+                    if asset.get("intake_file"):
+                        # 管理人が手動で取得した PDF（IMSLP などには Claude からアクセスしない）
+                        src = os.path.join(args.intake_dir, asset["intake_file"])
+                        if not args.intake_dir or not os.path.exists(src):
+                            report["failed"].append({"asset": f"{work['id']}/{asset['id']}", "source": "intake", "reason": "受け入れ用のファイルが無い"})
+                            continue
+                        with open(src, "rb") as fi, open(raw, "wb") as fo:
+                            fo.write(fi.read())
+                        source = "intake"
+                    elif old_name in released:
                         # 以前の名前で置いたファイルを取り出す（旧サイトにはアクセスしない）
                         gh("release", "download", tag, "-p", old_name, "-O", raw, "--clobber")
                         source = "release"
@@ -181,7 +199,7 @@ def main() -> int:
                     gh("release", "upload", tag, stamped, "--clobber")
                     released.add(name)
                     sha, size = sha256_of(stamped), os.path.getsize(stamped)
-                    if args.keep_legacy and old_name != name and old_name not in released:
+                    if args.keep_legacy and not asset.get("intake_file") and old_name != name and old_name not in released:
                         # 公開中のプレビューが以前の名前を参照しているあいだは、以前の名前のファイルも残す（--drop-legacy で消す）
                         legacy = os.path.join(tmp, old_name)
                         os.replace(stamped, legacy)
@@ -189,7 +207,8 @@ def main() -> int:
                         released.add(old_name)
                         stamped = legacy
                     os.remove(stamped)
-                    report["renamed" if source == "release" else "from_old_site"] += 1
+                    key = {"release": "renamed", "intake": "from_intake"}.get(source, "from_old_site")
+                    report[key] = report.get(key, 0) + 1
 
                 dims = None
                 if os.path.exists(jpg_abs):
