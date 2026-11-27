@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Mozart",
     "stage": "violin_sonata",
-    "last_work": "K.301/293a",
-    "note": "Next K.302/293b. K.31→K.296 gap is not an exhaustive verification of doubtful/fragmentary violin sonatas; audit separately. Score and violin part individually listed; standalone keyboard part unlocated and score contains keyboard."
+    "last_work": "K.304/300c",
+    "note": "Next K.305/293d. Three Breitkopf 1879 score+violin-part pairs metadata-identified; standalone piano parts not identified. Historical candidate audit remains pending."
   },
   "items": [
     {
@@ -8702,6 +8702,282 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only; check actual PDF, all movements, edition alignment, work/edition/asset duplicates and Japan publication rights. No download or approval. K.31 to K.296 gap reflects catalogue numbering, not a verified exhaustive search for early doubtful/fragmentary sonatas.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-violin-sonata-k302-breitkopf-1879",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata in E-flat, K.302/293b",
+      "opus_catalog": "K.302/293b",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_in_E-flat%2C_K.302%2F293b_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1879",
+        "editor": "Series XVIII editors: Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (individual editor unspecified)",
+        "series": "Mozarts Werke, Serie XVIII, Bd.2, No.26",
+        "plate": "W.A.M. 302",
+        "imslp_file_id": "63025",
+        "part_file_ids": {
+          "violin": "63026"
+        },
+        "file_pages": 12,
+        "edition_comparison": "[{\"publisher\":\"C.F. Peters\",\"editor\":\"Friedrich Hermann\",\"year\":\"ca.1887\",\"score\":\"90917\",\"part\":\"91020\"}]; editions not combined without checking; scholarly value of older edition does not guarantee text accuracy"
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_E-flat%2C_K.302%2F293b_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "63025",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_E-flat%2C_K.302%2F293b_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Mozarts Werke Serie XVIII editorial board (individual editor unknown)",
+        "scope": "complete score with piano part; 12 pages listed",
+        "evidence": "IMSLP Scores and Parts metadata only; PDF not inspected"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "63026",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_E-flat%2C_K.302%2F293b_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Mozarts Werke Serie XVIII editorial board (individual editor unknown)",
+          "scope": "separate violin part; 3 pages listed",
+          "evidence": "IMSLP Scores and Parts metadata only; PDF not inspected"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_E-flat%2C_K.302%2F293b_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": null,
+          "editor": null,
+          "scope": "piano is in complete score; standalone piano part not identified",
+          "evidence": "IMSLP lists complete score and separate violin part"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "same_edition",
+        "evidence": "IMSLP groups both IDs under same Breitkopf & Härtel 1879 edition; PDF comparison not performed"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "standalone piano part (may not be needed because complete score includes piano)"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_E-flat%2C_K.302%2F293b_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "checked_at": "2026-11-27",
+          "scope": "IMSLP metadata for both IDs, publisher, editor and page counts; PDFs not downloaded"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_E-flat%2C_K.302%2F293b_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists complete score #63025, violin part #63026; Breitkopf & Härtel 1879, 26 in series; alternative editions recorded"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "violin_identified_piano_in_score_pdf_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "no_duplicate_in_queue_existing_site_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Score and violin part individually listed; no independent piano part identified. Compare edition readings and completeness, image legibility, site inventory, and Japanese republication rights before publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-violin-sonata-k303-breitkopf-1879",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata in C, K.303/293c",
+      "opus_catalog": "K.303/293c",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_in_C%2C_K.303%2F293c_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1879",
+        "editor": "Series XVIII editors: Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (individual editor unspecified)",
+        "series": "Mozarts Werke, Serie XVIII, Bd.2, No.27",
+        "plate": "W.A.M. 303",
+        "imslp_file_id": "63027",
+        "part_file_ids": {
+          "violin": "63028"
+        },
+        "file_pages": 10,
+        "edition_comparison": "[{\"publisher\":\"G. Schirmer\",\"editor\":\"Henry Schradieck / Alexander Rihm\",\"year\":\"1906\",\"combined\":\"86879\"}]; editions not combined without checking; scholarly value of older edition does not guarantee text accuracy"
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_C%2C_K.303%2F293c_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "63027",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_C%2C_K.303%2F293c_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Mozarts Werke Serie XVIII editorial board (individual editor unknown)",
+        "scope": "complete score with piano part; 10 pages listed",
+        "evidence": "IMSLP Scores and Parts metadata only; PDF not inspected"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "63028",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_C%2C_K.303%2F293c_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Mozarts Werke Serie XVIII editorial board (individual editor unknown)",
+          "scope": "separate violin part; 3 pages listed",
+          "evidence": "IMSLP Scores and Parts metadata only; PDF not inspected"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_C%2C_K.303%2F293c_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": null,
+          "editor": null,
+          "scope": "piano is in complete score; standalone piano part not identified",
+          "evidence": "IMSLP lists complete score and separate violin part"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "same_edition",
+        "evidence": "IMSLP groups both IDs under same Breitkopf & Härtel 1879 edition; PDF comparison not performed"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "standalone piano part (may not be needed because complete score includes piano)"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_C%2C_K.303%2F293c_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "checked_at": "2026-11-27",
+          "scope": "IMSLP metadata for both IDs, publisher, editor and page counts; PDFs not downloaded"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_C%2C_K.303%2F293c_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists complete score #63027, violin part #63028; Breitkopf & Härtel 1879, 27 in series; alternative editions recorded"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "violin_identified_piano_in_score_pdf_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "no_duplicate_in_queue_existing_site_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Score and violin part individually listed; no independent piano part identified. Compare edition readings and completeness, image legibility, site inventory, and Japanese republication rights before publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-violin-sonata-k304-breitkopf-1879",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata in E minor, K.304/300c",
+      "opus_catalog": "K.304/300c",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_in_E_minor%2C_K.304%2F300c_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1879",
+        "editor": "Series XVIII editors: Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (individual editor unspecified)",
+        "series": "Mozarts Werke, Serie XVIII, Bd.2, No.28",
+        "plate": "W.A.M. 304",
+        "imslp_file_id": "63029",
+        "part_file_ids": {
+          "violin": "63030"
+        },
+        "file_pages": 10,
+        "edition_comparison": "[{\"publisher\":\"C.F. Peters\",\"editor\":\"not stated\",\"year\":\"ca.1850\",\"score\":\"816260\",\"part\":\"816261\"}]; editions not combined without checking; scholarly value of older edition does not guarantee text accuracy"
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_E_minor%2C_K.304%2F300c_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "63029",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_E_minor%2C_K.304%2F300c_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Mozarts Werke Serie XVIII editorial board (individual editor unknown)",
+        "scope": "complete score with piano part; 10 pages listed",
+        "evidence": "IMSLP Scores and Parts metadata only; PDF not inspected"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "63030",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_E_minor%2C_K.304%2F300c_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Mozarts Werke Serie XVIII editorial board (individual editor unknown)",
+          "scope": "separate violin part; 4 pages listed",
+          "evidence": "IMSLP Scores and Parts metadata only; PDF not inspected"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_E_minor%2C_K.304%2F300c_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": null,
+          "editor": null,
+          "scope": "piano is in complete score; standalone piano part not identified",
+          "evidence": "IMSLP lists complete score and separate violin part"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "same_edition",
+        "evidence": "IMSLP groups both IDs under same Breitkopf & Härtel 1879 edition; PDF comparison not performed"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "standalone piano part (may not be needed because complete score includes piano)"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_E_minor%2C_K.304%2F300c_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "checked_at": "2026-11-27",
+          "scope": "IMSLP metadata for both IDs, publisher, editor and page counts; PDFs not downloaded"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_E_minor%2C_K.304%2F300c_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists complete score #63029, violin part #63030; Breitkopf & Härtel 1879, 28 in series; alternative editions recorded"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "violin_identified_piano_in_score_pdf_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "no_duplicate_in_queue_existing_site_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Score and violin part individually listed; no independent piano part identified. Compare edition readings and completeness, image legibility, site inventory, and Japanese republication rights before publication.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
