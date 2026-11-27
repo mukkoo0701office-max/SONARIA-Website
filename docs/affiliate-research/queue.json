@@ -1203,6 +1203,32 @@
       "ismn": "979-0-2018-7121-9",
       "product_format": "study score (pocket score), not playing parts",
       "source": "https://www.henle.de/en/String-Quartets-Volume-II-Early-Viennese-Quartets/HN-7121"
+    },
+    {
+      "id": "mozart-baerenreiter-string-quartets-selected",
+      "composer": "Mozart",
+      "category": "printed_score",
+      "title": "String Quartets selection KV 387, 421, 428, 458, 464, 465, 499, 575, 589 (Bärenreiter performing parts; exact volume pending)",
+      "publisher": "Bärenreiter",
+      "work_ids": [
+        "KV387",
+        "KV421",
+        "KV428",
+        "KV458",
+        "KV464",
+        "KV465",
+        "KV499",
+        "KV575",
+        "KV589"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "source": "Amazon merchant product discovery 2026-11-27 (product search; no verified Amazon.co.jp /dp/ detail URL)",
+      "verification": "Amazon merchant result identified matching publisher and repertoire; precise edition/catalogue, contents, ASIN, ISBN and Amazon.co.jp product page remain unverified. Do not generate affiliate link.",
+      "status": "pending_review",
+      "priority": "S",
+      "last_research_at": "2026-11-27"
     }
   ],
   "implementation_ready": 0,
