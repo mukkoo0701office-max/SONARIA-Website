@@ -36,7 +36,17 @@ REQUIRED = {
     "string_quartet": ["violin_1", "violin_2", "viola", "cello"],
     "violin_sonata": ["violin"],
     "cello_sonata": ["cello"],
+    "string_duo_violin_viola": ["violin", "viola"],
 }
+# 二重奏は総譜が無いのが普通なので、パート譜がそろえば「そろっている」とみなす
+SCORE_OPTIONAL = {"string_duo_violin_viola"}
+
+
+def category_key(cat: str) -> str:
+    for k in REQUIRED:
+        if (cat or "").startswith(k):
+            return k
+    return "string_quartet"
 PART_RX = {
     "violin_1": r"Violin(?:o|e)?\s*(?:1|I)(?![IV\d])|Violino\s*primo|1st\s*Violin",
     "violin_2": r"Violin(?:o|e)?\s*(?:2|II)(?![IV\d])|Violino\s*secondo|2nd\s*Violin",
@@ -125,7 +135,8 @@ def rights_of(ed: dict) -> str:
     if re.search(r"Non-PD", c, re.I):
         return "non_pd"
     if re.search(r"Creative Commons", c, re.I):
-        return "cc"
+        # 非営利（NC）・改変禁止（ND）は除外（サイトに広告があり、統一名・文書情報の書き込みは改変に当たり得るため）
+        return "cc_restricted" if re.search(r"NonCommercial|NoDeriv|Attribution-N", c, re.I) else "cc"
     if re.match(r"Public Domain", c, re.I):
         return "pd_notes" if re.search(r"See notes", c, re.I) else "pd"
     return "unknown"
@@ -139,10 +150,14 @@ def roles_of(desc: str) -> set[str]:
     return {k for k, rx in PART_RX.items() if re.search(rx, desc, re.I)}
 
 
+# 曲集名・地名など、版の同定に使えない一般的な語
+GENERIC_WORDS = {"plate", "complete", "edition", "werke", "series", "serie", "leipzig", "berlin", "london", "paris", "wien", "vienna", "mainz", "offenbach", "amsterdam", "quatuors", "quatuor", "quartets", "quartet", "quartette", "quartetten", "quartetts", "sonatas", "sonaten", "sonates", "sonata", "collection", "six", "trois", "violin", "violon", "violons", "alto", "violoncelle", "violoncello", "pour", "deux", "with", "music", "verlag", "printed", "reprint", "edited"}
+
+
 def pub_key(ed: dict) -> set[str]:
     """版の同定に使う語（出版社名・プレート番号）"""
     p = ed.get("reprinted") + " " + ed.get("publisher", "")
-    words = {w.lower() for w in re.findall(r"[A-Z][a-zä-ü]{3,}", p)} - {"plate", "complete", "edition", "werke", "series", "serie", "leipzig", "berlin", "london", "paris", "wien", "vienna", "mainz", "offenbach", "amsterdam"}
+    words = {w.lower() for w in re.findall(r"[A-Z][a-zä-ü]{3,}", p)} - GENERIC_WORDS
     plates = set(re.findall(r"Plate\s*([\w.\-]+)", p))
     return words | {f"plate:{x}" for x in plates}
 
@@ -174,9 +189,19 @@ def manuscript(ed: dict) -> bool:
     return bool(re.search(r"manuscript|holograph|autograph|Manuskript", ed.get("publisher", "") + " " + ed.get("notes", ""), re.I))
 
 
-def choose(item: dict, eds: list[dict]) -> dict:
-    need = REQUIRED.get(item.get("category"), ["violin_1", "violin_2", "viola", "cello"])
-    tabs = {"arrangements", "scores", "parts"} if (item.get("arranger") or item.get("original_work")) else {"scores", "parts"}
+def parts_out(ps: tuple, need: list[str]) -> dict:
+    e, files = ps
+    fr = files_by_role(e, need)
+    # 同じパートが 2 回以上ある版は分冊（例: Nos.1-3 と Nos.4-6）。どの冊にどの曲があるかは表記が無いと分からないので、全冊を載せて要確認にする
+    extra = [{"role": n, "id": f["id"], "desc": f["desc"], "pages": f["pages"]} for n in need for f in fr.get(n, [])[1:] if f["id"] != files[n]["id"] and not re.search(ALL_PARTS_RX, f["desc"], re.I)]
+    return {"publisher": e["publisher"], "rights": rights_of(e), "page": e.get("page"), "files": {n: {"id": f["id"], "desc": f["desc"], "pages": f["pages"]} for n, f in files.items()}, "split_volumes": extra}
+
+
+def choose(item: dict, eds: list[dict], extra_tabs: frozenset = frozenset()) -> dict:
+    cat = category_key(item.get("category"))
+    need = REQUIRED[cat]
+    tabs = {"arrangements", "scores", "parts"} if (item.get("arranger") or item.get("original_work") or "arrangement" in (item.get("category") or "")) else {"scores", "parts"}
+    tabs = tabs | set(extra_tabs)
     no = item_number(item)
     usable = []
     for e in eds:
@@ -212,14 +237,17 @@ def choose(item: dict, eds: list[dict]) -> dict:
             pairs.append(((-complete, -hits, 0 if same else 1, r_sc[0] + r_ps[0], r_sc[1] + r_ps[1], r_ps[2], r_sc[2]), sc, ps, same))
     pairs.sort(key=lambda p: p[0])
     _, best_score, best_parts, same_edition = pairs[0] if pairs else (None, None, None, False)
-    status = "complete_set" if best_score and best_parts else "score_only" if best_score else "parts_only" if best_parts else "nothing_usable"
+    if best_parts and not best_score and cat in SCORE_OPTIONAL:
+        status = "complete_set"
+    else:
+        status = "complete_set" if best_score and best_parts else "score_only" if best_score else "parts_only" if best_parts else "nothing_usable"
     return {
         "status": status,
         "need": need,
         "gpt_ids": sorted(qids),
         "gpt_ids_missing_on_page": sorted(qids - on_page),
         "score": {"id": best_score[1]["id"], "desc": best_score[1]["desc"], "pages": best_score[1]["pages"], "publisher": best_score[0]["publisher"], "rights": rights_of(best_score[0]), "page": best_score[0].get("page")} if best_score else None,
-        "parts": {"publisher": best_parts[0]["publisher"], "rights": rights_of(best_parts[0]), "page": best_parts[0].get("page"), "files": {n: {"id": f["id"], "desc": f["desc"], "pages": f["pages"]} for n, f in best_parts[1].items()}} if best_parts else None,
+        "parts": parts_out(best_parts, need) if best_parts else None,
         "same_edition": same_edition,
         "alternatives": {"scores": len(scores), "part_sets": len(part_sets)},
     }
@@ -270,6 +298,11 @@ def main() -> int:
                 ok = True
                 eds += [dict(e, page=t) for e in cache[t]]
         r = choose(item, eds) if ok else {"status": "page_error", "gpt_ids": sorted(queue_ids(item))}
+        if ok and r["status"] == "nothing_usable":
+            # 原曲が別編成の作品（《十字架上の七つの言葉》の四重奏版など）は、四重奏版が「編曲」タブにある
+            r2 = choose(item, eds, frozenset({"arrangements"}))
+            if r2["status"] == "complete_set":
+                r = dict(r2, note="IMSLP の「編曲」タブにある版（作曲者自身の別編成版か要確認）")
         results.append({"id": item["id"], "composer": item.get("composer", ""), "title": f"{item.get('work_title', '')} {item.get('opus_catalog', '')}".strip(), "category": item.get("category"), "queue_status": item.get("status"), "pages": titles, **r})
 
     counts: dict[str, int] = {}
@@ -280,7 +313,7 @@ def main() -> int:
 
     if a.md:
         missing = [r for r in results if r.get("gpt_ids_missing_on_page")]
-        lines = ["# 総譜と対応するパート譜の一覧（IMSLP の作品ページから Claude が作成）", "", "GPT のキューの候補ごとに、IMSLP の作品ページの全ファイルを読み、**総譜 1 つ＋必要なパート譜がそろう組**を選んだ。PDF はダウンロードしていない。", "", "- 選び方: GPT が選んだ番号を含む版を優先 → 著作権表示が Public Domain → 総譜と同じ出版社・プレートのパート譜", "- 「See notes」付きの PD（近年の校訂版）と Non-PD は除外。CC BY は「要クレジット」", f"- GPT の記録した番号が作品ページに存在しなかった候補: **{len(missing)} 件**（下表の「GPT 番号」欄に ⚠）", "", "| 判定 | 件数 |", "|---|---|"]
+        lines = ["# 総譜と対応するパート譜の一覧（IMSLP の作品ページから Claude が作成）", "", "GPT のキューの候補ごとに、IMSLP の作品ページの全ファイルを読み、**総譜 1 つ＋必要なパート譜がそろう組**を選んだ。PDF はダウンロードしていない。", "", "- 選び方: GPT が選んだ番号を含む版を優先 → 著作権表示が Public Domain → 総譜と同じ出版社・プレートのパート譜", "- 「See notes」付きの PD（近年の校訂版）・Non-PD・CC の非営利／改変禁止は除外。CC BY は「要クレジット」", f"- GPT の記録した番号が作品ページに存在しなかった候補: **{len(missing)} 件**（下表の「GPT 番号」欄に ⚠）", "", "| 判定 | 件数 |", "|---|---|"]
         lines += [f"| {STATUS[k]} | {counts.get(k, 0)} |" for k in STATUS if counts.get(k)]
         current = None
         for r in results:
@@ -291,10 +324,10 @@ def main() -> int:
             sc = r.get("score")
             ps = r.get("parts")
             score_txt = f"#{sc['id']}（{sc['pages']}p）{'・CC' if sc['rights'] == 'cc' else ''}<br><small>{sc['publisher'][:60]}</small>" if sc else "—"
-            parts_txt = ("<br>".join(f"{LABEL.get(n, n)} #{f['id']}（{f['pages']}p）" for n, f in ps["files"].items()) + f"{'・CC' if ps['rights'] == 'cc' else ''}<br><small>{ps['publisher'][:60]}</small>") if ps else "—"
+            parts_txt = ("<br>".join(f"{LABEL.get(n, n)} #{f['id']}（{f['pages']}p）" for n, f in ps["files"].items()) + ("<br>⚠ 分冊（どの冊に何番があるか要確認）: " + ", ".join(f"{LABEL.get(x['role'], x['role'])} #{x['id']}" for x in ps["split_volumes"]) if ps.get("split_volumes") else "") + f"{'・CC' if ps['rights'] == 'cc' else ''}<br><small>{ps['publisher'][:60]}</small>") if ps else "—"
             gpt = ", ".join(r.get("gpt_ids", [])) + (" ⚠ ページに無い: " + ", ".join(r["gpt_ids_missing_on_page"]) if r.get("gpt_ids_missing_on_page") else "")
             url = f"https://imslp.org/wiki/{urllib.parse.quote(r['pages'][0])}" if r.get("pages") else ""
-            lines.append(f"| [{r['title']}]({url})<br>`{r['id']}` | {STATUS.get(r['status'], r['status'])} | {score_txt} | {parts_txt} | {'○' if r.get('same_edition') else ('×' if sc and ps else '—')} | {gpt} |")
+            lines.append(f"| [{r['title']}]({url})<br>`{r['id']}`{('<br>⚠ ' + r['note']) if r.get('note') else ''} | {STATUS.get(r['status'], r['status'])} | {score_txt} | {parts_txt} | {'○' if r.get('same_edition') else ('×' if sc and ps else '—')} | {gpt} |")
         open(a.md, "w", encoding="utf-8").write("\n".join(lines) + "\n")
     return 0
 

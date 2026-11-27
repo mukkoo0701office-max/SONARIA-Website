@@ -1,11 +1,11 @@
 # 管理人が手動で取得した楽譜 PDF（下書きリリース score-intake の添付）を検査し、
-# GPT キューとサイト掲載の照合結果とあわせて ci/score-intake ブランチに保存する。
-# 公開・権利ステータスの変更はしない。IMSLP などへのアクセスもしない（GitHub 内だけで完結）。
+# GPT キューとサイト掲載の照合結果、総譜＋パート譜の組、取得リストとあわせて ci/score-intake ブランチに保存する。
+# 公開・権利ステータスの変更はしない。IMSLP へは作品ページの API（api.php）を 3 秒間隔で読むだけ（PDF は取得しない）。
 name: Score intake
 
 on:
   push:
-    branches: [feature/score-intake]
+    branches: [feature/score-intake, feature/imslp-parts]
     paths:
       - "tools/score-acquisition/**"
       - ".github/workflows/score-intake.yml"
@@ -38,7 +38,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq poppler-utils tesseract-ocr tesseract-ocr-deu tesseract-ocr-ita tesseract-ocr-fra > /dev/null
-          pip install -q pillow==11.0.0
+          pip install -q pillow==11.0.0 requests==2.32.3 beautifulsoup4==4.12.3
 
       - name: GPT queue
         run: |
@@ -50,6 +50,7 @@ jobs:
           mkdir -p /tmp/out
           if git fetch -q origin ci/score-intake 2>/dev/null; then
             git show origin/ci/score-intake:results.json > /tmp/prev.json 2>/dev/null || true
+            git show origin/ci/score-intake:pages.json > /tmp/out/pages.json 2>/dev/null || true
           fi
 
       # 下書きリリースはリポジトリの管理者（とこのワークフロー）にしか見えない
@@ -69,14 +70,19 @@ jobs:
           done
           ls -la /tmp/files
 
+      # IMSLP の作品ページ（api.php）から、候補ごとに総譜＋対応するパート譜の組を選ぶ。取得済みのページは再取得しない
+      - name: Score and parts sets
+        run: python tools/score-acquisition/imslp_files.py --queue /tmp/queue.json --cache /tmp/out/pages.json --out /tmp/out/imslp_sets.json --md /tmp/out/imslp_sets.md
+
       - name: Inspect
         run: |
           python tools/score-acquisition/site_duplicates.py /tmp/queue.json /tmp/out/site_duplicates.json /tmp/out/site_duplicates.md
-          python tools/score-acquisition/download_list.py /tmp/queue.json /tmp/out/site_duplicates.json /tmp/out/download_list.md
+          python tools/score-acquisition/download_list.py /tmp/queue.json /tmp/out/site_duplicates.json /tmp/out/download_list.md /tmp/out/imslp_sets.json
           python tools/score-acquisition/intake.py --queue /tmp/queue.json --files /tmp/files \
-            --catalog frontend/src/data/scores/catalog.json --prev /tmp/prev.json --out /tmp/out
+            --catalog frontend/src/data/scores/catalog.json --prev /tmp/prev.json --sets /tmp/out/imslp_sets.json --out /tmp/out
 
       - name: Save to ci/score-intake
+        if: always()
         run: |
           cd /tmp/out
           git init -q -b ci/score-intake
