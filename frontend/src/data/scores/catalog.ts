@@ -122,8 +122,10 @@ export function worksByComposer(composerId: string): Work[] {
 // ---- 言語ごとのページの有無 ------------------------------------------------
 // 英語の解説が無い作品・英語のプロフィールが無い作曲家には英語ページを作らない（存在しない URL を出さない）
 
+// 英語のページは、英語の解説（text.en）か英語の概要（summary.en。workTexts.json）がある作品だけ作る。
+// 曲名と事実の表だけの英語ページは内容が薄く、検索で日本語ページと重複するため作らない
 export function workLocales(w: Work): Locale[] {
-  return w.text?.en ? ["ja", "en"] : ["ja"];
+  return w.text?.en || w.summary?.en ? ["ja", "en"] : ["ja"];
 }
 
 export function composerLocales(c: Composer): Locale[] {
