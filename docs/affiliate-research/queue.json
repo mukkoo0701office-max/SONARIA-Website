@@ -9,7 +9,7 @@
       "id": "mozart-quartets-henle-168-173",
       "composer": "Mozart",
       "category": "printed_score",
-      "title": "String Quartets 2: KV 168-173 (Henle)",
+      "title": "String Quartets Volume II (Early Viennese Quartets), K.168–173 — Henle HN1121",
       "work_ids": [
         "KV168",
         "KV169",
@@ -21,10 +21,19 @@
       "amazon_url": null,
       "asin": null,
       "isbn": null,
-      "source": "商品検索結果 2026-11-27",
-      "verification": "Amazon.co.jp個別商品URL/版/ISBN未確認",
+      "source": "https://www.henle.de/en/String-Quartets-Volume-II-Early-Viennese-Quartets/HN-1121",
+      "verification": "Henle official catalogue verifies edition, K.168–173 scope, editor, format and ISMN; Amazon.co.jp individual product page/ASIN not verified.",
       "status": "pending_review",
-      "priority": "S"
+      "priority": "S",
+      "publisher": "G. Henle Verlag",
+      "editor": "Wolf-Dieter Seiffert",
+      "last_research_at": "2026-11-27",
+      "last_amazon_search_at": "2026-11-27",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
+      "verification_notes": "2026-11-27 Amazon.co.jp exact-title and site:amazon.co.jp/dp/ searches did not identify a verifiable exact matching sheet-music listing. Amazon Music tracks are recordings, not scores; no tagged link.",
+      "publisher_catalog": "HN 1121",
+      "ismn": "979-0-2018-1121-5",
+      "product_format": "four playing parts (Vn I, Vn II, Va, Vc)"
     },
     {
       "id": "beethoven-quartet-4-pocket",
@@ -1164,6 +1173,36 @@
       "amazon_verification_status": "no_confirmed_matching_Amazon_co_jp_ASIN",
       "date_checked": "2026-11-27",
       "verification": "Original Henle catalogue verifies volume, ISMN, Wolf-Dieter Seiffert, exact format and pages; site:amazon.co.jp/dp/ exact ISMN searches did not yield an identifiable matching Amazon.co.jp individual product page, so no affiliate link. Printed modern commercial Henle is not the same public-domain score as IMSLP Breitkopf 1881."
+    },
+    {
+      "composer": "Mozart",
+      "publisher": "G. Henle Verlag",
+      "editor": "Wolf-Dieter Seiffert",
+      "work_ids": [
+        "KV168",
+        "KV169",
+        "KV170",
+        "KV171",
+        "KV172",
+        "KV173"
+      ],
+      "amazon_url": null,
+      "asin": null,
+      "isbn": null,
+      "status": "pending_review",
+      "priority": "S",
+      "last_research_at": "2026-11-27",
+      "last_amazon_search_at": "2026-11-27",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
+      "verification": "Henle official catalogue verifies edition, K.168–173 scope, editor, format and ISMN; Amazon.co.jp individual product page/ASIN not verified.",
+      "verification_notes": "2026-11-27 Amazon.co.jp exact-title and site:amazon.co.jp/dp/ searches did not identify a verifiable exact matching sheet-music listing. Amazon Music tracks are recordings, not scores; no tagged link.",
+      "id": "mozart-henle-hn7121-early-viennese-quartets",
+      "title": "String Quartets Volume II (Early Viennese Quartets), K.168–173 — Henle HN7121",
+      "category": "pocket_score",
+      "publisher_catalog": "HN 7121",
+      "ismn": "979-0-2018-7121-9",
+      "product_format": "study score (pocket score), not playing parts",
+      "source": "https://www.henle.de/en/String-Quartets-Volume-II-Early-Viennese-Quartets/HN-7121"
     }
   ],
   "implementation_ready": 0,
