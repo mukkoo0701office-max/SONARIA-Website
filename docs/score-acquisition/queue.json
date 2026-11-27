@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Mozart",
     "stage": "violin_sonata",
-    "last_work": "K.403/385c",
-    "note": "Next K.404/385d (fragment). K.380, K.402, K.403 IMSLP score and violin parts identified; K.402/K.403 Stadler completions explicitly flagged; all PDF/rights unchecked."
+    "last_work": "K.481",
+    "note": "Next K.526. K.404 fragment (not complete sonata), K.454 and K.481 historical Breitkopf score and violin part metadata identified. PDF, rights and site duplicates unverified."
   },
   "items": [
     {
@@ -9824,6 +9824,297 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Incomplete Mozart original; third movement completed by Maximilian Stadler from bar 20; autograph #563181; Peters Schnabel/Flesch #00980; NMA Reeser #468340/#468341. Must label completed fragment.. Reliability: historic complete-edition metadata, not critically or physically verified. Compare with autograph/modern critical report; validate movements, edition and scan quality, independent piano part need, and Japanese rights. No publication authorization.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-violin-sonata-k404-breitkopf-1879",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata in C major, K.404/385d",
+      "opus_catalog": "K.404/385d",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.404%2F385d_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "n.d. (19th-century historical series; year not stated on IMSLP work entry)",
+        "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (Serie XVIII editors; exact individual editor unknown)",
+        "series": "Mozarts Werke, Serie XVIII, Bd.2, No.39",
+        "plate": "W.A.M. 404",
+        "imslp_file_id": "63110",
+        "part_file_ids": {
+          "violin": "63111"
+        },
+        "file_pages": 2,
+        "edition_comparison": "Two incomplete movements, Andante and Allegretto; fragment only, not a complete sonata. NMA Eduard Reeser 1965 #468336/#468337 provides critical comparison; modern edition rights need separate review."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.404%2F385d_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "63110",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.404%2F385d_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (Serie XVIII editors; exact individual editor unknown)",
+        "publication_date": "n.d. (19th-century historical series; year not stated on IMSLP work entry)",
+        "scope": "Complete printed score, piano included (2 pp listed); PDF uninspected",
+        "evidence": "IMSLP Scores and Parts listing checked 2026-11-27"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "63111",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.404%2F385d_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (Serie XVIII editors; exact individual editor unknown)",
+          "publication_date": "n.d. (19th-century historical series; year not stated on IMSLP work entry)",
+          "scope": "Violin part (1 pp listed)",
+          "evidence": "IMSLP listing checked; PDF uninspected"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.404%2F385d_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (Serie XVIII editors; exact individual editor unknown)",
+          "publication_date": "n.d. (19th-century historical series; year not stated on IMSLP work entry)",
+          "scope": "Piano included in complete score; separate piano-only file not identified",
+          "evidence": "IMSLP score label only"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "same_edition",
+        "evidence": "IMSLP lists both under same Breitkopf & Härtel Mozarts Werke series; contents not physically checked"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "standalone_piano_part_not_identified_if_required"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.404%2F385d_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "score_file_id": "63110",
+          "violin_part_file_id": "63111",
+          "checked_at": "2026-11-27",
+          "scope": "IMSLP listing only; no PDF download or inspection"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.404%2F385d_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists score #63110 (2 pp) and violin part #63111 (1 pp), Breitkopf & Härtel Mozarts Werke. Two incomplete movements, Andante and Allegretto; fragment only, not a complete sonata. NMA Eduard Reeser 1965 #468336/#468337 provides critical comparison; modern edition rights need separate review."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "violin_part_listed_piano_in_score_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Two incomplete movements, Andante and Allegretto; fragment only, not a complete sonata. NMA Eduard Reeser 1965 #468336/#468337 provides critical comparison; modern edition rights need separate review. Historical edition metadata only; PDF quality and Japan republication rights unknown. SONARIA published catalog duplicate not fully verified. No approval.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-violin-sonata-k454-breitkopf-1879",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata in B-flat major, K.454",
+      "opus_catalog": "K.454",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_in_B-flat_major%2C_K.454_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1879",
+        "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (Serie XVIII editors; exact individual editor unknown)",
+        "series": "Mozarts Werke, Serie XVIII, Bd.2, No.40",
+        "plate": "W.A.M. 454",
+        "imslp_file_id": "63113",
+        "part_file_ids": {
+          "violin": "63114"
+        },
+        "file_pages": 22,
+        "edition_comparison": "Three movements. Compare C.F. Peters c.1887 Friedrich Hermann score #90993 and violin #91030; NMA Eduard Reeser 1965 score #468323, violin #468324. Separate edition comparisons; do not mix files."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_B-flat_major%2C_K.454_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "63113",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_B-flat_major%2C_K.454_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (Serie XVIII editors; exact individual editor unknown)",
+        "publication_date": "1879",
+        "scope": "Complete printed score, piano included (22 pp listed); PDF uninspected",
+        "evidence": "IMSLP Scores and Parts listing checked 2026-11-27"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "63114",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_B-flat_major%2C_K.454_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (Serie XVIII editors; exact individual editor unknown)",
+          "publication_date": "1879",
+          "scope": "Violin part (8 pp listed)",
+          "evidence": "IMSLP listing checked; PDF uninspected"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_B-flat_major%2C_K.454_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (Serie XVIII editors; exact individual editor unknown)",
+          "publication_date": "1879",
+          "scope": "Piano included in complete score; separate piano-only file not identified",
+          "evidence": "IMSLP score label only"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "same_edition",
+        "evidence": "IMSLP lists both under same Breitkopf & Härtel Mozarts Werke series; contents not physically checked"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "standalone_piano_part_not_identified_if_required"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_B-flat_major%2C_K.454_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "score_file_id": "63113",
+          "violin_part_file_id": "63114",
+          "checked_at": "2026-11-27",
+          "scope": "IMSLP listing only; no PDF download or inspection"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_B-flat_major%2C_K.454_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists score #63113 (22 pp) and violin part #63114 (8 pp), Breitkopf & Härtel Mozarts Werke. Three movements. Compare C.F. Peters c.1887 Friedrich Hermann score #90993 and violin #91030; NMA Eduard Reeser 1965 score #468323, violin #468324. Separate edition comparisons; do not mix files."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "violin_part_listed_piano_in_score_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Three movements. Compare C.F. Peters c.1887 Friedrich Hermann score #90993 and violin #91030; NMA Eduard Reeser 1965 score #468323, violin #468324. Separate edition comparisons; do not mix files. Historical edition metadata only; PDF quality and Japan republication rights unknown. SONARIA published catalog duplicate not fully verified. No approval.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-violin-sonata-k481-breitkopf-1879",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata in E-flat major, K.481",
+      "opus_catalog": "K.481",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_in_E-flat_major%2C_K.481_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1879",
+        "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (Serie XVIII editors; exact individual editor unknown)",
+        "series": "Mozarts Werke, Serie XVIII, Bd.2, No.41",
+        "plate": "W.A.M. 481",
+        "imslp_file_id": "63115",
+        "part_file_ids": {
+          "violin": "63116"
+        },
+        "file_pages": 20,
+        "edition_comparison": "Three movements. Compare C.F. Peters c.1887 Friedrich Hermann score #90994 and violin #91031; NMA Eduard Reeser 1965 score #468326, violin #468327. Verify all movements, quality and edition consistency."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_E-flat_major%2C_K.481_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "63115",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_E-flat_major%2C_K.481_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (Serie XVIII editors; exact individual editor unknown)",
+        "publication_date": "1879",
+        "scope": "Complete printed score, piano included (20 pp listed); PDF uninspected",
+        "evidence": "IMSLP Scores and Parts listing checked 2026-11-27"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "63116",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_E-flat_major%2C_K.481_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (Serie XVIII editors; exact individual editor unknown)",
+          "publication_date": "1879",
+          "scope": "Violin part (6 pp listed)",
+          "evidence": "IMSLP listing checked; PDF uninspected"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_E-flat_major%2C_K.481_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee (Serie XVIII editors; exact individual editor unknown)",
+          "publication_date": "1879",
+          "scope": "Piano included in complete score; separate piano-only file not identified",
+          "evidence": "IMSLP score label only"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "same_edition",
+        "evidence": "IMSLP lists both under same Breitkopf & Härtel Mozarts Werke series; contents not physically checked"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "standalone_piano_part_not_identified_if_required"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_E-flat_major%2C_K.481_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "score_file_id": "63115",
+          "violin_part_file_id": "63116",
+          "checked_at": "2026-11-27",
+          "scope": "IMSLP listing only; no PDF download or inspection"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_E-flat_major%2C_K.481_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists score #63115 (20 pp) and violin part #63116 (6 pp), Breitkopf & Härtel Mozarts Werke. Three movements. Compare C.F. Peters c.1887 Friedrich Hermann score #90994 and violin #91031; NMA Eduard Reeser 1965 score #468326, violin #468327. Verify all movements, quality and edition consistency."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "violin_part_listed_piano_in_score_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Three movements. Compare C.F. Peters c.1887 Friedrich Hermann score #90994 and violin #91031; NMA Eduard Reeser 1965 score #468326, violin #468327. Verify all movements, quality and edition consistency. Historical edition metadata only; PDF quality and Japan republication rights unknown. SONARIA published catalog duplicate not fully verified. No approval.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
