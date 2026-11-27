@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Mozart",
     "stage": "violin_sonata",
-    "last_work": "K.547",
-    "note": "K.526 and K.547 historical Breitkopf score and violin parts identified. Check K.Anh.50/526a fragment separately before declaring repertoire exhaustive; PDF quality, rights and site duplication unverified. Next inspect Mozart cello-sonata category and document absence/alternatives only with evidence."
+    "last_work": "K.Anh.47/546a; K.Anh.48/385E; K.Anh.50/526a",
+    "note": "Three separately indexed fragmentary violin/piano sources listed, not complete sonatas. Next audit Mozart original cello-sonata category; distinguish Wolfgang Amadeus from Franz Xaver Wolfgang Mozart, and arrangements from original compositions. No category completion assertion."
   },
   "items": [
     {
@@ -10309,6 +10309,282 @@
       },
       "rights_status": "unknown",
       "notes": "Historical edition is a plausible candidate, not a quality certification. Confirm score/part pagination, musical accuracy, scanning, edition matching, SONARIA existing assets and Japanese republication rights. No approval.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-violin-fragment-anh48-385e",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata fragment in A major",
+      "opus_catalog": "K.Anh.48/385E",
+      "work_url": "https://imslp.org/wiki/Fragment%2C_K.Anh.48_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Bärenreiter-Verlag",
+        "publication_date": "1965",
+        "editor": "Eduard Reeser",
+        "series": "Neue Mozart-Ausgabe, Serie VIII, Werkgruppe 23, NMA VIII/23/2",
+        "imslp_file_id": "468344",
+        "file_pages": 2,
+        "scope": "Fragment only, not a complete sonata; metadata only",
+        "edition_comparison": "Modern scholarly edition; historic alternative not identified; copyright and editorial contribution must be assessed independently"
+      },
+      "edition_url": "https://imslp.org/wiki/Fragment%2C_K.Anh.48_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "468344",
+        "edition_url": "https://imslp.org/wiki/Fragment%2C_K.Anh.48_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "publisher": "Bärenreiter-Verlag",
+        "editor": "Eduard Reeser",
+        "publication_date": "1965",
+        "scope": "2-page fragmentary score listed; PDF not inspected",
+        "evidence": "IMSLP score listing checked 2026-11-27"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "missing",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Fragment%2C_K.Anh.48_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "unknown",
+          "editor": "unknown",
+          "scope": "No separate violin part listed",
+          "evidence": "IMSLP Parts (0), 2026-11-27"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Fragment%2C_K.Anh.48_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Bärenreiter-Verlag",
+          "editor": "Eduard Reeser",
+          "scope": "Piano appears in listed combined score; no separate part identified",
+          "evidence": "IMSLP instrumentation and Scores (1), PDF uninspected"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "unknown",
+        "evidence": "No separate violin part"
+      },
+      "set_completeness": "partial",
+      "missing_assets": [
+        "separate_violin_part",
+        "complete_sonata_not_applicable_fragment"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Fragment%2C_K.Anh.48_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "score_file_id": "468344",
+          "checked_at": "2026-11-27",
+          "scope": "IMSLP metadata only; no PDF downloaded"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Fragment%2C_K.Anh.48_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists fragmentary violin/piano work, NMA Eduard Reeser 1965 score #468344 (2 pages); Parts (0)"
+        }
+      ],
+      "checklist": {
+        "work_identity": "fragment_metadata_checked",
+        "edition": "modern_critical_edition_rights_unverified",
+        "parts": "separate_violin_part_not_listed",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "FRAGMENT, not a complete sonata. Modern editorial contribution and scan rights unresolved. Do not publish, download or represent as complete. Verify edition identity, source access and Japanese rights before any further action.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-violin-fragment-anh50-526a",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata fragment in A major",
+      "opus_catalog": "K.Anh.50/526a",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_in_A_major%2C_K.Anh.50/526a_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Bärenreiter-Verlag",
+        "publication_date": "1965",
+        "editor": "Eduard Reeser",
+        "series": "Neue Mozart-Ausgabe, Serie VIII, Werkgruppe 23, NMA VIII/23/2",
+        "imslp_file_id": "468347",
+        "file_pages": 1,
+        "scope": "Fragment only, not a complete sonata; metadata only",
+        "edition_comparison": "Modern scholarly edition; historic alternative not identified; copyright and editorial contribution must be assessed independently"
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_A_major%2C_K.Anh.50/526a_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "468347",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_A_major%2C_K.Anh.50/526a_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "publisher": "Bärenreiter-Verlag",
+        "editor": "Eduard Reeser",
+        "publication_date": "1965",
+        "scope": "1-page fragmentary score listed; PDF not inspected",
+        "evidence": "IMSLP score listing checked 2026-11-27"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "missing",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_A_major%2C_K.Anh.50/526a_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "unknown",
+          "editor": "unknown",
+          "scope": "No separate violin part listed",
+          "evidence": "IMSLP Parts (0), 2026-11-27"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_A_major%2C_K.Anh.50/526a_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Bärenreiter-Verlag",
+          "editor": "Eduard Reeser",
+          "scope": "Piano appears in listed combined score; no separate part identified",
+          "evidence": "IMSLP instrumentation and Scores (1), PDF uninspected"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "unknown",
+        "evidence": "No separate violin part"
+      },
+      "set_completeness": "partial",
+      "missing_assets": [
+        "separate_violin_part",
+        "complete_sonata_not_applicable_fragment"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_A_major%2C_K.Anh.50/526a_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "score_file_id": "468347",
+          "checked_at": "2026-11-27",
+          "scope": "IMSLP metadata only; no PDF downloaded"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_A_major%2C_K.Anh.50/526a_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists fragmentary violin/piano work, NMA Eduard Reeser 1965 score #468347 (1 pages); Parts (0)"
+        }
+      ],
+      "checklist": {
+        "work_identity": "fragment_metadata_checked",
+        "edition": "modern_critical_edition_rights_unverified",
+        "parts": "separate_violin_part_not_listed",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "FRAGMENT, not a complete sonata. Modern editorial contribution and scan rights unresolved. Do not publish, download or represent as complete. Verify edition identity, source access and Japanese rights before any further action.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-violin-fragment-anh47-546a",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata fragment in G major",
+      "opus_catalog": "K.Anh.47/546a",
+      "work_url": "https://imslp.org/wiki/Fragment%2C_K.Anh.47_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Bärenreiter-Verlag",
+        "publication_date": "1965",
+        "editor": "Eduard Reeser",
+        "series": "Neue Mozart-Ausgabe, Serie VIII, Werkgruppe 23, NMA VIII/23/2",
+        "imslp_file_id": "468350",
+        "file_pages": 2,
+        "scope": "Fragment only, not a complete sonata; metadata only",
+        "edition_comparison": "Modern scholarly edition; historic alternative not identified; copyright and editorial contribution must be assessed independently"
+      },
+      "edition_url": "https://imslp.org/wiki/Fragment%2C_K.Anh.47_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "468350",
+        "edition_url": "https://imslp.org/wiki/Fragment%2C_K.Anh.47_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "publisher": "Bärenreiter-Verlag",
+        "editor": "Eduard Reeser",
+        "publication_date": "1965",
+        "scope": "2-page fragmentary score listed; PDF not inspected",
+        "evidence": "IMSLP score listing checked 2026-11-27"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "missing",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Fragment%2C_K.Anh.47_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "unknown",
+          "editor": "unknown",
+          "scope": "No separate violin part listed",
+          "evidence": "IMSLP Parts (0), 2026-11-27"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Fragment%2C_K.Anh.47_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Bärenreiter-Verlag",
+          "editor": "Eduard Reeser",
+          "scope": "Piano appears in listed combined score; no separate part identified",
+          "evidence": "IMSLP instrumentation and Scores (1), PDF uninspected"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "unknown",
+        "evidence": "No separate violin part"
+      },
+      "set_completeness": "partial",
+      "missing_assets": [
+        "separate_violin_part",
+        "complete_sonata_not_applicable_fragment"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Fragment%2C_K.Anh.47_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "score_file_id": "468350",
+          "checked_at": "2026-11-27",
+          "scope": "IMSLP metadata only; no PDF downloaded"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Fragment%2C_K.Anh.47_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists fragmentary violin/piano work, NMA Eduard Reeser 1965 score #468350 (2 pages); Parts (0)"
+        }
+      ],
+      "checklist": {
+        "work_identity": "fragment_metadata_checked",
+        "edition": "modern_critical_edition_rights_unverified",
+        "parts": "separate_violin_part_not_listed",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "FRAGMENT, not a complete sonata. Modern editorial contribution and scan rights unresolved. Do not publish, download or represent as complete. Verify edition identity, source access and Japanese rights before any further action.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
