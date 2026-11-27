@@ -4,14 +4,14 @@ import { amazonSearchUrl } from "@/lib/affiliate/amazonSearch";
 
 type Props = {
   t: Dictionary["library"]["ad"];
+  s: Dictionary["library"]["amazonSearch"];
   composer: string; // 表示用の作曲家名
   keyword: string; // 検索語
 };
 
 // 作品ページの下部に置く横長のバナー（広告）。確認済みの商品（amazon.json）が無いときに表示する。
 // 画像は使わず、配色トークンだけで描く（外部画像・ロゴを使わない）
-export default function AmazonSearchBanner({ t, composer, keyword }: Props) {
-  const s = t.amazonSearch;
+export default function AmazonSearchBanner({ t, s, composer, keyword }: Props) {
   return (
     <aside aria-labelledby="amazon-banner" className="my-8 overflow-hidden rounded-card bg-navy text-white">
       <div className="relative flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">

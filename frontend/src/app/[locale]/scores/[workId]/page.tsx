@@ -345,7 +345,7 @@ export default async function WorkPage({ params }: Props) {
       ) : work.affiliate && work.affiliate.length > 0 ? (
         <AffiliateSlot placement="work" t={t.ad} links={work.affiliate} />
       ) : (
-        <AmazonSearchBanner t={t.ad} composer={(c.short ?? c.name)[locale]} keyword={t.ad.amazonSearch.bannerKeyword((c.short ?? c.name)[locale])} />
+        <AmazonSearchBanner t={t.ad} s={t.amazonSearch} composer={(c.short ?? c.name)[locale]} keyword={t.amazonSearch.bannerKeyword((c.short ?? c.name)[locale])} />
       )}
 
       {related.length > 0 && (

@@ -15,10 +15,11 @@ type Props = {
 // 検索結果は作品との一致を保証しないので、特定の商品を勧める書き方はしない。PDF のダウンロードボタンからは離して置く
 // クライアント部品には関数を含む辞書を渡せないため、辞書はここで読む
 export default function AmazonSearchWidget({ locale, work }: Props) {
-  const t = getDictionary(locale).library.ad;
+  const lib = getDictionary(locale).library;
+  const t = lib.ad;
   const [kind, setKind] = useState<AmazonSearchKind>("score");
   const keyword = amazonKeyword(work, kind, locale);
-  const s = t.amazonSearch;
+  const s = lib.amazonSearch;
   return (
     <aside aria-labelledby="amazon-search" className="my-8 overflow-hidden rounded-card border border-line bg-card">
       <div className="relative bg-navy px-5 py-5 text-white sm:px-6">
