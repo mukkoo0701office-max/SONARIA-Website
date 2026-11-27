@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Beethoven",
     "stage": "string_quartet",
-    "last_work": "Op.130",
-    "note": "Next Op.131; verify Op.130 original Große Fuge vs replacement finale, all parts/score and rights before any release."
+    "last_work": "Op.132",
+    "note": "Next Op.135, then audit Op.133 Große Fuge as related Op.130 finale and any remaining quartets before violin sonatas. Verify editions and rights; no PDF downloaded."
   },
   "items": [
     {
@@ -11912,6 +11912,218 @@
       },
       "rights_status": "unknown",
       "notes": "Critical: original finale Große Fuge Op.133 versus replacement Allegro finale; verify all four parts and score contain the same finale version. Alternative Artaria first-edition score #51355. Candidate only; score/parts completeness, editorial reliability, Japan rights, SONARIA installed assets and PDF hash remain unverified. No approval.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-op131-breitkopf-score-schott-parts",
+      "composer": "Ludwig van Beethoven",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.14 in C-sharp minor",
+      "opus_catalog": "Op.131",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.14%2C_Op.131_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1863",
+        "editor": "unknown (series edition)",
+        "scope": "Complete score (7 movements), metadata only",
+        "imslp_file_id": "973814",
+        "edition_comparison": "Breitkopf score #973814 (40 pages) vs Schott separate parts 182346, 182347, 182348, 182349; different editions; verify notes and movements before selection. Historical combined parts alternative #51357."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.14%2C_Op.131_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.14%2C_Op.131_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP score #973814; four individual part file IDs 182346, 182347, 182348, 182349; Schott plate 2628; checked 2026-11-28. No PDF downloaded."
+        }
+      ],
+      "score_inventory": {
+        "status": "unverified",
+        "imslp_file_id": "973814",
+        "edition_url": "https://imslp.org/wiki/String_Quartet_No.14%2C_Op.131_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "unknown",
+        "publication_date": "1863",
+        "scope": "complete score; 7 movements; 40 pages reported; PDF not inspected",
+        "evidence": "IMSLP Scores metadata 2026-11-28"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "182346",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.14%2C_Op.131_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Schott",
+          "editor": "First edition",
+          "scope": "violin_1 separate part; Schott first-edition four separate parts; same-edition combined parts #51357; PDF not inspected",
+          "evidence": "IMSLP Parts listing, file #182346, checked 2026-11-28"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "182347",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.14%2C_Op.131_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Schott",
+          "editor": "First edition",
+          "scope": "violin_2 separate part; Schott first-edition four separate parts; same-edition combined parts #51357; PDF not inspected",
+          "evidence": "IMSLP Parts listing, file #182347, checked 2026-11-28"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "182348",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.14%2C_Op.131_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Schott",
+          "editor": "First edition",
+          "scope": "viola separate part; Schott first-edition four separate parts; same-edition combined parts #51357; PDF not inspected",
+          "evidence": "IMSLP Parts listing, file #182348, checked 2026-11-28"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "182349",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.14%2C_Op.131_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Schott",
+          "editor": "First edition",
+          "scope": "cello separate part; Schott first-edition four separate parts; same-edition combined parts #51357; PDF not inspected",
+          "evidence": "IMSLP Parts listing, file #182349, checked 2026-11-28"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "different_edition",
+        "evidence": "Breitkopf 1863 score vs Schott 1827 parts; musical correspondence unverified"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.14%2C_Op.131_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP metadata only; PDF quality, content and access not tested"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "four_parts_listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_work_checked_site_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Publisher/editor information comes from IMSLP metadata. Historical source reliability is promising, but textual accuracy, scan legibility, all movements, score-to-part correspondence, Japan republication rights, and SONARIA existing assets remain unverified. No publication approval.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-op132-breitkopf-score-schott-parts",
+      "composer": "Ludwig van Beethoven",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.15 in A minor",
+      "opus_catalog": "Op.132",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.15%2C_Op.132_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1863",
+        "editor": "unknown (series edition)",
+        "scope": "Complete score (5 movements), metadata only",
+        "imslp_file_id": "973815",
+        "edition_comparison": "Breitkopf score #973815 (48 pages) vs Schott separate parts 182305, 182306, 182307, 182308; different editions; verify notes and movements before selection. Historical combined parts alternative #51360."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.15%2C_Op.132_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.15%2C_Op.132_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP score #973815; four individual part file IDs 182305, 182306, 182307, 182308; Schott plate 18900; checked 2026-11-28. No PDF downloaded."
+        }
+      ],
+      "score_inventory": {
+        "status": "unverified",
+        "imslp_file_id": "973815",
+        "edition_url": "https://imslp.org/wiki/String_Quartet_No.15%2C_Op.132_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "unknown",
+        "publication_date": "1863",
+        "scope": "complete score; 5 movements; 48 pages reported; PDF not inspected",
+        "evidence": "IMSLP Scores metadata 2026-11-28"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "182305",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.15%2C_Op.132_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Schott",
+          "editor": "unknown",
+          "scope": "violin_1 separate part; Schott ca.1867 four separate parts; Schlesinger first-edition combined parts #51360 is an alternative, not the same edition; PDF not inspected",
+          "evidence": "IMSLP Parts listing, file #182305, checked 2026-11-28"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "182306",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.15%2C_Op.132_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Schott",
+          "editor": "unknown",
+          "scope": "violin_2 separate part; Schott ca.1867 four separate parts; Schlesinger first-edition combined parts #51360 is an alternative, not the same edition; PDF not inspected",
+          "evidence": "IMSLP Parts listing, file #182306, checked 2026-11-28"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "182307",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.15%2C_Op.132_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Schott",
+          "editor": "unknown",
+          "scope": "viola separate part; Schott ca.1867 four separate parts; Schlesinger first-edition combined parts #51360 is an alternative, not the same edition; PDF not inspected",
+          "evidence": "IMSLP Parts listing, file #182307, checked 2026-11-28"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "182308",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.15%2C_Op.132_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Schott",
+          "editor": "unknown",
+          "scope": "cello separate part; Schott ca.1867 four separate parts; Schlesinger first-edition combined parts #51360 is an alternative, not the same edition; PDF not inspected",
+          "evidence": "IMSLP Parts listing, file #182308, checked 2026-11-28"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "different_edition",
+        "evidence": "Breitkopf 1863 score vs Schott ca. 1867 parts; musical correspondence unverified"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.15%2C_Op.132_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP metadata only; PDF quality, content and access not tested"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "four_parts_listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_work_checked_site_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Publisher/editor information comes from IMSLP metadata. Historical source reliability is promising, but textual accuracy, scan legibility, all movements, score-to-part correspondence, Japan republication rights, and SONARIA existing assets remain unverified. No publication approval.",
       "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null
