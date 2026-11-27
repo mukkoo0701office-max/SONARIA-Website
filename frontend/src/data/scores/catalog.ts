@@ -1,4 +1,5 @@
 import rawCatalog from "./catalog.json";
+import rawWorkTexts from "./workTexts.json";
 import { sheetTypeOf } from "@/lib/scores/sheetType";
 import rawComposers from "./composers.json";
 import rawPortraits from "./portraits.json";
@@ -9,9 +10,9 @@ import type { Locale } from "@/lib/i18n";
 
 // 楽譜カタログの読み出し。ページはすべてここから自動生成する（作品ごとにページを手で作らない）。
 //
-// 重要: rights.status が "approved" で、ファイルが 1 つ以上ある版だけを公開する。
-// それ以外の版は画面・sitemap・構造化データのどこにも出さない。
-// approved への変更は運営者の承認が必要（承認記録は tools/score-migration/approvals.json）。
+// 重要: rights.status が "approved" または "pending"（運営者の決定 2026-11-28）で、ファイルが 1 つ以上ある版だけを公開する。
+// それ以外（権利に問題があると判断した版）は画面・sitemap・構造化データのどこにも出さない。
+// approved への変更の記録は tools/score-migration/approvals.json。
 
 type DemoData = { composers: Composer[]; works: Work[] };
 
@@ -27,7 +28,9 @@ const demo: DemoData | null =
     : null;
 
 /** プレビューでは PDF 本体をリリースの添付ファイルから取得する（PDF はサイトの書き出しに含めない） */
-export const usesRemotePdf = process.env.NEXT_PUBLIC_PREVIEW === "1";
+// PDF は GitHub のリリースの添付ファイルから配信する（運営者の決定 2026-11-28「当面は GitHub のまま、アクセスが増える前に Cloudflare R2 へ」）。
+// 本番もプレビューも同じ。R2 へ移すときは remote の URL を差し替える
+export const usesRemotePdf = true;
 
 /** 表示確認用のサンプルを表示しているか（画面に明記する） */
 export const isSampleCatalog = demo !== null;
@@ -61,14 +64,27 @@ const allComposers: Composer[] = (demo ? demo.composers : composerMaster).map((c
 const composerById = new Map(allComposers.map((c) => [c.id, c]));
 
 // 表示する版の権利の状態。
-// 本番: 承認済み（approved）だけ。
-// プレビュー: 権利確認前（pending）も表示する（運営者の指示 2026-11-26「いったん権利は気にせず反映。公開前にチェックして差し替える」）。
-//   pending の版は画面に「権利確認前」と明記し、本番ビルドには含めない
-const isPreviewBuild = process.env.NEXT_PUBLIC_PREVIEW === "1";
-const visibleStatuses: ReadonlySet<string> = new Set(isPreviewBuild ? ["approved", "pending"] : ["approved"]);
+// 運営者の決定（2026-11-28）: 権利確認前（pending）の版も本番で公開する。本番では「権利確認前」の表示もしない（プレビューだけ運営者向けに表示）。
+// 権利に問題がある（rejected など）と判断した版は表示しない。docs/decisions/0004-launch-decisions-20261128.md
+const visibleStatuses: ReadonlySet<string> = new Set(["approved", "pending"]);
+
+// 作品の概要・原語名・通称（workTexts.json）を重ねる。catalog.json（移行ツールが生成）とは別に管理する
+type WorkTextEntry = { original?: string; aliases?: string[]; summary?: { ja: string; en: string } };
+const workTexts = (rawWorkTexts as { works: Record<string, WorkTextEntry> }).works;
+function withTexts(w: Work): Work {
+  const x = workTexts[w.id];
+  if (!x) return w;
+  return {
+    ...w,
+    title: { ...w.title, original: x.original ?? w.title.original ?? null },
+    aliases: [...new Set([...(w.aliases ?? []), ...(x.aliases ?? [])])],
+    summary: x.summary ?? w.summary ?? null,
+  };
+}
 
 // 表示してよい版・ファイルだけを残した作品一覧（該当する版が 1 つもない作品は除く）
 export const works: Work[] = (demo ? demo.works : catalog.works)
+  .map((w) => withTexts(w as Work))
   .map((w) => ({ ...w, editions: w.editions.filter((e) => visibleStatuses.has(e.rights.status) && e.assets.length > 0) }))
   .filter((w) => w.editions.length > 0)
   .sort((a, b) => a.id.localeCompare(b.id));

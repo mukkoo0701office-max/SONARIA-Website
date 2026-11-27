@@ -222,7 +222,7 @@ export type Dictionary = {
   // 準備中のページ
   placeholders: Record<"performance" | "contact" | "privacy", PlaceholderCopy>;
   // 内容のあるページ（旧サイト https://www.mukkoo0701music.jp/ の文章をもとに作成）
-  contentPages: Record<"bowing" | "lessons" | "recording" | "community" | "profile", ContentCopy>;
+  contentPages: Record<"bowing" | "lessons" | "recording" | "community" | "profile" | "privacy", ContentCopy>;
   // 管理人プロフィールの「執筆・発信活動」と「お問い合わせ」
   profileChannels: {
     heading: string;
@@ -491,6 +491,11 @@ export type Dictionary = {
       difficulty: string;
       difficultyLevels: Record<1 | 2 | 3 | 4 | 5, string>;
       faqTitle: string;
+      summaryReference: string; // 概要の参考資料の見出し（「参考」）
+      contents: string;
+      contentsValue: (scores: number, parts: number) => string;
+      printVolume: string;
+      printVolumeValue: (files: number, pages: number) => string;
       qContents: string;
       aContents: (score: string | null, parts: string[]) => string;
       scoreItem: (pages: number) => string;

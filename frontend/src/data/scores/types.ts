@@ -125,6 +125,7 @@ export type Work = {
   composerId: string;
   title: { ja: string; en: string; original?: string | null };
   aliases?: string[]; // 一般的な別名（例: 春, Spring Sonata）
+  summary?: Localized | null; // 2〜3 文の概要（workTexts.json。出典として作品の IMSLP ページを併記）
   catalog?: CatalogNumber[];
   key?: Localized | null; // 調性
   composed?: string | null; // 作曲年代（例: 1800–1801）

@@ -482,7 +482,7 @@ export function createDemoData(today: Date = new Date()) {
   const adSettings: AdSettings = {
     adsenseEnabled: false,
     publisherId: "",
-    pages: { work: true, composer: false, category: false },
+    pages: { work: true, composer: true, category: true },
     units: [{ id: "work-after-downloads", page: "work", placement: "after-downloads", slot: "", enabled: true }],
     amazonEnabled: true,
     googleManaged: { autoAds: false, vignette: false, anchor: false, cmpConfigured: false, adsTxt: "missing" },

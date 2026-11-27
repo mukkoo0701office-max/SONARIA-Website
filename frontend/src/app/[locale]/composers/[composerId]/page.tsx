@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "@/components/layout/Container";
+import AdSenseSlot from "@/components/ads/AdSenseSlot";
 import AffiliateSlot from "@/components/library/AffiliateSlot";
 import WorkList from "@/components/library/WorkList";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
@@ -151,6 +152,9 @@ export default async function ComposerPage({ params }: Props) {
         </h2>
         <WorkList works={list} locale={locale} showComposer={false} />
       </section>
+
+      {/* Google AdSense（1 枠）。作品一覧の後、ページ下部の広告・アフィリエイト枠とは関連作曲家・出典を挟んで分ける */}
+      <AdSenseSlot unit="composer-after-works" t={lib.adsense} />
 
       {related.length > 0 && (
         <section aria-labelledby="related" className="mt-8">

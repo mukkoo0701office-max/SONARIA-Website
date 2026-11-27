@@ -399,6 +399,81 @@ export const en: Dictionary = {
         { heading: "Organizer", paragraphs: ["Organized by the SONARIA curator."] },
       ],
     },
+    // Privacy policy (operator decision 2026-11-28: written by Claude and published as is; not reviewed by a lawyer)
+    privacy: {
+      title: "Privacy Policy",
+      lead: "This policy explains how SONARIA (“the Site”) handles information about its users.",
+      sections: [
+        {
+          heading: "1. Information we collect",
+          items: [
+            "Information you enter in our contact, request and teacher registration forms (such as your name, email address, the details of your request and your teacher profile)",
+            "Information sent automatically when you browse the Site (pages viewed, date and time, referrer, browser and device type, IP address, and identifiers such as cookies)",
+          ],
+        },
+        {
+          heading: "2. How we use it",
+          items: [
+            "To answer enquiries and requests, prepare quotes, arrange schedules and provide our services",
+            "To review teacher applications and, once approved, list teachers in the directory (only the items you agreed to publish)",
+            "To understand and improve how the Site is used",
+            "To serve advertising and measure its performance",
+            "To prevent misuse, such as mass automated downloading",
+          ],
+        },
+        {
+          heading: "3. Analytics (Google Analytics)",
+          paragraphs: [
+            "The Site uses Google Analytics, provided by Google LLC, to understand how visitors use it. Google Analytics uses cookies and does not collect information that identifies you personally. The data is handled under Google’s privacy policy.",
+            "You can opt out of Google Analytics with the Google Analytics Opt-out Browser Add-on (https://tools.google.com/dlpage/gaoptout).",
+          ],
+        },
+        {
+          heading: "4. Advertising (Google AdSense)",
+          paragraphs: [
+            "The Site uses Google AdSense, a third-party advertising service. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to the Site or other websites.",
+            "Google’s use of advertising cookies enables it and its partners to serve ads based on your visits to the Site and/or other sites on the Internet. You can opt out of personalised advertising in My Ad Center (https://myadcenter.google.com/). For details, see Google’s Advertising policies page (https://policies.google.com/technologies/ads).",
+          ],
+        },
+        {
+          heading: "5. Amazon Associates Programme",
+          paragraphs: [
+            "SONARIA is a participant in the Amazon Associates Programme, an affiliate advertising programme designed to provide a means for sites to earn fees by advertising and linking to Amazon.co.jp. Product links are labelled “Advertisement” or “PR”.",
+          ],
+        },
+        {
+          heading: "6. Information sent to third parties",
+          paragraphs: ["Information about you is sent to the following companies when you use the Site."],
+          items: [
+            "Google LLC (Google Analytics, Google AdSense): pages viewed, identifiers such as cookies, IP address and device information — for analytics and for serving and measuring ads",
+            "GitHub, Inc. (delivery of score PDFs): IP address and browser information when you download a PDF — to deliver the file",
+            "Supabase, Inc. (form submissions, once connected): the information you enter in our forms — to receive and manage enquiries, requests and teacher applications",
+            "Amazon.com, Inc. and its affiliates: information on Amazon’s site if you click a product link — to measure referral fees",
+          ],
+        },
+        {
+          heading: "7. Disclosure to third parties",
+          paragraphs: ["We do not share personal information with third parties without your consent, except where required by law."],
+        },
+        {
+          heading: "8. Security",
+          paragraphs: ["We manage personal information appropriately, for example by limiting who can access it, to prevent leaks, loss or damage. Teachers’ verification documents and contact details are never made public."],
+        },
+        {
+          heading: "9. Visitors from the EEA, the UK and Switzerland",
+          paragraphs: ["Visitors from these regions are asked for consent to the use of cookies. You can use the Site without consenting; in that case you may see non-personalised ads."],
+        },
+        {
+          heading: "10. Access, correction and deletion",
+          paragraphs: ["To request access to, correction, suspension of use or deletion of your personal information, please contact us through the contact page. We will respond after confirming your identity."],
+        },
+        {
+          heading: "11. Changes",
+          paragraphs: ["We may update this policy when necessary. Changes take effect when they are posted on this page."],
+        },
+      ],
+      footnote: "Established: 28 November 2026",
+    },
     profile: {
       title: "About the curator",
       lead: "Profile of the curator who oversees SONARIA.",
@@ -774,6 +849,11 @@ export const en: Dictionary = {
       difficulty: "Difficulty",
       difficultyLevels: { 1: "Beginner", 2: "Elementary", 3: "Intermediate", 4: "Advanced", 5: "Professional" },
       faqTitle: "About this score",
+      summaryReference: "Reference",
+      contents: "Included",
+      contentsValue: (scores, parts) => [scores ? `Score${scores > 1 ? `s (${scores})` : ""}` : "", parts ? `${parts} part${parts === 1 ? "" : "s"}` : ""].filter(Boolean).join(" + ") + (scores ? "" : " (no score)"),
+      printVolume: "Printing",
+      printVolumeValue: (files, pages) => `${files} file${files === 1 ? "" : "s"}, ${pages} pages in total`,
       qContents: "What is included?",
       aContents: (score, parts) => [score ? `Full score (${score})` : "No full score is included", parts.length ? `${parts.length} part${parts.length === 1 ? "" : "s"}: ${parts.join(", ")}` : ""].filter(Boolean).join(". ") + ".",
       scoreItem: (pages) => (pages === 1 ? "1 page" : `${pages} pages`),
