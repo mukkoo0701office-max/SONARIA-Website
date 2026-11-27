@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Mozart",
     "stage": "string_quartet",
-    "last_work": "K.464",
-    "note": "Next K.465 (Dissonance). K.428, K.458, K.464 await Claude PDF/rights review and SONARIA inventory reconciliation."
+    "last_work": "K.575",
+    "note": "Next K.589 and K.590 (remaining Prussian quartets). K.465 K.499 K.575 remain research_needed; verify site inventory, parts and rights."
   },
   "items": [
     {
@@ -6637,6 +6637,168 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate research only. Claude should inspect source PDF and all four parts, check publisher/editor and rights, match score with parts, compare alternate scans, check existing SONARIA inventory and avoid duplicate Work/Edition/ScoreAsset. No automated download or publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-string-quartet-no19-k465-breitkopf-1882",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.19 in C major (Dissonance)",
+      "opus_catalog": "K.465",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.19_K.465_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1882",
+        "editor": "Mozarts Werke Serie XIV editors (individual attribution unspecified)",
+        "scope": "Historical complete score; separate parts must be checked",
+        "plate": "W.A.M. 465",
+        "imslp_file_id": "482556",
+        "part_file_ids": {
+          "violin_1": "251346",
+          "violin_2": "251347",
+          "viola": "251348",
+          "cello": "251349"
+        },
+        "parts_publisher": "C.F. Peters, ca.1882, plate 6686",
+        "parts_editor": "Andreas Moser; Hugo Becker",
+        "edition_comparison": "Breitkopf full score #482556 (36pp) vs Peters four parts; compare articulations, dynamic marks and 1st movement Adagio introduction."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.19_K.465_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.19_K.465_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists Mozart String Quartet No.19, K.465, C major, 4 movements, instrumentation 2 violins viola cello; Breitkopf 1882 Serie XIV plate W.A.M. 465, score #482556. Parts details provisional; PDFs uninspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "partial_metadata_not_pdf_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Verify original PDF contents, completeness, all four parts and editorial alignment, duplicate Work/Edition/ScoreAsset, and Japan republication rights. No automatic download, approval or publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-string-quartet-no20-k499-breitkopf-1882",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.20 in D major (Hoffmeister)",
+      "opus_catalog": "K.499",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.20_K.499_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1882",
+        "editor": "Mozarts Werke Serie XIV editors (individual attribution unspecified)",
+        "scope": "Historical complete score; separate parts must be checked",
+        "plate": "W.A.M. 499",
+        "imslp_file_id": "64144",
+        "part_file_ids": {
+          "violin_1": "01882",
+          "violin_2": "01883",
+          "viola": "01884",
+          "cello": "01885"
+        },
+        "parts_publisher": "IMSLP parts publisher attribution to be checked on PDF",
+        "parts_editor": "unknown",
+        "edition_comparison": "Breitkopf complete score #64144 (20pp) or #484899 (34pp) vs manuscript #801955 (28pp, very large). Verify parts publisher before use."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.20_K.499_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.20_K.499_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists Mozart String Quartet No.20, K.499, D major, 4 movements, instrumentation 2 violins viola cello; Breitkopf 1882 Serie XIV plate W.A.M. 499, score #64144. Parts details provisional; PDFs uninspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "partial_metadata_not_pdf_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Verify original PDF contents, completeness, all four parts and editorial alignment, duplicate Work/Edition/ScoreAsset, and Japan republication rights. No automatic download, approval or publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-string-quartet-no21-k575-breitkopf-1882",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.21 in D major (First Prussian)",
+      "opus_catalog": "K.575",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.21_K.575_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1882",
+        "editor": "Mozarts Werke Serie XIV editors (individual attribution unspecified)",
+        "scope": "Historical complete score; separate parts must be checked",
+        "plate": "W.A.M. 575",
+        "imslp_file_id": "64145",
+        "part_file_ids": {
+          "violin_1": null,
+          "violin_2": null,
+          "viola": null,
+          "cello": null
+        },
+        "parts_publisher": "unknown; separate four-part edition not yet identified",
+        "parts_editor": "unknown",
+        "edition_comparison": "Breitkopf score #64145 (16pp) vs Johann André 1824 edition (plate 4787) and alternative scan #484900 (28pp); full set of parts still to locate."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.21_K.575_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.21_K.575_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists Mozart String Quartet No.21, K.575, D major, 4 movements, instrumentation 2 violins viola cello; Breitkopf 1882 Serie XIV plate W.A.M. 575, score #64145. Parts details provisional; PDFs uninspected."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "partial_metadata_not_pdf_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Verify original PDF contents, completeness, all four parts and editorial alignment, duplicate Work/Edition/ScoreAsset, and Japan republication rights. No automatic download, approval or publication.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
