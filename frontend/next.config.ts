@@ -6,8 +6,14 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 // 静的書き出し（さくらのレンタルサーバで配信するため）。
 // trailingSlash: /ja/scores/ を ja/scores/index.html として出力し、Apache でそのまま配信できるようにする。
+// 管理画面（src/app/(admin)/admin/*.admin.tsx）は SONARIA_ADMIN_PREVIEW=1 のビルドでだけページとして生成する。
+// 認証サーバーが未接続のため、本番・GitHub Pages のビルドには管理画面もデモデータも含めない（CI の「No admin in production build」で検査）。
+// 確認方法: SONARIA_ADMIN_PREVIEW=1 npm run dev → http://localhost:3000/admin/
+const adminPreview = process.env.SONARIA_ADMIN_PREVIEW === "1";
+
 const nextConfig: NextConfig = {
   output: "export",
+  pageExtensions: adminPreview ? ["admin.tsx", "tsx", "ts"] : ["tsx", "ts"],
   basePath,
   trailingSlash: true,
   images: { unoptimized: true },

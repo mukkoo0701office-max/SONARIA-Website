@@ -30,6 +30,8 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: /SONARIA-Website
           NEXT_PUBLIC_PREVIEW: "1"
+          # 管理画面の撮影用（このビルドは公開しない。撮影結果だけを ci/screenshots に保存する）
+          SONARIA_ADMIN_PREVIEW: "1"
 
       - name: Serve and capture
         working-directory: frontend
@@ -40,6 +42,7 @@ jobs:
           npx playwright install --with-deps chromium
           sleep 2
           node scripts/screenshots.mjs http://localhost:4173/SONARIA-Website /tmp/shots
+          node scripts/admin-screenshots.mjs http://localhost:4173/SONARIA-Website /tmp/shots
 
       - name: Save to ci/screenshots branch
         if: always()

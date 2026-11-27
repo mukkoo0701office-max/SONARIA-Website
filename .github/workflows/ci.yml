@@ -60,6 +60,12 @@ jobs:
           # 権利確認前（pending）の版は本番ビルドに出さない
           if grep -rq "権利確認前" out/ja/scores/ 2>/dev/null; then echo "pending-rights scores leaked into production build"; exit 1; fi
 
+      # 管理画面は認証サーバーが未接続のため、本番ビルドに含めない（SONARIA_ADMIN_PREVIEW=1 のときだけ生成。next.config.ts）
+      - name: No admin console in production build
+        run: |
+          test ! -e out/admin || { echo "admin console leaked into production build"; exit 1; }
+          if grep -rq "SONARIA_ADMIN_DEMO_DATA" out/; then echo "admin demo data leaked into production build"; exit 1; fi
+
       # 品質検査（title・description・lang・JSON-LD・リンク切れ・sitemap）
       - name: Site check (production, before launch)
         run: |
