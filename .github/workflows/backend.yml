@@ -36,9 +36,17 @@ jobs:
       - name: Type-check Edge Function
         run: deno check supabase/functions/submit/index.ts
 
+      # 「latest」の解決は認証なしの GitHub API を使い、回数制限で失敗することがあるため、
+      # 認証つきで最新版の番号を調べてから指定する
+      - name: Resolve Supabase CLI version
+        id: cli
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: echo "version=$(gh api repos/supabase/cli/releases/latest --jq .tag_name | sed 's/^v//')" >> "$GITHUB_OUTPUT"
+
       - uses: supabase/setup-cli@v1
         with:
-          version: latest
+          version: ${{ steps.cli.outputs.version }}
 
       - name: Start Supabase (local) and apply migrations
         run: supabase start
