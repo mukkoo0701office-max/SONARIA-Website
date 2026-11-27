@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Mozart",
     "stage": "violin_sonata",
-    "last_work": "K.11",
-    "note": "Next K.12 onward. K.10 and K.11 optional cello parts must be checked separately; do not conflate historical score+violin edition with later cello scans."
+    "last_work": "K.14",
+    "note": "Next K.15; ensure score, violin and optional cello listed individually and edition-matched, with missing assets explicit."
   },
   "items": [
     {
@@ -7497,6 +7497,345 @@
       },
       "rights_status": "unknown",
       "notes": "Source is historical and editorially established, but source PDF legibility, score/parts completeness, Japan reuse rights, and existing SONARIA inventory remain unverified. Do not download or publish.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-violin-sonata-k12-breitkopf-1879",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata in A major",
+      "opus_catalog": "K.12",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_in_A_major%2C_K.12_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1879",
+        "editor": "Mozarts Werke Serie XVIII editorial board (Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee); individual editor unspecified",
+        "plate": "W.A.M. 12",
+        "scope": "Complete score (2 movements) and separate violin part; optional cello omitted from this edition",
+        "imslp_file_id": "57788",
+        "part_file_ids": {
+          "violin": "57789",
+          "keyboard": null,
+          "optional_cello": null
+        },
+        "edition_comparison": "Breitkopf 1879 score #57788 and violin #57789 same historical series. Alternative scan score #498607, violin #498608, cello #498609 (edition provenance and score/part alignment unverified). Modern NMA/DME is reference only; rights not approved."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_A_major%2C_K.12_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano",
+        "optional_cello"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "57788",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_A_major%2C_K.12_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Mozarts Werke Serie XVIII editorial board (Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee); individual editor unspecified",
+        "publication_date": "1879",
+        "scope": "Complete score, violin and keyboard",
+        "evidence": "IMSLP Scores and Parts metadata; PDF not inspected"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "57789",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_A_major%2C_K.12_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Mozarts Werke Serie XVIII editorial board (Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee); individual editor unspecified",
+          "scope": "separate violin part",
+          "evidence": "IMSLP listing; PDF not inspected"
+        },
+        "piano": {
+          "status": "included_in_score_unverified",
+          "imslp_file_id": "57788",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_A_major%2C_K.12_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Mozarts Werke Serie XVIII editorial board (Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee); individual editor unspecified",
+          "scope": "keyboard part printed in score; separate keyboard-only PDF not identified",
+          "evidence": "IMSLP labels complete score; PDF not inspected"
+        },
+        "optional_cello": {
+          "status": "alternative_identified_not_edition_matched",
+          "imslp_file_id": "498609",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_A_major%2C_K.12_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "unknown",
+          "editor": "unknown",
+          "scope": "optional cello in alternative set; omitted from 1879 score/violin scan",
+          "evidence": "IMSLP lists alternative cello file; PDF not inspected"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "same_edition_for_score_and_violin; optional_cello_unknown",
+        "evidence": "Breitkopf metadata groups score and violin; alternative cello scan listed separately"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "separate piano-only part not identified (not necessarily required)",
+        "optional cello part matching Breitkopf edition unverified",
+        "PDF content, movements and part compatibility unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_A_major%2C_K.12_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "checked_at": "2026-11-27",
+          "scope": "IMSLP file listing, not PDF inspection",
+          "ids": [
+            "57788",
+            "57789",
+            "498607",
+            "498608",
+            "498609"
+          ]
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_A_major%2C_K.12_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists 2 movements, violin/piano with optional cello; Breitkopf & Härtel 1879 Serie XVIII score #57788, violin #57789; alternative score/violin/cello #498607, #498608, #498609."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "score_and_violin_identified_optional_cello_separate_edition_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Do not treat optional cello from alternate scan as matched to Breitkopf. Claude must verify all PDFs, edition, Japan rights, existing SONARIA inventory and full movements before publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-violin-sonata-k13-breitkopf-1879",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata in F major",
+      "opus_catalog": "K.13",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.13_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1879",
+        "editor": "Mozarts Werke Serie XVIII editorial board (Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee); individual editor unspecified",
+        "plate": "W.A.M. 13",
+        "scope": "Complete score (3 movements) and separate violin part; optional cello omitted from this edition",
+        "imslp_file_id": "57791",
+        "part_file_ids": {
+          "violin": "57792",
+          "keyboard": null,
+          "optional_cello": null
+        },
+        "edition_comparison": "Breitkopf 1879 score #57791 and violin #57792 same historical series. Alternative scan score #498610, violin #498611, cello #498612 (edition provenance and score/part alignment unverified). Modern NMA/DME is reference only; rights not approved."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.13_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano",
+        "optional_cello"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "57791",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.13_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Mozarts Werke Serie XVIII editorial board (Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee); individual editor unspecified",
+        "publication_date": "1879",
+        "scope": "Complete score, violin and keyboard",
+        "evidence": "IMSLP Scores and Parts metadata; PDF not inspected"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "57792",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.13_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Mozarts Werke Serie XVIII editorial board (Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee); individual editor unspecified",
+          "scope": "separate violin part",
+          "evidence": "IMSLP listing; PDF not inspected"
+        },
+        "piano": {
+          "status": "included_in_score_unverified",
+          "imslp_file_id": "57791",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.13_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Mozarts Werke Serie XVIII editorial board (Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee); individual editor unspecified",
+          "scope": "keyboard part printed in score; separate keyboard-only PDF not identified",
+          "evidence": "IMSLP labels complete score; PDF not inspected"
+        },
+        "optional_cello": {
+          "status": "alternative_identified_not_edition_matched",
+          "imslp_file_id": "498612",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.13_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "unknown",
+          "editor": "unknown",
+          "scope": "optional cello in alternative set; omitted from 1879 score/violin scan",
+          "evidence": "IMSLP lists alternative cello file; PDF not inspected"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "same_edition_for_score_and_violin; optional_cello_unknown",
+        "evidence": "Breitkopf metadata groups score and violin; alternative cello scan listed separately"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "separate piano-only part not identified (not necessarily required)",
+        "optional cello part matching Breitkopf edition unverified",
+        "PDF content, movements and part compatibility unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.13_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "checked_at": "2026-11-27",
+          "scope": "IMSLP file listing, not PDF inspection",
+          "ids": [
+            "57791",
+            "57792",
+            "498610",
+            "498611",
+            "498612"
+          ]
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.13_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists 3 movements, violin/piano with optional cello; Breitkopf & Härtel 1879 Serie XVIII score #57791, violin #57792; alternative score/violin/cello #498610, #498611, #498612."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "score_and_violin_identified_optional_cello_separate_edition_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Do not treat optional cello from alternate scan as matched to Breitkopf. Claude must verify all PDFs, edition, Japan rights, existing SONARIA inventory and full movements before publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-violin-sonata-k14-breitkopf-1879",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata in C major",
+      "opus_catalog": "K.14",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.14_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1879",
+        "editor": "Mozarts Werke Serie XVIII editorial board (Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee); individual editor unspecified",
+        "plate": "W.A.M. 14",
+        "scope": "Complete score (3 movements) and separate violin part; optional cello omitted from this edition",
+        "imslp_file_id": "57794",
+        "part_file_ids": {
+          "violin": "57795",
+          "keyboard": null,
+          "optional_cello": null
+        },
+        "edition_comparison": "Breitkopf 1879 score #57794 and violin #57795 same historical series. Alternative scan score #498614, violin #498615, cello #498616 (edition provenance and score/part alignment unverified). Modern NMA/DME is reference only; rights not approved."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.14_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano",
+        "optional_cello"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "57794",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.14_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Mozarts Werke Serie XVIII editorial board (Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee); individual editor unspecified",
+        "publication_date": "1879",
+        "scope": "Complete score, violin and keyboard",
+        "evidence": "IMSLP Scores and Parts metadata; PDF not inspected"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "57795",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.14_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Mozarts Werke Serie XVIII editorial board (Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee); individual editor unspecified",
+          "scope": "separate violin part",
+          "evidence": "IMSLP listing; PDF not inspected"
+        },
+        "piano": {
+          "status": "included_in_score_unverified",
+          "imslp_file_id": "57794",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.14_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Mozarts Werke Serie XVIII editorial board (Otto Goldschmidt, Joseph Joachim, Carl Reinecke, Ernst Rudorff, Paul Waldersee); individual editor unspecified",
+          "scope": "keyboard part printed in score; separate keyboard-only PDF not identified",
+          "evidence": "IMSLP labels complete score; PDF not inspected"
+        },
+        "optional_cello": {
+          "status": "alternative_identified_not_edition_matched",
+          "imslp_file_id": "498616",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.14_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "publisher": "unknown",
+          "editor": "unknown",
+          "scope": "optional cello in alternative set; omitted from 1879 score/violin scan",
+          "evidence": "IMSLP lists alternative cello file; PDF not inspected"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "same_edition_for_score_and_violin; optional_cello_unknown",
+        "evidence": "Breitkopf metadata groups score and violin; alternative cello scan listed separately"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "separate piano-only part not identified (not necessarily required)",
+        "optional cello part matching Breitkopf edition unverified",
+        "PDF content, movements and part compatibility unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.14_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "checked_at": "2026-11-27",
+          "scope": "IMSLP file listing, not PDF inspection",
+          "ids": [
+            "57794",
+            "57795",
+            "498614",
+            "498615",
+            "498616"
+          ]
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.14_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists 3 movements, violin/piano with optional cello; Breitkopf & Härtel 1879 Serie XVIII score #57794, violin #57795; alternative score/violin/cello #498614, #498615, #498616."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "score_and_violin_identified_optional_cello_separate_edition_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Do not treat optional cello from alternate scan as matched to Breitkopf. Claude must verify all PDFs, edition, Japan rights, existing SONARIA inventory and full movements before publication.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
