@@ -1242,20 +1242,15 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Haydn HN851/HN9771 Seven Last Words string quartet Henle parts versus study score Amazon Japan matching",
-    "result": "Publisher/independent retailer corroboration confirms HN851 9790201808512 parts and HN9771 9790201897714 study score, both Christin Heitmann edited, for Hob.XX/1B. No exact Amazon.co.jp individual product URL verified. Third-party French comparison site provides possible ASIN B001GV67E0 for HN851 but not a verified Japanese Amazon detail page; stored as unverified lead only. Both pending_review.",
+    "focus": "Haydn next-pass Amazon.co.jp exact-product verification: Henle HN437, HN216; Peters EP190",
+    "result": "Targeted Amazon.co.jp indexed-page searches for HN437, HN216, EP190 yielded no verifiable individual Amazon.co.jp product pages or ASINs. Search results for EP190 were unrelated Amazon Music podcasts, not printed scores. Existing EP190 queue item is eight historical violin sonata arrangements, not a Haydn string quartet: do not cross-link to quartet pages. No verified products and no new tagged links. Search index alone is insufficient for negative availability claims.",
     "new_candidates": 0,
     "new_publisher_confirmed": 0,
     "new_amazon_verified": 0,
     "checked_candidates": [
-      "haydn-henle-hn851",
-      "haydn-henle-hn9771"
+      "haydn-peters-ep190-eight-violin-sonatas"
     ],
-    "source_urls": [
-      "https://www.forsyths.co.uk/sheet-music/ensemble-types/chamber-music/string-ensemble/141049-product-9790201808512.html",
-      "https://www.forsyths.co.uk/sheet-music/ensemble-types/chamber-music/string-ensemble/80925-haydn-joseph---seven-last-words-of-christ--hob-xx1b---version-for-string-quartet-9790201897714.html",
-      "https://www.chasse-aux-livres.fr/prix/B001GV67E0/quatuor-cordes-hob-xx-1b-7-dernieres-paroles-du-christ-materiel-joseph-haydn-9790201808512"
-    ],
-    "next": "Haydn HN437, HN216 and Peters EP190; verify exact Japan Amazon detail and avoid using third-party ASIN as confirmed."
+    "source_urls": [],
+    "next": "Continue Haydn with publisher-number plus ISMN/ISBN lookups; only mark verified after Amazon.co.jp /dp/ page directly identifies matching printed edition, instrumentation and publisher. Avoid repeating identical indexed searches."
   }
 }
