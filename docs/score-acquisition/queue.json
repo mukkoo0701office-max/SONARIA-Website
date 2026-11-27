@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Beethoven",
     "stage": "violin_sonata",
-    "last_work": "Op.133",
-    "note": "Op.133 Große Fuge checked as related to Op.130 original finale; Beethoven string quartets Op.18, 59, 74, 95, 127, 130, 131, 132, 135 and Op.133 covered in queue; next inspect Beethoven violin sonatas against main catalog (10 entries already present) before proposing additional editions; no blanket completeness assertion."
+    "last_work": "Op.12 No.2",
+    "note": "Main catalog already contains violin sonatas Nos.1–10 as old-site editions; edition-level reconciliation in progress. Henle 1974 score listings for Nos.1–2 researched; separate violin parts, PDF quality and Japan rights unverified. Next inspect No.3 and historical editions without duplicating existing works."
   },
   "items": [
     {
@@ -12346,6 +12346,178 @@
       "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null
+    },
+    {
+      "id": "beethoven-violin-sonata-1-henle-1974-research",
+      "composer": "Ludwig van Beethoven",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata No.1 in D major",
+      "opus_catalog": "Op.12 No.1",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_No.1%2C_Op.12_No.1_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "G. Henle Verlag",
+        "publication_date": "1974",
+        "editor": "Joseph Schmidt-Görg; Sieghard Brandenburg",
+        "scope": "Beethoven Werke V/1 pp.1-25, complete score listing; violin part not identified",
+        "imslp_file_id": "903211",
+        "edition_comparison": "Scholarly urtext metadata only. Rights of critical apparatus/re-engraving and Japanese republication unknown; do not download or publish."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.1%2C_Op.12_No.1_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "unverified",
+        "imslp_file_id": "903211",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.1%2C_Op.12_No.1_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "G. Henle Verlag",
+        "editor": "Joseph Schmidt-Görg; Sieghard Brandenburg",
+        "publication_date": "1974",
+        "scope": "Complete score listed; PDF not inspected",
+        "evidence": "https://imslp.org/wiki/Violin_Sonata_No.1%2C_Op.12_No.1_%28Beethoven%2C_Ludwig_van%29"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.1%2C_Op.12_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "unknown",
+          "editor": "unknown",
+          "scope": "Independent violin part not established",
+          "evidence": "https://imslp.org/wiki/Violin_Sonata_No.1%2C_Op.12_No.1_%28Beethoven%2C_Ludwig_van%29"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.1%2C_Op.12_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "unknown",
+          "editor": "unknown",
+          "scope": "Separate piano part not established; piano in complete score listing",
+          "evidence": "https://imslp.org/wiki/Violin_Sonata_No.1%2C_Op.12_No.1_%28Beethoven%2C_Ludwig_van%29"
+        }
+      },
+      "score_part_edition_match": "unknown",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "independent_violin_part_unidentified",
+        "separate_piano_part_unidentified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.1%2C_Op.12_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP listing metadata only; no PDF download or inspection"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.1%2C_Op.12_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP work page identifies Henle 1974 scholarly edition and named editors; complete score file listing; no PDF inspected"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "metadata_only",
+        "parts": "unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "main_work_exists_old_site_edition; distinct_Henle_edition_candidate",
+        "rights": "unknown_japan_republication_and_critical_edition",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Main catalog already includes this work as old-site edition with pending rights. This is an alternative edition research record only, not a new work. Scholarly edition potentially protected; hold from acquisition/publication pending rights review. File ID and pages from IMSLP listing, not PDF inspection.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-violin-sonata-2-henle-1974-research",
+      "composer": "Ludwig van Beethoven",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata No.2 in A major",
+      "opus_catalog": "Op.12 No.2",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_No.2_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "G. Henle Verlag",
+        "publication_date": "1974",
+        "editor": "Joseph Schmidt-Görg; Sieghard Brandenburg",
+        "scope": "Beethoven Werke V/1 pp.26-45, complete score listing; violin part not identified",
+        "imslp_file_id": "903245",
+        "edition_comparison": "Scholarly urtext metadata only. Rights of critical apparatus/re-engraving and Japanese republication unknown; do not download or publish."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.2_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "unverified",
+        "imslp_file_id": "903245",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.2_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "G. Henle Verlag",
+        "editor": "Joseph Schmidt-Görg; Sieghard Brandenburg",
+        "publication_date": "1974",
+        "scope": "Complete score listed; PDF not inspected",
+        "evidence": "https://imslp.org/wiki/Violin_Sonata_No.2_%28Beethoven%2C_Ludwig_van%29"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "unknown",
+          "editor": "unknown",
+          "scope": "Independent violin part not established",
+          "evidence": "https://imslp.org/wiki/Violin_Sonata_No.2_%28Beethoven%2C_Ludwig_van%29"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "unknown",
+          "editor": "unknown",
+          "scope": "Separate piano part not established; piano in complete score listing",
+          "evidence": "https://imslp.org/wiki/Violin_Sonata_No.2_%28Beethoven%2C_Ludwig_van%29"
+        }
+      },
+      "score_part_edition_match": "unknown",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "independent_violin_part_unidentified",
+        "separate_piano_part_unidentified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP listing metadata only; no PDF download or inspection"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP work page identifies Henle 1974 scholarly edition and named editors; complete score file listing; no PDF inspected"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "metadata_only",
+        "parts": "unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "main_work_exists_old_site_edition; distinct_Henle_edition_candidate",
+        "rights": "unknown_japan_republication_and_critical_edition",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Main catalog already includes this work as old-site edition with pending rights. This is an alternative edition research record only, not a new work. Scholarly edition potentially protected; hold from acquisition/publication pending rights review. File ID and pages from IMSLP listing, not PDF inspection.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
     }
   ],
   "last_updated": "2026-11-28",
@@ -12498,14 +12670,13 @@
   },
   "site_reconciliation_last_attempt": {
     "checked_at": "2026-11-28",
-    "github_main": "main frontend/src/data/scores/catalog.json read; generatedAt 2026-11-27T04:22:18+00:00; 203 Work entries, including Beethoven quartet Nos.1–9 and violin sonatas Nos.1–10; no explicit Op.133 record. Catalog source may lag main or live deployment; not evidence of absence from public site.",
-    "published_site": "unverified; canonical production URL not established from inspected README, frontend/package.json and deployment context",
+    "github_main": "main frontend/src/data/scores/catalog.json blob 4cd09cd46263fbaaf53282aadfb22151c0821d2b; generatedAt 2026-11-27T04:22:18Z; 10 Beethoven violin sonatas Nos.1-10 each with old-site edition and 2 assets, rights pending; latest branch SHA not independently established",
+    "published_site": "unverified; canonical deployed URL not established",
     "work_branch": "coordination/gpt-claude-score-queue",
     "pr_number": 10,
-    "pr_head_at_start": "1420b2410441413f600be0d11f2337c8d76bb788",
-    "main_head_at_start": "2305de2053711364e525adf88c70c3e8f7f50af3",
-    "site_duplicate_check": "Op.133 absent from main catalog by explicit ID/title/opus scan; Op.130 finale relationship unresolved; all other works not exhaustively cross-matched",
-    "publication_status_changes": "none asserted",
-    "notes": "Main CLAUDE.md and decision 0004 now allow pending rights to be visible in site implementation; this acquisition task still prohibits rights approval and publishing. Existing README in queue branch retains stricter older wording; do not modify unrelated files or change policy. Demo works.ts isSampleData and not proof of published inventory."
+    "pr_state": "not independently verified",
+    "site_duplicate_check": "Op.12 Nos.1-2 exist in main as works; Henle 1974 edition is distinct from old-site edition metadata, but PDF identity/hash not checked",
+    "publication_status_changes": "none",
+    "notes": "No live site verification. Main catalog source can lag deployment. Rights pending; no publication action."
   }
 }
