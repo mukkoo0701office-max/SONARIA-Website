@@ -44,3 +44,8 @@ test("件数の上限を守る", () => {
   const r = suggest("春", works, composers, "ja", { composers: 3, works: 1 });
   assert.equal(r.works.length, 1);
 });
+
+test("番号は数の順に並べる（第10番を第1番より前にしない）", () => {
+  const ws = [10, 1, 2].map((n) => ({ slug: `s${n}`, title: { ja: `ソナタ第${n}番`, en: `Sonata No. ${n}` }, composer: { ja: "テスト", en: "Test" }, composerId: "t" }));
+  assert.deepEqual(suggest("ソナタ", ws, [], "ja").works.map((w) => w.slug), ["s1", "s2", "s10"]);
+});

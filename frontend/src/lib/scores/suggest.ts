@@ -70,7 +70,7 @@ export function suggest(
       return { w, r };
     })
     .filter((x) => x.r < 99)
-    .sort((a, b) => a.r - b.r || a.w.title[locale].localeCompare(b.w.title[locale], locale))
+    .sort((a, b) => a.r - b.r || a.w.title[locale].localeCompare(b.w.title[locale], locale, { numeric: true }))
     .slice(0, limits.works)
     .map(({ w }) => ({ slug: w.slug, title: w.title[locale], composer: w.composer[locale], hasEnglish: w.hasEnglish ?? false }));
 
