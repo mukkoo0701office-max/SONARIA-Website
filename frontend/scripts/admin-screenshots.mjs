@@ -73,7 +73,8 @@ for (const [vp, viewport] of Object.entries(viewports)) {
   await shot(page, `${vp}-inquiry-preview`, false);
   await page.locator("dialog[open] button", { hasText: "送信" }).click();
   await page.locator("text=送信していません").first().waitFor();
-  check(`${vp}: reply is not sent (not connected)`, (await page.locator("text=未接続（未送信）").count()) > 0);
+  const historyEntry = await page.locator("text=未接続（未送信）").first().waitFor({ timeout: 5000 }).then(() => true, () => false);
+  check(`${vp}: reply is not sent (not connected)`, historyEntry);
   await shot(page, `${vp}-inquiry-detail`);
 
   // 講師: 審査を始める → 状態が変わる

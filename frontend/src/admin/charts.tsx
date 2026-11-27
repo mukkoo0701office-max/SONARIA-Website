@@ -88,6 +88,13 @@ function ChartFrame({ title, children, table }: { title: string; children: React
   );
 }
 
+/** 目盛りの文字を出すか。最後の点は、直前の目盛りから十分離れているときだけ出す（文字の重なりを防ぐ） */
+function showTick(i: number, n: number, every: number) {
+  if (i !== n - 1) return i % every === 0;
+  const gap = (n - 1) % every; // 直前の目盛りからの距離
+  return gap === 0 || gap >= Math.ceil(every / 2);
+}
+
 const W = 640;
 const PAD = { top: 12, right: 12, bottom: 26, left: 52 };
 
@@ -122,7 +129,7 @@ export function LineChart({ title, labels, series, format, height = 220 }: { tit
             </g>
           ))}
           {labels.map((l, i) =>
-            i % tickEvery === 0 || i === labels.length - 1 ? (
+            showTick(i, labels.length, tickEvery) ? (
               <text key={`${l}-${i}`} x={x(i)} y={height - 8} textAnchor="middle" fontSize={11} fill={chartAxis}>
                 {l}
               </text>
@@ -227,7 +234,7 @@ export function BarChart({ title, labels, series, format, height = 220, stacked 
             return (
               <g key={`${l}-${i}`}>
                 {bars}
-                {(i % tickEvery === 0 || i === labels.length - 1) && (
+                {showTick(i, labels.length, tickEvery) && (
                   <text x={cx} y={height - 8} textAnchor="middle" fontSize={11} fill={chartAxis}>
                     {l}
                   </text>
@@ -299,8 +306,9 @@ export function DonutChart({ title, items, format }: { title: string; items: { k
       title={title}
       table={<DataTable labels={items.map((i) => i.label)} series={[{ key: "v", label: title, color: chartPrimary, values: items.map((i) => i.value) }]} format={format} />}
     >
-      <div className="grid items-center gap-4 sm:grid-cols-[200px_1fr]">
-        <svg viewBox="0 0 200 200" className="mx-auto h-auto w-full max-w-[200px]" role="img" aria-label={title}>
+      {/* 縦に並べる（狭いカードでも凡例の金額がはみ出さない） */}
+      <div className="grid min-w-0 gap-4">
+        <svg viewBox="0 0 200 200" className="mx-auto h-auto w-full max-w-[180px]" role="img" aria-label={title}>
           {arcs.map((a) => {
             const large = a.a1 - a.a0 > Math.PI ? 1 : 0;
             const d = `M ${pt(a.a0, R)} A ${R} ${R} 0 ${large} 1 ${pt(a.a1, R)} L ${pt(a.a1, r)} A ${r} ${r} 0 ${large} 0 ${pt(a.a0, r)} Z`;
@@ -320,7 +328,7 @@ export function DonutChart({ title, items, format }: { title: string; items: { k
                 <span aria-hidden="true" className="inline-block h-2.5 w-2.5 flex-none rounded-sm" style={{ background: i.color }} />
                 <span className="truncate">{i.label}</span>
               </span>
-              <span className="whitespace-nowrap tabular-nums text-muted">
+              <span className="text-right tabular-nums text-muted">
                 {format(i.value)}・{pct(i.value)}
               </span>
             </li>

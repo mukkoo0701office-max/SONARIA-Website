@@ -54,7 +54,8 @@ export default function RevenueView() {
   const pvDays = lastDays(today, 90);
   const pv = data.data ? trafficByDay(data.data.analytics, pvDays).pv : [];
   const pvByMonth = last12.map((m) => pvDays.reduce((a, d, i) => (d.startsWith(m) ? a + pv[i] : a), 0));
-  const firstIdx = pvByMonth.findIndex((v) => v > 0);
+  // 指数の基準は、1 日からデータがそろっている最初の月（途中から始まる月を基準にすると PV が実際より大きく伸びて見える）
+  const firstIdx = last12.findIndex((m) => pvDays.includes(`${m}-01`));
   const index = (arr: number[]) => arr.map((v, i) => (i < firstIdx || arr[firstIdx] === 0 ? 0 : (v / arr[firstIdx]) * 100));
   const idxLabels = last12.slice(firstIdx >= 0 ? firstIdx : 0);
 
