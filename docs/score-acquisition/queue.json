@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Beethoven",
     "stage": "string_quartet",
-    "last_work": "Op.18 No.6",
-    "note": "Next Op.59 No.1. Confirm edition matching, score and all individual parts, and SONARIA catalog duplication; no downloads/rights approval."
+    "last_work": "Op.59 No.3",
+    "note": "Next Op.74. Simrock Op.59 four files shared across three works; verify work-specific page boundaries, score/parts editions, rights and site inventory."
   },
   "items": [
     {
@@ -11146,6 +11146,336 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Score/parts are different historical editions. Verify actual four part contents, movement completeness, readability, editorial variants, file accessibility, edition/reprint and Japan redistribution rights. SONARIA site inventory not fully compared. No PDF download, rights approval, or publication.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-op59-no1-simrock-parts-breitkopf-score",
+      "composer": "Ludwig van Beethoven",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.7 in F major",
+      "opus_catalog": "Op.59 No.1",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.7%2C_Op.59_No.1_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "N. Simrock (parts); Breitkopf & Härtel (score)",
+        "publication_date": "1808 (parts); 1862 (score)",
+        "editor": "unknown",
+        "scope": "Simrock four part files each shared across Op.59 Nos.1–3; separate Breitkopf score",
+        "imslp_file_id": "328852",
+        "edition_comparison": "First edition parts #51161 (Vienna, Bureau des Arts et d'industrie, 1808); compare original parts with later Simrock."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.7%2C_Op.59_No.1_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "973807",
+        "edition_url": "https://imslp.org/wiki/String_Quartet_No.7%2C_Op.59_No.1_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "unknown",
+        "publication_date": "1862",
+        "scope": "Complete score listed; PDF uninspected",
+        "evidence": "IMSLP Ludwig van Beethovens Werke Serie 6"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "328852",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.7%2C_Op.59_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "N. Simrock",
+          "editor": "unknown",
+          "scope": "IMSLP Simrock 1808 part PDF spans all three Op.59 quartets; work-specific pages and movements not examined",
+          "evidence": "IMSLP parts metadata; no PDF access"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "328853",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.7%2C_Op.59_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "N. Simrock",
+          "editor": "unknown",
+          "scope": "IMSLP Simrock 1808 part PDF spans all three Op.59 quartets; work-specific pages and movements not examined",
+          "evidence": "IMSLP parts metadata; no PDF access"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "328854",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.7%2C_Op.59_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "N. Simrock",
+          "editor": "unknown",
+          "scope": "IMSLP Simrock 1808 part PDF spans all three Op.59 quartets; work-specific pages and movements not examined",
+          "evidence": "IMSLP parts metadata; no PDF access"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "328855",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.7%2C_Op.59_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "N. Simrock",
+          "editor": "unknown",
+          "scope": "IMSLP Simrock 1808 part PDF spans all three Op.59 quartets; work-specific pages and movements not examined",
+          "evidence": "IMSLP parts metadata; no PDF access"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "different_edition",
+        "evidence": "Simrock 1808 parts vs Breitkopf 1862 score; no textual collation"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "work_specific_page_ranges_for_all_four_parts",
+        "score_part_textual_collation",
+        "pdf_quality_and_completeness_check"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.7%2C_Op.59_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP score #973807; Simrock multi-work part files #328852, #328853, #328854, #328855; PDFs not downloaded"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.7%2C_Op.59_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP lists Op.59 No.1, 2 violins viola cello, Breitkopf score #973807 and Simrock collection part files; no file content inspected"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "four_shared_collection_files_listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Research only. Four Simrock part files are SHARED across all three Op.59 quartets; do not treat as twelve unique PDFs. Verify individual movement boundaries and matching editions. IMSLP rights tag does not approve Japanese redistribution. SONARIA site inventory not fully audited. No download, approval or publication.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-op59-no2-simrock-parts-breitkopf-score",
+      "composer": "Ludwig van Beethoven",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.8 in E minor",
+      "opus_catalog": "Op.59 No.2",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.8%2C_Op.59_No.2_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "N. Simrock (parts); Breitkopf & Härtel (score)",
+        "publication_date": "1808 (parts); 1862 (score)",
+        "editor": "unknown",
+        "scope": "Simrock four part files each shared across Op.59 Nos.1–3; separate Breitkopf score",
+        "imslp_file_id": "328852",
+        "edition_comparison": "André first edition of score #592966 (1830); compare against Breitkopf 1862."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.8%2C_Op.59_No.2_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "973808",
+        "edition_url": "https://imslp.org/wiki/String_Quartet_No.8%2C_Op.59_No.2_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "unknown",
+        "publication_date": "1862",
+        "scope": "Complete score listed; PDF uninspected",
+        "evidence": "IMSLP Ludwig van Beethovens Werke Serie 6"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "328852",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.8%2C_Op.59_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "N. Simrock",
+          "editor": "unknown",
+          "scope": "IMSLP Simrock 1808 part PDF spans all three Op.59 quartets; work-specific pages and movements not examined",
+          "evidence": "IMSLP parts metadata; no PDF access"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "328853",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.8%2C_Op.59_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "N. Simrock",
+          "editor": "unknown",
+          "scope": "IMSLP Simrock 1808 part PDF spans all three Op.59 quartets; work-specific pages and movements not examined",
+          "evidence": "IMSLP parts metadata; no PDF access"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "328854",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.8%2C_Op.59_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "N. Simrock",
+          "editor": "unknown",
+          "scope": "IMSLP Simrock 1808 part PDF spans all three Op.59 quartets; work-specific pages and movements not examined",
+          "evidence": "IMSLP parts metadata; no PDF access"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "328855",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.8%2C_Op.59_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "N. Simrock",
+          "editor": "unknown",
+          "scope": "IMSLP Simrock 1808 part PDF spans all three Op.59 quartets; work-specific pages and movements not examined",
+          "evidence": "IMSLP parts metadata; no PDF access"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "different_edition",
+        "evidence": "Simrock 1808 parts vs Breitkopf 1862 score; no textual collation"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "work_specific_page_ranges_for_all_four_parts",
+        "score_part_textual_collation",
+        "pdf_quality_and_completeness_check"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.8%2C_Op.59_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP score #973808; Simrock multi-work part files #328852, #328853, #328854, #328855; PDFs not downloaded"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.8%2C_Op.59_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP lists Op.59 No.2, 2 violins viola cello, Breitkopf score #973808 and Simrock collection part files; no file content inspected"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "four_shared_collection_files_listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Research only. Four Simrock part files are SHARED across all three Op.59 quartets; do not treat as twelve unique PDFs. Verify individual movement boundaries and matching editions. IMSLP rights tag does not approve Japanese redistribution. SONARIA site inventory not fully audited. No download, approval or publication.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-op59-no3-simrock-parts-breitkopf-score",
+      "composer": "Ludwig van Beethoven",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.9 in C major",
+      "opus_catalog": "Op.59 No.3",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.9%2C_Op.59%2F3_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "N. Simrock (parts); Breitkopf & Härtel (score)",
+        "publication_date": "1808 (parts); 1862 (score)",
+        "editor": "unknown",
+        "scope": "Simrock four part files each shared across Op.59 Nos.1–3; separate Breitkopf score",
+        "imslp_file_id": "328852",
+        "edition_comparison": "André score #592498 (1830), Paul Mies/Henle #886259 (1968) are comparison editions; Henle rights require separate review."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.9%2C_Op.59%2F3_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "973809",
+        "edition_url": "https://imslp.org/wiki/String_Quartet_No.9%2C_Op.59%2F3_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "unknown",
+        "publication_date": "1862",
+        "scope": "Complete score listed; PDF uninspected",
+        "evidence": "IMSLP Ludwig van Beethovens Werke Serie 6"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "328852",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.9%2C_Op.59%2F3_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "N. Simrock",
+          "editor": "unknown",
+          "scope": "IMSLP Simrock 1808 part PDF spans all three Op.59 quartets; work-specific pages and movements not examined",
+          "evidence": "IMSLP parts metadata; no PDF access"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "328853",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.9%2C_Op.59%2F3_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "N. Simrock",
+          "editor": "unknown",
+          "scope": "IMSLP Simrock 1808 part PDF spans all three Op.59 quartets; work-specific pages and movements not examined",
+          "evidence": "IMSLP parts metadata; no PDF access"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "328854",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.9%2C_Op.59%2F3_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "N. Simrock",
+          "editor": "unknown",
+          "scope": "IMSLP Simrock 1808 part PDF spans all three Op.59 quartets; work-specific pages and movements not examined",
+          "evidence": "IMSLP parts metadata; no PDF access"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "328855",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.9%2C_Op.59%2F3_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "N. Simrock",
+          "editor": "unknown",
+          "scope": "IMSLP Simrock 1808 part PDF spans all three Op.59 quartets; work-specific pages and movements not examined",
+          "evidence": "IMSLP parts metadata; no PDF access"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "different_edition",
+        "evidence": "Simrock 1808 parts vs Breitkopf 1862 score; no textual collation"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "work_specific_page_ranges_for_all_four_parts",
+        "score_part_textual_collation",
+        "pdf_quality_and_completeness_check"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.9%2C_Op.59%2F3_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP score #973809; Simrock multi-work part files #328852, #328853, #328854, #328855; PDFs not downloaded"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.9%2C_Op.59%2F3_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP lists Op.59 No.3, 2 violins viola cello, Breitkopf score #973809 and Simrock collection part files; no file content inspected"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "four_shared_collection_files_listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Research only. Four Simrock part files are SHARED across all three Op.59 quartets; do not treat as twelve unique PDFs. Verify individual movement boundaries and matching editions. IMSLP rights tag does not approve Japanese redistribution. SONARIA site inventory not fully audited. No download, approval or publication.",
       "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null
