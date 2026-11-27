@@ -13,7 +13,10 @@
 - 出力: frontend/src/data/scores/catalog.json
 - 旧サイトのデータは読むだけで、変更・削除しない。途中で止まっても、処理済みのファイルはやり直さない
 
-使い方: python migrate.py --approvals approvals.json --repo <リポジトリのルート> --release-tag scores-v1
+- 管理人が手動で取得した PDF（tools/score-acquisition/intake_approvals.json。asset に intake_file がある）は、
+  --intake-dir のファイルを使う（記録した SHA-256 と一致するものだけ。外部サイトにはアクセスしない）
+
+使い方: python migrate.py --approvals approvals.json [--approvals intake_approvals.json --intake-dir DIR] --repo <リポジトリのルート> --release-tag scores-v1
 環境変数: GH_TOKEN（リリースへの書き込み）、GITHUB_REPOSITORY（owner/repo）
 """
 from __future__ import annotations
@@ -49,15 +52,15 @@ def gh(*args: str) -> str:
     return r.stdout
 
 
-def ensure_release(tag: str) -> set[str]:
+def ensure_release(tag: str, title: str = "楽譜 PDF（旧サイトから移行・権利確認前）", notes: str = "SONARIA 楽譜ライブラリの PDF。旧サイトから移行したもので、運営者が公開前に権利を確認し、必要に応じて差し替え・削除する。") -> set[str]:
     """リリースが無ければ作る。既存の添付ファイル名を返す"""
     try:
         out = gh("release", "view", tag, "--json", "assets")
     except RuntimeError:
         gh(
             "release", "create", tag,
-            "--title", "楽譜 PDF（旧サイトから移行・権利確認前）",
-            "--notes", "SONARIA 楽譜ライブラリの PDF。旧サイトから移行したもので、運営者が公開前に権利を確認し、必要に応じて差し替え・削除する。",
+            "--title", title,
+            "--notes", notes,
             "--prerelease",
             "--target", os.environ.get("GITHUB_SHA", "HEAD"),
         )
@@ -90,7 +93,10 @@ def sha256_of(path: str) -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--approvals", required=True)
+    ap.add_argument("--approvals", required=True, action="append")
+    ap.add_argument("--intake-dir", default="")
+    # 1 つのリリースに置ける添付ファイルは 1000 個まで。手動取得分は別のリリースに置く
+    ap.add_argument("--intake-release-tag", default="")
     ap.add_argument("--repo", required=True)
     ap.add_argument("--release-tag", default="scores-v1")
     ap.add_argument("--time-budget", type=int, default=5 * 3600)
@@ -98,7 +104,12 @@ def main() -> int:
     args = ap.parse_args()
     deadline = time.time() + args.time_budget
 
-    approvals = json.load(open(args.approvals, encoding="utf-8"))
+    approvals = {"works": []}
+    for path in args.approvals:
+        approvals["works"] += json.load(open(path, encoding="utf-8"))["works"]
+    ids = [w["id"] for w in approvals["works"]]
+    if len(ids) != len(set(ids)):
+        raise SystemExit("duplicate work id across approvals files")
     public_dir = os.path.join(args.repo, "frontend", "public")
     data_dir = os.path.join(args.repo, "frontend", "src", "data", "scores")
     catalog_path = os.path.join(data_dir, "catalog.json")
@@ -113,8 +124,14 @@ def main() -> int:
     names = unique_names([(w, composers[w["composerId"]], a) for w in approvals["works"] for e in w["editions"] if e["rights"]["status"] != "rejected" for a in e["assets"]])
 
     repo = os.environ["GITHUB_REPOSITORY"]
-    tag = args.release_tag
-    released = ensure_release(tag)
+    released_by_tag = {args.release_tag: ensure_release(args.release_tag)}
+    if args.intake_release_tag and args.intake_release_tag not in released_by_tag:
+        released_by_tag[args.intake_release_tag] = ensure_release(
+            args.intake_release_tag,
+            "楽譜 PDF（管理人が取得・権利確認前）",
+            "SONARIA 楽譜ライブラリの PDF。管理人が IMSLP などから取得したもので、運営者が公開前に権利を確認し、必要に応じて差し替え・削除する。",
+        )
+    released = released_by_tag[args.release_tag]
     session = requests.Session()
     session.headers["User-Agent"] = USER_AGENT
     report = {"from_old_site": 0, "renamed": 0, "unchanged": 0, "skipped_rejected": 0, "failed": [], "out_of_time": 0}
@@ -136,6 +153,8 @@ def main() -> int:
                 if not ID_RE.match(asset["id"]) or asset["part"] not in PARTS:
                     raise SystemExit(f"invalid asset: {asset['id']} / {asset['part']} ({work['id']})")
                 original_sha = asset["sha256"]
+                tag = args.intake_release_tag if asset.get("intake_file") and args.intake_release_tag else args.release_tag
+                released = released_by_tag[tag]
                 name = names[(work["id"], asset["id"])]
                 old_name = f"{work['id']}--{asset['id']}.pdf"
                 remote = f"https://github.com/{repo}/releases/download/{tag}/{name}"
@@ -153,7 +172,16 @@ def main() -> int:
                         report["out_of_time"] += 1
                         continue
                     raw = os.path.join(tmp, "raw.pdf")
-                    if old_name in released:
+                    if asset.get("intake_file"):
+                        # 管理人が手動で取得した PDF（IMSLP などには Claude からアクセスしない）
+                        src = os.path.join(args.intake_dir, asset["intake_file"])
+                        if not args.intake_dir or not os.path.exists(src):
+                            report["failed"].append({"asset": f"{work['id']}/{asset['id']}", "source": "intake", "reason": "受け入れ用のファイルが無い"})
+                            continue
+                        with open(src, "rb") as fi, open(raw, "wb") as fo:
+                            fo.write(fi.read())
+                        source = "intake"
+                    elif old_name in released:
                         # 以前の名前で置いたファイルを取り出す（旧サイトにはアクセスしない）
                         gh("release", "download", tag, "-p", old_name, "-O", raw, "--clobber")
                         source = "release"
@@ -181,7 +209,7 @@ def main() -> int:
                     gh("release", "upload", tag, stamped, "--clobber")
                     released.add(name)
                     sha, size = sha256_of(stamped), os.path.getsize(stamped)
-                    if args.keep_legacy and old_name != name and old_name not in released:
+                    if args.keep_legacy and not asset.get("intake_file") and old_name != name and old_name not in released:
                         # 公開中のプレビューが以前の名前を参照しているあいだは、以前の名前のファイルも残す（--drop-legacy で消す）
                         legacy = os.path.join(tmp, old_name)
                         os.replace(stamped, legacy)
@@ -189,7 +217,8 @@ def main() -> int:
                         released.add(old_name)
                         stamped = legacy
                     os.remove(stamped)
-                    report["renamed" if source == "release" else "from_old_site"] += 1
+                    key = {"release": "renamed", "intake": "from_intake"}.get(source, "from_old_site")
+                    report[key] = report.get(key, 0) + 1
 
                 dims = None
                 if os.path.exists(jpg_abs):
@@ -215,6 +244,8 @@ def main() -> int:
         if editions_out:
             works_out.append({k: v for k, v in work.items() if k != "editions"} | {"editions": editions_out})
 
+    tag = args.release_tag
+    released = released_by_tag[tag]
     if not args.keep_legacy:
         legacy_names = {f"{w['id']}--{a['id']}.pdf" for w in approvals["works"] for e in w["editions"] for a in e["assets"]}
         for n in sorted(released & legacy_names):

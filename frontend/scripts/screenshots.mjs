@@ -124,7 +124,7 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   await shot(page, `${vpName}-en-scores`);
 
   // 楽譜ライブラリ（カタログの作品ページ・作曲家ページ）
-  for (const [path, name] of [["ja/scores/beethoven-violin-sonata-5", "ja-work"], ["ja/scores/tchaikovsky-serenade-for-strings", "ja-work-strings"], ["ja/composers/beethoven", "ja-composer"], ["ja/composers", "ja-composers"], ["ja/scores/category/string-quartet", "ja-category"]]) {
+  for (const [path, name] of [["ja/scores/beethoven-violin-sonata-5", "ja-work"], ["ja/scores/tchaikovsky-serenade-for-strings", "ja-work-strings"], ["ja/composers/beethoven", "ja-composer"], ["ja/composers", "ja-composers"], ["ja/scores/category/string-quartet", "ja-category"], ["ja/scores/haydn-string-quartets-op20", "ja-work-haydn-op20"]]) {
     const res = await page.goto(`${base}/${path}/`, { waitUntil: "networkidle" });
     check(`${vpName}: /${path}/ loads`, res && res.status() === 200, String(res && res.status()));
     await shot(page, `${vpName}-${name}`);
