@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Mozart",
     "stage": "violin_sonata",
-    "last_work": "K.27",
-    "note": "Next K.28 (K.16-25 are not violin sonatas in the Mozarts Werke Serie XVIII catalogue). K.15 optional cello is alternative edition; verify separately."
+    "last_work": "K.30",
+    "note": "Next K.31 onward. K.28 first-movement tempo discrepancy and K.29 plate anomaly require Claude verification. Score and violin part individually listed."
   },
   "items": [
     {
@@ -8132,6 +8132,294 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Only violin and keyboard required. Check source PDF pages, score/parts alignment, existing SONARIA catalog, edition rights and file integrity. Do not publish.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-violin-sonata-k28-breitkopf-1879",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata in C major",
+      "opus_catalog": "K.28",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.28_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Mozarts Werke Serie XVIII editorial committee (individual editor unknown)",
+        "publication_date": "1879",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.28_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "evidence": "IMSLP work page metadata only; PDF not inspected",
+        "scope": "Complete score and separately listed violin part",
+        "imslp_file_id": "62269",
+        "violin_part_file_id": "62270",
+        "plate": "W.A.M. 28",
+        "edition_comparison": "Breitkopf first movement Allegro moderato differs from first edition Allegro maestoso; compare before choosing."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.28_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Mozarts Werke Serie XVIII editorial committee (individual editor unknown)",
+        "publication_date": "1879",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.28_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "evidence": "IMSLP work page metadata only; PDF not inspected",
+        "status": "identified_metadata_only",
+        "imslp_file_id": "62269",
+        "scope": "Complete score with piano part"
+      },
+      "part_inventory": {
+        "violin": {
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Mozarts Werke Serie XVIII editorial committee (individual editor unknown)",
+          "publication_date": "1879",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.28_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "evidence": "IMSLP work page metadata only; PDF not inspected",
+          "status": "identified_metadata_only",
+          "imslp_file_id": "62270",
+          "scope": "Separate violin part"
+        },
+        "piano": {
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Mozarts Werke Serie XVIII editorial committee (individual editor unknown)",
+          "publication_date": "1879",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.28_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "evidence": "IMSLP work page metadata only; PDF not inspected",
+          "status": "included_in_complete_score_unverified_pdf",
+          "imslp_file_id": "62269",
+          "scope": "Piano in complete score; standalone piano part not identified"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "same_publication_series_metadata_only",
+        "evidence": "Both entries grouped under Breitkopf 1879 on IMSLP; actual PDF not compared"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "independent_piano_part_not_identified_if_required"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.28_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "score_file_id": "62269",
+          "violin_file_id": "62270",
+          "checked_at": "2026-11-27",
+          "scope": "IMSLP listing metadata only"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_C_major%2C_K.28_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists Breitkopf & Härtel 1879 Mozarts Werke XVIII score #62269 and violin part #62270; Breitkopf first movement Allegro moderato differs from first edition Allegro maestoso; compare before choosing."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "metadata_checked_pdf_uninspected",
+        "parts": "metadata_identified_pdf_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Breitkopf first movement Allegro moderato differs from first edition Allegro maestoso; compare before choosing. Verify score and violin PDF, edition match, movement completeness, site inventory, rights; do not publish.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-violin-sonata-k29-breitkopf-1879",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata in D major",
+      "opus_catalog": "K.29",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_in_D_major%2C_K.29_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Mozarts Werke Serie XVIII editorial committee (individual editor unknown)",
+        "publication_date": "1879",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_D_major%2C_K.29_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "evidence": "IMSLP work page metadata only; PDF not inspected",
+        "scope": "Complete score and separately listed violin part",
+        "imslp_file_id": "62271",
+        "violin_part_file_id": "62272",
+        "plate": "W.A.M. 15",
+        "edition_comparison": "IMSLP metadata plate W.A.M. 15 despite catalogue K.29: verify printed plate and edition on PDF."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_D_major%2C_K.29_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Mozarts Werke Serie XVIII editorial committee (individual editor unknown)",
+        "publication_date": "1879",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_D_major%2C_K.29_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "evidence": "IMSLP work page metadata only; PDF not inspected",
+        "status": "identified_metadata_only",
+        "imslp_file_id": "62271",
+        "scope": "Complete score with piano part"
+      },
+      "part_inventory": {
+        "violin": {
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Mozarts Werke Serie XVIII editorial committee (individual editor unknown)",
+          "publication_date": "1879",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_D_major%2C_K.29_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "evidence": "IMSLP work page metadata only; PDF not inspected",
+          "status": "identified_metadata_only",
+          "imslp_file_id": "62272",
+          "scope": "Separate violin part"
+        },
+        "piano": {
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Mozarts Werke Serie XVIII editorial committee (individual editor unknown)",
+          "publication_date": "1879",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_D_major%2C_K.29_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "evidence": "IMSLP work page metadata only; PDF not inspected",
+          "status": "included_in_complete_score_unverified_pdf",
+          "imslp_file_id": "62271",
+          "scope": "Piano in complete score; standalone piano part not identified"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "same_publication_series_metadata_only",
+        "evidence": "Both entries grouped under Breitkopf 1879 on IMSLP; actual PDF not compared"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "independent_piano_part_not_identified_if_required"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_D_major%2C_K.29_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "score_file_id": "62271",
+          "violin_file_id": "62272",
+          "checked_at": "2026-11-27",
+          "scope": "IMSLP listing metadata only"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_D_major%2C_K.29_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists Breitkopf & Härtel 1879 Mozarts Werke XVIII score #62271 and violin part #62272; IMSLP metadata plate W.A.M. 15 despite catalogue K.29: verify printed plate and edition on PDF."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "metadata_checked_pdf_uninspected",
+        "parts": "metadata_identified_pdf_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "IMSLP metadata plate W.A.M. 15 despite catalogue K.29: verify printed plate and edition on PDF. Verify score and violin PDF, edition match, movement completeness, site inventory, rights; do not publish.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-violin-sonata-k30-breitkopf-1879",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata in F major",
+      "opus_catalog": "K.30",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.30_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Mozarts Werke Serie XVIII editorial committee (individual editor unknown)",
+        "publication_date": "1879",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.30_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "evidence": "IMSLP work page metadata only; PDF not inspected",
+        "scope": "Complete score and separately listed violin part",
+        "imslp_file_id": "62273",
+        "violin_part_file_id": "62274",
+        "plate": "W.A.M. 30",
+        "edition_comparison": "Compare modern Neue Mozart-Ausgabe score/part only as reference; rights differ."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.30_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Mozarts Werke Serie XVIII editorial committee (individual editor unknown)",
+        "publication_date": "1879",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.30_%28Mozart%2C_Wolfgang_Amadeus%29",
+        "evidence": "IMSLP work page metadata only; PDF not inspected",
+        "status": "identified_metadata_only",
+        "imslp_file_id": "62273",
+        "scope": "Complete score with piano part"
+      },
+      "part_inventory": {
+        "violin": {
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Mozarts Werke Serie XVIII editorial committee (individual editor unknown)",
+          "publication_date": "1879",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.30_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "evidence": "IMSLP work page metadata only; PDF not inspected",
+          "status": "identified_metadata_only",
+          "imslp_file_id": "62274",
+          "scope": "Separate violin part"
+        },
+        "piano": {
+          "publisher": "Breitkopf & Härtel",
+          "editor": "Mozarts Werke Serie XVIII editorial committee (individual editor unknown)",
+          "publication_date": "1879",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.30_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "evidence": "IMSLP work page metadata only; PDF not inspected",
+          "status": "included_in_complete_score_unverified_pdf",
+          "imslp_file_id": "62273",
+          "scope": "Piano in complete score; standalone piano part not identified"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "same_publication_series_metadata_only",
+        "evidence": "Both entries grouped under Breitkopf 1879 on IMSLP; actual PDF not compared"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "independent_piano_part_not_identified_if_required"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.30_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "score_file_id": "62273",
+          "violin_file_id": "62274",
+          "checked_at": "2026-11-27",
+          "scope": "IMSLP listing metadata only"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_in_F_major%2C_K.30_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP lists Breitkopf & Härtel 1879 Mozarts Werke XVIII score #62273 and violin part #62274; Compare modern Neue Mozart-Ausgabe score/part only as reference; rights differ."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "metadata_checked_pdf_uninspected",
+        "parts": "metadata_identified_pdf_uninspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Compare modern Neue Mozart-Ausgabe score/part only as reference; rights differ. Verify score and violin PDF, edition match, movement completeness, site inventory, rights; do not publish.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
