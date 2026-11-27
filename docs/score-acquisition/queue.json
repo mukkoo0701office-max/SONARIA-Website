@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Mozart",
     "stage": "string_quartet",
-    "last_work": "K.421/417b",
-    "note": "Next K.428/421b. New K.173, K.387, K.421 candidates await Claude PDF inspection, site duplication and Japan rights checks."
+    "last_work": "K.464",
+    "note": "Next K.465 (Dissonance). K.428, K.458, K.464 await Claude PDF/rights review and SONARIA inventory reconciliation."
   },
   "items": [
     {
@@ -6499,6 +6499,144 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Compare early Artaria parts with Breitkopf score; alternative Peters/Moser-Becker #01862-01865. Confirm SONARIA catalog duplication, page quality, all movements, editorial matching, rights in Japan and PDF checksums. Do not download or publish automatically.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-string-quartet-no16-k428-breitkopf-1882",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.16 in E-flat major",
+      "opus_catalog": "K.428/421b",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.16%2C_K.428_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1882",
+        "editor": "Mozarts Werke Serie XIV editors; exact editor attribution not specified",
+        "scope": "Complete score; separate four instrumental parts must be matched and verified",
+        "plate": "W.A.M. 428",
+        "imslp_file_id": "64138",
+        "edition_comparison": "Historic Breitkopf full score. Alternatives: Autograph manuscript #838469 (1783); alternate Breitkopf scan #01796. Editorial consistency, movement completeness, readability, page order and publication rights require independent inspection."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.16%2C_K.428_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.16%2C_K.428_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP work page identifies Mozart String Quartet No.16 K.428/421b, E-flat major; Breitkopf & Härtel 1882 Mozarts Werke Serie XIV score file #64138. Alternatives listed in edition_comparison. PDFs not opened."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "not_fully_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_existing_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate research only. Claude should inspect source PDF and all four parts, check publisher/editor and rights, match score with parts, compare alternate scans, check existing SONARIA inventory and avoid duplicate Work/Edition/ScoreAsset. No automated download or publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-string-quartet-no17-k458-breitkopf-1882",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.17 in B-flat major",
+      "opus_catalog": "K.458",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.17%2C_K.458_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1882",
+        "editor": "Mozarts Werke Serie XIV editors; exact editor attribution not specified",
+        "scope": "Complete score; separate four instrumental parts must be matched and verified",
+        "plate": "W.A.M. 458",
+        "imslp_file_id": "64140",
+        "edition_comparison": "Historic Breitkopf full score. Alternatives: Autograph manuscript #805769 (1784); Johann André 1824 complete score #428115; early Artaria parts #33157–33160 (check exact attribution). Editorial consistency, movement completeness, readability, page order and publication rights require independent inspection."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.17%2C_K.458_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.17%2C_K.458_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP work page identifies Mozart String Quartet No.17 K.458, B-flat major; Breitkopf & Härtel 1882 Mozarts Werke Serie XIV score file #64140. Alternatives listed in edition_comparison. PDFs not opened."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "not_fully_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_existing_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate research only. Claude should inspect source PDF and all four parts, check publisher/editor and rights, match score with parts, compare alternate scans, check existing SONARIA inventory and avoid duplicate Work/Edition/ScoreAsset. No automated download or publication.",
+      "updated_at": "2026-11-27",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "mozart-string-quartet-no18-k464-breitkopf-1882",
+      "composer": "Wolfgang Amadeus Mozart",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.18 in A major",
+      "opus_catalog": "K.464",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.18%2C_K.464_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1882",
+        "editor": "Mozarts Werke Serie XIV editors; exact editor attribution not specified",
+        "scope": "Complete score; separate four instrumental parts must be matched and verified",
+        "plate": "W.A.M. 464",
+        "imslp_file_id": "64141",
+        "edition_comparison": "Historic Breitkopf full score. Alternatives: Autograph manuscript #838480 (1785); Johann André 1824 complete score #428116; Peters Moser/Becker cello part #01877 (do not assume other parts verified). Editorial consistency, movement completeness, readability, page order and publication rights require independent inspection."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.18%2C_K.464_%28Mozart%2C_Wolfgang_Amadeus%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.18%2C_K.464_%28Mozart%2C_Wolfgang_Amadeus%29",
+          "verified": "IMSLP work page identifies Mozart String Quartet No.18 K.464, A major; Breitkopf & Härtel 1882 Mozarts Werke Serie XIV score file #64141. Alternatives listed in edition_comparison. PDFs not opened."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "not_fully_verified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_existing_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate research only. Claude should inspect source PDF and all four parts, check publisher/editor and rights, match score with parts, compare alternate scans, check existing SONARIA inventory and avoid duplicate Work/Edition/ScoreAsset. No automated download or publication.",
       "updated_at": "2026-11-27",
       "owner": "gpt",
       "publication_url": null
