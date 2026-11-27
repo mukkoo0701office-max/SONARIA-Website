@@ -3,7 +3,7 @@ import rawComposers from "./composers.json";
 import rawPortraits from "./portraits.json";
 import { categoryDefs, MIN_CATEGORY_WORKS, type CategoryDef } from "./categories";
 import type { Catalog, Composer, Era, Part, Scoring, Work } from "./types";
-import type { Ensemble, MusicalForm, WorkSummary } from "@/data/works";
+import { genres, instruments, type Formation, type Genre as SearchGenre, type Instrument, type WorkSummary } from "@/data/works";
 import type { Locale } from "@/lib/i18n";
 
 // 楽譜カタログの読み出し。ページはすべてここから自動生成する（作品ごとにページを手で作らない）。
@@ -185,19 +185,27 @@ export function catalogLabel(w: Work): string {
   return (w.catalog ?? []).map((c) => `${prefix[c.type]}${c.value}`).join(", ");
 }
 
-const stringsOnly: Scoring[] = ["violin", "violin-duo", "viola", "cello", "string-duo", "string-trio", "string-quartet", "string-quintet", "string-orchestra"];
-
-function ensembleOf(w: Work): Ensemble {
-  if (stringsOnly.includes(w.scoring)) return "strings";
-  if (w.scoring === "piano") return "piano";
-  if (w.scoring === "solo-orchestra") return "orchestra";
-  return "mixed";
-}
-
-function formOf(w: Work): MusicalForm | null {
-  const map: Partial<Record<Work["genre"], MusicalForm>> = { concerto: "concerto", sonata: "sonata", chamber: "chamber", suite: "suite", symphony: "symphony" };
-  return map[w.genre] ?? null;
-}
+// カタログの scoring → 検索の「編成」
+const formationOfScoring: Record<Scoring, Formation> = {
+  violin: "solo-string",
+  viola: "solo-string",
+  cello: "solo-string",
+  piano: "piano",
+  "violin-piano": "violin-piano",
+  "viola-piano": "viola-piano",
+  "cello-piano": "cello-piano",
+  "violin-duo": "string-duo",
+  "string-duo": "string-duo",
+  "string-trio": "string-trio",
+  "piano-trio": "piano-trio",
+  "string-quartet": "string-quartet",
+  "piano-quartet": "piano-quartet",
+  "string-quintet": "quintet",
+  "piano-quintet": "quintet",
+  "string-orchestra": "string-orchestra",
+  "solo-orchestra": "solo-orchestra",
+  other: "other",
+};
 
 /** 検索画面用の要約。数字は作品単位（PDF 数・パート数と混同しない） */
 export function toSummary(w: Work, index: number): WorkSummary {
@@ -209,8 +217,10 @@ export function toSummary(w: Work, index: number): WorkSummary {
     title: { ja: w.title.ja, en: w.title.en },
     composer: { ja: c.name.ja, en: c.name.en },
     players: w.players,
-    ensemble: ensembleOf(w),
-    form: formOf(w),
+    composerId: w.composerId,
+    formation: formationOfScoring[w.scoring] ?? "other",
+    instruments: (w.instruments ?? []).filter((i): i is Instrument => (instruments as readonly string[]).includes(i)),
+    genre: (genres as readonly string[]).includes(w.genre) ? (w.genre as SearchGenre) : "other",
     era: w.era as Era,
     pdfCount: w.editions.reduce((n, e) => n + e.assets.length, 0),
     // 日本語名・原語名・英語名・別名・作品番号のどれでも見つかるようにする

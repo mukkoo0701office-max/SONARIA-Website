@@ -19,6 +19,7 @@ type Props = {
 export default function WorkCard({ work, locale, t, open, favorite, onToggleOpen, onToggleFavorite }: Props) {
   const detailsId = `work-details-${work.id}`;
   const title = work.title[locale];
+  const href = work.slug ? localizedPath(work.hasEnglish ? locale : "ja", `/scores/${work.slug}/`) : null;
 
   return (
     <article className="my-3 rounded-card border border-line bg-card p-[17px]">
@@ -26,8 +27,16 @@ export default function WorkCard({ work, locale, t, open, favorite, onToggleOpen
         <div className="grid h-[42px] w-[42px] flex-none place-items-center rounded-button bg-subtle" aria-hidden="true">
           ♫
         </div>
-        <div className="flex-1">
-          <h2 className="mb-1 text-base font-bold leading-[1.45]">{title}</h2>
+        <div className="min-w-0 flex-1">
+          <h2 className="mb-1 text-base font-bold leading-[1.45]">
+            {href ? (
+              <Link href={href} className="hover:underline">
+                {title}
+              </Link>
+            ) : (
+              title
+            )}
+          </h2>
           <div className="text-xs text-muted">{work.composer[locale]}</div>
         </div>
         {/* 仮: 保存はメモリ上のみ（再読み込みで消える）。永続化はプライバシー設計後 */}
@@ -42,34 +51,36 @@ export default function WorkCard({ work, locale, t, open, favorite, onToggleOpen
         </button>
       </div>
 
-      <div className="my-3 flex flex-wrap items-center gap-1.5">
-        <Tag>{work.players >= 5 ? t.playersOptions["5plus"] : t.playersCount(work.players)}</Tag>
-        <Tag>{t.ensembleOptions[work.ensemble]}</Tag>
-        {work.form && <Tag>{t.formOptions[work.form]}</Tag>}
-        <Tag>
-          {work.pdfCount} {t.pdf}
-        </Tag>
+      {/* 1 曲あたりの縦幅を抑えるため、作品紹介ボタンはタグと同じ段の右端に置く（タイトルも作品ページへのリンク） */}
+      <div className="mt-3 flex items-end gap-2">
+        <div className="flex min-w-0 flex-1 flex-wrap items-center gap-1.5">
+          <Tag>{t.formationOptions[work.formation]}</Tag>
+          {work.genre !== "other" && <Tag>{t.genreOptions[work.genre]}</Tag>}
+          <Tag>
+            {work.pdfCount} {t.pdf}
+          </Tag>
+        </div>
+        {href ? (
+          // 権利確認済みの実データ: 作品詳細ページ（PDF のダウンロードはそこで行う）
+          <Link
+            href={href}
+            aria-label={`${t.view}: ${title}`}
+            className="flex-none whitespace-nowrap rounded-button border border-navy bg-navy px-[13px] py-[7px] text-[13px] text-white transition-[filter] hover:brightness-95"
+          >
+            {t.viewShort} <span aria-hidden="true">›</span>
+          </Link>
+        ) : (
+          <button
+            type="button"
+            onClick={onToggleOpen}
+            aria-expanded={open}
+            aria-controls={detailsId}
+            className="flex-none whitespace-nowrap rounded-button border border-navy bg-navy px-[13px] py-[7px] text-[13px] text-white transition-[filter] hover:brightness-95"
+          >
+            {open ? t.close : t.view}
+          </button>
+        )}
       </div>
-
-      {work.slug ? (
-        // 権利確認済みの実データ: 作品詳細ページ（PDF のダウンロードはそこで行う）
-        <Link
-          href={localizedPath(work.hasEnglish ? locale : "ja", `/scores/${work.slug}/`)}
-          className="block w-full rounded-button border border-navy bg-navy p-[11px] text-center text-[13px] text-white transition-[filter] hover:brightness-95"
-        >
-          {t.view}
-        </Link>
-      ) : (
-      <button
-        type="button"
-        onClick={onToggleOpen}
-        aria-expanded={open}
-        aria-controls={detailsId}
-        className="w-full rounded-button border border-navy bg-navy p-[11px] text-[13px] text-white transition-[filter] hover:brightness-95"
-      >
-        {open ? t.close : t.view}
-      </button>
-      )}
 
       {open && !work.slug && (
         <div id={detailsId} className="mt-3 rounded-button bg-paper p-[13px] text-[13px]">

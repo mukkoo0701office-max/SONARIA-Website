@@ -4,50 +4,50 @@ import { useEffect, useMemo, useState } from "react";
 import WorkCard from "@/components/scores/WorkCard";
 import Chip from "@/components/ui/Chip";
 import Pagination from "@/components/ui/Pagination";
-import SelectField from "@/components/ui/SelectField";
 import { getDictionary } from "@/data/dictionaries";
-import { ensembles, eras, musicalForms, type Ensemble, type Era, type MusicalForm, type WorkSummary } from "@/data/works";
+import { eras, formations, genres, instruments, type Era, type Formation, type Genre, type Instrument, type WorkSummary } from "@/data/works";
 import type { Locale } from "@/lib/i18n";
 
 // 承認済みプロトタイプ（prototypes/score-search-ui-v1.html）の検索 UI を部品化したもの。
 // 振る舞いの基準: docs/SONARIA_UI_DESIGN_SYSTEM_v1.0.md「Search page reference interaction contract」
+// 2026-11-27 改訂（運営者の要望）: 絞り込みを「楽器」「編成」「種類」「作曲家」「時代」に変更し、
+// 各選択肢に件数を表示する（0 件になる選択肢は出さない）。チップの見た目・配色は基準のまま。
 
 const PER_PAGE = 5;
 
-// 権利確認済みの作品が 1 件でもあればカタログを使う。まだ無いあいだは説明用のデモデータ（画面に明記）。
-// 実在しない楽譜を本番の検索結果に出さないため、本番でカタログが空なら結果も空にする
-
-type PlayersFilter = "all" | "1" | "2" | "3" | "4" | "5plus";
 type SortKey = "title" | "composer" | "pdfCount";
 
 type Filters = {
   q: string;
-  players: PlayersFilter;
-  ensemble: "all" | Ensemble;
-  form: "all" | MusicalForm;
+  inst: "all" | Instrument;
+  fmt: "all" | Formation;
+  genre: "all" | Genre;
+  composer: string; // "all" または作曲家 ID
   era: "all" | Era;
   sort: SortKey;
   page: number;
 };
+type FacetKey = "inst" | "fmt" | "genre" | "composer" | "era";
 
-const initialFilters: Filters = { q: "", players: "all", ensemble: "all", form: "all", era: "all", sort: "title", page: 1 };
-
-const playersValues: readonly PlayersFilter[] = ["all", "1", "2", "3", "4", "5plus"];
+const initialFilters: Filters = { q: "", inst: "all", fmt: "all", genre: "all", composer: "all", era: "all", sort: "title", page: 1 };
 const sortValues: readonly SortKey[] = ["title", "composer", "pdfCount"];
 
 function pick<T extends string>(value: string | null, allowed: readonly T[], fallback: T): T {
   return value !== null && (allowed as readonly string[]).includes(value) ? (value as T) : fallback;
 }
 
-// URL のクエリから検索条件を復元する（共有・戻る操作のため）。不正な値は初期値に戻す
+// URL のクエリから検索条件を復元する（共有・戻る操作のため）。不正な値は初期値に戻す。
+// 旧形式のリンク（ensemble / form）も、対応する新しい条件に読み替える
 function filtersFromSearch(search: string): Filters {
   const params = new URLSearchParams(search);
   const page = Number(params.get("page"));
+  const legacyFmt: Record<string, Formation> = { piano: "piano", orchestra: "solo-orchestra" };
   return {
     q: params.get("q") ?? "",
-    players: pick<PlayersFilter>(params.get("players"), playersValues, "all"),
-    ensemble: pick<"all" | Ensemble>(params.get("ensemble"), ["all", ...ensembles], "all"),
-    form: pick<"all" | MusicalForm>(params.get("form"), ["all", ...musicalForms], "all"),
+    inst: pick<"all" | Instrument>(params.get("inst"), ["all", ...instruments], "all"),
+    fmt: pick<"all" | Formation>(params.get("fmt") ?? legacyFmt[params.get("ensemble") ?? ""] ?? null, ["all", ...formations], "all"),
+    genre: pick<"all" | Genre>(params.get("genre") ?? params.get("form"), ["all", ...genres], "all"),
+    composer: /^[a-z0-9-]{1,60}$/.test(params.get("composer") ?? "") ? (params.get("composer") as string) : "all",
     era: pick<"all" | Era>(params.get("era"), ["all", ...eras], "all"),
     sort: pick<SortKey>(params.get("sort"), sortValues, "title"),
     page: Number.isInteger(page) && page > 0 ? page : 1,
@@ -62,6 +62,30 @@ function filtersToSearch(filters: Filters): string {
   }
   const query = params.toString();
   return query ? `?${query}` : "";
+}
+
+function matches(w: WorkSummary, f: Filters, skip?: FacetKey): boolean {
+  const q = f.q.trim().toLocaleLowerCase();
+  if (q) {
+    const text = [w.title.ja, w.title.en, w.composer.ja, w.composer.en, w.searchText ?? ""].join(" ").toLocaleLowerCase();
+    if (!text.includes(q)) return false;
+  }
+  if (skip !== "inst" && f.inst !== "all" && !w.instruments.includes(f.inst)) return false;
+  if (skip !== "fmt" && f.fmt !== "all" && w.formation !== f.fmt) return false;
+  if (skip !== "genre" && f.genre !== "all" && w.genre !== f.genre) return false;
+  if (skip !== "composer" && f.composer !== "all" && w.composerId !== f.composer) return false;
+  if (skip !== "era" && f.era !== "all" && w.era !== f.era) return false;
+  return true;
+}
+
+// ある絞り込みの各選択肢の件数（その絞り込み以外の条件をすべて適用した件数）
+function countBy(works: readonly WorkSummary[], f: Filters, facet: FacetKey, keyOf: (w: WorkSummary) => readonly string[]): Map<string, number> {
+  const out = new Map<string, number>();
+  for (const w of works) {
+    if (!matches(w, f, facet)) continue;
+    for (const k of keyOf(w)) out.set(k, (out.get(k) ?? 0) + 1);
+  }
+  return out;
 }
 
 // works・isDemoData はページ（サーバー側）から受け取る。カタログ全体をブラウザに読み込ませないため
@@ -90,26 +114,38 @@ export default function ScoreSearch({ locale, works, isDemoData }: { locale: Loc
     }
   }, [filters, ready]);
 
-  const results = useMemo(() => {
-    const q = filters.q.trim().toLocaleLowerCase();
-    return works
-      .filter((w) => {
-        const text = [w.title.ja, w.title.en, w.composer.ja, w.composer.en, w.searchText ?? ""].join(" ").toLocaleLowerCase();
-        if (q && !text.includes(q)) return false;
-        if (filters.players !== "all") {
-          if (filters.players === "5plus" ? w.players < 5 : w.players !== Number(filters.players)) return false;
-        }
-        if (filters.ensemble !== "all" && w.ensemble !== filters.ensemble) return false;
-        if (filters.form !== "all" && w.form !== filters.form) return false;
-        if (filters.era !== "all" && w.era !== filters.era) return false;
-        return true;
-      })
-      .sort((a, b) => {
-        if (filters.sort === "pdfCount") return b.pdfCount - a.pdfCount;
-        if (filters.sort === "composer") return a.composer.en.localeCompare(b.composer.en);
-        return a.title[locale].localeCompare(b.title[locale], locale);
-      });
-  }, [filters, locale, works]);
+  const results = useMemo(
+    () =>
+      works
+        .filter((w) => matches(w, filters))
+        .sort((a, b) => {
+          if (filters.sort === "pdfCount") return b.pdfCount - a.pdfCount;
+          if (filters.sort === "composer") return a.composer[locale].localeCompare(b.composer[locale], locale) || a.title[locale].localeCompare(b.title[locale], locale);
+          return a.title[locale].localeCompare(b.title[locale], locale);
+        }),
+    [filters, locale, works],
+  );
+
+  const counts = useMemo(
+    () => ({
+      inst: countBy(works, filters, "inst", (w) => w.instruments),
+      fmt: countBy(works, filters, "fmt", (w) => [w.formation]),
+      genre: countBy(works, filters, "genre", (w) => [w.genre]),
+      composer: countBy(works, filters, "composer", (w) => [w.composerId]),
+      era: countBy(works, filters, "era", (w) => [w.era]),
+    }),
+    [filters, works],
+  );
+
+  // 作曲家の選択肢（作品数の多い順。表示名は作品データから）
+  const composerOptions = useMemo(() => {
+    const names = new Map<string, string>();
+    for (const w of works) names.set(w.composerId, w.composer[locale]);
+    return [...names.entries()]
+      .map(([id, name]) => ({ id, name, n: counts.composer.get(id) ?? 0 }))
+      .filter((c) => c.n > 0 || c.id === filters.composer)
+      .sort((a, b) => b.n - a.n || a.name.localeCompare(b.name, locale));
+  }, [works, counts.composer, filters.composer, locale]);
 
   const totalPages = Math.max(1, Math.ceil(results.length / PER_PAGE));
   const page = Math.min(filters.page, totalPages);
@@ -128,6 +164,14 @@ export default function ScoreSearch({ locale, works, isDemoData }: { locale: Loc
       return next;
     });
   }
+
+  // 選択中の条件（外すボタン付きで一覧にする）
+  const active: { key: FacetKey; label: string }[] = [];
+  if (filters.inst !== "all") active.push({ key: "inst", label: t.instrumentOptions[filters.inst] });
+  if (filters.fmt !== "all") active.push({ key: "fmt", label: t.formationOptions[filters.fmt] });
+  if (filters.genre !== "all") active.push({ key: "genre", label: t.genreOptions[filters.genre] });
+  if (filters.composer !== "all") active.push({ key: "composer", label: composerOptions.find((c) => c.id === filters.composer)?.name ?? filters.composer });
+  if (filters.era !== "all") active.push({ key: "era", label: t.eraOptions[filters.era] });
 
   return (
     <div>
@@ -148,45 +192,75 @@ export default function ScoreSearch({ locale, works, isDemoData }: { locale: Loc
         />
       </div>
 
-      <fieldset className="my-4 grid gap-[7px]">
-        <legend className="mb-[7px] text-[13px] font-semibold">{t.players}</legend>
-        <div className="flex flex-wrap gap-[7px]">
-          {playersValues.map((value) => (
-            <Chip key={value} pressed={filters.players === value} onClick={() => update({ players: value })}>
-              {t.playersOptions[value]}
-            </Chip>
-          ))}
-        </div>
-      </fieldset>
+      <FacetChips
+        legend={t.instrument}
+        help={t.instrumentHelp}
+        allLabel={t.all}
+        value={filters.inst}
+        options={instruments.map((v) => ({ value: v, label: t.instrumentOptions[v], n: counts.inst.get(v) ?? 0 }))}
+        onChange={(v) => update({ inst: v })}
+      />
+      <FacetChips
+        legend={t.formation}
+        allLabel={t.all}
+        value={filters.fmt}
+        options={formations.map((v) => ({ value: v, label: t.formationOptions[v], n: counts.fmt.get(v) ?? 0 }))}
+        onChange={(v) => update({ fmt: v })}
+      />
+      <FacetChips
+        legend={t.genre}
+        allLabel={t.all}
+        value={filters.genre}
+        options={genres.map((v) => ({ value: v, label: t.genreOptions[v], n: counts.genre.get(v) ?? 0 }))}
+        onChange={(v) => update({ genre: v })}
+      />
 
-      {/* スマホは1カラム、幅に余裕があれば2カラム */}
-      <div className="grid grid-cols-1 gap-x-3 min-[421px]:grid-cols-2">
-        <SelectField
-          id="ensemble"
-          label={t.ensemble}
-          value={filters.ensemble}
-          options={(["all", ...ensembles] as const).map((v) => ({ value: v, label: t.ensembleOptions[v] }))}
-          onChange={(v) => update({ ensemble: v })}
-        />
-        <SelectField
-          id="form"
-          label={t.form}
-          value={filters.form}
-          options={(["all", ...musicalForms] as const).map((v) => ({ value: v, label: t.formOptions[v] }))}
-          onChange={(v) => update({ form: v })}
-        />
-      </div>
-
-      <details>
+      {/* 作曲家・時代は件数が多い／使う頻度が低いので折りたたむ（選択中は開いておく） */}
+      <details open={filters.composer !== "all" || filters.era !== "all" || undefined}>
         <summary className="cursor-pointer py-3 text-[13px] font-semibold">{t.advanced}</summary>
-        <SelectField
-          id="era"
-          label={t.era}
+        <div className="my-2 grid gap-[7px]">
+          <label htmlFor="composer" className="text-[13px] font-semibold">
+            {t.composer}
+          </label>
+          <select
+            id="composer"
+            value={filters.composer}
+            onChange={(event) => update({ composer: event.target.value })}
+            className="w-full rounded-control border border-muted bg-card p-[13px] text-ink"
+          >
+            <option value="all">{t.composerAll}</option>
+            {composerOptions.map((c) => (
+              <option key={c.id} value={c.id}>
+                {c.name}（{c.n}）
+              </option>
+            ))}
+          </select>
+        </div>
+        <FacetChips
+          legend={t.era}
+          allLabel={t.all}
           value={filters.era}
-          options={(["all", ...eras] as const).map((v) => ({ value: v, label: t.eraOptions[v] }))}
+          options={eras.map((v) => ({ value: v, label: t.eraOptions[v], n: counts.era.get(v) ?? 0 }))}
           onChange={(v) => update({ era: v })}
         />
       </details>
+
+      {active.length > 0 && (
+        <div className="mt-3 flex flex-wrap items-center gap-[7px]" aria-label={t.active}>
+          <span className="text-xs text-muted">{t.active}:</span>
+          {active.map((a) => (
+            <button
+              key={a.key}
+              type="button"
+              onClick={() => update({ [a.key]: "all" } as Partial<Filters>)}
+              aria-label={t.removeFilter(a.label)}
+              className="rounded-full border border-navy bg-card px-[11px] py-[5px] text-[13px] text-navy hover:bg-subtle"
+            >
+              {a.label} <span aria-hidden="true">×</span>
+            </button>
+          ))}
+        </div>
+      )}
 
       <div className="mb-3.5 mt-6 flex items-center justify-between gap-3">
         <div aria-live="polite">
@@ -195,7 +269,7 @@ export default function ScoreSearch({ locale, works, isDemoData }: { locale: Loc
         <button
           type="button"
           onClick={() => {
-            setFilters(initialFilters);
+            setFilters({ ...initialFilters, sort: filters.sort });
             setOpenId(null);
           }}
           className="text-navy underline"
@@ -256,5 +330,37 @@ export default function ScoreSearch({ locale, works, isDemoData }: { locale: Loc
         </span>
       </div>
     </div>
+  );
+}
+
+type FacetOption<T extends string> = { value: T; label: string; n: number };
+
+// 絞り込みのチップ列。件数 0 の選択肢は出さない（選択中なら残す）。
+// スマホでは 1 行で横にスクロールし、縦幅を取りすぎないようにする。幅に余裕があれば折り返す
+function FacetChips<T extends string>({ legend, help, allLabel, value, options, onChange }: { legend: string; help?: string; allLabel: string; value: "all" | T; options: FacetOption<T>[]; onChange: (v: "all" | T) => void }) {
+  const visible = options.filter((o) => o.n > 0 || o.value === value);
+  if (visible.length === 0) return null;
+  return (
+    <fieldset className="my-3 min-w-0">
+      <legend className="mb-[7px] text-[13px] font-semibold">
+        {legend}
+        {help && <span className="ml-2 text-xs font-normal text-muted">{help}</span>}
+      </legend>
+      <div className="-mx-1 flex gap-[7px] overflow-x-auto px-1 pb-1 sm:flex-wrap sm:overflow-visible">
+        <div className="flex-none">
+          <Chip pressed={value === "all"} onClick={() => onChange("all")}>
+            {allLabel}
+          </Chip>
+        </div>
+        {visible.map((o) => (
+          <div key={o.value} className="flex-none">
+            <Chip pressed={value === o.value} onClick={() => onChange(value === o.value ? "all" : o.value)}>
+              {o.label}
+              <span className="ml-1 text-[11px] opacity-70">{o.n}</span>
+            </Chip>
+          </div>
+        ))}
+      </div>
+    </fieldset>
   );
 }

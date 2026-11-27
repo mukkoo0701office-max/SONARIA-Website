@@ -3,7 +3,7 @@ import type { ServiceKey } from "@/data/services";
 import type { PageKey } from "@/data/site";
 import type { Audience, Instrument, InstrumentCategory, LessonFormat } from "@/data/teachers";
 import type { Genre, Part, Scoring } from "@/data/scores/types";
-import type { Ensemble, Era, MusicalForm } from "@/data/works";
+import type { Era, Formation, Genre as ScoreGenre, Instrument as ScoreInstrument } from "@/data/works";
 
 // 仮ページ（未完成のページ）の文言
 export type PlaceholderCopy = {
@@ -112,13 +112,20 @@ export type Dictionary = {
     subtitle: string;
     searchLabel: string;
     placeholder: string;
-    players: string;
-    playersOptions: { all: string; "1": string; "2": string; "3": string; "4": string; "5plus": string };
-    playersCount: (n: number) => string;
-    ensemble: string;
-    ensembleOptions: Record<"all" | Ensemble, string>;
-    form: string;
-    formOptions: Record<"all" | MusicalForm, string>;
+    instrument: string; // 「自分の楽器」で探す
+    instrumentHelp: string;
+    instrumentOptions: Record<ScoreInstrument, string>;
+    formation: string;
+    formationOptions: Record<Formation, string>;
+    genre: string;
+    genreOptions: Record<ScoreGenre, string>;
+    composer: string;
+    composerAll: string;
+    all: string;
+    active: string; // 選択中の条件
+    removeFilter: (label: string) => string;
+    showMore: string;
+    showLess: string;
     advanced: string;
     era: string;
     eraOptions: Record<"all" | Era, string>;
@@ -127,6 +134,7 @@ export type Dictionary = {
     sort: string;
     sortOptions: { title: string; composer: string; pdfCount: string };
     view: string;
+    viewShort: string; // 検索結果カードのボタン（狭い場所用）
     close: string;
     details: string;
     detailText: string;
