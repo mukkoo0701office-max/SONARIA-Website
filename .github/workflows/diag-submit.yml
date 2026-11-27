@@ -1,0 +1,36 @@
+# 一時的な診断（PR を閉じたら削除）。ブラウザと同じ形で受付関数に送り、応答を表示する
+name: Diag submit
+on:
+  pull_request:
+    paths: [".github/workflows/diag-submit.yml"]
+permissions:
+  contents: read
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    env:
+      URL: https://oqhehjaeqjsuyblokonz.supabase.co/functions/v1/submit
+      KEY: ${{ vars.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY }}
+      ORIGIN: https://mukkoo0701office-max.github.io
+    steps:
+      - name: Built page uses which endpoint
+        run: |
+          P=https://mukkoo0701office-max.github.io/SONARIA-Website
+          curl -s "$P/ja/performance/" -o page.html
+          for js in $(grep -oE '/SONARIA-Website/_next/static/[^"]+\.js' page.html | sort -u); do
+            curl -s "https://mukkoo0701office-max.github.io$js" | grep -oE '.{0,40}supabase\.co.{0,60}|.{0,30}functions/v1/submit.{0,30}' | head -3
+          done
+      - name: Preflight like a browser
+        run: |
+          curl -s -D - -o /dev/null -X OPTIONS "$URL" -H "Origin: $ORIGIN" \
+            -H "Access-Control-Request-Method: POST" \
+            -H "Access-Control-Request-Headers: apikey,content-type,idempotency-key"
+      - name: POST invalid body with apikey (no DB write)
+        run: |
+          curl -s -D - -X POST "$URL" -H "Origin: $ORIGIN" -H "Content-Type: application/json" -H "apikey: $KEY" \
+            -H "Idempotency-Key: $(cat /proc/sys/kernel/random/uuid)" -d '{}'; echo
+      - name: POST valid test body (writes one test row)
+        run: |
+          curl -s -D - -X POST "$URL" -H "Origin: $ORIGIN" -H "Content-Type: application/json" -H "apikey: $KEY" \
+            -H "Idempotency-Key: $(cat /proc/sys/kernel/random/uuid)" \
+            -d '{"kind":"performance_quote","locale":"ja","schedule":{"mode":"undecided","dates":[],"period":""},"budget":"undecided","ensemble":"other","instruments":"","remarks":"診断テスト（削除してよい）","contact":{"name":"診断テスト","email":"diag@example.com"},"consent":true}'; echo
