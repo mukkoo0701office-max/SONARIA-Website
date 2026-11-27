@@ -17,7 +17,7 @@ import { withBasePath } from "@/lib/paths";
 // - マウスを載せている間、キーボードのフォーカスがある間は止める
 // - 「動きを減らす」設定の端末では最初から止めておく（再生ボタンで開始できる）
 // - 5 秒を超えて自動で動くため、一時停止ボタンを必ず置く（WCAG 2.2.2）
-const AUTOPLAY_MS = 6000;
+const AUTOPLAY_MS = 5000; // 運営者の指定（5 秒ごと）
 const HOLD_AFTER_MANUAL_MS = 12000;
 const SWIPE_THRESHOLD_PX = 50;
 
@@ -152,6 +152,7 @@ export default function HeroCarousel({ locale }: { locale: Locale }) {
                     loading={i === 0 ? "eager" : "lazy"}
                     fetchPriority={i === 0 ? "high" : "auto"}
                     decoding="async"
+                    style={image.focus ? { objectPosition: image.focus } : undefined}
                     className="aspect-[4/5] w-full object-cover min-[480px]:aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9]"
                   />
                   {/* 文字を読みやすくするための暗いグラデーション */}

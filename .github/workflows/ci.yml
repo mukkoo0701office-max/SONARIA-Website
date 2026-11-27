@@ -108,7 +108,7 @@ jobs:
           grep -q 'href="/SONARIA-Website/ja/scores/"' out/ja/index.html || { echo "links missing basePath"; exit 1; }
           grep -q 'noindex' out/ja/index.html || { echo "preview noindex missing"; exit 1; }
           grep -rq "デモ講師" out/ || { echo "preview should include demo teachers"; exit 1; }
-          grep -q '/SONARIA-Website/images/placeholders/home.svg' out/ja/index.html || { echo "image basePath missing"; exit 1; }
+          grep -q '/SONARIA-Website/images/site/violin-scroll-score.jpg' out/ja/index.html || { echo "image basePath missing"; exit 1; }
         env:
           NEXT_PUBLIC_BASE_PATH: /SONARIA-Website
           NEXT_PUBLIC_PREVIEW: "1"

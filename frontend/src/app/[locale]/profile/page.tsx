@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ContentPage from "@/components/ContentPage";
 import ButtonLink from "@/components/ui/ButtonLink";
 import { getDictionary } from "@/data/dictionaries";
+import { curatorPortrait } from "@/data/images";
 import { pagePaths } from "@/data/site";
 import { isLocale, localizedPath, type Locale } from "@/lib/i18n";
 
@@ -21,7 +22,7 @@ export default async function ProfilePage({ params }: Props) {
   const dict = getDictionary(locale);
 
   return (
-    <ContentPage locale={locale} copy={dict.contentPages.profile} image="profile">
+    <ContentPage locale={locale} copy={dict.contentPages.profile} image="profile" portrait={{ image: curatorPortrait, alt: dict.images.curatorPortrait }}>
         <ButtonLink href={localizedPath(locale, pagePaths.about)} variant="secondary">{dict.pages.about}</ButtonLink>
     </ContentPage>
   );

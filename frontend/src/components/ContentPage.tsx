@@ -2,7 +2,7 @@ import Link from "next/link";
 import Container from "@/components/layout/Container";
 import { getDictionary } from "@/data/dictionaries";
 import type { ContentCopy } from "@/data/dictionaries/types";
-import { siteImages, type ImageKey } from "@/data/images";
+import { siteImages, type ImageKey, type SiteImage } from "@/data/images";
 import { localizedPath, type Locale } from "@/lib/i18n";
 import { withBasePath } from "@/lib/paths";
 
@@ -11,10 +11,11 @@ type Props = {
   copy: ContentCopy;
   image?: ImageKey;
   children?: React.ReactNode; // ページ下部のボタン・リンク
+  portrait?: { image: SiteImage; alt: string }; // 本文の最初に添える人物写真（管理人プロフィールだけ）
 };
 
 // サービス・紹介ページの共通レイアウト（見出しごとの段落・箇条書き）
-export default function ContentPage({ locale, copy, image, children }: Props) {
+export default function ContentPage({ locale, copy, image, children, portrait }: Props) {
   const dict = getDictionary(locale);
   const img = image ? siteImages[image] : null;
 
@@ -29,12 +30,25 @@ export default function ContentPage({ locale, copy, image, children }: Props) {
             height={img.height}
             alt={image ? dict.images.alt[image] : ""}
             decoding="async"
-            className="aspect-[16/9] w-full object-cover sm:aspect-[21/7]"
+            style={img.focus ? { objectPosition: img.focus } : undefined}
+            // 下層ページの見出し画像は控えめな高さにする（運営者の指定: 以前の約半分。PC 6:1、スマホ 3:1）
+            className="aspect-[3/1] w-full object-cover sm:aspect-[6/1]"
           />
         )}
         <div className="mx-auto max-w-3xl p-6 sm:p-10">
           <h1 className="text-2xl font-bold sm:text-3xl">{copy.title}</h1>
           <p className="mt-4 text-sm leading-relaxed sm:text-base">{copy.lead}</p>
+          {portrait && (
+            // eslint-disable-next-line @next/next/no-img-element -- 静的書き出しのため next/image の最適化は使えない
+            <img
+              src={withBasePath(portrait.image.src)}
+              width={portrait.image.width}
+              height={portrait.image.height}
+              alt={portrait.alt}
+              decoding="async"
+              className="mt-6 w-full max-w-[280px] rounded-card border border-line object-cover sm:float-right sm:mb-4 sm:ml-6 sm:mt-8 sm:w-[240px]"
+            />
+          )}
 
           {copy.sections.map((section) => (
             <section key={section.heading} className="mt-8">

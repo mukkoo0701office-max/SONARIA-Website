@@ -48,6 +48,7 @@ export const en: Dictionary = {
   },
   images: {
     alt: { home: "", scores: "", bowing: "", lessons: "", recording: "", performance: "", community: "", profile: "" },
+    curatorPortrait: "Photo of Yuki Mukoyama, the site curator",
   },
   hero: {
     label: "Highlights",

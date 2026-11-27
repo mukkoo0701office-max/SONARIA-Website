@@ -1,0 +1,30 @@
+# 旧サイトの主なページの画像を集め、選ぶための一覧を ci/old-site-images ブランチに保存する（サイトには反映しない）
+name: Old site images
+
+on:
+  push:
+    branches: [feature/site-images]
+    paths:
+      - "tools/score-migration/site_images.py"
+      - ".github/workflows/site-images.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q -r tools/score-migration/requirements.txt
+      - run: python tools/score-migration/site_images.py --out /tmp/out
+      - name: Save
+        if: always()
+        run: |
+          cd /tmp/out && git init -q -b ci/old-site-images && git add -A
+          git -c user.name="github-actions" -c user.email="github-actions@users.noreply.github.com" commit -q -m "old site images"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" ci/old-site-images
