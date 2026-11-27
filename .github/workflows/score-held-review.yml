@@ -1,0 +1,52 @@
+# 移行で保留にした旧サイトの PDF を取り直し、目視確認用の画像を ci/held-review ブランチに保存する（公開はしない）
+name: Score held review
+
+on:
+  push:
+    branches: [feature/old-site-remaining]
+    paths:
+      - "tools/score-migration/held_review.py"
+      - "tools/score-migration/sitemap_check.py"
+      - "tools/score-migration/detail_sheets.py"
+      - "tools/score-migration/detail_keys.json"
+      - ".github/workflows/score-held-review.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: score-held-review
+  cancel-in-progress: false
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils > /dev/null
+          pip install -q -r tools/score-migration/requirements.txt
+      - name: Restore previous results
+        run: |
+          mkdir -p /tmp/out
+          if git ls-remote --exit-code --heads origin ci/held-review > /dev/null 2>&1; then
+            git fetch -q --depth=1 origin ci/held-review && git archive FETCH_HEAD | tar -x -C /tmp/out
+          fi
+      # sitemap.xml の全ページから、最初の巡回で拾えていない PDF を探す
+      - name: Sitemap check
+        run: |
+          git fetch -q --depth=1 origin ci/score-audit && git show FETCH_HEAD:state.json > /tmp/state.json
+          [ -f /tmp/out/new_links.json ] || python tools/score-migration/sitemap_check.py --state /tmp/state.json --report tools/score-migration/report.json --out /tmp/out/new_links.json
+      - run: python tools/score-migration/held_review.py --report tools/score-migration/report.json --report /tmp/out/new_links.json --out /tmp/out
+      - name: Detail sheets
+        run: python tools/score-migration/detail_sheets.py --index /tmp/out/index.json --keys tools/score-migration/detail_keys.json --out /tmp/out
+      - name: Save to ci/held-review
+        if: always()
+        run: |
+          cd /tmp/out && rm -rf .git && git init -q -b ci/held-review && git add -A
+          git -c user.name="github-actions" -c user.email="github-actions@users.noreply.github.com" commit -q -m "held review"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" ci/held-review

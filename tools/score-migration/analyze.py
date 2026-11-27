@@ -229,7 +229,10 @@ def main() -> int:
     ap.add_argument("--state", required=True)
     ap.add_argument("--deep", required=True)
     ap.add_argument("--out-dir", required=True)
+    # 目視確認の結果（ファイルごとに判定・パート・作品の付け替えを上書きする）。review_decisions.json
+    ap.add_argument("--review", default=os.path.join(os.path.dirname(os.path.abspath(__file__)), "review_decisions.json"))
     args = ap.parse_args()
+    review = json.load(open(args.review, encoding="utf-8"))["files"] if os.path.exists(args.review) else {}
     state = json.load(open(args.state, encoding="utf-8"))
     deep = json.load(open(args.deep, encoding="utf-8")) if os.path.exists(args.deep) else {}
     os.makedirs(args.out_dir, exist_ok=True)
@@ -263,11 +266,19 @@ def main() -> int:
             e = links.get(lk)
             r = {"page": page["_url"], "heading": heading, "url": e["_url"] if e else lk, "filename": (e or {}).get("filename"), "decision": None, "reasons": [], "notes": []}
             results.append(r)
+            rv = review.get(lk) or {}
+            meta = W.get(heading)
+            if rv.get("work"):
+                # 目視確認で別の作品と分かったファイル（旧サイトの誤リンク・混在ページ）は、その作品に付け替える
+                meta = tuple(rv["work"]) if isinstance(rv["work"], list) else W[rv["work"]]
+                r["notes"].append("目視確認で作品を付け替え: " + meta[1])
             if not e:
                 r["decision"], r["reasons"] = "hold", ["検査記録なし"]
                 continue
-            if heading in MIXED_PAGES or not meta:
+            if (heading in MIXED_PAGES and not rv.get("work")) or not meta:
                 r["decision"] = "hold"
+                if rv.get("decision") == "hold":
+                    r["reasons"].append("目視確認で保留: " + rv.get("note", ""))
                 r["reasons"].append("作品を特定できない（複数の作曲者の楽譜が混在するページ、または作品情報が未登録）")
                 continue
             if e["status"] != "downloaded":
@@ -323,6 +334,16 @@ def main() -> int:
             if d.get("blank_pages"):
                 r["notes"].append("白紙ページ: " + ", ".join(map(str, d["blank_pages"][:5])))
 
+            if rv.get("part"):
+                part, plabel = rv["part"], rv.get("label", plabel)
+                r["part"] = part
+            if rv.get("decision") == "migrate":
+                # 目視確認で問題なしと判断（OCR が読めなかった・パート名の誤認識など）。自動判定の理由は記録だけ残す
+                if r["reasons"]:
+                    r["notes"].append("自動判定で保留だったが目視確認で合格: " + " / ".join(r["reasons"]) + (f"（{rv['note']}）" if rv.get("note") else ""))
+                r["reasons"] = []
+            elif rv.get("decision") == "hold":
+                r["reasons"].append("目視確認で保留: " + rv.get("note", ""))
             r["decision"] = "hold" if r["reasons"] else "migrate"
             r["sha256"] = e["sha256"]
             if r["decision"] != "migrate":
@@ -369,6 +390,10 @@ def main() -> int:
             have = set(parts)
             if w["scoring"] in ("string-trio", "piano-trio", "piano-quartet", "violin-piano") and "violin1" in have:
                 have.add("violin")
+            # 「Vnソロ譜」「ピアノ伴奏譜」の組は、独奏（solo）を独奏楽器のパートとして数える
+            solo_instrument = {"violin-piano": "violin", "viola-piano": "viola", "cello-piano": "cello"}.get(w["scoring"])
+            if solo_instrument and "solo" in have:
+                have.add(solo_instrument)
             missing = need - have
             if missing and len(assets) > 0 and not any(volume_label(a["e"]["filename"]) for a in assets if len({x["part"] for x in assets}) < len(assets)):
                 for a in assets:

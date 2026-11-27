@@ -1274,5 +1274,77 @@
    "en": "Germany (later active in the United States)"
   },
   "era": "romantic"
+ },
+ {
+  "id": "bizet",
+  "name": {
+   "ja": "ジョルジュ・ビゼー",
+   "en": "Georges Bizet",
+   "original": "Georges Bizet"
+  },
+  "short": {
+   "ja": "ビゼー",
+   "en": "Bizet"
+  },
+  "aliases": [
+   "Bizet",
+   "ビゼー"
+  ],
+  "born": "1838",
+  "died": "1875",
+  "nationality": {
+   "ja": "フランス",
+   "en": "France"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "halvorsen",
+  "name": {
+   "ja": "ヨハン・ハルヴォルセン",
+   "en": "Johan Halvorsen",
+   "original": "Johan Halvorsen"
+  },
+  "short": {
+   "ja": "ハルヴォルセン",
+   "en": "Halvorsen"
+  },
+  "aliases": [
+   "Halvorsen",
+   "ハルボルセン",
+   "ハルヴォルセン"
+  ],
+  "born": "1864",
+  "died": "1935",
+  "nationality": {
+   "ja": "ノルウェー",
+   "en": "Norway"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "strauss-r",
+  "name": {
+   "ja": "リヒャルト・シュトラウス",
+   "en": "Richard Strauss",
+   "original": "Richard Strauss"
+  },
+  "short": {
+   "ja": "R.シュトラウス",
+   "en": "R. Strauss"
+  },
+  "aliases": [
+   "Richard Strauss",
+   "R.Strauss",
+   "リヒャルトシュトラウス",
+   "リヒャルト・シュトラウス"
+  ],
+  "born": "1864",
+  "died": "1949",
+  "nationality": {
+   "ja": "ドイツ",
+   "en": "Germany"
+  },
+  "era": "romantic"
  }
 ]

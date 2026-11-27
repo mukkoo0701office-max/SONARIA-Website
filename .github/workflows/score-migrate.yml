@@ -5,7 +5,7 @@ name: Score migrate
 
 on:
   push:
-    branches: [feature/score-migration, feature/haydn-quartets]
+    branches: [feature/score-migration, feature/haydn-quartets, feature/old-site-remaining]
     paths:
       - "tools/score-migration/approvals.json"
       - "tools/score-acquisition/intake_approvals.json"
