@@ -59,3 +59,26 @@ GPTが約1時間ごとにIMSLP等の公開情報を調査し、未収録の作�
 
 ## 進捗報告
 各回：新規候補件数／重複スキップ件数／保留件数／確認した根拠URL／保存コミットSHA／PR URL／次の対象。未保存なら未保存と報告。
+
+
+## 必須: 総譜と全パート譜の個別リスティング（既存候補にも遡及適用）
+
+**適用範囲: queue.json の全既存候補と今後の全候補。** 作品の総譜だけを見つけても、セットが揃ったとは判定しない。従来の `edition.imslp_file_id` は総譜とは限らず、パート譜集PDFのこともある。ファイルの種別を再確認せずに「総譜あり」と推定しない。
+
+各候補に以下の情報を記録する（未確認は `null` または `unknown`、推測で埋めない）。
+
+- `score_inventory`: `status` (identified/unverified/missing/not_applicable), `imslp_file_id`, `edition_url`, `publisher`, `editor`, `publication_date`, `scope`, `evidence`
+- `part_inventory`: 楽器・声部ごとの辞書。弦楽四重奏は必ず `violin_1`, `violin_2`, `viola`, `cello` の4項目。各項目に `status`, `imslp_file_id`, `edition_url`, `publisher`, `editor`, `scope`, `evidence`。全パートを1冊にまとめたPDFは同じファイルIDを複数パートに紐づけてもよいが、収録の実確認が済むまでは `unverified`。
+- `score_part_edition_match`: `same_edition` / `different_edition` / `unknown` / `not_applicable` と根拠。異版の組み合わせは必ずClaudeに照合を依頼する。
+- `set_completeness`: `complete_verified` / `partial` / `unverified`。全パートと総譜の実物・範囲確認前に `complete_verified` を使わない。
+- `missing_assets`: 不足・未特定の総譜や各パートの名前の配列。見つからない場合も未調査と存在しないことを区別する。
+- `asset_audit_evidence`: 各URL、ファイル番号、確認日時、何を確認したか。IMSLPページ上の記載確認とPDF実物検査は区別する。
+
+### 過去分の是正手順
+1. **新規調査と並行して**既存全候補を順次再監査する。作曲家・作品の調査順は維持し、再監査カーソル／件数を記録する。
+2. `edition.imslp_file_id` が総譜か、パート譜集か、別物かを再判定。既存の確かな情報を消さず、新しい項目に出典付きで移す。
+3. 総譜と必要な全パートをそれぞれ探索。未発見のものを黙って省略せず `missing_assets` に列挙。
+4. 版の不一致、別作品混入、楽章欠落、重複、PDF品質、権利は別々に判定。ClaudeによるPDF検査・権利審査・公開承認の工程を飛ばさない。
+5. 毎回の報告に「新規作品数」「既存作品の再監査数」「総譜特定数」「全パート特定数」「未特定・保留数」「コミットSHA」を含める。
+
+**重要:** `score_parts` は必要編成を表すだけであり、パート譜の発見やファイル実在を意味しない。旧 `edition.part_file_ids` もファイルの中身・版・権利の検証済みを意味しない。
