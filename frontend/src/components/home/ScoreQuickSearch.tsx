@@ -182,10 +182,18 @@ export default function ScoreQuickSearch({ locale, works, composers, formations,
                         {heading}
                       </span>
                     )}
-                    <span className={`flex items-baseline justify-between gap-3 px-4 py-2 ${i === active ? "bg-subtle" : ""}`}>
-                      <span className={`min-w-0 truncate text-[15px] ${o.group === "all" ? "text-navy underline" : "text-ink"}`}>{o.label}</span>
-                      {o.sub && <span className="flex-none text-[12px] text-muted">{o.sub}</span>}
-                    </span>
+                    {o.group === "work" ? (
+                      // 作品は 2 行（曲名／作曲家）。スマホの狭い幅でも曲名を優先して見せる
+                      <span className={`block px-4 py-2 ${i === active ? "bg-subtle" : ""}`}>
+                        <span className="block truncate text-[15px] text-ink">{o.label}</span>
+                        {o.sub && <span className="block truncate text-[12px] text-muted">{o.sub}</span>}
+                      </span>
+                    ) : (
+                      <span className={`flex items-baseline justify-between gap-3 px-4 py-2 ${i === active ? "bg-subtle" : ""}`}>
+                        <span className={`min-w-0 truncate text-[15px] ${o.group === "all" ? "text-navy underline" : "text-ink"}`}>{o.label}</span>
+                        {o.sub && <span className="flex-none text-[12px] text-muted">{o.sub}</span>}
+                      </span>
+                    )}
                   </li>
                 );
               })}
