@@ -99,7 +99,13 @@ export default async function ComposerPage({ params }: Props) {
         {c.portrait && (
           <figure className="w-28 flex-none">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={withBasePath(c.portrait.file)} width={c.portrait.width} height={c.portrait.height} alt={c.portrait.alt[locale]} className="h-auto w-full rounded border border-line" />
+            <img
+              src={withBasePath(c.portrait.file)}
+              width={c.portrait.width}
+              height={c.portrait.height}
+              alt={c.portrait.alt[locale]}
+              className="aspect-[3/4] w-full rounded border border-line bg-card object-cover"
+            />
           </figure>
         )}
         <div>

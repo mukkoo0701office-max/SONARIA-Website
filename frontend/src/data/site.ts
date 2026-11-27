@@ -13,6 +13,7 @@ export type PageKey =
   | "teachers"
   | "about"
   | "contact"
+  | "apply"
   | "privacy";
 
 export const pagePaths: Record<PageKey, string> = {
@@ -27,6 +28,7 @@ export const pagePaths: Record<PageKey, string> = {
   teachers: "/teachers/",
   about: "/about/",
   contact: "/contact/",
+  apply: "/apply/",
   privacy: "/legal/privacy/",
 };
 

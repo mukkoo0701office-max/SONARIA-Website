@@ -81,11 +81,21 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
     check("mobile: swipe does not navigate", page.url().endsWith("/ja/"), page.url());
   }
 
+  // 楽譜の簡易検索 → 楽譜検索ページへ条件を引き継ぐ
+  await page.goto(`${base}/ja/`, { waitUntil: "networkidle" });
+  await page.fill("#quick-score-q", "ベートーヴェン");
+  await page.selectOption("#quick-score-players", "4");
+  await page.locator('form:has(#quick-score-q) button[type="submit"]').click();
+  await page.waitForURL(/scores\/\?/);
+  await page.waitForTimeout(500);
+  check(`${vpName}: score quick search carries query`, decodeURIComponent(page.url()).includes("q=ベートーヴェン") && page.url().includes("players=4"), page.url());
+  await shot(page, `${vpName}-ja-scores-from-home`);
+
   // 講師の簡易検索 → 講師検索ページへ条件を引き継ぐ
   await page.goto(`${base}/ja/`, { waitUntil: "networkidle" });
   await page.selectOption("#quick-category", "strings");
   await page.selectOption("#quick-pref", "13");
-  await page.click('form button[type="submit"]');
+  await page.locator('form:has(#quick-category) button[type="submit"]').click();
   await page.waitForURL(/teachers/);
   await page.waitForTimeout(500);
   check(`${vpName}: quick search carries query`, page.url().includes("category=strings") && page.url().includes("pref=13"), page.url());
@@ -123,6 +133,43 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   await page.goto(`${base}/ja/scores/beethoven-violin-sonata-5/`, { waitUntil: "networkidle" });
   const dl = await page.locator("a[download]").first().getAttribute("href");
   check(`${vpName}: PDF download points to release asset`, Boolean(dl && dl.includes("/releases/download/scores-v1/")), String(dl));
+
+  // 統合申込フォーム（Issue #13）。料金の受け入れテストと、送信先未設定時に「未接続」を表示することを確かめる
+  const yenText = async () => (await page.locator("#order-summary + dl, section[aria-labelledby='order-summary'] dl").first().innerText()).replace(/\s+/g, " ").trim();
+  await page.goto(`${base}/ja/apply/?service=recording`, { waitUntil: "networkidle" });
+  const inc = (id, n) => page.locator(`button[aria-label^="${id}"][aria-label$="1つ増やす"]`).first();
+  for (const [inst, n] of [["ヴァイオリン", 2], ["ヴィオラ", 1], ["チェロ", 1]]) for (let i = 0; i < n; i++) await inc(inst).click();
+  const totalBase = await yenText();
+  check(`${vpName}: recording Vn2+Va1+Vc1 = ¥41,000`, /合計 ¥41,000$/.test(totalBase), totalBase);
+  await page.locator('label:has(input[name="delivery-recording"][value="nextDay"])').click();
+  const totalNext = await yenText();
+  check(`${vpName}: recording next-day = ¥49,200`, /合計 ¥49,200$/.test(totalNext), totalNext);
+  await shot(page, `${vpName}-ja-apply-recording`);
+  await page.goto(`${base}/ja/apply/?service=bowing&composer=Beethoven&title=Spring&part=Violin`, { waitUntil: "networkidle" });
+  check(`${vpName}: bowing prefill from score page`, (await page.locator("#score").inputValue()) === "Beethoven Spring (Violin)");
+  const bowTotal = await yenText();
+  check(`${vpName}: bowing set 1 page = ¥1,500`, /合計 ¥1,500$/.test(bowTotal), bowTotal);
+  await page.fill("#name", "テスト");
+  await page.fill("#email", "test@example.invalid");
+  await page.locator('input[type="checkbox"]').check();
+  await shot(page, `${vpName}-ja-apply-bowing`);
+  await page.locator('form button[type="submit"]').click();
+  await page.getByRole("button", { name: "この内容で申し込む" }).click();
+  check(`${vpName}: submission shows not-connected`, await page.getByRole("heading", { name: "オンライン送信は準備中です" }).isVisible());
+  await shot(page, `${vpName}-ja-apply-not-connected`);
+  await page.goto(`${base}/ja/apply/?service=lesson`, { waitUntil: "networkidle" });
+  await page.locator('label:has(input[name="trial"][value="yes"])').click();
+  check(`${vpName}: trial disabled after yes`, await page.locator('input[name="plan"][value="trial"]').isDisabled());
+  await page.locator('label:has(input[name="plan"][value="single"])').click();
+  await page.locator('[role="tabpanel"] button[aria-pressed]').nth(1).click();
+  await page.locator('[role="tabpanel"] [role="group"] button:not([disabled])').first().click();
+  await page.locator('[role="tabpanel"] [role="group"] button:not([disabled])').nth(2).click();
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+  check(`${vpName}: apply page has no horizontal overflow`, overflow <= 0, String(overflow));
+  check(`${vpName}: lesson candidates listed with priority`, (await page.locator("text=第2希望").count()) === 1);
+  await shot(page, `${vpName}-ja-apply-lesson`);
+  await page.goto(`${base}/en/apply/?service=recording`, { waitUntil: "networkidle" });
+  await shot(page, `${vpName}-en-apply-recording`);
 
   check(`${vpName}: no page errors`, errors.length === 0, errors.slice(0, 3).join(" | "));
   await context.close();

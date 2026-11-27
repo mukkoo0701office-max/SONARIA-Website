@@ -1,0 +1,44 @@
+# 掲載中の楽譜 PDF の視認性（解像度・くっきり度・濃淡）を測り、ci/score-legibility ブランチに保存する
+name: Score legibility
+
+on:
+  push:
+    branches: [feature/score-migration]
+    paths:
+      - "tools/score-migration/legibility.py"
+      - "tools/score-migration/legibility_crops.py"
+      - ".github/workflows/score-legibility.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils > /dev/null
+          pip install -q pillow==11.0.0
+      - name: Restore previous results
+        run: |
+          mkdir -p /tmp/out
+          if git ls-remote --exit-code --heads origin ci/score-legibility > /dev/null 2>&1; then
+            git fetch -q --depth=1 origin ci/score-legibility && (git show FETCH_HEAD:legibility.json > /tmp/out/legibility.json 2>/dev/null || rm -f /tmp/out/legibility.json)
+          fi
+      - run: python tools/score-migration/legibility.py --repo . --out /tmp/out/legibility.json
+      - run: python tools/score-migration/legibility_crops.py --repo . --legibility /tmp/out/legibility.json --out-dir /tmp/out/crops --extra sevcik-violin-studies/violin-op-2:13
+        shell: bash
+      - name: Save to ci/score-legibility
+        if: always()
+        run: |
+          mkdir -p /tmp/out && [ -f /tmp/out/legibility.json ] || exit 0
+          cd /tmp/out && git init -q && git checkout -q -b ci/score-legibility && git add legibility.json crops
+          git -c user.name="github-actions" -c user.email="github-actions@users.noreply.github.com" commit -q -m "legibility"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" ci/score-legibility

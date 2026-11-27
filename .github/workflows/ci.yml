@@ -35,6 +35,8 @@ jobs:
           fi
 
       - run: npm run lint
+      # 料金計算・候補日時の単体テスト（申込フォーム。Issue #13）
+      - run: npm test
       - run: npm run build
 
       # 静的書き出しで全ページが生成されたかを確認する（直接アクセス・リロードで表示できること）
@@ -43,7 +45,7 @@ jobs:
           test -f out/index.html || { echo "missing: out/index.html"; exit 1; }
           test -f out/.htaccess || { echo "missing: out/.htaccess"; exit 1; }
           for lang in ja en; do
-            for p in "" scores composers teachers teachers/profile bowing lessons recording performance community profile about contact legal/privacy; do
+            for p in "" scores composers teachers teachers/profile bowing lessons recording performance community profile about contact apply legal/privacy; do
               f="out/$lang/${p:+$p/}index.html"
               test -f "$f" || { echo "missing: $f"; exit 1; }
             done

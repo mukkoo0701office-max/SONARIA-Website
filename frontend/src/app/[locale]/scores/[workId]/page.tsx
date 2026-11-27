@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "@/components/layout/Container";
 import AffiliateSlot from "@/components/library/AffiliateSlot";
+import AmazonRelated from "@/components/library/AmazonRelated";
+import { amazonItemsFor } from "@/data/affiliate/amazon";
 import BowingBanner from "@/components/library/BowingBanner";
 import PdfFile from "@/components/library/PdfFile";
 import WorkList from "@/components/library/WorkList";
@@ -13,6 +15,7 @@ import { catalogLabel, composerLocales, usesRemotePdf, composerOf, getWork, isSa
 import type { Work } from "@/data/scores/types";
 import { pagePaths } from "@/data/site";
 import { isLocale, localizedPath, type Locale } from "@/lib/i18n";
+import { withBasePath } from "@/lib/paths";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
 
 // 作品詳細ページ。catalog.json の公開済み作品（承認済みの版があるもの）から自動で静的生成する。
@@ -81,20 +84,39 @@ export default async function WorkPage({ params }: Props) {
   const composerPage = localizedPath(composerLocales(c).includes(locale) ? locale : "ja", `/composers/${c.id}/`);
   const assets = work.editions.flatMap((e) => e.assets);
   const fileCount = assets.length;
-  const hasScore = assets.some((a) => a.part === "score");
   const partNames = [...new Set(assets.filter((a) => a.part !== "score").sort((a, b) => partOrder.indexOf(a.part) - partOrder.indexOf(b.part)).map((a) => partLabel(t, locale, a)))];
   const sep = locale === "ja" ? "、" : ", ";
   const related = relatedWorks(work);
+  const amazonItems = amazonItemsFor(work.id);
   const catalogText = catalogLabel(work);
   const pageUrl = absoluteUrl(localizedPath(locale, `/scores/${work.id}/`));
 
-  // 「この楽譜について」: データから確実に言えることだけを質問と回答の形で示す
+  // 「この楽譜について」: 収録内容・演奏人数・印刷量・楽章など、データから確実に言える実用情報を質問と回答の形で示す
+  const sortedAssets = [...assets].sort((a, b) => partOrder.indexOf(a.part) - partOrder.indexOf(b.part));
+  const scoreAssets = sortedAssets.filter((a) => a.part === "score");
+  const partAssets = sortedAssets.filter((a) => a.part !== "score");
+  const scoreText = scoreAssets.length ? scoreAssets.map((a) => (scoreAssets.length > 1 ? tw.partItem(partLabel(t, locale, a), a.pages) : tw.scoreItem(a.pages))).join(sep) : null;
+  const partsText = partAssets.map((a) => tw.partItem(partLabel(t, locale, a), a.pages));
+  const totalPages = assets.reduce((n, a) => n + a.pages, 0);
+  // 1 人分の目安: 合奏・室内楽で、パートごとに 1 ファイルずつある場合だけ示す（曲集・複数版は人によって違うため出さない）
+  const perPlayerParts = partAssets.filter((a) => !a.label);
+  const perPlayer =
+    perPlayerParts.length >= 2 && perPlayerParts.length === partAssets.length && new Set(perPlayerParts.map((a) => a.part)).size === perPlayerParts.length
+      ? perPlayerParts.map((a) => tw.perPlayer(t.parts[a.part], a.pages)).join(sep)
+      : null;
+  const soloAsset = partAssets.find((a) => a.part === "solo" || a.part === "violin" || a.part === "cello" || a.part === "viola");
+  const playersAnswer =
+    work.scoring === "solo-orchestra"
+      ? partAssets.some((a) => a.part === "piano") && soloAsset
+        ? tw.soloWithPiano(t.instruments[work.instruments.find((i) => i !== "piano") ?? "violin"] ?? t.parts.solo)
+        : tw.soloWithEnsemble
+      : tw.playersByScoring[work.scoring];
   const faq: { q: string; a: string }[] = [
-    { q: tw.qComposer(work.title[locale]), a: tw.aComposer(work.title[locale], c.name[locale], work.composed ?? null) },
-    { q: tw.qInstrumentation, a: tw.aInstrumentation(work.title[locale], instrumentation(t, work)) },
-    ...(work.movements && work.movements.length > 1 ? [{ q: tw.qMovements, a: tw.aMovements(work.title[locale], work.movements.length) }] : []),
+    { q: tw.qContents, a: tw.aContents(scoreText, partsText) },
+    ...(playersAnswer ? [{ q: tw.qPlayers, a: playersAnswer }] : []),
+    { q: tw.qPrint, a: tw.aPrint(totalPages, assets.length, perPlayer) },
+    ...(work.movements && work.movements.length > 1 ? [{ q: tw.qMovements, a: tw.aMovements(work.movements.length, work.movements.map((m) => m[locale]).join(sep)) }] : []),
     { q: tw.qFree, a: tw.aFree(work.title[locale], fileCount, work.editions.every((e) => e.rights.status === "approved")) },
-    { q: tw.qParts, a: tw.aParts(hasScore, partNames.join(sep)) },
   ];
 
   const ld = {
@@ -150,7 +172,11 @@ export default async function WorkPage({ params }: Props) {
           {catalogText && <span className="ml-2 text-lg font-semibold text-muted">{catalogText}</span>}
         </h1>
         {work.title.original && work.title.original !== work.title[locale] && <p className="mt-1 text-sm text-muted" lang="und">{work.title.original}</p>}
-        <p className="mt-2 text-sm">
+        <p className="mt-2 flex items-center gap-2 text-sm">
+          {c.portrait && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={withBasePath(c.portrait.file)} width={36} height={48} alt={c.portrait.alt[locale]} className="aspect-[3/4] w-9 rounded border border-line object-cover" />
+          )}
           <Link href={composerPage} className="text-navy underline">
             {c.name[locale]}
           </Link>
@@ -308,8 +334,8 @@ export default async function WorkPage({ params }: Props) {
         </Link>
       </section>
 
-      {/* 広告はダウンロードの操作ボタンから離し、本文の後に置く */}
-      <AffiliateSlot placement="work" t={t.ad} links={work.affiliate} />
+      {/* 広告はダウンロードの操作ボタンから離し、本文の後に置く。Amazon の確認済み商品があればそれを、無ければ共通の枠を出す */}
+      {amazonItems.length > 0 ? <AmazonRelated items={amazonItems} locale={locale} t={t.ad} /> : <AffiliateSlot placement="work" t={t.ad} links={work.affiliate} />}
 
       {related.length > 0 && (
         <section aria-labelledby="related" className="mt-8">
