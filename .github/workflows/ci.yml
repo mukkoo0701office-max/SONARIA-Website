@@ -66,6 +66,13 @@ jobs:
           test ! -e out/admin || { echo "admin console leaked into production build"; exit 1; }
           if grep -rq "SONARIA_ADMIN_DEMO_DATA" out/; then echo "admin demo data leaked into production build"; exit 1; fi
 
+      # AdSense は未接続。本番ビルドで広告コードを読み込まず、プレビュー用の仮枠も出さない（data/ads.ts）
+      - name: No AdSense code or preview slot in production build
+        run: |
+          # 文字列は JS の部品内にあるため、実際に出力された HTML だけを調べる
+          if grep -rq --include="*.html" "pagead2.googlesyndication.com" out/; then echo "AdSense script must not load before it is connected"; exit 1; fi
+          if grep -rq --include="*.html" "data-ad-slot-preview" out/; then echo "AdSense preview slot leaked into production build"; exit 1; fi
+
       # 品質検査（title・description・lang・JSON-LD・リンク切れ・sitemap）
       - name: Site check (production, before launch)
         run: |

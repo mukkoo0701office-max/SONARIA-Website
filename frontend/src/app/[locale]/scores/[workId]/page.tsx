@@ -1,3 +1,4 @@
+import AdSenseSlot from "@/components/ads/AdSenseSlot";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -271,6 +272,10 @@ export default async function WorkPage({ params }: Props) {
           ))}
         </dl>
       </section>
+
+      {/* Google AdSense（1 枠）。ダウンロードの操作ボタンから離すため「この楽譜について」の後に置き、
+          ページ最下部の Amazon 枠とは本文・関連作品を挟んで分ける（docs/ads/ADSENSE_PLAN.md） */}
+      <AdSenseSlot unit="work-after-downloads" t={t.adsense} />
 
       {text?.overview && <Prose id="overview" title={tw.overview} body={text.overview} />}
       {text?.features && <Prose id="features" title={tw.features} body={text.features} />}

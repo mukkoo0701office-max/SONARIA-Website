@@ -5,6 +5,9 @@
 // - 通知先のメールアドレスはコードに書かない（サーバーの環境変数 ADMIN_NOTIFY_EMAIL で指定する。docs/admin/ADMIN_SYSTEM_DESIGN.md）
 
 import type {
+  AdDailyMetric,
+  AdSettings,
+  SiteDailyMetric,
   AnalyticsMetric,
   AuditLog,
   CalendarEvent,
@@ -456,8 +459,43 @@ export function createDemoData(today: Date = new Date()) {
     { id: "demo-a-3", at: T(-4), actor: "demo-admin", action: "teacher.published", target: "demo-tch-4" },
   ];
 
+  // ── 広告（デモ）: 45 日前に AdSense を導入した想定。導入前は広告の指標なし ──
+  const adLaunchOffset = 45;
+  const adDaily: AdDailyMetric[] = [];
+  const siteDaily: SiteDailyMetric[] = [];
+  for (let dd = 89; dd >= 0; dd--) {
+    const day = addDays(today, -dd);
+    const key = isoDate(day);
+    const pv = analytics.filter((m) => m.date === key).reduce((a, m) => a + m.pageviews, 0);
+    const workPv = analytics.filter((m) => m.date === key && m.category === "work").reduce((a, m) => a + m.pageviews, 0);
+    const afterLaunch = dd < adLaunchOffset;
+    // ダウンロード率は導入後もほぼ同じ（広告がダウンロードを妨げていないかを見るための指標）
+    const rate = afterLaunch ? 0.079 + r() * 0.006 : 0.08 + r() * 0.006;
+    siteDaily.push({ date: key, pageviews: pv, workPageviews: workPv, pdfDownloads: Math.round(pv * rate), source: "demo" });
+    if (afterLaunch) {
+      const adsensePageviews = Math.round(workPv * (0.92 + r() * 0.05));
+      const rpm = 180 + r() * 140; // 円／1,000 ページビュー
+      adDaily.push({ date: key, estimatedEarnings: Math.round((adsensePageviews * rpm) / 1000), impressions: Math.round(adsensePageviews * (0.95 + r() * 0.1)), adsensePageviews, source: "demo" });
+    }
+  }
+  const adPages = pages.filter((p) => p.category === "work").map((p) => p.path);
+  const adSettings: AdSettings = {
+    adsenseEnabled: false,
+    publisherId: "",
+    pages: { work: true, composer: false, category: false },
+    units: [{ id: "work-after-downloads", page: "work", placement: "after-downloads", slot: "", enabled: true }],
+    amazonEnabled: true,
+    googleManaged: { autoAds: false, vignette: false, anchor: false, cmpConfigured: false, adsTxt: "missing" },
+    updatedAt: T(-1),
+  };
+
   return {
     marker: DEMO_MARKER,
+    adLaunchDate: D(-adLaunchOffset + 1),
+    adDaily,
+    adPages,
+    siteDaily,
+    adSettings,
     inquiries,
     messages,
     statusHistory,
