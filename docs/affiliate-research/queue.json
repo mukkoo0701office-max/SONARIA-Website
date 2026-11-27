@@ -231,12 +231,13 @@
       "priority": "S",
       "last_research_at": "2026-11-27",
       "amazon_verification_status": "unverified_exact_amazon_japan_item",
-      "verification_notes": "2026-11-27 recheck: site:amazon.co.jp/dp/ exact Henle catalogue numbers HN205, HN208, HN9205, HN9216, HN211 and Japanese Amazon + exact ISMN queries produced no independently verifiable matching individual Amazon.co.jp product page or ASIN. Publisher identity only; keep pending_review. Do not use unrelated Haydn piano sonata books, CDs or marketplace search results as a match.",
+      "verification_notes": "2026-11-27 recheck: site:amazon.co.jp/dp/ exact Henle catalogue numbers HN205, HN208, HN9205, HN9216, HN211 and Japanese Amazon + exact ISMN queries produced no independently verifiable matching individual Amazon.co.jp product page or ASIN. Publisher identity only; keep pending_review. Do not use unrelated Haydn piano sonata books, CDs or marketplace search results as a match. 2026-11-27 19:54 JST: further exact Amazon Japan /dp/ searches for HN211 ISMN 9790201802114, HN205 and HN208 returned no identifiable matching product detail pages. Search noise included unrelated Amazon Music. No ASIN inferred.",
       "ismn": "979-0-2018-0211-4",
       "editor": "James Webster",
       "product_format": "four instrumental parts",
       "pages": 187,
-      "last_amazon_search_at": "2026-11-27"
+      "last_amazon_search_at": "2026-11-27",
+      "sonaria_matching_note": "2026-11-27: SONARIA pending catalog work haydn-string-quartets-op54 is parts-only for Op.54 Nos.1–3. Henle HN211 contains Op.54 Nos.1–3 PLUS Op.55 Nos.1–3, so it is related but not an identical-scope substitute for the uploaded Op.54 PDF collection. Display only if Amazon product/ASIN verified and approved; clearly state added Op.55 repertoire. Do not conflate with Haydn Op.50."
     },
     {
       "id": "haydn-henle-hn9208",
