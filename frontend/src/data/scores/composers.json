@@ -1,51 +1,52 @@
 [
  {
-  "id": "accolay",
+  "id": "mozart",
   "name": {
-   "ja": "ジャン＝バティスト・アコーレイ",
-   "en": "Jean-Baptiste Accolay",
-   "original": "Jean-Baptiste Accolay"
+   "ja": "ヴォルフガング・アマデウス・モーツァルト",
+   "en": "Wolfgang Amadeus Mozart",
+   "original": "Wolfgang Amadeus Mozart"
   },
   "short": {
-   "ja": "アコーレイ",
-   "en": "Accolay"
+   "ja": "モーツァルト",
+   "en": "Mozart"
   },
   "aliases": [
-   "Accolay",
-   "アコライ",
-   "アコーレイ",
-   "アッコーライ"
+   "Mozart",
+   "モーツァルト",
+   "モーツアルト"
   ],
-  "born": "1833",
-  "died": "1900",
+  "born": "1756",
+  "died": "1791",
   "nationality": {
-   "ja": "ベルギー",
-   "en": "Belgium"
+   "ja": "オーストリア（ザルツブルク生まれ、ウィーンで活動）",
+   "en": "Austria (born in Salzburg, active in Vienna)"
   },
-  "era": "romantic"
+  "era": "classical"
  },
  {
-  "id": "arensky",
+  "id": "vivaldi",
   "name": {
-   "ja": "アントン・アレンスキー",
-   "en": "Anton Arensky",
-   "original": "Антон Степанович Аренский"
+   "ja": "アントニオ・ヴィヴァルディ",
+   "en": "Antonio Vivaldi",
+   "original": "Antonio Vivaldi"
   },
   "short": {
-   "ja": "アレンスキー",
-   "en": "Arensky"
+   "ja": "ヴィヴァルディ",
+   "en": "Vivaldi"
   },
   "aliases": [
-   "Arensky",
-   "アレンスキー"
+   "Vivaldi",
+   "ビバルディ",
+   "ヴィバルディ",
+   "ヴィヴァルディ"
   ],
-  "born": "1861",
-  "died": "1906",
+  "born": "1678",
+  "died": "1741",
   "nationality": {
-   "ja": "ロシア",
-   "en": "Russia"
+   "ja": "イタリア（ヴェネツィア）",
+   "en": "Italy (Venice)"
   },
-  "era": "romantic"
+  "era": "baroque"
  },
  {
   "id": "bach",
@@ -73,261 +74,25 @@
   "era": "baroque"
  },
  {
-  "id": "bartok",
+  "id": "goltermann",
   "name": {
-   "ja": "バルトーク・ベーラ",
-   "en": "Béla Bartók",
-   "original": "Bartók Béla"
+   "ja": "ゲオルク・ゴルターマン",
+   "en": "Georg Goltermann",
+   "original": "Georg Goltermann"
   },
   "short": {
-   "ja": "バルトーク",
-   "en": "Bartók"
+   "ja": "ゴルターマン",
+   "en": "Goltermann"
   },
   "aliases": [
-   "Bartok",
-   "Bartók",
-   "バルトーク"
+   "Goltermann",
+   "ゴルターマン"
   ],
-  "born": "1881",
-  "died": "1945",
-  "nationality": {
-   "ja": "ハンガリー",
-   "en": "Hungary"
-  },
-  "era": "modern"
- },
- {
-  "id": "beethoven",
-  "name": {
-   "ja": "ルートヴィヒ・ヴァン・ベートーヴェン",
-   "en": "Ludwig van Beethoven",
-   "original": "Ludwig van Beethoven"
-  },
-  "short": {
-   "ja": "ベートーヴェン",
-   "en": "Beethoven"
-  },
-  "aliases": [
-   "Beethoven",
-   "ベートーベン",
-   "ベートーヴェン"
-  ],
-  "born": "1770",
-  "died": "1827",
-  "nationality": {
-   "ja": "ドイツ（ボン生まれ、ウィーンで活動）",
-   "en": "Germany (born in Bonn, active in Vienna)"
-  },
-  "era": "classical"
- },
- {
-  "id": "beriot",
-  "name": {
-   "ja": "シャルル＝オーギュスト・ド・ベリオ",
-   "en": "Charles-Auguste de Bériot",
-   "original": "Charles-Auguste de Bériot"
-  },
-  "short": {
-   "ja": "ベリオ",
-   "en": "Bériot"
-  },
-  "aliases": [
-   "Beriot",
-   "Bériot",
-   "ド・ベリオ",
-   "ベリオ"
-  ],
-  "born": "1802",
-  "died": "1870",
-  "nationality": {
-   "ja": "ベルギー",
-   "en": "Belgium"
-  },
-  "era": "romantic"
- },
- {
-  "id": "bizet",
-  "name": {
-   "ja": "ジョルジュ・ビゼー",
-   "en": "Georges Bizet",
-   "original": "Georges Bizet"
-  },
-  "short": {
-   "ja": "ビゼー",
-   "en": "Bizet"
-  },
-  "aliases": [
-   "Bizet",
-   "ビゼー"
-  ],
-  "born": "1838",
-  "died": "1875",
-  "nationality": {
-   "ja": "フランス",
-   "en": "France"
-  },
-  "era": "romantic"
- },
- {
-  "id": "borodin",
-  "name": {
-   "ja": "アレクサンドル・ボロディン",
-   "en": "Alexander Borodin",
-   "original": "Александр Порфирьевич Бородин"
-  },
-  "short": {
-   "ja": "ボロディン",
-   "en": "Borodin"
-  },
-  "aliases": [
-   "Borodin",
-   "ボロディン"
-  ],
-  "born": "1833",
-  "died": "1887",
-  "nationality": {
-   "ja": "ロシア",
-   "en": "Russia"
-  },
-  "era": "romantic"
- },
- {
-  "id": "brahms",
-  "name": {
-   "ja": "ヨハネス・ブラームス",
-   "en": "Johannes Brahms",
-   "original": "Johannes Brahms"
-  },
-  "short": {
-   "ja": "ブラームス",
-   "en": "Brahms"
-  },
-  "aliases": [
-   "Brahms",
-   "ブラームス"
-  ],
-  "born": "1833",
-  "died": "1897",
-  "nationality": {
-   "ja": "ドイツ（ハンブルク生まれ、ウィーンで活動）",
-   "en": "Germany (born in Hamburg, active in Vienna)"
-  },
-  "era": "romantic"
- },
- {
-  "id": "bruch",
-  "name": {
-   "ja": "マックス・ブルッフ",
-   "en": "Max Bruch",
-   "original": "Max Bruch"
-  },
-  "short": {
-   "ja": "ブルッフ",
-   "en": "Bruch"
-  },
-  "aliases": [
-   "Bruch",
-   "ブルッフ"
-  ],
-  "born": "1838",
-  "died": "1920",
+  "born": "1824",
+  "died": "1898",
   "nationality": {
    "ja": "ドイツ",
    "en": "Germany"
-  },
-  "era": "romantic"
- },
- {
-  "id": "chopin",
-  "name": {
-   "ja": "フレデリック・ショパン",
-   "en": "Frédéric Chopin",
-   "original": "Fryderyk Chopin"
-  },
-  "short": {
-   "ja": "ショパン",
-   "en": "Chopin"
-  },
-  "aliases": [
-   "Chopin",
-   "ショパン"
-  ],
-  "born": "1810",
-  "died": "1849",
-  "nationality": {
-   "ja": "ポーランド（のちにパリで活動）",
-   "en": "Poland (later active in Paris)"
-  },
-  "era": "romantic"
- },
- {
-  "id": "corelli",
-  "name": {
-   "ja": "アルカンジェロ・コレッリ",
-   "en": "Arcangelo Corelli",
-   "original": "Arcangelo Corelli"
-  },
-  "short": {
-   "ja": "コレッリ",
-   "en": "Corelli"
-  },
-  "aliases": [
-   "Corelli",
-   "コレッリ",
-   "コレルリ"
-  ],
-  "born": "1653",
-  "died": "1713",
-  "nationality": {
-   "ja": "イタリア",
-   "en": "Italy"
-  },
-  "era": "baroque"
- },
- {
-  "id": "dohnanyi",
-  "name": {
-   "ja": "エルンスト・フォン・ドホナーニ",
-   "en": "Ernst von Dohnányi",
-   "original": "Dohnányi Ernő"
-  },
-  "short": {
-   "ja": "ドホナーニ",
-   "en": "Dohnányi"
-  },
-  "aliases": [
-   "Dohnanyi",
-   "Dohnányi",
-   "ドホナーニ"
-  ],
-  "born": "1877",
-  "died": "1960",
-  "nationality": {
-   "ja": "ハンガリー",
-   "en": "Hungary"
-  },
-  "era": "modern"
- },
- {
-  "id": "dont",
-  "name": {
-   "ja": "ヤーコプ・ドント",
-   "en": "Jakob Dont",
-   "original": "Jakob Dont"
-  },
-  "short": {
-   "ja": "ドント",
-   "en": "Dont"
-  },
-  "aliases": [
-   "Dont",
-   "ドント"
-  ],
-  "born": "1815",
-  "died": "1888",
-  "nationality": {
-   "ja": "オーストリア",
-   "en": "Austria"
   },
   "era": "romantic"
  },
@@ -381,420 +146,51 @@
   "era": "romantic"
  },
  {
-  "id": "faure",
+  "id": "beethoven",
   "name": {
-   "ja": "ガブリエル・フォーレ",
-   "en": "Gabriel Fauré",
-   "original": "Gabriel Fauré"
+   "ja": "ルートヴィヒ・ヴァン・ベートーヴェン",
+   "en": "Ludwig van Beethoven",
+   "original": "Ludwig van Beethoven"
   },
   "short": {
-   "ja": "フォーレ",
-   "en": "Fauré"
+   "ja": "ベートーヴェン",
+   "en": "Beethoven"
   },
   "aliases": [
-   "Faure",
-   "Fauré",
-   "フォーレ"
+   "Beethoven",
+   "ベートーベン",
+   "ベートーヴェン"
   ],
-  "born": "1845",
-  "died": "1924",
+  "born": "1770",
+  "died": "1827",
   "nationality": {
-   "ja": "フランス",
-   "en": "France"
-  },
-  "era": "romantic"
- },
- {
-  "id": "glazunov",
-  "name": {
-   "ja": "アレクサンドル・グラズノフ",
-   "en": "Alexander Glazunov",
-   "original": "Александр Константинович Глазунов"
-  },
-  "short": {
-   "ja": "グラズノフ",
-   "en": "Glazunov"
-  },
-  "aliases": [
-   "Glazunov",
-   "グラズノフ"
-  ],
-  "born": "1865",
-  "died": "1936",
-  "nationality": {
-   "ja": "ロシア",
-   "en": "Russia"
-  },
-  "era": "romantic"
- },
- {
-  "id": "goltermann",
-  "name": {
-   "ja": "ゲオルク・ゴルターマン",
-   "en": "Georg Goltermann",
-   "original": "Georg Goltermann"
-  },
-  "short": {
-   "ja": "ゴルターマン",
-   "en": "Goltermann"
-  },
-  "aliases": [
-   "Goltermann",
-   "ゴルターマン"
-  ],
-  "born": "1824",
-  "died": "1898",
-  "nationality": {
-   "ja": "ドイツ",
-   "en": "Germany"
-  },
-  "era": "romantic"
- },
- {
-  "id": "gounod",
-  "name": {
-   "ja": "シャルル・グノー",
-   "en": "Charles Gounod",
-   "original": "Charles Gounod"
-  },
-  "short": {
-   "ja": "グノー",
-   "en": "Gounod"
-  },
-  "aliases": [
-   "Gounod",
-   "グノー"
-  ],
-  "born": "1818",
-  "died": "1893",
-  "nationality": {
-   "ja": "フランス",
-   "en": "France"
-  },
-  "era": "romantic"
- },
- {
-  "id": "grieg",
-  "name": {
-   "ja": "エドヴァルド・グリーグ",
-   "en": "Edvard Grieg",
-   "original": "Edvard Grieg"
-  },
-  "short": {
-   "ja": "グリーグ",
-   "en": "Grieg"
-  },
-  "aliases": [
-   "Grieg",
-   "グリーグ"
-  ],
-  "born": "1843",
-  "died": "1907",
-  "nationality": {
-   "ja": "ノルウェー",
-   "en": "Norway"
-  },
-  "era": "romantic"
- },
- {
-  "id": "halvorsen",
-  "name": {
-   "ja": "ヨハン・ハルヴォルセン",
-   "en": "Johan Halvorsen",
-   "original": "Johan Halvorsen"
-  },
-  "short": {
-   "ja": "ハルヴォルセン",
-   "en": "Halvorsen"
-  },
-  "aliases": [
-   "Halvorsen",
-   "ハルボルセン",
-   "ハルヴォルセン"
-  ],
-  "born": "1864",
-  "died": "1935",
-  "nationality": {
-   "ja": "ノルウェー",
-   "en": "Norway"
-  },
-  "era": "romantic"
- },
- {
-  "id": "haydn",
-  "name": {
-   "ja": "フランツ・ヨーゼフ・ハイドン",
-   "en": "Joseph Haydn",
-   "original": "Franz Joseph Haydn"
-  },
-  "short": {
-   "ja": "ハイドン",
-   "en": "Haydn"
-  },
-  "aliases": [
-   "Haydn",
-   "ハイドン"
-  ],
-  "born": "1732",
-  "died": "1809",
-  "nationality": {
-   "ja": "オーストリア",
-   "en": "Austria"
+   "ja": "ドイツ（ボン生まれ、ウィーンで活動）",
+   "en": "Germany (born in Bonn, active in Vienna)"
   },
   "era": "classical"
  },
  {
-  "id": "kayser",
+  "id": "wieniawski",
   "name": {
-   "ja": "ハインリヒ・エルンスト・カイザー",
-   "en": "Heinrich Ernst Kayser",
-   "original": "Heinrich Ernst Kayser"
+   "ja": "ヘンリク・ヴィエニャフスキ",
+   "en": "Henryk Wieniawski",
+   "original": "Henryk Wieniawski"
   },
   "short": {
-   "ja": "カイザー",
-   "en": "Kayser"
+   "ja": "ヴィエニアフスキー",
+   "en": "Wieniawski"
   },
   "aliases": [
-   "Kayser",
-   "カイザー"
+   "Wieniawski",
+   "ヴィエニアフスキ",
+   "ヴィエニアフスキー",
+   "ヴィエニャフスキ"
   ],
-  "born": "1815",
-  "died": "1888",
+  "born": "1835",
+  "died": "1880",
   "nationality": {
-   "ja": "ドイツ",
-   "en": "Germany"
-  },
-  "era": "romantic"
- },
- {
-  "id": "kreisler",
-  "name": {
-   "ja": "フリッツ・クライスラー",
-   "en": "Fritz Kreisler",
-   "original": "Fritz Kreisler"
-  },
-  "short": {
-   "ja": "クライスラー",
-   "en": "Kreisler"
-  },
-  "aliases": [
-   "Kreisler",
-   "クライスラー"
-  ],
-  "born": "1875",
-  "died": "1962",
-  "nationality": {
-   "ja": "オーストリア（ウィーン生まれ、のちにアメリカで活動）",
-   "en": "Austria (born in Vienna, later active in the United States)"
-  },
-  "era": "modern"
- },
- {
-  "id": "kreutzer",
-  "name": {
-   "ja": "ロドルフ・クロイツェル",
-   "en": "Rodolphe Kreutzer",
-   "original": "Rodolphe Kreutzer"
-  },
-  "short": {
-   "ja": "クロイツェル",
-   "en": "Kreutzer"
-  },
-  "aliases": [
-   "Kreutzer",
-   "クロイツェル"
-  ],
-  "born": "1766",
-  "died": "1831",
-  "nationality": {
-   "ja": "フランス",
-   "en": "France"
-  },
-  "era": "classical"
- },
- {
-  "id": "lalo",
-  "name": {
-   "ja": "エドゥアール・ラロ",
-   "en": "Édouard Lalo",
-   "original": "Édouard Lalo"
-  },
-  "short": {
-   "ja": "ラロ",
-   "en": "Lalo"
-  },
-  "aliases": [
-   "Lalo",
-   "ラロ"
-  ],
-  "born": "1823",
-  "died": "1892",
-  "nationality": {
-   "ja": "フランス",
-   "en": "France"
-  },
-  "era": "romantic"
- },
- {
-  "id": "leclair",
-  "name": {
-   "ja": "ジャン＝マリー・ルクレール",
-   "en": "Jean-Marie Leclair",
-   "original": "Jean-Marie Leclair"
-  },
-  "short": {
-   "ja": "ルクレール",
-   "en": "Leclair"
-  },
-  "aliases": [
-   "Leclair",
-   "ルクレール"
-  ],
-  "born": "1697",
-  "died": "1764",
-  "nationality": {
-   "ja": "フランス",
-   "en": "France"
-  },
-  "era": "baroque"
- },
- {
-  "id": "massenet",
-  "name": {
-   "ja": "ジュール・マスネ",
-   "en": "Jules Massenet",
-   "original": "Jules Massenet"
-  },
-  "short": {
-   "ja": "マスネ",
-   "en": "Massenet"
-  },
-  "aliases": [
-   "Massenet",
-   "マスネ"
-  ],
-  "born": "1842",
-  "died": "1912",
-  "nationality": {
-   "ja": "フランス",
-   "en": "France"
-  },
-  "era": "romantic"
- },
- {
-  "id": "mendelssohn",
-  "name": {
-   "ja": "フェリックス・メンデルスゾーン",
-   "en": "Felix Mendelssohn",
-   "original": "Felix Mendelssohn Bartholdy"
-  },
-  "short": {
-   "ja": "メンデルスゾーン",
-   "en": "Mendelssohn"
-  },
-  "aliases": [
-   "Mendelssohn",
-   "メンデルスゾーン"
-  ],
-  "born": "1809",
-  "died": "1847",
-  "nationality": {
-   "ja": "ドイツ",
-   "en": "Germany"
-  },
-  "era": "romantic"
- },
- {
-  "id": "monti",
-  "name": {
-   "ja": "ヴィットーリオ・モンティ",
-   "en": "Vittorio Monti",
-   "original": "Vittorio Monti"
-  },
-  "short": {
-   "ja": "モンティ",
-   "en": "Monti"
-  },
-  "aliases": [
-   "Monti",
-   "モンティ"
-  ],
-  "born": "1868",
-  "died": "1922",
-  "nationality": {
-   "ja": "イタリア",
-   "en": "Italy"
-  },
-  "era": "romantic"
- },
- {
-  "id": "mozart",
-  "name": {
-   "ja": "ヴォルフガング・アマデウス・モーツァルト",
-   "en": "Wolfgang Amadeus Mozart",
-   "original": "Wolfgang Amadeus Mozart"
-  },
-  "short": {
-   "ja": "モーツァルト",
-   "en": "Mozart"
-  },
-  "aliases": [
-   "Mozart",
-   "モーツァルト",
-   "モーツアルト"
-  ],
-  "born": "1756",
-  "died": "1791",
-  "nationality": {
-   "ja": "オーストリア（ザルツブルク生まれ、ウィーンで活動）",
-   "en": "Austria (born in Salzburg, active in Vienna)"
-  },
-  "era": "classical"
- },
- {
-  "id": "pachelbel",
-  "name": {
-   "ja": "ヨハン・パッヘルベル",
-   "en": "Johann Pachelbel",
-   "original": "Johann Pachelbel"
-  },
-  "short": {
-   "ja": "パッヘルベル",
-   "en": "Pachelbel"
-  },
-  "aliases": [
-   "Pachelbel",
-   "パッフェルベル",
-   "パッヘルベル"
-  ],
-  "born": "1653",
-  "died": "1706",
-  "nationality": {
-   "ja": "ドイツ",
-   "en": "Germany"
-  },
-  "era": "baroque"
- },
- {
-  "id": "paganini",
-  "name": {
-   "ja": "ニコロ・パガニーニ",
-   "en": "Niccolò Paganini",
-   "original": "Niccolò Paganini"
-  },
-  "short": {
-   "ja": "パガニーニ",
-   "en": "Paganini"
-  },
-  "aliases": [
-   "Paganini",
-   "パガニーニ"
-  ],
-  "born": "1782",
-  "died": "1840",
-  "nationality": {
-   "ja": "イタリア",
-   "en": "Italy"
+   "ja": "ポーランド",
+   "en": "Poland"
   },
   "era": "romantic"
  },
@@ -822,75 +218,76 @@
   "era": "romantic"
  },
  {
-  "id": "prokofiev",
+  "id": "haydn",
   "name": {
-   "ja": "セルゲイ・プロコフィエフ",
-   "en": "Sergei Prokofiev",
-   "original": "Сергей Сергеевич Прокофьев"
+   "ja": "フランツ・ヨーゼフ・ハイドン",
+   "en": "Joseph Haydn",
+   "original": "Franz Joseph Haydn"
   },
   "short": {
-   "ja": "プロコフィエフ",
-   "en": "Prokofiev"
+   "ja": "ハイドン",
+   "en": "Haydn"
   },
   "aliases": [
-   "Prokofiev",
-   "プロコフィエフ"
+   "Haydn",
+   "ハイドン"
   ],
-  "born": "1891",
-  "died": "1953",
+  "born": "1732",
+  "died": "1809",
+  "nationality": {
+   "ja": "オーストリア",
+   "en": "Austria"
+  },
+  "era": "classical"
+ },
+ {
+  "id": "tchaikovsky",
+  "name": {
+   "ja": "ピョートル・イリイチ・チャイコフスキー",
+   "en": "Pyotr Ilyich Tchaikovsky",
+   "original": "Пётр Ильич Чайковский"
+  },
+  "short": {
+   "ja": "チャイコフスキー",
+   "en": "Tchaikovsky"
+  },
+  "aliases": [
+   "Chaikovsky",
+   "Tchaikovsky",
+   "Tschaikowsky",
+   "チャイコフスキー"
+  ],
+  "born": "1840",
+  "died": "1893",
   "nationality": {
    "ja": "ロシア",
    "en": "Russia"
   },
-  "era": "modern"
- },
- {
-  "id": "rachmaninoff",
-  "name": {
-   "ja": "セルゲイ・ラフマニノフ",
-   "en": "Sergei Rachmaninoff",
-   "original": "Сергей Васильевич Рахманинов"
-  },
-  "short": {
-   "ja": "ラフマニノフ",
-   "en": "Rachmaninoff"
-  },
-  "aliases": [
-   "Rachmaninoff",
-   "Rachmaninov",
-   "ラフマニノフ"
-  ],
-  "born": "1873",
-  "died": "1943",
-  "nationality": {
-   "ja": "ロシア（のちにアメリカで活動）",
-   "en": "Russia (later active in the United States)"
-  },
   "era": "romantic"
  },
  {
-  "id": "ravel",
+  "id": "corelli",
   "name": {
-   "ja": "モーリス・ラヴェル",
-   "en": "Maurice Ravel",
-   "original": "Maurice Ravel"
+   "ja": "アルカンジェロ・コレッリ",
+   "en": "Arcangelo Corelli",
+   "original": "Arcangelo Corelli"
   },
   "short": {
-   "ja": "ラヴェル",
-   "en": "Ravel"
+   "ja": "コレッリ",
+   "en": "Corelli"
   },
   "aliases": [
-   "Ravel",
-   "ラベル",
-   "ラヴェル"
+   "Corelli",
+   "コレッリ",
+   "コレルリ"
   ],
-  "born": "1875",
-  "died": "1937",
+  "born": "1653",
+  "died": "1713",
   "nationality": {
-   "ja": "フランス",
-   "en": "France"
+   "ja": "イタリア",
+   "en": "Italy"
   },
-  "era": "modern"
+  "era": "baroque"
  },
  {
   "id": "respighi",
@@ -916,45 +313,304 @@
   "era": "modern"
  },
  {
-  "id": "rode",
+  "id": "grieg",
   "name": {
-   "ja": "ピエール・ロード",
-   "en": "Pierre Rode",
-   "original": "Pierre Rode"
+   "ja": "エドヴァルド・グリーグ",
+   "en": "Edvard Grieg",
+   "original": "Edvard Grieg"
   },
   "short": {
-   "ja": "ローデ",
-   "en": "Rode"
+   "ja": "グリーグ",
+   "en": "Grieg"
   },
   "aliases": [
-   "Rode",
-   "ローデ",
-   "ロード"
+   "Grieg",
+   "グリーグ"
   ],
-  "born": "1774",
-  "died": "1830",
+  "born": "1843",
+  "died": "1907",
   "nationality": {
-   "ja": "フランス",
-   "en": "France"
+   "ja": "ノルウェー",
+   "en": "Norway"
   },
-  "era": "classical"
+  "era": "romantic"
  },
  {
-  "id": "roussel",
+  "id": "kreisler",
   "name": {
-   "ja": "アルベール・ルーセル",
-   "en": "Albert Roussel",
-   "original": "Albert Roussel"
+   "ja": "フリッツ・クライスラー",
+   "en": "Fritz Kreisler",
+   "original": "Fritz Kreisler"
   },
   "short": {
-   "ja": "ルーセル",
-   "en": "Roussel"
+   "ja": "クライスラー",
+   "en": "Kreisler"
   },
   "aliases": [
-   "Roussel",
-   "ルーセル"
+   "Kreisler",
+   "クライスラー"
   ],
-  "born": "1869",
+  "born": "1875",
+  "died": "1962",
+  "nationality": {
+   "ja": "オーストリア（ウィーン生まれ、のちにアメリカで活動）",
+   "en": "Austria (born in Vienna, later active in the United States)"
+  },
+  "era": "modern"
+ },
+ {
+  "id": "schubert",
+  "name": {
+   "ja": "フランツ・シューベルト",
+   "en": "Franz Schubert",
+   "original": "Franz Schubert"
+  },
+  "short": {
+   "ja": "シューベルト",
+   "en": "Schubert"
+  },
+  "aliases": [
+   "Schubert",
+   "シューベルト"
+  ],
+  "born": "1797",
+  "died": "1828",
+  "nationality": {
+   "ja": "オーストリア",
+   "en": "Austria"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "ysaye",
+  "name": {
+   "ja": "ウジェーヌ・イザイ",
+   "en": "Eugène Ysaÿe",
+   "original": "Eugène Ysaÿe"
+  },
+  "short": {
+   "ja": "イザイ",
+   "en": "Ysaÿe"
+  },
+  "aliases": [
+   "Ysaye",
+   "Ysaÿe",
+   "イザイ"
+  ],
+  "born": "1858",
+  "died": "1931",
+  "nationality": {
+   "ja": "ベルギー",
+   "en": "Belgium"
+  },
+  "era": "modern"
+ },
+ {
+  "id": "sibelius",
+  "name": {
+   "ja": "ジャン・シベリウス",
+   "en": "Jean Sibelius",
+   "original": "Jean Sibelius"
+  },
+  "short": {
+   "ja": "シベリウス",
+   "en": "Sibelius"
+  },
+  "aliases": [
+   "Sibelius",
+   "シベリウス"
+  ],
+  "born": "1865",
+  "died": "1957",
+  "nationality": {
+   "ja": "フィンランド",
+   "en": "Finland"
+  },
+  "era": "modern"
+ },
+ {
+  "id": "sevcik",
+  "name": {
+   "ja": "オタカール・シェフチーク",
+   "en": "Otakar Ševčík",
+   "original": "Otakar Ševčík"
+  },
+  "short": {
+   "ja": "セヴシック",
+   "en": "Ševčík"
+  },
+  "aliases": [
+   "Sevcik",
+   "Ševčík",
+   "シェフチク",
+   "セブシック",
+   "セヴシック"
+  ],
+  "born": "1852",
+  "died": "1934",
+  "nationality": {
+   "ja": "チェコ",
+   "en": "Czech lands"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "arensky",
+  "name": {
+   "ja": "アントン・アレンスキー",
+   "en": "Anton Arensky",
+   "original": "Антон Степанович Аренский"
+  },
+  "short": {
+   "ja": "アレンスキー",
+   "en": "Arensky"
+  },
+  "aliases": [
+   "Arensky",
+   "アレンスキー"
+  ],
+  "born": "1861",
+  "died": "1906",
+  "nationality": {
+   "ja": "ロシア",
+   "en": "Russia"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "warlock",
+  "name": {
+   "ja": "ピーター・ウォーロック",
+   "en": "Peter Warlock",
+   "original": "Peter Warlock"
+  },
+  "short": {
+   "ja": "ウォーロック",
+   "en": "Warlock"
+  },
+  "aliases": [
+   "Heseltine",
+   "Warlock",
+   "ウォーロック"
+  ],
+  "born": "1894",
+  "died": "1930",
+  "nationality": {
+   "ja": "イギリス",
+   "en": "England"
+  },
+  "era": "modern"
+ },
+ {
+  "id": "pachelbel",
+  "name": {
+   "ja": "ヨハン・パッヘルベル",
+   "en": "Johann Pachelbel",
+   "original": "Johann Pachelbel"
+  },
+  "short": {
+   "ja": "パッヘルベル",
+   "en": "Pachelbel"
+  },
+  "aliases": [
+   "Pachelbel",
+   "パッフェルベル",
+   "パッヘルベル"
+  ],
+  "born": "1653",
+  "died": "1706",
+  "nationality": {
+   "ja": "ドイツ",
+   "en": "Germany"
+  },
+  "era": "baroque"
+ },
+ {
+  "id": "mendelssohn",
+  "name": {
+   "ja": "フェリックス・メンデルスゾーン",
+   "en": "Felix Mendelssohn",
+   "original": "Felix Mendelssohn Bartholdy"
+  },
+  "short": {
+   "ja": "メンデルスゾーン",
+   "en": "Mendelssohn"
+  },
+  "aliases": [
+   "Mendelssohn",
+   "メンデルスゾーン"
+  ],
+  "born": "1809",
+  "died": "1847",
+  "nationality": {
+   "ja": "ドイツ",
+   "en": "Germany"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "bruch",
+  "name": {
+   "ja": "マックス・ブルッフ",
+   "en": "Max Bruch",
+   "original": "Max Bruch"
+  },
+  "short": {
+   "ja": "ブルッフ",
+   "en": "Bruch"
+  },
+  "aliases": [
+   "Bruch",
+   "ブルッフ"
+  ],
+  "born": "1838",
+  "died": "1920",
+  "nationality": {
+   "ja": "ドイツ",
+   "en": "Germany"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "borodin",
+  "name": {
+   "ja": "アレクサンドル・ボロディン",
+   "en": "Alexander Borodin",
+   "original": "Александр Порфирьевич Бородин"
+  },
+  "short": {
+   "ja": "ボロディン",
+   "en": "Borodin"
+  },
+  "aliases": [
+   "Borodin",
+   "ボロディン"
+  ],
+  "born": "1833",
+  "died": "1887",
+  "nationality": {
+   "ja": "ロシア",
+   "en": "Russia"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "ravel",
+  "name": {
+   "ja": "モーリス・ラヴェル",
+   "en": "Maurice Ravel",
+   "original": "Maurice Ravel"
+  },
+  "short": {
+   "ja": "ラヴェル",
+   "en": "Ravel"
+  },
+  "aliases": [
+   "Ravel",
+   "ラベル",
+   "ラヴェル"
+  ],
+  "born": "1875",
   "died": "1937",
   "nationality": {
    "ja": "フランス",
@@ -989,71 +645,166 @@
   "era": "romantic"
  },
  {
-  "id": "sarasate",
+  "id": "rachmaninoff",
   "name": {
-   "ja": "パブロ・デ・サラサーテ",
-   "en": "Pablo de Sarasate",
-   "original": "Pablo de Sarasate"
+   "ja": "セルゲイ・ラフマニノフ",
+   "en": "Sergei Rachmaninoff",
+   "original": "Сергей Васильевич Рахманинов"
   },
   "short": {
-   "ja": "サラサーテ",
-   "en": "Sarasate"
+   "ja": "ラフマニノフ",
+   "en": "Rachmaninoff"
   },
   "aliases": [
-   "Sarasate",
-   "サラサーテ"
+   "Rachmaninoff",
+   "Rachmaninov",
+   "ラフマニノフ"
   ],
-  "born": "1844",
-  "died": "1908",
+  "born": "1873",
+  "died": "1943",
   "nationality": {
-   "ja": "スペイン",
-   "en": "Spain"
+   "ja": "ロシア（のちにアメリカで活動）",
+   "en": "Russia (later active in the United States)"
   },
   "era": "romantic"
  },
  {
-  "id": "schradieck",
+  "id": "faure",
   "name": {
-   "ja": "ヘンリー・シュラディーク",
-   "en": "Henry Schradieck",
-   "original": "Henry Schradieck"
+   "ja": "ガブリエル・フォーレ",
+   "en": "Gabriel Fauré",
+   "original": "Gabriel Fauré"
   },
   "short": {
-   "ja": "シュラディーク",
-   "en": "Schradieck"
+   "ja": "フォーレ",
+   "en": "Fauré"
   },
   "aliases": [
-   "Schradieck",
-   "シュラディーク"
+   "Faure",
+   "Fauré",
+   "フォーレ"
   ],
-  "born": "1846",
-  "died": "1918",
+  "born": "1845",
+  "died": "1924",
   "nationality": {
-   "ja": "ドイツ（のちにアメリカで活動）",
-   "en": "Germany (later active in the United States)"
+   "ja": "フランス",
+   "en": "France"
   },
   "era": "romantic"
  },
  {
-  "id": "schubert",
+  "id": "brahms",
   "name": {
-   "ja": "フランツ・シューベルト",
-   "en": "Franz Schubert",
-   "original": "Franz Schubert"
+   "ja": "ヨハネス・ブラームス",
+   "en": "Johannes Brahms",
+   "original": "Johannes Brahms"
   },
   "short": {
-   "ja": "シューベルト",
-   "en": "Schubert"
+   "ja": "ブラームス",
+   "en": "Brahms"
   },
   "aliases": [
-   "Schubert",
-   "シューベルト"
+   "Brahms",
+   "ブラームス"
   ],
-  "born": "1797",
-  "died": "1828",
+  "born": "1833",
+  "died": "1897",
   "nationality": {
-   "ja": "オーストリア",
-   "en": "Austria"
+   "ja": "ドイツ（ハンブルク生まれ、ウィーンで活動）",
+   "en": "Germany (born in Hamburg, active in Vienna)"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "leclair",
+  "name": {
+   "ja": "ジャン＝マリー・ルクレール",
+   "en": "Jean-Marie Leclair",
+   "original": "Jean-Marie Leclair"
+  },
+  "short": {
+   "ja": "ルクレール",
+   "en": "Leclair"
+  },
+  "aliases": [
+   "Leclair",
+   "ルクレール"
+  ],
+  "born": "1697",
+  "died": "1764",
+  "nationality": {
+   "ja": "フランス",
+   "en": "France"
+  },
+  "era": "baroque"
+ },
+ {
+  "id": "roussel",
+  "name": {
+   "ja": "アルベール・ルーセル",
+   "en": "Albert Roussel",
+   "original": "Albert Roussel"
+  },
+  "short": {
+   "ja": "ルーセル",
+   "en": "Roussel"
+  },
+  "aliases": [
+   "Roussel",
+   "ルーセル"
+  ],
+  "born": "1869",
+  "died": "1937",
+  "nationality": {
+   "ja": "フランス",
+   "en": "France"
+  },
+  "era": "modern"
+ },
+ {
+  "id": "dohnanyi",
+  "name": {
+   "ja": "エルンスト・フォン・ドホナーニ",
+   "en": "Ernst von Dohnányi",
+   "original": "Dohnányi Ernő"
+  },
+  "short": {
+   "ja": "ドホナーニ",
+   "en": "Dohnányi"
+  },
+  "aliases": [
+   "Dohnanyi",
+   "Dohnányi",
+   "ドホナーニ"
+  ],
+  "born": "1877",
+  "died": "1960",
+  "nationality": {
+   "ja": "ハンガリー",
+   "en": "Hungary"
+  },
+  "era": "modern"
+ },
+ {
+  "id": "kayser",
+  "name": {
+   "ja": "ハインリヒ・エルンスト・カイザー",
+   "en": "Heinrich Ernst Kayser",
+   "original": "Heinrich Ernst Kayser"
+  },
+  "short": {
+   "ja": "カイザー",
+   "en": "Kayser"
+  },
+  "aliases": [
+   "Kayser",
+   "カイザー"
+  ],
+  "born": "1815",
+  "died": "1888",
+  "nationality": {
+   "ja": "ドイツ",
+   "en": "Germany"
   },
   "era": "romantic"
  },
@@ -1081,6 +832,263 @@
   "era": "romantic"
  },
  {
+  "id": "chopin",
+  "name": {
+   "ja": "フレデリック・ショパン",
+   "en": "Frédéric Chopin",
+   "original": "Fryderyk Chopin"
+  },
+  "short": {
+   "ja": "ショパン",
+   "en": "Chopin"
+  },
+  "aliases": [
+   "Chopin",
+   "ショパン"
+  ],
+  "born": "1810",
+  "died": "1849",
+  "nationality": {
+   "ja": "ポーランド（のちにパリで活動）",
+   "en": "Poland (later active in Paris)"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "gounod",
+  "name": {
+   "ja": "シャルル・グノー",
+   "en": "Charles Gounod",
+   "original": "Charles Gounod"
+  },
+  "short": {
+   "ja": "グノー",
+   "en": "Gounod"
+  },
+  "aliases": [
+   "Gounod",
+   "グノー"
+  ],
+  "born": "1818",
+  "died": "1893",
+  "nationality": {
+   "ja": "フランス",
+   "en": "France"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "massenet",
+  "name": {
+   "ja": "ジュール・マスネ",
+   "en": "Jules Massenet",
+   "original": "Jules Massenet"
+  },
+  "short": {
+   "ja": "マスネ",
+   "en": "Massenet"
+  },
+  "aliases": [
+   "Massenet",
+   "マスネ"
+  ],
+  "born": "1842",
+  "died": "1912",
+  "nationality": {
+   "ja": "フランス",
+   "en": "France"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "sarasate",
+  "name": {
+   "ja": "パブロ・デ・サラサーテ",
+   "en": "Pablo de Sarasate",
+   "original": "Pablo de Sarasate"
+  },
+  "short": {
+   "ja": "サラサーテ",
+   "en": "Sarasate"
+  },
+  "aliases": [
+   "Sarasate",
+   "サラサーテ"
+  ],
+  "born": "1844",
+  "died": "1908",
+  "nationality": {
+   "ja": "スペイン",
+   "en": "Spain"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "vitali",
+  "name": {
+   "ja": "トマゾ・アントニオ・ヴィターリ",
+   "en": "Tomaso Antonio Vitali",
+   "original": "Tomaso Antonio Vitali"
+  },
+  "short": {
+   "ja": "ヴィターリ",
+   "en": "Vitali"
+  },
+  "aliases": [
+   "Vitali",
+   "ヴィタリ",
+   "ヴィターリ"
+  ],
+  "born": "1663",
+  "died": "1745",
+  "nationality": {
+   "ja": "イタリア",
+   "en": "Italy"
+  },
+  "era": "baroque"
+ },
+ {
+  "id": "paganini",
+  "name": {
+   "ja": "ニコロ・パガニーニ",
+   "en": "Niccolò Paganini",
+   "original": "Niccolò Paganini"
+  },
+  "short": {
+   "ja": "パガニーニ",
+   "en": "Paganini"
+  },
+  "aliases": [
+   "Paganini",
+   "パガニーニ"
+  ],
+  "born": "1782",
+  "died": "1840",
+  "nationality": {
+   "ja": "イタリア",
+   "en": "Italy"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "glazunov",
+  "name": {
+   "ja": "アレクサンドル・グラズノフ",
+   "en": "Alexander Glazunov",
+   "original": "Александр Константинович Глазунов"
+  },
+  "short": {
+   "ja": "グラズノフ",
+   "en": "Glazunov"
+  },
+  "aliases": [
+   "Glazunov",
+   "グラズノフ"
+  ],
+  "born": "1865",
+  "died": "1936",
+  "nationality": {
+   "ja": "ロシア",
+   "en": "Russia"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "prokofiev",
+  "name": {
+   "ja": "セルゲイ・プロコフィエフ",
+   "en": "Sergei Prokofiev",
+   "original": "Сергей Сергеевич Прокофьев"
+  },
+  "short": {
+   "ja": "プロコフィエフ",
+   "en": "Prokofiev"
+  },
+  "aliases": [
+   "Prokofiev",
+   "プロコフィエフ"
+  ],
+  "born": "1891",
+  "died": "1953",
+  "nationality": {
+   "ja": "ロシア",
+   "en": "Russia"
+  },
+  "era": "modern"
+ },
+ {
+  "id": "lalo",
+  "name": {
+   "ja": "エドゥアール・ラロ",
+   "en": "Édouard Lalo",
+   "original": "Édouard Lalo"
+  },
+  "short": {
+   "ja": "ラロ",
+   "en": "Lalo"
+  },
+  "aliases": [
+   "Lalo",
+   "ラロ"
+  ],
+  "born": "1823",
+  "died": "1892",
+  "nationality": {
+   "ja": "フランス",
+   "en": "France"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "bartok",
+  "name": {
+   "ja": "バルトーク・ベーラ",
+   "en": "Béla Bartók",
+   "original": "Bartók Béla"
+  },
+  "short": {
+   "ja": "バルトーク",
+   "en": "Bartók"
+  },
+  "aliases": [
+   "Bartok",
+   "Bartók",
+   "バルトーク"
+  ],
+  "born": "1881",
+  "died": "1945",
+  "nationality": {
+   "ja": "ハンガリー",
+   "en": "Hungary"
+  },
+  "era": "modern"
+ },
+ {
+  "id": "beriot",
+  "name": {
+   "ja": "シャルル＝オーギュスト・ド・ベリオ",
+   "en": "Charles-Auguste de Bériot",
+   "original": "Charles-Auguste de Bériot"
+  },
+  "short": {
+   "ja": "ベリオ",
+   "en": "Bériot"
+  },
+  "aliases": [
+   "Beriot",
+   "Bériot",
+   "ド・ベリオ",
+   "ベリオ"
+  ],
+  "born": "1802",
+  "died": "1870",
+  "nationality": {
+   "ja": "ベルギー",
+   "en": "Belgium"
+  },
+  "era": "romantic"
+ },
+ {
   "id": "seitz",
   "name": {
    "ja": "フリードリヒ・ザイツ",
@@ -1104,101 +1112,25 @@
   "era": "romantic"
  },
  {
-  "id": "sevcik",
+  "id": "monti",
   "name": {
-   "ja": "オタカール・シェフチーク",
-   "en": "Otakar Ševčík",
-   "original": "Otakar Ševčík"
+   "ja": "ヴィットーリオ・モンティ",
+   "en": "Vittorio Monti",
+   "original": "Vittorio Monti"
   },
   "short": {
-   "ja": "セヴシック",
-   "en": "Ševčík"
+   "ja": "モンティ",
+   "en": "Monti"
   },
   "aliases": [
-   "Sevcik",
-   "Ševčík",
-   "シェフチク",
-   "セブシック",
-   "セヴシック"
+   "Monti",
+   "モンティ"
   ],
-  "born": "1852",
-  "died": "1934",
+  "born": "1868",
+  "died": "1922",
   "nationality": {
-   "ja": "チェコ",
-   "en": "Czech lands"
-  },
-  "era": "romantic"
- },
- {
-  "id": "sibelius",
-  "name": {
-   "ja": "ジャン・シベリウス",
-   "en": "Jean Sibelius",
-   "original": "Jean Sibelius"
-  },
-  "short": {
-   "ja": "シベリウス",
-   "en": "Sibelius"
-  },
-  "aliases": [
-   "Sibelius",
-   "シベリウス"
-  ],
-  "born": "1865",
-  "died": "1957",
-  "nationality": {
-   "ja": "フィンランド",
-   "en": "Finland"
-  },
-  "era": "modern"
- },
- {
-  "id": "strauss-r",
-  "name": {
-   "ja": "リヒャルト・シュトラウス",
-   "en": "Richard Strauss",
-   "original": "Richard Strauss"
-  },
-  "short": {
-   "ja": "R.シュトラウス",
-   "en": "R. Strauss"
-  },
-  "aliases": [
-   "Richard Strauss",
-   "R.Strauss",
-   "リヒャルトシュトラウス",
-   "リヒャルト・シュトラウス"
-  ],
-  "born": "1864",
-  "died": "1949",
-  "nationality": {
-   "ja": "ドイツ",
-   "en": "Germany"
-  },
-  "era": "romantic"
- },
- {
-  "id": "tchaikovsky",
-  "name": {
-   "ja": "ピョートル・イリイチ・チャイコフスキー",
-   "en": "Pyotr Ilyich Tchaikovsky",
-   "original": "Пётр Ильич Чайковский"
-  },
-  "short": {
-   "ja": "チャイコフスキー",
-   "en": "Tchaikovsky"
-  },
-  "aliases": [
-   "Chaikovsky",
-   "Tchaikovsky",
-   "Tschaikowsky",
-   "チャイコフスキー"
-  ],
-  "born": "1840",
-  "died": "1893",
-  "nationality": {
-   "ja": "ロシア",
-   "en": "Russia"
+   "ja": "イタリア",
+   "en": "Italy"
   },
   "era": "romantic"
  },
@@ -1226,125 +1158,193 @@
   "era": "classical"
  },
  {
-  "id": "vitali",
+  "id": "accolay",
   "name": {
-   "ja": "トマゾ・アントニオ・ヴィターリ",
-   "en": "Tomaso Antonio Vitali",
-   "original": "Tomaso Antonio Vitali"
+   "ja": "ジャン＝バティスト・アコーレイ",
+   "en": "Jean-Baptiste Accolay",
+   "original": "Jean-Baptiste Accolay"
   },
   "short": {
-   "ja": "ヴィターリ",
-   "en": "Vitali"
+   "ja": "アコーレイ",
+   "en": "Accolay"
   },
   "aliases": [
-   "Vitali",
-   "ヴィタリ",
-   "ヴィターリ"
+   "Accolay",
+   "アコライ",
+   "アコーレイ",
+   "アッコーライ"
   ],
-  "born": "1663",
-  "died": "1745",
-  "nationality": {
-   "ja": "イタリア",
-   "en": "Italy"
-  },
-  "era": "baroque"
- },
- {
-  "id": "vivaldi",
-  "name": {
-   "ja": "アントニオ・ヴィヴァルディ",
-   "en": "Antonio Vivaldi",
-   "original": "Antonio Vivaldi"
-  },
-  "short": {
-   "ja": "ヴィヴァルディ",
-   "en": "Vivaldi"
-  },
-  "aliases": [
-   "Vivaldi",
-   "ビバルディ",
-   "ヴィバルディ",
-   "ヴィヴァルディ"
-  ],
-  "born": "1678",
-  "died": "1741",
-  "nationality": {
-   "ja": "イタリア（ヴェネツィア）",
-   "en": "Italy (Venice)"
-  },
-  "era": "baroque"
- },
- {
-  "id": "warlock",
-  "name": {
-   "ja": "ピーター・ウォーロック",
-   "en": "Peter Warlock",
-   "original": "Peter Warlock"
-  },
-  "short": {
-   "ja": "ウォーロック",
-   "en": "Warlock"
-  },
-  "aliases": [
-   "Heseltine",
-   "Warlock",
-   "ウォーロック"
-  ],
-  "born": "1894",
-  "died": "1930",
-  "nationality": {
-   "ja": "イギリス",
-   "en": "England"
-  },
-  "era": "modern"
- },
- {
-  "id": "wieniawski",
-  "name": {
-   "ja": "ヘンリク・ヴィエニャフスキ",
-   "en": "Henryk Wieniawski",
-   "original": "Henryk Wieniawski"
-  },
-  "short": {
-   "ja": "ヴィエニアフスキー",
-   "en": "Wieniawski"
-  },
-  "aliases": [
-   "Wieniawski",
-   "ヴィエニアフスキ",
-   "ヴィエニアフスキー",
-   "ヴィエニャフスキ"
-  ],
-  "born": "1835",
-  "died": "1880",
-  "nationality": {
-   "ja": "ポーランド",
-   "en": "Poland"
-  },
-  "era": "romantic"
- },
- {
-  "id": "ysaye",
-  "name": {
-   "ja": "ウジェーヌ・イザイ",
-   "en": "Eugène Ysaÿe",
-   "original": "Eugène Ysaÿe"
-  },
-  "short": {
-   "ja": "イザイ",
-   "en": "Ysaÿe"
-  },
-  "aliases": [
-   "Ysaye",
-   "Ysaÿe",
-   "イザイ"
-  ],
-  "born": "1858",
-  "died": "1931",
+  "born": "1833",
+  "died": "1900",
   "nationality": {
    "ja": "ベルギー",
    "en": "Belgium"
   },
-  "era": "modern"
+  "era": "romantic"
+ },
+ {
+  "id": "rode",
+  "name": {
+   "ja": "ピエール・ロード",
+   "en": "Pierre Rode",
+   "original": "Pierre Rode"
+  },
+  "short": {
+   "ja": "ローデ",
+   "en": "Rode"
+  },
+  "aliases": [
+   "Rode",
+   "ローデ",
+   "ロード"
+  ],
+  "born": "1774",
+  "died": "1830",
+  "nationality": {
+   "ja": "フランス",
+   "en": "France"
+  },
+  "era": "classical"
+ },
+ {
+  "id": "kreutzer",
+  "name": {
+   "ja": "ロドルフ・クロイツェル",
+   "en": "Rodolphe Kreutzer",
+   "original": "Rodolphe Kreutzer"
+  },
+  "short": {
+   "ja": "クロイツェル",
+   "en": "Kreutzer"
+  },
+  "aliases": [
+   "Kreutzer",
+   "クロイツェル"
+  ],
+  "born": "1766",
+  "died": "1831",
+  "nationality": {
+   "ja": "フランス",
+   "en": "France"
+  },
+  "era": "classical"
+ },
+ {
+  "id": "dont",
+  "name": {
+   "ja": "ヤーコプ・ドント",
+   "en": "Jakob Dont",
+   "original": "Jakob Dont"
+  },
+  "short": {
+   "ja": "ドント",
+   "en": "Dont"
+  },
+  "aliases": [
+   "Dont",
+   "ドント"
+  ],
+  "born": "1815",
+  "died": "1888",
+  "nationality": {
+   "ja": "オーストリア",
+   "en": "Austria"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "schradieck",
+  "name": {
+   "ja": "ヘンリー・シュラディーク",
+   "en": "Henry Schradieck",
+   "original": "Henry Schradieck"
+  },
+  "short": {
+   "ja": "シュラディーク",
+   "en": "Schradieck"
+  },
+  "aliases": [
+   "Schradieck",
+   "シュラディーク"
+  ],
+  "born": "1846",
+  "died": "1918",
+  "nationality": {
+   "ja": "ドイツ（のちにアメリカで活動）",
+   "en": "Germany (later active in the United States)"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "bizet",
+  "name": {
+   "ja": "ジョルジュ・ビゼー",
+   "en": "Georges Bizet",
+   "original": "Georges Bizet"
+  },
+  "short": {
+   "ja": "ビゼー",
+   "en": "Bizet"
+  },
+  "aliases": [
+   "Bizet",
+   "ビゼー"
+  ],
+  "born": "1838",
+  "died": "1875",
+  "nationality": {
+   "ja": "フランス",
+   "en": "France"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "halvorsen",
+  "name": {
+   "ja": "ヨハン・ハルヴォルセン",
+   "en": "Johan Halvorsen",
+   "original": "Johan Halvorsen"
+  },
+  "short": {
+   "ja": "ハルヴォルセン",
+   "en": "Halvorsen"
+  },
+  "aliases": [
+   "Halvorsen",
+   "ハルボルセン",
+   "ハルヴォルセン"
+  ],
+  "born": "1864",
+  "died": "1935",
+  "nationality": {
+   "ja": "ノルウェー",
+   "en": "Norway"
+  },
+  "era": "romantic"
+ },
+ {
+  "id": "strauss-r",
+  "name": {
+   "ja": "リヒャルト・シュトラウス",
+   "en": "Richard Strauss",
+   "original": "Richard Strauss"
+  },
+  "short": {
+   "ja": "R.シュトラウス",
+   "en": "R. Strauss"
+  },
+  "aliases": [
+   "Richard Strauss",
+   "R.Strauss",
+   "リヒャルトシュトラウス",
+   "リヒャルト・シュトラウス"
+  ],
+  "born": "1864",
+  "died": "1949",
+  "nationality": {
+   "ja": "ドイツ",
+   "en": "Germany"
+  },
+  "era": "romantic"
  }
 ]
