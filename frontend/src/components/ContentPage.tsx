@@ -29,7 +29,9 @@ export default function ContentPage({ locale, copy, image, children }: Props) {
             height={img.height}
             alt={image ? dict.images.alt[image] : ""}
             decoding="async"
-            className="aspect-[16/9] w-full object-cover sm:aspect-[21/7]"
+            style={img.focus ? { objectPosition: img.focus } : undefined}
+            // 下層ページの見出し画像は控えめな高さにする（運営者の指定: 以前の約半分。PC 6:1、スマホ 3:1）
+            className="aspect-[3/1] w-full object-cover sm:aspect-[6/1]"
           />
         )}
         <div className="mx-auto max-w-3xl p-6 sm:p-10">

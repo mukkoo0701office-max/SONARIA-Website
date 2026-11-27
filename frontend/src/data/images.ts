@@ -7,6 +7,8 @@ export type SiteImage = {
   src: string; // public/ からのパス（basePath は withBasePath で付ける）
   width: number;
   height: number;
+  // 細長く切り抜くとき（下層ページの見出し画像）に残したい位置（CSS の object-position。例: "50% 30%"）
+  focus?: string;
 };
 
 export const siteImages: Record<ImageKey, SiteImage> = {

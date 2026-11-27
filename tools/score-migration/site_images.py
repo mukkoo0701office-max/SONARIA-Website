@@ -52,7 +52,14 @@ def main() -> int:
         u = norm(urljoin(BASE + "/", el["href"]))
         if is_same_site(u) and not is_excluded(u) and not re.search(r"/\d{4}/\d{2}/\d{2}/|/app/|#", u) and u not in pages:
             pages.append(u)
+    # sitemap.xml の固定ページ（日付のないページ）も対象にする（管理人プロフィールなど、トップから直接リンクされていないページ）
+    sm = f.get(BASE + "/sitemap.xml")
+    for loc in re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", sm.text):
+        u = norm(loc)
+        if is_same_site(u) and not is_excluded(u) and not re.search(r"/\d{4}/\d{2}/\d{2}/", u) and u not in pages:
+            pages.append(u)
     pages = pages[:40]
+    print("pages:", len(pages), flush=True)
     images: dict[str, dict] = {}
     for p in pages:
         if not f.allowed(p):

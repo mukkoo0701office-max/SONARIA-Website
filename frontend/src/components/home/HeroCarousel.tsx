@@ -17,7 +17,7 @@ import { withBasePath } from "@/lib/paths";
 // - マウスを載せている間、キーボードのフォーカスがある間は止める
 // - 「動きを減らす」設定の端末では最初から止めておく（再生ボタンで開始できる）
 // - 5 秒を超えて自動で動くため、一時停止ボタンを必ず置く（WCAG 2.2.2）
-const AUTOPLAY_MS = 6000;
+const AUTOPLAY_MS = 5000; // 運営者の指定（5 秒ごと）
 const HOLD_AFTER_MANUAL_MS = 12000;
 const SWIPE_THRESHOLD_PX = 50;
 
