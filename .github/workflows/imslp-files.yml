@@ -1,0 +1,33 @@
+# IMSLP の作品ページ（api.php）から版ごとのファイル一覧を取得し、ci/imslp-files ブランチに保存する。PDF は取得しない
+name: IMSLP files
+
+on:
+  push:
+    branches: [feature/imslp-parts]
+    paths:
+      - "tools/score-acquisition/imslp_files.py"
+      - ".github/workflows/imslp-files.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  files:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests==2.32.3 beautifulsoup4==4.12.3
+      - name: Dump sample pages
+        run: |
+          mkdir -p /tmp/out
+          python tools/score-acquisition/imslp_files.py --dump "String_Quartets,_Op.1_(Haydn,_Joseph)" --dump "String_Quartet_No.1_in_G_major,_K.80/73f_(Mozart,_Wolfgang_Amadeus)" --out /tmp/out/dump.html
+          ls -la /tmp/out
+      - name: Save
+        run: |
+          cd /tmp/out && git init -q -b ci/imslp-files && git add -A
+          git -c user.name="github-actions" -c user.email="github-actions@users.noreply.github.com" commit -q -m "imslp files"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" ci/imslp-files
