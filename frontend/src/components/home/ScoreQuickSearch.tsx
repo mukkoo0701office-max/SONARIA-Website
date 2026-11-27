@@ -5,38 +5,37 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { getDictionary } from "@/data/dictionaries";
 import { pagePaths } from "@/data/site";
-import { ensembles, type Ensemble } from "@/data/works";
+import { instruments, type Formation, type Instrument } from "@/data/works";
 import { localizedPath, type Locale } from "@/lib/i18n";
 
 type Props = {
   locale: Locale;
   workCount: number; // 掲載している作品数（0 のときは件数を出さない）
   composers: { id: string; name: string; href: string }[]; // 作品数の多い作曲家（ページ側で選ぶ）
+  formations: readonly Formation[]; // 掲載作品がある編成だけ（ページ側でカタログから作る）
 };
 
-const playersValues = ["all", "1", "2", "3", "4", "5plus"] as const;
-
-// トップページの楽譜簡易検索。条件は楽譜検索ページの URL クエリ（q / ensemble / players）にそのまま引き継ぐ
-export default function ScoreQuickSearch({ locale, workCount, composers }: Props) {
+// トップページの楽譜簡易検索。条件は楽譜検索ページの URL クエリ（q / inst / fmt）にそのまま引き継ぐ
+export default function ScoreQuickSearch({ locale, workCount, composers, formations }: Props) {
   const dict = getDictionary(locale);
   const t = dict.homeScoreSearch;
   const s = dict.scores;
   const router = useRouter();
   const [q, setQ] = useState("");
-  const [ensemble, setEnsemble] = useState<"all" | Ensemble>("all");
-  const [players, setPlayers] = useState<(typeof playersValues)[number]>("all");
+  const [inst, setInst] = useState<"all" | Instrument>("all");
+  const [fmt, setFmt] = useState<"all" | Formation>("all");
 
   function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
     const params = new URLSearchParams();
     if (q.trim()) params.set("q", q.trim());
-    if (ensemble !== "all") params.set("ensemble", ensemble);
-    if (players !== "all") params.set("players", players);
+    if (inst !== "all") params.set("inst", inst);
+    if (fmt !== "all") params.set("fmt", fmt);
     const query = params.toString();
     router.push(`${localizedPath(locale, pagePaths.scores)}${query ? `?${query}` : ""}`);
   }
 
-  const fieldClass = "w-full rounded-control border border-line bg-card p-[13px] text-ink";
+  const fieldClass = "w-full rounded-control border border-muted bg-card p-[13px] text-ink";
 
   return (
     <div className="rounded-card border border-line bg-card p-6 sm:p-8">
@@ -60,25 +59,27 @@ export default function ScoreQuickSearch({ locale, workCount, composers }: Props
           <input id="quick-score-q" type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder={t.placeholder} className={fieldClass} />
         </div>
         <div className="grid gap-[7px]">
-          <label htmlFor="quick-score-ensemble" className="text-[13px] font-semibold">
-            {s.ensemble}
+          <label htmlFor="quick-score-inst" className="text-[13px] font-semibold">
+            {s.instrument}
           </label>
-          <select id="quick-score-ensemble" value={ensemble} onChange={(e) => setEnsemble(e.target.value as "all" | Ensemble)} className={fieldClass}>
-            {(["all", ...ensembles] as const).map((v) => (
+          <select id="quick-score-inst" value={inst} onChange={(e) => setInst(e.target.value as "all" | Instrument)} className={fieldClass}>
+            <option value="all">{s.all}</option>
+            {instruments.map((v) => (
               <option key={v} value={v}>
-                {s.ensembleOptions[v]}
+                {s.instrumentOptions[v]}
               </option>
             ))}
           </select>
         </div>
         <div className="grid gap-[7px]">
-          <label htmlFor="quick-score-players" className="text-[13px] font-semibold">
-            {s.players}
+          <label htmlFor="quick-score-fmt" className="text-[13px] font-semibold">
+            {s.formation}
           </label>
-          <select id="quick-score-players" value={players} onChange={(e) => setPlayers(e.target.value as (typeof playersValues)[number])} className={fieldClass}>
-            {playersValues.map((v) => (
+          <select id="quick-score-fmt" value={fmt} onChange={(e) => setFmt(e.target.value as "all" | Formation)} className={fieldClass}>
+            <option value="all">{s.all}</option>
+            {formations.map((v) => (
               <option key={v} value={v}>
-                {s.playersOptions[v]}
+                {s.formationOptions[v]}
               </option>
             ))}
           </select>

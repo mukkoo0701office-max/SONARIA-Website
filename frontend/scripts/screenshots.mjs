@@ -84,11 +84,11 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   // 楽譜の簡易検索 → 楽譜検索ページへ条件を引き継ぐ
   await page.goto(`${base}/ja/`, { waitUntil: "networkidle" });
   await page.fill("#quick-score-q", "ベートーヴェン");
-  await page.selectOption("#quick-score-players", "4");
+  await page.selectOption("#quick-score-fmt", "string-quartet");
   await page.locator('form:has(#quick-score-q) button[type="submit"]').click();
   await page.waitForURL(/scores\/\?/);
   await page.waitForTimeout(500);
-  check(`${vpName}: score quick search carries query`, decodeURIComponent(page.url()).includes("q=ベートーヴェン") && page.url().includes("players=4"), page.url());
+  check(`${vpName}: score quick search carries query`, decodeURIComponent(page.url()).includes("q=ベートーヴェン") && page.url().includes("fmt=string-quartet"), page.url());
   await shot(page, `${vpName}-ja-scores-from-home`);
 
   // 講師の簡易検索 → 講師検索ページへ条件を引き継ぐ
@@ -124,6 +124,16 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   await shot(page, `${vpName}-en-scores`);
   await page.goto(`${base}/ja/scores/`, { waitUntil: "networkidle" });
   await shot(page, `${vpName}-ja-scores`, false);
+  // 楽譜検索の絞り込み（楽器 × 編成）。件数付きのチップで選び、URL に残ること
+  await page.locator('fieldset:has(legend:has-text("楽器")) button', { hasText: "ヴィオラ" }).first().click();
+  await page.locator('fieldset:has(legend:has-text("編成")) button', { hasText: "弦楽四重奏" }).first().click();
+  await page.waitForTimeout(300);
+  const facetUrl = page.url();
+  const facetCount = Number(await page.locator('[aria-live="polite"] span').first().innerText());
+  check(`${vpName}: score facets (viola × string quartet)`, facetUrl.includes("inst=viola") && facetUrl.includes("fmt=string-quartet") && facetCount > 0, `${facetUrl} → ${facetCount}`);
+  const scoresOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+  check(`${vpName}: scores page has no horizontal overflow`, scoresOverflow <= 0, String(scoresOverflow));
+  await shot(page, `${vpName}-ja-scores-facets`, false);
 
   // 楽譜ライブラリ（カタログの作品ページ・作曲家ページ）
   for (const [path, name] of [["ja/scores/beethoven-violin-sonata-5", "ja-work"], ["ja/scores/tchaikovsky-serenade-for-strings", "ja-work-strings"], ["ja/composers/beethoven", "ja-composer"], ["ja/composers", "ja-composers"], ["ja/scores/category/string-quartet", "ja-category"], ["ja/scores/haydn-string-quartets-op20", "ja-work-haydn-op20"]]) {

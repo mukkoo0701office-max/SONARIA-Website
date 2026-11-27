@@ -54,9 +54,8 @@ export default function WorkCard({ work, locale, t, open, favorite, onToggleOpen
       {/* 1 曲あたりの縦幅を抑えるため、作品紹介ボタンはタグと同じ段の右端に置く（タイトルも作品ページへのリンク） */}
       <div className="mt-3 flex items-end gap-2">
         <div className="flex min-w-0 flex-1 flex-wrap items-center gap-1.5">
-          <Tag>{work.players >= 5 ? t.playersOptions["5plus"] : t.playersCount(work.players)}</Tag>
-          <Tag>{t.ensembleOptions[work.ensemble]}</Tag>
-          {work.form && <Tag>{t.formOptions[work.form]}</Tag>}
+          <Tag>{t.formationOptions[work.formation]}</Tag>
+          {work.genre !== "other" && <Tag>{t.genreOptions[work.genre]}</Tag>}
           <Tag>
             {work.pdfCount} {t.pdf}
           </Tag>
