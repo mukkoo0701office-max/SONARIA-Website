@@ -546,6 +546,8 @@ export const en: Dictionary = {
       notConnectedBody: "Your request has NOT reached us. Please use “Copy your entries” to keep a copy and send it again once online submission opens.",
       errorTitle: "Could not send",
       errorBody: "The connection failed, so your request has NOT reached us. Please try again later. You can keep a copy with “Copy your entries”.",
+      // {receipt} is replaced with the reference number
+      receiptNote: "Your reference number is {receipt}. Please quote it if you contact us.",
     },
   },
   performanceQuote: {

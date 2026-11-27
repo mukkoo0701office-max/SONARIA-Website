@@ -28,7 +28,7 @@ import {
 import { getDictionary } from "@/data/dictionaries";
 import { pagePaths } from "@/data/site";
 import { localizedPath, type Locale } from "@/lib/i18n";
-import { submitPerformanceQuote, type SubmitResult } from "@/lib/orders/submit";
+import { submitPerformanceQuote, withReceipt, type SubmitResult } from "@/lib/orders/submit";
 
 type Step = "edit" | "confirm" | "done";
 type DateRow = { date: string; slot: TimeSlot; time: string };
@@ -142,7 +142,7 @@ export default function PerformanceQuoteForm({ locale }: { locale: Locale }) {
 
   if (step !== "edit") {
     const title = step === "confirm" ? t.confirm.heading : result?.status === "sent" ? t.result.sentTitle : result?.status === "error" ? f.result.errorTitle : f.result.notConnectedTitle;
-    const body = step === "confirm" ? t.confirm.lead : result?.status === "sent" ? t.result.sentBody : result?.status === "error" ? f.result.errorBody : f.result.notConnectedBody;
+    const body = step === "confirm" ? t.confirm.lead : result?.status === "sent" ? withReceipt(t.result.sentBody, result, f.result.receiptNote) : result?.status === "error" ? f.result.errorBody : f.result.notConnectedBody;
     return (
       <FormReview
         step={step}

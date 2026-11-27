@@ -572,6 +572,8 @@ export const ja: Dictionary = {
       notConnectedBody: "この内容はまだ運営者に届いていません。「入力内容をコピー」で控えを取り、オンライン送信の開始後にあらためてお送りください。",
       errorTitle: "送信できませんでした",
       errorBody: "通信に失敗したため、内容は運営者に届いていません。時間をおいてもう一度お試しください。「入力内容をコピー」で控えを取れます。",
+      // {receipt} は受付番号に置き換える
+      receiptNote: "受付番号は {receipt} です。お問い合わせの際にお伝えください。",
     },
   },
   performanceQuote: {

@@ -2,6 +2,7 @@
 # 必要な Secrets（チャットやコードには書かない）:
 #   SUPABASE_ACCESS_TOKEN … https://supabase.com/dashboard/account/tokens で作るトークン
 #   SUPABASE_DB_PASSWORD  … プロジェクト作成時の Database password
+# 任意の Secrets: RESEND_API_KEY / ADMIN_NOTIFY_EMAIL（管理人への通知メール）
 # 任意の Variables: ALLOWED_ORIGINS（カンマ区切り。本番ドメインが決まったら追加）
 name: Supabase deploy
 
@@ -29,6 +30,9 @@ jobs:
       SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
       SUPABASE_DB_PASSWORD: ${{ secrets.SUPABASE_DB_PASSWORD }}
       ALLOWED_ORIGINS: ${{ vars.ALLOWED_ORIGINS || 'https://mukkoo0701office-max.github.io' }}
+      # 任意: 管理人への通知メール（両方そろったときだけ関数に登録する）
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      ADMIN_NOTIFY_EMAIL: ${{ secrets.ADMIN_NOTIFY_EMAIL }}
     steps:
       - name: Confirm
         run: |
@@ -60,6 +64,12 @@ jobs:
         run: |
           Y=""; supabase secrets set --help 2>&1 | grep -q -- '--yes' && Y=--yes
           supabase secrets set --project-ref "$PROJECT_REF" $Y "ALLOWED_ORIGINS=$ALLOWED_ORIGINS" "RATE_LIMIT_PER_HOUR=10"
+          if [ -n "$RESEND_API_KEY" ] && [ -n "$ADMIN_NOTIFY_EMAIL" ]; then
+            supabase secrets set --project-ref "$PROJECT_REF" $Y "RESEND_API_KEY=$RESEND_API_KEY" "ADMIN_NOTIFY_EMAIL=$ADMIN_NOTIFY_EMAIL"
+            echo "通知メール: 設定しました"
+          else
+            echo "通知メール: Secrets（RESEND_API_KEY / ADMIN_NOTIFY_EMAIL）が未登録のため設定しません"
+          fi
 
       - name: Deploy function
         run: |

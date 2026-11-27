@@ -60,15 +60,24 @@ Supabase の **Table Editor → submissions** に 1 件ずつ保存されます�
 - `payload`: フォームの入力内容すべて
 - テストで送った申し込みは、Table Editor で行を選んで削除します
 
-### 5. 本番ドメインが決まったら
+### 5. 管理人への通知メール（Resend）
+
+申し込みが届くと、種類・受付番号・日時だけを書いたメールが届きます（氏名・連絡先・入力内容は載せません）。
+
+1. https://resend.com/ で、通知を受け取るメールアドレスでアカウントを作る
+2. 「API Keys → Create API Key」（Permission: Sending access）
+3. Secrets に登録: `RESEND_API_KEY`（`re_` で始まるキー）、`ADMIN_NOTIFY_EMAIL`（通知を受け取るアドレス）
+4. 手順 2（Supabase deploy）をもう一度実行する。ログに「通知メール: 設定しました」と出れば完了
+
+送信元は、独自ドメインを Resend で認証するまで Resend の共用アドレス（`onboarding@resend.dev`）です。共用アドレスは Resend アカウント本人のアドレスにしか届かないため、`ADMIN_NOTIFY_EMAIL` は Resend に登録したアドレスと同じにします。
+
+### 6. 本番ドメインが決まったら
 
 Variables に `ALLOWED_ORIGINS` を登録し（例: `https://sonaria.jp,https://mukkoo0701office-max.github.io`）、手順 2 をもう一度実行します。
 
 ## 未対応（次の段階）
 
 - 管理画面（/admin）を Supabase に接続する（ログイン・一覧・状態変更）
-- 管理人へのメール通知（Resend）。それまでは Table Editor で確認する
-- 完了画面への受付番号の表示
 - サービスの料金をサーバー側で計算し直す（現在は画面の概算を参考値として保存）
 
 ## CI

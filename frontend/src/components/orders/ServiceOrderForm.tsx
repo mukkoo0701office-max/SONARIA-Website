@@ -27,7 +27,7 @@ import { pagePaths } from "@/data/site";
 import { localizedPath, type Locale } from "@/lib/i18n";
 import { clampInt, quoteBowing, quoteRecording } from "@/lib/orders/pricing";
 import { candidateDays, endsAfter, isPast, validCandidates, type Candidate, type CandidateDay } from "@/lib/orders/schedule";
-import { submitOrder, type SubmitResult } from "@/lib/orders/submit";
+import { submitOrder, withReceipt, type SubmitResult } from "@/lib/orders/submit";
 
 type Props = { locale: Locale };
 type Step = "edit" | "confirm" | "done";
@@ -294,7 +294,7 @@ export default function ServiceOrderForm({ locale }: Props) {
     const title =
       step === "confirm" ? t.confirm.heading : result?.status === "sent" ? t.result.sentTitle : result?.status === "error" ? t.result.errorTitle : t.result.notConnectedTitle;
     const body =
-      step === "confirm" ? t.confirm.lead : result?.status === "sent" ? t.result.sentBody : result?.status === "error" ? t.result.errorBody : t.result.notConnectedBody;
+      step === "confirm" ? t.confirm.lead : result?.status === "sent" ? withReceipt(t.result.sentBody, result, dict.forms.result.receiptNote) : result?.status === "error" ? t.result.errorBody : t.result.notConnectedBody;
     const warn = step === "done" && result?.status !== "sent";
     return (
       <div className="mx-auto max-w-content">
