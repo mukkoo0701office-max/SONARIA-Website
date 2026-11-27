@@ -700,5 +700,20 @@ export const en: Dictionary = {
       amazonHeading: "Related printed music and books",
       amazonDisclosure: "As an Amazon Associate, SONARIA earns from qualifying purchases.",
     },
+    // 関数を含むため、ad（クライアント部品にも渡す共通の広告文言）とは分ける
+    amazonSearch: {
+      heading: "Find related scores on Amazon",
+      lead: "Search Amazon for printed urtext editions, parts, study scores and books.",
+      kindsLabel: "Looking for",
+      kinds: { score: "Sheet music", parts: "Parts", pocket: "Study score", books: "Books" },
+      keywordLabel: "Search terms",
+      cta: "Search Amazon",
+      newWindow: "(opens Amazon in a new tab)",
+      bannerKicker: "SONARIA Score Library",
+      bannerHeading: (composer) => `More sheet music by ${composer}`,
+      bannerLead: "Printed urtext editions and study scores are available on Amazon.",
+      bannerCta: "View on Amazon",
+      bannerKeyword: (composer) => `${composer} urtext sheet music`,
+    },
   },
 };

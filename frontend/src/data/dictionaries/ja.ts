@@ -728,5 +728,20 @@ export const ja: Dictionary = {
       amazonHeading: "関連する市販楽譜・書籍",
       amazonDisclosure: "Amazonのアソシエイトとして、SONARIAは適格販売により収入を得ています。",
     },
+    // 関数を含むため、ad（クライアント部品にも渡す共通の広告文言）とは分ける
+    amazonSearch: {
+      heading: "Amazonで関連楽譜を探す",
+      lead: "市販の原典版・パート譜・ポケットスコア・解説書をAmazonで検索します。",
+      kindsLabel: "探すもの",
+      kinds: { score: "楽譜", parts: "パート譜", pocket: "ポケットスコア", books: "解説書" },
+      keywordLabel: "検索語",
+      cta: "Amazonで検索する",
+      newWindow: "（Amazonのページが新しいタブで開きます）",
+      bannerKicker: "SONARIA 楽譜ライブラリ",
+      bannerHeading: (composer) => `${composer}の楽譜をもっと探す`,
+      bannerLead: "製本された原典版やポケットスコアは、Amazonで探せます。",
+      bannerCta: "Amazonで見る",
+      bannerKeyword: (composer) => `${composer} 楽譜 原典版`,
+    },
   },
 };

@@ -431,5 +431,20 @@ export type Dictionary = {
       amazonHeading: string;
       amazonDisclosure: string;
     };
+    // 関数を含むため、ad（クライアント部品にも渡す共通の広告文言）とは分ける
+    amazonSearch: {
+      heading: string;
+      lead: string;
+      kindsLabel: string;
+      kinds: Record<"score" | "parts" | "pocket" | "books", string>;
+      keywordLabel: string;
+      cta: string;
+      newWindow: string;
+      bannerKicker: string;
+      bannerHeading: (composer: string) => string;
+      bannerLead: string;
+      bannerCta: string;
+      bannerKeyword: (composer: string) => string; // バナーの検索語
+    };
   };
 };
