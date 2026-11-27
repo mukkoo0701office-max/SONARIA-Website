@@ -11,6 +11,7 @@ export type PageKey =
   | "community"
   | "profile"
   | "teachers"
+  | "teacherRegister"
   | "about"
   | "contact"
   | "apply"
@@ -26,6 +27,7 @@ export const pagePaths: Record<PageKey, string> = {
   community: "/community/",
   profile: "/profile/",
   teachers: "/teachers/",
+  teacherRegister: "/teachers/register/",
   about: "/about/",
   contact: "/contact/",
   apply: "/apply/",

@@ -1,4 +1,5 @@
 import rawCatalog from "./catalog.json";
+import { sheetTypeOf } from "@/lib/scores/sheetType";
 import rawComposers from "./composers.json";
 import rawPortraits from "./portraits.json";
 import { categoryDefs, MIN_CATEGORY_WORKS, type CategoryDef } from "./categories";
@@ -223,6 +224,7 @@ export function toSummary(w: Work, index: number): WorkSummary {
     genre: (genres as readonly string[]).includes(w.genre) ? (w.genre as SearchGenre) : "other",
     era: w.era as Era,
     pdfCount: w.editions.reduce((n, e) => n + e.assets.length, 0),
+    sheet: sheetTypeOf(w.editions.flatMap((e) => e.assets.map((a) => a.part))),
     // 日本語名・原語名・英語名・別名・作品番号のどれでも見つかるようにする
     searchText: [w.title.ja, w.title.en, w.title.original, ...(w.aliases ?? []), catalogLabel(w), c.name.ja, c.name.en, c.name.original, ...(c.aliases ?? [])]
       .filter(Boolean)

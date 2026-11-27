@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import TeacherRegisterCta from "@/components/teachers/TeacherRegisterCta";
 import { getDictionary } from "@/data/dictionaries";
 import { prefectures } from "@/data/prefectures";
 import { pagePaths } from "@/data/site";
@@ -116,6 +117,10 @@ export default function TeacherQuickSearch({ locale }: { locale: Locale }) {
       </form>
 
       <p className="mt-4 text-xs text-muted">{t.freeNote}</p>
+      {/* 講師登録の案内（PR #24 §2） */}
+      <div className="mt-4">
+        <TeacherRegisterCta locale={locale} compact />
+      </div>
     </div>
   );
 }

@@ -84,11 +84,19 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   // 楽譜の簡易検索 → 楽譜検索ページへ条件を引き継ぐ
   await page.goto(`${base}/ja/`, { waitUntil: "networkidle" });
   await page.fill("#quick-score-q", "ベートーヴェン");
+  await page.locator('form:has(#quick-score-q) fieldset:has(legend:has-text("演奏人数")) button', { hasText: "4人" }).first().click();
   await page.selectOption("#quick-score-fmt", "string-quartet");
+  await page.waitForTimeout(200);
+  const homeCount = await page.locator('form:has(#quick-score-q) [aria-live="polite"]').innerText();
+  check(`${vpName}: home score search shows live count`, /9作品が該当/.test(homeCount), homeCount);
+  await shot(page, `${vpName}-ja-home-score-search`, false);
+  await page.locator("#quick-score-q").scrollIntoViewIfNeeded();
+  await page.locator('form:has(#quick-score-q)').screenshot({ path: `${outDir}/${vpName}-ja-home-score-search-form.png` });
   await page.locator('form:has(#quick-score-q) button[type="submit"]').click();
   await page.waitForURL(/scores\/\?/);
   await page.waitForTimeout(500);
-  check(`${vpName}: score quick search carries query`, decodeURIComponent(page.url()).includes("q=ベートーヴェン") && page.url().includes("fmt=string-quartet"), page.url());
+  const fromHomeCount = Number(await page.locator('[aria-live="polite"] span').first().innerText());
+  check(`${vpName}: score quick search carries query`, decodeURIComponent(page.url()).includes("q=ベートーヴェン") && page.url().includes("fmt=string-quartet") && page.url().includes("players=4") && fromHomeCount === 9, `${page.url()} → ${fromHomeCount}`);
   await shot(page, `${vpName}-ja-scores-from-home`);
 
   // 講師の簡易検索 → 講師検索ページへ条件を引き継ぐ
@@ -118,6 +126,45 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
     await page.goto(`${base}/ja/${path}/`, { waitUntil: "networkidle" });
     await shot(page, `${vpName}-ja-${path}`);
   }
+  // 演奏依頼の見積もりフォーム: 未入力では確認へ進まず、送信先が未設定なら「届いていない」と表示する
+  await page.goto(`${base}/ja/performance/`, { waitUntil: "networkidle" });
+  await shot(page, `${vpName}-ja-performance`);
+  await shot(page, `${vpName}-ja-performance-top`, false);
+  await page.locator('form:has(#pd-name) button[type="submit"]').click();
+  check(`${vpName}: performance form blocks empty submit`, (await page.locator("text=入力内容に不足があります").count()) > 0 && (await page.locator("h2", { hasText: "入力内容の確認" }).count()) === 0);
+  await page.locator('label:has(input[name="schedule"][value="candidates"])').click();
+  await page.fill("#pd-date-0", "2027-03-20");
+  await page.locator('button', { hasText: "候補日を追加" }).click();
+  await page.fill("#pd-date-1", "2027-03-27");
+  await page.locator('label:has(input[name="budget"][value="100to200k"])').click();
+  await page.locator('label:has(input[name="ensemble"][value="quartet"])').click();
+  await page.fill("#pd-remarks", "表示確認用のテスト入力です。");
+  await page.fill("#pd-name", "テスト");
+  await page.fill("#pd-email", "test@example.com");
+  await page.locator("#pd-consent").check();
+  await page.locator('form:has(#pd-name) button[type="submit"]').click();
+  await page.locator("h2", { hasText: "入力内容の確認" }).waitFor();
+  await shot(page, `${vpName}-ja-performance-confirm`);
+  await page.locator("button", { hasText: "無料で見積もりを依頼する" }).click();
+  await page.locator("h2", { hasText: "オンライン送信は準備中です" }).waitFor();
+  check(`${vpName}: performance form shows not-connected (no fake success)`, (await page.locator("h2", { hasText: "受け付けました" }).count()) === 0);
+  await shot(page, `${vpName}-ja-performance-result`, false);
+
+  // 講師登録: 講師検索の近くに登録ボタン → 登録ページ
+  await page.goto(`${base}/ja/teachers/`, { waitUntil: "networkidle" });
+  await page.locator("a", { hasText: "講師として無料登録する" }).first().click();
+  await page.waitForURL(/teachers\/register\//);
+  check(`${vpName}: teacher register CTA links to register page`, page.url().includes("/ja/teachers/register/"), page.url());
+  await page.waitForTimeout(300);
+  await shot(page, `${vpName}-ja-teacher-register`);
+  const registerOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+  check(`${vpName}: register page has no horizontal overflow`, registerOverflow <= 0, String(registerOverflow));
+  check(`${vpName}: register form has no fee field`, (await page.locator("text=/料金を入力|レッスン料金（/").count()) === 0);
+  await page.goto(`${base}/en/teachers/register/`, { waitUntil: "networkidle" });
+  await shot(page, `${vpName}-en-teacher-register`);
+  await page.goto(`${base}/en/performance/`, { waitUntil: "networkidle" });
+  await shot(page, `${vpName}-en-performance`);
+
   await page.goto(`${base}/en/lessons/`, { waitUntil: "networkidle" });
   await shot(page, `${vpName}-en-lessons`);
   await page.goto(`${base}/en/scores/`, { waitUntil: "networkidle" });

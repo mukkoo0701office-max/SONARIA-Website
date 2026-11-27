@@ -69,6 +69,9 @@ export type Teacher = {
 };
 
 // 本番に載せる講師（審査済み・公開済み）。現在は 0 件
+// 掲載の流れ（PR #24 §2）: 講師登録フォーム（/teachers/register/）で申請 → 管理人が確認 → 承認した講師だけを
+// ここに手で追加する。申請データ（本名・メールなどの審査用情報）はリポジトリに保存しない。
+// 公開を止めるときは、ここから削除する（運営者の承認が必要）
 export const publishedTeachers: readonly Teacher[] = [];
 
 // 表示確認用のデモデータ（src/data/teachers.demo.ts）。
