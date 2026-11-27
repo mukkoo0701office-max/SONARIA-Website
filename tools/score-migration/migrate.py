@@ -153,7 +153,16 @@ def main() -> int:
                 if not ID_RE.match(asset["id"]) or asset["part"] not in PARTS:
                     raise SystemExit(f"invalid asset: {asset['id']} / {asset['part']} ({work['id']})")
                 original_sha = asset["sha256"]
-                tag = args.intake_release_tag if asset.get("intake_file") and args.intake_release_tag else args.release_tag
+                # 置き場所: すでに置いたファイルは元のリリースのまま。新しいファイルは、1000 個の上限に達した
+                # scores-v1 ではなく --intake-release-tag（scores-v2）に置く
+                prev_remote = previous.get((work["id"], asset["id"]), {}).get("remote") or ""
+                m_tag = re.search(r"/releases/download/([^/]+)/", prev_remote)
+                if m_tag and m_tag.group(1) in released_by_tag:
+                    tag = m_tag.group(1)
+                elif args.intake_release_tag:
+                    tag = args.intake_release_tag
+                else:
+                    tag = args.release_tag
                 released = released_by_tag[tag]
                 name = names[(work["id"], asset["id"])]
                 old_name = f"{work['id']}--{asset['id']}.pdf"
@@ -209,7 +218,7 @@ def main() -> int:
                     gh("release", "upload", tag, stamped, "--clobber")
                     released.add(name)
                     sha, size = sha256_of(stamped), os.path.getsize(stamped)
-                    if args.keep_legacy and not asset.get("intake_file") and old_name != name and old_name not in released:
+                    if args.keep_legacy and tag == args.release_tag and not asset.get("intake_file") and old_name != name and old_name not in released:
                         # 公開中のプレビューが以前の名前を参照しているあいだは、以前の名前のファイルも残す（--drop-legacy で消す）
                         legacy = os.path.join(tmp, old_name)
                         os.replace(stamped, legacy)

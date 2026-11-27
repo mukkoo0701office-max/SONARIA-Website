@@ -195,3 +195,26 @@ W = {
 
 # 1 記事に別の作曲者の作品が混在する「倉庫」ページ。ファイルごとに扱う（作曲者を中身で確認できないものは保留）
 MIXED_PAGES = {"弦楽二重奏曲　楽譜倉庫", "ヴァイオリン コンサートピース楽譜倉庫"}
+
+# 2026-11-27 追加: sitemap.xml の全ページ確認で見つかった、最初の巡回（ハブからたどる方式）で拾えていなかった記事
+# （著作権が存続している曲の編曲・レッスン教材・私的なメモのページは登録しない。review_decisions.json で保留）
+W.update({
+    "ブラームス作曲 FAEソナタ 無料楽譜": ("brahms-fae-sonata", "F.A.E.ソナタ（ディートリヒ、シューマン、ブラームス）", "F-A-E Sonata (Dietrich, Schumann, Brahms)", "brahms", "violin-piano", "sonata", ""),
+    "グノー作曲 アヴェマリア 無料楽譜": ("gounod-ave-maria", "アヴェ・マリア（バッハ／グノー）", "Ave Maria (Bach/Gounod)", "gounod", "violin-piano", "piece", ""),
+    "チャイコフスキー作曲 懐かしい土地の思い出「瞑想曲」.無料楽譜": ("tchaikovsky-meditation-op42-1", "懐かしい土地の思い出 第1曲「瞑想曲」", "Souvenir d’un lieu cher: I. Méditation", "tchaikovsky", "violin-piano", "piece", "op:42-1"),
+    "ドヴォルザーク_チェロ協奏曲op.104": ("dvorak-cello-concerto", "チェロ協奏曲 ロ短調", "Cello Concerto in B minor", "dvorak", "solo-orchestra", "concerto", "op:104"),
+    "ハイドン_チェロ協奏曲第１番 C dur": ("haydn-cello-concerto-1", "チェロ協奏曲第1番 ハ長調", "Cello Concerto No. 1 in C major", "haydn", "solo-orchestra", "concerto", "hob:VIIb:1"),
+    "ハイドン_チェロ協奏曲第2番 D dur": ("haydn-cello-concerto-1", "チェロ協奏曲第1番 ハ長調", "Cello Concerto No. 1 in C major", "haydn", "solo-orchestra", "concerto", "hob:VIIb:1"),
+    "ハイドン：チェロ協奏曲第１番　inC": ("haydn-cello-concerto-1", "チェロ協奏曲第1番 ハ長調", "Cello Concerto No. 1 in C major", "haydn", "solo-orchestra", "concerto", "hob:VIIb:1"),
+    "リヒャルトシュトラウス：弦楽四重奏op2": ("strauss-r-string-quartet-op2", "弦楽四重奏曲 イ長調", "String Quartet in A major", "strauss-r", "string-quartet", "chamber", "op:2"),
+    "モーツァルト：弦楽トリオK563": ("mozart-divertimento-k563", "ディヴェルティメント 変ホ長調（弦楽三重奏）", "Divertimento in E-flat major for string trio", "mozart", "string-trio", "chamber", "k:563"),
+    "9/21 披露宴演奏曲目": ("bizet-arlesienne-adagietto", "《アルルの女》第1組曲より アダージェット", "L’Arlésienne Suite No. 1: Adagietto", "bizet", "string-orchestra", "piece", ""),
+    "ハルボルセン：パッサカリア": ("halvorsen-passacaglia", "パッサカリア（ヘンデルの主題による）", "Passacaglia (after Handel)", "halvorsen", "string-duo", "variations", ""),
+    "モーツァルト：オーボエ協奏曲": ("mozart-oboe-concerto", "オーボエ協奏曲 ハ長調", "Oboe Concerto in C major", "mozart", "solo-orchestra", "concerto", "k:314"),
+    "モーツァルト：クラリネット協奏曲": ("mozart-clarinet-concerto", "クラリネット協奏曲 イ長調", "Clarinet Concerto in A major", "mozart", "solo-orchestra", "concerto", "k:622"),
+    "ピアノ練習曲": ("mozart-variations-k265", "「ああ、お母さん聞いて」による12の変奏曲（きらきら星変奏曲）", "12 Variations on “Ah, vous dirai-je, maman”", "mozart", "piano", "variations", "k:265"),
+    "ブラームス：ヴァイオリンソナタ集": ("brahms-violin-sonatas", "ヴァイオリン・ソナタ（第1〜3番）", "Violin Sonatas Nos. 1–3", "brahms", "violin-piano", "sonata", "op:78, 100, 108"),
+    "ヴィヴァルディ：ヴァイオリンの為の協奏曲　a moll RV356": W["ヴィヴァルディ：ヴァイオリンの為の協奏曲　Op.3 No.6 RV356"],
+})
+# 目視確認で作品が判明したファイルの付け替え先（review_decisions.json の "work" から参照）
+W["@haydn-cello-concerto-c-popper"] = ("haydn-cello-concerto-c-popper", "チェロ協奏曲 ハ長調（ポッパー編）", "Cello Concerto in C major (arr. Popper)", "haydn", "solo-orchestra", "concerto", "")
