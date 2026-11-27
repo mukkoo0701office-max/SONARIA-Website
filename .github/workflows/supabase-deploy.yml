@@ -45,11 +45,18 @@ jobs:
       - name: Link project
         run: supabase link --project-ref "$PROJECT_REF"
 
+      # 新しい CLI は既定で手元（ローカル）のデータベースを対象にするため、本番（リンク先）を明示する。
+      # CLI の版によってフラグ名が違うので、--remote が使えなければ --linked で実行する
       - name: Show pending migrations
-        run: supabase migration list
+        run: supabase migration list --remote || supabase migration list --linked
 
       - name: Apply migrations
-        run: supabase db push
+        run: |
+          if supabase db push --help 2>&1 | grep -q -- '--remote'; then
+            supabase db push --remote
+          else
+            supabase db push --linked
+          fi
 
       - name: Set function settings
         run: supabase secrets set --project-ref "$PROJECT_REF" "ALLOWED_ORIGINS=$ALLOWED_ORIGINS" "RATE_LIMIT_PER_HOUR=10"
