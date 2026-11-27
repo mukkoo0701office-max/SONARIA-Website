@@ -42,6 +42,10 @@ export interface AdminRepository {
   /** 返信を送る。メール送信サービスが未接続なら status: "not_connected" を返し、送ったことにしない */
   sendReply(inquiryId: string, draft: Pick<InquiryMessage, "subject" | "body" | "templateId">): Promise<InquiryMessage>;
   listStatusHistory(inquiryId: string): Promise<InquiryStatusHistory[]>;
+  /** 迷惑な送信として一覧から外す（データは残る） */
+  hideInquiry(id: string): Promise<void>;
+  /** 完全に削除する（元に戻せない） */
+  deleteInquiry(id: string): Promise<void>;
   listTemplates(): Promise<ReplyTemplate[]>;
 
   listTeacherApplications(): Promise<TeacherApplication[]>;

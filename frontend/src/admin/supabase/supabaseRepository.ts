@@ -178,6 +178,12 @@ export function createSupabaseRepository(): AdminRepository {
         (e): InquiryStatusHistory => ({ id: e.id, inquiryId: e.submission_id, from: (e.from_status as CaseStatus | null) ?? null, to: e.to_status as CaseStatus, note: e.note ?? undefined, changedAt: e.changed_at, changedBy: e.changed_by ?? "" }),
       );
     },
+    async hideInquiry(id) {
+      await update(id, { status: "spam" }, "迷惑な送信として非表示");
+    },
+    async deleteInquiry(id) {
+      await rest<string>("rpc/admin_delete_submission", { method: "POST", body: { p_id: id } });
+    },
     listTemplates: async () => [],
 
     async listTeacherApplications() {

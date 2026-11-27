@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useAdmin, useAdminData } from "../AdminContext";
 import { fmtDate, fmtMoney, fmtNumber } from "../i18n";
@@ -37,6 +38,26 @@ export default function InquiryDetailView() {
   const [templateId, setTemplateId] = useState("");
   const [preview, setPreview] = useState(false);
   const [sendResult, setSendResult] = useState<InquiryMessage | null>(null);
+  // 非表示・削除（確認の画面つき）
+  const router = useRouter();
+  const [removeMode, setRemoveMode] = useState<"hide" | "delete" | null>(null);
+  const [confirmText, setConfirmText] = useState("");
+  const [removeBusy, setRemoveBusy] = useState(false);
+  const [removeError, setRemoveError] = useState(false);
+
+  async function doRemove() {
+    if (!repo || !inq || !removeMode) return;
+    setRemoveBusy(true);
+    setRemoveError(false);
+    try {
+      if (removeMode === "hide") await repo.hideInquiry(inq.id);
+      else await repo.deleteInquiry(inq.id);
+      router.replace(adminRoutes.inquiries);
+    } catch {
+      setRemoveError(true);
+      setRemoveBusy(false);
+    }
+  }
 
   useEffect(() => {
     if (!inq) return;
@@ -287,6 +308,23 @@ export default function InquiryDetailView() {
                   </div>
                 </Card>
 
+                <Card title={t.detail.removeTitle} id="d-remove">
+                  <div className="grid gap-3 text-[13px]">
+                    <div>
+                      <button type="button" onClick={() => { setRemoveMode("hide"); setConfirmText(""); setRemoveError(false); }} className={buttonSecondary}>
+                        {t.detail.hide}
+                      </button>
+                      <p className="mt-1 text-[12px] text-muted">{t.detail.hideLead}</p>
+                    </div>
+                    <div className="border-t border-line pt-3">
+                      <button type="button" onClick={() => { setRemoveMode("delete"); setConfirmText(""); setRemoveError(false); }} className={buttonDanger}>
+                        {t.detail.remove}
+                      </button>
+                      <p className="mt-1 text-[12px] text-muted">{t.detail.removeLead}</p>
+                    </div>
+                  </div>
+                </Card>
+
                 <Card title={t.detail.statusHistory} id="d-status-history">
                   {data.data && data.data.history.length === 0 ? (
                     <p className="text-[13px] text-muted">{t.common.empty}</p>
@@ -306,6 +344,38 @@ export default function InquiryDetailView() {
                 </Card>
               </div>
             </div>
+
+            <Modal open={removeMode !== null} title={removeMode === "delete" ? t.detail.remove : t.detail.hide} onClose={() => setRemoveMode(null)}>
+              <p className="text-[14px] font-semibold">
+                {inq.receiptNo} · {inq.requester.name}
+              </p>
+              <p className="mt-2 text-[13px] leading-relaxed text-muted">{removeMode === "delete" ? t.detail.removeLead : t.detail.hideConfirm}</p>
+              {removeMode === "delete" && (
+                <div className="mt-4">
+                  <Field label={t.detail.removeConfirmLabel(inq.receiptNo)} htmlFor="d-remove-confirm">
+                    <input id="d-remove-confirm" value={confirmText} onChange={(e) => setConfirmText(e.target.value)} autoComplete="off" className={inputClass} />
+                  </Field>
+                </div>
+              )}
+              {removeError && (
+                <p role="alert" className="mt-3 rounded-control border border-[#f2a7a7] bg-[#fdeeee] p-3 text-[13px]">
+                  {t.detail.removeFailed}
+                </p>
+              )}
+              <div className="mt-4 flex gap-2">
+                <button
+                  type="button"
+                  onClick={doRemove}
+                  disabled={removeBusy || (removeMode === "delete" && confirmText.trim() !== inq.receiptNo)}
+                  className={removeMode === "delete" ? `${buttonDanger} disabled:cursor-not-allowed disabled:opacity-50` : buttonPrimary}
+                >
+                  {removeMode === "delete" ? t.detail.removeButton : t.detail.hide}
+                </button>
+                <button type="button" onClick={() => setRemoveMode(null)} className={buttonSecondary}>
+                  {t.common.cancel}
+                </button>
+              </div>
+            </Modal>
 
             <Modal open={preview} title={t.detail.preview} onClose={() => setPreview(false)}>
               <p className="text-[12px] text-muted">To: {inq.requester.email}</p>
