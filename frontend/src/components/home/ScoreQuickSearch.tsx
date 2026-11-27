@@ -2,27 +2,32 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useMemo, useState } from "react";
+import { useId, useMemo, useRef, useState } from "react";
 import Chip from "@/components/ui/Chip";
 import { getDictionary } from "@/data/dictionaries";
 import { pagePaths } from "@/data/site";
+import { libraryPaths } from "@/data/scores/paths";
 import { genres, instruments, type Formation, type Genre, type Instrument, type WorkSummary } from "@/data/works";
 import { localizedPath, type Locale } from "@/lib/i18n";
 import { countBy, filtersToSearch, initialFilters, matchesFilters, playersKey, sheetKeys, type ScoreFilters } from "@/lib/scores/filters";
 import { playerCounts, sheetKinds, type PlayersFilter, type SheetFilter } from "@/lib/scores/sheetType";
+import { suggest, type SuggestComposer } from "@/lib/scores/suggest";
 
 type Props = {
   locale: Locale;
   works: readonly WorkSummary[]; // 公開中の作品（楽譜検索ページと同じデータ。件数の表示に使う）
   composers: { id: string; name: string; href: string }[]; // 作品数の多い作曲家（ページ側で選ぶ）
   formations: readonly Formation[]; // 掲載作品がある編成だけ（ページ側でカタログから作る）
+  suggestComposers?: (SuggestComposer & { href: string })[]; // 入力補完の作曲家候補（作品がある全員。ページ側で作る）
 };
+
+type Option = { key: string; href: string; label: string; sub?: string; group: "composer" | "work" | "all" };
 
 // トップページの楽譜検索（PR #24 §3 で改修）。
 // 1. 曲名・作曲家（日英・別名・作品番号を横断）  2. 演奏人数のチップ  3. 譜面の種類のチップ  4. 楽器・編成・種類
 // 条件を変えるたびに該当件数を表示し、「この条件で探す」で楽譜検索ページへ同じ条件（URL のクエリ）を引き継ぐ。
 // 判定は lib/scores/filters.ts を楽譜検索ページと共有するため、件数は検索ページと一致する
-export default function ScoreQuickSearch({ locale, works, composers, formations }: Props) {
+export default function ScoreQuickSearch({ locale, works, composers, formations, suggestComposers = [] }: Props) {
   const dict = getDictionary(locale);
   const t = dict.homeScoreSearch;
   const s = dict.scores;
@@ -43,6 +48,55 @@ export default function ScoreQuickSearch({ locale, works, composers, formations 
   );
   const dirty = filtersToSearch(filters) !== "";
   const scoresPath = localizedPath(locale, pagePaths.scores);
+
+  // 入力補完（WAI-ARIA の combobox）。候補は作曲家・作品・「すべて表示」の順
+  const listId = useId();
+  const hintId = useId();
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(-1);
+  const options: Option[] = useMemo(() => {
+    const linkable = works.filter((w): w is WorkSummary & { slug: string } => !!w.slug);
+    const r = suggest(filters.q, linkable, suggestComposers, locale);
+    if (!r.composers.length && !r.works.length) return [];
+    const hrefOf = new Map(suggestComposers.map((c) => [c.id, c.href]));
+    const q = filters.q.trim();
+    return [
+      ...r.composers.map((c) => ({ key: `c-${c.id}`, href: hrefOf.get(c.id) ?? scoresPath, label: c.name, sub: t.suggestComposerCount(c.count), group: "composer" as const })),
+      ...r.works.map((w) => ({
+        key: `w-${w.slug}`,
+        // 英語ページがない作品は日本語ページへ
+        href: localizedPath(w.hasEnglish || locale === "ja" ? locale : "ja", libraryPaths.work(w.slug)),
+        label: w.title,
+        sub: w.composer,
+        group: "work" as const,
+      })),
+      { key: "all", href: `${scoresPath}${filtersToSearch({ ...initialFilters, q })}`, label: t.suggestSearchAll(q), group: "all" as const },
+    ];
+  }, [filters.q, works, suggestComposers, locale, scoresPath, t]);
+  const showList = open && options.length > 0;
+
+  function choose(o: Option) {
+    setOpen(false);
+    router.push(o.href);
+  }
+
+  function onKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      if (!options.length) return;
+      event.preventDefault();
+      setOpen(true);
+      const n = options.length;
+      setActive((i) => (event.key === "ArrowDown" ? (i + 1) % n : i <= 0 ? n - 1 : i - 1));
+    } else if (event.key === "Enter" && showList && active >= 0) {
+      event.preventDefault();
+      choose(options[active]);
+    } else if (event.key === "Escape" && showList) {
+      event.preventDefault();
+      setOpen(false);
+      setActive(-1);
+    }
+  }
 
   function update(patch: Partial<ScoreFilters>) {
     setFilters((prev) => ({ ...prev, ...patch }));
@@ -71,15 +125,80 @@ export default function ScoreQuickSearch({ locale, works, composers, formations 
           <label htmlFor="quick-score-q" className="text-[13px] font-semibold">
             {t.keyword}
           </label>
-          <input
-            id="quick-score-q"
-            type="search"
-            autoComplete="off"
-            value={filters.q}
-            onChange={(e) => update({ q: e.target.value })}
-            placeholder={t.placeholder}
-            className="w-full rounded-control border border-muted bg-card p-[14px] text-[16px] text-ink"
-          />
+          <div className="relative">
+            <input
+              ref={inputRef}
+              id="quick-score-q"
+              type="search"
+              role="combobox"
+              aria-autocomplete="list"
+              aria-expanded={showList}
+              aria-controls={listId}
+              aria-activedescendant={showList && active >= 0 ? `${listId}-${active}` : undefined}
+              aria-describedby={hintId}
+              autoComplete="off"
+              value={filters.q}
+              onChange={(e) => {
+                update({ q: e.target.value });
+                setOpen(true);
+                setActive(-1);
+              }}
+              onFocus={() => setOpen(true)}
+              onBlur={() => setOpen(false)}
+              onKeyDown={onKeyDown}
+              placeholder={t.placeholder}
+              className="w-full rounded-control border border-muted bg-card p-[14px] text-[16px] text-ink"
+            />
+            <span id={hintId} className="sr-only">
+              {t.suggestHint}
+            </span>
+            <ul
+              id={listId}
+              role="listbox"
+              aria-label={t.suggestLabel}
+              hidden={!showList}
+              className="absolute left-0 right-0 top-full z-20 mt-1 max-h-[60vh] overflow-y-auto rounded-card border border-line bg-card py-1 shadow-lg"
+            >
+              {options.map((o, i) => {
+                // 種類が変わる位置に小見出し（読み上げは各候補の aria-label で伝える）
+                const heading = o.group !== options[i - 1]?.group && o.group !== "all" ? (o.group === "composer" ? t.suggestComposers : t.suggestWorks) : null;
+                return (
+                  <li
+                    key={o.key}
+                    id={`${listId}-${i}`}
+                    role="option"
+                    aria-selected={i === active}
+                    aria-label={o.sub ? (locale === "ja" ? `${o.label}（${o.sub}）` : `${o.label} (${o.sub})`) : o.label}
+                    // クリックで入力欄のフォーカスが外れて一覧が閉じる前に選ぶ
+                    onMouseDown={(e) => {
+                      e.preventDefault();
+                      choose(o);
+                    }}
+                    onMouseEnter={() => setActive(i)}
+                    className={`cursor-pointer ${o.group === "all" ? "mt-1 border-t border-line" : ""}`}
+                  >
+                    {heading && (
+                      <span aria-hidden="true" className="block px-4 pb-1 pt-2 text-[12px] font-semibold text-muted">
+                        {heading}
+                      </span>
+                    )}
+                    {o.group === "work" ? (
+                      // 作品は 2 行（曲名／作曲家）。スマホの狭い幅でも曲名を優先して見せる
+                      <span className={`block px-4 py-2 ${i === active ? "bg-subtle" : ""}`}>
+                        <span className="block truncate text-[15px] text-ink">{o.label}</span>
+                        {o.sub && <span className="block truncate text-[12px] text-muted">{o.sub}</span>}
+                      </span>
+                    ) : (
+                      <span className={`flex items-baseline justify-between gap-3 px-4 py-2 ${i === active ? "bg-subtle" : ""}`}>
+                        <span className={`min-w-0 truncate text-[15px] ${o.group === "all" ? "text-navy underline" : "text-ink"}`}>{o.label}</span>
+                        {o.sub && <span className="flex-none text-[12px] text-muted">{o.sub}</span>}
+                      </span>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         </div>
 
         <div className="grid gap-4 lg:grid-cols-2">

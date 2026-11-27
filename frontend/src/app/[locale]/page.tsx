@@ -26,6 +26,13 @@ export default async function HomePage({ params }: Props) {
     .sort((a, b) => worksByComposer(b.id).length - worksByComposer(a.id).length || a.name.en.localeCompare(b.name.en))
     .slice(0, 8)
     .map((c) => ({ id: c.id, name: (c.short ?? c.name)[locale], href: localizedPath(composerLocales(c).includes(locale) ? locale : "ja", libraryPaths.composer(c.id)) }));
+  // 入力補完の候補に使う作曲家（作品がある全員）。リンク先は実在するページだけ
+  const suggestComposers = publishedComposers.map((c) => ({
+    id: c.id,
+    name: { ja: (c.short ?? c.name).ja, en: (c.short ?? c.name).en },
+    aliases: [c.name.ja, c.name.en, c.name.original, ...(c.aliases ?? [])],
+    href: localizedPath(composerLocales(c).includes(locale) ? locale : "ja", libraryPaths.composer(c.id)),
+  }));
   // サイト全体の構造化データ（運営者は SONARIA という名称で表す。個人名は出さない）
   const ld = [
     { "@context": "https://schema.org", "@type": "WebSite", name: dict.meta.siteTitle, inLanguage: locale, ...(url ? { url } : {}) },
@@ -45,7 +52,7 @@ export default async function HomePage({ params }: Props) {
 
       <section aria-labelledby="score-search-heading" className="mt-14 lg:mt-20">
         <Container width="wide">
-          <ScoreQuickSearch locale={locale} works={workSummaries} composers={topComposers} formations={formations.filter((f) => workSummaries.some((w) => w.formation === f))} />
+          <ScoreQuickSearch locale={locale} works={workSummaries} composers={topComposers} suggestComposers={suggestComposers} formations={formations.filter((f) => workSummaries.some((w) => w.formation === f))} />
         </Container>
       </section>
 

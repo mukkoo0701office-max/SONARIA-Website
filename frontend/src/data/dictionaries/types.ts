@@ -92,6 +92,13 @@ export type Dictionary = {
     viewAll: (total: number) => string;
     clear: string;
     noMatch: string;
+    // 入力補完
+    suggestLabel: string; // 候補一覧の名前（読み上げ用）
+    suggestComposers: string;
+    suggestWorks: string;
+    suggestComposerCount: (n: number) => string;
+    suggestSearchAll: (q: string) => string;
+    suggestHint: string; // 操作方法（読み上げ用）
   };
   homeTeacherSearch: {
     heading: string;
