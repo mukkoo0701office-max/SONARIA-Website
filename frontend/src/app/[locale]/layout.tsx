@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import SiteFooter from "@/components/layout/SiteFooter";
 import SiteHeader from "@/components/layout/SiteHeader";
 import { getDictionary } from "@/data/dictionaries";
@@ -61,6 +62,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           {children}
         </main>
         <SiteFooter locale={locale} />
+        <GoogleAnalytics />
       </body>
     </html>
   );
