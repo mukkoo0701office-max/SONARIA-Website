@@ -93,6 +93,12 @@ export const ja: Dictionary = {
     viewAll: (total) => `すべての楽譜を見る（${total}作品）`,
     clear: "条件をクリア",
     noMatch: "条件に合う楽譜がありません。条件を減らしてみてください。",
+    suggestLabel: "入力候補",
+    suggestComposers: "作曲家",
+    suggestWorks: "作品",
+    suggestComposerCount: (n) => `${n}作品`,
+    suggestSearchAll: (q) => `「${q}」を含む楽譜をすべて表示`,
+    suggestHint: "上下の矢印キーで候補を選び、Enter で開きます。",
   },
   homeTeacherSearch: {
     heading: "講師を探す",

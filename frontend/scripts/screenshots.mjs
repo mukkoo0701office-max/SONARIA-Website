@@ -81,9 +81,29 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
     check("mobile: swipe does not navigate", page.url().endsWith("/ja/"), page.url());
   }
 
+  // 入力補完: 候補が出る → 矢印キーと Enter で作曲家ページへ
+  await page.goto(`${base}/ja/`, { waitUntil: "networkidle" });
+  await page.locator("#quick-score-q").scrollIntoViewIfNeeded();
+  await page.fill("#quick-score-q", "ベート");
+  await page.waitForTimeout(200);
+  const listbox = page.locator('[role="listbox"]').first();
+  const optCount = await listbox.locator('[role="option"]').count();
+  check(`${vpName}: autocomplete shows suggestions`, (await listbox.isVisible()) && optCount >= 2, `options=${optCount}`);
+  check(`${vpName}: autocomplete input is a combobox`, (await page.getAttribute("#quick-score-q", "aria-expanded")) === "true");
+  await page.locator('form:has(#quick-score-q)').screenshot({ path: `${outDir}/${vpName}-ja-home-autocomplete.png` });
+  await page.keyboard.press("Escape");
+  check(`${vpName}: autocomplete closes on Escape`, !(await listbox.isVisible()));
+  await page.keyboard.press("ArrowDown");
+  check(`${vpName}: autocomplete arrow selects option`, (await page.getAttribute("#quick-score-q", "aria-activedescendant")) !== null);
+  await page.keyboard.press("Enter");
+  await page.waitForURL(/composers\/beethoven\//, { timeout: 5000 }).catch(() => {});
+  check(`${vpName}: autocomplete Enter opens composer page`, /composers\/beethoven\//.test(page.url()), page.url());
+
   // 楽譜の簡易検索 → 楽譜検索ページへ条件を引き継ぐ
   await page.goto(`${base}/ja/`, { waitUntil: "networkidle" });
   await page.fill("#quick-score-q", "ベートーヴェン");
+  // 候補の一覧が下のチップに重なるので閉じてから操作する
+  await page.keyboard.press("Escape");
   await page.locator('form:has(#quick-score-q) fieldset:has(legend:has-text("演奏人数")) button', { hasText: "4人" }).first().click();
   await page.selectOption("#quick-score-fmt", "string-quartet");
   await page.waitForTimeout(200);

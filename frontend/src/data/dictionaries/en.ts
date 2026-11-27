@@ -93,6 +93,12 @@ export const en: Dictionary = {
     viewAll: (total) => `See all scores (${total} works)`,
     clear: "Clear filters",
     noMatch: "No scores match. Try removing a filter.",
+    suggestLabel: "Suggestions",
+    suggestComposers: "Composers",
+    suggestWorks: "Works",
+    suggestComposerCount: (n) => `${n} ${n === 1 ? "work" : "works"}`,
+    suggestSearchAll: (q) => `Show all scores matching “${q}”`,
+    suggestHint: "Use the up and down arrow keys to choose a suggestion, then press Enter.",
   },
   homeTeacherSearch: {
     heading: "Find teachers",
