@@ -740,7 +740,7 @@
       "verification": "Henle official catalog confirms opus scope and separate modern urtext parts/study-score editions. Amazon.co.jp queries by exact printed Henle HN214/HN9214 numbers and ISMNs did not yield a defensible corresponding product-detail ASIN; keep Amazon URL null.",
       "date_checked": "2026-11-27",
       "last_amazon_search_at": "2026-11-27",
-      "amazon_verification_status": "no_confirmed_amazon_co_jp_product_page",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
       "imslp_repertoire_url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
       "quality_comparison_note": "Official Henle HN214 parts/HN9214 study score cover complete Op.76 Nos.1–6; IMSLP Eulenburg #454963 reports missing printed p.216 in No.5, so Henle Urtext is a potentially useful commercial alternative, but do not imply publisher edition is an Amazon listing. Amazon ASIN unverified.",
       "page_placement": "score_detail_related_products_only_not_near_download",
@@ -755,7 +755,7 @@
         "not_a_single_bundle": true
       },
       "comparison_note": "This is a distinct Henle Urtext commercial edition, not the same edition as free Heckel score/Longman & Clementi parts. SONARIA free score+parts package must be independently verified and may not be directly identified with this merchandise.",
-      "amazon_search_note": "Web exact queries for 9790201802145 and 9790201892146, HN214/HN9214, and Amazon.co.jp/dp did not show a verified matching product detail; no ASIN or affiliate tagged link. Verify directly through authorized Associates product-link tools."
+      "amazon_search_note": "2026-11-27: exact Amazon.co.jp /dp/ queries for HN214, HN9214 and corresponding unconfirmed ISMN forms returned no matching indexed product pages. Existing publisher metadata retained; exact Amazon ASIN and item URL not established. Keep pending_review; no affiliate tag link."
     },
     {
       "id": "haydn-henle-hn9214",
@@ -785,7 +785,7 @@
       "verification": "Henle official catalog confirms opus scope and separate modern urtext parts/study-score editions. Amazon.co.jp queries by exact printed Henle HN214/HN9214 numbers and ISMNs did not yield a defensible corresponding product-detail ASIN; keep Amazon URL null.",
       "date_checked": "2026-11-27",
       "last_amazon_search_at": "2026-11-27",
-      "amazon_verification_status": "no_confirmed_amazon_co_jp_product_page",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
       "imslp_repertoire_url": "https://imslp.org/wiki/String_Quartets%2C_Op.76_%28Haydn%2C_Joseph%29",
       "quality_comparison_note": "Official Henle HN214 parts/HN9214 study score cover complete Op.76 Nos.1–6; IMSLP Eulenburg #454963 reports missing printed p.216 in No.5, so Henle Urtext is a potentially useful commercial alternative, but do not imply publisher edition is an Amazon listing. Amazon ASIN unverified.",
       "page_placement": "score_detail_related_products_only_not_near_download",
@@ -800,7 +800,7 @@
         "not_a_single_bundle": true
       },
       "comparison_note": "This is a distinct Henle Urtext commercial edition, not the same edition as free Heckel score/Longman & Clementi parts. SONARIA free score+parts package must be independently verified and may not be directly identified with this merchandise.",
-      "amazon_search_note": "Web exact queries for 9790201802145 and 9790201892146, HN214/HN9214, and Amazon.co.jp/dp did not show a verified matching product detail; no ASIN or affiliate tagged link. Verify directly through authorized Associates product-link tools."
+      "amazon_search_note": "2026-11-27: exact Amazon.co.jp /dp/ queries for HN214, HN9214 and corresponding unconfirmed ISMN forms returned no matching indexed product pages. Existing publisher metadata retained; exact Amazon ASIN and item URL not established. Keep pending_review; no affiliate tag link."
     },
     {
       "id": "haydn-henle-hn215",
@@ -1146,19 +1146,14 @@
   "affiliate_tag_source": "2026-11-27 owner-provided Amazon Associates account screenshot",
   "last_research": {
     "date": "2026-11-27",
-    "focus": "Haydn Henle HN212 and HN9212 Op.64 exact Amazon Japan edition verification",
-    "result": "Henle catalogued Op.64 Nos.1–6 in two distinct editions: HN212 9790201802121 (144 pages, playing parts) and HN9212 9790201892122 (114 pages, study score). Amazon.co.jp targeted product detail /dp/ searches by catalog number and ISMN found no independently verified matching ASIN. Both remain pending_review; no affiliate URLs. Queue remains 33.",
+    "focus": "Haydn Henle HN214 and HN9214 exact Amazon Japan product-page verification",
     "checked_candidates": [
-      "haydn-henle-hn212",
-      "haydn-henle-hn9212"
+      "haydn-henle-hn214",
+      "haydn-henle-hn9214"
     ],
     "new_candidates": 0,
-    "new_publisher_confirmed": 0,
     "new_amazon_verified": 0,
-    "source_urls": [
-      "https://www.henle.de/jp/String-Quartets-Book-VIII-op.-64-Second-Tost-Quartets/HN-212",
-      "https://www.henle.de/jp/String-Quartets-Book-VIII-op.-64-Second-Tost-Quartets/HN-9212"
-    ],
-    "next": "Continue Haydn HN213/HN9213, then HN214/HN9214. Do not advertise pending_review. Verify ASIN and exact format before generating mukkoo-22 link."
+    "result": "No matching Amazon.co.jp individual product detail pages or ASIN found via exact catalogue-number and site-restricted searches; both remain pending_review. HN213/HN9213 had already been audited in existing queue, so advanced to HN214/HN9214 rather than duplicate work.",
+    "next": "Audit Haydn HN215 and HN9215, then HN851/HN9771. Do not create affiliate URLs without exact verified ASIN."
   }
 }
