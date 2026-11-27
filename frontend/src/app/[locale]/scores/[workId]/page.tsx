@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import Container from "@/components/layout/Container";
 import AffiliateSlot from "@/components/library/AffiliateSlot";
 import AmazonRelated from "@/components/library/AmazonRelated";
+import AmazonSearchBanner from "@/components/library/AmazonSearchBanner";
+import AmazonSearchWidget from "@/components/library/AmazonSearchWidget";
 import { amazonItemsFor } from "@/data/affiliate/amazon";
 import BowingBanner from "@/components/library/BowingBanner";
 import PdfFile from "@/components/library/PdfFile";
@@ -271,6 +273,9 @@ export default async function WorkPage({ params }: Props) {
         </dl>
       </section>
 
+      {/* 広告枠 1（ダウンロードの操作ボタンから離し、本文の後）: Amazon の検索ウィジェット */}
+      <AmazonSearchWidget locale={locale} t={t.ad} work={{ composer: (c.short ?? c.name)[locale], title: work.title[locale], catalog: catalogText || undefined }} />
+
       {text?.overview && <Prose id="overview" title={tw.overview} body={text.overview} />}
       {text?.features && <Prose id="features" title={tw.features} body={text.features} />}
       {text?.performanceTips && <Prose id="tips" title={tw.performanceTips} body={text.performanceTips} />}
@@ -334,8 +339,14 @@ export default async function WorkPage({ params }: Props) {
         </Link>
       </section>
 
-      {/* 広告はダウンロードの操作ボタンから離し、本文の後に置く。Amazon の確認済み商品があればそれを、無ければ共通の枠を出す */}
-      {amazonItems.length > 0 ? <AmazonRelated items={amazonItems} locale={locale} t={t.ad} /> : <AffiliateSlot placement="work" t={t.ad} links={work.affiliate} />}
+      {/* 広告枠 2（ページ下部。1 ページ 2 枠まで）: 確認済みの商品（amazon.json）→ 作品ごとのリンク → 作曲家の楽譜を探すバナーの順 */}
+      {amazonItems.length > 0 ? (
+        <AmazonRelated items={amazonItems} locale={locale} t={t.ad} />
+      ) : work.affiliate && work.affiliate.length > 0 ? (
+        <AffiliateSlot placement="work" t={t.ad} links={work.affiliate} />
+      ) : (
+        <AmazonSearchBanner t={t.ad} composer={(c.short ?? c.name)[locale]} keyword={t.ad.amazonSearch.bannerKeyword((c.short ?? c.name)[locale])} />
+      )}
 
       {related.length > 0 && (
         <section aria-labelledby="related" className="mt-8">

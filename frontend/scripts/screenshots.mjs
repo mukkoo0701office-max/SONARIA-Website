@@ -144,6 +144,24 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   // プレビュー環境では PDF をリリースの添付ファイルから取得する（ダウンロードのリンクが外部 URL になる）
   await page.goto(`${base}/ja/scores/beethoven-violin-sonata-5/`, { waitUntil: "networkidle" });
   const dl = await page.locator("a[download]").first().getAttribute("href");
+  // Amazon の広告枠（検索ウィジェット・バナー）: 1 ページ 2 枠まで、ダウンロードボタンより後、トラッキング ID と rel="sponsored"
+  const adCount = await page.locator('aside#amazon-search, aside[aria-labelledby="amazon-search"], aside[aria-labelledby="amazon-banner"], aside[aria-labelledby="amazon-related"]').count();
+  const adHref = await page.locator('aside[aria-labelledby="amazon-search"] a').first().getAttribute("href");
+  const adRel = await page.locator('aside[aria-labelledby="amazon-search"] a').first().getAttribute("rel");
+  check(`${vpName}: work page has 1-2 Amazon slots`, adCount >= 1 && adCount <= 2, String(adCount));
+  check(`${vpName}: Amazon link has tag and sponsored rel`, Boolean(adHref && adHref.includes("tag=mukkoo-22") && adRel && adRel.includes("sponsored")), `${adHref} ${adRel}`);
+  const order = await page.evaluate(() => {
+    const dl = document.querySelector("a[download]");
+    const ad = document.querySelector('aside[aria-labelledby="amazon-search"]');
+    return dl && ad ? Boolean(dl.compareDocumentPosition(ad) & Node.DOCUMENT_POSITION_FOLLOWING) : false;
+  });
+  check(`${vpName}: Amazon slot comes after download buttons`, order);
+  await page.locator('aside[aria-labelledby="amazon-search"] button', { hasText: "パート譜" }).click();
+  check(`${vpName}: Amazon widget switches keyword`, decodeURIComponent((await page.locator('aside[aria-labelledby="amazon-search"] a').first().getAttribute("href")) || "").includes("パート譜"));
+  await page.locator('aside[aria-labelledby="amazon-search"]').scrollIntoViewIfNeeded();
+  await shot(page, `${vpName}-ja-work-amazon`, false);
+  await page.locator('aside[aria-labelledby="amazon-banner"]').scrollIntoViewIfNeeded();
+  await shot(page, `${vpName}-ja-work-amazon-banner`, false);
   check(`${vpName}: PDF download points to release asset`, Boolean(dl && dl.includes("/releases/download/scores-v1/")), String(dl));
 
   // 統合申込フォーム（Issue #13）。料金の受け入れテストと、送信先未設定時に「未接続」を表示することを確かめる
