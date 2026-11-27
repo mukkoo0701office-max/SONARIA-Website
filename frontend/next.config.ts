@@ -23,8 +23,9 @@ const nextConfig: NextConfig = {
     // 検索エンジンへの掲載可否と公開 URL（lib/seo.ts）。正式公開の判断までは未設定のまま
     NEXT_PUBLIC_INDEXABLE: process.env.NEXT_PUBLIC_INDEXABLE ?? "0",
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL ?? "",
-    // 申込フォームの送信先。未設定の間は送信機能「未接続」として扱う（lib/orders/submit.ts）
-    NEXT_PUBLIC_ORDER_ENDPOINT: process.env.NEXT_PUBLIC_ORDER_ENDPOINT ?? "",
+    // 申込フォームの送信先（Supabase の URL と公開キー）。未設定の間は「未接続」として扱う（lib/orders/submit.ts）
+    NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL ?? "",
+    NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ?? "",
   },
 };
 

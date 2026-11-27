@@ -53,6 +53,9 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: /SONARIA-Website
           NEXT_PUBLIC_PREVIEW: "1"
           NEXT_PUBLIC_SITE_URL: https://mukkoo0701office-max.github.io/SONARIA-Website
+          # フォームの送信先。リポジトリ変数が未設定の間は「未接続」表示になる
+          NEXT_PUBLIC_SUPABASE_URL: ${{ vars.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${{ vars.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY }}
 
       # .htaccess はさくら用。GitHub Pages では使わないので除く
       - run: rm -f out/.htaccess
