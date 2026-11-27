@@ -6,6 +6,7 @@ on:
     branches: [feature/old-site-remaining]
     paths:
       - "tools/score-migration/held_review.py"
+      - "tools/score-migration/sitemap_check.py"
       - ".github/workflows/score-held-review.yml"
 
 permissions:
@@ -33,7 +34,12 @@ jobs:
           if git ls-remote --exit-code --heads origin ci/held-review > /dev/null 2>&1; then
             git fetch -q --depth=1 origin ci/held-review && git archive FETCH_HEAD | tar -x -C /tmp/out
           fi
-      - run: python tools/score-migration/held_review.py --report tools/score-migration/report.json --out /tmp/out
+      # sitemap.xml の全ページから、最初の巡回で拾えていない PDF を探す
+      - name: Sitemap check
+        run: |
+          git fetch -q --depth=1 origin ci/score-audit && git show FETCH_HEAD:state.json > /tmp/state.json
+          [ -f /tmp/out/new_links.json ] || python tools/score-migration/sitemap_check.py --state /tmp/state.json --report tools/score-migration/report.json --out /tmp/out/new_links.json
+      - run: python tools/score-migration/held_review.py --report tools/score-migration/report.json --report /tmp/out/new_links.json --out /tmp/out
       - name: Save to ci/held-review
         if: always()
         run: |

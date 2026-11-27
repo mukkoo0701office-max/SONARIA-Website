@@ -67,10 +67,13 @@ def render(pdf: str, out_prefix: str) -> dict:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--report", required=True)
+    ap.add_argument("--report", required=True, action="append")
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
-    report = json.load(open(a.report, encoding="utf-8"))["results"]
+    report = []
+    for path in a.report:
+        if os.path.exists(path):
+            report += json.load(open(path, encoding="utf-8"))["results"]
     targets = [x for x in report if x.get("decision") != "migrate"]
     os.makedirs(a.out, exist_ok=True)
     idx_path = os.path.join(a.out, "index.json")
@@ -79,8 +82,9 @@ def main() -> int:
     for k, x in enumerate(targets, 1):
         key = hashlib.sha1(x["url"].encode()).hexdigest()[:12]
         if key in index and index[key].get("status") in ("ok", "zip", "not_pdf"):
+            index[key]["decision"] = x.get("decision")
             continue
-        rec = {"key": key, "heading": x["heading"], "page": x["page"], "url": x["url"], "filename": x.get("filename"), "part": x.get("part"), "reasons": x.get("reasons", []), "report_sha256": x.get("sha256")}
+        rec = {"key": key, "heading": x["heading"], "page": x["page"], "url": x["url"], "filename": x.get("filename"), "part": x.get("part"), "reasons": x.get("reasons", []), "report_sha256": x.get("sha256"), "decision": x.get("decision")}
         if not f.allowed(x["url"]):
             rec["status"] = "robots_disallowed"
             index[key] = rec
