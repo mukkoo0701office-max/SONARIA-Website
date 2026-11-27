@@ -21,12 +21,18 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -q requests==2.32.3 beautifulsoup4==4.12.3
-      - name: Dump sample pages
+      - name: GPT queue and cache
         run: |
           mkdir -p /tmp/out
-          python tools/score-acquisition/imslp_files.py --dump "String_Quartets,_Op.1_(Haydn,_Joseph)" --dump "String_Quartet_No.1_in_G_major,_K.80/73f_(Mozart,_Wolfgang_Amadeus)" --out /tmp/out/dump.html
-          ls -la /tmp/out
+          git fetch -q origin coordination/gpt-claude-score-queue
+          git show origin/coordination/gpt-claude-score-queue:docs/score-acquisition/queue.json > /tmp/queue.json
+          if git fetch -q origin ci/imslp-files 2>/dev/null; then
+            git show FETCH_HEAD:pages.json > /tmp/out/pages.json 2>/dev/null || true
+          fi
+      - name: List score and parts
+        run: python tools/score-acquisition/imslp_files.py --queue /tmp/queue.json --cache /tmp/out/pages.json --out /tmp/out/imslp_sets.json --md /tmp/out/imslp_sets.md
       - name: Save
+        if: always()
         run: |
           cd /tmp/out && git init -q -b ci/imslp-files && git add -A
           git -c user.name="github-actions" -c user.email="github-actions@users.noreply.github.com" commit -q -m "imslp files"
