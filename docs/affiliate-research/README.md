@@ -40,3 +40,7 @@
 - 出版社原典の再確認: HN205 = ISMN 979-0-2018-0205-3（弦楽四重奏パート譜、Op.1初期作品集） https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-205 ; HN9216 = ISMN 979-0-2018-9216-0（12冊組スタディスコア、69作品、HN9205–9215およびHN9771） https://www.henle.de/jp/The-String-Quartets-12-Volumes-in-a-Slipcase/HN-9216 。いずれも出版社情報であり、Amazon掲載の証拠ではない。
 - 誤認防止: Op.20の演奏録音CDやハイドンのピアノ曲集を弦楽四重奏の市販譜と混同しない。HN9216は複数作品の全集であり、個別作品ページに表示する場合は対象作品を含むことを別途明示する。
 - 次回はAmazon個別商品への直接到達が可能な場合に限り、タイトル・版種（パート譜/ポケットスコア）・ISMN・出版社を突合してASINを記録。未確認なら同じ探索結果の反復追記を避け、次のハイドン未調査版へ進む。
+
+## 版照合の注意（2026-11-27 22:46 JST）
+- Henle HN205の**現行商品詳細ページ**（https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-205）は収録6作品（Op.1 No.0、Nos.1–4、No.6）を明記。一方、旧版出版社総合カタログ（https://www.henle.de/media/42/f7/4f/1704977225/2023-2024_GC.pdf）はBook Iの作品群としてOp.2の一部も列挙しており、版範囲に資料間の食い違いがある。**現行商品詳細を優先し、HN205/HN9205にOp.2収録と断定しない**。Claude掲載前には現物目次・版を最終照合。
+- Amazon.co.jpのHN205/HN208/HN9205/HN9216/HN211完全一致商品検索を再実施したが、商品個別ページ・ASINの確証なし。既存キューの`pending_review`と空のAmazonリンクを維持。録音CDや別作品は代替にしない。
