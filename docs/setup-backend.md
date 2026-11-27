@@ -51,7 +51,23 @@
 その後 **Actions → Preview (GitHub Pages) → Run workflow** でプレビューを作り直すと、フォームの「未接続」表示が消え、送信できるようになります。
 同じ変数で、停止防止の定期アクセス（`keepalive.yml`、週 2 回）も動き始めます。
 
-### 4. 届いた申し込みを見る（管理画面の接続までの間）
+### 4. 管理画面（/admin）で申し込みを見る
+
+管理画面は**プレビュー用のビルドにだけ**含まれます（本番ビルドには入りません）。ログインは Supabase Auth のメールアドレス＋パスワードで、**public.admins に登録した人だけ**がデータを読めます。
+
+1. Supabase の **Authentication → Sign In / Providers** で「**Allow new users to sign up**」をオフにする（一般の人がアカウントを作れないようにする）
+2. **Authentication → Users → Add user → Create new user** で、管理人のメールアドレスとパスワードを入れ、「Auto Confirm User」にチェックして作る
+3. 作ったユーザーの **User UID** をコピーし、**SQL Editor** で次を実行する（`<UID>` を置き換える）
+
+   ```sql
+   insert into public.admins (user_id) values ('<UID>');
+   ```
+4. プレビューの `/SONARIA-Website/admin/` を開き、手順 2 のメールアドレスとパスワードでログインする
+
+接続済み: お問い合わせ・案件（一覧・詳細・状態・既読/返信の印・メモ・実施日時や見積などの運営側の項目・状態の履歴）、講師申請（一覧・状態）
+未接続（空で表示）: 返信メールの送信・収益・アクセス解析・カレンダー・通知・PDF 保護・広告
+
+### 4-2. Table Editor で見る（管理画面の代わり）
 
 Supabase の **Table Editor → submissions** に 1 件ずつ保存されます。
 

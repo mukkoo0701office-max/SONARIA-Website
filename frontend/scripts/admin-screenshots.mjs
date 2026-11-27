@@ -32,6 +32,7 @@ for (const [vp, viewport] of Object.entries(viewports)) {
   await page.goto(`${base}/admin/`, { waitUntil: "networkidle" });
   await page.locator("#admin-password").waitFor();
   await shot(page, `${vp}-login`, false);
+  await page.fill("#admin-email", "test@example.com");
   await page.fill("#admin-password", "test-password");
   await page.locator('form button[type="submit"]').click();
   await page.locator("#admin-login-msg").waitFor();
