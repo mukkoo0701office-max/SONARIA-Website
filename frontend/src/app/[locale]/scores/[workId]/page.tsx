@@ -274,7 +274,7 @@ export default async function WorkPage({ params }: Props) {
       </section>
 
       {/* 広告枠 1（ダウンロードの操作ボタンから離し、本文の後）: Amazon の検索ウィジェット */}
-      <AmazonSearchWidget locale={locale} t={t.ad} work={{ composer: (c.short ?? c.name)[locale], title: work.title[locale], catalog: catalogText || undefined }} />
+      <AmazonSearchWidget locale={locale} work={{ composer: (c.short ?? c.name)[locale], title: work.title[locale], catalog: catalogText || undefined }} />
 
       {text?.overview && <Prose id="overview" title={tw.overview} body={text.overview} />}
       {text?.features && <Prose id="features" title={tw.features} body={text.features} />}

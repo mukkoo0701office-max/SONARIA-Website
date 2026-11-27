@@ -2,19 +2,20 @@
 
 import { useState } from "react";
 import { amazonSearch } from "@/data/affiliate/amazonSearch";
-import type { Dictionary } from "@/data/dictionaries/types";
+import { getDictionary } from "@/data/dictionaries";
 import { amazonKeyword, amazonSearchKinds, amazonSearchUrl, type AmazonSearchKind } from "@/lib/affiliate/amazonSearch";
 import type { Locale } from "@/lib/i18n";
 
 type Props = {
   locale: Locale;
-  t: Dictionary["library"]["ad"];
   work: { composer: string; title: string; catalog?: string };
 };
 
 // 作品ページの「Amazon で関連楽譜を探す」（広告）。スコア・パート譜・ポケットスコア・解説書を切り替えて検索する。
 // 検索結果は作品との一致を保証しないので、特定の商品を勧める書き方はしない。PDF のダウンロードボタンからは離して置く
-export default function AmazonSearchWidget({ locale, t, work }: Props) {
+// クライアント部品には関数を含む辞書を渡せないため、辞書はここで読む
+export default function AmazonSearchWidget({ locale, work }: Props) {
+  const t = getDictionary(locale).library.ad;
   const [kind, setKind] = useState<AmazonSearchKind>("score");
   const keyword = amazonKeyword(work, kind, locale);
   const s = t.amazonSearch;
