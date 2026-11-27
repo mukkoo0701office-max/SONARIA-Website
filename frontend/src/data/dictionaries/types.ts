@@ -127,6 +127,7 @@ export type Dictionary = {
     sort: string;
     sortOptions: { title: string; composer: string; pdfCount: string };
     view: string;
+    viewShort: string; // 検索結果カードのボタン（狭い場所用）
     close: string;
     details: string;
     detailText: string;

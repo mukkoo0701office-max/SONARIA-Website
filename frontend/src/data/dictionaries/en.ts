@@ -132,6 +132,7 @@ export const en: Dictionary = {
     sort: "Sort by",
     sortOptions: { title: "Title", composer: "Composer", pdfCount: "PDF count" },
     view: "View details",
+    viewShort: "Details",
     close: "Close",
     details: "Work details (demo)",
     detailText: "Production pages will show work notes, editions, movements, parts and PDF previews.",

@@ -132,6 +132,7 @@ export const ja: Dictionary = {
     sort: "並び替え",
     sortOptions: { title: "作品名", composer: "作曲家", pdfCount: "PDF数" },
     view: "作品詳細を見る",
+    viewShort: "詳細",
     close: "閉じる",
     details: "作品詳細（試作）",
     detailText: "本番では作品解説、版の比較、楽章・パート一覧、PDFプレビューを表示します。",
