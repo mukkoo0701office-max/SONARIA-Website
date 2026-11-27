@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Beethoven",
     "stage": "string_quartet",
-    "last_work": "Op.59 No.3",
-    "note": "Next Op.74. Simrock Op.59 four files shared across three works; verify work-specific page boundaries, score/parts editions, rights and site inventory."
+    "last_work": "Op.95",
+    "note": "Next Op.127. Op.74/95 historical first-edition parts and Breitkopf score differ; all PDFs, rights and site duplication remain unverified."
   },
   "items": [
     {
@@ -11476,6 +11476,230 @@
       },
       "rights_status": "unknown",
       "notes": "Research only. Four Simrock part files are SHARED across all three Op.59 quartets; do not treat as twelve unique PDFs. Verify individual movement boundaries and matching editions. IMSLP rights tag does not approve Japanese redistribution. SONARIA site inventory not fully audited. No download, approval or publication.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-op74-first-edition-parts-breitkopf-score",
+      "composer": "Ludwig van Beethoven",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.10 in E-flat",
+      "opus_catalog": "Op.74",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.10%2C_Op.74_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "Breitkopf & Härtel (parts); Breitkopf & Härtel (score)",
+        "publication_date": "1810 (parts); 1863 (score)",
+        "editor": "unknown (historical editions)",
+        "scope": "first edition combined four-part booklet and separately published full score",
+        "imslp_file_id": "51242",
+        "edition_comparison": "Autograph #774455; André score #274827 (1830); Clementi individual parts #803631–803634 (1810); compare movement 2 tempo wording."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.10%2C_Op.74_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "973810",
+        "edition_url": "https://imslp.org/wiki/String_Quartet_No.10%2C_Op.74_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "unknown",
+        "publication_date": "1863",
+        "scope": "Complete score listed, PDF not opened",
+        "evidence": "IMSLP Scores listing 2026-11-28"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "51242",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.10%2C_Op.74_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "unknown (first edition)",
+          "scope": "first edition combined four-part booklet; PDF pages and all movements not inspected",
+          "evidence": "IMSLP Parts listing checked 2026-11-28"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "51242",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.10%2C_Op.74_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "unknown (first edition)",
+          "scope": "first edition combined four-part booklet; PDF pages and all movements not inspected",
+          "evidence": "IMSLP Parts listing checked 2026-11-28"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "51242",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.10%2C_Op.74_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "unknown (first edition)",
+          "scope": "first edition combined four-part booklet; PDF pages and all movements not inspected",
+          "evidence": "IMSLP Parts listing checked 2026-11-28"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "51242",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.10%2C_Op.74_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Breitkopf & Härtel",
+          "editor": "unknown (first edition)",
+          "scope": "first edition combined four-part booklet; PDF pages and all movements not inspected",
+          "evidence": "IMSLP Parts listing checked 2026-11-28"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "different_edition",
+        "evidence": "Historical first-edition parts 1810 versus Breitkopf full score 1863; textual comparison pending"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "pdf_page_quality_check",
+        "movement_and_part_completeness",
+        "score_parts_textual_collation",
+        "sonaria_existing_catalog_check",
+        "japan_republication_rights_review"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.10%2C_Op.74_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP page metadata: score #973810; parts #51242, #51242, #51242, #51242. No PDFs downloaded."
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.10%2C_Op.74_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP work identification, instrumentation (2 violins, viola, cello), historical score and parts publisher/file metadata; PDFs uninspected"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Research only; historical editions are credible candidates, not quality-passed. Confirm individual file contents, score/part textual differences, scanning and Japanese redistribution rights. No approval or publication.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-op95-first-edition-parts-breitkopf-score",
+      "composer": "Ludwig van Beethoven",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.11 in F minor",
+      "opus_catalog": "Op.95",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.11%2C_Op.95_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "S.A. Steiner & Co. (parts); Breitkopf & Härtel (score)",
+        "publication_date": "1816 (parts); 1863 (score)",
+        "editor": "unknown (historical editions)",
+        "scope": "four individual first-edition parts and separately published full score",
+        "imslp_file_id": "164588",
+        "edition_comparison": "Autograph #396267; combined Steiner parts #51274 low-resolution; individual Steiner scans #164588/#164589/#164592/#164593; Paul Mies Henle #886261 (1968) rights require scrutiny."
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.11%2C_Op.95_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin_1",
+        "violin_2",
+        "viola",
+        "cello"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "973811",
+        "edition_url": "https://imslp.org/wiki/String_Quartet_No.11%2C_Op.95_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "unknown",
+        "publication_date": "1863",
+        "scope": "Complete score listed, PDF not opened",
+        "evidence": "IMSLP Scores listing 2026-11-28"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "164588",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.11%2C_Op.95_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "S.A. Steiner & Co.",
+          "editor": "unknown (first edition)",
+          "scope": "four individual first-edition parts; PDF pages and all movements not inspected",
+          "evidence": "IMSLP Parts listing checked 2026-11-28"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "164589",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.11%2C_Op.95_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "S.A. Steiner & Co.",
+          "editor": "unknown (first edition)",
+          "scope": "four individual first-edition parts; PDF pages and all movements not inspected",
+          "evidence": "IMSLP Parts listing checked 2026-11-28"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "164592",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.11%2C_Op.95_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "S.A. Steiner & Co.",
+          "editor": "unknown (first edition)",
+          "scope": "four individual first-edition parts; PDF pages and all movements not inspected",
+          "evidence": "IMSLP Parts listing checked 2026-11-28"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "164593",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.11%2C_Op.95_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "S.A. Steiner & Co.",
+          "editor": "unknown (first edition)",
+          "scope": "four individual first-edition parts; PDF pages and all movements not inspected",
+          "evidence": "IMSLP Parts listing checked 2026-11-28"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "different_edition",
+        "evidence": "Historical first-edition parts 1816 versus Breitkopf full score 1863; textual comparison pending"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "pdf_page_quality_check",
+        "movement_and_part_completeness",
+        "score_parts_textual_collation",
+        "sonaria_existing_catalog_check",
+        "japan_republication_rights_review"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.11%2C_Op.95_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP page metadata: score #973811; parts #164588, #164589, #164592, #164593. No PDFs downloaded."
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.11%2C_Op.95_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP work identification, instrumentation (2 violins, viola, cello), historical score and parts publisher/file metadata; PDFs uninspected"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Research only; historical editions are credible candidates, not quality-passed. Confirm individual file contents, score/part textual differences, scanning and Japanese redistribution rights. No approval or publication.",
       "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null
