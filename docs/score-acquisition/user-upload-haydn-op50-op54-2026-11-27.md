@@ -28,3 +28,18 @@ The owner explicitly authorizes publication of parts-only editions without a ful
 - [ ] Do not merge or deploy without explicit owner approval.
 
 See `CLAUDE.md`, `docs/workflow.md`, and `docs/SONARIA_UI_DESIGN_SYSTEM_v1.0.md`.
+
+## Canonical rename and storage mapping (approved naming template)
+
+| IMSLP ID | New filename | Catalog work ID |
+|---|---|---|
+| 106764 | Haydn_String-Quartets-Op50_Violin1.pdf | haydn-string-quartets-op50 |
+| 106765 | Haydn_String-Quartets-Op50_Violin2.pdf | haydn-string-quartets-op50 |
+| 106766 | Haydn_String-Quartets-Op50_Viola.pdf | haydn-string-quartets-op50 |
+| 106767 | Haydn_String-Quartets-Op50_Cello.pdf | haydn-string-quartets-op50 |
+| 105769 | Haydn_String-Quartets-Op54_Violin1.pdf | haydn-string-quartets-op54 |
+| 105770 | Haydn_String-Quartets-Op54_Violin2.pdf | haydn-string-quartets-op54 |
+| 105771 | Haydn_String-Quartets-Op54_Viola.pdf | haydn-string-quartets-op54 |
+| 105772 | Haydn_String-Quartets-Op54_Cello.pdf | haydn-string-quartets-op54 |
+
+Preferred website paths: `frontend/public/scores/<catalog work ID>/<new filename>` or the existing GitHub Release asset workflow for large PDFs. Do not create download links before assets actually exist. Retain original IMSLP IDs and SHA256 checksums for provenance.
