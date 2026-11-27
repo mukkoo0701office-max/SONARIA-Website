@@ -5,7 +5,6 @@ import Container from "@/components/layout/Container";
 import AffiliateSlot from "@/components/library/AffiliateSlot";
 import AmazonRelated from "@/components/library/AmazonRelated";
 import AmazonSearchBanner from "@/components/library/AmazonSearchBanner";
-import AmazonSearchWidget from "@/components/library/AmazonSearchWidget";
 import { amazonItemsFor } from "@/data/affiliate/amazon";
 import BowingBanner from "@/components/library/BowingBanner";
 import PdfFile from "@/components/library/PdfFile";
@@ -273,9 +272,6 @@ export default async function WorkPage({ params }: Props) {
         </dl>
       </section>
 
-      {/* 広告枠 1（ダウンロードの操作ボタンから離し、本文の後）: Amazon の検索ウィジェット */}
-      <AmazonSearchWidget locale={locale} work={{ composer: (c.short ?? c.name)[locale], title: work.title[locale], catalog: catalogText || undefined }} />
-
       {text?.overview && <Prose id="overview" title={tw.overview} body={text.overview} />}
       {text?.features && <Prose id="features" title={tw.features} body={text.features} />}
       {text?.performanceTips && <Prose id="tips" title={tw.performanceTips} body={text.performanceTips} />}
@@ -339,14 +335,6 @@ export default async function WorkPage({ params }: Props) {
         </Link>
       </section>
 
-      {/* 広告枠 2（ページ下部。1 ページ 2 枠まで）: 確認済みの商品（amazon.json）→ 作品ごとのリンク → 作曲家の楽譜を探すバナーの順 */}
-      {amazonItems.length > 0 ? (
-        <AmazonRelated items={amazonItems} locale={locale} t={t.ad} />
-      ) : work.affiliate && work.affiliate.length > 0 ? (
-        <AffiliateSlot placement="work" t={t.ad} links={work.affiliate} />
-      ) : (
-        <AmazonSearchBanner t={t.ad} s={t.amazonSearch} composer={(c.short ?? c.name)[locale]} keyword={t.amazonSearch.bannerKeyword((c.short ?? c.name)[locale])} />
-      )}
 
       {related.length > 0 && (
         <section aria-labelledby="related" className="mt-8">
@@ -355,6 +343,16 @@ export default async function WorkPage({ params }: Props) {
           </h2>
           <WorkList works={related} locale={locale} />
         </section>
+      )}
+
+      {/* Amazon の広告枠はページ最下部の 1 枠だけ（運営者の指示 2026-11-27。本文途中の検索ウィジェットは撤去）。
+          中身は 確認済みの商品（amazon.json。approved_for_implementation のみ）→ 作品ごとのリンク → 作曲家の楽譜を探すバナー の順で 1 つ */}
+      {amazonItems.length > 0 ? (
+        <AmazonRelated items={amazonItems} locale={locale} t={t.ad} />
+      ) : work.affiliate && work.affiliate.length > 0 ? (
+        <AffiliateSlot placement="work" t={t.ad} links={work.affiliate} />
+      ) : (
+        <AmazonSearchBanner t={t.ad} s={t.amazonSearch} composer={(c.short ?? c.name)[locale]} keyword={t.amazonSearch.bannerKeyword((c.short ?? c.name)[locale])} />
       )}
 
       <JsonLd data={ld} />

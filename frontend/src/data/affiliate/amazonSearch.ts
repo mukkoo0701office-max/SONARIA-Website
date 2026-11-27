@@ -6,6 +6,7 @@
 export const amazonSearch = {
   // トラッキング ID（運営者がアソシエイトの管理画面で確認したもの）。空にするとタグなしの検索リンクになる
   tag: "mukkoo-22",
-  // 1 ページに置く広告枠の上限（docs/affiliate-research/README.md の方針）
-  maxSlotsPerPage: 2,
+  // 1 ページに置く広告枠の上限。運営者の指示（2026-11-27）でページ下部の 1 枠だけにした
+  // （以前は docs/affiliate-research/README.md の方針で 2 枠）。検索ウィジェット（AmazonSearchWidget）は現在どのページにも置いていない
+  maxSlotsPerPage: 1,
 } as const;

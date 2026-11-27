@@ -193,23 +193,23 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   // プレビュー環境では PDF をリリースの添付ファイルから取得する（ダウンロードのリンクが外部 URL になる）
   await page.goto(`${base}/ja/scores/beethoven-violin-sonata-5/`, { waitUntil: "networkidle" });
   const dl = await page.locator("a[download]").first().getAttribute("href");
-  // Amazon の広告枠（検索ウィジェット・バナー）: 1 ページ 2 枠まで、ダウンロードボタンより後、トラッキング ID と rel="sponsored"
-  const adCount = await page.locator('aside#amazon-search, aside[aria-labelledby="amazon-search"], aside[aria-labelledby="amazon-banner"], aside[aria-labelledby="amazon-related"]').count();
-  const adHref = await page.locator('aside[aria-labelledby="amazon-search"] a').first().getAttribute("href");
-  const adRel = await page.locator('aside[aria-labelledby="amazon-search"] a').first().getAttribute("rel");
-  check(`${vpName}: work page has 1-2 Amazon slots`, adCount >= 1 && adCount <= 2, String(adCount));
+  // Amazon の広告枠: ページ最下部の 1 枠だけ（運営者の指示 2026-11-27）。トラッキング ID と rel="sponsored"、関連作品より後
+  const adSel = 'aside#amazon-search, aside[aria-labelledby="amazon-search"], aside[aria-labelledby="amazon-banner"], aside[aria-labelledby="amazon-related"]';
+  const adCount = await page.locator(adSel).count();
+  const adHref = await page.locator(`${adSel}`).first().locator("a").first().getAttribute("href");
+  const adRel = await page.locator(`${adSel}`).first().locator("a").first().getAttribute("rel");
+  check(`${vpName}: work page has exactly 1 Amazon slot`, adCount === 1, String(adCount));
   check(`${vpName}: Amazon link has tag and sponsored rel`, Boolean(adHref && adHref.includes("tag=mukkoo-22") && adRel && adRel.includes("sponsored")), `${adHref} ${adRel}`);
-  const order = await page.evaluate(() => {
+  const order = await page.evaluate((sel) => {
     const dl = document.querySelector("a[download]");
-    const ad = document.querySelector('aside[aria-labelledby="amazon-search"]');
-    return dl && ad ? Boolean(dl.compareDocumentPosition(ad) & Node.DOCUMENT_POSITION_FOLLOWING) : false;
-  });
-  check(`${vpName}: Amazon slot comes after download buttons`, order);
-  await page.locator('aside[aria-labelledby="amazon-search"] button', { hasText: "パート譜" }).click();
-  check(`${vpName}: Amazon widget switches keyword`, decodeURIComponent((await page.locator('aside[aria-labelledby="amazon-search"] a').first().getAttribute("href")) || "").includes("パート譜"));
-  await page.locator('aside[aria-labelledby="amazon-search"]').scrollIntoViewIfNeeded();
-  await shot(page, `${vpName}-ja-work-amazon`, false);
-  await page.locator('aside[aria-labelledby="amazon-banner"]').scrollIntoViewIfNeeded();
+    const ad = document.querySelector(sel);
+    const related = document.querySelector("#related");
+    const afterDl = dl && ad ? Boolean(dl.compareDocumentPosition(ad) & Node.DOCUMENT_POSITION_FOLLOWING) : false;
+    const afterRelated = related && ad ? Boolean(related.compareDocumentPosition(ad) & Node.DOCUMENT_POSITION_FOLLOWING) : true;
+    return afterDl && afterRelated;
+  }, adSel);
+  check(`${vpName}: Amazon slot is at the bottom (after downloads and related works)`, order);
+  await page.locator(adSel).first().scrollIntoViewIfNeeded();
   await shot(page, `${vpName}-ja-work-amazon-banner`, false);
   check(`${vpName}: PDF download points to release asset`, Boolean(dl && dl.includes("/releases/download/scores-v1/")), String(dl));
 
