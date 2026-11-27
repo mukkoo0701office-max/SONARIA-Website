@@ -978,10 +978,11 @@
       "priority": "S",
       "status": "pending_review",
       "date_checked": "2026-11-27",
-      "amazon_verification_status": "not_matched_exact_amazon_co_jp_asin",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
       "last_amazon_search_at": "2026-11-27",
       "work_scope_note": "Henle HN437 is a separately edited G major violin+piano sonata Hob.XV:32, not an anthology of eight older historical violin sonatas. Do not recommend as score for arrangements Nos.2–8.",
-      "affiliate_note": "Amazon.co.jp direct edition listing and ASIN unresolved in exact ISMN / product search; a third-party Yamaha Sheet Music Store Haydn violin sonatas volume listing does not establish Amazon availability or exact edition match. Leave links empty until confirmed Amazon detail page."
+      "affiliate_note": "Amazon.co.jp direct edition listing and ASIN unresolved in exact ISMN / product search; a third-party Yamaha Sheet Music Store Haydn violin sonatas volume listing does not establish Amazon availability or exact edition match. Leave links empty until confirmed Amazon detail page.",
+      "verification_notes": "2026-11-27 follow-up: exact site:amazon.co.jp/dp/ search with publisher catalogue HN437, HN216 or EP190 and Haydn/instrumentation returned no matching indexed individual Amazon.co.jp detail page. Previously established publisher edition details remain; Amazon ASIN unverified. Keep pending_review and null Amazon URL; no affiliate link."
     },
     {
       "id": "haydn-henle-hn216-violin-viola",
@@ -1010,7 +1011,7 @@
       "priority": "S",
       "status": "pending_review",
       "date_checked": "2026-11-27",
-      "amazon_verification_status": "exact_amazon_co_jp_item_not_found",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
       "last_amazon_search_at": "2026-11-27",
       "work_scope_note": "Henle HN216 is violin+viola ensemble, not violin+piano; do not recommend for historical Violin Sonatas Nos.2–8 that have a piano part.",
       "affiliate_note": "Amazon.co.jp direct edition listing and ASIN unresolved in exact ISMN / product search; a third-party Yamaha Sheet Music Store Haydn violin sonatas volume listing does not establish Amazon availability or exact edition match. Leave links empty until confirmed Amazon detail page.",
@@ -1039,7 +1040,8 @@
         "product_count": "one commercial book covering all six sonatas",
         "comparison_note": "Unrelated to 2-violin Op.6 duos. Missing free historical two-staff score and Vn/Va parts does NOT justify reusing commercial Henle publication."
       },
-      "asin_verification_note": "Live Amazon.co.jp site-specific searches for catalogue HN216 and ISMN 9790201802169 returned no matching trustworthy direct Amazon.co.jp/dp detail URL; use authorized Associates Product Linking or official API. Do not manufacture ASIN, link, stock or price."
+      "asin_verification_note": "Live Amazon.co.jp site-specific searches for catalogue HN216 and ISMN 9790201802169 returned no matching trustworthy direct Amazon.co.jp/dp detail URL; use authorized Associates Product Linking or official API. Do not manufacture ASIN, link, stock or price.",
+      "verification_notes": "2026-11-27 follow-up: exact site:amazon.co.jp/dp/ search with publisher catalogue HN437, HN216 or EP190 and Haydn/instrumentation returned no matching indexed individual Amazon.co.jp detail page. Previously established publisher edition details remain; Amazon ASIN unverified. Keep pending_review and null Amazon URL; no affiliate link."
     },
     {
       "id": "haydn-peters-ep190-eight-violin-sonatas",
@@ -1071,7 +1073,7 @@
       "status": "pending_review",
       "date_checked": "2026-11-27",
       "verification": "Current Edition Peters publisher direct page confirms EP190, ISMN 9790300700755, 136 pages, instrumentation violin and piano, 8-sonata anthology and separate violin part. Targeted Amazon.co.jp direct ASIN/ISBN searches returned no reliable verified listing. Not approved for affiliate placement.",
-      "amazon_verification_status": "no_verified_amazon_co_jp_detail_or_ASIN",
+      "amazon_verification_status": "unverified_exact_amazon_japan_item",
       "last_amazon_search_at": "2026-11-27",
       "arrangement_contents_audit": {
         "violin_sonata_no6": {
@@ -1092,7 +1094,8 @@
         },
         "format": "piano score and separate violin part; one EP190 volume includes 8 sonatas, not 8 separate published books"
       },
-      "notes": " EP190 matches all eight historical violin-piano arrangements, Nos.6-8 included. IMSLP No.6 after Hob.II:11, also relates to keyboard Hob.XVI:15 listed by Peters; do not claim simple source error. Nos.7-8 omit original Op.77 quartet minuet/trio. Exact Amazon.co.jp ASIN not verified; no affiliate link."
+      "notes": " EP190 matches all eight historical violin-piano arrangements, Nos.6-8 included. IMSLP No.6 after Hob.II:11, also relates to keyboard Hob.XVI:15 listed by Peters; do not claim simple source error. Nos.7-8 omit original Op.77 quartet minuet/trio. Exact Amazon.co.jp ASIN not verified; no affiliate link.",
+      "verification_notes": "2026-11-27 follow-up: exact site:amazon.co.jp/dp/ search with publisher catalogue HN437, HN216 or EP190 and Haydn/instrumentation returned no matching indexed individual Amazon.co.jp detail page. Previously established publisher edition details remain; Amazon ASIN unverified. Keep pending_review and null Amazon URL; no affiliate link."
     },
     {
       "id": "mozart-henle-hn1120-quartets-vol1-parts",
