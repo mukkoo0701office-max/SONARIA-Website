@@ -34,3 +34,9 @@
 - 作品・版・ASINの突合ができたものだけを対象に、Amazonアソシエイトの許可された方法で `mukkoo-22` を付ける。例: `https://www.amazon.co.jp/dp/{検証済ASIN}?tag=mukkoo-22`（例示用。ASINを推測しない）。
 - GitHubの候補キューでは出版社で商品の存在が確認できたものと、Amazonの商品ページを確認できたものを分けて管理する。出版社だけ確認できてもステータスは `pending_review`。
 - サイトのAmazonアソシエイト登録・広告開示の適合、実リンクへのアクセス、重複、作品番号、編成をClaude実装前に確認する。
+
+## Amazon.co.jp 個別商品照合ログ（2026-11-27 21:52 JST）
+- 対象: Haydn / Henle HN205、HN208、HN9205、HN9216、HN211。Amazon.co.jp の `/dp/` を対象とした品番完全一致検索と、日本語での品番・ISMN併用検索を再実施。**5件とも商品詳細ページとASINの組を確認できず**、全件 `pending_review` のまま。正式な `tag=mukkoo-22` リンクは追加しない。
+- 出版社原典の再確認: HN205 = ISMN 979-0-2018-0205-3（弦楽四重奏パート譜、Op.1初期作品集） https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-205 ; HN9216 = ISMN 979-0-2018-9216-0（12冊組スタディスコア、69作品、HN9205–9215およびHN9771） https://www.henle.de/jp/The-String-Quartets-12-Volumes-in-a-Slipcase/HN-9216 。いずれも出版社情報であり、Amazon掲載の証拠ではない。
+- 誤認防止: Op.20の演奏録音CDやハイドンのピアノ曲集を弦楽四重奏の市販譜と混同しない。HN9216は複数作品の全集であり、個別作品ページに表示する場合は対象作品を含むことを別途明示する。
+- 次回はAmazon個別商品への直接到達が可能な場合に限り、タイトル・版種（パート譜/ポケットスコア）・ISMN・出版社を突合してASINを記録。未確認なら同じ探索結果の反復追記を避け、次のハイドン未調査版へ進む。
