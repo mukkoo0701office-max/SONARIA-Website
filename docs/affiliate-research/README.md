@@ -44,3 +44,9 @@
 ## 版照合の注意（2026-11-27 22:46 JST）
 - Henle HN205の**現行商品詳細ページ**（https://www.henle.de/en/String-Quartets-Book-I-Early-String-Quartets/HN-205）は収録6作品（Op.1 No.0、Nos.1–4、No.6）を明記。一方、旧版出版社総合カタログ（https://www.henle.de/media/42/f7/4f/1704977225/2023-2024_GC.pdf）はBook Iの作品群としてOp.2の一部も列挙しており、版範囲に資料間の食い違いがある。**現行商品詳細を優先し、HN205/HN9205にOp.2収録と断定しない**。Claude掲載前には現物目次・版を最終照合。
 - Amazon.co.jpのHN205/HN208/HN9205/HN9216/HN211完全一致商品検索を再実施したが、商品個別ページ・ASINの確証なし。既存キューの`pending_review`と空のAmazonリンクを維持。録音CDや別作品は代替にしない。
+
+## 編成誤関連付け防止の追加確認（2026-11-28 JST）
+- Amazon.co.jp の HN205/HN208/HN9205/HN9216/HN211 について品番完全一致・`site:amazon.co.jp/dp/`・HN205のISMN 9790201802053 で再検索したが、今回も商品個別ページとASINの対応は確認できなかった。5件とも `pending_review`、`amazon_url`/`asin` は未設定を維持。既存キューに同じ失敗結果を重複追加しない。
+- **HN216** は Henle公式で *Six Sonatas Hob. VI:1–6 for Violin and Viola*、ISMN `979-0-2018-0216-9`、ヴァイオリン＋ヴィオラの二重奏用原典版と確認。弦楽四重奏ページに関連付けない。出典: https://www.henle.de/en/Six-Sonatas-Hob.-VI-1-6-for-Violin-and-Viola/HN-216
+- **HN437** は Henle公式で *Violin Sonata G major Hob. XV:32*、ISMN `979-0-2018-0437-8`、ヴァイオリン＋ピアノ用原典版と確認。弦楽四重奏ページに関連付けない。出典: https://www.henle.de/en/Violin-Sonata-G-major-Hob.-XV-32/HN-437
+- 以上は出版社の商品同定のみで、Amazon.co.jpでの販売・ASINの検証ではない。いずれもAmazonアソシエイトリンクを生成しない。次回は同一検索の反復より、ハイドン弦楽四重奏の未調査の版・出版社を優先する。
