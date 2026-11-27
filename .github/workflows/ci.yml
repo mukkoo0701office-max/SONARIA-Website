@@ -116,7 +116,13 @@ jobs:
           test -f "out/ja/scores/$W/index.html" || { echo "work page missing"; exit 1; }
           test -f "out/ja/composers/$C/index.html" || { echo "composer page missing"; exit 1; }
           grep -q '"@type":"MusicComposition"' "out/ja/scores/$W/index.html" || { echo "JSON-LD missing"; exit 1; }
-          test ! -e "out/en/scores/$W" || { echo "English page must not exist without English text"; exit 1; }
+          # 英語ページは英語の本文または概要がある作品だけに出す（workLocales と同じ規則）
+          HAS_EN=$(node -e 'const t=require("./src/data/scores/workTexts.json").works[process.argv[1]];console.log(t&&t.summary&&t.summary.en?1:0)' "$W")
+          if [ "$HAS_EN" = "1" ]; then
+            test -f "out/en/scores/$W/index.html" || { echo "English page missing despite English summary"; exit 1; }
+          else
+            test ! -e "out/en/scores/$W" || { echo "English page must not exist without English text"; exit 1; }
+          fi
           grep -q '/SONARIA-Website/_next/' out/ja/index.html || { echo "basePath not applied"; exit 1; }
           grep -q 'href="/SONARIA-Website/ja/scores/"' out/ja/index.html || { echo "links missing basePath"; exit 1; }
           grep -q 'noindex' out/ja/index.html || { echo "preview noindex missing"; exit 1; }
