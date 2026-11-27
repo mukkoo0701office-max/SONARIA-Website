@@ -36,10 +36,10 @@
     }
   ],
   "cursor": {
-    "composer": "Mozart",
-    "stage": "violin_sonata",
-    "last_work": "K.Anh.47/546a; K.Anh.48/385E; K.Anh.50/526a",
-    "note": "Three separately indexed fragmentary violin/piano sources listed, not complete sonatas. Next audit Mozart original cello-sonata category; distinguish Wolfgang Amadeus from Franz Xaver Wolfgang Mozart, and arrangements from original compositions. No category completion assertion."
+    "composer": "Beethoven",
+    "stage": "string_quartet",
+    "last_work": null,
+    "note": "Mozart cello-sonata category audited: no complete original sonata identified, but incomplete K.Anh.46/374g cello/piano Andantino exists. Franz Xaver Mozart Op.19 excluded. Next Beethoven string quartets from Op.18 No.1; verify inventory and individual score/parts before addition."
   },
   "items": [
     {
@@ -10698,5 +10698,44 @@
     ],
     "rights_status": "unknown",
     "note": "The 8 historical cello transcriptions have now been catalogued, but exact source scan and music quality remain uninspected. No original Haydn cello sonata was identified. Nos.7 and 8 omit Minuet and Trio."
+  },
+  "mozart_cello_sonata_audit": {
+    "checked_at": "2026-11-27",
+    "result": "No complete original W.A. Mozart cello sonata identified; do not mark entire oeuvre exhaustively verified",
+    "fragment": {
+      "catalog": "K.Anh.46/374g",
+      "title": "Andantino in B-flat major for cello and piano",
+      "classification": "original incomplete fragment; not a complete cello sonata",
+      "imslp_catalog_url": "https://imslp.org/wiki/List_of_compositions_by_Wolfgang_Amadeus_Mozart",
+      "imslp_file_url": null,
+      "source_status": "IMSLP work-list entry confirmed; standalone score/file URL not verified",
+      "commercial_edition": {
+        "publisher": "Schott",
+        "editor": "Felix Schroeder",
+        "catalog": "CB150",
+        "bibliographic_source": "https://ci.nii.ac.jp/ncid/BA41328278",
+        "rights": "unknown; modern editorial material, not approved"
+      },
+      "other_completion": {
+        "editor": "Annette Isserlis",
+        "url": "https://fountayneeditions.com/product/mozart-andantino-for-cello-and-piano-k-anh-46-374g/",
+        "rights": "unknown; modern completion; do not publish"
+      },
+      "score_parts": {
+        "score": "unverified_imslp",
+        "cello": "unverified_imslp",
+        "piano": "unverified_imslp"
+      },
+      "quality": "not_pdf_inspected"
+    },
+    "misattribution": {
+      "work": "Cello Sonata in E major Op.19",
+      "actual_composer": "Franz Xaver Wolfgang Mozart (son), not Wolfgang Amadeus Mozart",
+      "url": "https://imslp.org/wiki/Cello_Sonata_in_E_major%2C_Op.19_%28Mozart%2C_Franz_Xaver_Wolfgang%29",
+      "action": "exclude from W.A. Mozart category"
+    },
+    "rights_status": "unknown",
+    "status": "research_needed",
+    "notes": "No new PDF candidates approved. Original cello/piano fragment exists, so 'Mozart never wrote any cello/piano music' is inaccurate. Check modern completion and source manuscript before any acquisition. No download, rights approval or publication."
   }
 }
