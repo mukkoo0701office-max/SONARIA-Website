@@ -65,10 +65,40 @@ for (const [vp, viewport] of Object.entries(viewports)) {
   await page.locator("label", { hasText: "未返信のみ" }).click();
   await page.waitForTimeout(200);
   check(`${vp}: inquiry filter kept in URL`, page.url().includes("unreplied=1"), page.url());
+  // 返信文の組み立て（送信時の原文がある案件 = demo-inq-1）
   await page.goto(`${base}/admin/inquiries/detail/?id=demo-inq-1`, { waitUntil: "networkidle" });
+  await page.locator("#r-body").waitFor();
+  await page.waitForTimeout(300);
+  const replyBody = await page.inputValue("#r-body");
+  check(`${vp}: reply is built from the submission`, replyBody.includes("佐藤 花子（デモ） 様") && replyBody.includes("弦楽四重奏") && replyBody.includes("SONARIA"), replyBody.slice(0, 80));
+  check(`${vp}: reply does not ask about venue or duration`, !/会場|演奏時間/.test(replyBody));
+  check(`${vp}: tidy view shows labelled answers`, await page.locator('section[aria-labelledby="d-request"] dt', { hasText: "予算範囲" }).first().isVisible());
+  await page.locator('section[aria-labelledby="d-request"] button', { hasText: "送信時の原文" }).click();
+  check(`${vp}: raw view shows submitted JSON`, (await page.locator('section[aria-labelledby="d-request"] pre').innerText()).includes('"budget": "100to200k"'));
+  await page.locator('section[aria-labelledby="d-request"] button', { hasText: "整理して表示" }).click();
+  // 見積: 金額は入力するまで【要入力】
+  await page.selectOption("#r-purpose", "quote");
+  await page.waitForTimeout(200);
+  check(`${vp}: quote asks for amount until entered`, (await page.inputValue("#r-body")).includes("【要入力: quote_amount】"));
+  await page.fill("#r-in-quote_amount", "135000");
+  await page.waitForTimeout(200);
+  check(`${vp}: quote amount is inserted`, (await page.inputValue("#r-body")).includes("￥135,000") || (await page.inputValue("#r-body")).includes("¥135,000"));
+  const mailHref = await page.getAttribute("#r-open-mail", "href");
+  check(`${vp}: open-in-mail link is mailto with encoded body`, (mailHref ?? "").startsWith("mailto:demo-1@example.com?subject=") && !(mailHref ?? "").includes("\n"));
+  await shot(page, `${vp}-reply-composer`);
+  // 送った確認 → 「送った」で対応記録に残る（コピーやリンクだけでは記録しない）
+  await page.locator("button", { hasText: "送ったので記録する" }).click();
+  await page.locator('[role="alertdialog"]').waitFor();
+  await shot(page, `${vp}-reply-ask-sent`, false);
+  await page.locator('[role="alertdialog"] button', { hasText: "送った" }).first().click();
+  await page.waitForTimeout(500);
+  check(`${vp}: sent reply is saved to the timeline`, await page.locator('section[aria-labelledby="d-timeline"]', { hasText: "返信を送った（見積を送る）" }).isVisible());
+
+  // 原文がない案件では、従来の返信欄（テンプレート）を使う
+  await page.goto(`${base}/admin/inquiries/detail/?id=demo-inq-2`, { waitUntil: "networkidle" });
   await page.locator("#d-template").waitFor();
   await page.selectOption("#d-template", "thanks");
-  check(`${vp}: template fills reply`, (await page.inputValue("#d-body")).includes("佐藤"));
+  check(`${vp}: template fills reply`, (await page.inputValue("#d-body")).length > 0);
   await page.locator("button", { hasText: "プレビュー" }).click();
   await page.locator("dialog[open]").waitFor();
   await shot(page, `${vp}-inquiry-preview`, false);
