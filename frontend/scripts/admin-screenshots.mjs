@@ -72,10 +72,10 @@ for (const [vp, viewport] of Object.entries(viewports)) {
   const replyBody = await page.inputValue("#r-body");
   check(`${vp}: reply is built from the submission`, replyBody.includes("佐藤 花子（デモ） 様") && replyBody.includes("弦楽四重奏") && replyBody.includes("SONARIA"), replyBody.slice(0, 80));
   check(`${vp}: reply does not ask about venue or duration`, !/会場|演奏時間/.test(replyBody));
-  check(`${vp}: tidy view shows labelled answers`, await page.locator("#d-request dt", { hasText: "予算範囲" }).first().isVisible());
-  await page.locator("#d-request button", { hasText: "送信時の原文" }).click();
-  check(`${vp}: raw view shows submitted JSON`, (await page.locator("#d-request pre").innerText()).includes('"budget": "100to200k"'));
-  await page.locator("#d-request button", { hasText: "整理して表示" }).click();
+  check(`${vp}: tidy view shows labelled answers`, await page.locator('section[aria-labelledby="d-request"] dt', { hasText: "予算範囲" }).first().isVisible());
+  await page.locator('section[aria-labelledby="d-request"] button', { hasText: "送信時の原文" }).click();
+  check(`${vp}: raw view shows submitted JSON`, (await page.locator('section[aria-labelledby="d-request"] pre').innerText()).includes('"budget": "100to200k"'));
+  await page.locator('section[aria-labelledby="d-request"] button', { hasText: "整理して表示" }).click();
   // 見積: 金額は入力するまで【要入力】
   await page.selectOption("#r-purpose", "quote");
   await page.waitForTimeout(200);
@@ -92,7 +92,7 @@ for (const [vp, viewport] of Object.entries(viewports)) {
   await shot(page, `${vp}-reply-ask-sent`, false);
   await page.locator('[role="alertdialog"] button', { hasText: "送った" }).first().click();
   await page.waitForTimeout(500);
-  check(`${vp}: sent reply is saved to the timeline`, await page.locator("#d-timeline", { hasText: "返信を送った（見積を送る）" }).isVisible());
+  check(`${vp}: sent reply is saved to the timeline`, await page.locator('section[aria-labelledby="d-timeline"]', { hasText: "返信を送った（見積を送る）" }).isVisible());
 
   // 原文がない案件では、従来の返信欄（テンプレート）を使う
   await page.goto(`${base}/admin/inquiries/detail/?id=demo-inq-2`, { waitUntil: "networkidle" });
