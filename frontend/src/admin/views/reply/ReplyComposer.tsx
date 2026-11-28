@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useAdmin } from "../../AdminContext";
 import { describeSubmission } from "../../replies/describe";
-import { buildReply, inputsByPurpose, mailtoLink, purposesByKind, type InputKey, type Purpose } from "../../replies/engine";
+import { buildReply, mailtoLink, purposesByKind, type InputKey, type Purpose } from "../../replies/engine";
 import type { Inquiry } from "../../types";
 import { buttonPrimary, buttonSecondary, Card, Field, inputClass } from "../../ui";
 
@@ -174,7 +174,7 @@ export default function ReplyComposer({ inq, onRecorded }: Props) {
     setSelected(built.available.map((a) => a.key).filter((k) => current.has(k)));
   };
 
-  const neededInputs = inputsByPurpose[purpose] ?? [];
+  const neededInputs = built.inputs;
   const missing = built.missing.map((m) => t.reply.missingNames[m] ?? m);
 
   return (

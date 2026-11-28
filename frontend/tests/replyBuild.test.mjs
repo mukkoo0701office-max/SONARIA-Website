@@ -74,3 +74,8 @@ test("mailto: は宛先・件名・本文をエンコードし、改行を CRLF 
   assert.ok(url.includes("%0D%0A"));
   assert.ok(!url.includes("\n"));
 });
+
+test("入力欄は、その返信で使うものだけを出す（演奏依頼の見積に納期の欄は出さない）", () => {
+  assert.deepEqual(buildReply({ kind: "performance_quote", purpose: "quote", locale: "ja", facts: perf }).inputs, ["quote_amount"]);
+  assert.deepEqual(buildReply({ kind: "bowing", purpose: "quote", locale: "ja", facts: perf }).inputs, ["quote_amount", "deadline"]);
+});

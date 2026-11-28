@@ -392,6 +392,8 @@ export type BuildResult = {
   available: { key: string; title: string; selected: boolean; auto: boolean }[];
   /** 値が足りない差し込み（例: quote_amount） */
   missing: string[];
+  /** この目的の部品が使う、運営者の入力欄（使わない欄は画面に出さない） */
+  inputs: InputKey[];
 };
 
 const VAR = /\{([a-z_]+)\}/g;
@@ -434,9 +436,14 @@ export function buildReply(input: BuildInput): BuildResult {
     .join("\n\n");
   const subject = fill(subjects[purpose][locale], values, missing, locale);
 
+  const used = new Set<string>();
+  for (const b of candidates) for (const m of b.text[locale].matchAll(VAR)) used.add(m[1]);
+  const inputKeys = (inputsByPurpose[purpose] ?? []).filter((k) => used.has(k));
+
   return {
     subject,
     body,
+    inputs: inputKeys,
     available: candidates.map((b) => ({ key: b.key, title: b.title[locale], selected: chosen.has(b.key), auto: auto.has(b.key) })),
     missing: [...missing],
   };
