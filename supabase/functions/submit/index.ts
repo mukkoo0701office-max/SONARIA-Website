@@ -64,6 +64,7 @@ function todayTokyo(): string {
 async function saveServerQuote(receipt: string, payload: unknown, detected: string | null): Promise<void> {
   if (!sql) return;
   try {
+    // 注: postgres.js は「::jsonb」だけだと文字列を JSON の文字列値として保存するため、text を経由して変換する
     const input = quoteInputFromPayload(payload);
     // 請求先は申告を正とする。申告がなければアクセス元の国、それも無ければ未確定（通貨を決めない）
     const region: Region | null = regionFromPayload(payload) ?? (detected ? (detected === "JP" ? "jp" : "intl") : null);
@@ -78,7 +79,7 @@ async function saveServerQuote(receipt: string, payload: unknown, detected: stri
     await sql`
       update public.submissions set
         region = ${region}, region_detected = ${detected}, currency = ${region ? currencyOf(region) : null},
-        payment_method = ${method}, server_quote = ${quote === null ? null : JSON.stringify(quote)}::jsonb
+        payment_method = ${method}, server_quote = ${quote === null ? null : JSON.stringify(quote)}::text::jsonb
       where receipt_no = ${receipt} and server_quote is null and region is null`;
   } catch (e) {
     console.error("server quote failed", e instanceof Error ? e.message : "unknown");
