@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Tag from "@/components/ui/Tag";
 import type { Dictionary } from "@/data/dictionaries/types";
-import type { WorkSummary } from "@/data/works";
+import { workPageLocale, type WorkSummary } from "@/data/works";
 import { tr, localizedPath, type Locale } from "@/lib/i18n";
 
 type Props = {
@@ -19,7 +19,7 @@ type Props = {
 export default function WorkCard({ work, locale, t, open, favorite, onToggleOpen, onToggleFavorite }: Props) {
   const detailsId = `work-details-${work.id}`;
   const title = tr(work.title, locale);
-  const href = work.slug ? localizedPath(work.hasEnglish ? locale : "ja", `/scores/${work.slug}/`) : null;
+  const href = work.slug ? localizedPath(workPageLocale(work, locale), `/scores/${work.slug}/`) : null;
 
   return (
     <article className="my-3 rounded-card border border-line bg-card p-[17px]">

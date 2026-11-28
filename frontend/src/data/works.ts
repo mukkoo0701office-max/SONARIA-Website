@@ -6,6 +6,7 @@
 // TODO: 試験移行（20〜30件）のデータに置き換える。その際は Work と Edition / ScoreAsset を分け、
 //       演奏人数は版・編曲ごとに持たせる。
 
+import type { Locale, LocalizedText } from "@/lib/i18n";
 import type { SheetType } from "@/lib/scores/sheetType";
 
 // 検索の絞り込みの軸（2026-11-27 改訂）。
@@ -43,7 +44,14 @@ export const genres: readonly Genre[] = ["sonata", "concerto", "chamber", "suite
 export type Era = "baroque" | "classical" | "romantic" | "modern";
 export const eras: readonly Era[] = ["baroque", "classical", "romantic", "modern"];
 
-export type Localized = { ja: string; en: string };
+export type Localized = LocalizedText;
+
+/** 作品ページへのリンクに使う言語（その言語のページが無ければ英語 → 日本語） */
+export function workPageLocale(w: { pageLocales?: readonly Locale[]; hasEnglish?: boolean }, locale: Locale): Locale {
+  const list = w.pageLocales ?? (w.hasEnglish ? ["ja", "en"] : ["ja"]);
+  if (list.includes(locale)) return locale;
+  return list.includes("en" as Locale) ? ("en" as Locale) : ("ja" as Locale);
+}
 
 export type WorkSummary = {
   id: number;
@@ -59,6 +67,7 @@ export type WorkSummary = {
   // カタログの作品 ID（公開済みの実データのとき。デモデータには無い）
   slug?: string;
   hasEnglish?: boolean; // 英語の作品ページがあるか
+  pageLocales?: readonly Locale[]; // 作品ページがある言語（無い言語では英語→日本語のページへ）
   searchText?: string; // 別名・原語名・作品番号など、検索で一致させる追加の文字列
   sheet?: SheetType | null; // 譜面の種類（実在するファイルから判定。デモデータには無い）
 };

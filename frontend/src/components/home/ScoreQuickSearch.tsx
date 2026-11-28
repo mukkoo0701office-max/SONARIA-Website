@@ -7,8 +7,8 @@ import Chip from "@/components/ui/Chip";
 import { getDictionary } from "@/data/dictionaries";
 import { pagePaths } from "@/data/site";
 import { libraryPaths } from "@/data/scores/paths";
-import { genres, instruments, type Formation, type Genre, type Instrument, type WorkSummary } from "@/data/works";
-import { jaOrEn, localizedPath, type Locale } from "@/lib/i18n";
+import { genres, instruments, workPageLocale, type Formation, type Genre, type Instrument, type WorkSummary } from "@/data/works";
+import { tr, jaOrEn, localizedPath, type Locale } from "@/lib/i18n";
 import { countBy, filtersToSearch, initialFilters, matchesFilters, playersKey, sheetKeys, type ScoreFilters } from "@/lib/scores/filters";
 import { playerCounts, sheetKinds, type PlayersFilter, type SheetFilter } from "@/lib/scores/sheetType";
 import { suggest, type SuggestComposer } from "@/lib/scores/suggest";
@@ -60,14 +60,15 @@ export default function ScoreQuickSearch({ locale, works, composers, formations,
     const r = suggest(filters.q, linkable, suggestComposers, jaOrEn(locale));
     if (!r.composers.length && !r.works.length) return [];
     const hrefOf = new Map(suggestComposers.map((c) => [c.id, c.href]));
+    const bySlug = new Map(linkable.map((w) => [w.slug, w]));
     const q = filters.q.trim();
     return [
       ...r.composers.map((c) => ({ key: `c-${c.id}`, href: hrefOf.get(c.id) ?? scoresPath, label: c.name, sub: t.suggestComposerCount(c.count), group: "composer" as const })),
       ...r.works.map((w) => ({
         key: `w-${w.slug}`,
-        // 英語ページがない作品は日本語ページへ
-        href: localizedPath(w.hasEnglish || locale === "ja" ? locale : "ja", libraryPaths.work(w.slug)),
-        label: w.title,
+        // その言語の作品ページが無ければ英語 → 日本語のページへ。曲名はその言語の訳題（無ければ英語）
+        href: localizedPath(workPageLocale(bySlug.get(w.slug) ?? w, locale), libraryPaths.work(w.slug)),
+        label: tr(bySlug.get(w.slug)?.title, locale) || w.title,
         sub: w.composer,
         group: "work" as const,
       })),
