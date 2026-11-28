@@ -1,0 +1,5 @@
+{
+  "_about": "翻訳の状態（docs/i18n/I18N_FOUNDATION.md）。翻訳を追加・更新したら、その単位の sourceHash と status を更新する。sourceHash は node scripts/translation-status.mjs --hash <source> で出せる。CI が原文の変更を検出し、公開中の翻訳が古くなったら失敗する",
+  "statuses": ["untranslated", "in_progress", "review", "approved", "published"],
+  "units": []
+}

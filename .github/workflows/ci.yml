@@ -73,6 +73,18 @@ jobs:
           if grep -rq --include="*.html" "pagead2.googlesyndication.com" out/; then echo "AdSense script must not load before it is connected"; exit 1; fi
           if grep -rq --include="*.html" "data-ad-slot-preview" out/; then echo "AdSense preview slot leaked into production build"; exit 1; fi
 
+      # 翻訳の状態（原文が更新された翻訳を検出。公開中の翻訳が古ければ失敗）
+      - name: Translation status
+        run: node scripts/translation-status.mjs
+
+      # .htaccess は公開中の言語から生成される（未公開の言語へ振り分けない）
+      - name: Generated .htaccess
+        run: |
+          grep -q "RewriteRule ^\$ /ja/" out/.htaccess || { echo ".htaccess must route to /ja/"; exit 1; }
+          grep -q "RewriteRule ^\$ /en/" out/.htaccess || { echo ".htaccess must route to /en/"; exit 1; }
+          ! grep -qE "/(de|fr|es|it)/" out/.htaccess || { echo "unpublished locales must not be routed"; exit 1; }
+          ! ls -d out/de out/fr out/es out/it 2>/dev/null || { echo "unpublished locale pages must not be generated"; exit 1; }
+
       # GA4 は本番ビルドだけで読み込む（data/analytics.ts）
       - name: GA4 tag in production build
         run: |

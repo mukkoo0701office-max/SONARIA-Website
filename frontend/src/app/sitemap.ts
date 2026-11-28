@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { categories, categoryLocales, composerLocales, publishedComposers, workLocales, works } from "@/data/scores/catalog";
 import { libraryPaths } from "@/data/scores/paths";
 import { pagePaths, type PageKey } from "@/data/site";
-import { locales, type Locale } from "@/lib/i18n";
+import { alternateLanguages, locales, type Locale } from "@/lib/i18n";
 import { absoluteUrl, isIndexable } from "@/lib/seo";
 
 export const dynamic = "force-static";
@@ -19,13 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   function add(path: string, available: readonly Locale[], lastModified?: string) {
-    const languages: Record<string, string> = {};
-    for (const l of available) languages[l] = absoluteUrl(`/${l}${path}`)!;
-    for (const l of available) {
+    const languages = alternateLanguages(path, available, absoluteUrl);
+    for (const l of locales.filter((x) => available.includes(x))) {
       entries.push({
         url: absoluteUrl(`/${l}${path}`)!,
         ...(lastModified ? { lastModified } : {}),
-        ...(available.length > 1 ? { alternates: { languages } } : {}),
+        ...(Object.keys(languages).length > 0 ? { alternates: { languages } } : {}),
       });
     }
   }

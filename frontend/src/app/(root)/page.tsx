@@ -1,11 +1,14 @@
 import Link from "next/link";
+import { defaultLocale, localeConfig, locales } from "@/lib/i18n";
 
-// 本番（さくら）では public/.htaccess が / を /ja/ か /en/ に振り分けるため、このページは表示されない。
+// 本番（さくら）ではビルド時に作る .htaccess（scripts/htaccess.mjs）が / を公開中の言語へ振り分けるため、このページは表示されない。
 // .htaccess が効かない環境（開発サーバ・ローカル確認）向けの予備の振り分け。
 // 判定順は .htaccess と同じ: Cookie（本人が選んだ言語）→ ブラウザの言語。
 // プレビュー（GitHub Pages）ではサブパス配下になるため、basePath を付けて移動する。
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-const redirectScript = `(function(){var b=${JSON.stringify(basePath)};var m=document.cookie.match(/(?:^|; )sonaria_lang=(ja|en)(?:;|$)/);var l=m?m[1]:((navigator.language||"").toLowerCase().indexOf("ja")===0?"ja":"en");location.replace(b+"/"+l+"/");})();`;
+// 公開中の言語だけを対象にする（言語を公開すると自動で増える）
+const published = JSON.stringify(locales);
+const redirectScript = `(function(){var b=${JSON.stringify(basePath)};var L=${published};var m=document.cookie.match(/(?:^|; )sonaria_lang=([A-Za-z-]+)(?:;|$)/);var l=m&&L.indexOf(m[1])>=0?m[1]:null;if(!l){var n=(navigator.language||"").toLowerCase();for(var i=0;i<L.length;i++){if(n.indexOf(L[i].toLowerCase())===0){l=L[i];break;}}}if(!l)l=${JSON.stringify(defaultLocale === "ja" ? "en" : defaultLocale)};location.replace(b+"/"+l+"/");})();`;
 
 export default function RootPage() {
   return (
@@ -13,16 +16,13 @@ export default function RootPage() {
       <script dangerouslySetInnerHTML={{ __html: redirectScript }} />
       <p className="font-brand text-3xl tracking-[0.06em]">SONARIA</p>
       <ul className="mt-8 flex justify-center gap-6">
-        <li>
-          <Link className="text-navy underline" href="/ja/" lang="ja">
-            日本語
-          </Link>
-        </li>
-        <li>
-          <Link className="text-navy underline" href="/en/" lang="en">
-            English
-          </Link>
-        </li>
+        {locales.map((l) => (
+          <li key={l}>
+            <Link className="text-navy underline" href={`/${l}/`} lang={localeConfig(l).htmlLang}>
+              {localeConfig(l).nativeName}
+            </Link>
+          </li>
+        ))}
       </ul>
     </main>
   );

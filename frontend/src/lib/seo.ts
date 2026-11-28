@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { locales, type Locale } from "@/lib/i18n";
+import { alternateLanguages, localeConfig, locales, type Locale } from "@/lib/i18n";
 
 // SEO の共通処理（canonical・hreflang・OGP・検索エンジンへの掲載可否）。
 //
@@ -30,23 +30,19 @@ type PageMetaInput = {
 
 export function pageMetadata({ locale, path, title, description, availableLocales = locales, image, type = "website", noindex }: PageMetaInput): Metadata {
   const url = absoluteUrl(`/${locale}${path}`);
-  const languages: Record<string, string> = {};
-  for (const l of availableLocales) {
-    const u = absoluteUrl(`/${l}${path}`);
-    if (u) languages[l] = u;
-  }
-  if (languages.ja && availableLocales.length > 1) languages["x-default"] = languages.ja;
+  // hreflang（存在する言語どうしで相互参照。x-default は既定言語のページ）
+  const languages = alternateLanguages(path, availableLocales, absoluteUrl);
   const imageUrl = image ? absoluteUrl(image.url) : null;
 
   return {
     title,
     description,
-    ...(url ? { alternates: { canonical: url, ...(availableLocales.length > 1 ? { languages } : {}) } } : {}),
+    ...(url ? { alternates: { canonical: url, ...(Object.keys(languages).length > 0 ? { languages } : {}) } } : {}),
     openGraph: {
       title,
       description,
       type,
-      locale: locale === "ja" ? "ja_JP" : "en_US",
+      locale: localeConfig(locale).ogLocale,
       ...(url ? { url } : {}),
       ...(imageUrl && image ? { images: [{ url: imageUrl, width: image.width, height: image.height, alt: image.alt }] } : {}),
     },

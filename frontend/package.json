@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "npx serve out",
     "lint": "next lint",
-    "postbuild": "node scripts/postbuild.mjs",
+    "postbuild": "node --experimental-strip-types --no-warnings scripts/postbuild.mjs",
     "check": "node scripts/check-site.mjs out",
     "test": "node --experimental-strip-types --test \"tests/*.test.mjs\""
   },
