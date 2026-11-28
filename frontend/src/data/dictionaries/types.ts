@@ -229,7 +229,7 @@ export type Dictionary = {
   // 準備中のページ
   placeholders: Record<"performance" | "contact" | "privacy", PlaceholderCopy>;
   // 内容のあるページ（旧サイト https://www.mukkoo0701music.jp/ の文章をもとに作成）
-  contentPages: Record<"bowing" | "lessons" | "recording" | "community" | "profile" | "privacy", ContentCopy>;
+  contentPages: Record<"bowing" | "lessons" | "recording" | "community" | "profile" | "privacy" | "commerce", ContentCopy>;
   // 管理人プロフィールの「執筆・発信活動」と「お問い合わせ」
   profileChannels: {
     heading: string;

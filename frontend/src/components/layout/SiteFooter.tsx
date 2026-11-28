@@ -54,6 +54,11 @@ export default function SiteFooter({ locale, partial = {} }: { locale: Locale; p
                 {dict.pages.privacy}
               </Link>
             </li>
+            <li>
+              <Link href={localizedPath(locale, pagePaths.commerce)} className="text-ink hover:underline">
+                {dict.pages.commerce}
+              </Link>
+            </li>
           </ul>
         </nav>
 

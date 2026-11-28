@@ -15,7 +15,8 @@ export type PageKey =
   | "about"
   | "contact"
   | "apply"
-  | "privacy";
+  | "privacy"
+  | "commerce";
 
 export const pagePaths: Record<PageKey, string> = {
   home: "/",
@@ -32,6 +33,8 @@ export const pagePaths: Record<PageKey, string> = {
   contact: "/contact/",
   apply: "/apply/",
   privacy: "/legal/privacy/",
+  // 特定商取引法に基づく表示（決済の導入に合わせて追加）
+  commerce: "/legal/commerce/",
 };
 
 // ヘッダーのナビ（トップページ改修指示書 v1.0 §2 の順序）

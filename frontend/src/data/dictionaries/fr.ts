@@ -32,6 +32,7 @@ export const fr: Dictionary = {
     contact: "Contact",
     apply: "Demande de service",
     privacy: "Politique de confidentialité",
+    commerce: "Mentions (loi japonaise sur le commerce)",
   },
   header: {
     mainNavLabel: "Menu principal",
@@ -73,6 +74,7 @@ export const fr: Dictionary = {
       contact: { title: "Contact", catchCopy: "", cta: "En savoir plus" },
       apply: { title: "Demande de service", catchCopy: "", cta: "Faire une demande" },
       privacy: { title: "Politique de confidentialité", catchCopy: "", cta: "En savoir plus" },
+      commerce: { title: "Mentions (loi japonaise sur le commerce)", catchCopy: "", cta: "En savoir plus" },
     },
   },
   homeScoreSearch: {
@@ -412,6 +414,8 @@ export const fr: Dictionary = {
           items: [
             "Les informations que vous saisissez dans nos formulaires de contact, de demande et d’inscription des professeurs (nom, adresse e-mail, contenu de votre demande, profil de professeur, etc.)",
             "Les informations transmises automatiquement lorsque vous consultez le Site (pages consultées, date et heure, site de provenance, type de navigateur et d’appareil, adresse IP et identifiants tels que les cookies)",
+            "Les informations de paiement (montant, devise, mode et date de paiement) et les fichiers joints aux demandes, comme les partitions en PDF. Le Site ne traite ni ne conserve les numéros de carte bancaire (ils sont saisis sur la page de Stripe)",
+            "Le fuseau horaire de votre appareil et le pays d’accès, utilisés pour déterminer la grille tarifaire (Japon / hors du Japon)",
           ],
         },
         {
@@ -450,7 +454,8 @@ export const fr: Dictionary = {
           items: [
             "Google LLC (Google Analytics, Google AdSense) : pages consultées, identifiants tels que les cookies, adresse IP et informations sur l’appareil — pour la mesure d’audience ainsi que la diffusion et la mesure des annonces",
             "GitHub, Inc. (mise à disposition des partitions PDF) : adresse IP et informations sur le navigateur lors du téléchargement d’un PDF — pour livrer le fichier",
-            "Supabase, Inc. (envoi des formulaires, une fois connecté) : les informations saisies dans nos formulaires — pour recevoir et gérer les questions, les demandes et les candidatures des professeurs",
+            "Supabase, Inc. (envoi des formulaires, stockage des pièces jointes et enregistrement des paiements) : les informations saisies dans nos formulaires, les fichiers joints et les enregistrements de paiement — pour recevoir et gérer les questions, demandes et candidatures des professeurs",
+            "Stripe, Inc. (paiement par carte, une fois mis en place) : montant et devise du paiement, nom et adresse e-mail, données de carte (reçues directement par Stripe) — pour traiter les paiements et prévenir la fraude",
             "Amazon.com, Inc. et ses sociétés affiliées : informations sur le site d’Amazon si vous cliquez sur un lien produit — pour mesurer les commissions d’affiliation",
           ],
         },
@@ -475,7 +480,27 @@ export const fr: Dictionary = {
           paragraphs: ["Nous pouvons mettre à jour cette politique si nécessaire. Les modifications prennent effet dès leur publication sur cette page."],
         },
       ],
-      footnote: "Établie le 28 novembre 2026. Cette traduction est fournie à titre informatif ; seule la version japonaise fait foi.",
+      footnote: "Établie le 28 novembre 2026, modifiée le 29 novembre 2026 (ajout des paiements et des pièces jointes). Cette traduction est fournie à titre informatif ; seule la version japonaise fait foi.",
+    },
+    // 特定商取引法に基づく表示（2026-11-29 運営者決定: 氏名・住所・電話番号は請求時に開示。キャンセル規定は作業開始前は全額返金・開始後は不可）。
+    // 法律の専門家の確認は経ていない。翻訳版は日本語版が優先する
+    commerce: {
+      title: "Mentions prévues par la loi japonaise sur certaines transactions commerciales",
+      lead: "Informations exigées par la loi japonaise concernant les services payants de SONARIA (doigtés et coups d’archet, enregistrement, prestations).",
+      sections: [
+        { heading: "Vendeur", items: ["SONARIA"] },
+        { heading: "Responsable, adresse et numéro de téléphone", items: ["Nous les communiquons sans délai sur demande. Contactez-nous via la page de contact."] },
+        { heading: "Contact", items: ["Utilisez la page de contact. Nous répondons par e-mail."] },
+        { heading: "Prix", items: ["Indiqués sur chaque page de service et dans le formulaire de demande (taxes comprises). Les clients au Japon paient en JPY ; les clients hors du Japon paient en USD.", "Pour les prestations, nous fixons le prix après étude de votre demande, par un devis. Les tarifs et modes de paiement des cours sont indiqués individuellement après l’inscription."] },
+        { heading: "Frais supplémentaires", items: ["Les frais de virement bancaire sont à la charge du client. Les frais de connexion Internet et de communication sont à la charge du client."] },
+        { heading: "Modes de paiement", items: ["Carte bancaire (paiement traité par Stripe)", "Virement bancaire (clients au Japon uniquement)"] },
+        { heading: "Moment du paiement", items: ["Le paiement intégral est demandé avant le travail ou la prestation (paiement anticipé). Veuillez payer avant la date limite indiquée dans l’avis de paiement envoyé une fois le prix fixé."] },
+        { heading: "Délai de fourniture", items: ["Nous commençons après confirmation de votre paiement et livrons à la date indiquée. Les fichiers sont envoyés par e-mail ou par un service de transfert de fichiers. Les prestations ont lieu à la date et à l’heure réservées."] },
+        { heading: "Annulation et remboursement (doigtés et coups d’archet, enregistrement)", items: ["En cas d’annulation avant le début du travail, nous remboursons l’intégralité du montant payé.", "Une fois le travail commencé, l’annulation et le remboursement ne sont pas possibles.", "Nous corrigeons gratuitement toute erreur de notre part."] },
+        { heading: "Annulation et remboursement (prestations)", items: ["Nous les indiquons individuellement lors du devis."] },
+        { heading: "Conditions techniques", items: ["Les livrables sont des fichiers PDF (partitions) ou WAV (audio). Assurez-vous de pouvoir les ouvrir ou les lire."] },
+      ],
+      footnote: "Établie le 29 novembre 2026. Cette traduction est fournie à titre informatif ; seule la version japonaise fait foi.",
     },
     profile: {
       title: "À propos du curateur",

@@ -32,6 +32,7 @@ export const it: Dictionary = {
     contact: "Contatti",
     apply: "Richiedi un servizio",
     privacy: "Informativa sulla privacy",
+    commerce: "Note legali (legge giapponese sul commercio)",
   },
   header: {
     mainNavLabel: "Menu principale",
@@ -73,6 +74,7 @@ export const it: Dictionary = {
       contact: { title: "Contatti", catchCopy: "", cta: "Scopri di più" },
       apply: { title: "Richiedi un servizio", catchCopy: "", cta: "Richiedi" },
       privacy: { title: "Informativa sulla privacy", catchCopy: "", cta: "Scopri di più" },
+      commerce: { title: "Note legali (legge giapponese sul commercio)", catchCopy: "", cta: "Scopri di più" },
     },
   },
   homeScoreSearch: {
@@ -412,6 +414,8 @@ export const it: Dictionary = {
           items: [
             "Le informazioni che inserisci nei nostri moduli di contatto, di richiesta e di iscrizione degli insegnanti (come nome, indirizzo e-mail, contenuto della richiesta e profilo dell’insegnante)",
             "Le informazioni inviate automaticamente durante la navigazione del Sito (pagine visitate, data e ora, sito di provenienza, tipo di browser e dispositivo, indirizzo IP e identificatori come i cookie)",
+            "Le informazioni di pagamento (importo, valuta, metodo e data di pagamento) e i file allegati alle richieste, come gli spartiti in PDF. Il Sito non tratta né conserva i numeri di carta di credito (vengono inseriti sulla pagina di Stripe)",
+            "Il fuso orario del dispositivo e il paese di accesso, usati per stabilire la tariffa (Giappone / fuori dal Giappone)",
           ],
         },
         {
@@ -450,7 +454,8 @@ export const it: Dictionary = {
           items: [
             "Google LLC (Google Analytics, Google AdSense): pagine visitate, identificatori come i cookie, indirizzo IP e informazioni sul dispositivo — per l’analisi e per la pubblicazione e la misurazione degli annunci",
             "GitHub, Inc. (distribuzione degli spartiti PDF): indirizzo IP e informazioni sul browser quando scarichi un PDF — per consegnare il file",
-            "Supabase, Inc. (invio dei moduli, una volta collegato): le informazioni inserite nei nostri moduli — per ricevere e gestire domande, richieste e candidature degli insegnanti",
+            "Supabase, Inc. (invio dei moduli, conservazione degli allegati e registrazione dei pagamenti): le informazioni inserite nei nostri moduli, i file allegati e le registrazioni dei pagamenti — per ricevere e gestire domande, richieste e candidature degli insegnanti",
+            "Stripe, Inc. (pagamento con carta, una volta introdotto): importo e valuta del pagamento, nome e indirizzo e-mail, dati della carta (ricevuti direttamente da Stripe) — per elaborare i pagamenti e prevenire le frodi",
             "Amazon.com, Inc. e società collegate: informazioni sul sito di Amazon se fai clic su un link a un prodotto — per misurare le commissioni di affiliazione",
           ],
         },
@@ -475,7 +480,27 @@ export const it: Dictionary = {
           paragraphs: ["Possiamo aggiornare la presente informativa quando necessario. Le modifiche hanno effetto dalla pubblicazione su questa pagina."],
         },
       ],
-      footnote: "Redatta il 28 novembre 2026. La presente traduzione ha valore puramente informativo; fa fede la versione in giapponese.",
+      footnote: "Redatta il 28 novembre 2026, modificata il 29 novembre 2026 (aggiunti pagamenti e allegati). La presente traduzione ha valore puramente informativo; fa fede la versione in giapponese.",
+    },
+    // 特定商取引法に基づく表示（2026-11-29 運営者決定: 氏名・住所・電話番号は請求時に開示。キャンセル規定は作業開始前は全額返金・開始後は不可）。
+    // 法律の専門家の確認は経ていない。翻訳版は日本語版が優先する
+    commerce: {
+      title: "Informazioni ai sensi della legge giapponese su determinate transazioni commerciali",
+      lead: "Informazioni richieste dalla legge giapponese sui servizi a pagamento di SONARIA (diteggiature e arcate, registrazione, esibizioni).",
+      sections: [
+        { heading: "Venditore", items: ["SONARIA"] },
+        { heading: "Responsabile, indirizzo e numero di telefono", items: ["Li comunichiamo senza indugio su richiesta. Contattaci tramite la pagina dei contatti."] },
+        { heading: "Contatti", items: ["Usa la pagina dei contatti. Rispondiamo via e-mail."] },
+        { heading: "Prezzi", items: ["Indicati in ogni pagina di servizio e nel modulo di richiesta (tasse incluse). I clienti in Giappone pagano in JPY; quelli fuori dal Giappone in USD.", "Per le esibizioni il prezzo viene fissato con un preventivo dopo aver esaminato la richiesta. Prezzi e modalità di pagamento delle lezioni sono comunicati individualmente dopo l’iscrizione."] },
+        { heading: "Altri costi", items: ["Le commissioni del bonifico bancario sono a carico del cliente. I costi di connessione a Internet e di traffico dati sono a carico del cliente."] },
+        { heading: "Metodi di pagamento", items: ["Carta di credito (pagamento gestito da Stripe)", "Bonifico bancario (solo clienti in Giappone)"] },
+        { heading: "Tempi di pagamento", items: ["È richiesto il pagamento completo prima del lavoro o dell’esibizione (pagamento anticipato). Paga entro la scadenza indicata nell’avviso di pagamento che inviamo una volta fissato il prezzo."] },
+        { heading: "Tempi di erogazione", items: ["Iniziamo dopo aver confermato il pagamento e consegniamo entro la data comunicata. I file sono inviati via e-mail o tramite un servizio di trasferimento file. Le esibizioni si svolgono nella data e nell’ora prenotate."] },
+        { heading: "Annullamento e rimborso (diteggiature e arcate, registrazione)", items: ["In caso di annullamento prima dell’inizio del lavoro, rimborsiamo l’intero importo pagato.", "Una volta iniziato il lavoro, non si accettano annullamenti né rimborsi.", "Correggiamo gratuitamente eventuali errori da parte nostra."] },
+        { heading: "Annullamento e rimborso (esibizioni)", items: ["Li comunichiamo individualmente con il preventivo."] },
+        { heading: "Requisiti", items: ["I file consegnati sono PDF (spartiti) o WAV (audio). Assicurati di poterli aprire o riprodurre."] },
+      ],
+      footnote: "Redatta il 29 novembre 2026. La presente traduzione ha valore puramente informativo; fa fede la versione in giapponese.",
     },
     profile: {
       title: "Il curatore",

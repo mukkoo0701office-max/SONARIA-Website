@@ -32,6 +32,7 @@ export const de: Dictionary = {
     contact: "Kontakt",
     apply: "Dienstleistung anfragen",
     privacy: "Datenschutzerklärung",
+    commerce: "Angaben nach dem japanischen Handelsgesetz",
   },
   header: {
     mainNavLabel: "Hauptmenü",
@@ -73,6 +74,7 @@ export const de: Dictionary = {
       contact: { title: "Kontakt", catchCopy: "", cta: "Mehr erfahren" },
       apply: { title: "Dienstleistung anfragen", catchCopy: "", cta: "Anfragen" },
       privacy: { title: "Datenschutzerklärung", catchCopy: "", cta: "Mehr erfahren" },
+      commerce: { title: "Angaben nach dem japanischen Handelsgesetz", catchCopy: "", cta: "Mehr erfahren" },
     },
   },
   homeScoreSearch: {
@@ -412,6 +414,8 @@ export const de: Dictionary = {
           items: [
             "Informationen, die Sie in unsere Kontakt-, Anfrage- und Registrierungsformulare für Lehrkräfte eingeben (etwa Name, E-Mail-Adresse, Inhalt Ihrer Anfrage und Ihr Lehrkräfteprofil)",
             "Informationen, die beim Besuch der Website automatisch übermittelt werden (aufgerufene Seiten, Datum und Uhrzeit, verweisende Seite, Browser- und Gerätetyp, IP-Adresse sowie Kennungen wie Cookies)",
+            "Zahlungsinformationen (Betrag, Währung, Zahlungsart und Zahlungsdatum) sowie an Anfragen angehängte Dateien wie Noten-PDFs. Kreditkartennummern werden auf der Website weder verarbeitet noch gespeichert (die Eingabe erfolgt auf der Seite von Stripe)",
+            "Zeitzone Ihres Geräts und Land des Zugriffs, um die Preisgruppe (Japan / außerhalb Japans) festzulegen",
           ],
         },
         {
@@ -450,7 +454,8 @@ export const de: Dictionary = {
           items: [
             "Google LLC (Google Analytics, Google AdSense): aufgerufene Seiten, Kennungen wie Cookies, IP-Adresse und Geräteinformationen – zur Analyse sowie zur Auslieferung und Messung von Anzeigen",
             "GitHub, Inc. (Bereitstellung der Noten-PDFs): IP-Adresse und Browserinformationen beim Herunterladen eines PDFs – zur Auslieferung der Datei",
-            "Supabase, Inc. (Formularübermittlung, sobald angebunden): die von Ihnen in unsere Formulare eingegebenen Informationen – zum Empfang und zur Verwaltung von Anfragen, Aufträgen und Bewerbungen von Lehrkräften",
+            "Supabase, Inc. (Formularübermittlung, Speicherung von Anhängen und Zahlungsaufzeichnungen): die in unsere Formulare eingegebenen Informationen, angehängte Dateien und Zahlungsaufzeichnungen – zum Empfang und zur Verwaltung von Anfragen, Aufträgen und Bewerbungen von Lehrkräften",
+            "Stripe, Inc. (Kreditkartenzahlung, sobald eingeführt): Zahlungsbetrag und Währung, Name und E-Mail-Adresse sowie Kartendaten (direkt von Stripe entgegengenommen) – zur Zahlungsabwicklung und Betrugsvermeidung",
             "Amazon.com, Inc. und verbundene Unternehmen: Informationen auf der Website von Amazon, wenn Sie einen Produktlink anklicken – zur Messung von Vermittlungsprovisionen",
           ],
         },
@@ -475,7 +480,27 @@ export const de: Dictionary = {
           paragraphs: ["Wir können diese Erklärung bei Bedarf aktualisieren. Änderungen werden mit der Veröffentlichung auf dieser Seite wirksam."],
         },
       ],
-      footnote: "Stand: 28. November 2026. Diese Übersetzung dient nur der Information; maßgeblich ist die japanische Fassung.",
+      footnote: "Stand: 28. November 2026, geändert am 29. November 2026 (Zahlungen und Anhänge ergänzt). Diese Übersetzung dient nur der Information; maßgeblich ist die japanische Fassung.",
+    },
+    // 特定商取引法に基づく表示（2026-11-29 運営者決定: 氏名・住所・電話番号は請求時に開示。キャンセル規定は作業開始前は全額返金・開始後は不可）。
+    // 法律の専門家の確認は経ていない。翻訳版は日本語版が優先する
+    commerce: {
+      title: "Angaben nach dem japanischen Gesetz über bestimmte Handelsgeschäfte",
+      lead: "Nach japanischem Recht vorgeschriebene Angaben zu den kostenpflichtigen Dienstleistungen von SONARIA (Fingersätze und Bogenstriche, Aufnahmen, Auftritte).",
+      sections: [
+        { heading: "Anbieter", items: ["SONARIA"] },
+        { heading: "Verantwortliche Person, Anschrift und Telefonnummer", items: ["Wir legen diese Angaben auf Anfrage unverzüglich offen. Bitte wenden Sie sich über die Kontaktseite an uns."] },
+        { heading: "Kontakt", items: ["Bitte nutzen Sie die Kontaktseite. Wir antworten per E-Mail."] },
+        { heading: "Preise", items: ["Auf jeder Dienstleistungsseite und im Anfrageformular angegeben (inkl. Steuern). Kunden in Japan zahlen in JPY, Kunden außerhalb Japans in USD.", "Bei Auftritten legen wir den Preis nach Prüfung Ihrer Anfrage mit einem Angebot fest. Unterrichtsgebühren und Zahlungsarten erläutern wir nach der Anmeldung individuell."] },
+        { heading: "Weitere Kosten", items: ["Gebühren für Banküberweisungen trägt der Kunde. Kosten für Internetverbindung und Datenübertragung trägt der Kunde."] },
+        { heading: "Zahlungsarten", items: ["Kreditkarte (Abwicklung über Stripe)", "Banküberweisung (nur für Kunden in Japan)"] },
+        { heading: "Zahlungszeitpunkt", items: ["Der volle Betrag ist vor der Arbeit bzw. dem Auftritt zu zahlen (Vorkasse). Bitte zahlen Sie bis zu der Frist, die in der Zahlungsaufforderung nach Festlegung des Preises genannt ist."] },
+        { heading: "Zeitpunkt der Leistung", items: ["Wir beginnen nach Bestätigung Ihrer Zahlung und liefern bis zum mitgeteilten Termin. Dateien senden wir per E-Mail oder über einen Dateitransferdienst. Auftritte finden zum gebuchten Termin statt."] },
+        { heading: "Stornierung und Erstattung (Fingersätze und Bogenstriche, Aufnahmen)", items: ["Bei Stornierung vor Arbeitsbeginn erstatten wir den gezahlten Betrag vollständig.", "Nach Arbeitsbeginn sind Stornierung und Erstattung nicht möglich.", "Fehler unsererseits beheben wir kostenlos."] },
+        { heading: "Stornierung und Erstattung (Auftritte)", items: ["Wir erläutern diese individuell mit dem Angebot."] },
+        { heading: "Voraussetzungen", items: ["Geliefert werden PDF-Dateien (Noten) oder WAV-Dateien (Audio). Bitte stellen Sie sicher, dass Sie diese öffnen bzw. abspielen können."] },
+      ],
+      footnote: "Stand: 29. November 2026. Diese Übersetzung dient nur der Information; maßgeblich ist die japanische Fassung.",
     },
     profile: {
       title: "Über den Kurator",
