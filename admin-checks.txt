@@ -1,0 +1,80 @@
+OK   desktop: login shows not-connected
+OK   desktop: password cleared after attempt
+OK   desktop: dashboard redirects to login without session — http://localhost:4173/SONARIA-Website/admin/
+OK   desktop: demo banner visible
+OK   desktop dashboard: no horizontal overflow — 0
+OK   desktop inquiries: no horizontal overflow — 0
+OK   desktop calendar: no horizontal overflow — 0
+OK   desktop teachers: no horizontal overflow — 0
+OK   desktop revenue: no horizontal overflow — 0
+OK   desktop ads: no horizontal overflow — 0
+OK   desktop analytics: no horizontal overflow — 0
+OK   desktop pdf: no horizontal overflow — 0
+OK   desktop notifications: no horizontal overflow — 0
+OK   desktop: inquiry filter kept in URL — http://localhost:4173/SONARIA-Website/admin/inquiries/?unreplied=1
+OK   desktop: reply is built from the submission — 佐藤 花子（デモ） 様
+
+このたびは SONARIA に演奏のご依頼をいただき、ありがとうございます。
+
+2027年1月15日(金) 午後 / 2027年1月2
+OK   desktop: reply does not ask about venue or duration
+OK   desktop: tidy view shows labelled answers
+OK   desktop: raw view shows submitted JSON
+OK   desktop: quote asks for amount until entered
+OK   desktop: quote amount is inserted
+OK   desktop: open-in-mail link is mailto with encoded body
+OK   desktop: sent reply is saved to the timeline
+OK   desktop: template fills reply
+OK   desktop: reply is not sent (not connected)
+OK   desktop: delete is disabled until receipt typed
+OK   desktop: delete enabled after typing receipt — SNR-20261128-0002
+OK   desktop: delete returns to list — http://localhost:4173/SONARIA-Website/admin/inquiries/
+OK   desktop: teacher status changes
+OK   desktop: calendar day view
+OK   desktop: revenue table view
+OK   desktop: ads metrics show their origin
+OK   desktop: ad settings separate Google-managed items
+OK   desktop ads settings: no horizontal overflow — 0
+OK   desktop: switches to English
+OK   desktop revenue (en): no horizontal overflow — 0
+OK   desktop: no page errors
+OK   mobile: login shows not-connected
+OK   mobile: password cleared after attempt
+OK   mobile: dashboard redirects to login without session — http://localhost:4173/SONARIA-Website/admin/
+OK   mobile: demo banner visible
+OK   mobile dashboard: no horizontal overflow — 0
+OK   mobile inquiries: no horizontal overflow — 0
+OK   mobile calendar: no horizontal overflow — 0
+OK   mobile teachers: no horizontal overflow — 0
+OK   mobile revenue: no horizontal overflow — 0
+OK   mobile ads: no horizontal overflow — 0
+OK   mobile analytics: no horizontal overflow — 0
+OK   mobile pdf: no horizontal overflow — 0
+OK   mobile notifications: no horizontal overflow — 0
+OK   mobile: inquiry filter kept in URL — http://localhost:4173/SONARIA-Website/admin/inquiries/?unreplied=1
+OK   mobile: reply is built from the submission — 佐藤 花子（デモ） 様
+
+このたびは SONARIA に演奏のご依頼をいただき、ありがとうございます。
+
+2027年1月15日(金) 午後 / 2027年1月2
+OK   mobile: reply does not ask about venue or duration
+OK   mobile: tidy view shows labelled answers
+OK   mobile: raw view shows submitted JSON
+OK   mobile: quote asks for amount until entered
+OK   mobile: quote amount is inserted
+OK   mobile: open-in-mail link is mailto with encoded body
+OK   mobile: sent reply is saved to the timeline
+OK   mobile: template fills reply
+OK   mobile: reply is not sent (not connected)
+OK   mobile: delete is disabled until receipt typed
+OK   mobile: delete enabled after typing receipt — SNR-20261128-0002
+OK   mobile: delete returns to list — http://localhost:4173/SONARIA-Website/admin/inquiries/
+OK   mobile: teacher status changes
+OK   mobile: calendar day view
+OK   mobile: revenue table view
+OK   mobile: ads metrics show their origin
+OK   mobile: ad settings separate Google-managed items
+OK   mobile ads settings: no horizontal overflow — 0
+OK   mobile: switches to English
+OK   mobile revenue (en): no horizontal overflow — 0
+OK   mobile: no page errors

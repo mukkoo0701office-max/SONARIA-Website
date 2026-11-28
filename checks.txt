@@ -1,0 +1,163 @@
+OK   desktop: ja home has no horizontal overflow — 0
+OK   desktop: en home has no horizontal overflow — 0
+OK   desktop: de home has no horizontal overflow — 0
+OK   desktop: fr home has no horizontal overflow — 0
+OK   desktop: es home has no horizontal overflow — 0
+OK   desktop: it home has no horizontal overflow — 0
+OK   desktop: language dropdown lists 6 languages — 6
+OK   desktop: inactive indicator dot visible — rgba(102, 112, 133, 0.5)
+OK   desktop: sticky header has background — rgba(255, 255, 255, 0.85)
+OK   desktop: hero arrow visible — rgba(255, 255, 255, 0.9)
+OK   desktop: indicator moves to slide 3
+OK   desktop: exactly one active slide — active=1
+OK   desktop: pause button present
+OK   desktop: language switch in header and footer
+OK   desktop: current language is shown
+OK   desktop: header does not wrap with language switch — h=120
+OK   desktop: current language is marked
+OK   desktop: switching keeps the same page — http://localhost:4173/SONARIA-Website/en/scores/
+OK   desktop: chosen language is remembered
+OK   desktop: autocomplete shows suggestions — options=8
+OK   desktop: autocomplete input is a combobox
+OK   desktop: autocomplete closes on Escape
+OK   desktop: autocomplete arrow selects option
+OK   desktop: autocomplete Enter opens composer page — http://localhost:4173/SONARIA-Website/ja/composers/beethoven/
+OK   desktop: home score search shows live count — 203作品中 9作品が該当条件をクリア
+OK   desktop: score quick search carries query — http://localhost:4173/SONARIA-Website/ja/scores/?q=%E3%83%99%E3%83%BC%E3%83%88%E3%83%BC%E3%83%B4%E3%82%A7%E3%83%B3&players=4&fmt=string-quartet → 9
+OK   desktop: quick search carries query — http://localhost:4173/SONARIA-Website/ja/teachers/?category=strings&pref=13
+OK   desktop: teacher results shown — cards=2
+OK   desktop: /ja/scores/ loads — 200
+OK   desktop: /ja/bowing/ loads — 200
+OK   desktop: /ja/lessons/ loads — 200
+OK   desktop: /ja/recording/ loads — 200
+OK   desktop: /ja/performance/ loads — 200
+OK   desktop: /ja/community/ loads — 200
+OK   desktop: /ja/profile/ loads — 200
+OK   desktop: /ja/about/ loads — 200
+OK   desktop: /ja/contact/ loads — 200
+OK   desktop: /ja/legal/privacy/ loads — 200
+OK   desktop: performance form blocks empty submit
+OK   desktop: performance form shows not-connected (no fake success)
+OK   desktop: teacher register CTA links to register page — http://localhost:4173/SONARIA-Website/ja/teachers/register/
+OK   desktop: register page has no horizontal overflow — 0
+OK   desktop: register form has no fee field
+OK   desktop: score facets (viola × string quartet) — http://localhost:4173/SONARIA-Website/ja/scores/?inst=viola&fmt=string-quartet → 32
+OK   desktop: scores page has no horizontal overflow — 0
+OK   desktop: /ja/scores/beethoven-violin-sonata-5/ loads — 200
+OK   desktop: /ja/scores/tchaikovsky-serenade-for-strings/ loads — 200
+OK   desktop: /ja/composers/beethoven/ loads — 200
+OK   desktop: /ja/composers/ loads — 200
+OK   desktop: /ja/scores/category/string-quartet/ loads — 200
+OK   desktop: /ja/scores/haydn-string-quartets-op20/ loads — 200
+OK   desktop: work page has exactly 1 Amazon slot — 1
+OK   desktop: Amazon link has tag and sponsored rel — https://www.amazon.co.jp/s?k=%E3%83%99%E3%83%BC%E3%83%88%E3%83%BC%E3%83%B4%E3%82%A7%E3%83%B3+%E6%A5%BD%E8%AD%9C+%E5%8E%9F%E5%85%B8%E7%89%88&tag=mukkoo-22 sponsored nofollow noopener noreferrer
+OK   desktop: Amazon slot is at the bottom (after downloads and related works)
+OK   desktop: work page has 1 AdSense slot (preview) — 1
+OK   desktop: AdSense slot labelled 広告
+OK   desktop: AdSense slot is after downloads + sources and before Amazon
+OK   desktop: work page shows summary
+OK   desktop: work facts include contents and printing
+OK   desktop: FAQ section removed
+OK   desktop: en work page shows summary and original title
+OK   desktop: /ja/composers/beethoven/ has 1 AdSense slot (preview)
+OK   desktop: /ja/scores/category/string-quartet/ has 1 AdSense slot (preview)
+OK   desktop: privacy policy covers GA4, AdSense and Amazon
+OK   desktop: ja profile has note and X links — https://note.com/2108113 me noopener noreferrer | https://x.com/2108113 me noopener noreferrer
+OK   desktop: ja profile has no horizontal overflow — 0
+OK   desktop: en profile has note and X links — https://note.com/2108113 me noopener noreferrer | https://x.com/2108113 me noopener noreferrer
+OK   desktop: en profile has no horizontal overflow — 0
+OK   desktop: de profile has note and X links — https://note.com/2108113 me noopener noreferrer | https://x.com/2108113 me noopener noreferrer
+OK   desktop: de profile has no horizontal overflow — 0
+OK   desktop: PDF download points to release asset — https://github.com/mukkoo0701office-max/SONARIA-Website/releases/download/scores-v1/Beethoven_Violin-Sonata-No5-Op24_Violin.pdf
+FAIL desktop: recording Vn2+Va1+Vc1 = ¥41,000 — ヴァイオリン $60.00 × 2 $120.00 ヴィオラ $60.00 × 1 $60.00 チェロ（外注） $95.00 × 1 $95.00 基本料金 $275.00 納期係数 ×1.0 合計 $275.00
+FAIL desktop: recording next-day = ¥49,200 — ヴァイオリン $60.00 × 2 $120.00 ヴィオラ $60.00 × 1 $60.00 チェロ（外注） $95.00 × 1 $95.00 基本料金 $275.00 納期係数 ×1.2 合計 $330.00
+OK   desktop: bowing prefill from score page
+FAIL desktop: bowing set 1 page = ¥1,500 — 運指＋運弓 $22.00 × 1ページ $22.00 基本料金 $22.00 納期係数 ×1.0 合計 $22.00
+OK   desktop: submission shows not-connected
+OK   desktop: trial disabled after yes
+OK   desktop: apply page has no horizontal overflow — 0
+OK   desktop: lesson candidates listed with priority
+OK   desktop: no page errors
+OK   mobile: ja home has no horizontal overflow — 0
+OK   mobile: en home has no horizontal overflow — 0
+OK   mobile: de home has no horizontal overflow — 0
+OK   mobile: fr home has no horizontal overflow — 0
+OK   mobile: es home has no horizontal overflow — 0
+OK   mobile: it home has no horizontal overflow — 0
+OK   mobile: language dropdown lists 6 languages — 6
+OK   mobile: inactive indicator dot visible — rgba(102, 112, 133, 0.5)
+OK   mobile: sticky header has background — rgba(255, 255, 255, 0.85)
+OK   mobile: indicator moves to slide 3
+OK   mobile: exactly one active slide — active=1
+OK   mobile: pause button present
+OK   mobile: menu opens
+OK   mobile: Esc closes menu
+OK   mobile: swipe left goes to slide 2
+OK   mobile: swipe does not navigate — http://localhost:4173/SONARIA-Website/ja/
+OK   mobile: language switch in header and footer
+OK   mobile: current language is shown
+OK   mobile: header does not wrap with language switch — h=69
+OK   mobile: current language is marked
+OK   mobile: switching keeps the same page — http://localhost:4173/SONARIA-Website/en/scores/
+OK   mobile: chosen language is remembered
+OK   mobile: autocomplete shows suggestions — options=8
+OK   mobile: autocomplete input is a combobox
+OK   mobile: autocomplete closes on Escape
+OK   mobile: autocomplete arrow selects option
+OK   mobile: autocomplete Enter opens composer page — http://localhost:4173/SONARIA-Website/ja/composers/beethoven/
+OK   mobile: home score search shows live count — 203作品中 9作品が該当条件をクリア
+OK   mobile: score quick search carries query — http://localhost:4173/SONARIA-Website/ja/scores/?q=%E3%83%99%E3%83%BC%E3%83%88%E3%83%BC%E3%83%B4%E3%82%A7%E3%83%B3&players=4&fmt=string-quartet → 9
+OK   mobile: quick search carries query — http://localhost:4173/SONARIA-Website/ja/teachers/?category=strings&pref=13
+OK   mobile: teacher results shown — cards=2
+OK   mobile: /ja/scores/ loads — 200
+OK   mobile: /ja/bowing/ loads — 200
+OK   mobile: /ja/lessons/ loads — 200
+OK   mobile: /ja/recording/ loads — 200
+OK   mobile: /ja/performance/ loads — 200
+OK   mobile: /ja/community/ loads — 200
+OK   mobile: /ja/profile/ loads — 200
+OK   mobile: /ja/about/ loads — 200
+OK   mobile: /ja/contact/ loads — 200
+OK   mobile: /ja/legal/privacy/ loads — 200
+OK   mobile: performance form blocks empty submit
+OK   mobile: performance form shows not-connected (no fake success)
+OK   mobile: teacher register CTA links to register page — http://localhost:4173/SONARIA-Website/ja/teachers/register/
+OK   mobile: register page has no horizontal overflow — 0
+OK   mobile: register form has no fee field
+OK   mobile: score facets (viola × string quartet) — http://localhost:4173/SONARIA-Website/ja/scores/?inst=viola&fmt=string-quartet → 32
+OK   mobile: scores page has no horizontal overflow — 0
+OK   mobile: /ja/scores/beethoven-violin-sonata-5/ loads — 200
+OK   mobile: /ja/scores/tchaikovsky-serenade-for-strings/ loads — 200
+OK   mobile: /ja/composers/beethoven/ loads — 200
+OK   mobile: /ja/composers/ loads — 200
+OK   mobile: /ja/scores/category/string-quartet/ loads — 200
+OK   mobile: /ja/scores/haydn-string-quartets-op20/ loads — 200
+OK   mobile: work page has exactly 1 Amazon slot — 1
+OK   mobile: Amazon link has tag and sponsored rel — https://www.amazon.co.jp/s?k=%E3%83%99%E3%83%BC%E3%83%88%E3%83%BC%E3%83%B4%E3%82%A7%E3%83%B3+%E6%A5%BD%E8%AD%9C+%E5%8E%9F%E5%85%B8%E7%89%88&tag=mukkoo-22 sponsored nofollow noopener noreferrer
+OK   mobile: Amazon slot is at the bottom (after downloads and related works)
+OK   mobile: work page has 1 AdSense slot (preview) — 1
+OK   mobile: AdSense slot labelled 広告
+OK   mobile: AdSense slot is after downloads + sources and before Amazon
+OK   mobile: work page shows summary
+OK   mobile: work facts include contents and printing
+OK   mobile: FAQ section removed
+OK   mobile: en work page shows summary and original title
+OK   mobile: /ja/composers/beethoven/ has 1 AdSense slot (preview)
+OK   mobile: /ja/scores/category/string-quartet/ has 1 AdSense slot (preview)
+OK   mobile: privacy policy covers GA4, AdSense and Amazon
+OK   mobile: ja profile has note and X links — https://note.com/2108113 me noopener noreferrer | https://x.com/2108113 me noopener noreferrer
+OK   mobile: ja profile has no horizontal overflow — 0
+OK   mobile: en profile has note and X links — https://note.com/2108113 me noopener noreferrer | https://x.com/2108113 me noopener noreferrer
+OK   mobile: en profile has no horizontal overflow — 0
+OK   mobile: de profile has note and X links — https://note.com/2108113 me noopener noreferrer | https://x.com/2108113 me noopener noreferrer
+OK   mobile: de profile has no horizontal overflow — 0
+OK   mobile: PDF download points to release asset — https://github.com/mukkoo0701office-max/SONARIA-Website/releases/download/scores-v1/Beethoven_Violin-Sonata-No5-Op24_Violin.pdf
+FAIL mobile: recording Vn2+Va1+Vc1 = ¥41,000 — ヴァイオリン $60.00 × 2 $120.00 ヴィオラ $60.00 × 1 $60.00 チェロ（外注） $95.00 × 1 $95.00 基本料金 $275.00 納期係数 ×1.0 合計 $275.00
+FAIL mobile: recording next-day = ¥49,200 — ヴァイオリン $60.00 × 2 $120.00 ヴィオラ $60.00 × 1 $60.00 チェロ（外注） $95.00 × 1 $95.00 基本料金 $275.00 納期係数 ×1.2 合計 $330.00
+OK   mobile: bowing prefill from score page
+FAIL mobile: bowing set 1 page = ¥1,500 — 運指＋運弓 $22.00 × 1ページ $22.00 基本料金 $22.00 納期係数 ×1.0 合計 $22.00
+OK   mobile: submission shows not-connected
+OK   mobile: trial disabled after yes
+OK   mobile: apply page has no horizontal overflow — 0
+OK   mobile: lesson candidates listed with priority
+OK   mobile: no page errors
