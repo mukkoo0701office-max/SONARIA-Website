@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "string_quartet",
-    "last_work": "Op.9 Nos.1–6 inventory re-audit",
-    "note": "Next Op.17, but first verify main's existing Op.9 collection edition imslp-106760 against queue and live site. No new candidate added."
+    "last_work": "Op.17 Nos.1–6 inventory and main catalog reconciliation",
+    "note": "Next Op.20. Op.17 already in main as Litolff parts; no duplicate candidate. Live site unverified; score #455858 different edition and not in main edition assets."
   },
   "items": [
     {
@@ -1863,15 +1863,85 @@
         "edition": "Eulenburg_and_Litolff_metadata_checked_pdf_uninspected",
         "parts": "four_Litolff_files_listed_not_verified",
         "pdf_integrity": "unchecked",
-        "duplication": "existing_SONARIA_catalog_not_verified",
+        "duplication": "existing_main_work_and_litolff_edition_identified_no_new_candidate",
         "rights": "not_reviewed_for_Japan_republication",
         "publish": "not_approved"
       },
       "rights_status": "unknown",
-      "notes": "Research only: do not claim Op.17 PDF is a single quartet; grouped score and parts serve all six works. Avoid duplicate assets and identify correct pages. Hummel scans are incomplete and unsuitable as complete set. Confirm actual PDF, edition quality and rights with Claude before download/publication.",
-      "updated_at": "2026-11-27",
+      "notes": "Research only: do not claim Op.17 PDF is a single quartet; grouped score and parts serve all six works. Avoid duplicate assets and identify correct pages. Hummel scans are incomplete and unsuitable as complete set. Confirm actual PDF, edition quality and rights with Claude before download/publication. | 2026-11-29: Main has Op.17 Litolff part edition and four assets; do not treat as new edition. Eulenburg score is a different edition; investigate as optional score candidate only after published site and edition duplication audit. Live publication unverified.",
+      "updated_at": "2026-11-29",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "455858",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+        "publisher": "Ernst Eulenburg, Leipzig",
+        "editor": "Wilhelm Altmann",
+        "publication_date": "circa 1930",
+        "scope": "Complete score, Op.17 Nos.1–6, 125 pp",
+        "evidence": "IMSLP metadata only, PDF not inspected; alternate Heckel #887819, ca.1855, 183 pp"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "identified",
+          "imslp_file_id": "105714",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 28 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        },
+        "violin_2": {
+          "status": "identified",
+          "imslp_file_id": "105715",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 20 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        },
+        "viola": {
+          "status": "identified",
+          "imslp_file_id": "105716",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 18 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        },
+        "cello": {
+          "status": "identified",
+          "imslp_file_id": "105717",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 16 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        }
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "Same-edition full score for Litolff parts not identified",
+        "Score/parts bar-by-bar and movement completeness unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "checked_at": "2026-11-29T01:20:14+09:00",
+          "finding": "IMSLP: Eulenburg/Altmann score #455858; Heckel alternative #887819; Litolff Vn1 #105714, Vn2 #105715, Va #105716, Vc #105717. Hummel 1772 #471043/#471044 incomplete (Vn1 and Vc only). Metadata only."
+        },
+        {
+          "url": "https://github.com/mukkoo0701office-max/SONARIA-Website/blob/main/frontend/src/data/scores/catalog.json",
+          "checked_at": "2026-11-29T01:20:14+09:00",
+          "finding": "main already registers haydn-string-quartets-op17 edition imslp-105714, all four Litolff part PDF references and SHA256 values, rights pending. No score asset in that edition; published-site availability not verified."
+        }
+      ]
     },
     {
       "id": "haydn-op17-no2-altmann-litolff",
@@ -1910,15 +1980,85 @@
         "edition": "Eulenburg_and_Litolff_metadata_checked_pdf_uninspected",
         "parts": "four_Litolff_files_listed_not_verified",
         "pdf_integrity": "unchecked",
-        "duplication": "existing_SONARIA_catalog_not_verified",
+        "duplication": "existing_main_work_and_litolff_edition_identified_no_new_candidate",
         "rights": "not_reviewed_for_Japan_republication",
         "publish": "not_approved"
       },
       "rights_status": "unknown",
-      "notes": "Research only: do not claim Op.17 PDF is a single quartet; grouped score and parts serve all six works. Avoid duplicate assets and identify correct pages. Hummel scans are incomplete and unsuitable as complete set. Confirm actual PDF, edition quality and rights with Claude before download/publication.",
-      "updated_at": "2026-11-27",
+      "notes": "Research only: do not claim Op.17 PDF is a single quartet; grouped score and parts serve all six works. Avoid duplicate assets and identify correct pages. Hummel scans are incomplete and unsuitable as complete set. Confirm actual PDF, edition quality and rights with Claude before download/publication. | 2026-11-29: Main has Op.17 Litolff part edition and four assets; do not treat as new edition. Eulenburg score is a different edition; investigate as optional score candidate only after published site and edition duplication audit. Live publication unverified.",
+      "updated_at": "2026-11-29",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "455858",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+        "publisher": "Ernst Eulenburg, Leipzig",
+        "editor": "Wilhelm Altmann",
+        "publication_date": "circa 1930",
+        "scope": "Complete score, Op.17 Nos.1–6, 125 pp",
+        "evidence": "IMSLP metadata only, PDF not inspected; alternate Heckel #887819, ca.1855, 183 pp"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "identified",
+          "imslp_file_id": "105714",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 28 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        },
+        "violin_2": {
+          "status": "identified",
+          "imslp_file_id": "105715",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 20 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        },
+        "viola": {
+          "status": "identified",
+          "imslp_file_id": "105716",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 18 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        },
+        "cello": {
+          "status": "identified",
+          "imslp_file_id": "105717",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 16 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        }
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "Same-edition full score for Litolff parts not identified",
+        "Score/parts bar-by-bar and movement completeness unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "checked_at": "2026-11-29T01:20:14+09:00",
+          "finding": "IMSLP: Eulenburg/Altmann score #455858; Heckel alternative #887819; Litolff Vn1 #105714, Vn2 #105715, Va #105716, Vc #105717. Hummel 1772 #471043/#471044 incomplete (Vn1 and Vc only). Metadata only."
+        },
+        {
+          "url": "https://github.com/mukkoo0701office-max/SONARIA-Website/blob/main/frontend/src/data/scores/catalog.json",
+          "checked_at": "2026-11-29T01:20:14+09:00",
+          "finding": "main already registers haydn-string-quartets-op17 edition imslp-105714, all four Litolff part PDF references and SHA256 values, rights pending. No score asset in that edition; published-site availability not verified."
+        }
+      ]
     },
     {
       "id": "haydn-op17-no3-altmann-litolff",
@@ -1957,15 +2097,85 @@
         "edition": "Eulenburg_and_Litolff_metadata_checked_pdf_uninspected",
         "parts": "four_Litolff_files_listed_not_verified",
         "pdf_integrity": "unchecked",
-        "duplication": "existing_SONARIA_catalog_not_verified",
+        "duplication": "existing_main_work_and_litolff_edition_identified_no_new_candidate",
         "rights": "not_reviewed_for_Japan_republication",
         "publish": "not_approved"
       },
       "rights_status": "unknown",
-      "notes": "Research only: do not claim Op.17 PDF is a single quartet; grouped score and parts serve all six works. Avoid duplicate assets and identify correct pages. Hummel scans are incomplete and unsuitable as complete set. Confirm actual PDF, edition quality and rights with Claude before download/publication.",
-      "updated_at": "2026-11-27",
+      "notes": "Research only: do not claim Op.17 PDF is a single quartet; grouped score and parts serve all six works. Avoid duplicate assets and identify correct pages. Hummel scans are incomplete and unsuitable as complete set. Confirm actual PDF, edition quality and rights with Claude before download/publication. | 2026-11-29: Main has Op.17 Litolff part edition and four assets; do not treat as new edition. Eulenburg score is a different edition; investigate as optional score candidate only after published site and edition duplication audit. Live publication unverified.",
+      "updated_at": "2026-11-29",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "455858",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+        "publisher": "Ernst Eulenburg, Leipzig",
+        "editor": "Wilhelm Altmann",
+        "publication_date": "circa 1930",
+        "scope": "Complete score, Op.17 Nos.1–6, 125 pp",
+        "evidence": "IMSLP metadata only, PDF not inspected; alternate Heckel #887819, ca.1855, 183 pp"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "identified",
+          "imslp_file_id": "105714",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 28 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        },
+        "violin_2": {
+          "status": "identified",
+          "imslp_file_id": "105715",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 20 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        },
+        "viola": {
+          "status": "identified",
+          "imslp_file_id": "105716",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 18 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        },
+        "cello": {
+          "status": "identified",
+          "imslp_file_id": "105717",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 16 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        }
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "Same-edition full score for Litolff parts not identified",
+        "Score/parts bar-by-bar and movement completeness unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "checked_at": "2026-11-29T01:20:14+09:00",
+          "finding": "IMSLP: Eulenburg/Altmann score #455858; Heckel alternative #887819; Litolff Vn1 #105714, Vn2 #105715, Va #105716, Vc #105717. Hummel 1772 #471043/#471044 incomplete (Vn1 and Vc only). Metadata only."
+        },
+        {
+          "url": "https://github.com/mukkoo0701office-max/SONARIA-Website/blob/main/frontend/src/data/scores/catalog.json",
+          "checked_at": "2026-11-29T01:20:14+09:00",
+          "finding": "main already registers haydn-string-quartets-op17 edition imslp-105714, all four Litolff part PDF references and SHA256 values, rights pending. No score asset in that edition; published-site availability not verified."
+        }
+      ]
     },
     {
       "id": "haydn-op17-no4-eulenburg-litolff",
@@ -2004,15 +2214,85 @@
         "edition": "source_metadata_checked_pdf_uninspected",
         "parts": "four_part_collection_listed_not_verified",
         "pdf_integrity": "unchecked",
-        "duplication": "unverified_existing_site_inventory_not_located",
+        "duplication": "existing_main_work_and_litolff_edition_identified_no_new_candidate",
         "rights": "unverified_japan_republication",
         "publish": "not_approved"
       },
       "rights_status": "unknown",
-      "notes": "Candidate only. Both score and parts are shared assets across all six Op.17 works; do not duplicate file downloads. Validate original pages, complete quartet instrumentation, readability, and legal reuse. Hummel original incomplete parts must not be presented as complete.",
-      "updated_at": "2026-11-27",
+      "notes": "Candidate only. Both score and parts are shared assets across all six Op.17 works; do not duplicate file downloads. Validate original pages, complete quartet instrumentation, readability, and legal reuse. Hummel original incomplete parts must not be presented as complete. | 2026-11-29: Main has Op.17 Litolff part edition and four assets; do not treat as new edition. Eulenburg score is a different edition; investigate as optional score candidate only after published site and edition duplication audit. Live publication unverified.",
+      "updated_at": "2026-11-29",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "455858",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+        "publisher": "Ernst Eulenburg, Leipzig",
+        "editor": "Wilhelm Altmann",
+        "publication_date": "circa 1930",
+        "scope": "Complete score, Op.17 Nos.1–6, 125 pp",
+        "evidence": "IMSLP metadata only, PDF not inspected; alternate Heckel #887819, ca.1855, 183 pp"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "identified",
+          "imslp_file_id": "105714",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 28 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        },
+        "violin_2": {
+          "status": "identified",
+          "imslp_file_id": "105715",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 20 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        },
+        "viola": {
+          "status": "identified",
+          "imslp_file_id": "105716",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 18 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        },
+        "cello": {
+          "status": "identified",
+          "imslp_file_id": "105717",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 16 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        }
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "Same-edition full score for Litolff parts not identified",
+        "Score/parts bar-by-bar and movement completeness unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "checked_at": "2026-11-29T01:20:14+09:00",
+          "finding": "IMSLP: Eulenburg/Altmann score #455858; Heckel alternative #887819; Litolff Vn1 #105714, Vn2 #105715, Va #105716, Vc #105717. Hummel 1772 #471043/#471044 incomplete (Vn1 and Vc only). Metadata only."
+        },
+        {
+          "url": "https://github.com/mukkoo0701office-max/SONARIA-Website/blob/main/frontend/src/data/scores/catalog.json",
+          "checked_at": "2026-11-29T01:20:14+09:00",
+          "finding": "main already registers haydn-string-quartets-op17 edition imslp-105714, all four Litolff part PDF references and SHA256 values, rights pending. No score asset in that edition; published-site availability not verified."
+        }
+      ]
     },
     {
       "id": "haydn-op17-no5-eulenburg-litolff",
@@ -2051,15 +2331,85 @@
         "edition": "source_metadata_checked_pdf_uninspected",
         "parts": "four_part_collection_listed_not_verified",
         "pdf_integrity": "unchecked",
-        "duplication": "unverified_existing_site_inventory_not_located",
+        "duplication": "existing_main_work_and_litolff_edition_identified_no_new_candidate",
         "rights": "unverified_japan_republication",
         "publish": "not_approved"
       },
       "rights_status": "unknown",
-      "notes": "Candidate only. Both score and parts are shared assets across all six Op.17 works; do not duplicate file downloads. Validate original pages, complete quartet instrumentation, readability, and legal reuse. Hummel original incomplete parts must not be presented as complete.",
-      "updated_at": "2026-11-27",
+      "notes": "Candidate only. Both score and parts are shared assets across all six Op.17 works; do not duplicate file downloads. Validate original pages, complete quartet instrumentation, readability, and legal reuse. Hummel original incomplete parts must not be presented as complete. | 2026-11-29: Main has Op.17 Litolff part edition and four assets; do not treat as new edition. Eulenburg score is a different edition; investigate as optional score candidate only after published site and edition duplication audit. Live publication unverified.",
+      "updated_at": "2026-11-29",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "455858",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+        "publisher": "Ernst Eulenburg, Leipzig",
+        "editor": "Wilhelm Altmann",
+        "publication_date": "circa 1930",
+        "scope": "Complete score, Op.17 Nos.1–6, 125 pp",
+        "evidence": "IMSLP metadata only, PDF not inspected; alternate Heckel #887819, ca.1855, 183 pp"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "identified",
+          "imslp_file_id": "105714",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 28 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        },
+        "violin_2": {
+          "status": "identified",
+          "imslp_file_id": "105715",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 20 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        },
+        "viola": {
+          "status": "identified",
+          "imslp_file_id": "105716",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 18 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        },
+        "cello": {
+          "status": "identified",
+          "imslp_file_id": "105717",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 16 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        }
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "Same-edition full score for Litolff parts not identified",
+        "Score/parts bar-by-bar and movement completeness unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "checked_at": "2026-11-29T01:20:14+09:00",
+          "finding": "IMSLP: Eulenburg/Altmann score #455858; Heckel alternative #887819; Litolff Vn1 #105714, Vn2 #105715, Va #105716, Vc #105717. Hummel 1772 #471043/#471044 incomplete (Vn1 and Vc only). Metadata only."
+        },
+        {
+          "url": "https://github.com/mukkoo0701office-max/SONARIA-Website/blob/main/frontend/src/data/scores/catalog.json",
+          "checked_at": "2026-11-29T01:20:14+09:00",
+          "finding": "main already registers haydn-string-quartets-op17 edition imslp-105714, all four Litolff part PDF references and SHA256 values, rights pending. No score asset in that edition; published-site availability not verified."
+        }
+      ]
     },
     {
       "id": "haydn-op17-no6-eulenburg-litolff",
@@ -2098,15 +2448,85 @@
         "edition": "source_metadata_checked_pdf_uninspected",
         "parts": "four_part_collection_listed_not_verified",
         "pdf_integrity": "unchecked",
-        "duplication": "unverified_existing_site_inventory_not_located",
+        "duplication": "existing_main_work_and_litolff_edition_identified_no_new_candidate",
         "rights": "unverified_japan_republication",
         "publish": "not_approved"
       },
       "rights_status": "unknown",
-      "notes": "Candidate only. Both score and parts are shared assets across all six Op.17 works; do not duplicate file downloads. Validate original pages, complete quartet instrumentation, readability, and legal reuse. Hummel original incomplete parts must not be presented as complete.",
-      "updated_at": "2026-11-27",
+      "notes": "Candidate only. Both score and parts are shared assets across all six Op.17 works; do not duplicate file downloads. Validate original pages, complete quartet instrumentation, readability, and legal reuse. Hummel original incomplete parts must not be presented as complete. | 2026-11-29: Main has Op.17 Litolff part edition and four assets; do not treat as new edition. Eulenburg score is a different edition; investigate as optional score candidate only after published site and edition duplication audit. Live publication unverified.",
+      "updated_at": "2026-11-29",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "455858",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+        "publisher": "Ernst Eulenburg, Leipzig",
+        "editor": "Wilhelm Altmann",
+        "publication_date": "circa 1930",
+        "scope": "Complete score, Op.17 Nos.1–6, 125 pp",
+        "evidence": "IMSLP metadata only, PDF not inspected; alternate Heckel #887819, ca.1855, 183 pp"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "identified",
+          "imslp_file_id": "105714",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 28 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        },
+        "violin_2": {
+          "status": "identified",
+          "imslp_file_id": "105715",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 20 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        },
+        "viola": {
+          "status": "identified",
+          "imslp_file_id": "105716",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 18 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        },
+        "cello": {
+          "status": "identified",
+          "imslp_file_id": "105717",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff, Braunschweig",
+          "editor": "unknown",
+          "publication_date": "circa 1870",
+          "scope": "Op.17 collection part, 16 pp; movement completeness not inspected",
+          "evidence": "IMSLP Parts listing metadata; main catalog has corresponding asset and SHA256, not independently downloaded or verified"
+        }
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "Same-edition full score for Litolff parts not identified",
+        "Score/parts bar-by-bar and movement completeness unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.17_%28Haydn%2C_Joseph%29",
+          "checked_at": "2026-11-29T01:20:14+09:00",
+          "finding": "IMSLP: Eulenburg/Altmann score #455858; Heckel alternative #887819; Litolff Vn1 #105714, Vn2 #105715, Va #105716, Vc #105717. Hummel 1772 #471043/#471044 incomplete (Vn1 and Vc only). Metadata only."
+        },
+        {
+          "url": "https://github.com/mukkoo0701office-max/SONARIA-Website/blob/main/frontend/src/data/scores/catalog.json",
+          "checked_at": "2026-11-29T01:20:14+09:00",
+          "finding": "main already registers haydn-string-quartets-op17 edition imslp-105714, all four Litolff part PDF references and SHA256 values, rights pending. No score asset in that edition; published-site availability not verified."
+        }
+      ]
     },
     {
       "id": "haydn-op20-no1-eulenburg-blundell",
@@ -15510,17 +15930,46 @@
     "notes": "No live site verification. Main catalog source can lag deployment. Rights pending; no publication action."
   },
   "last_site_reconciliation": {
-    "checked_at": "2026-11-29T00:15:00+09:00",
+    "checked_at": "2026-11-29T01:20:14+09:00",
     "main_catalog_path": "frontend/src/data/scores/catalog.json",
     "main_catalog_sha": "4cd09cd46263fbaaf53282aadfb22151c0821d2b",
     "main_catalog_work_count": 203,
-    "main_matching_op9_works": 1,
-    "main_matching_work_id": "haydn-string-quartets-op9",
-    "main_matching_edition_id": "imslp-106760",
+    "main_matching_work_id": "haydn-string-quartets-op17",
+    "main_matching_edition_id": "imslp-105714",
+    "main_assets": [
+      {
+        "part": "violin1",
+        "pages": 28,
+        "path": "/scores/haydn-string-quartets-op17/Haydn_String-Quartets-Op17_Violin1.pdf",
+        "sha256": "949af16fcb9257097a81b68f0f90df2eab720671cefd047a44a5d48da60ac123"
+      },
+      {
+        "part": "violin2",
+        "pages": 20,
+        "path": "/scores/haydn-string-quartets-op17/Haydn_String-Quartets-Op17_Violin2.pdf",
+        "sha256": "1666409f07d75b90d5f1a862f0b9ab6ba41a1bfd4ffd908875be0d0199996000"
+      },
+      {
+        "part": "viola",
+        "pages": 18,
+        "path": "/scores/haydn-string-quartets-op17/Haydn_String-Quartets-Op17_Viola.pdf",
+        "sha256": "c5db4338920b4032cd19057f5cc67cc2b9f7c4b25ed3e5ee0afd1c7affcec580"
+      },
+      {
+        "part": "cello",
+        "pages": 16,
+        "path": "/scores/haydn-string-quartets-op17/Haydn_String-Quartets-Op17_Cello.pdf",
+        "sha256": "4eac0c2ab37956248eb8f8d84b8a6aa09a4fa36c6ae27a879b1acf0a2579314b"
+      }
+    ],
+    "main_rights_status": "pending",
     "work_branch": "coordination/gpt-claude-score-queue",
     "queue_items": 196,
     "live_site_status": "unverified_canonical_production_url_not_established",
-    "site_configuration": "frontend/next.config.ts NEXT_PUBLIC_SITE_URL defaults empty; GitHub Pages is preview, not production",
-    "note": "Main already has Op.9 collection and four assets; exact PDF identity, part scope, and published site remain unverified. No new candidates, rights, or publication changes."
+    "site_configuration": "frontend/next.config.ts NEXT_PUBLIC_SITE_URL defaults empty; GitHub Pages preview not proof of production",
+    "difference": "main has four Litolff part assets but no full score in Op.17 edition; queue identifies separate Eulenburg score #455858; no claim of published-site availability",
+    "pdf_downloaded": false,
+    "rights_approved": false,
+    "published": false
   }
 }
