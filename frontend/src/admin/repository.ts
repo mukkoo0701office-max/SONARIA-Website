@@ -24,7 +24,11 @@ import type {
   SuspiciousClient,
   TeacherApplication,
   TeacherApplicationStatus,
-  TrafficBreakdown,, ActivityKind, CaseActivity, ReplyDraft } from "./types";
+  TrafficBreakdown,
+  ActivityKind,
+  CaseActivity,
+  ReplyDraft,
+} from "./types";
 
 export type RepositoryKind = "demo" | "server";
 
