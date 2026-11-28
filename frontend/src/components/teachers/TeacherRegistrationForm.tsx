@@ -157,7 +157,9 @@ export default function TeacherRegistrationForm({ locale }: { locale: Locale }) 
   function payload() {
     return {
       kind: "teacher_application",
-      locale,
+      // 受付関数・DB は返信言語として ja / en だけを受け付ける。欧州 4 言語のページからは en で送り、表示していた言語は pageLocale に残す
+      locale: jaOrEn(locale),
+      pageLocale: locale,
       // 公開用（承認後に講師データへ転記する候補）
       public: {
         displayName: displayName.trim(),
