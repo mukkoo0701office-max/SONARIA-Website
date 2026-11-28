@@ -124,7 +124,7 @@ export type Edition = {
 export type Work = {
   id: string; // URL に使う。英小文字・数字・ハイフン（例: beethoven-violin-sonata-5）
   composerId: string;
-  title: { ja: string; en: string; original?: string | null };
+  title: LocalizedText & { original?: string | null }; // ja・en 必須。de・fr・es・it は各言語の訳題（任意）
   aliases?: string[]; // 一般的な別名（例: 春, Spring Sonata）
   summary?: Localized | null; // 2〜3 文の概要（workTexts.json。出典として作品の IMSLP ページを併記）
   catalog?: CatalogNumber[];

@@ -73,26 +73,18 @@ jobs:
           if grep -rq --include="*.html" "pagead2.googlesyndication.com" out/; then echo "AdSense script must not load before it is connected"; exit 1; fi
           if grep -rq --include="*.html" "data-ad-slot-preview" out/; then echo "AdSense preview slot leaked into production build"; exit 1; fi
 
-      # 欧州 4 言語を公開しても型が崩れないこと（全言語を公開した状態を仮に作って型チェックし、元に戻す）
-      - name: Type check with all locales published
-        run: |
-          cp src/lib/i18n.ts /tmp/i18n.ts.bak
-          sed -i 's/^export const locales = .*/export const locales = ["ja", "en", "de", "fr", "es", "it"] as const;/' src/lib/i18n.ts
-          if npx tsc --noEmit -p .; then status=0; else status=1; fi
-          cp /tmp/i18n.ts.bak src/lib/i18n.ts
-          exit $status
-
       # 翻訳の状態（原文が更新された翻訳を検出。公開中の翻訳が古ければ失敗）
       - name: Translation status
         run: node scripts/translation-status.mjs
 
-      # .htaccess は公開中の言語から生成される（未公開の言語へ振り分けない）
-      - name: Generated .htaccess
+      # .htaccess は公開中の言語（6 言語）から生成される
+      - name: Generated .htaccess and locale pages
         run: |
-          grep -q "RewriteRule ^\$ /ja/" out/.htaccess || { echo ".htaccess must route to /ja/"; exit 1; }
-          grep -q "RewriteRule ^\$ /en/" out/.htaccess || { echo ".htaccess must route to /en/"; exit 1; }
-          ! grep -qE "/(de|fr|es|it)/" out/.htaccess || { echo "unpublished locales must not be routed"; exit 1; }
-          ! ls -d out/de out/fr out/es out/it 2>/dev/null || { echo "unpublished locale pages must not be generated"; exit 1; }
+          for l in ja en de fr es it; do
+            grep -q "RewriteRule ^\$ /$l/" out/.htaccess || { echo ".htaccess must route to /$l/"; exit 1; }
+            test -f out/$l/index.html || { echo "missing out/$l/index.html"; exit 1; }
+            grep -q "<html lang=\"$l\"" out/$l/index.html || { echo "wrong <html lang> in out/$l/index.html"; exit 1; }
+          done
 
       # GA4 は本番ビルドだけで読み込む（data/analytics.ts）
       - name: GA4 tag in production build

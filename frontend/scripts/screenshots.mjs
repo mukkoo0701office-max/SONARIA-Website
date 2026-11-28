@@ -22,10 +22,23 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   page.on("pageerror", (e) => errors.push(e.message));
   page.on("console", (m) => m.type() === "error" && errors.push(m.text()));
 
-  for (const lang of ["ja", "en"]) {
+  // 6 言語すべてのトップ。欧州 4 言語は文言が長いので、横にはみ出していないかも確認する
+  for (const lang of ["ja", "en", "de", "fr", "es", "it"]) {
     await page.goto(`${base}/${lang}/`, { waitUntil: "networkidle" });
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    check(`${vpName}: ${lang} home has no horizontal overflow`, overflow <= 0, String(overflow));
     await shot(page, `${vpName}-${lang}-home`);
     await shot(page, `${vpName}-${lang}-home-top`, false);
+  }
+
+  // 言語の切り替え（3 言語以上はドロップダウン）。ドイツ語のヘッダーで開いた状態を撮る
+  await page.goto(`${base}/de/`, { waitUntil: "networkidle" });
+  const langSummary = page.locator("header details > summary").first();
+  if (await langSummary.isVisible()) {
+    await langSummary.click();
+    const items = await page.locator("header details[open] a").count();
+    check(`${vpName}: language dropdown lists 6 languages`, items === 6, String(items));
+    await shot(page, `${vpName}-de-language-menu`, false);
   }
 
   await page.goto(`${base}/ja/`, { waitUntil: "networkidle" });
@@ -81,17 +94,20 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
     check("mobile: swipe does not navigate", page.url().endsWith("/ja/"), page.url());
   }
 
-  // 言語の切り替え: ヘッダーとフッターに「日本語 | English」。今の言語を強調し、同じページの英語版へ移動する
+  // 言語の切り替え: 6 言語なのでヘッダー・フッターともドロップダウン。今の言語を強調し、同じページの英語版へ移動する
   await page.goto(`${base}/ja/scores/`, { waitUntil: "networkidle" });
   const headerSwitch = page.locator('header nav[aria-label="言語"]');
   const footerSwitch = page.locator('footer nav[aria-label="言語"]');
   check(`${vpName}: language switch in header and footer`, (await headerSwitch.isVisible()) && (await footerSwitch.count()) === 1);
-  check(`${vpName}: current language is marked`, (await headerSwitch.locator('[aria-current="true"]').innerText()).includes("日本語"));
+  // 閉じた状態のボタンに今の言語が出ている
+  check(`${vpName}: current language is shown`, (await headerSwitch.locator("summary").innerText()).includes("日本語"));
   const headerBox = await page.locator("header").first().boundingBox();
   check(`${vpName}: header does not wrap with language switch`, (headerBox?.height ?? 999) <= (vpName === "mobile" ? 80 : 140), `h=${headerBox?.height}`);
   await page.locator("header").first().screenshot({ path: `${outDir}/${vpName}-header-language.png` });
   await footerSwitch.scrollIntoViewIfNeeded();
   await footerSwitch.screenshot({ path: `${outDir}/${vpName}-footer-language.png` });
+  await headerSwitch.locator("summary").click();
+  check(`${vpName}: current language is marked`, (await headerSwitch.locator('[aria-current="true"]').innerText()).includes("日本語"));
   await headerSwitch.locator("a", { hasText: "English" }).click();
   await page.waitForURL(/\/en\/scores\//, { timeout: 5000 }).catch(() => {});
   check(`${vpName}: switching keeps the same page`, /\/en\/scores\/$/.test(new URL(page.url()).pathname), page.url());
@@ -289,7 +305,7 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   await shot(page, `${vpName}-ja-privacy`);
 
   // 管理人プロフィール: note・X のカード（新しいタブ・rel）
-  for (const lang of ["ja", "en"]) {
+  for (const lang of ["ja", "en", "de"]) {
     await page.goto(`${base}/${lang}/profile/`, { waitUntil: "networkidle" });
     const cards = page.locator('section[aria-labelledby="curator-channels"] a[target="_blank"]');
     const hrefs = await cards.evaluateAll((els) => els.map((e) => `${e.getAttribute("href")} ${e.getAttribute("rel")}`));

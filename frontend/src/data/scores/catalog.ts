@@ -6,7 +6,7 @@ import rawPortraits from "./portraits.json";
 import { categoryDefs, MIN_CATEGORY_WORKS, type CategoryDef } from "./categories";
 import type { Catalog, Composer, Era, Part, Scoring, Work } from "./types";
 import { genres, instruments, type Formation, type Genre as SearchGenre, type Instrument, type WorkSummary } from "@/data/works";
-import type { Locale } from "@/lib/i18n";
+import { locales, type Locale, type LocalizedText, type SupportedLocale } from "@/lib/i18n";
 
 // 楽譜カタログの読み出し。ページはすべてここから自動生成する（作品ごとにページを手で作らない）。
 //
@@ -69,14 +69,15 @@ const composerById = new Map(allComposers.map((c) => [c.id, c]));
 const visibleStatuses: ReadonlySet<string> = new Set(["approved", "pending"]);
 
 // 作品の概要・原語名・通称（workTexts.json）を重ねる。catalog.json（移行ツールが生成）とは別に管理する
-type WorkTextEntry = { original?: string; aliases?: string[]; summary?: { ja: string; en: string } };
+// summary・titles は ja・en 以外の言語（de・fr・es・it）も持てる。titles はその言語で一般的な訳題（原題・作品番号は訳さない）
+type WorkTextEntry = { original?: string; aliases?: string[]; summary?: LocalizedText; titles?: Partial<Record<SupportedLocale, string>> };
 const workTexts = (rawWorkTexts as { works: Record<string, WorkTextEntry> }).works;
 function withTexts(w: Work): Work {
   const x = workTexts[w.id];
   if (!x) return w;
   return {
     ...w,
-    title: { ...w.title, original: x.original ?? w.title.original ?? null },
+    title: { ...w.title, ...(x.titles ?? {}), original: x.original ?? w.title.original ?? null },
     aliases: [...new Set([...(w.aliases ?? []), ...(x.aliases ?? [])])],
     summary: x.summary ?? w.summary ?? null,
   };
@@ -124,12 +125,13 @@ export function worksByComposer(composerId: string): Work[] {
 
 // 英語のページは、英語の解説（text.en）か英語の概要（summary.en。workTexts.json）がある作品だけ作る。
 // 曲名と事実の表だけの英語ページは内容が薄く、検索で日本語ページと重複するため作らない
+/** 作品ページを作る言語。日本語は常に作り、他の言語は本文（概要）がその言語にあるときだけ作る（未訳のページを作らない） */
 export function workLocales(w: Work): Locale[] {
-  return w.text?.en || w.summary?.en ? ["ja", "en"] : ["ja"];
+  return locales.filter((l) => l === "ja" || !!w.text?.[l] || !!w.summary?.[l]);
 }
 
 export function composerLocales(c: Composer): Locale[] {
-  return c.profile?.en ? ["ja", "en"] : ["ja"];
+  return locales.filter((l) => l === "ja" || !!c.profile?.[l]);
 }
 
 export function worksForLocale(locale: Locale): Work[] {
@@ -157,7 +159,8 @@ export const categories: (CategoryDef & { works: Work[] })[] = (() => {
 export function categoryLocales(id: string): Locale[] {
   const cat = categories.find((c) => c.id === id);
   if (!cat) return [];
-  return cat.works.filter((w) => workLocales(w).includes("en")).length >= MIN_CATEGORY_WORKS ? ["ja", "en"] : ["ja"];
+  // その言語の作品ページが十分あり、カテゴリの説明もその言語にあるときだけ作る
+  return locales.filter((l) => l === "ja" || (!!cat.intro[l] && cat.works.filter((w) => workLocales(w).includes(l)).length >= MIN_CATEGORY_WORKS));
 }
 
 export function getCategory(id: string) {
@@ -233,7 +236,8 @@ export function toSummary(w: Work, index: number): WorkSummary {
     id: index + 1,
     slug: w.id,
     hasEnglish: workLocales(w).includes("en"),
-    title: { ja: w.title.ja, en: w.title.en },
+    pageLocales: workLocales(w),
+    title: w.title,
     composer: { ja: c.name.ja, en: c.name.en },
     players: w.players,
     composerId: w.composerId,
@@ -244,7 +248,7 @@ export function toSummary(w: Work, index: number): WorkSummary {
     pdfCount: w.editions.reduce((n, e) => n + e.assets.length, 0),
     sheet: sheetTypeOf(w.editions.flatMap((e) => e.assets.map((a) => a.part))),
     // 日本語名・原語名・英語名・別名・作品番号のどれでも見つかるようにする
-    searchText: [w.title.ja, w.title.en, w.title.original, ...(w.aliases ?? []), catalogLabel(w), c.name.ja, c.name.en, c.name.original, ...(c.aliases ?? [])]
+    searchText: [w.title.ja, w.title.en, w.title.de, w.title.fr, w.title.es, w.title.it, w.title.original, ...(w.aliases ?? []), catalogLabel(w), c.name.ja, c.name.en, c.name.original, ...(c.aliases ?? [])]
       .filter(Boolean)
       .join(" "),
   };
