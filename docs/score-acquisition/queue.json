@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Brahms",
     "stage": "violin_sonata",
-    "last_work": "Op.67",
-    "note": "Brahms original string quartets Op.51 Nos.1-2 and Op.67 researched; next violin sonata No.1 Op.78. Live deployment URL unverified."
+    "last_work": "Op.100",
+    "note": "Op.78 and Op.100 Simrock first editions researched as edition candidates; main has grouped Brahms violin sonatas Nos.1–3 old-site scores, identity of old PDFs not established; next Op.108."
   },
   "items": [
     {
@@ -14075,6 +14075,177 @@
         }
       ],
       "notes": "Edited collected-works score; editorial copyright and Japan republication rights require separate review. Same-edition independent parts not identified. Japanese republication rights unknown; no download, approval, or publication."
+    },
+    {
+      "id": "brahms-violin-sonata-1-op78-simrock-first",
+      "composer": "Johannes Brahms",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata No.1 in G major",
+      "opus_catalog": "Op.78",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_No.1%2C_Op.78_%28Brahms%2C_Johannes%29",
+      "edition": {
+        "publisher": "Berlin: N. Simrock",
+        "publication_date": "1879 (November; title page 1880)",
+        "editor": "First edition (no modern editor identified)",
+        "plate": "8148",
+        "imslp_file_id": "203654",
+        "scope": "Combined complete score and violin part (41 pages), content not inspected",
+        "edition_comparison": "Primary historical first edition; reliable bibliographic identity, no scan/music quality inspection"
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.1%2C_Op.78_%28Brahms%2C_Johannes%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "status": "research_needed",
+      "rights_status": "unknown",
+      "owner": "GPT",
+      "updated_at": "2026-11-28",
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "203654",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.1%2C_Op.78_%28Brahms%2C_Johannes%29",
+        "publisher": "Berlin: N. Simrock",
+        "editor": "First edition",
+        "publication_date": "1879 (November; title page 1880)",
+        "scope": "Combined complete score and violin part (41 pages), content not inspected",
+        "evidence": "IMSLP metadata 2026-11-28; PDF not inspected"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "203654",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.1%2C_Op.78_%28Brahms%2C_Johannes%29",
+          "publisher": "Berlin: N. Simrock",
+          "editor": "First edition (no modern editor identified)",
+          "scope": "Violin part in combined PDF; independent PDF not identified",
+          "evidence": "IMSLP work page metadata reviewed 2026-11-28; PDF not downloaded or inspected"
+        },
+        "piano": {
+          "status": "identified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.1%2C_Op.78_%28Brahms%2C_Johannes%29",
+          "publisher": "Berlin: N. Simrock",
+          "editor": "First edition (no modern editor identified)",
+          "scope": "Piano with violin stave in complete score; independent piano-only part not identified",
+          "evidence": "IMSLP work page metadata reviewed 2026-11-28; PDF not downloaded or inspected"
+        }
+      },
+      "score_part_edition_match": "unknown",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "independent piano part",
+        "independent violin PDF"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.1%2C_Op.78_%28Brahms%2C_Johannes%29",
+          "checked_at": "2026-11-28T18:16:51+09:00",
+          "detail": "IMSLP file IDs score 203654, violin 203654; metadata only"
+        }
+      ],
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.1%2C_Op.78_%28Brahms%2C_Johannes%29",
+          "verified": "Berlin: N. Simrock 1879 (November; title page 1880) plate 8148; Combined complete score and violin part (41 pages), content not inspected; PDF not inspected"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "main_old_site_work_exists_edition_identity_unverified",
+        "rights": "unknown"
+      },
+      "notes": "IMSLP identifies first edition; #203654 is combined score and violin part, not independent violin PDF. Alternate scan #203382. 1879 actual publication vs 1880 title page. Main old-site edition has No.1 score PDF; edition identity/hash unknown. Rights in Japan unknown. No PDF download, approval, or publication."
+    },
+    {
+      "id": "brahms-violin-sonata-2-op100-simrock-first",
+      "composer": "Johannes Brahms",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata No.2 in A major",
+      "opus_catalog": "Op.100",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_No.2%2C_Op.100_%28Brahms%2C_Johannes%29",
+      "edition": {
+        "publisher": "Berlin: N. Simrock",
+        "publication_date": "1887",
+        "editor": "First edition (no modern editor identified)",
+        "plate": "8751",
+        "imslp_file_id": "86367",
+        "scope": "Separate complete score (29 pages) and violin part (7 pages), content not inspected",
+        "edition_comparison": "Primary historical first edition; reliable bibliographic identity, no scan/music quality inspection"
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.2%2C_Op.100_%28Brahms%2C_Johannes%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "status": "research_needed",
+      "rights_status": "unknown",
+      "owner": "GPT",
+      "updated_at": "2026-11-28",
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "86367",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.2%2C_Op.100_%28Brahms%2C_Johannes%29",
+        "publisher": "Berlin: N. Simrock",
+        "editor": "First edition",
+        "publication_date": "1887",
+        "scope": "Separate complete score (29 pages) and violin part (7 pages), content not inspected",
+        "evidence": "IMSLP metadata 2026-11-28; PDF not inspected"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "86368",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.2%2C_Op.100_%28Brahms%2C_Johannes%29",
+          "publisher": "Berlin: N. Simrock",
+          "editor": "First edition (no modern editor identified)",
+          "scope": "Separate violin part listed",
+          "evidence": "IMSLP work page metadata reviewed 2026-11-28; PDF not downloaded or inspected"
+        },
+        "piano": {
+          "status": "identified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.2%2C_Op.100_%28Brahms%2C_Johannes%29",
+          "publisher": "Berlin: N. Simrock",
+          "editor": "First edition (no modern editor identified)",
+          "scope": "Piano with violin stave in complete score; independent piano-only part not identified",
+          "evidence": "IMSLP work page metadata reviewed 2026-11-28; PDF not downloaded or inspected"
+        }
+      },
+      "score_part_edition_match": "same_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "independent piano part"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.2%2C_Op.100_%28Brahms%2C_Johannes%29",
+          "checked_at": "2026-11-28T18:16:51+09:00",
+          "detail": "IMSLP file IDs score 86367, violin 86368; metadata only"
+        }
+      ],
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.2%2C_Op.100_%28Brahms%2C_Johannes%29",
+          "verified": "Berlin: N. Simrock 1887 plate 8751; Separate complete score (29 pages) and violin part (7 pages), content not inspected; PDF not inspected"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "main_old_site_work_exists_edition_identity_unverified",
+        "rights": "unknown"
+      },
+      "notes": "IMSLP labels first edition; #86367 score and #86368 violin part, Sibley scan. Main old-site edition has No.2 score PDF; edition identity/hash unknown. Rights in Japan unknown. No PDF download, approval, or publication."
     }
   ],
   "last_updated": "2026-11-28",
@@ -14237,16 +14408,19 @@
     "notes": "No live site verification. Main catalog source can lag deployment. Rights pending; no publication action."
   },
   "last_site_reconciliation": {
-    "checked_at": "2026-11-28T17:20:55+09:00",
+    "checked_at": "2026-11-28T18:16:51+09:00",
     "main_catalog_path": "frontend/src/data/scores/catalog.json",
     "main_catalog_blob_sha": "4cd09cd46263fbaaf53282aadfb22151c0821d2b",
     "main_catalog_work_count": 203,
-    "brahms_op67_matches_in_main": 0,
+    "main_existing_work": "brahms-violin-sonatas (Nos.1-3)",
+    "main_existing_assets": "3 old-site score PDF references for Op.78/100/108; no separate violin part assets listed",
     "live_site_status": "unverified_canonical_url_not_established",
     "site_url_evidence": "frontend/next.config.ts NEXT_PUBLIC_SITE_URL defaults empty; GitHub Pages is preview only",
     "work_branch": "coordination/gpt-claude-score-queue",
+    "pr_number": 10,
     "pr_state": "open",
-    "pr_head_sha_before": "25f1926a4783344c9d8144e824d83042d4b2020e",
-    "note": "Main catalog and PR queue independently checked. Live site not verified; no publication inferred. Score/part PDFs not inspected."
+    "pr_head_sha_before": "8f763c30a3f9f0382e9aeda0012f185968f6611c",
+    "edition_duplicate_status": "Main old-site PDFs have unknown provenance/edition; no same-edition conclusion or rights approval",
+    "note": "Main catalog and work PR checked independently; no live-site verification, no publication inferred. Claude changes not conclusively attributable."
   }
 }
