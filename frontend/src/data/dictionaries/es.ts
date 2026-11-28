@@ -32,6 +32,7 @@ export const es: Dictionary = {
     contact: "Contacto",
     apply: "Solicitar un servicio",
     privacy: "Política de privacidad",
+    commerce: "Aviso según la ley japonesa de comercio",
   },
   header: {
     mainNavLabel: "Menú principal",
@@ -73,6 +74,7 @@ export const es: Dictionary = {
       contact: { title: "Contacto", catchCopy: "", cta: "Más información" },
       apply: { title: "Solicitar un servicio", catchCopy: "", cta: "Solicitar" },
       privacy: { title: "Política de privacidad", catchCopy: "", cta: "Más información" },
+      commerce: { title: "Aviso según la ley japonesa de comercio", catchCopy: "", cta: "Más información" },
     },
   },
   homeScoreSearch: {
@@ -412,6 +414,8 @@ export const es: Dictionary = {
           items: [
             "La información que introduces en nuestros formularios de contacto, solicitud y registro de profesores (como tu nombre, dirección de correo electrónico, el contenido de tu solicitud y tu perfil de profesor)",
             "La información que se envía automáticamente al navegar por el Sitio (páginas vistas, fecha y hora, página de referencia, tipo de navegador y dispositivo, dirección IP e identificadores como las cookies)",
+            "Información de pago (importe, moneda, forma y fecha de pago) y archivos adjuntos a las solicitudes, como partituras en PDF. El Sitio no gestiona ni guarda números de tarjeta (se introducen en la página de Stripe)",
+            "La zona horaria de tu dispositivo y el país de acceso, para determinar la tarifa (Japón / fuera de Japón)",
           ],
         },
         {
@@ -450,7 +454,8 @@ export const es: Dictionary = {
           items: [
             "Google LLC (Google Analytics, Google AdSense): páginas vistas, identificadores como las cookies, dirección IP e información del dispositivo, para la analítica y para mostrar y medir anuncios",
             "GitHub, Inc. (entrega de partituras en PDF): dirección IP e información del navegador al descargar un PDF, para entregar el archivo",
-            "Supabase, Inc. (envío de formularios, una vez conectado): la información que introduces en nuestros formularios, para recibir y gestionar consultas, solicitudes y solicitudes de profesores",
+            "Supabase, Inc. (envío de formularios, almacenamiento de adjuntos y registro de pagos): la información que introduces en nuestros formularios, los archivos adjuntos y los registros de pago, para recibir y gestionar consultas, solicitudes y solicitudes de profesores",
+            "Stripe, Inc. (pago con tarjeta, una vez implantado): importe y moneda del pago, nombre y correo electrónico, y datos de la tarjeta (recibidos directamente por Stripe), para procesar los pagos y prevenir el fraude",
             "Amazon.com, Inc. y sus filiales: información en el sitio de Amazon si haces clic en un enlace de producto, para medir las comisiones por recomendación",
           ],
         },
@@ -475,7 +480,27 @@ export const es: Dictionary = {
           paragraphs: ["Podemos actualizar esta política cuando sea necesario. Los cambios entran en vigor en el momento de su publicación en esta página."],
         },
       ],
-      footnote: "Fecha de establecimiento: 28 de noviembre de 2026. Esta traducción es meramente informativa; prevalece la versión en japonés.",
+      footnote: "Fecha de establecimiento: 28 de noviembre de 2026; revisada el 29 de noviembre de 2026 (se añaden pagos y adjuntos). Esta traducción es meramente informativa; prevalece la versión en japonés.",
+    },
+    // 特定商取引法に基づく表示（2026-11-29 運営者決定: 氏名・住所・電話番号は請求時に開示。キャンセル規定は作業開始前は全額返金・開始後は不可）。
+    // 法律の専門家の確認は経ていない。翻訳版は日本語版が優先する
+    commerce: {
+      title: "Aviso conforme a la Ley japonesa de Transacciones Comerciales Específicas",
+      lead: "Información exigida por la ley japonesa sobre los servicios de pago de SONARIA (digitaciones y arcos, grabación, actuaciones).",
+      sections: [
+        { heading: "Vendedor", items: ["SONARIA"] },
+        { heading: "Responsable, dirección y teléfono", items: ["Los facilitaremos sin demora si se solicitan. Ponte en contacto a través de la página de contacto."] },
+        { heading: "Contacto", items: ["Utiliza la página de contacto. Respondemos por correo electrónico."] },
+        { heading: "Precios", items: ["Se indican en cada página de servicio y en el formulario de solicitud (impuestos incluidos). Los clientes en Japón pagan en JPY y los de fuera de Japón, en USD.", "Para las actuaciones, fijamos el precio tras revisar tu solicitud y enviarte un presupuesto. Los precios y formas de pago de las clases se indican de forma individual tras la solicitud."] },
+        { heading: "Otros gastos", items: ["Las comisiones de la transferencia bancaria corren a cargo del cliente. Los gastos de conexión a Internet y de datos corren a cargo del cliente."] },
+        { heading: "Formas de pago", items: ["Tarjeta de crédito (pago gestionado por Stripe)", "Transferencia bancaria (solo clientes en Japón)"] },
+        { heading: "Momento del pago", items: ["Se requiere el pago completo antes del trabajo o de la actuación (pago por adelantado). Paga antes de la fecha límite indicada en el aviso de pago que enviamos una vez fijado el precio."] },
+        { heading: "Plazo de prestación", items: ["Empezamos tras confirmar tu pago y entregamos en la fecha indicada. Los archivos se envían por correo electrónico o mediante un servicio de transferencia de archivos. Las actuaciones se realizan en la fecha y hora reservadas."] },
+        { heading: "Cancelación y reembolso (digitaciones y arcos, grabación)", items: ["Si cancelas antes de que empecemos el trabajo, reembolsamos el importe pagado íntegramente.", "Una vez iniciado el trabajo, no se aceptan cancelaciones ni reembolsos.", "Corregimos gratuitamente cualquier error por nuestra parte."] },
+        { heading: "Cancelación y reembolso (actuaciones)", items: ["Se indican de forma individual con el presupuesto."] },
+        { heading: "Requisitos", items: ["Los entregables son archivos PDF (partituras) o WAV (audio). Asegúrate de poder abrirlos o reproducirlos."] },
+      ],
+      footnote: "Fecha de establecimiento: 29 de noviembre de 2026. Esta traducción es meramente informativa; prevalece la versión en japonés.",
     },
     profile: {
       title: "Sobre el curador",

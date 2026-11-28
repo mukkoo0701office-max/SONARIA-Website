@@ -33,6 +33,7 @@ export const en: Dictionary = {
     contact: "Contact",
     apply: "Service request",
     privacy: "Privacy policy",
+    commerce: "Specified Commercial Transactions Act notice",
   },
   header: {
     mainNavLabel: "Main menu",
@@ -74,6 +75,7 @@ export const en: Dictionary = {
       contact: { title: "Contact", catchCopy: "", cta: "Learn more" },
       apply: { title: "Service request", catchCopy: "", cta: "Request" },
       privacy: { title: "Privacy policy", catchCopy: "", cta: "Learn more" },
+      commerce: { title: "Specified Commercial Transactions Act notice", catchCopy: "", cta: "Learn more" },
     },
   },
   homeScoreSearch: {
@@ -415,6 +417,8 @@ export const en: Dictionary = {
           items: [
             "Information you enter in our contact, request and teacher registration forms (such as your name, email address, the details of your request and your teacher profile)",
             "Information sent automatically when you browse the Site (pages viewed, date and time, referrer, browser and device type, IP address, and identifiers such as cookies)",
+            "Payment information (amount, currency, payment method and date paid) and files attached to requests, such as score PDFs. The site never handles or stores credit card numbers (they are entered on Stripe's page)",
+            "Your device time zone and access country, used to set the pricing region (Japan / outside Japan)",
           ],
         },
         {
@@ -453,7 +457,8 @@ export const en: Dictionary = {
           items: [
             "Google LLC (Google Analytics, Google AdSense): pages viewed, identifiers such as cookies, IP address and device information — for analytics and for serving and measuring ads",
             "GitHub, Inc. (delivery of score PDFs): IP address and browser information when you download a PDF — to deliver the file",
-            "Supabase, Inc. (form submissions, once connected): the information you enter in our forms — to receive and manage enquiries, requests and teacher applications",
+            "Supabase, Inc. (form submissions, attachment storage and payment records): information you enter in our forms, attached files and payment records — to receive and manage inquiries, requests and teacher applications",
+            "Stripe, Inc. (credit card payments, once introduced): payment amount and currency, your name and email address, and card details (received directly by Stripe) — to process payments and prevent fraud",
             "Amazon.com, Inc. and its affiliates: information on Amazon’s site if you click a product link — to measure referral fees",
           ],
         },
@@ -478,7 +483,27 @@ export const en: Dictionary = {
           paragraphs: ["We may update this policy when necessary. Changes take effect when they are posted on this page."],
         },
       ],
-      footnote: "Established: 28 November 2026",
+      footnote: "Established: 28 November 2026. Revised: 29 November 2026 (payments and attachments added). This translation is provided for reference only; the Japanese version prevails.",
+    },
+    // 特定商取引法に基づく表示（2026-11-29 運営者決定: 氏名・住所・電話番号は請求時に開示。キャンセル規定は作業開始前は全額返金・開始後は不可）。
+    // 法律の専門家の確認は経ていない。翻訳版は日本語版が優先する
+    commerce: {
+      title: "Notice under the Specified Commercial Transactions Act",
+      lead: "Information required by Japanese law about the paid services SONARIA provides (fingering and bowing, recording, performances).",
+      sections: [
+        { heading: "Seller", items: ["SONARIA"] },
+        { heading: "Person in charge, address and phone number", items: ["We will disclose these without delay upon request. Please contact us through the contact page."] },
+        { heading: "Contact", items: ["Please use the contact page. We reply by email."] },
+        { heading: "Prices", items: ["Shown on each service page and in the request form (tax included). Customers in Japan pay in JPY; customers outside Japan pay in USD.", "For performances, we confirm the price after reviewing your request and sending a quote. Lesson fees and payment methods are explained individually after you apply."] },
+        { heading: "Other charges", items: ["Bank transfer fees are paid by the customer. Internet connection and data charges are paid by the customer."] },
+        { heading: "Payment methods", items: ["Credit card (processed by Stripe)", "Bank transfer (customers in Japan only)"] },
+        { heading: "When payment is due", items: ["Full payment is required before work or the performance (prepayment). Please pay by the deadline in the payment notice we send once the price is confirmed."] },
+        { heading: "When the service is provided", items: ["We start work after confirming your payment and deliver by the date we told you. Files are sent by email or a file transfer service. Performances take place at the booked date and time."] },
+        { heading: "Cancellation and refunds (fingering and bowing, recording)", items: ["If you cancel before we start work, we refund the full amount paid.", "Once work has started, we cannot accept cancellations or refunds.", "We fix any errors on our side free of charge."] },
+        { heading: "Cancellation and refunds (performances)", items: ["We explain these individually when we send a quote."] },
+        { heading: "Requirements", items: ["Deliverables are PDF (scores) or WAV (audio) files. Please make sure you can open or play them."] },
+      ],
+      footnote: "Established: 29 November 2026. This translation is provided for reference only; the Japanese version prevails.",
     },
     profile: {
       title: "About the curator",

@@ -303,6 +303,16 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   await page.goto(`${base}/ja/legal/privacy/`, { waitUntil: "networkidle" });
   check(`${vpName}: privacy policy covers GA4, AdSense and Amazon`, (await page.locator("text=Google アナリティクス").count()) > 0 && (await page.locator("text=Google AdSense").count()) > 0 && (await page.locator("text=Amazon アソシエイト").count()) > 0);
   await shot(page, `${vpName}-ja-privacy`);
+  check(`${vpName}: privacy policy covers Stripe and attachments`, (await page.locator("text=Stripe, Inc.").count()) > 0 && (await page.locator("text=添付ファイル").count()) > 0);
+
+  // 特定商取引法に基づく表示（日本語が正本。英語版は日本語優先の注記つき）。フッターから行ける
+  await page.goto(`${base}/ja/`, { waitUntil: "networkidle" });
+  check(`${vpName}: footer links to the commerce notice`, (await page.locator('footer a[href$="/ja/legal/commerce/"]').count()) === 1);
+  await page.goto(`${base}/ja/legal/commerce/`, { waitUntil: "networkidle" });
+  check(`${vpName}: commerce notice has seller, refund policy and disclosure-on-request`, (await page.locator("text=販売事業者").count()) > 0 && (await page.locator("text=作業を始める前のキャンセルは").count()) > 0 && (await page.locator("text=ご請求があれば、遅滞なく開示します").count()) > 0);
+  await shot(page, `${vpName}-ja-commerce`);
+  await page.goto(`${base}/en/legal/commerce/`, { waitUntil: "networkidle" });
+  check(`${vpName}: English commerce notice says Japanese prevails`, (await page.locator("text=the Japanese version prevails").count()) > 0);
 
   // 管理人プロフィール: note・X のカード（新しいタブ・rel）
   for (const lang of ["ja", "en", "de"]) {
