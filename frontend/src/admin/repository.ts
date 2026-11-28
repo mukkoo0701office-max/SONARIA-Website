@@ -28,6 +28,9 @@ import type {
   ActivityKind,
   CaseActivity,
   ReplyDraft,
+  PaymentRecord,
+  PriceItem,
+  Currency,
 } from "./types";
 
 export type RepositoryKind = "demo" | "server";
@@ -56,6 +59,15 @@ export interface AdminRepository {
   /** 完全に削除する（元に戻せない） */
   deleteInquiry(id: string): Promise<void>;
   listTemplates(): Promise<ReplyTemplate[]>;
+
+  // 料金・決済（docs/payments/PAYMENTS_DESIGN.md）
+  /** 料金マスタ（履歴を含む全行） */
+  listPrices(): Promise<PriceItem[]>;
+  /** 料金の追加・改定（有効開始日は今日以降。過去の行は書き換えない） */
+  addPrice(p: Omit<PriceItem, "id" | "createdAt">): Promise<PriceItem>;
+  /** 金額の確定（決済済みなら拒否される。未払いの古い請求は取り消される） */
+  confirmPrice(inquiryId: string, amount: number, currency: Currency, note?: string): Promise<Inquiry>;
+  listPayments(inquiryId: string): Promise<PaymentRecord[]>;
 
   listTeacherApplications(): Promise<TeacherApplication[]>;
   setTeacherStatus(id: string, status: TeacherApplicationStatus, note?: string): Promise<TeacherApplication>;
@@ -91,5 +103,5 @@ export interface AdminRepository {
   saveAdSettings(settings: AdSettings): Promise<AdSettings>;
 }
 
-export const caseStatuses: readonly CaseStatus[] = ["new", "scheduling", "quoted", "booked", "in_progress", "delivered", "completed", "cancelled"];
+export const caseStatuses: readonly CaseStatus[] = ["new", "scheduling", "quoted", "awaiting_payment", "paid", "booked", "in_progress", "delivered", "completed", "cancelled"];
 export const teacherStatuses: readonly TeacherApplicationStatus[] = ["submitted", "under_review", "changes_requested", "approved", "published", "unpublished", "rejected"];

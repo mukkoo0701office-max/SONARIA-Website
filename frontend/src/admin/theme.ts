@@ -48,6 +48,8 @@ export const caseTone: Record<CaseStatus, Tone> = {
   new: "info",
   scheduling: "warn",
   quoted: "warn",
+  awaiting_payment: "warn",
+  paid: "good",
   booked: "good",
   in_progress: "info",
   delivered: "good",

@@ -2,6 +2,8 @@
 // 仕様: GitHub Issue #13（最新の追記を正本とする）。値を変えるときはここだけを書き換える（画面に直書きしない）。
 // 未確定の項目は docs/proposals/service-order-forms.md に記載。
 // 注: 講師ディレクトリ（無料・料金非表示）とは別物。こちらは SONARIA 運営の有料サービス専用。
+// 注: 料金の正本は料金マスタ（public.price_items、初期値は lib/orders/priceEngine.ts の SEED_PRICES）。
+//     申込フォームの表示とサーバーの計算は料金マスタを使う。ここの円の値は初期値と同じであることをテストで確認している（返信文・既存テスト用）
 
 export type ServiceId = "lesson" | "bowing" | "recording";
 export const services: readonly ServiceId[] = ["lesson", "bowing", "recording"];

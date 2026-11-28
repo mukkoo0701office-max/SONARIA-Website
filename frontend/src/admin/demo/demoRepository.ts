@@ -2,7 +2,8 @@
 // メール送信・外部サービスへの接続は一切しない。返信は status: "not_connected" で記録する
 
 import type { AdminRepository, InquiryPatch } from "../repository";
-import type { CaseActivity, InquiryMessage, PdfAccessGrant, PdfAccessPolicy, ReplyDraft, SuspiciousClient, TeacherApplicationStatus } from "../types";
+import type { CaseActivity, InquiryMessage, PaymentRecord, PdfAccessGrant, PdfAccessPolicy, PriceItem, ReplyDraft, SuspiciousClient, TeacherApplicationStatus } from "../types";
+import { computeQuote, SEED_PRICES } from "../../lib/orders/priceEngine";
 import { createDemoData, isoDateTime, type DemoDataset } from "./demoData";
 
 const wait = <T,>(v: T) => new Promise<T>((resolve) => setTimeout(() => resolve(structuredClone(v)), 120));
@@ -14,6 +15,11 @@ export function createDemoRepository(today: Date = new Date()): AdminRepository 
   const now = () => isoDateTime(new Date());
   const drafts = new Map<string, ReplyDraft>();
   const activities: CaseActivity[] = [];
+  // 料金マスタ（初期値）と決済の記録（デモ）
+  const prices: PriceItem[] = SEED_PRICES.map((r, i) => ({ id: `demo-price-${i}`, service: r.service, item: r.item, mode: r.mode, jpy: r.jpy, usdCents: r.usd_cents, effectiveFrom: r.effective_from, active: r.active, createdAt: isoDateTime(today) }));
+  const payments: PaymentRecord[] = [];
+  const paidTotal = (inquiryId: string, currency: string) =>
+    payments.filter((p) => p.inquiryId === inquiryId && p.currency === currency && p.purpose === "initial" && ["paid", "overpaid", "partially_refunded"].includes(p.status)).reduce((n, p) => n + (p.receivedAmount ?? p.amount) - p.refundedAmount, 0);
   // 返信文の組み立てを試せるよう、1 件目（演奏依頼）に送信時の原文を付ける（デモ）
   const first = db.inquiries.find((i) => i.id === "demo-inq-1");
   if (first) {
@@ -38,14 +44,56 @@ export function createDemoRepository(today: Date = new Date()): AdminRepository 
     };
   }
 
+  // 料金・決済の表示を試せるよう、運指・運弓と録音の案件に請求先と受付時の計算を付ける（デモ）
+  const day = isoDateTime(today).slice(0, 10);
+  const bow = db.inquiries.find((i) => i.kind === "bowing");
+  if (bow) {
+    const q = computeQuote({ service: "bowing", type: "both", pages: 5, delivery: "twoDays" }, SEED_PRICES, "intl", day);
+    // 申告（日本以外）とアクセス元（日本）が違う例
+    bow.billing = { region: "intl", regionDetected: "JP", currency: "USD", paymentMethod: "card", serverQuote: q.ok ? q : undefined };
+  }
+  const rec = db.inquiries.find((i) => i.kind === "recording");
+  if (rec) {
+    const q = computeQuote({ service: "recording", tracks: { violin: 2, cello: 1 }, delivery: "threePlus" }, SEED_PRICES, "jp", day);
+    rec.billing = { region: "jp", currency: "JPY", paymentMethod: "bank_transfer", serverQuote: q.ok ? q : undefined };
+  }
+
   return {
     kind: "demo",
+
+    listPrices: () => wait([...prices].sort((a, b) => a.service.localeCompare(b.service) || a.item.localeCompare(b.item) || b.effectiveFrom.localeCompare(a.effectiveFrom))),
+    async addPrice(p) {
+      const todayStr = isoDateTime(new Date()).slice(0, 10);
+      if (p.effectiveFrom < todayStr) throw new Error("past_effective_date");
+      const same = prices.find((x) => x.service === p.service && x.item === p.item && x.effectiveFrom === p.effectiveFrom);
+      if (same && same.effectiveFrom <= todayStr) throw new Error("effective_today_locked");
+      const row: PriceItem = { ...p, id: same?.id ?? nextId("demo-price"), createdAt: now() };
+      if (same) Object.assign(same, row);
+      else prices.push(row);
+      return wait(row);
+    },
+    async confirmPrice(id, amount, currency, note) {
+      const inq = db.inquiries.find((i) => i.id === id);
+      if (!inq) throw new Error("not_found");
+      if (payments.some((p) => p.inquiryId === id && p.purpose === "initial" && ["paid", "underpaid", "overpaid", "partially_refunded", "refunded", "disputed"].includes(p.status))) throw new Error("already_paid");
+      for (const p of payments) if (p.inquiryId === id && p.purpose === "initial" && ["pending", "link_sent"].includes(p.status) && (p.amount !== amount || p.currency !== currency)) p.status = "cancelled";
+      const previous = inq.billing?.confirmed?.amount;
+      inq.billing = { ...(inq.billing ?? {}), confirmed: { amount, currency, at: now() } };
+      activities.push({ id: nextId("demo-act"), inquiryId: id, kind: previous == null ? "quote_sent" : "quote_changed", recordedAt: now(), note, amount, data: { currency, previous }, important: true });
+      return wait(inq);
+    },
+    listPayments: (id) => wait(payments.filter((p) => p.inquiryId === id)),
 
     listInquiries: () => wait([...db.inquiries].sort((a, b) => b.receivedAt.localeCompare(a.receivedAt))),
     getInquiry: (id) => wait(db.inquiries.find((i) => i.id === id) ?? null),
     async updateInquiry(id, patch: InquiryPatch, note) {
       const inq = db.inquiries.find((i) => i.id === id);
       if (!inq) throw new Error("not_found");
+      // データベースと同じ制約: 確定金額がある案件は、入金確認前に「入金済み」「対応中」にできない
+      const c = inq.billing?.confirmed;
+      if (patch.caseStatus && patch.caseStatus !== inq.caseStatus && (patch.caseStatus === "paid" || patch.caseStatus === "in_progress") && c && paidTotal(id, c.currency) < c.amount) {
+        throw new Error("payment_required");
+      }
       if (patch.caseStatus && patch.caseStatus !== inq.caseStatus) {
         db.statusHistory.push({ id: nextId("demo-h"), inquiryId: id, from: inq.caseStatus, to: patch.caseStatus, note, changedAt: now(), changedBy: "demo-admin" });
         db.auditLog.unshift({ id: nextId("demo-a"), at: now(), actor: "demo-admin", action: "inquiry.status_changed", target: id, detail: `${inq.caseStatus} → ${patch.caseStatus}` });

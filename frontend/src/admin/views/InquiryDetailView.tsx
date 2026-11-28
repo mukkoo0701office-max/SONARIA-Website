@@ -9,6 +9,7 @@ import { caseStatuses, type InquiryPatch } from "../repository";
 import { caseTone } from "../theme";
 import type { CaseStatus, Inquiry, InquiryMessage, PaymentStatus } from "../types";
 import ActivityTimeline from "./reply/ActivityTimeline";
+import PaymentPanel from "./payments/PaymentPanel";
 import ReplyComposer from "./reply/ReplyComposer";
 import SubmissionContent from "./reply/SubmissionContent";
 import { adminRoutes, Badge, buttonDanger, buttonPrimary, buttonSecondary, Card, Field, inputClass, LoadState, Modal, NotConnected, PageTitle } from "../ui";
@@ -34,8 +35,11 @@ export default function InquiryDetailView() {
   );
 
   const inq = data.data?.inquiry;
+  // 運指・運弓・録音・演奏依頼は「料金・お支払い」で金額と決済を管理する（レッスンは従来の項目のまま）
+  const billedOnline = !!inq && (inq.kind === "bowing" || inq.kind === "recording" || inq.kind === "performance");
   const [form, setForm] = useState<InquiryPatch & { note: string }>({ note: "" });
   const [flash, setFlash] = useState<string | null>(null);
+  const [caseError, setCaseError] = useState<string | null>(null);
   const [subject, setSubject] = useState("");
   const [body, setBody] = useState("");
   const [templateId, setTemplateId] = useState("");
@@ -92,7 +96,14 @@ export default function InquiryDetailView() {
   async function saveCase(extra?: Partial<InquiryPatch>) {
     if (!repo || !inq) return;
     const { note, ...patch } = { ...form, ...extra };
-    await repo.updateInquiry(inq.id, patch, note || undefined);
+    setCaseError(null);
+    try {
+      await repo.updateInquiry(inq.id, patch, note || undefined);
+    } catch (e) {
+      // 入金確認前は「入金済み」「対応中」にできない（データベースの制約）
+      setCaseError(e instanceof Error && e.message.includes("payment_required") ? t.pay.paymentRequired : t.pay.errorGeneric);
+      return;
+    }
     setFlash(t.common.saved);
     data.reload();
   }
@@ -246,6 +257,8 @@ export default function InquiryDetailView() {
                         ))}
                       </select>
                     </Field>
+                    {!billedOnline && (
+                    <>
                     <div className="grid grid-cols-2 gap-3">
                       <Field label={t.detail.quoteAmount} htmlFor="d-quote">
                         <input id="d-quote" type="number" inputMode="numeric" min={0} value={form.quote?.amount ?? ""} onChange={(e) => setQuote({ amount: num(e.target.value) ?? 0 })} className={inputClass} />
@@ -257,6 +270,8 @@ export default function InquiryDetailView() {
                     <Field label={t.detail.confirmedAt} htmlFor="d-confirmed-at">
                       <input id="d-confirmed-at" type="datetime-local" value={toLocalInput(form.quote?.confirmedAt)} onChange={(e) => setQuote({ confirmedAt: fromLocalInput(e.target.value) })} className={inputClass} />
                     </Field>
+                    </>
+                    )}
                     <Field label={t.detail.scheduledAt} htmlFor="d-scheduled">
                       <input id="d-scheduled" type="datetime-local" value={toLocalInput(form.scheduledAt)} onChange={(e) => setForm((f) => ({ ...f, scheduledAt: fromLocalInput(e.target.value) }))} className={inputClass} />
                     </Field>
@@ -268,6 +283,7 @@ export default function InquiryDetailView() {
                         <input id="d-paydue" type="date" value={form.payment?.dueDate ?? ""} onChange={(e) => setPayment({ dueDate: e.target.value || undefined })} className={inputClass} />
                       </Field>
                     </div>
+                    {!billedOnline && (
                     <Field label={t.detail.paymentStatus} htmlFor="d-paystatus">
                       <select id="d-paystatus" value={form.payment?.status ?? "none"} onChange={(e) => setPayment({ status: e.target.value as PaymentStatus })} className={inputClass}>
                         {paymentStatuses.map((s) => (
@@ -277,12 +293,18 @@ export default function InquiryDetailView() {
                         ))}
                       </select>
                     </Field>
+                    )}
                     <Field label={t.detail.memo} htmlFor="d-memo">
                       <textarea id="d-memo" rows={3} value={form.internalMemo ?? ""} onChange={(e) => setForm((f) => ({ ...f, internalMemo: e.target.value }))} className={inputClass} />
                     </Field>
                     <button type="button" onClick={() => saveCase()} className={buttonPrimary}>
                       {t.detail.saveCase}
                     </button>
+                    {caseError && (
+                      <p role="alert" className="rounded-control border border-[#e0a0a0] bg-[#fdeeee] px-3 py-2 text-[13px]">
+                        {caseError}
+                      </p>
+                    )}
                     <div className="flex flex-wrap gap-2">
                       <button type="button" onClick={() => saveCase({ caseStatus: "completed" })} className={buttonSecondary}>
                         {t.detail.complete}
@@ -303,6 +325,8 @@ export default function InquiryDetailView() {
                     </div>
                   </div>
                 </Card>
+
+                {billedOnline && <PaymentPanel inquiry={inq} onChanged={data.reload} />}
 
                 <Card title={t.detail.attachments} id="d-files">
                   {inq.attachments.length === 0 ? (

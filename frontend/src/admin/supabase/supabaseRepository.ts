@@ -1,5 +1,5 @@
 // 管理画面のデータ窓口（Supabase 版）。public.submissions を管理画面の型（Inquiry・TeacherApplication）に変換する。
-// 接続済み: 問い合わせ・案件（一覧・詳細・状態・既読/返信・メモ・運営側の項目・履歴）、講師申請（一覧・状態）
+// 接続済み: 問い合わせ・案件（一覧・詳細・状態・既読/返信・メモ・運営側の項目・履歴）、講師申請（一覧・状態）、料金マスタ・金額の確定・決済の記録（読み取り）
 // 未接続: 返信メールの送信・収益・アクセス解析・カレンダー・通知・PDF 保護・広告。
 //   未接続の項目は空のデータを返す（架空のデータを本番の管理画面に混ぜない）。保存はエラーにする
 
@@ -13,7 +13,10 @@ import type {
   InquiryKind,
   InquiryMessage,
   InquiryStatusHistory,
+  PaymentRecord,
   PdfAccessPolicy,
+  PriceItem,
+  ServerQuote,
   ReplyDraft,
   TeacherApplication,
   TeacherApplicationStatus,
@@ -37,11 +40,31 @@ type Row = {
   read_at: string | null;
   replied_at: string | null;
   admin_data: Record<string, unknown>;
+  // 料金・決済（20261128000005_pricing_payments.sql）。この列がない古いデータベースでは undefined
+  region?: "jp" | "intl" | null;
+  region_detected?: string | null;
+  currency?: "JPY" | "USD" | null;
+  payment_method?: "card" | "bank_transfer" | null;
+  server_quote?: Record<string, unknown> | null;
+  confirmed_amount?: number | null;
+  confirmed_currency?: "JPY" | "USD" | null;
+  confirmed_at?: string | null;
 };
+type PriceRowDb = { id: string; service: string; item: string; mode: PriceItem["mode"]; jpy: number | null; usd_cents: number | null; effective_from: string; active: boolean; note: string | null; created_at: string };
+type PaymentRowDb = {
+  id: string; submission_id: string; purpose: PaymentRecord["purpose"]; method: PaymentRecord["method"]; currency: PaymentRecord["currency"]; amount: number; status: PaymentRecord["status"];
+  received_amount: number | null; refunded_amount: number; notified_at: string | null; paid_at: string | null; checkout_url: string | null; expires_at: string | null; note: string | null; created_at: string;
+};
+const toPrice = (r: PriceRowDb): PriceItem => ({ id: r.id, service: r.service, item: r.item, mode: r.mode, jpy: r.jpy, usdCents: r.usd_cents, effectiveFrom: r.effective_from, active: r.active, note: r.note ?? undefined, createdAt: r.created_at });
+const toPayment = (r: PaymentRowDb): PaymentRecord => ({
+  id: r.id, inquiryId: r.submission_id, purpose: r.purpose, method: r.method, currency: r.currency, amount: r.amount, status: r.status,
+  receivedAmount: r.received_amount ?? undefined, refundedAmount: r.refunded_amount, notifiedAt: r.notified_at ?? undefined, paidAt: r.paid_at ?? undefined,
+  checkoutUrl: r.checkout_url ?? undefined, expiresAt: r.expires_at ?? undefined, note: r.note ?? undefined, createdAt: r.created_at,
+});
 type EventRow = { id: string; submission_id: string; from_status: string | null; to_status: string; note: string | null; changed_at: string; changed_by: string | null };
 
 const KIND: Record<Row["kind"], InquiryKind> = { lesson: "lesson", bowing: "bowing", recording: "recording", performance_quote: "performance", teacher_application: "teacher" };
-const CASE: readonly string[] = ["new", "scheduling", "quoted", "booked", "in_progress", "delivered", "completed", "cancelled"];
+const CASE: readonly string[] = ["new", "scheduling", "quoted", "awaiting_payment", "paid", "booked", "in_progress", "delivered", "completed", "cancelled"];
 const TEACHER: readonly string[] = ["submitted", "under_review", "changes_requested", "approved", "published", "unpublished", "rejected"];
 
 type Obj = Record<string, unknown>;
@@ -52,7 +75,7 @@ const str = (v: unknown) => (typeof v === "string" ? v : v == null ? "" : String
 function flatten(v: unknown, prefix = "", out: { label: string; value: string }[] = []) {
   if (isObj(v)) {
     for (const [k, x] of Object.entries(v)) {
-      if (prefix === "" && ["contact", "customer", "private", "agreements", "consent", "locale", "kind", "service", "createdAt", "status"].includes(k)) continue;
+      if (prefix === "" && ["contact", "customer", "private", "agreements", "consent", "locale", "kind", "service", "createdAt", "status", "estimateTotal", "currency", "billingRegion", "paymentMethod"].includes(k)) continue;
       flatten(x, prefix ? `${prefix}.${k}` : k, out);
     }
   } else if (Array.isArray(v)) {
@@ -103,6 +126,14 @@ function toInquiry(r: Row): Inquiry {
     quote: isObj(a.quote) ? (a.quote as Inquiry["quote"]) : undefined,
     payment: isObj(a.payment) ? (a.payment as Inquiry["payment"]) : undefined,
     internalMemo: r.admin_note ?? "",
+    billing: {
+      region: r.region ?? undefined,
+      regionDetected: r.region_detected ?? undefined,
+      currency: r.currency ?? undefined,
+      paymentMethod: r.payment_method ?? undefined,
+      serverQuote: r.server_quote ? (r.server_quote as unknown as ServerQuote) : undefined,
+      confirmed: r.confirmed_amount != null && r.confirmed_currency ? { amount: r.confirmed_amount, currency: r.confirmed_currency, at: r.confirmed_at ?? "" } : undefined,
+    },
     attachments: [],
     source: "form",
     // 送信時の原文（整理表示と返信文の組み立てに使う）
@@ -213,6 +244,26 @@ export function createSupabaseRepository(): AdminRepository {
       await rest<string>("rpc/admin_delete_submission", { method: "POST", body: { p_id: id } });
     },
     listTemplates: async () => [],
+
+    // ── 料金・決済 ──
+    async listPrices() {
+      const rows = await rest<PriceRowDb[]>("price_items?select=*&order=service.asc,item.asc,effective_from.desc");
+      return rows.map(toPrice);
+    },
+    async addPrice(p) {
+      const row = await rest<PriceRowDb>("rpc/admin_add_price", {
+        method: "POST",
+        body: { p_service: p.service, p_item: p.item, p_mode: p.mode, p_jpy: p.jpy, p_usd_cents: p.usdCents, p_effective_from: p.effectiveFrom, p_active: p.active, p_note: p.note ?? null },
+      });
+      return toPrice(row);
+    },
+    async confirmPrice(id, amount, currency, note) {
+      return toInquiry(await rest<Row>("rpc/admin_confirm_price", { method: "POST", body: { p_id: id, p_amount: amount, p_currency: currency, p_note: note ?? null } }));
+    },
+    async listPayments(id) {
+      const rows = await rest<PaymentRowDb[]>(`payments?select=*&submission_id=eq.${encodeURIComponent(id)}&order=created_at.asc`);
+      return rows.map(toPayment);
+    },
 
     async listTeacherApplications() {
       const rows = await rest<Row[]>(`submissions?${select}&kind=eq.teacher_application&status=neq.spam&order=created_at.desc&limit=500`);

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useAdmin, useAdminData } from "../AdminContext";
-import { changeRatio, lastDays, lastMonths, revenueByPeriod, summarizeRevenue, trafficByDay, ym } from "../aggregate";
+import { changeRatio, todoCounts, lastDays, lastMonths, revenueByPeriod, summarizeRevenue, trafficByDay, ym } from "../aggregate";
 import { BarChart, LineChart } from "../charts";
 import { fmtDate, fmtMoney, fmtMonth, fmtNumber, fmtPercent, fmtShortDate } from "../i18n";
 import { chartPrimary, chartSecondary, caseTone } from "../theme";
@@ -50,11 +50,23 @@ export default function DashboardView() {
   const upcoming = (d?.calendar ?? []).filter((e) => !e.done && (daysUntil(e.start) ?? -1) >= 0).sort((a, b) => a.start.localeCompare(b.start)).slice(0, 6);
   const overdue = (d?.calendar ?? []).filter((e) => !e.done && (daysUntil(e.start) ?? 0) < 0 && (e.kind === "payment_due" || e.kind === "delivery_due"));
   const money = (n: number) => fmtMoney(n, locale);
+  const todo = todoCounts(d?.inquiries ?? []);
 
   return (
     <>
       <PageTitle title={t.dashboard.title} />
       <LoadState status={data.status === "loading" && !d ? "loading" : data.status === "error" ? "error" : "ready"} onRetry={data.reload}>
+        <section aria-labelledby="todo-title" className="mb-4">
+          <h2 id="todo-title" className="mb-2 text-[15px] font-bold">{t.todo.title}</h2>
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-6">
+            <StatTile label={t.todo.new} value={fmtNumber(todo.new, locale)} tone={todo.new ? "info" : "neutral"} href={adminRoutes.inquiries} />
+            <StatTile label={t.todo.scheduling} value={fmtNumber(todo.scheduling, locale)} tone={todo.scheduling ? "warn" : "neutral"} href={adminRoutes.inquiries} />
+            <StatTile label={t.todo.priceToConfirm} value={fmtNumber(todo.priceToConfirm, locale)} tone={todo.priceToConfirm ? "warn" : "neutral"} href={adminRoutes.inquiries} />
+            <StatTile label={t.todo.awaitingCard} value={fmtNumber(todo.awaitingCard, locale)} tone={todo.awaitingCard ? "info" : "neutral"} href={adminRoutes.inquiries} />
+            <StatTile label={t.todo.awaitingBank} value={fmtNumber(todo.awaitingBank, locale)} tone={todo.awaitingBank ? "warn" : "neutral"} href={adminRoutes.inquiries} />
+            <StatTile label={t.todo.inProgress} value={fmtNumber(todo.inProgress, locale)} tone="neutral" href={adminRoutes.inquiries} />
+          </div>
+        </section>
         <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-5">
           <StatTile label={t.dashboard.todayPv} value={fmtNumber(traffic.pv[traffic.pv.length - 1] ?? 0, locale)} sub={<Badge tone="neutral">{t.common.demo}</Badge>} href={adminRoutes.analytics} />
           <StatTile label={t.dashboard.todayVisitors} value={fmtNumber(traffic.visitors[traffic.visitors.length - 1] ?? 0, locale)} href={adminRoutes.analytics} />
