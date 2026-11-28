@@ -36,10 +36,10 @@
     }
   ],
   "cursor": {
-    "composer": "Brahms",
-    "stage": "cello_sonata",
-    "last_work": "Op.99",
-    "note": "Brahms original cello sonatas Op.38 and Op.99 researched. Next cycle: review earlier queue inventory and restart Haydn quartets where still unverified; do not add duplicates."
+    "composer": "Haydn",
+    "stage": "string_quartet",
+    "last_work": "Op.1 Nos.1–6 (retrospective inventory audit)",
+    "note": "Next review Haydn Op.2 grouped scores and four-part inventory; preserve historical candidate ordering. Op.1 Trautwein score differs from Peters parts; no set completeness approval."
   },
   "items": [
     {
@@ -90,9 +90,33 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Existing SONARIA inventory not located; may already be present. Confirm title/part/complete movements, file rights including reprint, score-versus-parts, and source access before publication. The same collection PDF covers multiple works: download once and do not duplicate PDFs.",
-      "updated_at": "2026-11-27",
+      "updated_at": "2026-11-28",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "456935",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.1_%28Haydn%2C_Joseph%29",
+        "publisher": "Trautwein, Berlin",
+        "editor": "unknown",
+        "publication_date": "circa 1840–1845",
+        "scope": "Op.1 complete collection, 84 pages; different edition from Peters/Merton parts",
+        "evidence": "IMSLP Scores listing, metadata only; PDF not inspected"
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "same-edition score with Peters/Merton parts not identified",
+        "page-by-page four-part verification pending"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.1_%28Haydn%2C_Joseph%29",
+          "imslp_file_id": "456935",
+          "checked_at": "2026-11-28T21:18:54+09:00",
+          "finding": "Trautwein c.1840–45 full score; alternate Heckel c.1855 #887259. Both differ from Peters/Merton ca.1890 parts. Metadata only; no PDF obtained."
+        }
+      ]
     },
     {
       "id": "haydn-op1-no2-peters-merton",
@@ -142,9 +166,33 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Existing SONARIA inventory not located; may already be present. Confirm title/part/complete movements, file rights including reprint, score-versus-parts, and source access before publication. The same collection PDF covers multiple works: download once and do not duplicate PDFs.",
-      "updated_at": "2026-11-27",
+      "updated_at": "2026-11-28",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "456935",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.1_%28Haydn%2C_Joseph%29",
+        "publisher": "Trautwein, Berlin",
+        "editor": "unknown",
+        "publication_date": "circa 1840–1845",
+        "scope": "Op.1 complete collection, 84 pages; different edition from Peters/Merton parts",
+        "evidence": "IMSLP Scores listing, metadata only; PDF not inspected"
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "same-edition score with Peters/Merton parts not identified",
+        "page-by-page four-part verification pending"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.1_%28Haydn%2C_Joseph%29",
+          "imslp_file_id": "456935",
+          "checked_at": "2026-11-28T21:18:54+09:00",
+          "finding": "Trautwein c.1840–45 full score; alternate Heckel c.1855 #887259. Both differ from Peters/Merton ca.1890 parts. Metadata only; no PDF obtained."
+        }
+      ]
     },
     {
       "id": "haydn-op1-no3-peters-merton",
@@ -194,9 +242,33 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Existing SONARIA inventory not located; may already be present. Confirm title/part/complete movements, file rights including reprint, score-versus-parts, and source access before publication. The same collection PDF covers multiple works: download once and do not duplicate PDFs.",
-      "updated_at": "2026-11-27",
+      "updated_at": "2026-11-28",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "456935",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.1_%28Haydn%2C_Joseph%29",
+        "publisher": "Trautwein, Berlin",
+        "editor": "unknown",
+        "publication_date": "circa 1840–1845",
+        "scope": "Op.1 complete collection, 84 pages; different edition from Peters/Merton parts",
+        "evidence": "IMSLP Scores listing, metadata only; PDF not inspected"
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "same-edition score with Peters/Merton parts not identified",
+        "page-by-page four-part verification pending"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.1_%28Haydn%2C_Joseph%29",
+          "imslp_file_id": "456935",
+          "checked_at": "2026-11-28T21:18:54+09:00",
+          "finding": "Trautwein c.1840–45 full score; alternate Heckel c.1855 #887259. Both differ from Peters/Merton ca.1890 parts. Metadata only; no PDF obtained."
+        }
+      ]
     },
     {
       "id": "haydn-op1-no4-peters-merton",
@@ -242,9 +314,33 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Existing SONARIA catalog not fully located or checked; no claim of confirmed absence. Peters/Merton collection files cover 3 works; do not duplicate downloads. Validate full movements, accurate work-to-page segmentation and publication rights; IMSLP public-domain tag alone does not establish Japan republication rights.",
-      "updated_at": "2026-11-27",
+      "updated_at": "2026-11-28",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "456935",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.1_%28Haydn%2C_Joseph%29",
+        "publisher": "Trautwein, Berlin",
+        "editor": "unknown",
+        "publication_date": "circa 1840–1845",
+        "scope": "Op.1 complete collection, 84 pages; different edition from Peters/Merton parts",
+        "evidence": "IMSLP Scores listing, metadata only; PDF not inspected"
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "same-edition score with Peters/Merton parts not identified",
+        "page-by-page four-part verification pending"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.1_%28Haydn%2C_Joseph%29",
+          "imslp_file_id": "456935",
+          "checked_at": "2026-11-28T21:18:54+09:00",
+          "finding": "Trautwein c.1840–45 full score; alternate Heckel c.1855 #887259. Both differ from Peters/Merton ca.1890 parts. Metadata only; no PDF obtained."
+        }
+      ]
     },
     {
       "id": "haydn-op1-no5-peters-merton",
@@ -294,7 +390,7 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Existing SONARIA catalog not fully located or checked; no claim of confirmed absence. Peters/Merton collection files cover 3 works; do not duplicate downloads. Validate full movements, accurate work-to-page segmentation and publication rights; IMSLP public-domain tag alone does not establish Japan republication rights. IMPORTANT AUTHENTICITY AUDIT: Henle scholarly preface identifies Op.1 No.5 as early symphony Hob.I:107, not an authentic quartet. Hold and do not send for publication without source-level verification. DISTINCT GENRE AUDIT: Symphony A, Hob.I:107, published under Op.1 No.5. Do not present this as an original genuine four-string Haydn quartet. Preserve historic printed opus attribution in alternate titles but not original-work genre. No publication approval.",
-      "updated_at": "2026-11-27",
+      "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null,
       "original_work_genre": "symphony",
@@ -304,7 +400,31 @@
         "classification": "Symphony A, Hob.I:107, published under Op.1 No.5",
         "eligible_for_authentic_original_string_quartets": false,
         "allow_as_labeled_arrangement_only_after_review": false
-      }
+      },
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "456935",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.1_%28Haydn%2C_Joseph%29",
+        "publisher": "Trautwein, Berlin",
+        "editor": "unknown",
+        "publication_date": "circa 1840–1845",
+        "scope": "Op.1 complete collection, 84 pages; different edition from Peters/Merton parts",
+        "evidence": "IMSLP Scores listing, metadata only; PDF not inspected"
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "same-edition score with Peters/Merton parts not identified",
+        "page-by-page four-part verification pending"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.1_%28Haydn%2C_Joseph%29",
+          "imslp_file_id": "456935",
+          "checked_at": "2026-11-28T21:18:54+09:00",
+          "finding": "Trautwein c.1840–45 full score; alternate Heckel c.1855 #887259. Both differ from Peters/Merton ca.1890 parts. Metadata only; no PDF obtained."
+        }
+      ]
     },
     {
       "id": "haydn-op1-no6-peters-merton",
@@ -350,9 +470,33 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Existing SONARIA catalog not fully located or checked; no claim of confirmed absence. Peters/Merton collection files cover 3 works; do not duplicate downloads. Validate full movements, accurate work-to-page segmentation and publication rights; IMSLP public-domain tag alone does not establish Japan republication rights.",
-      "updated_at": "2026-11-27",
+      "updated_at": "2026-11-28",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "456935",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.1_%28Haydn%2C_Joseph%29",
+        "publisher": "Trautwein, Berlin",
+        "editor": "unknown",
+        "publication_date": "circa 1840–1845",
+        "scope": "Op.1 complete collection, 84 pages; different edition from Peters/Merton parts",
+        "evidence": "IMSLP Scores listing, metadata only; PDF not inspected"
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "same-edition score with Peters/Merton parts not identified",
+        "page-by-page four-part verification pending"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.1_%28Haydn%2C_Joseph%29",
+          "imslp_file_id": "456935",
+          "checked_at": "2026-11-28T21:18:54+09:00",
+          "finding": "Trautwein c.1840–45 full score; alternate Heckel c.1855 #887259. Both differ from Peters/Merton ca.1890 parts. Metadata only; no PDF obtained."
+        }
+      ]
     },
     {
       "id": "haydn-op2-no1-peters-merton",
@@ -14588,17 +14732,12 @@
     "notes": "No live site verification. Main catalog source can lag deployment. Rights pending; no publication action."
   },
   "last_site_reconciliation": {
-    "checked_at": "2026-11-28T20:15:30+09:00",
+    "checked_at": "2026-11-28T21:18:54+09:00",
     "main_catalog_path": "frontend/src/data/scores/catalog.json",
-    "main_catalog_blob_sha": "4cd09cd46263fbaaf53282aadfb22151c0821d2b",
-    "main_catalog_work_count": 203,
-    "main_existing_work": "No exact Brahms cello sonata Op.99 work identified in main catalog; live site unverified",
-    "live_site_status": "unverified_canonical_url_not_established",
-    "site_url_evidence": "main frontend/next.config.ts NEXT_PUBLIC_SITE_URL defaults empty; GitHub Pages described as preview, not canonical Sakura production",
+    "main_catalog_status": "not_retrieved_this_run",
     "work_branch": "coordination/gpt-claude-score-queue",
-    "pr_number": 10,
-    "pr_state": "open (GitHub open PR search)",
-    "edition_duplicate_status": "No Op.99 candidate previously in 195-item queue; no same edition detected in main catalog, public-site comparison incomplete",
-    "note": "main catalog and work-branch queue checked separately; no PDF fetched, no rights/publication changes."
+    "queue_items": 196,
+    "live_site_status": "unverified_canonical_url_not_established",
+    "note": "Previous main catalog evidence is historical only; fresh main catalog and production site comparison incomplete. Do not infer absent/published. No PDF or rights changes."
   }
 }
