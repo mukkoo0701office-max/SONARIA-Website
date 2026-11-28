@@ -44,6 +44,16 @@ export function createDemoRepository(today: Date = new Date()): AdminRepository 
       return wait(msg);
     },
     listStatusHistory: (inquiryId) => wait(db.statusHistory.filter((h) => h.inquiryId === inquiryId)),
+    async hideInquiry(id) {
+      db.inquiries = db.inquiries.filter((i) => i.id !== id);
+      await wait(null);
+    },
+    async deleteInquiry(id) {
+      db.inquiries = db.inquiries.filter((i) => i.id !== id);
+      db.statusHistory = db.statusHistory.filter((h) => h.inquiryId !== id);
+      db.messages = db.messages.filter((m) => m.inquiryId !== id);
+      await wait(null);
+    },
     listTemplates: () => wait(db.templates),
 
     listTeacherApplications: () => wait([...db.teacherApplications].sort((a, b) => b.submittedAt.localeCompare(a.submittedAt))),

@@ -78,6 +78,19 @@ for (const [vp, viewport] of Object.entries(viewports)) {
   check(`${vp}: reply is not sent (not connected)`, historyEntry);
   await shot(page, `${vp}-inquiry-detail`);
 
+  // 完全に削除: 受付番号を入力するまで実行できない → 入力して削除すると一覧へ戻る
+  await page.locator("button", { hasText: "完全に削除する" }).click();
+  await page.locator("dialog[open] #d-remove-confirm").waitFor();
+  const delBtn = page.locator("dialog[open] button", { hasText: "削除する" }).first();
+  check(`${vp}: delete is disabled until receipt typed`, await delBtn.isDisabled());
+  await shot(page, `${vp}-inquiry-delete-confirm`, false);
+  const receipt = (await page.locator("dialog[open] p").first().innerText()).split(" · ")[0].trim();
+  await page.fill("dialog[open] #d-remove-confirm", receipt);
+  check(`${vp}: delete enabled after typing receipt`, !(await delBtn.isDisabled()), receipt);
+  await delBtn.click();
+  await page.waitForURL(/\/admin\/inquiries\/$/, { timeout: 5000 }).catch(() => {});
+  check(`${vp}: delete returns to list`, /\/admin\/inquiries\/$/.test(page.url()), page.url());
+
   // 講師: 審査を始める → 状態が変わる
   await page.goto(`${base}/admin/teachers/`, { waitUntil: "networkidle" });
   await page.locator("button", { hasText: "審査を始める" }).first().click();

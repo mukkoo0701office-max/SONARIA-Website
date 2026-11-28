@@ -201,6 +201,21 @@ if (SERVICE_ROLE_KEY) {
     assert.equal(psql(`select status from public.submissions where id = '${targetId}'`), "quoted");
   });
 
+  await check("管理人は迷惑な送信を非表示にでき、完全に削除もできる（管理人以外は削除できない）", async () => {
+    const ids = psql("select id from public.submissions where kind = 'lesson' order by created_at limit 2").split("\n");
+    const [hideId, delId] = ids;
+    const h = await admin("rpc/admin_update_submission", { method: "POST", body: JSON.stringify({ p_id: hideId, p_patch: { status: "spam" } }) });
+    assert.equal(h.status, 200);
+    const r0 = await someone("rpc/admin_delete_submission", { method: "POST", body: JSON.stringify({ p_id: delId }) });
+    assert.notEqual(r0.status, 200);
+    assert.equal(psql(`select count(*) from public.submissions where id = '${delId}'`), "1");
+    await admin("rpc/admin_update_submission", { method: "POST", body: JSON.stringify({ p_id: delId, p_patch: { status: "quoted" } }) });
+    const r = await admin("rpc/admin_delete_submission", { method: "POST", body: JSON.stringify({ p_id: delId }) });
+    assert.equal(r.status, 200, await r.text());
+    assert.equal(psql(`select count(*) from public.submissions where id = '${delId}'`), "0");
+    assert.equal(psql(`select count(*) from public.submission_events where submission_id = '${delId}'`), "0");
+  });
+
   await check("ログイン直後の管理人判定（is_admin）が正しい", async () => {
     assert.equal(await (await admin("rpc/is_admin", { method: "POST", body: "{}" })).text(), "true");
     assert.equal(await (await someone("rpc/is_admin", { method: "POST", body: "{}" })).text(), "false");
