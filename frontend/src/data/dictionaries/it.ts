@@ -691,7 +691,7 @@ export const it: Dictionary = {
     taxNote: "Tutti i prezzi sono comprensivi di imposte.",
     required: "Obbligatorio",
     optional: "Facoltativo",
-    billing: { heading: "Paese / regione di fatturazione", options: { jp: "Giappone", intl: "Fuori dal Giappone" }, help: "Determina la valuta di pagamento (Giappone: JPY, fuori dal Giappone: USD). Non dipende dalla lingua del sito.", guessNote: "Preselezionato in base alle impostazioni del tuo dispositivo. Modificalo se non è corretto." },
+    billing: { heading: "Tariffa", options: { jp: "Giappone (JPY)", intl: "Fuori dal Giappone (USD)" }, provisional: "provvisoria", autoNote: "Determinata automaticamente in base al luogo da cui accedi (Giappone: JPY, fuori dal Giappone: USD). Non dipende dalla lingua del sito. Ti comunicheremo l’importo definitivo via e-mail prima del pagamento.", unknownNote: "Non è stato possibile determinare la tua regione, quindi i prezzi sono mostrati provvisoriamente in JPY. Ti comunicheremo l’importo definitivo via e-mail prima del pagamento." },
     payment: {
       heading: "Metodo di pagamento",
       options: { card: "Carta di credito", bank_transfer: "Bonifico bancario" },

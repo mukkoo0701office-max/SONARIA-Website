@@ -337,6 +337,85 @@ if (SERVICE_ROLE_KEY) {
     assert.equal(psql(`select status from public.payments where submission_id = '${id2}'`), "cancelled");
   });
 
+  // ── 銀行振込の手動管理（Phase 4） ──
+  const newBank = async (ip) => {
+    const r = await (await post(bowing("jp", { paymentMethod: "bank_transfer" }), { ip })).json();
+    const sid = psql(`select id from public.submissions where receipt_no = '${r.receipt}'`);
+    assert.equal((await rpc("admin_confirm_price", { p_id: sid, p_amount: 5000, p_currency: "JPY" })).status, 200);
+    return sid;
+  };
+  const json = async (res) => { const t = await res.text(); assert.equal(res.status, 200, t); return JSON.parse(t); };
+
+  await check("振込案内の記録 → 入金待ち。同じ操作の再送は 1 件", async () => {
+    const sid = await newBank("203.0.113.60");
+    const req = crypto.randomUUID();
+    const p1 = await json(await rpc("admin_record_bank_notice", { p_id: sid, p_request_id: req }));
+    const p2 = await json(await rpc("admin_record_bank_notice", { p_id: sid, p_request_id: req }));
+    assert.equal(p1.id, p2.id);
+    assert.equal(p1.status, "link_sent");
+    assert.equal(psql(`select count(*) from public.payments where submission_id = '${sid}'`), "1");
+    assert.equal(psql(`select status from public.submissions where id = '${sid}'`), "awaiting_payment");
+  });
+
+  await check("不足 → 追加の着金で入金済み。案件は「入金済み」へ。二重記録はしない", async () => {
+    const sid = await newBank("203.0.113.61");
+    const pay = await json(await rpc("admin_record_bank_notice", { p_id: sid, p_request_id: crypto.randomUUID() }));
+    const today = psql(`select (now() at time zone 'Asia/Tokyo')::date`);
+    const r1 = crypto.randomUUID();
+    const a = await json(await rpc("admin_record_bank_receipt", { p_payment: pay.id, p_amount: 3000, p_received_on: today, p_request_id: r1 }));
+    assert.equal(a.status, "underpaid");
+    await json(await rpc("admin_record_bank_receipt", { p_payment: pay.id, p_amount: 3000, p_received_on: today, p_request_id: r1 }));
+    assert.equal(psql(`select received_amount from public.payments where id = '${pay.id}'`), "3000");
+    assert.notEqual(psql(`select status from public.submissions where id = '${sid}'`), "paid");
+    const b = await json(await rpc("admin_record_bank_receipt", { p_payment: pay.id, p_amount: 2000, p_received_on: today, p_request_id: crypto.randomUUID() }));
+    assert.equal(b.status, "paid");
+    assert.equal(psql(`select status from public.submissions where id = '${sid}'`), "paid");
+    // 入金が確定金額に届いたので「対応中」へ進められる
+    assert.equal((await rpc("admin_update_submission", { p_id: sid, p_patch: { status: "in_progress" } })).status, 200);
+  });
+
+  await check("超過 → 超過分の返金で入金済みに戻る・未来の着金日は拒否", async () => {
+    const sid = await newBank("203.0.113.62");
+    const pay = await json(await rpc("admin_record_bank_notice", { p_id: sid, p_request_id: crypto.randomUUID() }));
+    const today = psql(`select (now() at time zone 'Asia/Tokyo')::date`);
+    const future = psql(`select (now() at time zone 'Asia/Tokyo')::date + 3`);
+    assert.notEqual((await rpc("admin_record_bank_receipt", { p_payment: pay.id, p_amount: 5000, p_received_on: future, p_request_id: crypto.randomUUID() })).status, 200);
+    const o = await json(await rpc("admin_record_bank_receipt", { p_payment: pay.id, p_amount: 10000, p_received_on: today, p_request_id: crypto.randomUUID() }));
+    assert.equal(o.status, "overpaid");
+    const back = await json(await rpc("admin_record_bank_refund", { p_payment: pay.id, p_amount: 5000, p_request_id: crypto.randomUUID() }));
+    assert.equal(back.status, "paid");
+    assert.notEqual((await rpc("admin_record_bank_refund", { p_payment: pay.id, p_amount: 6000, p_request_id: crypto.randomUUID() })).status, 200);
+    const all = await json(await rpc("admin_record_bank_refund", { p_payment: pay.id, p_amount: 5000, p_request_id: crypto.randomUUID() }));
+    assert.equal(all.status, "refunded");
+  });
+
+  await check("銀行振込は円の案件だけ。ドルで確定すると料金区分は日本以外・支払いはカードになる", async () => {
+    const sid = await newBank("203.0.113.63");
+    assert.equal((await rpc("admin_confirm_price", { p_id: sid, p_amount: 7500, p_currency: "USD" })).status, 200);
+    assert.equal(psql(`select region || ',' || currency || ',' || payment_method from public.submissions where id = '${sid}'`), "intl,USD,card");
+    const r = await rpc("admin_record_bank_notice", { p_id: sid, p_request_id: crypto.randomUUID() });
+    assert.notEqual(r.status, 200);
+    assert.match(await r.text(), /bank_transfer_jp_only/);
+  });
+
+  await check("未払いの振込案内は取り消せる・入金後は取り消せない", async () => {
+    const sid = await newBank("203.0.113.64");
+    const pay = await json(await rpc("admin_record_bank_notice", { p_id: sid, p_request_id: crypto.randomUUID() }));
+    const c = await json(await rpc("admin_cancel_payment", { p_payment: pay.id, p_note: "取り下げ" }));
+    assert.equal(c.status, "cancelled");
+    const sid2 = await newBank("203.0.113.65");
+    const pay2 = await json(await rpc("admin_record_bank_notice", { p_id: sid2, p_request_id: crypto.randomUUID() }));
+    const today = psql(`select (now() at time zone 'Asia/Tokyo')::date`);
+    await json(await rpc("admin_record_bank_receipt", { p_payment: pay2.id, p_amount: 5000, p_received_on: today, p_request_id: crypto.randomUUID() }));
+    assert.notEqual((await rpc("admin_cancel_payment", { p_payment: pay2.id })).status, 200);
+  });
+
+  await check("管理人でない利用者は振込の記録関数を使えない", async () => {
+    const someone = asUser(await signIn("someone@example.com", "someone-pass-123456"));
+    const r = await someone("rpc/admin_record_bank_notice", { method: "POST", body: JSON.stringify({ p_id: id, p_request_id: crypto.randomUUID() }) });
+    assert.notEqual(r.status, 200);
+  });
+
   await check("決済の記録は管理人だけが読める", async () => {
     const someone = asUser(await signIn("someone@example.com", "someone-pass-123456"));
     const r = await someone("payments?select=id");

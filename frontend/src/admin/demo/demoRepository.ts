@@ -18,6 +18,7 @@ export function createDemoRepository(today: Date = new Date()): AdminRepository 
   // 料金マスタ（初期値）と決済の記録（デモ）
   const prices: PriceItem[] = SEED_PRICES.map((r, i) => ({ id: `demo-price-${i}`, service: r.service, item: r.item, mode: r.mode, jpy: r.jpy, usdCents: r.usd_cents, effectiveFrom: r.effective_from, active: r.active, createdAt: isoDateTime(today) }));
   const payments: PaymentRecord[] = [];
+  const seenRequests = new Set<string>();
   const paidTotal = (inquiryId: string, currency: string) =>
     payments.filter((p) => p.inquiryId === inquiryId && p.currency === currency && p.purpose === "initial" && ["paid", "overpaid", "partially_refunded"].includes(p.status)).reduce((n, p) => n + (p.receivedAmount ?? p.amount) - p.refundedAmount, 0);
   // 返信文の組み立てを試せるよう、1 件目（演奏依頼）に送信時の原文を付ける（デモ）
@@ -49,8 +50,8 @@ export function createDemoRepository(today: Date = new Date()): AdminRepository 
   const bow = db.inquiries.find((i) => i.kind === "bowing");
   if (bow) {
     const q = computeQuote({ service: "bowing", type: "both", pages: 5, delivery: "twoDays" }, SEED_PRICES, "intl", day);
-    // 申告（日本以外）とアクセス元（日本）が違う例
-    bow.billing = { region: "intl", regionDetected: "JP", currency: "USD", paymentMethod: "card", serverQuote: q.ok ? q : undefined };
+    // 端末の推定（日本以外）とアクセス元の国（日本）が違う例
+    bow.billing = { region: "jp", regionDetected: "JP", regionGuess: "intl", currency: "USD", paymentMethod: "card", serverQuote: q.ok ? q : undefined };
   }
   const rec = db.inquiries.find((i) => i.kind === "recording");
   if (rec) {
@@ -78,11 +79,75 @@ export function createDemoRepository(today: Date = new Date()): AdminRepository 
       if (payments.some((p) => p.inquiryId === id && p.purpose === "initial" && ["paid", "underpaid", "overpaid", "partially_refunded", "refunded", "disputed"].includes(p.status))) throw new Error("already_paid");
       for (const p of payments) if (p.inquiryId === id && p.purpose === "initial" && ["pending", "link_sent"].includes(p.status) && (p.amount !== amount || p.currency !== currency)) p.status = "cancelled";
       const previous = inq.billing?.confirmed?.amount;
-      inq.billing = { ...(inq.billing ?? {}), confirmed: { amount, currency, at: now() } };
+      // データベースと同じ: 確定した通貨で料金区分を直し、日本以外は銀行振込からカードに戻す
+      const b0 = inq.billing ?? {};
+      inq.billing = { ...b0, region: currency === "JPY" ? "jp" : "intl", currency, paymentMethod: currency === "USD" && b0.paymentMethod === "bank_transfer" ? "card" : b0.paymentMethod, confirmed: { amount, currency, at: now() } };
       activities.push({ id: nextId("demo-act"), inquiryId: id, kind: previous == null ? "quote_sent" : "quote_changed", recordedAt: now(), note, amount, data: { currency, previous }, important: true });
       return wait(inq);
     },
     listPayments: (id) => wait(payments.filter((p) => p.inquiryId === id)),
+    // 銀行振込（データベースの関数と同じ規則。再送の判定は requestId）
+    async recordBankNotice(id, requestId, note) {
+      const inq = db.inquiries.find((i) => i.id === id);
+      if (!inq) throw new Error("not_found");
+      const c = inq.billing?.confirmed;
+      if (!c) throw new Error("amount_not_confirmed");
+      if (c.currency !== "JPY") throw new Error("bank_transfer_jp_only");
+      if (payments.some((p) => p.inquiryId === id && p.purpose === "initial" && ["paid", "overpaid", "partially_refunded", "disputed"].includes(p.status))) throw new Error("already_paid");
+      const seen = seenRequests.has(requestId);
+      seenRequests.add(requestId);
+      let pay = payments.find((p) => p.inquiryId === id && p.method === "bank_transfer" && p.purpose === "initial" && ["pending", "link_sent", "underpaid"].includes(p.status) && p.amount === c.amount);
+      if (seen && pay) return wait(pay);
+      if (pay) {
+        if (pay.status !== "underpaid") pay.status = "link_sent";
+        pay.notifiedAt = now();
+      } else {
+        pay = { id: nextId("demo-pay"), inquiryId: id, purpose: "initial", method: "bank_transfer", currency: "JPY", amount: c.amount, status: "link_sent", refundedAmount: 0, notifiedAt: now(), note, createdAt: now() };
+        payments.push(pay);
+      }
+      activities.push({ id: nextId("demo-act"), inquiryId: id, kind: "invoiced", recordedAt: now(), note, amount: c.amount, data: { method: "bank_transfer" }, important: true });
+      inq.billing = { ...(inq.billing ?? {}), paymentMethod: "bank_transfer" };
+      if (["new", "scheduling", "quoted"].includes(inq.caseStatus)) inq.caseStatus = "awaiting_payment";
+      return wait(pay);
+    },
+    async recordBankReceipt(paymentId, amount, receivedOn, requestId, note) {
+      const pay = payments.find((p) => p.id === paymentId);
+      if (!pay) throw new Error("not_found");
+      if (pay.method !== "bank_transfer") throw new Error("not_bank_transfer");
+      if (!(amount >= 1)) throw new Error("invalid_amount");
+      if (receivedOn > now().slice(0, 10)) throw new Error("invalid_date");
+      if (seenRequests.has(requestId)) return wait(pay);
+      seenRequests.add(requestId);
+      const total = (pay.receivedAmount ?? 0) + amount;
+      pay.receivedAmount = total;
+      pay.status = total === pay.amount ? "paid" : total < pay.amount ? "underpaid" : "overpaid";
+      pay.paidAt = `${receivedOn}T00:00:00+09:00`;
+      if (note) pay.note = [pay.note, note].filter(Boolean).join(" / ");
+      activities.push({ id: nextId("demo-act"), inquiryId: pay.inquiryId, kind: "paid", occurredAt: pay.paidAt, recordedAt: now(), note, amount, data: { method: "bank_transfer" }, important: true });
+      const inq = db.inquiries.find((i) => i.id === pay.inquiryId);
+      if (inq && (pay.status === "paid" || pay.status === "overpaid") && ["new", "scheduling", "quoted", "awaiting_payment"].includes(inq.caseStatus)) inq.caseStatus = "paid";
+      return wait(pay);
+    },
+    async recordBankRefund(paymentId, amount, requestId, note) {
+      const pay = payments.find((p) => p.id === paymentId);
+      if (!pay) throw new Error("not_found");
+      const received = pay.receivedAmount ?? 0;
+      if (!(amount >= 1) || pay.refundedAmount + amount > received) throw new Error("invalid_amount");
+      if (seenRequests.has(requestId)) return wait(pay);
+      seenRequests.add(requestId);
+      pay.refundedAmount += amount;
+      const left = received - pay.refundedAmount;
+      pay.status = left <= 0 ? "refunded" : pay.status === "overpaid" && left === pay.amount ? "paid" : pay.status === "overpaid" && left > pay.amount ? "overpaid" : "partially_refunded";
+      activities.push({ id: nextId("demo-act"), inquiryId: pay.inquiryId, kind: "refunded", recordedAt: now(), note, amount, data: { method: "bank_transfer" }, important: true });
+      return wait(pay);
+    },
+    async cancelPayment(paymentId, note) {
+      const pay = payments.find((p) => p.id === paymentId);
+      if (!pay || !["pending", "link_sent"].includes(pay.status)) throw new Error("invalid_state");
+      pay.status = "cancelled";
+      if (note) pay.note = [pay.note, note].filter(Boolean).join(" / ");
+      return wait(pay);
+    },
 
     listInquiries: () => wait([...db.inquiries].sort((a, b) => b.receivedAt.localeCompare(a.receivedAt))),
     getInquiry: (id) => wait(db.inquiries.find((i) => i.id === id) ?? null),

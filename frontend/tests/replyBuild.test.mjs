@@ -79,3 +79,38 @@ test("入力欄は、その返信で使うものだけを出す（演奏依頼�
   assert.deepEqual(buildReply({ kind: "performance_quote", purpose: "quote", locale: "ja", facts: perf }).inputs, ["quote_amount"]);
   assert.deepEqual(buildReply({ kind: "bowing", purpose: "quote", locale: "ja", facts: perf }).inputs, ["quote_amount", "deadline"]);
 });
+
+// ── お支払いの案内（Phase 4） ──
+const bow = { case_number: "SN-261129-ZZ1AA", customer_name: "Alex Kim", service_name: "運指・運弓付け" };
+
+test("銀行振込の案内: 確定金額・振込先・期限・キャンセル規定が入り、未入力は要入力として残る", () => {
+  const r = buildReply({ kind: "bowing", purpose: "payment_bank", locale: "ja", facts: bow, inputs: { confirmed_amount: "¥5,000", bank_account: "○○銀行 △△支店 普通 1234567 ムコウヤマ", pay_by: "2026年12月5日(土)", deadline: "2026年12月10日(木)" } });
+  assert.match(r.body, /¥5,000（税込み）/);
+  assert.match(r.body, /○○銀行/);
+  assert.match(r.body, /作業を始める前のキャンセルは、お支払い済みの金額を全額返金/);
+  assert.match(r.subject, /お振込みのご案内/);
+  assert.deepEqual(r.missing, []);
+  const empty = buildReply({ kind: "bowing", purpose: "payment_bank", locale: "ja", facts: bow });
+  assert.ok(empty.missing.includes("confirmed_amount"));
+  assert.ok(empty.missing.includes("bank_account"));
+  assert.deepEqual(empty.inputs, ["bank_account", "pay_by", "deadline"]);
+});
+
+test("カード決済の案内（英語）: リンクと期限を入れ、確定金額は入力欄にしない", () => {
+  const r = buildReply({ kind: "recording", purpose: "payment_card", locale: "en", facts: bow, inputs: { confirmed_amount: "$75.00", payment_link: "https://checkout.stripe.com/x", pay_by: "December 5, 2026" } });
+  assert.match(r.body, /The total is \$75\.00 \(tax included\)/);
+  assert.match(r.body, /https:\/\/checkout\.stripe\.com\/x/);
+  assert.ok(!r.inputs.includes("confirmed_amount"));
+});
+
+test("演奏依頼の支払い案内はキャンセル規定（未決定）を入れず、入金で予約確定と書く", () => {
+  const r = buildReply({ kind: "performance_quote", purpose: "payment_bank", locale: "ja", facts: perf, inputs: { confirmed_amount: "¥100,000", bank_account: "x", pay_by: "y" } });
+  assert.match(r.body, /ご入金の確認をもって、ご予約の確定/);
+  assert.doesNotMatch(r.body, /作業を始める前のキャンセル/);
+});
+
+test("支払い関連の目的はレッスンと講師登録には出さない", () => {
+  for (const k of ["lesson", "teacher_application"]) {
+    for (const p of ["payment_card", "payment_bank", "work_started"]) assert.ok(!purposesByKind[k].includes(p), `${k}:${p}`);
+  }
+});

@@ -2,10 +2,11 @@
 
 // 案件詳細の「料金・お支払い」。請求先・受付時の計算・確定金額・決済の記録を 1 か所で見る。
 // 金額の確定はデータベースの関数（admin_confirm_price）が検証する（決済済みは変更不可・古い請求は取り消し）。
-// カード決済のリンク作成は Phase 3（Stripe テストモードの設定後）。それまでは押せない状態で表示する
+// カード決済のリンク作成は Phase 3（Stripe テストモードの設定後）。それまでは押せない状態で表示する。
+// 銀行振込（日本・円のみ）は管理人が手動で記録する: 案内を送った → 着金（金額・日付）→ 必要なら返金（Phase 4）
 import { useEffect, useState } from "react";
 import { useAdmin, useAdminData } from "../../AdminContext";
-import type { Currency, Inquiry, PaymentRecordStatus } from "../../types";
+import type { Currency, Inquiry, PaymentRecord, PaymentRecordStatus } from "../../types";
 import { Badge, buttonPrimary, buttonSecondary, Card, Field, inputClass, NotConnected } from "../../ui";
 import type { Tone } from "../../theme";
 
@@ -57,7 +58,8 @@ export default function PaymentPanel({ inquiry, onChanged }: { inquiry: Inquiry;
   }, [inquiry.id, b.confirmed?.at]);
 
   const parsed = parseAmount(amount, currency);
-  const mismatch = b.region && b.regionDetected && (b.region === "jp") !== (b.regionDetected === "JP");
+  // 自動判定の 2 つの手がかり（アクセス元の国と端末のタイムゾーン）が食い違うときは、請求の前に確認を促す
+  const mismatch = b.regionGuess && b.regionDetected && (b.regionGuess === "jp") !== (b.regionDetected === "JP");
 
   async function confirm() {
     if (!repo || parsed == null || parsed < 1) return;
@@ -86,6 +88,12 @@ export default function PaymentPanel({ inquiry, onChanged }: { inquiry: Inquiry;
             <>
               <dt className="text-muted">{p.detected}</dt>
               <dd>{b.regionDetected}</dd>
+            </>
+          )}
+          {b.regionGuess && (
+            <>
+              <dt className="text-muted">{p.guess}</dt>
+              <dd>{p.regionOptions[b.regionGuess]}</dd>
             </>
           )}
           {b.paymentMethod && (
@@ -169,18 +177,22 @@ export default function PaymentPanel({ inquiry, onChanged }: { inquiry: Inquiry;
           {payments.status === "ready" && (payments.data ?? []).length === 0 && <p className="mt-1 text-[13px] text-muted">{p.noPayments}</p>}
           <ul className="mt-1 grid gap-1.5">
             {(payments.data ?? []).map((r) => (
-              <li key={r.id} className="flex flex-wrap items-center justify-between gap-2 rounded-control border border-line px-3 py-2 text-[13px]">
-                <span>
-                  {p.purpose[r.purpose]}・{p.methodOptions[r.method]}
-                  {r.note && <span className="block text-[12px] text-muted">{r.note}</span>}
-                </span>
-                <span className="flex items-center gap-2">
-                  <span className="tabular-nums">{money(r.receivedAmount ?? r.amount, r.currency)}</span>
-                  <Badge tone={statusTone[r.status]}>{p.status[r.status]}</Badge>
-                </span>
+              <li key={r.id} className="rounded-control border border-line px-3 py-2 text-[13px]">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span>
+                    {p.purpose[r.purpose]}・{p.methodOptions[r.method]}
+                    {r.note && <span className="block text-[12px] text-muted">{r.note}</span>}
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <span className="tabular-nums">{money(r.amount, r.currency)}</span>
+                    <Badge tone={statusTone[r.status]}>{p.status[r.status]}</Badge>
+                  </span>
+                </div>
+                {r.method === "bank_transfer" && <BankRow r={r} onChanged={() => { payments.reload(); onChanged(); }} />}
               </li>
             ))}
           </ul>
+          {b.confirmed?.currency === "JPY" && <BankNotice inquiryId={inquiry.id} hasOpen={(payments.data ?? []).some((r) => r.method === "bank_transfer" && ["pending", "link_sent", "underpaid"].includes(r.status))} onChanged={() => { payments.reload(); onChanged(); }} />}
           <button type="button" disabled className={`${buttonSecondary} mt-3`}>
             {p.stripeLink}
           </button>
@@ -188,5 +200,161 @@ export default function PaymentPanel({ inquiry, onChanged }: { inquiry: Inquiry;
         </section>
       </div>
     </Card>
+  );
+}
+
+const todayTokyo = () => new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Tokyo" }).format(new Date());
+const fmtDate = (iso?: string) => (iso ? new Intl.DateTimeFormat("ja-JP", { timeZone: "Asia/Tokyo", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date(iso)) : "");
+
+// 1 操作ごとに ID を作り、通信の再試行・二重クリックでも記録が 1 回になるようにする（サーバーの request_id）
+function useRequestId() {
+  const [id, setId] = useState(() => crypto.randomUUID());
+  return [id, () => setId(crypto.randomUUID())] as const;
+}
+
+function Flash({ message }: { message: { ok: boolean; text: string } | null }) {
+  if (!message) return null;
+  return (
+    <p role={message.ok ? "status" : "alert"} className={`mt-2 rounded-control border px-3 py-2 text-[13px] ${message.ok ? "border-[#9fd9a9] bg-[#eefaf0]" : "border-[#e0a0a0] bg-[#fdeeee]"}`}>
+      {message.text}
+    </p>
+  );
+}
+
+// 振込案内を送ったことの記録。メールを実際に送ったあとに押す（コピー・メールアプリを開いただけでは記録しない）
+function BankNotice({ inquiryId, hasOpen, onChanged }: { inquiryId: string; hasOpen: boolean; onChanged: () => void }) {
+  const { t, repo } = useAdmin();
+  const p = t.pay;
+  const [requestId, nextRequest] = useRequestId();
+  const [sent, setSent] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [message, setMessage] = useState<{ ok: boolean; text: string } | null>(null);
+  async function record() {
+    if (!repo) return;
+    setBusy(true);
+    setMessage(null);
+    try {
+      await repo.recordBankNotice(inquiryId, requestId);
+      nextRequest();
+      setSent(false);
+      setMessage({ ok: true, text: p.bank.noticeFlash });
+      onChanged();
+    } catch (e) {
+      setMessage({ ok: false, text: e instanceof Error && e.message.includes("already_paid") ? p.errorAlreadyPaid : p.errorGeneric });
+    } finally {
+      setBusy(false);
+    }
+  }
+  return (
+    <div className="mt-3 rounded-control border border-line bg-paper p-3">
+      <p className="text-[13px] font-bold">{hasOpen ? p.bank.renoticeTitle : p.bank.noticeTitle}</p>
+      <p className="mt-1 text-[12px] text-muted">{p.bank.noticeHelp}</p>
+      <label className="mt-2 flex items-start gap-2 text-[13px]">
+        <input type="checkbox" checked={sent} onChange={(e) => setSent(e.target.checked)} className="mt-0.5 accent-navy" />
+        <span>{p.bank.sentCheck}</span>
+      </label>
+      <button type="button" disabled={!sent || busy} onClick={record} className={`${buttonSecondary} mt-2`}>
+        {p.bank.noticeButton}
+      </button>
+      <Flash message={message} />
+    </div>
+  );
+}
+
+// 振込 1 件の操作: 着金の記録・返金の記録・取り消し
+function BankRow({ r, onChanged }: { r: PaymentRecord; onChanged: () => void }) {
+  const { t, repo } = useAdmin();
+  const p = t.pay;
+  const received = r.receivedAmount ?? 0;
+  const remaining = Math.max(r.amount - received, 0);
+  const [amount, setAmount] = useState(remaining > 0 ? String(remaining) : "");
+  const [date, setDate] = useState(todayTokyo());
+  const [refund, setRefund] = useState(received > r.amount ? String(received - r.amount - r.refundedAmount) : "");
+  const [note, setNote] = useState("");
+  const [requestId, nextRequest] = useRequestId();
+  const [busy, setBusy] = useState(false);
+  const [message, setMessage] = useState<{ ok: boolean; text: string } | null>(null);
+
+  async function run(fn: () => Promise<unknown>, ok: string) {
+    setBusy(true);
+    setMessage(null);
+    try {
+      await fn();
+      nextRequest();
+      setNote("");
+      setMessage({ ok: true, text: ok });
+      onChanged();
+    } catch (e) {
+      const m = e instanceof Error ? e.message : "";
+      setMessage({ ok: false, text: m.includes("invalid_date") ? p.bank.errorDate : m.includes("invalid_amount") ? p.bank.errorAmount : p.errorGeneric });
+    } finally {
+      setBusy(false);
+    }
+  }
+  const receiptAmount = Number(amount.replace(/[,¥\s]/g, ""));
+  const refundAmount = Number(refund.replace(/[,¥\s]/g, ""));
+  const canReceive = ["pending", "link_sent", "underpaid", "paid", "overpaid"].includes(r.status);
+  const canRefund = ["paid", "underpaid", "overpaid", "partially_refunded"].includes(r.status) && received - r.refundedAmount > 0;
+  const canCancel = r.status === "pending" || r.status === "link_sent";
+
+  return (
+    <div className="mt-2 grid gap-2 border-t border-line pt-2">
+      <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-0.5 text-[12px]">
+        {r.notifiedAt && (<><dt className="text-muted">{p.bank.notifiedAt}</dt><dd>{fmtDate(r.notifiedAt)}</dd></>)}
+        <dt className="text-muted">{p.bank.received}</dt>
+        <dd className="tabular-nums">{money(received, r.currency)}{r.paidAt ? `（${fmtDate(r.paidAt)}）` : ""}</dd>
+        {remaining > 0 && received > 0 && (<><dt className="text-muted">{p.bank.shortfall}</dt><dd className="tabular-nums">{money(remaining, r.currency)}</dd></>)}
+        {received > r.amount && (<><dt className="text-muted">{p.bank.excess}</dt><dd className="tabular-nums">{money(received - r.amount, r.currency)}</dd></>)}
+        {r.refundedAmount > 0 && (<><dt className="text-muted">{p.bank.refunded}</dt><dd className="tabular-nums">{money(r.refundedAmount, r.currency)}</dd></>)}
+      </dl>
+      {canReceive && (
+        <details>
+          <summary className="cursor-pointer text-[13px] text-navy underline">{p.bank.receiptTitle}</summary>
+          <div className="mt-2 grid gap-2">
+            <p className="text-[12px] text-muted">{p.bank.receiptHelp}</p>
+            <div className="grid grid-cols-2 gap-2">
+              <Field label={p.bank.receiptAmount} htmlFor={`bank-amt-${r.id}`}>
+                <input id={`bank-amt-${r.id}`} inputMode="numeric" value={amount} onChange={(e) => setAmount(e.target.value)} className={inputClass} />
+              </Field>
+              <Field label={p.bank.receiptDate} htmlFor={`bank-date-${r.id}`}>
+                <input id={`bank-date-${r.id}`} type="date" max={todayTokyo()} value={date} onChange={(e) => setDate(e.target.value)} className={inputClass} />
+              </Field>
+            </div>
+            <Field label={p.note} htmlFor={`bank-note-${r.id}`}>
+              <input id={`bank-note-${r.id}`} value={note} maxLength={500} placeholder={p.bank.notePlaceholder} onChange={(e) => setNote(e.target.value)} className={inputClass} />
+            </Field>
+            <button type="button" disabled={busy || !Number.isInteger(receiptAmount) || receiptAmount < 1 || !date} className={buttonPrimary}
+              onClick={() => run(() => repo!.recordBankReceipt(r.id, receiptAmount, date, requestId, note.trim() || undefined), p.bank.receiptFlash)}>
+              {p.bank.receiptButton}
+            </button>
+          </div>
+        </details>
+      )}
+      {canRefund && (
+        <details>
+          <summary className="cursor-pointer text-[13px] text-navy underline">{p.bank.refundTitle}</summary>
+          <div className="mt-2 grid gap-2">
+            <p className="text-[12px] text-muted">{p.bank.refundHelp}</p>
+            <Field label={p.bank.refundAmount} htmlFor={`bank-ref-${r.id}`}>
+              <input id={`bank-ref-${r.id}`} inputMode="numeric" value={refund} onChange={(e) => setRefund(e.target.value)} className={inputClass} />
+            </Field>
+            <Field label={p.note} htmlFor={`bank-rnote-${r.id}`}>
+              <input id={`bank-rnote-${r.id}`} value={note} maxLength={500} onChange={(e) => setNote(e.target.value)} className={inputClass} />
+            </Field>
+            <button type="button" disabled={busy || !Number.isInteger(refundAmount) || refundAmount < 1} className={buttonSecondary}
+              onClick={() => run(() => repo!.recordBankRefund(r.id, refundAmount, requestId, note.trim() || undefined), p.bank.refundFlash)}>
+              {p.bank.refundButton}
+            </button>
+          </div>
+        </details>
+      )}
+      {canCancel && (
+        <button type="button" disabled={busy} className={`${buttonSecondary} justify-self-start`}
+          onClick={() => { if (window.confirm(p.bank.cancelConfirm)) run(() => repo!.cancelPayment(r.id), p.bank.cancelFlash); }}>
+          {p.bank.cancelButton}
+        </button>
+      )}
+      <Flash message={message} />
+    </div>
   );
 }

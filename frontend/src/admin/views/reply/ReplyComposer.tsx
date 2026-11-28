@@ -12,10 +12,17 @@ type Props = { inq: Inquiry & { raw: NonNullable<Inquiry["raw"]> }; onRecorded: 
 // 「送りましたか？」の確認を、メールアプリから戻ったときにも出せるよう、案件ごとに覚えておく
 const pendingKey = (id: string) => `sonaria-admin-pending-send-${id}`;
 
-// 運営者が入力した値を、返信の言語に合わせた表示に直す（金額・日時は自動で入れない）
-function formatInputs(inputs: Partial<Record<InputKey, string>>, lang: "ja" | "en"): Partial<Record<InputKey, string>> {
+// 運営者が入力した値を、返信の言語に合わせた表示に直す（金額・日時は自動で入れない）。
+// 例外: 確定金額は「料金・お支払い」で運営者が確定した値（通貨つき）をそのまま入れる
+function formatInputs(inputs: Partial<Record<InputKey, string>>, lang: "ja" | "en", confirmed?: { amount: number; currency: "JPY" | "USD" }): Partial<Record<InputKey, string>> {
   const loc = lang === "ja" ? "ja-JP" : "en-US";
   const out: Partial<Record<InputKey, string>> = {};
+  if (confirmed) {
+    out.confirmed_amount = new Intl.NumberFormat(loc, { style: "currency", currency: confirmed.currency, minimumFractionDigits: confirmed.currency === "JPY" ? 0 : 2 }).format(confirmed.currency === "JPY" ? confirmed.amount : confirmed.amount / 100);
+  }
+  if (inputs.pay_by) out.pay_by = new Intl.DateTimeFormat(loc, { timeZone: "Asia/Tokyo", year: "numeric", month: "long", day: "numeric", weekday: "short" }).format(new Date(`${inputs.pay_by}T00:00:00+09:00`));
+  if (inputs.payment_link?.trim()) out.payment_link = inputs.payment_link.trim();
+  if (inputs.bank_account?.trim()) out.bank_account = inputs.bank_account.trim();
   const amount = Number(inputs.quote_amount);
   if (inputs.quote_amount && Number.isFinite(amount) && amount >= 0) out.quote_amount = new Intl.NumberFormat(loc, { style: "currency", currency: "JPY", maximumFractionDigits: 0 }).format(amount);
   if (inputs.deadline) out.deadline = new Intl.DateTimeFormat(loc, { timeZone: "Asia/Tokyo", year: "numeric", month: "long", day: "numeric", weekday: "short" }).format(new Date(`${inputs.deadline}T00:00:00+09:00`));
@@ -48,7 +55,7 @@ export default function ReplyComposer({ inq, onRecorded }: Props) {
 
   // お客さんの言語で差し込む値を作る（表示の言語とは別）
   const facts = useMemo(() => describeSubmission({ ...raw, locale: lang }, lang).facts, [raw, lang]);
-  const built = useMemo(() => buildReply({ kind: raw.kind, purpose, locale: lang, facts, inputs: formatInputs(inputs, lang), selected }), [raw.kind, purpose, lang, facts, inputs, selected]);
+  const built = useMemo(() => buildReply({ kind: raw.kind, purpose, locale: lang, facts, inputs: formatInputs(inputs, lang, inq.billing?.confirmed), selected }), [raw.kind, purpose, lang, facts, inputs, selected, inq.billing?.confirmed]);
 
   // 保存していた下書きを開く
   useEffect(() => {
@@ -239,9 +246,15 @@ export default function ReplyComposer({ inq, onRecorded }: Props) {
           <div className="grid gap-3 rounded-control border border-line bg-paper p-3 sm:grid-cols-2">
             {neededInputs.map((k) => (
               <Field key={k} label={t.reply.inputs[k]} htmlFor={`r-in-${k}`}>
+                {k === "bank_account" ? (
+                  // 振込先は運営者が入力する（リポジトリには口座情報を置かない）。下書きと一緒に管理画面の DB に保存される
+                  <textarea id={`r-in-${k}`} rows={4} value={inputs[k] ?? ""} onChange={(e) => setInputs((x) => ({ ...x, [k]: e.target.value }))} className={inputClass} />
+                ) : k === "payment_link" ? (
+                  <input id={`r-in-${k}`} type="url" inputMode="url" placeholder="https://" value={inputs[k] ?? ""} onChange={(e) => setInputs((x) => ({ ...x, [k]: e.target.value }))} className={inputClass} />
+                ) : (
                 <input
                   id={`r-in-${k}`}
-                  type={k === "quote_amount" ? "number" : k === "deadline" ? "date" : "datetime-local"}
+                  type={k === "quote_amount" ? "number" : k === "deadline" || k === "pay_by" ? "date" : "datetime-local"}
                   inputMode={k === "quote_amount" ? "numeric" : undefined}
                   min={k === "quote_amount" ? 0 : undefined}
                   step={k === "quote_amount" ? 1000 : undefined}
@@ -249,6 +262,7 @@ export default function ReplyComposer({ inq, onRecorded }: Props) {
                   onChange={(e) => setInputs((x) => ({ ...x, [k]: e.target.value }))}
                   className={inputClass}
                 />
+                )}
               </Field>
             ))}
             <p className="text-[12px] text-muted sm:col-span-2">{t.reply.inputsNote}</p>

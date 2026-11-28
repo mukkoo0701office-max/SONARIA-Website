@@ -68,6 +68,15 @@ export interface AdminRepository {
   /** 金額の確定（決済済みなら拒否される。未払いの古い請求は取り消される） */
   confirmPrice(inquiryId: string, amount: number, currency: Currency, note?: string): Promise<Inquiry>;
   listPayments(inquiryId: string): Promise<PaymentRecord[]>;
+  // 銀行振込の手動管理（Phase 4）。requestId は同じ操作の再送を 1 回にまとめるための ID（画面で 1 操作ごとに作る）
+  /** 振込案内を送ったことの記録（確定金額・円のみ）。案件は「入金待ち」へ */
+  recordBankNotice(inquiryId: string, requestId: string, note?: string): Promise<PaymentRecord>;
+  /** 着金の記録（金額・着金日）。合計で 入金済み／不足／超過 が付く。全額で案件は「入金済み」へ */
+  recordBankReceipt(paymentId: string, amount: number, receivedOn: string, requestId: string, note?: string): Promise<PaymentRecord>;
+  /** 振込で返金したことの記録 */
+  recordBankRefund(paymentId: string, amount: number, requestId: string, note?: string): Promise<PaymentRecord>;
+  /** 未払いの請求の取り消し */
+  cancelPayment(paymentId: string, note?: string): Promise<PaymentRecord>;
 
   listTeacherApplications(): Promise<TeacherApplication[]>;
   setTeacherStatus(id: string, status: TeacherApplicationStatus, note?: string): Promise<TeacherApplication>;
