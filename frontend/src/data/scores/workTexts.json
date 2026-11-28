@@ -10,7 +10,17 @@
       ],
       "summary": {
         "ja": "バッハの管弦楽組曲第3番 BWV1068 の第2曲「エア」です。「G線上のアリア」という呼び名は、19世紀のヴァイオリン奏者アウグスト・ヴィルヘルミが、G線だけで弾けるように編曲した版に由来します。",
-        "en": "The second movement (“Air”) of Bach’s Orchestral Suite No. 3, BWV 1068. The name “Air on the G String” comes from August Wilhelmj’s 19th-century arrangement, which lets the violinist play the melody on the G string alone."
+        "en": "The second movement (“Air”) of Bach’s Orchestral Suite No. 3, BWV 1068. The name “Air on the G String” comes from August Wilhelmj’s 19th-century arrangement, which lets the violinist play the melody on the G string alone.",
+        "de": "Der zweite Satz („Air“) aus Bachs Orchestersuite Nr. 3 BWV 1068. Der Name „Air auf der G-Saite“ stammt von August Wilhelmjs Bearbeitung aus dem 19. Jahrhundert, in der die Melodie allein auf der G-Saite gespielt wird.",
+        "fr": "Deuxième mouvement (« Air ») de la Suite pour orchestre n° 3, BWV 1068, de Bach. Le titre « Air sur la corde de sol » vient de l’arrangement d’August Wilhelmj au XIXe siècle, où le violoniste joue la mélodie sur la seule corde de sol.",
+        "es": "Segundo movimiento («Air») de la Suite orquestal n.º 3, BWV 1068, de Bach. El nombre «Aria para la cuerda de sol» procede del arreglo de August Wilhelmj en el siglo XIX, en el que el violinista toca la melodía solo en la cuerda de sol.",
+        "it": "Secondo movimento («Air») della Suite per orchestra n. 3, BWV 1068, di Bach. Il nome «Aria sulla quarta corda» deriva dall’arrangiamento ottocentesco di August Wilhelmj, in cui il violinista suona la melodia sulla sola corda di sol."
+      },
+      "titles": {
+        "de": "Air (aus der Orchestersuite Nr. 3)",
+        "fr": "Air (de la Suite pour orchestre n° 3)",
+        "es": "Aria (de la Suite orquestal n.º 3)",
+        "it": "Aria (dalla Suite per orchestra n. 3)"
       }
     },
     "bach-jesu-joy-of-mans-desiring": {
@@ -22,7 +32,17 @@
       ],
       "summary": {
         "ja": "バッハのカンタータ《心と口と行いと生活で》BWV147（1723年）のコラールです。三連符で流れる伴奏の上にコラールの旋律が重なる形で、弦楽合奏でもよく演奏されます。",
-        "en": "A chorale from Bach’s cantata Herz und Mund und Tat und Leben, BWV 147 (1723). The chorale tune sits over a flowing triplet accompaniment, and the piece is widely played by string ensembles."
+        "en": "A chorale from Bach’s cantata Herz und Mund und Tat und Leben, BWV 147 (1723). The chorale tune sits over a flowing triplet accompaniment, and the piece is widely played by string ensembles.",
+        "de": "Ein Choral aus Bachs Kantate „Herz und Mund und Tat und Leben“ BWV 147 (1723). Die Choralmelodie liegt über einer fließenden Triolenbegleitung; das Stück wird gern von Streicherensembles gespielt.",
+        "fr": "Choral de la cantate Herz und Mund und Tat und Leben, BWV 147 (1723), de Bach. La mélodie du choral se déploie sur un accompagnement fluide en triolets ; la pièce est très jouée par les ensembles à cordes.",
+        "es": "Coral de la cantata Herz und Mund und Tat und Leben, BWV 147 (1723), de Bach. La melodía del coral se apoya en un fluido acompañamiento de tresillos, y la pieza es muy interpretada por conjuntos de cuerda.",
+        "it": "Corale dalla cantata Herz und Mund und Tat und Leben, BWV 147 (1723), di Bach. La melodia del corale poggia su un fluido accompagnamento in terzine, e il brano è molto eseguito dagli ensemble d’archi."
+      },
+      "titles": {
+        "de": "Jesus bleibet meine Freude (für Streicher)",
+        "fr": "Jésus que ma joie demeure (pour cordes)",
+        "es": "Jesús, alegría de los hombres (para cuerdas)",
+        "it": "Jesù, gioia dell’uomo (per archi)"
       }
     },
     "bach-double-violin-concerto": {
@@ -35,7 +55,17 @@
       ],
       "summary": {
         "ja": "2人の独奏ヴァイオリンと弦楽・通奏低音のための協奏曲で、「ドッペル」の愛称で親しまれています。2本のヴァイオリンが対等に掛け合う書法で、とくに第2楽章ラルゴは名高い緩徐楽章です。",
-        "en": "A concerto for two solo violins with strings and continuo, often simply called the “Bach Double”. The two violins converse as equals, and the slow movement (Largo ma non tanto) is especially celebrated."
+        "en": "A concerto for two solo violins with strings and continuo, often simply called the “Bach Double”. The two violins converse as equals, and the slow movement (Largo ma non tanto) is especially celebrated.",
+        "de": "Ein Konzert für zwei Soloviolinen mit Streichern und Continuo, oft einfach „Bach-Doppelkonzert“ genannt. Die beiden Violinen unterhalten sich gleichberechtigt; besonders berühmt ist der langsame Satz (Largo ma non tanto).",
+        "fr": "Concerto pour deux violons solistes, cordes et continuo, souvent appelé simplement le « Double de Bach ». Les deux violons dialoguent d’égal à égal, et le mouvement lent (Largo ma non tanto) est particulièrement célèbre.",
+        "es": "Concierto para dos violines solistas, cuerdas y continuo, a menudo llamado simplemente el «Doble de Bach». Los dos violines dialogan en igualdad, y el movimiento lento (Largo ma non tanto) es especialmente célebre.",
+        "it": "Concerto per due violini solisti, archi e continuo, spesso chiamato semplicemente il «Doppio di Bach». I due violini dialogano alla pari, e il movimento lento (Largo ma non tanto) è particolarmente celebre."
+      },
+      "titles": {
+        "de": "Konzert für zwei Violinen d-Moll",
+        "fr": "Concerto pour deux violons en ré mineur",
+        "es": "Concierto para dos violines en re menor",
+        "it": "Concerto per due violini in re minore"
       }
     },
     "bach-sonatas-and-partitas": {
@@ -49,7 +79,17 @@
       ],
       "summary": {
         "ja": "無伴奏ヴァイオリンのためのソナタ3曲とパルティータ3曲です。自筆譜は1720年の日付をもち、パルティータ第2番の終曲「シャコンヌ」はヴァイオリン音楽の頂点のひとつとされます。",
-        "en": "Three sonatas and three partitas for unaccompanied violin; Bach’s autograph is dated 1720. The Chaconne that ends Partita No. 2 is regarded as one of the summits of the violin repertoire."
+        "en": "Three sonatas and three partitas for unaccompanied violin; Bach’s autograph is dated 1720. The Chaconne that ends Partita No. 2 is regarded as one of the summits of the violin repertoire.",
+        "de": "Drei Sonaten und drei Partiten für Violine ohne Begleitung; Bachs Autograph ist auf 1720 datiert. Die Chaconne am Ende der Partita Nr. 2 gilt als einer der Gipfel des Violinrepertoires.",
+        "fr": "Trois sonates et trois partitas pour violon seul ; l’autographe de Bach est daté de 1720. La Chaconne qui conclut la Partita n° 2 est considérée comme l’un des sommets du répertoire du violon.",
+        "es": "Tres sonatas y tres partitas para violín sin acompañamiento; el autógrafo de Bach está fechado en 1720. La Chacona que cierra la Partita n.º 2 se considera una de las cumbres del repertorio violinístico.",
+        "it": "Tre sonate e tre partite per violino senza accompagnamento; l’autografo di Bach è datato 1720. La Ciaccona che chiude la Partita n. 2 è considerata una delle vette del repertorio violinistico."
+      },
+      "titles": {
+        "de": "Sonaten und Partiten für Violine solo",
+        "fr": "Sonates et partitas pour violon seul",
+        "es": "Sonatas y partitas para violín solo",
+        "it": "Sonate e partite per violino solo"
       }
     },
     "bach-cello-suites": {
@@ -61,7 +101,17 @@
       ],
       "summary": {
         "ja": "無伴奏チェロのための6つの組曲で、ケーテン時代（1717〜23年ごろ）の作とされます。バッハの自筆譜は残っておらず、妻アンナ・マクダレーナなどによる筆写譜で伝わっています。",
-        "en": "Six suites for unaccompanied cello, thought to date from Bach’s Köthen years (around 1717–23). No autograph survives; the music comes down to us in copies, including one by his wife Anna Magdalena."
+        "en": "Six suites for unaccompanied cello, thought to date from Bach’s Köthen years (around 1717–23). No autograph survives; the music comes down to us in copies, including one by his wife Anna Magdalena.",
+        "de": "Sechs Suiten für Violoncello ohne Begleitung, vermutlich aus Bachs Köthener Zeit (um 1717–23). Ein Autograph ist nicht erhalten; die Musik ist in Abschriften überliefert, darunter eine von seiner Frau Anna Magdalena.",
+        "fr": "Six suites pour violoncelle seul, sans doute composées durant les années de Bach à Köthen (vers 1717–1723). Aucun autographe n’a survécu ; la musique nous est parvenue par des copies, dont une de sa femme Anna Magdalena.",
+        "es": "Seis suites para violonchelo sin acompañamiento, probablemente de los años de Bach en Köthen (hacia 1717–1723). No se conserva el autógrafo; la música ha llegado a través de copias, entre ellas una de su esposa Anna Magdalena.",
+        "it": "Sei suite per violoncello senza accompagnamento, probabilmente risalenti agli anni di Bach a Köthen (1717–1723 circa). L’autografo non è sopravvissuto; la musica ci è giunta attraverso copie, tra cui una della moglie Anna Magdalena."
+      },
+      "titles": {
+        "de": "Suiten für Violoncello solo",
+        "fr": "Suites pour violoncelle seul",
+        "es": "Suites para violonchelo solo",
+        "it": "Suite per violoncello solo"
       }
     },
     "bach-violin-concerto-1": {
@@ -71,7 +121,17 @@
       ],
       "summary": {
         "ja": "バッハの独奏ヴァイオリン協奏曲として現存する2曲のうちの1曲です。急・緩・急の3楽章からなるイタリア風の協奏曲で、学習者にも演奏会でも広く取り上げられます。",
-        "en": "One of Bach’s two surviving concertos for solo violin. Cast in the Italian fast–slow–fast form, it is a staple for students and concert performers alike."
+        "en": "One of Bach’s two surviving concertos for solo violin. Cast in the Italian fast–slow–fast form, it is a staple for students and concert performers alike.",
+        "de": "Eines der beiden erhaltenen Konzerte Bachs für Solovioline. In der italienischen Form schnell–langsam–schnell angelegt, gehört es zum festen Repertoire von Studierenden wie Konzertsolisten.",
+        "fr": "L’un des deux concertos pour violon seul de Bach qui nous sont parvenus. Construit selon la forme italienne vif–lent–vif, il est un pilier du répertoire des élèves comme des solistes.",
+        "es": "Uno de los dos conciertos para violín solista de Bach que se conservan. Con la forma italiana rápido–lento–rápido, es una pieza fundamental tanto para estudiantes como para concertistas.",
+        "it": "Uno dei due concerti per violino solista di Bach giunti fino a noi. Nella forma italiana veloce–lento–veloce, è un caposaldo sia per gli studenti sia per i concertisti."
+      },
+      "titles": {
+        "de": "Violinkonzert Nr. 1 a-Moll",
+        "fr": "Concerto pour violon n° 1 en la mineur",
+        "es": "Concierto para violín n.º 1 en la menor",
+        "it": "Concerto per violino n. 1 in la minore"
       }
     },
     "bach-violin-concerto-2": {
@@ -81,7 +141,17 @@
       ],
       "summary": {
         "ja": "バッハの独奏ヴァイオリン協奏曲として現存する2曲のうちの1曲です。明るいホ長調の両端楽章と、深い表情をもつ嬰ハ短調の第2楽章からなります。",
-        "en": "One of Bach’s two surviving concertos for solo violin. Bright outer movements in E major frame an expressive slow movement in C-sharp minor."
+        "en": "One of Bach’s two surviving concertos for solo violin. Bright outer movements in E major frame an expressive slow movement in C-sharp minor.",
+        "de": "Eines der beiden erhaltenen Konzerte Bachs für Solovioline. Helle Ecksätze in E-Dur umrahmen einen ausdrucksvollen langsamen Satz in cis-Moll.",
+        "fr": "L’un des deux concertos pour violon seul de Bach qui nous sont parvenus. Des mouvements extrêmes lumineux en mi majeur encadrent un mouvement lent expressif en do dièse mineur.",
+        "es": "Uno de los dos conciertos para violín solista de Bach que se conservan. Unos luminosos movimientos extremos en mi mayor enmarcan un expresivo movimiento lento en do sostenido menor.",
+        "it": "Uno dei due concerti per violino solista di Bach giunti fino a noi. Luminosi movimenti estremi in mi maggiore incorniciano un espressivo movimento lento in do diesis minore."
+      },
+      "titles": {
+        "de": "Violinkonzert Nr. 2 E-Dur",
+        "fr": "Concerto pour violon n° 2 en mi majeur",
+        "es": "Concierto para violín n.º 2 en mi mayor",
+        "it": "Concerto per violino n. 2 in mi maggiore"
       }
     },
     "beethoven-romance-2": {
@@ -92,7 +162,17 @@
       ],
       "summary": {
         "ja": "独奏ヴァイオリンと管弦楽のためのロマンスで、1798年ごろに作曲され、1805年に出版されました。歌うような主題が繰り返し現れる、穏やかな小品です。",
-        "en": "A romance for violin and orchestra, composed around 1798 and published in 1805. A gentle piece built around a singing theme that keeps returning."
+        "en": "A romance for violin and orchestra, composed around 1798 and published in 1805. A gentle piece built around a singing theme that keeps returning.",
+        "de": "Eine Romanze für Violine und Orchester, um 1798 komponiert und 1805 veröffentlicht. Ein sanftes Stück um ein gesangliches Thema, das immer wiederkehrt.",
+        "fr": "Romance pour violon et orchestre, composée vers 1798 et publiée en 1805. Une pièce douce bâtie autour d’un thème chantant qui revient sans cesse.",
+        "es": "Romanza para violín y orquesta, compuesta hacia 1798 y publicada en 1805. Una pieza serena construida en torno a un tema cantabile que regresa una y otra vez.",
+        "it": "Romanza per violino e orchestra, composta intorno al 1798 e pubblicata nel 1805. Un brano dolce costruito attorno a un tema cantabile che ritorna più volte."
+      },
+      "titles": {
+        "de": "Romanze Nr. 2 F-Dur",
+        "fr": "Romance n° 2 en fa majeur",
+        "es": "Romanza n.º 2 en fa mayor",
+        "it": "Romanza n. 2 in fa maggiore"
       }
     },
     "beethoven-violin-sonata-5": {
@@ -106,7 +186,17 @@
       ],
       "summary": {
         "ja": "1800〜01年に作曲され、モーリッツ・フォン・フリース伯爵に献呈されたヴァイオリン・ソナタです。「春」という愛称はベートーヴェン自身ではなく後世の命名で、ベートーヴェンのヴァイオリン・ソナタとして初めて4楽章で書かれました。",
-        "en": "Composed in 1800–01 and dedicated to Count Moritz von Fries. The nickname “Spring” was added later, not by Beethoven, and it is the first of his violin sonatas written in four movements."
+        "en": "Composed in 1800–01 and dedicated to Count Moritz von Fries. The nickname “Spring” was added later, not by Beethoven, and it is the first of his violin sonatas written in four movements.",
+        "de": "1800–01 komponiert und Graf Moritz von Fries gewidmet. Der Beiname „Frühlingssonate“ wurde später hinzugefügt, nicht von Beethoven; sie ist seine erste viersätzige Violinsonate.",
+        "fr": "Composée en 1800–1801 et dédiée au comte Moritz von Fries. Le surnom « Le Printemps » a été ajouté plus tard, pas par Beethoven, et c’est la première de ses sonates pour violon en quatre mouvements.",
+        "es": "Compuesta en 1800–1801 y dedicada al conde Moritz von Fries. El apodo «Primavera» se añadió más tarde, no por Beethoven, y es la primera de sus sonatas para violín en cuatro movimientos.",
+        "it": "Composta nel 1800–1801 e dedicata al conte Moritz von Fries. Il soprannome «La primavera» fu aggiunto in seguito, non da Beethoven, ed è la prima delle sue sonate per violino in quattro movimenti."
+      },
+      "titles": {
+        "de": "Violinsonate Nr. 5 F-Dur „Frühlingssonate“",
+        "fr": "Sonate pour violon n° 5 en fa majeur « Le Printemps »",
+        "es": "Sonata para violín n.º 5 en fa mayor «Primavera»",
+        "it": "Sonata per violino n. 5 in fa maggiore «La primavera»"
       }
     },
     "beethoven-violin-sonata-9": {
@@ -119,7 +209,17 @@
       ],
       "summary": {
         "ja": "1803年にヴァイオリン奏者ジョージ・ブリッジタワーとベートーヴェン自身によって初演されました。のちにロドルフ・クロイツェルに献呈されたことから「クロイツェル・ソナタ」と呼ばれますが、クロイツェル自身は演奏しなかったと伝えられています。",
-        "en": "First performed in 1803 by the violinist George Bridgetower with Beethoven at the piano. It was later dedicated to Rodolphe Kreutzer, hence its name, though Kreutzer is said never to have played it."
+        "en": "First performed in 1803 by the violinist George Bridgetower with Beethoven at the piano. It was later dedicated to Rodolphe Kreutzer, hence its name, though Kreutzer is said never to have played it.",
+        "de": "1803 vom Geiger George Bridgetower mit Beethoven am Klavier uraufgeführt. Später wurde sie Rodolphe Kreutzer gewidmet – daher der Name –, der sie jedoch nie gespielt haben soll.",
+        "fr": "Créée en 1803 par le violoniste George Bridgetower avec Beethoven au piano. Elle fut ensuite dédiée à Rodolphe Kreutzer, d’où son nom, bien que celui-ci ne l’ait, dit-on, jamais jouée.",
+        "es": "Estrenada en 1803 por el violinista George Bridgetower con Beethoven al piano. Más tarde fue dedicada a Rodolphe Kreutzer, de ahí su nombre, aunque se dice que él nunca llegó a tocarla.",
+        "it": "Eseguita per la prima volta nel 1803 dal violinista George Bridgetower con Beethoven al pianoforte. Fu poi dedicata a Rodolphe Kreutzer, da cui il nome, benché si dica che egli non l’abbia mai suonata."
+      },
+      "titles": {
+        "de": "Violinsonate Nr. 9 A-Dur „Kreutzer-Sonate“",
+        "fr": "Sonate pour violon n° 9 en la majeur « à Kreutzer »",
+        "es": "Sonata para violín n.º 9 en la mayor «Kreutzer»",
+        "it": "Sonata per violino n. 9 in la maggiore «a Kreutzer»"
       }
     },
     "brahms-violin-concerto": {
@@ -130,7 +230,17 @@
       ],
       "summary": {
         "ja": "1878年に作曲され、友人のヴァイオリン奏者ヨーゼフ・ヨアヒムのために書かれました。1879年1月1日にライプツィヒでヨアヒムの独奏により初演され、第1楽章のカデンツァもヨアヒムのものがよく弾かれます。",
-        "en": "Written in 1878 for Brahms’s friend, the violinist Joseph Joachim, who gave the premiere in Leipzig on 1 January 1879. Joachim’s first-movement cadenza remains the one most often played."
+        "en": "Written in 1878 for Brahms’s friend, the violinist Joseph Joachim, who gave the premiere in Leipzig on 1 January 1879. Joachim’s first-movement cadenza remains the one most often played.",
+        "de": "1878 für Brahms’ Freund, den Geiger Joseph Joachim, geschrieben, der es am 1. Januar 1879 in Leipzig uraufführte. Joachims Kadenz zum ersten Satz ist bis heute die meistgespielte.",
+        "fr": "Écrit en 1878 pour l’ami de Brahms, le violoniste Joseph Joachim, qui le créa à Leipzig le 1er janvier 1879. La cadence de Joachim pour le premier mouvement reste la plus jouée.",
+        "es": "Escrito en 1878 para el amigo de Brahms, el violinista Joseph Joachim, que lo estrenó en Leipzig el 1 de enero de 1879. La cadencia de Joachim para el primer movimiento sigue siendo la más interpretada.",
+        "it": "Scritto nel 1878 per l’amico di Brahms, il violinista Joseph Joachim, che lo eseguì per la prima volta a Lipsia il 1° gennaio 1879. La cadenza di Joachim per il primo movimento resta la più eseguita."
+      },
+      "titles": {
+        "de": "Violinkonzert D-Dur",
+        "fr": "Concerto pour violon en ré majeur",
+        "es": "Concierto para violín en re mayor",
+        "it": "Concerto per violino in re maggiore"
       }
     },
     "bruch-violin-concerto-1": {
@@ -141,7 +251,17 @@
       ],
       "summary": {
         "ja": "1866年に初演された後、ヨーゼフ・ヨアヒムの助言を受けて改訂され、1868年にヨアヒムの独奏で現在の形が初演されました。第1楽章が「前奏曲」として第2楽章へ切れ目なく続く構成です。",
-        "en": "After a first performance in 1866, Bruch revised the work with advice from Joseph Joachim, who premiered the final version in 1868. The first movement, a “Prelude”, leads straight into the second."
+        "en": "After a first performance in 1866, Bruch revised the work with advice from Joseph Joachim, who premiered the final version in 1868. The first movement, a “Prelude”, leads straight into the second.",
+        "de": "Nach einer ersten Aufführung 1866 überarbeitete Bruch das Werk mit dem Rat von Joseph Joachim, der die endgültige Fassung 1868 uraufführte. Der erste Satz, ein „Vorspiel“, geht direkt in den zweiten über.",
+        "fr": "Après une première exécution en 1866, Bruch révisa l’œuvre sur les conseils de Joseph Joachim, qui en créa la version définitive en 1868. Le premier mouvement, un « Prélude », s’enchaîne directement au deuxième.",
+        "es": "Tras una primera interpretación en 1866, Bruch revisó la obra con los consejos de Joseph Joachim, que estrenó la versión definitiva en 1868. El primer movimiento, un «Preludio», enlaza directamente con el segundo.",
+        "it": "Dopo una prima esecuzione nel 1866, Bruch rivide l’opera con i consigli di Joseph Joachim, che ne eseguì la versione definitiva nel 1868. Il primo movimento, un «Preludio», si collega direttamente al secondo."
+      },
+      "titles": {
+        "de": "Violinkonzert Nr. 1 g-Moll",
+        "fr": "Concerto pour violon n° 1 en sol mineur",
+        "es": "Concierto para violín n.º 1 en sol menor",
+        "it": "Concerto per violino n. 1 in sol minore"
       }
     },
     "mendelssohn-violin-concerto": {
@@ -200,7 +320,17 @@
       ],
       "summary": {
         "ja": "ドヴォルザークがアメリカに滞在していた1894〜95年にニューヨークで作曲されました。1896年にロンドンでレオ・スターンの独奏により初演されました。",
-        "en": "Written in New York in 1894–95, during Dvořák’s stay in America. Leo Stern gave the premiere in London in 1896."
+        "en": "Written in New York in 1894–95, during Dvořák’s stay in America. Leo Stern gave the premiere in London in 1896.",
+        "de": "1894–95 in New York geschrieben, während Dvořáks Aufenthalt in Amerika. Leo Stern spielte die Uraufführung 1896 in London.",
+        "fr": "Écrit à New York en 1894–1895, pendant le séjour de Dvořák en Amérique. Leo Stern en donna la création à Londres en 1896.",
+        "es": "Escrito en Nueva York en 1894–1895, durante la estancia de Dvořák en Estados Unidos. Leo Stern lo estrenó en Londres en 1896.",
+        "it": "Scritto a New York nel 1894–1895, durante il soggiorno di Dvořák in America. Leo Stern ne diede la prima esecuzione a Londra nel 1896."
+      },
+      "titles": {
+        "de": "Cellokonzert h-Moll",
+        "fr": "Concerto pour violoncelle en si mineur",
+        "es": "Concierto para violonchelo en si menor",
+        "it": "Concerto per violoncello in si minore"
       }
     },
     "dvorak-serenade-for-strings": {
@@ -211,7 +341,17 @@
       ],
       "summary": {
         "ja": "1875年5月に、わずか2週間ほどで書き上げられた弦楽合奏のためのセレナーデです。5つの楽章からなり、第2楽章のワルツなど親しみやすい旋律に満ちています。",
-        "en": "A serenade for string orchestra written in about two weeks in May 1875. Its five movements, including a lilting Waltz, are full of warm, singable melodies."
+        "en": "A serenade for string orchestra written in about two weeks in May 1875. Its five movements, including a lilting Waltz, are full of warm, singable melodies.",
+        "de": "Eine Serenade für Streichorchester, im Mai 1875 in etwa zwei Wochen geschrieben. Ihre fünf Sätze, darunter ein beschwingter Walzer, sind voller warmer, sangbarer Melodien.",
+        "fr": "Sérénade pour orchestre à cordes écrite en deux semaines environ en mai 1875. Ses cinq mouvements, dont une valse légère, regorgent de mélodies chaleureuses et chantantes.",
+        "es": "Serenata para orquesta de cuerda escrita en unas dos semanas en mayo de 1875. Sus cinco movimientos, entre ellos un grácil vals, están llenos de melodías cálidas y cantables.",
+        "it": "Serenata per orchestra d’archi scritta in circa due settimane nel maggio 1875. I suoi cinque movimenti, tra cui un valzer cullante, sono ricchi di melodie calde e cantabili."
+      },
+      "titles": {
+        "de": "Serenade für Streicher E-Dur",
+        "fr": "Sérénade pour cordes en mi majeur",
+        "es": "Serenata para cuerdas en mi mayor",
+        "it": "Serenata per archi in mi maggiore"
       }
     },
     "elgar-salut-damour": {
@@ -223,7 +363,17 @@
       ],
       "summary": {
         "ja": "1888年、エルガーが婚約者キャロライン・アリス・ロバーツに贈った小品です。当初はドイツ語で「Liebesgruss（愛の挨拶）」と題され、のちにフランス語の題で出版されました。",
-        "en": "A short piece Elgar gave to his fiancée, Caroline Alice Roberts, in 1888. Originally titled “Liebesgruss” in German, it was published under its French title."
+        "en": "A short piece Elgar gave to his fiancée, Caroline Alice Roberts, in 1888. Originally titled “Liebesgruss” in German, it was published under its French title.",
+        "de": "Ein kurzes Stück, das Elgar 1888 seiner Verlobten Caroline Alice Roberts schenkte. Ursprünglich auf Deutsch „Liebesgruß“ betitelt, erschien es unter seinem französischen Titel.",
+        "fr": "Courte pièce qu’Elgar offrit à sa fiancée, Caroline Alice Roberts, en 1888. Intitulée à l’origine « Liebesgruss » en allemand, elle fut publiée sous son titre français.",
+        "es": "Pieza breve que Elgar regaló a su prometida, Caroline Alice Roberts, en 1888. Titulada originalmente «Liebesgruss» en alemán, se publicó con su título francés.",
+        "it": "Breve brano che Elgar donò alla fidanzata Caroline Alice Roberts nel 1888. Intitolato in origine «Liebesgruss» in tedesco, fu pubblicato con il titolo francese."
+      },
+      "titles": {
+        "de": "Salut d’amour",
+        "fr": "Salut d’amour",
+        "es": "Salut d’amour",
+        "it": "Salut d’amour"
       }
     },
     "elgar-cello-concerto": {
@@ -234,7 +384,17 @@
       ],
       "summary": {
         "ja": "第一次世界大戦後の1919年に作曲され、同年10月にロンドンでフェリックス・サモンドの独奏により初演されました。エルガー晩年の代表作のひとつです。",
-        "en": "Composed in 1919, just after the First World War, and premiered in London that October by Felix Salmond. It is one of the major works of Elgar’s later years."
+        "en": "Composed in 1919, just after the First World War, and premiered in London that October by Felix Salmond. It is one of the major works of Elgar’s later years.",
+        "de": "1919 komponiert, kurz nach dem Ersten Weltkrieg, und im Oktober desselben Jahres in London von Felix Salmond uraufgeführt. Es ist eines der Hauptwerke aus Elgars späten Jahren.",
+        "fr": "Composé en 1919, juste après la Première Guerre mondiale, et créé à Londres en octobre de la même année par Felix Salmond. C’est l’une des œuvres majeures des dernières années d’Elgar.",
+        "es": "Compuesto en 1919, justo después de la Primera Guerra Mundial, y estrenado en Londres en octubre de ese año por Felix Salmond. Es una de las obras principales de los últimos años de Elgar.",
+        "it": "Composto nel 1919, subito dopo la prima guerra mondiale, ed eseguito per la prima volta a Londra nell’ottobre dello stesso anno da Felix Salmond. È una delle opere principali degli ultimi anni di Elgar."
+      },
+      "titles": {
+        "de": "Cellokonzert e-Moll",
+        "fr": "Concerto pour violoncelle en mi mineur",
+        "es": "Concierto para violonchelo en mi menor",
+        "it": "Concerto per violoncello in mi minore"
       }
     },
     "elgar-serenade-for-strings": {
@@ -245,7 +405,17 @@
       ],
       "summary": {
         "ja": "1892年に作曲された弦楽合奏のための3楽章のセレナーデです。演奏時間は10分あまりと短く、アマチュアの弦楽合奏でもよく取り上げられます。",
-        "en": "A three-movement serenade for string orchestra, composed in 1892. At just over ten minutes, it is a favourite of amateur string orchestras."
+        "en": "A three-movement serenade for string orchestra, composed in 1892. At just over ten minutes, it is a favourite of amateur string orchestras.",
+        "de": "Eine dreisätzige Serenade für Streichorchester, 1892 komponiert. Mit gut zehn Minuten Dauer ist sie bei Laien-Streichorchestern sehr beliebt.",
+        "fr": "Sérénade en trois mouvements pour orchestre à cordes, composée en 1892. D’une durée d’un peu plus de dix minutes, elle est très appréciée des orchestres à cordes amateurs.",
+        "es": "Serenata en tres movimientos para orquesta de cuerda, compuesta en 1892. Con algo más de diez minutos de duración, es una de las favoritas de las orquestas de cuerda aficionadas.",
+        "it": "Serenata in tre movimenti per orchestra d’archi, composta nel 1892. Della durata di poco più di dieci minuti, è molto amata dalle orchestre d’archi amatoriali."
+      },
+      "titles": {
+        "de": "Serenade für Streicher e-Moll",
+        "fr": "Sérénade pour cordes en mi mineur",
+        "es": "Serenata para cuerdas en mi menor",
+        "it": "Serenata per archi in mi minore"
       }
     },
     "mozart-eine-kleine-nachtmusik": {
@@ -347,7 +517,17 @@
       ],
       "summary": {
         "ja": "1797年に作曲された弦楽四重奏曲です。第2楽章は、ハイドンが作曲した賛歌「神よ、皇帝フランツを守りたまえ」による変奏曲で、この旋律はのちにドイツ国歌にも用いられました。",
-        "en": "A string quartet composed in 1797. Its slow movement is a set of variations on Haydn’s own hymn “Gott erhalte Franz den Kaiser”, a melody later used for the German national anthem."
+        "en": "A string quartet composed in 1797. Its slow movement is a set of variations on Haydn’s own hymn “Gott erhalte Franz den Kaiser”, a melody later used for the German national anthem.",
+        "de": "Ein Streichquartett aus dem Jahr 1797. Sein langsamer Satz ist eine Variationenfolge über Haydns eigene Hymne „Gott erhalte Franz den Kaiser“, eine Melodie, die später für die deutsche Nationalhymne verwendet wurde.",
+        "fr": "Quatuor à cordes composé en 1797. Son mouvement lent est une série de variations sur l’hymne de Haydn lui-même, « Gott erhalte Franz den Kaiser », mélodie reprise plus tard pour l’hymne national allemand.",
+        "es": "Cuarteto de cuerda compuesto en 1797. Su movimiento lento es una serie de variaciones sobre el himno del propio Haydn «Gott erhalte Franz den Kaiser», melodía que más tarde se usó para el himno nacional alemán.",
+        "it": "Quartetto per archi composto nel 1797. Il movimento lento è una serie di variazioni sull’inno dello stesso Haydn «Gott erhalte Franz den Kaiser», melodia poi usata per l’inno nazionale tedesco."
+      },
+      "titles": {
+        "de": "Streichquartett C-Dur „Kaiserquartett“",
+        "fr": "Quatuor à cordes en do majeur « L’Empereur »",
+        "es": "Cuarteto de cuerda en do mayor «Emperador»",
+        "it": "Quartetto per archi in do maggiore «L’Imperatore»"
       }
     },
     "haydn-string-quartet-lark": {
@@ -360,7 +540,17 @@
       ],
       "summary": {
         "ja": "1790年に作曲された弦楽四重奏曲です。第1楽章で第1ヴァイオリンが高音域へ舞い上がるように歌い出す旋律が、ひばりのさえずりにたとえられ、この愛称が付きました。",
-        "en": "A string quartet composed in 1790. The first violin’s soaring entry in the opening movement was likened to a skylark’s song, giving the work its nickname."
+        "en": "A string quartet composed in 1790. The first violin’s soaring entry in the opening movement was likened to a skylark’s song, giving the work its nickname.",
+        "de": "Ein Streichquartett aus dem Jahr 1790. Der aufsteigende Einsatz der ersten Violine im Kopfsatz wurde mit dem Gesang einer Feldlerche verglichen, daher der Beiname.",
+        "fr": "Quatuor à cordes composé en 1790. L’entrée planante du premier violon dans le mouvement initial fut comparée au chant de l’alouette, d’où le surnom de l’œuvre.",
+        "es": "Cuarteto de cuerda compuesto en 1790. La entrada elevada del primer violín en el movimiento inicial se comparó con el canto de una alondra, de ahí el apodo de la obra.",
+        "it": "Quartetto per archi composto nel 1790. L’ingresso svettante del primo violino nel movimento iniziale fu paragonato al canto dell’allodola, da cui il soprannome dell’opera."
+      },
+      "titles": {
+        "de": "Streichquartett D-Dur „Lerchenquartett“",
+        "fr": "Quatuor à cordes en ré majeur « L’Alouette »",
+        "es": "Cuarteto de cuerda en re mayor «La alondra»",
+        "it": "Quartetto per archi in re maggiore «L’allodola»"
       }
     },
     "massenet-meditation-thais": {
@@ -410,7 +600,17 @@
       ],
       "summary": {
         "ja": "クライスラーの《古いウィーンの舞曲》の1曲です。当初はヨーゼフ・ランナーの作品として発表されましたが、1935年にクライスラー自身の作曲であることが明かされました。",
-        "en": "One of Kreisler’s Alt-Wiener Tanzweisen (Old Viennese Dances). It was first presented as a piece by Joseph Lanner; in 1935 Kreisler revealed that he had written it himself."
+        "en": "One of Kreisler’s Alt-Wiener Tanzweisen (Old Viennese Dances). It was first presented as a piece by Joseph Lanner; in 1935 Kreisler revealed that he had written it himself.",
+        "de": "Einer von Kreislers „Alt-Wiener Tanzweisen“. Er wurde zunächst als Stück von Joseph Lanner ausgegeben; 1935 enthüllte Kreisler, dass er ihn selbst geschrieben hatte.",
+        "fr": "L’une des « Alt-Wiener Tanzweisen » (Anciennes danses viennoises) de Kreisler. Elle fut d’abord présentée comme une pièce de Joseph Lanner ; en 1935, Kreisler révéla qu’il l’avait écrite lui-même.",
+        "es": "Una de las «Alt-Wiener Tanzweisen» (Antiguas danzas vienesas) de Kreisler. Se presentó primero como obra de Joseph Lanner; en 1935 Kreisler reveló que la había escrito él mismo.",
+        "it": "Una delle «Alt-Wiener Tanzweisen» (Antiche danze viennesi) di Kreisler. Fu presentata dapprima come brano di Joseph Lanner; nel 1935 Kreisler rivelò di averla scritta lui stesso."
+      },
+      "titles": {
+        "de": "Liebesleid",
+        "fr": "Liebesleid",
+        "es": "Liebesleid",
+        "it": "Liebesleid"
       }
     },
     "kreisler-liebesfreud": {
@@ -422,7 +622,17 @@
       ],
       "summary": {
         "ja": "クライスラーの《古いウィーンの舞曲》の1曲で、「愛の悲しみ」と対になる華やかなワルツです。当初はヨーゼフ・ランナーの作品として発表され、1935年にクライスラーの作曲と明かされました。",
-        "en": "One of Kreisler’s Alt-Wiener Tanzweisen, a bright waltz paired with Liebesleid. It was first presented as a piece by Joseph Lanner until Kreisler revealed his authorship in 1935."
+        "en": "One of Kreisler’s Alt-Wiener Tanzweisen, a bright waltz paired with Liebesleid. It was first presented as a piece by Joseph Lanner until Kreisler revealed his authorship in 1935.",
+        "de": "Einer von Kreislers „Alt-Wiener Tanzweisen“, ein heller Walzer, der mit „Liebesleid“ ein Paar bildet. Er wurde zunächst als Stück von Joseph Lanner ausgegeben, bis Kreisler 1935 seine Urheberschaft enthüllte.",
+        "fr": "L’une des « Alt-Wiener Tanzweisen » de Kreisler, valse lumineuse formant la paire avec Liebesleid. Elle fut d’abord présentée comme une pièce de Joseph Lanner, jusqu’à ce que Kreisler en révèle la paternité en 1935.",
+        "es": "Una de las «Alt-Wiener Tanzweisen» de Kreisler, un vals luminoso que forma pareja con Liebesleid. Se presentó primero como obra de Joseph Lanner, hasta que Kreisler reveló su autoría en 1935.",
+        "it": "Una delle «Alt-Wiener Tanzweisen» di Kreisler, un valzer luminoso in coppia con Liebesleid. Fu presentato dapprima come brano di Joseph Lanner, finché Kreisler ne rivelò la paternità nel 1935."
+      },
+      "titles": {
+        "de": "Liebesfreud",
+        "fr": "Liebesfreud",
+        "es": "Liebesfreud",
+        "it": "Liebesfreud"
       }
     },
     "kreisler-schon-rosmarin": {
@@ -494,7 +704,17 @@
       ],
       "summary": {
         "ja": "1700年にローマで出版されたコレッリのヴァイオリン・ソナタ集作品5の最後の曲です。イベリア半島に由来する「フォリア」の旋律と和声に基づく変奏曲です。",
-        "en": "The final work in Corelli’s Op. 5 violin sonatas, published in Rome in 1700. It is a set of variations on “La Folia”, a theme and chord pattern of Iberian origin."
+        "en": "The final work in Corelli’s Op. 5 violin sonatas, published in Rome in 1700. It is a set of variations on “La Folia”, a theme and chord pattern of Iberian origin.",
+        "de": "Das letzte Werk der Violinsonaten op. 5 von Corelli, 1700 in Rom veröffentlicht. Es ist eine Variationenfolge über „La Folia“, ein Thema und Akkordmodell iberischen Ursprungs.",
+        "fr": "Dernière œuvre des sonates pour violon op. 5 de Corelli, publiées à Rome en 1700. C’est une série de variations sur « La Folia », un thème et une grille d’accords d’origine ibérique.",
+        "es": "La última obra de las sonatas para violín op. 5 de Corelli, publicadas en Roma en 1700. Es una serie de variaciones sobre «La Folía», un tema y esquema armónico de origen ibérico.",
+        "it": "L’ultima opera delle sonate per violino op. 5 di Corelli, pubblicate a Roma nel 1700. È una serie di variazioni sulla «Follia», un tema e schema armonico di origine iberica."
+      },
+      "titles": {
+        "de": "La Folia",
+        "fr": "La Folia",
+        "es": "La Folía",
+        "it": "La Follia"
       }
     },
     "vitali-chaconne": {
@@ -520,7 +740,17 @@
       ],
       "summary": {
         "ja": "1884年、劇作家ルズヴィ・ホルベアの生誕200年を記念して作曲されました。はじめはピアノ曲として書かれ、翌1885年に弦楽合奏用に編曲されました。バロック時代の舞曲の形式を用いた組曲です。",
-        "en": "Composed in 1884 for the bicentenary of the playwright Ludvig Holberg’s birth. First written for piano, it was arranged for string orchestra in 1885, using the forms of Baroque dances."
+        "en": "Composed in 1884 for the bicentenary of the playwright Ludvig Holberg’s birth. First written for piano, it was arranged for string orchestra in 1885, using the forms of Baroque dances.",
+        "de": "1884 zum 200. Geburtstag des Dichters Ludvig Holberg komponiert. Zunächst für Klavier geschrieben, wurde sie 1885 für Streichorchester bearbeitet und greift Formen barocker Tänze auf.",
+        "fr": "Composée en 1884 pour le bicentenaire de la naissance du dramaturge Ludvig Holberg. Écrite d’abord pour piano, elle fut arrangée pour orchestre à cordes en 1885 et reprend les formes des danses baroques.",
+        "es": "Compuesta en 1884 para el bicentenario del nacimiento del dramaturgo Ludvig Holberg. Escrita primero para piano, se arregló para orquesta de cuerda en 1885 y emplea formas de danzas barrocas.",
+        "it": "Composta nel 1884 per il bicentenario della nascita del drammaturgo Ludvig Holberg. Scritta dapprima per pianoforte, fu arrangiata per orchestra d’archi nel 1885 e riprende le forme delle danze barocche."
+      },
+      "titles": {
+        "de": "Holberg-Suite (Aus Holbergs Zeit)",
+        "fr": "Suite Holberg (Au temps de Holberg)",
+        "es": "Suite Holberg (De los tiempos de Holberg)",
+        "it": "Suite Holberg (Dal tempo di Holberg)"
       }
     },
     "schubert-ave-maria": {
@@ -546,7 +776,17 @@
       ],
       "summary": {
         "ja": "1893年に劇の付随音楽として書かれ、のちに《ペレアスとメリザンド》（1898年）にも使われました。チェロとピアノのための版が1898年に出版されています。",
-        "en": "Written in 1893 as incidental music for a play and later used in Pelléas et Mélisande (1898). A version for cello and piano was published in 1898."
+        "en": "Written in 1893 as incidental music for a play and later used in Pelléas et Mélisande (1898). A version for cello and piano was published in 1898.",
+        "de": "1893 als Schauspielmusik geschrieben und später in „Pelléas et Mélisande“ (1898) verwendet. Eine Fassung für Violoncello und Klavier erschien 1898.",
+        "fr": "Écrite en 1893 comme musique de scène, puis reprise dans Pelléas et Mélisande (1898). Une version pour violoncelle et piano fut publiée en 1898.",
+        "es": "Escrita en 1893 como música incidental para una obra de teatro y utilizada después en Pelléas et Mélisande (1898). En 1898 se publicó una versión para violonchelo y piano.",
+        "it": "Scritta nel 1893 come musica di scena e in seguito utilizzata in Pelléas et Mélisande (1898). Nel 1898 fu pubblicata una versione per violoncello e pianoforte."
+      },
+      "titles": {
+        "de": "Sicilienne",
+        "fr": "Sicilienne",
+        "es": "Siciliana",
+        "it": "Siciliana"
       }
     },
     "rachmaninoff-vocalise": {
@@ -581,7 +821,17 @@
       ],
       "summary": {
         "ja": "1904年に作曲され、1905年にレオポルト・アウアーの独奏で初演されました。全体が切れ目なく演奏される単一楽章の構成です。",
-        "en": "Composed in 1904 and premiered in 1905 by Leopold Auer. The concerto is played as a single continuous span without breaks."
+        "en": "Composed in 1904 and premiered in 1905 by Leopold Auer. The concerto is played as a single continuous span without breaks.",
+        "de": "1904 komponiert und 1905 von Leopold Auer uraufgeführt. Das Konzert wird als ein einziger, durchgehender Bogen ohne Pausen gespielt.",
+        "fr": "Composé en 1904 et créé en 1905 par Leopold Auer. Le concerto se joue d’un seul tenant, sans interruption.",
+        "es": "Compuesto en 1904 y estrenado en 1905 por Leopold Auer. El concierto se interpreta como un único arco continuo, sin pausas.",
+        "it": "Composto nel 1904 ed eseguito per la prima volta nel 1905 da Leopold Auer. Il concerto si suona come un unico arco continuo, senza interruzioni."
+      },
+      "titles": {
+        "de": "Violinkonzert a-Moll",
+        "fr": "Concerto pour violon en la mineur",
+        "es": "Concierto para violín en la menor",
+        "it": "Concerto per violino in la minore"
       }
     },
     "ysaye-six-sonatas": {
@@ -604,7 +854,17 @@
       ],
       "summary": {
         "ja": "ヴァイオリンとチェロの2人で演奏する二重奏曲です。ピアノを使わずに弦楽器2本だけで演奏できる室内楽として、合奏の練習や小さな演奏会でも取り上げられます。",
-        "en": "A duo for violin and cello. Needing only two string players and no piano, it is a handy piece for chamber-music practice and small concerts."
+        "en": "A duo for violin and cello. Needing only two string players and no piano, it is a handy piece for chamber-music practice and small concerts.",
+        "de": "Ein Duo für Violine und Violoncello. Da nur zwei Streicher und kein Klavier nötig sind, eignet es sich gut für das Kammermusikspiel und kleine Konzerte.",
+        "fr": "Duo pour violon et violoncelle. Ne demandant que deux instrumentistes à cordes et pas de piano, c’est une pièce pratique pour la musique de chambre et les petits concerts.",
+        "es": "Dúo para violín y violonchelo. Como solo requiere dos instrumentistas de cuerda y ningún piano, es una obra práctica para la música de cámara y los conciertos pequeños.",
+        "it": "Duo per violino e violoncello. Richiedendo soltanto due archi e nessun pianoforte, è un brano pratico per la musica da camera e i piccoli concerti."
+      },
+      "titles": {
+        "de": "Duo für Violine und Violoncello",
+        "fr": "Duo pour violon et violoncelle",
+        "es": "Dúo para violín y violonchelo",
+        "it": "Duo per violino e violoncello"
       }
     },
     "beethoven-piano-trio-1": {
@@ -615,7 +875,17 @@
       ],
       "summary": {
         "ja": "1795年に「作品1」として出版された3曲のピアノ三重奏曲の第1曲で、ベートーヴェンが作品番号を付けて世に出した最初の作品です。リヒノフスキー侯爵に献呈されました。",
-        "en": "The first of three piano trios published in 1795 as Opus 1, the first works Beethoven issued with an opus number. The set is dedicated to Prince Karl Lichnowsky."
+        "en": "The first of three piano trios published in 1795 as Opus 1, the first works Beethoven issued with an opus number. The set is dedicated to Prince Karl Lichnowsky.",
+        "de": "Das erste der drei 1795 als Opus 1 veröffentlichten Klaviertrios – die ersten Werke, die Beethoven mit einer Opuszahl herausgab. Die Sammlung ist Fürst Karl Lichnowsky gewidmet.",
+        "fr": "Le premier des trois trios avec piano publiés en 1795 sous le numéro d’opus 1, les premières œuvres que Beethoven fit paraître avec un numéro d’opus. Le recueil est dédié au prince Karl Lichnowsky.",
+        "es": "El primero de los tres tríos con piano publicados en 1795 como Opus 1, las primeras obras que Beethoven publicó con número de opus. La colección está dedicada al príncipe Karl Lichnowsky.",
+        "it": "Il primo dei tre trii con pianoforte pubblicati nel 1795 come Opus 1, le prime opere che Beethoven diede alle stampe con un numero d’opus. La raccolta è dedicata al principe Karl Lichnowsky."
+      },
+      "titles": {
+        "de": "Klaviertrio Nr. 1 Es-Dur",
+        "fr": "Trio avec piano n° 1 en mi bémol majeur",
+        "es": "Trío con piano n.º 1 en mi bemol mayor",
+        "it": "Trio con pianoforte n. 1 in mi bemolle maggiore"
       }
     },
     "beethoven-serenade-op8": {
@@ -626,7 +896,17 @@
       ],
       "summary": {
         "ja": "ヴァイオリン・ヴィオラ・チェロのためのセレナードで、1797年に出版されました。行進曲で始まり、最後に同じ行進曲が戻ってくる、娯楽的な性格の作品です。",
-        "en": "A serenade for violin, viola and cello, published in 1797. It opens with a march that returns at the very end, in the spirit of light entertainment music."
+        "en": "A serenade for violin, viola and cello, published in 1797. It opens with a march that returns at the very end, in the spirit of light entertainment music.",
+        "de": "Eine Serenade für Violine, Viola und Violoncello, 1797 veröffentlicht. Sie beginnt mit einem Marsch, der ganz am Ende wiederkehrt – ganz im Geist leichter Unterhaltungsmusik.",
+        "fr": "Sérénade pour violon, alto et violoncelle, publiée en 1797. Elle s’ouvre sur une marche qui revient tout à la fin, dans l’esprit d’une musique de divertissement légère.",
+        "es": "Serenata para violín, viola y violonchelo, publicada en 1797. Comienza con una marcha que vuelve al final, en el espíritu de la música ligera de entretenimiento.",
+        "it": "Serenata per violino, viola e violoncello, pubblicata nel 1797. Si apre con una marcia che ritorna alla fine, nello spirito della musica d’intrattenimento leggera."
+      },
+      "titles": {
+        "de": "Serenade für Streichtrio D-Dur",
+        "fr": "Sérénade pour trio à cordes en ré majeur",
+        "es": "Serenata para trío de cuerda en re mayor",
+        "it": "Serenata per trio d’archi in re maggiore"
       }
     },
     "beethoven-string-trio-op3": {
@@ -636,7 +916,17 @@
       ],
       "summary": {
         "ja": "ヴァイオリン・ヴィオラ・チェロのための6楽章の弦楽三重奏曲です。同じ変ホ長調・6楽章のモーツァルトのディヴェルティメント K563 を手本にしたと考えられています。",
-        "en": "A six-movement trio for violin, viola and cello. It is thought to take as its model Mozart’s Divertimento K. 563, also in E-flat and in six movements."
+        "en": "A six-movement trio for violin, viola and cello. It is thought to take as its model Mozart’s Divertimento K. 563, also in E-flat and in six movements.",
+        "de": "Ein sechssätziges Trio für Violine, Viola und Violoncello. Als Vorbild gilt Mozarts Divertimento KV 563, das ebenfalls in Es-Dur steht und sechs Sätze hat.",
+        "fr": "Trio en six mouvements pour violon, alto et violoncelle. Il prendrait pour modèle le Divertimento K. 563 de Mozart, lui aussi en mi bémol et en six mouvements.",
+        "es": "Trío en seis movimientos para violín, viola y violonchelo. Se cree que toma como modelo el Divertimento K. 563 de Mozart, también en mi bemol y en seis movimientos.",
+        "it": "Trio in sei movimenti per violino, viola e violoncello. Si ritiene che abbia come modello il Divertimento K. 563 di Mozart, anch’esso in mi bemolle e in sei movimenti."
+      },
+      "titles": {
+        "de": "Streichtrio Es-Dur",
+        "fr": "Trio à cordes en mi bémol majeur",
+        "es": "Trío de cuerda en mi bemol mayor",
+        "it": "Trio per archi in mi bemolle maggiore"
       }
     },
     "beethoven-string-quartet-1": {
@@ -647,7 +937,17 @@
       ],
       "summary": {
         "ja": "1798〜1800年に作曲され、1801年にロプコヴィッツ侯爵への献呈で出版された作品18（6曲）の第1曲です。友人アメンダの証言では、第2楽章は『ロミオとジュリエット』の墓場の場面を思い描いて書かれたとされます。",
-        "en": "The first of the six Op. 18 quartets, composed in 1798–1800 and published in 1801 with a dedication to Prince Lobkowitz. According to his friend Amenda, the slow movement was inspired by the tomb scene in Romeo and Juliet."
+        "en": "The first of the six Op. 18 quartets, composed in 1798–1800 and published in 1801 with a dedication to Prince Lobkowitz. According to his friend Amenda, the slow movement was inspired by the tomb scene in Romeo and Juliet.",
+        "de": "Das erste der sechs Quartette op. 18, komponiert 1798–1800 und 1801 mit einer Widmung an Fürst Lobkowitz veröffentlicht. Laut seinem Freund Amenda wurde der langsame Satz von der Grabszene aus Romeo und Julia angeregt.",
+        "fr": "Le premier des six quatuors op. 18, composé en 1798–1800 et publié en 1801 avec une dédicace au prince Lobkowitz. Selon son ami Amenda, le mouvement lent s’inspire de la scène du tombeau de Roméo et Juliette.",
+        "es": "El primero de los seis cuartetos op. 18, compuesto en 1798–1800 y publicado en 1801 con una dedicatoria al príncipe Lobkowitz. Según su amigo Amenda, el movimiento lento se inspiró en la escena de la tumba de Romeo y Julieta.",
+        "it": "Il primo dei sei quartetti op. 18, composto nel 1798–1800 e pubblicato nel 1801 con una dedica al principe Lobkowitz. Secondo l’amico Amenda, il movimento lento fu ispirato dalla scena della tomba di Romeo e Giulietta."
+      },
+      "titles": {
+        "de": "Streichquartett Nr. 1 F-Dur",
+        "fr": "Quatuor à cordes n° 1 en fa majeur",
+        "es": "Cuarteto de cuerda n.º 1 en fa mayor",
+        "it": "Quartetto per archi n. 1 in fa maggiore"
       }
     },
     "beethoven-string-quartet-2": {
@@ -660,7 +960,17 @@
       ],
       "summary": {
         "ja": "作品18（ロプコヴィッツ侯爵に献呈）の第2曲です。冒頭の優雅な身ぶりから、ドイツ語圏では「挨拶の四重奏曲（Komplimentier-Quartett）」とも呼ばれます。",
-        "en": "The second of the Op. 18 quartets, dedicated to Prince Lobkowitz. Its courtly opening gesture earned it the German nickname “Komplimentier-Quartett” (the bowing or greeting quartet)."
+        "en": "The second of the Op. 18 quartets, dedicated to Prince Lobkowitz. Its courtly opening gesture earned it the German nickname “Komplimentier-Quartett” (the bowing or greeting quartet).",
+        "de": "Das zweite der Quartette op. 18, Fürst Lobkowitz gewidmet. Seine höfliche Eröffnungsgeste brachte ihm den Beinamen „Komplimentier-Quartett“ ein.",
+        "fr": "Le deuxième des quatuors op. 18, dédié au prince Lobkowitz. Son geste d’ouverture courtois lui a valu le surnom allemand de « Komplimentier-Quartett » (le quatuor des révérences).",
+        "es": "El segundo de los cuartetos op. 18, dedicado al príncipe Lobkowitz. Su cortés gesto inicial le valió el apodo alemán de «Komplimentier-Quartett» (el cuarteto de las reverencias).",
+        "it": "Il secondo dei quartetti op. 18, dedicato al principe Lobkowitz. Il cortese gesto iniziale gli valse il soprannome tedesco di «Komplimentier-Quartett» (il quartetto dei complimenti)."
+      },
+      "titles": {
+        "de": "Streichquartett Nr. 2 G-Dur",
+        "fr": "Quatuor à cordes n° 2 en sol majeur",
+        "es": "Cuarteto de cuerda n.º 2 en sol mayor",
+        "it": "Quartetto per archi n. 2 in sol maggiore"
       }
     },
     "beethoven-string-quartet-3": {
@@ -671,7 +981,17 @@
       ],
       "summary": {
         "ja": "作品18の第3曲として出版されましたが、6曲の中で最初に作曲されたと考えられています。穏やかに上行する第1ヴァイオリンの旋律で始まります。",
-        "en": "Published as the third of the Op. 18 quartets, it is thought to be the first of the six that Beethoven composed. It opens with a gentle rising line in the first violin."
+        "en": "Published as the third of the Op. 18 quartets, it is thought to be the first of the six that Beethoven composed. It opens with a gentle rising line in the first violin.",
+        "de": "Als drittes der Quartette op. 18 veröffentlicht, gilt es als das erste der sechs, das Beethoven komponierte. Es beginnt mit einer sanft aufsteigenden Linie der ersten Violine.",
+        "fr": "Publié comme troisième des quatuors op. 18, il serait le premier des six que Beethoven composa. Il s’ouvre sur une douce ligne ascendante du premier violon.",
+        "es": "Publicado como el tercero de los cuartetos op. 18, se cree que fue el primero de los seis que compuso Beethoven. Comienza con una suave línea ascendente del primer violín.",
+        "it": "Pubblicato come terzo dei quartetti op. 18, si ritiene sia il primo dei sei composti da Beethoven. Si apre con una dolce linea ascendente del primo violino."
+      },
+      "titles": {
+        "de": "Streichquartett Nr. 3 D-Dur",
+        "fr": "Quatuor à cordes n° 3 en ré majeur",
+        "es": "Cuarteto de cuerda n.º 3 en re mayor",
+        "it": "Quartetto per archi n. 3 in re maggiore"
       }
     },
     "beethoven-string-quartet-4": {
@@ -682,7 +1002,17 @@
       ],
       "summary": {
         "ja": "作品18の6曲のうち、ただ1曲の短調の作品です。ベートーヴェンが好んだハ短調による、緊張感のある第1楽章で始まります。",
-        "en": "The only minor-key work among the six Op. 18 quartets. It begins with a tense first movement in C minor, a key Beethoven often chose for dramatic music."
+        "en": "The only minor-key work among the six Op. 18 quartets. It begins with a tense first movement in C minor, a key Beethoven often chose for dramatic music.",
+        "de": "Das einzige Werk in Moll unter den sechs Quartetten op. 18. Es beginnt mit einem gespannten ersten Satz in c-Moll, einer Tonart, die Beethoven oft für dramatische Musik wählte.",
+        "fr": "La seule œuvre en mineur parmi les six quatuors op. 18. Elle commence par un premier mouvement tendu en do mineur, tonalité que Beethoven choisissait souvent pour sa musique dramatique.",
+        "es": "La única obra en modo menor de los seis cuartetos op. 18. Comienza con un tenso primer movimiento en do menor, tonalidad que Beethoven elegía a menudo para su música dramática.",
+        "it": "L’unica opera in tonalità minore tra i sei quartetti op. 18. Inizia con un teso primo movimento in do minore, tonalità che Beethoven sceglieva spesso per la musica drammatica."
+      },
+      "titles": {
+        "de": "Streichquartett Nr. 4 c-Moll",
+        "fr": "Quatuor à cordes n° 4 en do mineur",
+        "es": "Cuarteto de cuerda n.º 4 en do menor",
+        "it": "Quartetto per archi n. 4 in do minore"
       }
     },
     "beethoven-string-quartet-5": {
@@ -693,7 +1023,17 @@
       ],
       "summary": {
         "ja": "作品18の第5曲です。楽章の配置や変奏曲の楽章など、同じイ長調のモーツァルトの弦楽四重奏曲 K464 を手本にしたと考えられています。",
-        "en": "The fifth of the Op. 18 quartets. Its layout, including a set of variations, is thought to be modelled on Mozart’s quartet in the same key, K. 464."
+        "en": "The fifth of the Op. 18 quartets. Its layout, including a set of variations, is thought to be modelled on Mozart’s quartet in the same key, K. 464.",
+        "de": "Das fünfte der Quartette op. 18. Seine Anlage, einschließlich eines Variationssatzes, ist vermutlich Mozarts Quartett in derselben Tonart KV 464 nachgebildet.",
+        "fr": "Le cinquième des quatuors op. 18. Son plan, qui comprend un mouvement à variations, s’inspirerait du quatuor de Mozart dans la même tonalité, K. 464.",
+        "es": "El quinto de los cuartetos op. 18. Su estructura, que incluye un tema con variaciones, parece tomar como modelo el cuarteto de Mozart en la misma tonalidad, K. 464.",
+        "it": "Il quinto dei quartetti op. 18. La sua struttura, che comprende un tema con variazioni, sembra modellata sul quartetto di Mozart nella stessa tonalità, K. 464."
+      },
+      "titles": {
+        "de": "Streichquartett Nr. 5 A-Dur",
+        "fr": "Quatuor à cordes n° 5 en la majeur",
+        "es": "Cuarteto de cuerda n.º 5 en la mayor",
+        "it": "Quartetto per archi n. 5 in la maggiore"
       }
     },
     "beethoven-string-quartet-6": {
@@ -706,7 +1046,17 @@
       ],
       "summary": {
         "ja": "作品18の最後の曲です。終楽章は「ラ・マリンコニア（憂鬱）」と題された沈んだ序奏で始まり、明るい舞曲風の部分と交互に現れます。",
-        "en": "The last of the Op. 18 quartets. Its finale opens with a brooding introduction headed “La Malinconia” (melancholy), which alternates with a lively dance-like section."
+        "en": "The last of the Op. 18 quartets. Its finale opens with a brooding introduction headed “La Malinconia” (melancholy), which alternates with a lively dance-like section.",
+        "de": "Das letzte der Quartette op. 18. Sein Finale beginnt mit einer grüblerischen Einleitung mit der Überschrift „La Malinconia“ (Melancholie), die sich mit einem lebhaften, tänzerischen Teil abwechselt.",
+        "fr": "Le dernier des quatuors op. 18. Son finale s’ouvre sur une introduction sombre intitulée « La Malinconia » (la mélancolie), qui alterne avec une section vive et dansante.",
+        "es": "El último de los cuartetos op. 18. Su final comienza con una introducción sombría titulada «La Malinconia» (la melancolía), que alterna con una sección viva y danzante.",
+        "it": "L’ultimo dei quartetti op. 18. Il finale si apre con un’introduzione cupa intitolata «La Malinconia», che si alterna a una sezione vivace e danzante."
+      },
+      "titles": {
+        "de": "Streichquartett Nr. 6 B-Dur",
+        "fr": "Quatuor à cordes n° 6 en si bémol majeur",
+        "es": "Cuarteto de cuerda n.º 6 en si bemol mayor",
+        "it": "Quartetto per archi n. 6 in si bemolle maggiore"
       }
     },
     "beethoven-string-quartet-7": {
@@ -719,7 +1069,17 @@
       ],
       "summary": {
         "ja": "ウィーン駐在のロシア大使ラズモフスキー伯爵の依頼で1806年に作曲された3曲（作品59）の第1曲です。終楽章ではロシア民謡の主題が使われています。",
-        "en": "The first of the three Op. 59 quartets, written in 1806 for Count Andrey Razumovsky, the Russian ambassador in Vienna. The finale is built on a Russian folk tune."
+        "en": "The first of the three Op. 59 quartets, written in 1806 for Count Andrey Razumovsky, the Russian ambassador in Vienna. The finale is built on a Russian folk tune.",
+        "de": "Das erste der drei Quartette op. 59, 1806 für Graf Andrei Rasumowsky geschrieben, den russischen Botschafter in Wien. Das Finale beruht auf einem russischen Volkslied.",
+        "fr": "Le premier des trois quatuors op. 59, écrit en 1806 pour le comte Andreï Razoumovski, ambassadeur de Russie à Vienne. Le finale est construit sur un chant populaire russe.",
+        "es": "El primero de los tres cuartetos op. 59, escrito en 1806 para el conde Andréi Razumovski, embajador ruso en Viena. El final se basa en una canción popular rusa.",
+        "it": "Il primo dei tre quartetti op. 59, scritto nel 1806 per il conte Andrej Razumovsky, ambasciatore russo a Vienna. Il finale è costruito su una melodia popolare russa."
+      },
+      "titles": {
+        "de": "Streichquartett Nr. 7 F-Dur „Rasumowsky-Quartett Nr. 1“",
+        "fr": "Quatuor à cordes n° 7 en fa majeur « Razoumovski n° 1 »",
+        "es": "Cuarteto de cuerda n.º 7 en fa mayor «Razumovski n.º 1»",
+        "it": "Quartetto per archi n. 7 in fa maggiore «Razumovsky n. 1»"
       }
     },
     "beethoven-string-quartet-8": {
@@ -732,7 +1092,17 @@
       ],
       "summary": {
         "ja": "ラズモフスキー伯爵のために書かれた作品59の第2曲です。第3楽章の中間部では、依頼者にちなんでロシアの旋律（テーマ・ルッセ）が用いられています。",
-        "en": "The second of the Op. 59 quartets for Count Razumovsky. The middle section of the third movement uses a Russian melody (“thème russe”) in honour of the patron."
+        "en": "The second of the Op. 59 quartets for Count Razumovsky. The middle section of the third movement uses a Russian melody (“thème russe”) in honour of the patron.",
+        "de": "Das zweite der Quartette op. 59 für Graf Rasumowsky. Der Mittelteil des dritten Satzes verwendet zu Ehren des Auftraggebers eine russische Melodie („thème russe“).",
+        "fr": "Le deuxième des quatuors op. 59 pour le comte Razoumovski. La section centrale du troisième mouvement utilise une mélodie russe (« thème russe ») en hommage au commanditaire.",
+        "es": "El segundo de los cuartetos op. 59 para el conde Razumovski. La sección central del tercer movimiento utiliza una melodía rusa («thème russe») en honor del mecenas.",
+        "it": "Il secondo dei quartetti op. 59 per il conte Razumovsky. La sezione centrale del terzo movimento utilizza una melodia russa («thème russe») in omaggio al committente."
+      },
+      "titles": {
+        "de": "Streichquartett Nr. 8 e-Moll „Rasumowsky-Quartett Nr. 2“",
+        "fr": "Quatuor à cordes n° 8 en mi mineur « Razoumovski n° 2 »",
+        "es": "Cuarteto de cuerda n.º 8 en mi menor «Razumovski n.º 2»",
+        "it": "Quartetto per archi n. 8 in mi minore «Razumovsky n. 2»"
       }
     },
     "beethoven-string-quartet-9": {
@@ -745,7 +1115,17 @@
       ],
       "summary": {
         "ja": "作品59の第3曲で、神秘的な序奏で始まり、終楽章は勢いのあるフーガで締めくくられます。3曲のうちロシアの旋律を引用していない唯一の曲です。",
-        "en": "The third Op. 59 quartet opens with a mysterious introduction and ends with a driving fugue. Unlike its two companions, it quotes no Russian melody."
+        "en": "The third Op. 59 quartet opens with a mysterious introduction and ends with a driving fugue. Unlike its two companions, it quotes no Russian melody.",
+        "de": "Das dritte Quartett op. 59 beginnt mit einer geheimnisvollen Einleitung und endet mit einer vorwärtsdrängenden Fuge. Anders als seine beiden Geschwister zitiert es keine russische Melodie.",
+        "fr": "Le troisième quatuor op. 59 s’ouvre sur une introduction mystérieuse et se termine par une fugue entraînante. Contrairement à ses deux compagnons, il ne cite aucune mélodie russe.",
+        "es": "El tercer cuarteto op. 59 comienza con una misteriosa introducción y termina con una enérgica fuga. A diferencia de sus dos compañeros, no cita ninguna melodía rusa.",
+        "it": "Il terzo quartetto op. 59 si apre con un’introduzione misteriosa e si chiude con una fuga incalzante. A differenza dei due compagni, non cita alcuna melodia russa."
+      },
+      "titles": {
+        "de": "Streichquartett Nr. 9 C-Dur „Rasumowsky-Quartett Nr. 3“",
+        "fr": "Quatuor à cordes n° 9 en do majeur « Razoumovski n° 3 »",
+        "es": "Cuarteto de cuerda n.º 9 en do mayor «Razumovski n.º 3»",
+        "it": "Quartetto per archi n. 9 in do maggiore «Razumovsky n. 3»"
       }
     },
     "beethoven-violin-sonata-1": {
@@ -756,7 +1136,17 @@
       ],
       "summary": {
         "ja": "1797〜98年に作曲され、1799年に作曲の師アントニオ・サリエリへの献呈で出版された3曲（作品12）の第1曲です。ピアノとヴァイオリンが対等に活躍する、明るく快活な作品です。",
-        "en": "The first of the three Op. 12 sonatas, composed in 1797–98 and published in 1799 with a dedication to Beethoven’s teacher Antonio Salieri. A bright, energetic work in which piano and violin share the spotlight."
+        "en": "The first of the three Op. 12 sonatas, composed in 1797–98 and published in 1799 with a dedication to Beethoven’s teacher Antonio Salieri. A bright, energetic work in which piano and violin share the spotlight.",
+        "de": "Die erste der drei Sonaten op. 12, komponiert 1797–98 und 1799 mit einer Widmung an Beethovens Lehrer Antonio Salieri veröffentlicht. Ein helles, energisches Werk, in dem Klavier und Violine gleichermaßen im Mittelpunkt stehen.",
+        "fr": "La première des trois sonates op. 12, composée en 1797–1798 et publiée en 1799 avec une dédicace au professeur de Beethoven, Antonio Salieri. Une œuvre lumineuse et énergique où piano et violon partagent le premier plan.",
+        "es": "La primera de las tres sonatas op. 12, compuesta en 1797–1798 y publicada en 1799 con una dedicatoria al maestro de Beethoven, Antonio Salieri. Una obra luminosa y enérgica en la que piano y violín comparten el protagonismo.",
+        "it": "La prima delle tre sonate op. 12, composta nel 1797–1798 e pubblicata nel 1799 con una dedica al maestro di Beethoven, Antonio Salieri. Un’opera luminosa ed energica in cui pianoforte e violino si dividono la scena."
+      },
+      "titles": {
+        "de": "Violinsonate Nr. 1 D-Dur",
+        "fr": "Sonate pour violon n° 1 en ré majeur",
+        "es": "Sonata para violín n.º 1 en re mayor",
+        "it": "Sonata per violino n. 1 in re maggiore"
       }
     },
     "beethoven-violin-sonata-2": {
@@ -767,7 +1157,17 @@
       ],
       "summary": {
         "ja": "サリエリに献呈された作品12の第2曲です。軽やかな第1楽章、イ短調の哀愁を帯びた第2楽章、優雅なロンドの終楽章からなります。",
-        "en": "The second of the Op. 12 sonatas dedicated to Salieri. A light-footed first movement is followed by a wistful slow movement in A minor and a graceful rondo."
+        "en": "The second of the Op. 12 sonatas dedicated to Salieri. A light-footed first movement is followed by a wistful slow movement in A minor and a graceful rondo.",
+        "de": "Die zweite der Salieri gewidmeten Sonaten op. 12. Auf einen leichtfüßigen ersten Satz folgen ein wehmütiger langsamer Satz in a-Moll und ein anmutiges Rondo.",
+        "fr": "La deuxième des sonates op. 12 dédiées à Salieri. Un premier mouvement léger est suivi d’un mouvement lent mélancolique en la mineur et d’un rondo gracieux.",
+        "es": "La segunda de las sonatas op. 12 dedicadas a Salieri. A un ligero primer movimiento le siguen un melancólico movimiento lento en la menor y un grácil rondó.",
+        "it": "La seconda delle sonate op. 12 dedicate a Salieri. A un primo movimento leggero seguono un malinconico movimento lento in la minore e un grazioso rondò."
+      },
+      "titles": {
+        "de": "Violinsonate Nr. 2 A-Dur",
+        "fr": "Sonate pour violon n° 2 en la majeur",
+        "es": "Sonata para violín n.º 2 en la mayor",
+        "it": "Sonata per violino n. 2 in la maggiore"
       }
     },
     "beethoven-violin-sonata-3": {
@@ -778,7 +1178,17 @@
       ],
       "summary": {
         "ja": "サリエリに献呈された作品12の第3曲です。ピアノに華やかな技巧が求められ、ベートーヴェン自身のピアニストとしての腕前がうかがえる作品です。",
-        "en": "The third of the Op. 12 sonatas dedicated to Salieri. Its brilliant piano writing reflects Beethoven’s own skill as a pianist."
+        "en": "The third of the Op. 12 sonatas dedicated to Salieri. Its brilliant piano writing reflects Beethoven’s own skill as a pianist.",
+        "de": "Die dritte der Salieri gewidmeten Sonaten op. 12. Ihr brillanter Klaviersatz spiegelt Beethovens eigenes Können als Pianist wider.",
+        "fr": "La troisième des sonates op. 12 dédiées à Salieri. Son écriture pianistique brillante reflète le talent de Beethoven lui-même au piano.",
+        "es": "La tercera de las sonatas op. 12 dedicadas a Salieri. Su brillante escritura pianística refleja la propia destreza de Beethoven como pianista.",
+        "it": "La terza delle sonate op. 12 dedicate a Salieri. La brillante scrittura pianistica riflette l’abilità di Beethoven stesso come pianista."
+      },
+      "titles": {
+        "de": "Violinsonate Nr. 3 Es-Dur",
+        "fr": "Sonate pour violon n° 3 en mi bémol majeur",
+        "es": "Sonata para violín n.º 3 en mi bemol mayor",
+        "it": "Sonata per violino n. 3 in mi bemolle maggiore"
       }
     },
     "beethoven-violin-sonata-4": {
@@ -789,7 +1199,17 @@
       ],
       "summary": {
         "ja": "1800〜01年に作曲され、第5番「春」と同じくフリース伯爵に献呈されました。明るい「春」とは対照的に、緊張感のある短調の作品です。",
-        "en": "Composed in 1800–01 and, like the “Spring” Sonata, dedicated to Count Moritz von Fries. It is a taut minor-key work that contrasts sharply with its sunny companion."
+        "en": "Composed in 1800–01 and, like the “Spring” Sonata, dedicated to Count Moritz von Fries. It is a taut minor-key work that contrasts sharply with its sunny companion.",
+        "de": "1800–01 komponiert und wie die „Frühlingssonate“ Graf Moritz von Fries gewidmet. Ein straffes Werk in Moll, das in scharfem Kontrast zu seiner sonnigen Schwester steht.",
+        "fr": "Composée en 1800–1801 et, comme la sonate « Le Printemps », dédiée au comte Moritz von Fries. Une œuvre resserrée en mineur qui contraste vivement avec sa lumineuse compagne.",
+        "es": "Compuesta en 1800–1801 y, como la sonata «Primavera», dedicada al conde Moritz von Fries. Una obra concentrada en modo menor que contrasta vivamente con su luminosa compañera.",
+        "it": "Composta nel 1800–1801 e, come la sonata «La primavera», dedicata al conte Moritz von Fries. Un’opera serrata in tonalità minore che contrasta nettamente con la solare compagna."
+      },
+      "titles": {
+        "de": "Violinsonate Nr. 4 a-Moll",
+        "fr": "Sonate pour violon n° 4 en la mineur",
+        "es": "Sonata para violín n.º 4 en la menor",
+        "it": "Sonata per violino n. 4 in la minore"
       }
     },
     "beethoven-violin-sonata-6": {
@@ -800,7 +1220,17 @@
       ],
       "summary": {
         "ja": "1801〜02年に作曲され、ロシア皇帝アレクサンドル1世に献呈された3曲（作品30）の第1曲です。当初書かれた終楽章は差し替えられ、のちに「クロイツェル・ソナタ」の終楽章として使われました。",
-        "en": "The first of the three Op. 30 sonatas, composed in 1801–02 and dedicated to Tsar Alexander I of Russia. Its original finale was replaced and later reused as the finale of the “Kreutzer” Sonata."
+        "en": "The first of the three Op. 30 sonatas, composed in 1801–02 and dedicated to Tsar Alexander I of Russia. Its original finale was replaced and later reused as the finale of the “Kreutzer” Sonata.",
+        "de": "Die erste der drei Sonaten op. 30, komponiert 1801–02 und Zar Alexander I. von Russland gewidmet. Ihr ursprüngliches Finale wurde ersetzt und später als Finale der „Kreutzer-Sonate“ verwendet.",
+        "fr": "La première des trois sonates op. 30, composée en 1801–1802 et dédiée au tsar Alexandre Ier de Russie. Son finale d’origine fut remplacé, puis réutilisé comme finale de la sonate « à Kreutzer ».",
+        "es": "La primera de las tres sonatas op. 30, compuesta en 1801–1802 y dedicada al zar Alejandro I de Rusia. Su final original fue sustituido y más tarde reutilizado como final de la sonata «Kreutzer».",
+        "it": "La prima delle tre sonate op. 30, composta nel 1801–1802 e dedicata allo zar Alessandro I di Russia. Il finale originale fu sostituito e in seguito riutilizzato come finale della sonata «a Kreutzer»."
+      },
+      "titles": {
+        "de": "Violinsonate Nr. 6 A-Dur",
+        "fr": "Sonate pour violon n° 6 en la majeur",
+        "es": "Sonata para violín n.º 6 en la mayor",
+        "it": "Sonata per violino n. 6 in la maggiore"
       }
     },
     "beethoven-violin-sonata-7": {
@@ -811,7 +1241,17 @@
       ],
       "summary": {
         "ja": "アレクサンドル1世に献呈された作品30の第2曲で、4楽章からなります。ハ短調による劇的な性格をもち、作品30の中で最も規模の大きい作品です。",
-        "en": "The second of the Op. 30 sonatas dedicated to Tsar Alexander I, in four movements. Dramatic in character, as Beethoven’s C-minor works often are, it is the most substantial of the set."
+        "en": "The second of the Op. 30 sonatas dedicated to Tsar Alexander I, in four movements. Dramatic in character, as Beethoven’s C-minor works often are, it is the most substantial of the set.",
+        "de": "Die zweite der Zar Alexander I. gewidmeten Sonaten op. 30, viersätzig. Dramatisch im Charakter, wie Beethovens Werke in c-Moll oft, ist sie die gewichtigste der Gruppe.",
+        "fr": "La deuxième des sonates op. 30 dédiées au tsar Alexandre Ier, en quatre mouvements. D’un caractère dramatique, comme souvent chez Beethoven en do mineur, c’est la plus imposante du recueil.",
+        "es": "La segunda de las sonatas op. 30 dedicadas al zar Alejandro I, en cuatro movimientos. De carácter dramático, como suelen ser las obras de Beethoven en do menor, es la de mayor envergadura del grupo.",
+        "it": "La seconda delle sonate op. 30 dedicate allo zar Alessandro I, in quattro movimenti. Di carattere drammatico, come spesso le opere di Beethoven in do minore, è la più ampia della raccolta."
+      },
+      "titles": {
+        "de": "Violinsonate Nr. 7 c-Moll",
+        "fr": "Sonate pour violon n° 7 en do mineur",
+        "es": "Sonata para violín n.º 7 en do menor",
+        "it": "Sonata per violino n. 7 in do minore"
       }
     },
     "beethoven-violin-sonata-8": {
@@ -822,7 +1262,17 @@
       ],
       "summary": {
         "ja": "アレクサンドル1世に献呈された作品30の第3曲です。3楽章とも明るく軽快で、ユーモアのある終楽章で締めくくられます。",
-        "en": "The third of the Op. 30 sonatas dedicated to Tsar Alexander I. All three movements are bright and nimble, ending with a humorous finale."
+        "en": "The third of the Op. 30 sonatas dedicated to Tsar Alexander I. All three movements are bright and nimble, ending with a humorous finale.",
+        "de": "Die dritte der Zar Alexander I. gewidmeten Sonaten op. 30. Alle drei Sätze sind hell und beweglich; sie endet mit einem humorvollen Finale.",
+        "fr": "La troisième des sonates op. 30 dédiées au tsar Alexandre Ier. Ses trois mouvements sont lumineux et agiles, et elle se termine par un finale plein d’humour.",
+        "es": "La tercera de las sonatas op. 30 dedicadas al zar Alejandro I. Sus tres movimientos son luminosos y ágiles, y termina con un final lleno de humor.",
+        "it": "La terza delle sonate op. 30 dedicate allo zar Alessandro I. Tutti e tre i movimenti sono luminosi e agili, e si chiude con un finale umoristico."
+      },
+      "titles": {
+        "de": "Violinsonate Nr. 8 G-Dur",
+        "fr": "Sonate pour violon n° 8 en sol majeur",
+        "es": "Sonata para violín n.º 8 en sol mayor",
+        "it": "Sonata per violino n. 8 in sol maggiore"
       }
     },
     "beethoven-violin-sonata-10": {
@@ -833,7 +1283,17 @@
       ],
       "summary": {
         "ja": "1812年、フランスのヴァイオリン奏者ピエール・ロードのために作曲され、同年12月にロードとルドルフ大公によって初演されました。ベートーヴェン最後のヴァイオリン・ソナタで、大公に献呈されています。",
-        "en": "Written in 1812 for the French violinist Pierre Rode, who premiered it that December with Archduke Rudolph. It is Beethoven’s last violin sonata and is dedicated to the Archduke."
+        "en": "Written in 1812 for the French violinist Pierre Rode, who premiered it that December with Archduke Rudolph. It is Beethoven’s last violin sonata and is dedicated to the Archduke.",
+        "de": "1812 für den französischen Geiger Pierre Rode geschrieben, der sie im Dezember desselben Jahres mit Erzherzog Rudolph uraufführte. Es ist Beethovens letzte Violinsonate und dem Erzherzog gewidmet.",
+        "fr": "Écrite en 1812 pour le violoniste français Pierre Rode, qui la créa en décembre de la même année avec l’archiduc Rodolphe. C’est la dernière sonate pour violon de Beethoven, dédiée à l’archiduc.",
+        "es": "Escrita en 1812 para el violinista francés Pierre Rode, que la estrenó en diciembre de ese año con el archiduque Rodolfo. Es la última sonata para violín de Beethoven y está dedicada al archiduque.",
+        "it": "Scritta nel 1812 per il violinista francese Pierre Rode, che la eseguì per la prima volta nel dicembre dello stesso anno con l’arciduca Rodolfo. È l’ultima sonata per violino di Beethoven ed è dedicata all’arciduca."
+      },
+      "titles": {
+        "de": "Violinsonate Nr. 10 G-Dur",
+        "fr": "Sonate pour violon n° 10 en sol majeur",
+        "es": "Sonata para violín n.º 10 en sol mayor",
+        "it": "Sonata per violino n. 10 in sol maggiore"
       }
     },
     "brahms-fae-sonata": {
@@ -845,7 +1305,17 @@
       ],
       "summary": {
         "ja": "1853年、ヴァイオリン奏者ヨーゼフ・ヨアヒムに贈るため、ディートリヒ・シューマン・ブラームスの3人が分担して作曲したソナタです。F-A-E はヨアヒムの座右の銘「自由に、しかし孤独に（Frei aber einsam）」の頭文字で、ブラームスはスケルツォを担当しました。",
-        "en": "A sonata written jointly in 1853 by Albert Dietrich, Robert Schumann and Brahms as a gift for the violinist Joseph Joachim. F-A-E stands for Joachim’s motto “Frei aber einsam” (free but lonely); Brahms wrote the Scherzo."
+        "en": "A sonata written jointly in 1853 by Albert Dietrich, Robert Schumann and Brahms as a gift for the violinist Joseph Joachim. F-A-E stands for Joachim’s motto “Frei aber einsam” (free but lonely); Brahms wrote the Scherzo.",
+        "de": "Eine Sonate, 1853 gemeinsam von Albert Dietrich, Robert Schumann und Brahms als Geschenk für den Geiger Joseph Joachim geschrieben. F-A-E steht für Joachims Motto „Frei aber einsam“; Brahms schrieb das Scherzo.",
+        "fr": "Sonate écrite en commun en 1853 par Albert Dietrich, Robert Schumann et Brahms, en cadeau pour le violoniste Joseph Joachim. F-A-E renvoie à la devise de Joachim, « Frei aber einsam » (libre mais seul) ; Brahms en écrivit le Scherzo.",
+        "es": "Sonata escrita en común en 1853 por Albert Dietrich, Robert Schumann y Brahms como regalo para el violinista Joseph Joachim. F-A-E alude al lema de Joachim, «Frei aber einsam» (libre pero solo); Brahms escribió el Scherzo.",
+        "it": "Sonata scritta a più mani nel 1853 da Albert Dietrich, Robert Schumann e Brahms come dono per il violinista Joseph Joachim. F-A-E richiama il motto di Joachim, «Frei aber einsam» (libero ma solo); Brahms ne scrisse lo Scherzo."
+      },
+      "titles": {
+        "de": "F-A-E-Sonate (Dietrich, Schumann, Brahms)",
+        "fr": "Sonate F-A-E (Dietrich, Schumann, Brahms)",
+        "es": "Sonata F-A-E (Dietrich, Schumann, Brahms)",
+        "it": "Sonata F-A-E (Dietrich, Schumann, Brahms)"
       }
     },
     "brahms-piano-quartet-1": {
@@ -856,7 +1326,17 @@
       ],
       "summary": {
         "ja": "1861年に完成したピアノ四重奏曲です。終楽章「ジプシー風ロンド」の熱狂的な音楽で知られ、1937年にはシェーンベルクが管弦楽用に編曲しました。",
-        "en": "A piano quartet completed in 1861, famous for its fiery finale, “Rondo alla Zingarese”. Arnold Schoenberg arranged it for orchestra in 1937."
+        "en": "A piano quartet completed in 1861, famous for its fiery finale, “Rondo alla Zingarese”. Arnold Schoenberg arranged it for orchestra in 1937.",
+        "de": "Ein 1861 vollendetes Klavierquartett, berühmt für sein feuriges Finale „Rondo alla Zingarese“. Arnold Schönberg bearbeitete es 1937 für Orchester.",
+        "fr": "Quatuor avec piano achevé en 1861, célèbre pour son finale enflammé, « Rondo alla Zingarese ». Arnold Schoenberg l’orchestra en 1937.",
+        "es": "Cuarteto con piano terminado en 1861, famoso por su ardiente final, «Rondo alla Zingarese». Arnold Schönberg lo orquestó en 1937.",
+        "it": "Quartetto con pianoforte completato nel 1861, celebre per il focoso finale, «Rondo alla Zingarese». Arnold Schönberg lo orchestrò nel 1937."
+      },
+      "titles": {
+        "de": "Klavierquartett Nr. 1 g-Moll",
+        "fr": "Quatuor avec piano n° 1 en sol mineur",
+        "es": "Cuarteto con piano n.º 1 en sol menor",
+        "it": "Quartetto con pianoforte n. 1 in sol minore"
       }
     },
     "brahms-piano-quartet-3": {
@@ -868,7 +1348,17 @@
       ],
       "summary": {
         "ja": "1855年に着手され、約20年後の1875年に完成したピアノ四重奏曲です。ブラームス自身がゲーテの『若きウェルテルの悩み』に結びつけて語ったことから、「ウェルテル四重奏曲」とも呼ばれます。",
-        "en": "Begun in 1855 and completed some twenty years later, in 1875. Brahms himself linked it to Goethe’s The Sorrows of Young Werther, so it is sometimes called the “Werther” Quartet."
+        "en": "Begun in 1855 and completed some twenty years later, in 1875. Brahms himself linked it to Goethe’s The Sorrows of Young Werther, so it is sometimes called the “Werther” Quartet.",
+        "de": "1855 begonnen und rund zwanzig Jahre später, 1875, vollendet. Brahms selbst brachte es mit Goethes „Die Leiden des jungen Werthers“ in Verbindung, daher wird es manchmal „Werther-Quartett“ genannt.",
+        "fr": "Commencé en 1855 et achevé une vingtaine d’années plus tard, en 1875. Brahms lui-même le rapprochait des Souffrances du jeune Werther de Goethe, d’où son surnom de quatuor « Werther ».",
+        "es": "Comenzado en 1855 y terminado unos veinte años después, en 1875. El propio Brahms lo relacionó con Las desventuras del joven Werther de Goethe, por lo que a veces se le llama cuarteto «Werther».",
+        "it": "Iniziato nel 1855 e completato una ventina d’anni dopo, nel 1875. Brahms stesso lo collegò ai Dolori del giovane Werther di Goethe, per cui è talvolta chiamato quartetto «Werther»."
+      },
+      "titles": {
+        "de": "Klavierquartett Nr. 3 c-Moll",
+        "fr": "Quatuor avec piano n° 3 en do mineur",
+        "es": "Cuarteto con piano n.º 3 en do menor",
+        "it": "Quartetto con pianoforte n. 3 in do minore"
       }
     },
     "brahms-piano-trio-1": {
@@ -879,7 +1369,17 @@
       ],
       "summary": {
         "ja": "20歳のブラームスが1854年に書き上げたピアノ三重奏曲で、晩年の1889年に大きく改訂されました。現在は主に改訂版が演奏されます。",
-        "en": "A piano trio Brahms completed in 1854, aged twenty, and thoroughly revised in 1889. The revised version is the one usually performed today."
+        "en": "A piano trio Brahms completed in 1854, aged twenty, and thoroughly revised in 1889. The revised version is the one usually performed today.",
+        "de": "Ein Klaviertrio, das Brahms 1854 mit zwanzig Jahren vollendete und 1889 gründlich überarbeitete. Heute wird meist die überarbeitete Fassung gespielt.",
+        "fr": "Trio avec piano achevé par Brahms en 1854, à vingt ans, et profondément révisé en 1889. C’est la version révisée que l’on joue généralement aujourd’hui.",
+        "es": "Trío con piano que Brahms terminó en 1854, con veinte años, y revisó a fondo en 1889. Hoy se interpreta habitualmente la versión revisada.",
+        "it": "Trio con pianoforte completato da Brahms nel 1854, a vent’anni, e profondamente rivisto nel 1889. Oggi si esegue di solito la versione riveduta."
+      },
+      "titles": {
+        "de": "Klaviertrio Nr. 1 H-Dur",
+        "fr": "Trio avec piano n° 1 en si majeur",
+        "es": "Trío con piano n.º 1 en si mayor",
+        "it": "Trio con pianoforte n. 1 in si maggiore"
       }
     },
     "brahms-piano-trio-2": {
@@ -890,7 +1390,17 @@
       ],
       "summary": {
         "ja": "1880〜82年に作曲されたピアノ三重奏曲です。第2楽章はハンガリー風の主題による変奏曲で、充実した書法をもつ円熟期の作品です。",
-        "en": "A piano trio composed in 1880–82. Its second movement is a set of variations on a Hungarian-flavoured theme, in a richly worked style typical of Brahms’s maturity."
+        "en": "A piano trio composed in 1880–82. Its second movement is a set of variations on a Hungarian-flavoured theme, in a richly worked style typical of Brahms’s maturity.",
+        "de": "Ein Klaviertrio, komponiert 1880–82. Sein zweiter Satz ist eine Variationenfolge über ein ungarisch gefärbtes Thema, in einem dicht gearbeiteten Stil, typisch für den reifen Brahms.",
+        "fr": "Trio avec piano composé en 1880–1882. Son deuxième mouvement est une série de variations sur un thème aux couleurs hongroises, dans le style dense et travaillé du Brahms de la maturité.",
+        "es": "Trío con piano compuesto en 1880–1882. Su segundo movimiento es una serie de variaciones sobre un tema de sabor húngaro, con la escritura densa y elaborada propia del Brahms maduro.",
+        "it": "Trio con pianoforte composto nel 1880–1882. Il secondo movimento è una serie di variazioni su un tema dal sapore ungherese, nello stile denso e lavorato tipico del Brahms maturo."
+      },
+      "titles": {
+        "de": "Klaviertrio Nr. 2 C-Dur",
+        "fr": "Trio avec piano n° 2 en do majeur",
+        "es": "Trío con piano n.º 2 en do mayor",
+        "it": "Trio con pianoforte n. 2 in do maggiore"
       }
     },
     "brahms-piano-trio-3": {
@@ -901,7 +1411,17 @@
       ],
       "summary": {
         "ja": "1886年の夏、スイスのトゥーンで作曲されました。ブラームスのピアノ三重奏曲の中で最も簡潔で、凝縮された力強さをもつ作品です。",
-        "en": "Composed in the summer of 1886 at Thun in Switzerland. It is the most concise of Brahms’s piano trios, compact and powerful."
+        "en": "Composed in the summer of 1886 at Thun in Switzerland. It is the most concise of Brahms’s piano trios, compact and powerful.",
+        "de": "Im Sommer 1886 in Thun in der Schweiz komponiert. Es ist das knappste der Klaviertrios von Brahms, kompakt und kraftvoll.",
+        "fr": "Composé à l’été 1886 à Thoune, en Suisse. C’est le plus concis des trios avec piano de Brahms, compact et puissant.",
+        "es": "Compuesto en el verano de 1886 en Thun, Suiza. Es el más conciso de los tríos con piano de Brahms, compacto y enérgico.",
+        "it": "Composto nell’estate del 1886 a Thun, in Svizzera. È il più conciso dei trii con pianoforte di Brahms, compatto e potente."
+      },
+      "titles": {
+        "de": "Klaviertrio Nr. 3 c-Moll",
+        "fr": "Trio avec piano n° 3 en do mineur",
+        "es": "Trío con piano n.º 3 en do menor",
+        "it": "Trio con pianoforte n. 3 in do minore"
       }
     },
     "brahms-violin-sonata-1": {
@@ -914,7 +1434,17 @@
       ],
       "summary": {
         "ja": "1878〜79年に作曲されたヴァイオリン・ソナタです。終楽章に自作の歌曲「雨の歌」と「余韻」（作品59）の旋律が使われていることから、「雨の歌」の愛称で呼ばれます。",
-        "en": "A violin sonata composed in 1878–79. Its finale draws on Brahms’s songs “Regenlied” and “Nachklang” (Op. 59), hence the nickname “Rain” Sonata."
+        "en": "A violin sonata composed in 1878–79. Its finale draws on Brahms’s songs “Regenlied” and “Nachklang” (Op. 59), hence the nickname “Rain” Sonata.",
+        "de": "Eine Violinsonate, komponiert 1878–79. Ihr Finale greift Brahms’ Lieder „Regenlied“ und „Nachklang“ (op. 59) auf, daher der Beiname „Regenliedsonate“.",
+        "fr": "Sonate pour violon composée en 1878–1879. Son finale reprend les lieder « Regenlied » et « Nachklang » (op. 59) de Brahms, d’où son surnom de sonate « Pluie ».",
+        "es": "Sonata para violín compuesta en 1878–1879. Su final retoma las canciones «Regenlied» y «Nachklang» (op. 59) de Brahms, de ahí el apodo de sonata «Lluvia».",
+        "it": "Sonata per violino composta nel 1878–1879. Il finale riprende i Lieder «Regenlied» e «Nachklang» (op. 59) di Brahms, da cui il soprannome di sonata «della pioggia»."
+      },
+      "titles": {
+        "de": "Violinsonate Nr. 1 G-Dur „Regenliedsonate“",
+        "fr": "Sonate pour violon n° 1 en sol majeur « Pluie »",
+        "es": "Sonata para violín n.º 1 en sol mayor «Lluvia»",
+        "it": "Sonata per violino n. 1 in sol maggiore «della pioggia»"
       }
     },
     "brahms-violin-sonata-2": {
@@ -925,7 +1455,17 @@
       ],
       "summary": {
         "ja": "1886年の夏、スイスのトゥーンで作曲されたヴァイオリン・ソナタです。3曲の中で最も明るく歌謡的な作品で、同じ時期に書かれた歌曲との旋律的な関わりも指摘されています。",
-        "en": "Written in the summer of 1886 at Thun in Switzerland. The sunniest and most song-like of Brahms’s three violin sonatas, it shares melodic ideas with songs he wrote at the same time."
+        "en": "Written in the summer of 1886 at Thun in Switzerland. The sunniest and most song-like of Brahms’s three violin sonatas, it shares melodic ideas with songs he wrote at the same time.",
+        "de": "Im Sommer 1886 in Thun in der Schweiz geschrieben. Die sonnigste und liedhafteste der drei Violinsonaten von Brahms teilt melodische Gedanken mit Liedern, die er zur selben Zeit schrieb.",
+        "fr": "Écrite à l’été 1886 à Thoune, en Suisse. La plus lumineuse et la plus chantante des trois sonates pour violon de Brahms partage des idées mélodiques avec des lieder écrits à la même époque.",
+        "es": "Escrita en el verano de 1886 en Thun, Suiza. La más luminosa y cantabile de las tres sonatas para violín de Brahms comparte ideas melódicas con canciones que compuso en la misma época.",
+        "it": "Scritta nell’estate del 1886 a Thun, in Svizzera. La più solare e cantabile delle tre sonate per violino di Brahms condivide idee melodiche con Lieder composti nello stesso periodo."
+      },
+      "titles": {
+        "de": "Violinsonate Nr. 2 A-Dur",
+        "fr": "Sonate pour violon n° 2 en la majeur",
+        "es": "Sonata para violín n.º 2 en la mayor",
+        "it": "Sonata per violino n. 2 in la maggiore"
       }
     },
     "brahms-violin-sonata-3": {
@@ -936,7 +1476,17 @@
       ],
       "summary": {
         "ja": "1886〜88年に作曲され、指揮者ハンス・フォン・ビューローに献呈されました。ブラームスのヴァイオリン・ソナタで唯一の4楽章の作品で、情熱的な性格をもちます。",
-        "en": "Composed in 1886–88 and dedicated to the conductor Hans von Bülow. It is the only one of Brahms’s violin sonatas in four movements, and the most passionate."
+        "en": "Composed in 1886–88 and dedicated to the conductor Hans von Bülow. It is the only one of Brahms’s violin sonatas in four movements, and the most passionate.",
+        "de": "1886–88 komponiert und dem Dirigenten Hans von Bülow gewidmet. Sie ist die einzige viersätzige Violinsonate von Brahms und die leidenschaftlichste.",
+        "fr": "Composée en 1886–1888 et dédiée au chef d’orchestre Hans von Bülow. C’est la seule sonate pour violon de Brahms en quatre mouvements, et la plus passionnée.",
+        "es": "Compuesta en 1886–1888 y dedicada al director Hans von Bülow. Es la única sonata para violín de Brahms en cuatro movimientos y la más apasionada.",
+        "it": "Composta nel 1886–1888 e dedicata al direttore d’orchestra Hans von Bülow. È l’unica sonata per violino di Brahms in quattro movimenti, e la più appassionata."
+      },
+      "titles": {
+        "de": "Violinsonate Nr. 3 d-Moll",
+        "fr": "Sonate pour violon n° 3 en ré mineur",
+        "es": "Sonata para violín n.º 3 en re menor",
+        "it": "Sonata per violino n. 3 in re minore"
       }
     },
     "brahms-violin-sonatas": {
@@ -947,7 +1497,17 @@
       ],
       "summary": {
         "ja": "ブラームスが完成させた3曲のヴァイオリン・ソナタをまとめたものです。「雨の歌」の第1番（1878〜79年）、明るい第2番、劇的な4楽章の第3番（1886〜88年）からなります。",
-        "en": "Brahms’s three completed violin sonatas in one set: No. 1, the “Rain” Sonata (1878–79), the sunny No. 2, and the dramatic four-movement No. 3 (1886–88)."
+        "en": "Brahms’s three completed violin sonatas in one set: No. 1, the “Rain” Sonata (1878–79), the sunny No. 2, and the dramatic four-movement No. 3 (1886–88).",
+        "de": "Die drei vollendeten Violinsonaten von Brahms in einer Ausgabe: Nr. 1, die „Regenliedsonate“ (1878–79), die sonnige Nr. 2 und die dramatische viersätzige Nr. 3 (1886–88).",
+        "fr": "Les trois sonates pour violon achevées de Brahms réunies : le n° 1, sonate « Pluie » (1878–1879), le lumineux n° 2 et le dramatique n° 3 en quatre mouvements (1886–1888).",
+        "es": "Las tres sonatas para violín completas de Brahms en una sola edición: la n.º 1, sonata «Lluvia» (1878–1879), la luminosa n.º 2 y la dramática n.º 3 en cuatro movimientos (1886–1888).",
+        "it": "Le tre sonate per violino complete di Brahms in un’unica raccolta: la n. 1, sonata «della pioggia» (1878–1879), la solare n. 2 e la drammatica n. 3 in quattro movimenti (1886–1888)."
+      },
+      "titles": {
+        "de": "Violinsonaten Nr. 1–3",
+        "fr": "Sonates pour violon n° 1 à 3",
+        "es": "Sonatas para violín n.º 1–3",
+        "it": "Sonate per violino n. 1–3"
       }
     },
     "chopin-ballade-1": {
@@ -958,7 +1518,17 @@
       ],
       "summary": {
         "ja": "1835年に完成し、1836年に出版されたショパンの最初のバラードです。シュトックハウゼン男爵に献呈され、劇的な終結部で知られます。",
-        "en": "Chopin’s first ballade, completed in 1835 and published in 1836 with a dedication to Baron Stockhausen. It is famous for its dramatic coda."
+        "en": "Chopin’s first ballade, completed in 1835 and published in 1836 with a dedication to Baron Stockhausen. It is famous for its dramatic coda.",
+        "de": "Chopins erste Ballade, 1835 vollendet und 1836 mit einer Widmung an Baron Stockhausen veröffentlicht. Sie ist berühmt für ihre dramatische Coda.",
+        "fr": "Première ballade de Chopin, achevée en 1835 et publiée en 1836 avec une dédicace au baron Stockhausen. Elle est célèbre pour sa coda dramatique.",
+        "es": "Primera balada de Chopin, terminada en 1835 y publicada en 1836 con una dedicatoria al barón Stockhausen. Es famosa por su dramática coda.",
+        "it": "Prima ballata di Chopin, completata nel 1835 e pubblicata nel 1836 con una dedica al barone Stockhausen. È celebre per la sua drammatica coda."
+      },
+      "titles": {
+        "de": "Ballade Nr. 1 g-Moll",
+        "fr": "Ballade n° 1 en sol mineur",
+        "es": "Balada n.º 1 en sol menor",
+        "it": "Ballata n. 1 in sol minore"
       }
     },
     "chopin-ballade-2": {
@@ -969,7 +1539,17 @@
       ],
       "summary": {
         "ja": "1836〜39年に作曲され、ロベルト・シューマンに献呈されたバラードです。穏やかなヘ長調の旋律と嵐のような部分が交互に現れ、イ短調で終わります。",
-        "en": "Composed in 1836–39 and dedicated to Robert Schumann. A tranquil F-major melody alternates with stormy episodes, and the piece ends in A minor."
+        "en": "Composed in 1836–39 and dedicated to Robert Schumann. A tranquil F-major melody alternates with stormy episodes, and the piece ends in A minor.",
+        "de": "1836–39 komponiert und Robert Schumann gewidmet. Eine ruhige Melodie in F-Dur wechselt mit stürmischen Episoden; das Stück endet in a-Moll.",
+        "fr": "Composée en 1836–1839 et dédiée à Robert Schumann. Une paisible mélodie en fa majeur alterne avec des épisodes orageux, et la pièce s’achève en la mineur.",
+        "es": "Compuesta en 1836–1839 y dedicada a Robert Schumann. Una serena melodía en fa mayor alterna con episodios tempestuosos, y la pieza termina en la menor.",
+        "it": "Composta nel 1836–1839 e dedicata a Robert Schumann. Una tranquilla melodia in fa maggiore si alterna a episodi tempestosi, e il brano termina in la minore."
+      },
+      "titles": {
+        "de": "Ballade Nr. 2 F-Dur",
+        "fr": "Ballade n° 2 en fa majeur",
+        "es": "Balada n.º 2 en fa mayor",
+        "it": "Ballata n. 2 in fa maggiore"
       }
     },
     "chopin-ballade-3": {
@@ -980,7 +1560,17 @@
       ],
       "summary": {
         "ja": "1841年に作曲され、ポーリーヌ・ド・ノアイユに献呈されたバラードです。4曲のバラードの中で最も明るく優美な作品です。",
-        "en": "Composed in 1841 and dedicated to Pauline de Noailles. It is the brightest and most graceful of Chopin’s four ballades."
+        "en": "Composed in 1841 and dedicated to Pauline de Noailles. It is the brightest and most graceful of Chopin’s four ballades.",
+        "de": "1841 komponiert und Pauline de Noailles gewidmet. Sie ist die hellste und anmutigste der vier Balladen Chopins.",
+        "fr": "Composée en 1841 et dédiée à Pauline de Noailles. C’est la plus lumineuse et la plus gracieuse des quatre ballades de Chopin.",
+        "es": "Compuesta en 1841 y dedicada a Pauline de Noailles. Es la más luminosa y elegante de las cuatro baladas de Chopin.",
+        "it": "Composta nel 1841 e dedicata a Pauline de Noailles. È la più luminosa e aggraziata delle quattro ballate di Chopin."
+      },
+      "titles": {
+        "de": "Ballade Nr. 3 As-Dur",
+        "fr": "Ballade n° 3 en la bémol majeur",
+        "es": "Balada n.º 3 en la bemol mayor",
+        "it": "Ballata n. 3 in la bemolle maggiore"
       }
     },
     "chopin-ballade-4": {
@@ -991,7 +1581,17 @@
       ],
       "summary": {
         "ja": "1842年に作曲され、ロスチャイルド男爵夫人に献呈されたバラードです。ショパンのピアノ曲の中でも、とりわけ高度な技巧と構成をもつ作品とされます。",
-        "en": "Composed in 1842 and dedicated to Baroness Charlotte de Rothschild. It is regarded as one of Chopin’s most demanding and intricately constructed piano works."
+        "en": "Composed in 1842 and dedicated to Baroness Charlotte de Rothschild. It is regarded as one of Chopin’s most demanding and intricately constructed piano works.",
+        "de": "1842 komponiert und Baronin Charlotte de Rothschild gewidmet. Sie gilt als eines der anspruchsvollsten und am kunstvollsten gebauten Klavierwerke Chopins.",
+        "fr": "Composée en 1842 et dédiée à la baronne Charlotte de Rothschild. Elle est considérée comme l’une des œuvres pour piano les plus exigeantes et les plus savamment construites de Chopin.",
+        "es": "Compuesta en 1842 y dedicada a la baronesa Charlotte de Rothschild. Se considera una de las obras para piano más exigentes y elaboradas de Chopin.",
+        "it": "Composta nel 1842 e dedicata alla baronessa Charlotte de Rothschild. È considerata una delle opere pianistiche più impegnative e più finemente costruite di Chopin."
+      },
+      "titles": {
+        "de": "Ballade Nr. 4 f-Moll",
+        "fr": "Ballade n° 4 en fa mineur",
+        "es": "Balada n.º 4 en fa menor",
+        "it": "Ballata n. 4 in fa minore"
       }
     },
     "chopin-piano-trio": {
@@ -1002,7 +1602,17 @@
       ],
       "summary": {
         "ja": "1829年に完成した、ショパンが残した唯一のピアノ三重奏曲です。若きショパンの後援者、アントニ・ラジヴィウ公に献呈されました。",
-        "en": "Completed in 1829, it is Chopin’s only piano trio. It is dedicated to Prince Antoni Radziwiłł, a patron of the young composer."
+        "en": "Completed in 1829, it is Chopin’s only piano trio. It is dedicated to Prince Antoni Radziwiłł, a patron of the young composer.",
+        "de": "1829 vollendet, ist es Chopins einziges Klaviertrio. Es ist Fürst Antoni Radziwiłł gewidmet, einem Förderer des jungen Komponisten.",
+        "fr": "Achevé en 1829, c’est le seul trio avec piano de Chopin. Il est dédié au prince Antoni Radziwiłł, protecteur du jeune compositeur.",
+        "es": "Terminado en 1829, es el único trío con piano de Chopin. Está dedicado al príncipe Antoni Radziwiłł, mecenas del joven compositor.",
+        "it": "Completato nel 1829, è l’unico trio con pianoforte di Chopin. È dedicato al principe Antoni Radziwiłł, mecenate del giovane compositore."
+      },
+      "titles": {
+        "de": "Klaviertrio g-Moll",
+        "fr": "Trio avec piano en sol mineur",
+        "es": "Trío con piano en sol menor",
+        "it": "Trio con pianoforte in sol minore"
       }
     },
     "chopin-scherzo-1": {
@@ -1013,7 +1623,17 @@
       ],
       "summary": {
         "ja": "1831〜33年ごろに作曲された最初のスケルツォです。激しい両端部に挟まれた中間部では、ポーランドのクリスマス・キャロル「眠れ、幼子イエス」の旋律が引用されています。",
-        "en": "Chopin’s first scherzo, composed around 1831–33. Between its turbulent outer sections, the middle section quotes the Polish Christmas carol “Lulajże, Jezuniu”."
+        "en": "Chopin’s first scherzo, composed around 1831–33. Between its turbulent outer sections, the middle section quotes the Polish Christmas carol “Lulajże, Jezuniu”.",
+        "de": "Chopins erstes Scherzo, um 1831–33 komponiert. Zwischen den stürmischen Außenteilen zitiert der Mittelteil das polnische Weihnachtslied „Lulajże, Jezuniu“.",
+        "fr": "Premier scherzo de Chopin, composé vers 1831–1833. Entre ses sections extrêmes tourmentées, la partie centrale cite le chant de Noël polonais « Lulajże, Jezuniu ».",
+        "es": "Primer scherzo de Chopin, compuesto hacia 1831–1833. Entre sus turbulentas secciones extremas, la sección central cita el villancico polaco «Lulajże, Jezuniu».",
+        "it": "Primo scherzo di Chopin, composto intorno al 1831–1833. Tra le sezioni estreme tumultuose, la parte centrale cita il canto natalizio polacco «Lulajże, Jezuniu»."
+      },
+      "titles": {
+        "de": "Scherzo Nr. 1 h-Moll",
+        "fr": "Scherzo n° 1 en si mineur",
+        "es": "Scherzo n.º 1 en si menor",
+        "it": "Scherzo n. 1 in si minore"
       }
     },
     "chopin-scherzo-2": {
@@ -1024,7 +1644,17 @@
       ],
       "summary": {
         "ja": "1837年に作曲されたスケルツォで、4曲の中で最もよく演奏されます。問いかけるような冒頭の音型と、大きく歌う旋律の対比が印象的です。",
-        "en": "Composed in 1837, it is the most frequently played of Chopin’s four scherzos. A questioning opening figure contrasts with broad, singing melodies."
+        "en": "Composed in 1837, it is the most frequently played of Chopin’s four scherzos. A questioning opening figure contrasts with broad, singing melodies.",
+        "de": "1837 komponiert, ist es das meistgespielte der vier Scherzi Chopins. Eine fragende Anfangsfigur kontrastiert mit breiten, gesanglichen Melodien.",
+        "fr": "Composé en 1837, c’est le plus joué des quatre scherzos de Chopin. Un motif initial interrogateur contraste avec de larges mélodies chantantes.",
+        "es": "Compuesto en 1837, es el más interpretado de los cuatro scherzos de Chopin. Una figura inicial interrogante contrasta con amplias melodías cantabiles.",
+        "it": "Composto nel 1837, è il più eseguito dei quattro scherzi di Chopin. Una figura iniziale interrogativa contrasta con ampie melodie cantabili."
+      },
+      "titles": {
+        "de": "Scherzo Nr. 2 b-Moll",
+        "fr": "Scherzo n° 2 en si bémol mineur",
+        "es": "Scherzo n.º 2 en si bemol menor",
+        "it": "Scherzo n. 2 in si bemolle minore"
       }
     },
     "chopin-scherzo-3": {
@@ -1035,7 +1665,17 @@
       ],
       "summary": {
         "ja": "1839年に作曲され、一部はマヨルカ島で書かれたスケルツォです。弟子のアドルフ・グートマンに献呈されました。力強いオクターヴと、コラール風の旋律が交互に現れます。",
-        "en": "Composed in 1839, partly on the island of Majorca, and dedicated to his pupil Adolf Gutmann. Powerful octaves alternate with a chorale-like theme."
+        "en": "Composed in 1839, partly on the island of Majorca, and dedicated to his pupil Adolf Gutmann. Powerful octaves alternate with a chorale-like theme.",
+        "de": "1839 komponiert, teilweise auf Mallorca, und seinem Schüler Adolf Gutmann gewidmet. Kraftvolle Oktaven wechseln mit einem choralartigen Thema.",
+        "fr": "Composé en 1839, en partie à Majorque, et dédié à son élève Adolf Gutmann. De puissantes octaves alternent avec un thème en forme de choral.",
+        "es": "Compuesto en 1839, en parte en Mallorca, y dedicado a su alumno Adolf Gutmann. Potentes octavas alternan con un tema a modo de coral.",
+        "it": "Composto nel 1839, in parte a Maiorca, e dedicato all’allievo Adolf Gutmann. Potenti ottave si alternano a un tema simile a un corale."
+      },
+      "titles": {
+        "de": "Scherzo Nr. 3 cis-Moll",
+        "fr": "Scherzo n° 3 en do dièse mineur",
+        "es": "Scherzo n.º 3 en do sostenido menor",
+        "it": "Scherzo n. 3 in do diesis minore"
       }
     },
     "chopin-scherzo-4": {
@@ -1046,7 +1686,17 @@
       ],
       "summary": {
         "ja": "1842年に作曲されたショパン最後のスケルツォで、4曲の中で唯一の長調の作品です。軽やかで明るい性格をもちます。",
-        "en": "Chopin’s last scherzo, composed in 1842, and the only one of the four in a major key. It is light and radiant in character."
+        "en": "Chopin’s last scherzo, composed in 1842, and the only one of the four in a major key. It is light and radiant in character.",
+        "de": "Chopins letztes Scherzo, 1842 komponiert, und das einzige der vier in Dur. Es ist von leichtem, strahlendem Charakter.",
+        "fr": "Dernier scherzo de Chopin, composé en 1842, et le seul des quatre en mode majeur. Il est d’un caractère léger et radieux.",
+        "es": "Último scherzo de Chopin, compuesto en 1842, y el único de los cuatro en modo mayor. Es de carácter ligero y radiante.",
+        "it": "Ultimo scherzo di Chopin, composto nel 1842, e l’unico dei quattro in tonalità maggiore. Ha un carattere leggero e radioso."
+      },
+      "titles": {
+        "de": "Scherzo Nr. 4 E-Dur",
+        "fr": "Scherzo n° 4 en mi majeur",
+        "es": "Scherzo n.º 4 en mi mayor",
+        "it": "Scherzo n. 4 in mi maggiore"
       }
     },
     "mozart-12-duos-k487": {
@@ -1282,7 +1932,17 @@
       ],
       "summary": {
         "ja": "1760年代前半に書かれたと考えられるチェロ協奏曲です。長く失われたと思われていましたが、1961年にプラハで筆写譜が発見され、チェロ奏者の重要なレパートリーになりました。",
-        "en": "A cello concerto thought to date from the early 1760s. Long believed lost, it was rediscovered in Prague in 1961 and has since become a core work for cellists."
+        "en": "A cello concerto thought to date from the early 1760s. Long believed lost, it was rediscovered in Prague in 1961 and has since become a core work for cellists.",
+        "de": "Ein Cellokonzert, vermutlich aus den frühen 1760er-Jahren. Lange als verschollen geltend, wurde es 1961 in Prag wiederentdeckt und ist seither ein Kernwerk für Cellisten.",
+        "fr": "Concerto pour violoncelle que l’on situe au début des années 1760. Longtemps considéré comme perdu, il fut redécouvert à Prague en 1961 et est devenu depuis une œuvre essentielle pour les violoncellistes.",
+        "es": "Concierto para violonchelo que se cree de comienzos de la década de 1760. Considerado perdido durante mucho tiempo, se redescubrió en Praga en 1961 y desde entonces es una obra central para los violonchelistas.",
+        "it": "Concerto per violoncello ritenuto dei primi anni Sessanta del Settecento. Considerato a lungo perduto, fu ritrovato a Praga nel 1961 ed è da allora un’opera fondamentale per i violoncellisti."
+      },
+      "titles": {
+        "de": "Cellokonzert Nr. 1 C-Dur",
+        "fr": "Concerto pour violoncelle n° 1 en do majeur",
+        "es": "Concierto para violonchelo n.º 1 en do mayor",
+        "it": "Concerto per violoncello n. 1 in do maggiore"
       }
     },
     "haydn-cello-concerto-c-popper": {
@@ -1293,7 +1953,17 @@
       ],
       "summary": {
         "ja": "ハイドンのチェロ協奏曲ハ長調を、19世紀のチェロ奏者・作曲家ダーヴィト・ポッパーが編曲した版です。原典版とは細部が異なるため、使う版を確認してから合わせてください。",
-        "en": "Haydn’s Cello Concerto in C as arranged by the 19th-century cellist and composer David Popper. Details differ from the original, so check which edition your partners are using."
+        "en": "Haydn’s Cello Concerto in C as arranged by the 19th-century cellist and composer David Popper. Details differ from the original, so check which edition your partners are using.",
+        "de": "Haydns Cellokonzert C-Dur in der Bearbeitung des Cellisten und Komponisten David Popper aus dem 19. Jahrhundert. Details weichen vom Original ab; prüfen Sie daher, welche Ausgabe Ihre Mitspieler verwenden.",
+        "fr": "Le Concerto pour violoncelle en do de Haydn dans l’arrangement du violoncelliste et compositeur du XIXe siècle David Popper. Certains détails diffèrent de l’original : vérifiez quelle édition utilisent vos partenaires.",
+        "es": "El Concierto para violonchelo en do de Haydn en el arreglo del violonchelista y compositor del siglo XIX David Popper. Algunos detalles difieren del original, así que compruebe qué edición usan sus compañeros.",
+        "it": "Il Concerto per violoncello in do di Haydn nell’arrangiamento del violoncellista e compositore ottocentesco David Popper. Alcuni dettagli differiscono dall’originale: verificate quale edizione usano i vostri partner."
+      },
+      "titles": {
+        "de": "Cellokonzert C-Dur (Bearb. Popper)",
+        "fr": "Concerto pour violoncelle en do majeur (arr. Popper)",
+        "es": "Concierto para violonchelo en do mayor (arr. Popper)",
+        "it": "Concerto per violoncello in do maggiore (arr. Popper)"
       }
     },
     "haydn-string-quartets-op1-1-3": {
@@ -1304,7 +1974,17 @@
       ],
       "summary": {
         "ja": "1757〜62年ごろに書かれた、ハイドン初期の弦楽四重奏曲です。メヌエットを2つ含む5楽章の形で、ディヴェルティメントとも呼ばれた軽やかな作品群です。",
-        "en": "Early quartets by Haydn, written around 1757–62. Each has five movements, including two minuets, and the set was originally regarded as light divertimenti."
+        "en": "Early quartets by Haydn, written around 1757–62. Each has five movements, including two minuets, and the set was originally regarded as light divertimenti.",
+        "de": "Frühe Quartette Haydns, um 1757–62 geschrieben. Jedes hat fünf Sätze, darunter zwei Menuette, und die Sammlung galt ursprünglich als leichte Divertimenti.",
+        "fr": "Premiers quatuors de Haydn, écrits vers 1757–1762. Chacun compte cinq mouvements, dont deux menuets, et le recueil était considéré à l’origine comme des divertimentos légers.",
+        "es": "Cuartetos tempranos de Haydn, escritos hacia 1757–1762. Cada uno tiene cinco movimientos, incluidos dos minuetos, y la colección se consideraba en origen un conjunto de divertimentos ligeros.",
+        "it": "Primi quartetti di Haydn, scritti intorno al 1757–1762. Ciascuno ha cinque movimenti, tra cui due minuetti, e la raccolta era considerata in origine come divertimenti leggeri."
+      },
+      "titles": {
+        "de": "Streichquartette op. 1 Nr. 1–3",
+        "fr": "Quatuors à cordes op. 1 n° 1 à 3",
+        "es": "Cuartetos de cuerda op. 1 n.º 1–3",
+        "it": "Quartetti per archi op. 1 n. 1–3"
       }
     },
     "haydn-string-quartets-op2-1-3": {
@@ -1315,7 +1995,17 @@
       ],
       "summary": {
         "ja": "作品1と同じ時期に書かれたハイドン初期の弦楽四重奏曲のうち、第1〜3番です。メヌエットを2つ含む5楽章の形をとります。",
-        "en": "Nos. 1–3 of Haydn’s Op. 2, early quartets from the same period as Op. 1. They follow the same five-movement plan with two minuets."
+        "en": "Nos. 1–3 of Haydn’s Op. 2, early quartets from the same period as Op. 1. They follow the same five-movement plan with two minuets.",
+        "de": "Nr. 1–3 aus Haydns op. 2, frühe Quartette aus derselben Zeit wie op. 1. Sie folgen demselben fünfsätzigen Plan mit zwei Menuetten.",
+        "fr": "Les n° 1 à 3 de l’op. 2 de Haydn, premiers quatuors de la même époque que l’op. 1. Ils suivent le même plan en cinq mouvements avec deux menuets.",
+        "es": "Los n.º 1–3 del op. 2 de Haydn, cuartetos tempranos de la misma época que el op. 1. Siguen el mismo plan en cinco movimientos con dos minuetos.",
+        "it": "I n. 1–3 dell’op. 2 di Haydn, primi quartetti dello stesso periodo dell’op. 1. Seguono lo stesso schema in cinque movimenti con due minuetti."
+      },
+      "titles": {
+        "de": "Streichquartette op. 2 Nr. 1–3",
+        "fr": "Quatuors à cordes op. 2 n° 1 à 3",
+        "es": "Cuartetos de cuerda op. 2 n.º 1–3",
+        "it": "Quartetti per archi op. 2 n. 1–3"
       }
     },
     "haydn-string-quartets-op2-4-6": {
@@ -1326,7 +2016,17 @@
       ],
       "summary": {
         "ja": "ハイドン初期の弦楽四重奏曲集 作品2のうち、第4〜6番です。初期の様式による親しみやすい作品群で、弦楽四重奏の入門にも向いています。",
-        "en": "Nos. 4–6 of Haydn’s early Op. 2 quartets. Approachable works in his early style, they make a good introduction to quartet playing."
+        "en": "Nos. 4–6 of Haydn’s early Op. 2 quartets. Approachable works in his early style, they make a good introduction to quartet playing.",
+        "de": "Nr. 4–6 aus Haydns frühen Quartetten op. 2. Zugängliche Werke in seinem frühen Stil, eignen sie sich gut als Einstieg ins Quartettspiel.",
+        "fr": "Les n° 4 à 6 des premiers quatuors op. 2 de Haydn. Œuvres accessibles dans son style de jeunesse, elles constituent une bonne introduction au jeu en quatuor.",
+        "es": "Los n.º 4–6 de los cuartetos tempranos op. 2 de Haydn. Obras accesibles en su estilo de juventud, son una buena introducción a la práctica del cuarteto.",
+        "it": "I n. 4–6 dei primi quartetti op. 2 di Haydn. Opere accessibili nel suo stile giovanile, sono una buona introduzione alla pratica del quartetto."
+      },
+      "titles": {
+        "de": "Streichquartette op. 2 Nr. 4–6",
+        "fr": "Quatuors à cordes op. 2 n° 4 à 6",
+        "es": "Cuartetos de cuerda op. 2 n.º 4–6",
+        "it": "Quartetti per archi op. 2 n. 4–6"
       }
     },
     "haydn-string-quartets-op9": {
@@ -1337,7 +2037,17 @@
       ],
       "summary": {
         "ja": "1769年ごろに書かれた6曲の弦楽四重奏曲です。4楽章の形が定着し、第1ヴァイオリンに華やかな見せ場が与えられています。",
-        "en": "Six quartets written around 1769. Here Haydn settles on the four-movement form, with brilliant passages for the first violin."
+        "en": "Six quartets written around 1769. Here Haydn settles on the four-movement form, with brilliant passages for the first violin.",
+        "de": "Sechs Quartette, um 1769 geschrieben. Hier legt sich Haydn auf die viersätzige Form fest, mit brillanten Passagen für die erste Violine.",
+        "fr": "Six quatuors écrits vers 1769. Haydn y adopte la forme en quatre mouvements, avec de brillants passages pour le premier violon.",
+        "es": "Seis cuartetos escritos hacia 1769. En ellos Haydn se decanta por la forma en cuatro movimientos, con brillantes pasajes para el primer violín.",
+        "it": "Sei quartetti scritti intorno al 1769. Qui Haydn adotta la forma in quattro movimenti, con brillanti passaggi per il primo violino."
+      },
+      "titles": {
+        "de": "Streichquartette op. 9 (Nr. 1–6)",
+        "fr": "Quatuors à cordes op. 9 (n° 1 à 6)",
+        "es": "Cuartetos de cuerda op. 9 (n.º 1–6)",
+        "it": "Quartetti per archi op. 9 (n. 1–6)"
       }
     },
     "haydn-string-quartets-op17": {
@@ -1348,7 +2058,17 @@
       ],
       "summary": {
         "ja": "1771年に作曲された6曲の弦楽四重奏曲です。作品9の流れを受け継ぎつつ、より充実した書法を見せます。",
-        "en": "Six quartets composed in 1771. They continue the path of Op. 9 with a richer, more developed style."
+        "en": "Six quartets composed in 1771. They continue the path of Op. 9 with a richer, more developed style.",
+        "de": "Sechs Quartette aus dem Jahr 1771. Sie setzen den Weg von op. 9 mit einem reicheren, weiter entwickelten Stil fort.",
+        "fr": "Six quatuors composés en 1771. Ils prolongent la voie de l’op. 9 dans un style plus riche et plus développé.",
+        "es": "Seis cuartetos compuestos en 1771. Continúan el camino del op. 9 con un estilo más rico y desarrollado.",
+        "it": "Sei quartetti composti nel 1771. Proseguono il percorso dell’op. 9 con uno stile più ricco e sviluppato."
+      },
+      "titles": {
+        "de": "Streichquartette op. 17 (Nr. 1–6)",
+        "fr": "Quatuors à cordes op. 17 (n° 1 à 6)",
+        "es": "Cuartetos de cuerda op. 17 (n.º 1–6)",
+        "it": "Quartetti per archi op. 17 (n. 1–6)"
       }
     },
     "haydn-string-quartets-op20": {
@@ -1361,7 +2081,17 @@
       ],
       "summary": {
         "ja": "1772年に作曲された6曲の弦楽四重奏曲です。「太陽四重奏曲」の名は、ある出版譜の表紙に描かれた太陽の絵に由来します。4つの楽器を対等に扱い、3曲の終楽章にフーガを用いた、弦楽四重奏史上の重要な作品です。",
-        "en": "Six quartets composed in 1772. The name “Sun” comes from the sun pictured on the title page of an early edition. Treating all four instruments as equals, with fugal finales in three of the works, the set is a landmark in quartet history."
+        "en": "Six quartets composed in 1772. The name “Sun” comes from the sun pictured on the title page of an early edition. Treating all four instruments as equals, with fugal finales in three of the works, the set is a landmark in quartet history.",
+        "de": "Sechs Quartette aus dem Jahr 1772. Der Name „Sonnenquartette“ geht auf die Sonne auf dem Titelblatt einer frühen Ausgabe zurück. Mit gleichberechtigten vier Instrumenten und Fugenfinali in drei Werken ist die Sammlung ein Meilenstein der Quartettgeschichte.",
+        "fr": "Six quatuors composés en 1772. Le nom « du Soleil » vient du soleil figurant sur la page de titre d’une édition ancienne. Traitant les quatre instruments à égalité, avec des finales fugués dans trois des œuvres, le recueil marque un jalon dans l’histoire du quatuor.",
+        "es": "Seis cuartetos compuestos en 1772. El nombre «del Sol» procede del sol dibujado en la portada de una edición temprana. Con los cuatro instrumentos en pie de igualdad y finales fugados en tres de las obras, la colección es un hito en la historia del cuarteto.",
+        "it": "Sei quartetti composti nel 1772. Il nome «del Sole» deriva dal sole raffigurato sul frontespizio di una delle prime edizioni. Con i quattro strumenti trattati alla pari e finali fugati in tre opere, la raccolta è una pietra miliare nella storia del quartetto."
+      },
+      "titles": {
+        "de": "Streichquartette op. 20 (Nr. 1–6) „Sonnenquartette“",
+        "fr": "Quatuors à cordes op. 20 (n° 1 à 6) « du Soleil »",
+        "es": "Cuartetos de cuerda op. 20 (n.º 1–6) «del Sol»",
+        "it": "Quartetti per archi op. 20 (n. 1–6) «del Sole»"
       }
     },
     "haydn-string-quartet-op20-4": {
@@ -1372,7 +2102,17 @@
       ],
       "summary": {
         "ja": "「太陽四重奏曲」作品20の第4曲です。第2楽章はニ短調の主題による変奏曲で、メヌエットには「ジプシー風」と記されています。",
-        "en": "The fourth of the “Sun” Quartets, Op. 20. Its slow movement is a set of variations on a D-minor theme, and the minuet is marked “alla zingarese”."
+        "en": "The fourth of the “Sun” Quartets, Op. 20. Its slow movement is a set of variations on a D-minor theme, and the minuet is marked “alla zingarese”.",
+        "de": "Das vierte der „Sonnenquartette“ op. 20. Sein langsamer Satz ist eine Variationenfolge über ein Thema in d-Moll, und das Menuett trägt die Bezeichnung „alla zingarese“.",
+        "fr": "Quatrième des quatuors « du Soleil » op. 20. Son mouvement lent est une série de variations sur un thème en ré mineur, et le menuet porte l’indication « alla zingarese ».",
+        "es": "El cuarto de los cuartetos «del Sol» op. 20. Su movimiento lento es una serie de variaciones sobre un tema en re menor, y el minueto lleva la indicación «alla zingarese».",
+        "it": "Il quarto dei quartetti «del Sole» op. 20. Il movimento lento è una serie di variazioni su un tema in re minore, e il minuetto reca l’indicazione «alla zingarese»."
+      },
+      "titles": {
+        "de": "Streichquartett D-Dur",
+        "fr": "Quatuor à cordes en ré majeur",
+        "es": "Cuarteto de cuerda en re mayor",
+        "it": "Quartetto per archi in re maggiore"
       }
     },
     "schubert-arpeggione-sonata-cello": {
@@ -1505,7 +2245,17 @@
       ],
       "summary": {
         "ja": "1887年に作曲された、ヴァイオリンとピアノのための4つの小品です。もとは2つのヴァイオリンとヴィオラのために書いた小品を作り直したものです。",
-        "en": "Four pieces for violin and piano from 1887. Dvořák reworked them from miniatures he had first written for two violins and viola."
+        "en": "Four pieces for violin and piano from 1887. Dvořák reworked them from miniatures he had first written for two violins and viola.",
+        "de": "Vier Stücke für Violine und Klavier aus dem Jahr 1887. Dvořák arbeitete sie aus Miniaturen um, die er zunächst für zwei Violinen und Viola geschrieben hatte.",
+        "fr": "Quatre pièces pour violon et piano de 1887. Dvořák les a remaniées à partir de miniatures écrites d’abord pour deux violons et alto.",
+        "es": "Cuatro piezas para violín y piano de 1887. Dvořák las reelaboró a partir de miniaturas que había escrito primero para dos violines y viola.",
+        "it": "Quattro pezzi per violino e pianoforte del 1887. Dvořák li rielaborò da miniature scritte inizialmente per due violini e viola."
+      },
+      "titles": {
+        "de": "Vier romantische Stücke",
+        "fr": "Quatre pièces romantiques",
+        "es": "Cuatro piezas románticas",
+        "it": "Quattro pezzi romantici"
       }
     },
     "dvorak-humoresque": {
@@ -1517,7 +2267,17 @@
       ],
       "summary": {
         "ja": "1894年に作曲されたピアノ曲集《8つのユーモレスク》の第7曲です。曲集の中で最もよく知られ、ヴァイオリンとピアノなど多くの編曲で親しまれています。",
-        "en": "The seventh of Dvořák’s Eight Humoresques for piano, composed in 1894. By far the best known of the set, it is loved in many arrangements, including violin and piano."
+        "en": "The seventh of Dvořák’s Eight Humoresques for piano, composed in 1894. By far the best known of the set, it is loved in many arrangements, including violin and piano.",
+        "de": "Die siebte der acht Humoresken für Klavier von Dvořák, 1894 komponiert. Mit Abstand die bekannteste der Sammlung, ist sie in vielen Bearbeitungen beliebt, auch für Violine und Klavier.",
+        "fr": "Septième des huit Humoresques pour piano de Dvořák, composée en 1894. De loin la plus connue du recueil, elle est appréciée dans de nombreux arrangements, notamment pour violon et piano.",
+        "es": "La séptima de las ocho Humorescas para piano de Dvořák, compuesta en 1894. Con mucho la más conocida de la colección, es muy apreciada en numerosos arreglos, incluido el de violín y piano.",
+        "it": "La settima delle otto Humoresque per pianoforte di Dvořák, composta nel 1894. Di gran lunga la più nota della raccolta, è amata in molti arrangiamenti, anche per violino e pianoforte."
+      },
+      "titles": {
+        "de": "Humoreske Ges-Dur",
+        "fr": "Humoresque en sol bémol majeur",
+        "es": "Humoresca en sol bemol mayor",
+        "it": "Humoresque in sol bemolle maggiore"
       }
     },
     "dvorak-slavonic-dance-op46-2": {
@@ -1529,7 +2289,17 @@
       ],
       "summary": {
         "ja": "1878年に出版された《スラヴ舞曲集》第1集（作品46）の第2曲です。原曲はピアノ連弾で、ヴァイオリンとピアノの編曲でもよく演奏されます。",
-        "en": "The second dance from the first set of Slavonic Dances, Op. 46, published in 1878. Originally for piano duet, it is often played in arrangements for violin and piano."
+        "en": "The second dance from the first set of Slavonic Dances, Op. 46, published in 1878. Originally for piano duet, it is often played in arrangements for violin and piano.",
+        "de": "Der zweite Tanz aus der ersten Sammlung der Slawischen Tänze op. 46, veröffentlicht 1878. Ursprünglich für Klavier zu vier Händen, wird er oft in Bearbeitungen für Violine und Klavier gespielt.",
+        "fr": "Deuxième danse du premier recueil des Danses slaves op. 46, publié en 1878. Écrite à l’origine pour piano à quatre mains, elle est souvent jouée dans des arrangements pour violon et piano.",
+        "es": "La segunda danza de la primera serie de Danzas eslavas op. 46, publicada en 1878. Escrita originalmente para piano a cuatro manos, suele tocarse en arreglos para violín y piano.",
+        "it": "La seconda danza della prima raccolta di Danze slave op. 46, pubblicata nel 1878. Scritta in origine per pianoforte a quattro mani, è spesso eseguita in arrangiamenti per violino e pianoforte."
+      },
+      "titles": {
+        "de": "Slawischer Tanz e-Moll op. 46 Nr. 2",
+        "fr": "Danse slave en mi mineur op. 46 n° 2",
+        "es": "Danza eslava en mi menor op. 46 n.º 2",
+        "it": "Danza slava in mi minore op. 46 n. 2"
       }
     },
     "dvorak-slavonic-dance-op72-2": {
@@ -1541,7 +2311,17 @@
       ],
       "summary": {
         "ja": "1886年に作曲された《スラヴ舞曲集》第2集（作品72）の第2曲で、通し番号では第10番にあたります。哀愁を帯びた旋律で知られ、ヴァイオリンとピアノの編曲でもよく演奏されます。",
-        "en": "The second dance of the second set, Op. 72 (1886), number 10 in the complete series. Known for its wistful melody, it is often played in arrangements for violin and piano."
+        "en": "The second dance of the second set, Op. 72 (1886), number 10 in the complete series. Known for its wistful melody, it is often played in arrangements for violin and piano.",
+        "de": "Der zweite Tanz der zweiten Sammlung op. 72 (1886), Nummer 10 der Gesamtreihe. Bekannt für seine wehmütige Melodie, wird er oft in Bearbeitungen für Violine und Klavier gespielt.",
+        "fr": "Deuxième danse du second recueil, op. 72 (1886), dixième de la série complète. Connue pour sa mélodie nostalgique, elle est souvent jouée dans des arrangements pour violon et piano.",
+        "es": "La segunda danza de la segunda serie, op. 72 (1886), número 10 de la serie completa. Conocida por su melancólica melodía, suele tocarse en arreglos para violín y piano.",
+        "it": "La seconda danza della seconda raccolta, op. 72 (1886), numero 10 della serie completa. Nota per la sua melodia malinconica, è spesso eseguita in arrangiamenti per violino e pianoforte."
+      },
+      "titles": {
+        "de": "Slawischer Tanz e-Moll op. 72 Nr. 2",
+        "fr": "Danse slave en mi mineur op. 72 n° 2",
+        "es": "Danza eslava en mi menor op. 72 n.º 2",
+        "it": "Danza slava in mi minore op. 72 n. 2"
       }
     },
     "dvorak-violin-concerto": {
@@ -1552,7 +2332,17 @@
       ],
       "summary": {
         "ja": "1879年にヨーゼフ・ヨアヒムのために作曲され、改訂を重ねたヴァイオリン協奏曲です。1883年にプラハでフランティシェク・オンドジーチェクの独奏により初演されました。",
-        "en": "Written in 1879 for Joseph Joachim and revised several times. František Ondříček gave the premiere in Prague in 1883."
+        "en": "Written in 1879 for Joseph Joachim and revised several times. František Ondříček gave the premiere in Prague in 1883.",
+        "de": "1879 für Joseph Joachim geschrieben und mehrfach überarbeitet. František Ondříček spielte die Uraufführung 1883 in Prag.",
+        "fr": "Écrit en 1879 pour Joseph Joachim et révisé à plusieurs reprises. František Ondříček en donna la création à Prague en 1883.",
+        "es": "Escrito en 1879 para Joseph Joachim y revisado varias veces. František Ondříček lo estrenó en Praga en 1883.",
+        "it": "Scritto nel 1879 per Joseph Joachim e rivisto più volte. František Ondříček ne diede la prima esecuzione a Praga nel 1883."
+      },
+      "titles": {
+        "de": "Violinkonzert a-Moll",
+        "fr": "Concerto pour violon en la mineur",
+        "es": "Concierto para violín en la menor",
+        "it": "Concerto per violino in la minore"
       }
     },
     "tchaikovsky-meditation-op42-1": {
@@ -1600,7 +2390,17 @@
       ],
       "summary": {
         "ja": "フォーレ晩年のチェロ・ソナタ2曲（第1番 1917年、第2番 1921年）をまとめたものです。簡潔で内省的な、後期フォーレらしい作品です。",
-        "en": "Fauré’s two late cello sonatas, No. 1 (1917) and No. 2 (1921). Concise and inward-looking, they are typical of his late style."
+        "en": "Fauré’s two late cello sonatas, No. 1 (1917) and No. 2 (1921). Concise and inward-looking, they are typical of his late style.",
+        "de": "Faurés zwei späte Cellosonaten, Nr. 1 (1917) und Nr. 2 (1921). Knapp und nach innen gekehrt, sind sie typisch für seinen Spätstil.",
+        "fr": "Les deux sonates pour violoncelle tardives de Fauré, n° 1 (1917) et n° 2 (1921). Concises et intériorisées, elles sont caractéristiques de son style tardif.",
+        "es": "Las dos sonatas tardías para violonchelo de Fauré, n.º 1 (1917) y n.º 2 (1921). Concisas e introspectivas, son características de su estilo final.",
+        "it": "Le due sonate tarde per violoncello di Fauré, n. 1 (1917) e n. 2 (1921). Concise e introspettive, sono tipiche del suo stile tardo."
+      },
+      "titles": {
+        "de": "Cellosonaten Nr. 1 und 2",
+        "fr": "Sonates pour violoncelle n° 1 et 2",
+        "es": "Sonatas para violonchelo n.º 1 y 2",
+        "it": "Sonate per violoncello n. 1 e 2"
       }
     },
     "faure-elegie": {
@@ -1612,7 +2412,17 @@
       ],
       "summary": {
         "ja": "1880年に作曲され、1883年に出版されたチェロとピアノのための作品です。深い悲しみをたたえた旋律で知られ、のちにフォーレ自身が管弦楽伴奏版も作りました。",
-        "en": "A piece for cello and piano composed in 1880 and published in 1883. Known for its grief-laden melody, it was later orchestrated by Fauré himself."
+        "en": "A piece for cello and piano composed in 1880 and published in 1883. Known for its grief-laden melody, it was later orchestrated by Fauré himself.",
+        "de": "Ein Stück für Violoncello und Klavier, 1880 komponiert und 1883 veröffentlicht. Bekannt für seine schmerzerfüllte Melodie, wurde es später von Fauré selbst orchestriert.",
+        "fr": "Pièce pour violoncelle et piano composée en 1880 et publiée en 1883. Connue pour sa mélodie empreinte de douleur, elle fut ensuite orchestrée par Fauré lui-même.",
+        "es": "Pieza para violonchelo y piano compuesta en 1880 y publicada en 1883. Conocida por su melodía llena de dolor, fue orquestada después por el propio Fauré.",
+        "it": "Brano per violoncello e pianoforte composto nel 1880 e pubblicato nel 1883. Noto per la sua melodia carica di dolore, fu poi orchestrato da Fauré stesso."
+      },
+      "titles": {
+        "de": "Élégie",
+        "fr": "Élégie",
+        "es": "Élégie",
+        "it": "Élégie"
       }
     },
     "faure-piano-quartet-1": {
@@ -1623,7 +2433,17 @@
       ],
       "summary": {
         "ja": "1876〜79年に作曲されたピアノ四重奏曲で、終楽章は1883年に書き直されました。フォーレの室内楽を代表する作品のひとつです。",
-        "en": "A piano quartet composed in 1876–79, with a finale rewritten in 1883. It is one of Fauré’s best-known chamber works."
+        "en": "A piano quartet composed in 1876–79, with a finale rewritten in 1883. It is one of Fauré’s best-known chamber works.",
+        "de": "Ein Klavierquartett, komponiert 1876–79, mit einem 1883 neu geschriebenen Finale. Es ist eines der bekanntesten Kammermusikwerke Faurés.",
+        "fr": "Quatuor avec piano composé en 1876–1879, dont le finale fut réécrit en 1883. C’est l’une des œuvres de chambre les plus connues de Fauré.",
+        "es": "Cuarteto con piano compuesto en 1876–1879, con un final reescrito en 1883. Es una de las obras de cámara más conocidas de Fauré.",
+        "it": "Quartetto con pianoforte composto nel 1876–1879, con un finale riscritto nel 1883. È una delle opere da camera più note di Fauré."
+      },
+      "titles": {
+        "de": "Klavierquartett Nr. 1 c-Moll",
+        "fr": "Quatuor avec piano n° 1 en ut mineur",
+        "es": "Cuarteto con piano n.º 1 en do menor",
+        "it": "Quartetto con pianoforte n. 1 in do minore"
       }
     },
     "faure-piano-trio": {
@@ -1634,7 +2454,17 @@
       ],
       "summary": {
         "ja": "1922〜23年、70代後半のフォーレが書いたピアノ三重奏曲です。晩年の作品らしい、簡潔で透明な響きをもちます。",
-        "en": "A piano trio written in 1922–23, when Fauré was in his late seventies. It has the spare, transparent sound of his final years."
+        "en": "A piano trio written in 1922–23, when Fauré was in his late seventies. It has the spare, transparent sound of his final years.",
+        "de": "Ein Klaviertrio, 1922–23 geschrieben, als Fauré fast achtzig war. Es hat den kargen, durchsichtigen Klang seiner letzten Jahre.",
+        "fr": "Trio avec piano écrit en 1922–1923, alors que Fauré approchait les quatre-vingts ans. Il possède la sonorité dépouillée et transparente de ses dernières années.",
+        "es": "Trío con piano escrito en 1922–1923, cuando Fauré rondaba los ochenta años. Tiene el sonido sobrio y transparente de sus últimos años.",
+        "it": "Trio con pianoforte scritto nel 1922–1923, quando Fauré era quasi ottantenne. Ha il suono essenziale e trasparente dei suoi ultimi anni."
+      },
+      "titles": {
+        "de": "Klaviertrio d-Moll",
+        "fr": "Trio avec piano en ré mineur",
+        "es": "Trío con piano en re menor",
+        "it": "Trio con pianoforte in re minore"
       }
     },
     "elgar-chanson-de-matin": {
@@ -1646,7 +2476,17 @@
       ],
       "summary": {
         "ja": "1899年に出版された、ヴァイオリンとピアノのための小品です。対になる「夜の歌（Chanson de nuit）」とともに作品15としてまとめられています。",
-        "en": "A short piece for violin and piano, published in 1899. It forms Op. 15 together with its companion, Chanson de nuit."
+        "en": "A short piece for violin and piano, published in 1899. It forms Op. 15 together with its companion, Chanson de nuit.",
+        "de": "Ein kurzes Stück für Violine und Klavier, 1899 veröffentlicht. Zusammen mit seinem Gegenstück „Chanson de nuit“ bildet es op. 15.",
+        "fr": "Courte pièce pour violon et piano publiée en 1899. Elle forme l’op. 15 avec sa compagne, Chanson de nuit.",
+        "es": "Pieza breve para violín y piano, publicada en 1899. Forma el op. 15 junto con su compañera, Chanson de nuit.",
+        "it": "Breve brano per violino e pianoforte pubblicato nel 1899. Forma l’op. 15 insieme al suo pendant, Chanson de nuit."
+      },
+      "titles": {
+        "de": "Chanson de matin",
+        "fr": "Chanson de matin",
+        "es": "Chanson de matin",
+        "it": "Chanson de matin"
       }
     },
     "accolay-violin-concerto-1": {
@@ -1658,7 +2498,17 @@
       ],
       "summary": {
         "ja": "ベルギーの作曲家ジャン＝バティスト・アコーレイによる、単一楽章のヴァイオリン協奏曲です。ロマン派らしい旋律と適度な技巧をもち、学習者の協奏曲として広く親しまれています。",
-        "en": "A single-movement violin concerto by the Belgian composer Jean-Baptiste Accolay. With romantic melodies and moderate technical demands, it is a favourite student concerto."
+        "en": "A single-movement violin concerto by the Belgian composer Jean-Baptiste Accolay. With romantic melodies and moderate technical demands, it is a favourite student concerto.",
+        "de": "Ein einsätziges Violinkonzert des belgischen Komponisten Jean-Baptiste Accolay. Mit romantischen Melodien und moderaten technischen Anforderungen ist es ein beliebtes Schülerkonzert.",
+        "fr": "Concerto pour violon en un seul mouvement du compositeur belge Jean-Baptiste Accolay. Ses mélodies romantiques et ses exigences techniques modérées en font un concerto d’élève très apprécié.",
+        "es": "Concierto para violín en un solo movimiento del compositor belga Jean-Baptiste Accolay. Con melodías románticas y una dificultad técnica moderada, es un concierto muy apreciado por los estudiantes.",
+        "it": "Concerto per violino in un solo movimento del compositore belga Jean-Baptiste Accolay. Con melodie romantiche e difficoltà tecniche moderate, è un concerto molto amato dagli studenti."
+      },
+      "titles": {
+        "de": "Violinkonzert Nr. 1 a-Moll",
+        "fr": "Concerto pour violon n° 1 en la mineur",
+        "es": "Concierto para violín n.º 1 en la menor",
+        "it": "Concerto per violino n. 1 in la minore"
       }
     },
     "arensky-piano-trio-1": {
@@ -1669,7 +2519,17 @@
       ],
       "summary": {
         "ja": "1894年、チェロ奏者カルル・ダヴィドフを追悼して作曲されたピアノ三重奏曲です。チェロに美しい旋律が多く与えられ、アレンスキーの代表作となっています。",
-        "en": "A piano trio composed in 1894 in memory of the cellist Karl Davydov. Rich in beautiful cello melodies, it is Arensky’s best-known work."
+        "en": "A piano trio composed in 1894 in memory of the cellist Karl Davydov. Rich in beautiful cello melodies, it is Arensky’s best-known work.",
+        "de": "Ein Klaviertrio, 1894 zum Gedenken an den Cellisten Karl Dawydow komponiert. Reich an schönen Cellomelodien, ist es Arenskis bekanntestes Werk.",
+        "fr": "Trio avec piano composé en 1894 à la mémoire du violoncelliste Karl Davydov. Riche en belles mélodies pour le violoncelle, c’est l’œuvre la plus connue d’Arenski.",
+        "es": "Trío con piano compuesto en 1894 en memoria del violonchelista Karl Davídov. Rico en bellas melodías para el violonchelo, es la obra más conocida de Arenski.",
+        "it": "Trio con pianoforte composto nel 1894 in memoria del violoncellista Karl Davydov. Ricco di splendide melodie per il violoncello, è l’opera più nota di Arenskij."
+      },
+      "titles": {
+        "de": "Klaviertrio Nr. 1 d-Moll",
+        "fr": "Trio avec piano n° 1 en ré mineur",
+        "es": "Trío con piano n.º 1 en re menor",
+        "it": "Trio con pianoforte n. 1 in re minore"
       }
     },
     "arensky-piano-trio-2": {
@@ -1679,7 +2539,17 @@
       ],
       "summary": {
         "ja": "1905年に作曲された、アレンスキーの2曲目のピアノ三重奏曲です。第1番に比べて演奏機会は少ないものの、ロシア・ロマン派らしい叙情をたたえた作品です。",
-        "en": "Arensky’s second piano trio, composed in 1905. Less often played than No. 1, it shares the same Russian Romantic lyricism."
+        "en": "Arensky’s second piano trio, composed in 1905. Less often played than No. 1, it shares the same Russian Romantic lyricism.",
+        "de": "Arenskis zweites Klaviertrio, komponiert 1905. Seltener gespielt als Nr. 1, teilt es dieselbe russisch-romantische Lyrik.",
+        "fr": "Deuxième trio avec piano d’Arenski, composé en 1905. Moins joué que le n° 1, il en partage le lyrisme romantique russe.",
+        "es": "Segundo trío con piano de Arenski, compuesto en 1905. Menos interpretado que el n.º 1, comparte su mismo lirismo romántico ruso.",
+        "it": "Secondo trio con pianoforte di Arenskij, composto nel 1905. Meno eseguito del n. 1, ne condivide lo stesso lirismo romantico russo."
+      },
+      "titles": {
+        "de": "Klaviertrio Nr. 2 f-Moll",
+        "fr": "Trio avec piano n° 2 en fa mineur",
+        "es": "Trío con piano n.º 2 en fa menor",
+        "it": "Trio con pianoforte n. 2 in fa minore"
       }
     },
     "arensky-piano-trios": {
@@ -1690,7 +2560,17 @@
       ],
       "summary": {
         "ja": "アレンスキーのピアノ三重奏曲2曲をまとめたものです。チェロ奏者ダヴィドフを追悼した第1番（1894年）と、第2番（1905年）からなります。",
-        "en": "Arensky’s two piano trios in one set: No. 1 (1894), written in memory of the cellist Karl Davydov, and No. 2 (1905)."
+        "en": "Arensky’s two piano trios in one set: No. 1 (1894), written in memory of the cellist Karl Davydov, and No. 2 (1905).",
+        "de": "Arenskis zwei Klaviertrios in einer Ausgabe: Nr. 1 (1894), zum Gedenken an den Cellisten Karl Dawydow geschrieben, und Nr. 2 (1905).",
+        "fr": "Les deux trios avec piano d’Arenski réunis : le n° 1 (1894), écrit à la mémoire du violoncelliste Karl Davydov, et le n° 2 (1905).",
+        "es": "Los dos tríos con piano de Arenski en una sola edición: el n.º 1 (1894), escrito en memoria del violonchelista Karl Davídov, y el n.º 2 (1905).",
+        "it": "I due trii con pianoforte di Arenskij in un’unica raccolta: il n. 1 (1894), scritto in memoria del violoncellista Karl Davydov, e il n. 2 (1905)."
+      },
+      "titles": {
+        "de": "Klaviertrios Nr. 1 und 2",
+        "fr": "Trios avec piano n° 1 et 2",
+        "es": "Tríos con piano n.º 1 y 2",
+        "it": "Trii con pianoforte n. 1 e 2"
       }
     },
     "bartok-violin-concerto-2": {
@@ -1701,7 +2581,17 @@
       ],
       "summary": {
         "ja": "1937〜38年、ヴァイオリン奏者ゾルターン・セーケイのために作曲されました。1939年にアムステルダムで、セーケイの独奏、メンゲルベルクの指揮で初演されました。",
-        "en": "Written in 1937–38 for the violinist Zoltán Székely, who gave the premiere in Amsterdam in 1939 with Willem Mengelberg conducting."
+        "en": "Written in 1937–38 for the violinist Zoltán Székely, who gave the premiere in Amsterdam in 1939 with Willem Mengelberg conducting.",
+        "de": "1937–38 für den Geiger Zoltán Székely geschrieben, der es 1939 in Amsterdam unter der Leitung von Willem Mengelberg uraufführte.",
+        "fr": "Écrit en 1937–1938 pour le violoniste Zoltán Székely, qui en donna la création à Amsterdam en 1939 sous la direction de Willem Mengelberg.",
+        "es": "Escrito en 1937–1938 para el violinista Zoltán Székely, que lo estrenó en Ámsterdam en 1939 bajo la dirección de Willem Mengelberg.",
+        "it": "Scritto nel 1937–1938 per il violinista Zoltán Székely, che ne diede la prima esecuzione ad Amsterdam nel 1939 sotto la direzione di Willem Mengelberg."
+      },
+      "titles": {
+        "de": "Violinkonzert Nr. 2",
+        "fr": "Concerto pour violon n° 2",
+        "es": "Concierto para violín n.º 2",
+        "it": "Concerto per violino n. 2"
       }
     },
     "beriot-violin-concerto-9": {
@@ -1712,7 +2602,17 @@
       ],
       "summary": {
         "ja": "ベルギーのヴァイオリン奏者・作曲家シャルル・ド・ベリオによる協奏曲です。華やかな技巧と親しみやすい旋律をもち、学習者の協奏曲として広く使われています。",
-        "en": "A concerto by the Belgian violinist-composer Charles de Bériot. Brilliant yet tuneful, it is widely used as a student concerto."
+        "en": "A concerto by the Belgian violinist-composer Charles de Bériot. Brilliant yet tuneful, it is widely used as a student concerto.",
+        "de": "Ein Konzert des belgischen Geigers und Komponisten Charles de Bériot. Brillant und doch melodiös, wird es häufig als Schülerkonzert verwendet.",
+        "fr": "Concerto du violoniste et compositeur belge Charles de Bériot. Brillant tout en restant mélodieux, il est très utilisé comme concerto d’élève.",
+        "es": "Concierto del violinista y compositor belga Charles de Bériot. Brillante y a la vez melodioso, se utiliza ampliamente como concierto de estudio.",
+        "it": "Concerto del violinista e compositore belga Charles de Bériot. Brillante ma melodioso, è molto usato come concerto per studenti."
+      },
+      "titles": {
+        "de": "Violinkonzert Nr. 9 a-Moll",
+        "fr": "Concerto pour violon n° 9 en la mineur",
+        "es": "Concierto para violín n.º 9 en la menor",
+        "it": "Concerto per violino n. 9 in la minore"
       }
     },
     "bizet-arlesienne-adagietto": {
@@ -1724,7 +2624,17 @@
       ],
       "summary": {
         "ja": "1872年に作曲された劇付随音楽《アルルの女》から、ビゼー自身がまとめた第1組曲の1曲です。弦楽器だけで静かに奏でられる、短く美しい楽章です。",
-        "en": "From the first suite Bizet drew from his 1872 incidental music for L’Arlésienne. This short, tender movement is played by the strings alone."
+        "en": "From the first suite Bizet drew from his 1872 incidental music for L’Arlésienne. This short, tender movement is played by the strings alone.",
+        "de": "Aus der ersten Suite, die Bizet aus seiner Schauspielmusik zu L’Arlésienne (1872) zusammenstellte. Dieser kurze, zärtliche Satz wird allein von den Streichern gespielt.",
+        "fr": "Extrait de la première suite que Bizet tira de sa musique de scène pour L’Arlésienne (1872). Ce mouvement bref et tendre est joué par les cordes seules.",
+        "es": "De la primera suite que Bizet extrajo de su música incidental para La arlesiana (1872). Este movimiento breve y tierno lo interpretan solo las cuerdas.",
+        "it": "Dalla prima suite che Bizet ricavò dalle musiche di scena per L’Arlesiana (1872). Questo movimento breve e tenero è affidato ai soli archi."
+      },
+      "titles": {
+        "de": "L’Arlésienne-Suite Nr. 1: Adagietto",
+        "fr": "L’Arlésienne, Suite n° 1 : Adagietto",
+        "es": "La arlesiana, Suite n.º 1: Adagietto",
+        "it": "L’Arlesiana, Suite n. 1: Adagietto"
       }
     },
     "borodin-string-quartet-2": {
@@ -1737,7 +2647,17 @@
       ],
       "summary": {
         "ja": "1881年に作曲され、妻エカテリーナに献呈された弦楽四重奏曲です。チェロが歌い出す第3楽章「ノクターン」は特に有名で、単独でもよく演奏されます。",
-        "en": "A string quartet composed in 1881 and dedicated to Borodin’s wife, Ekaterina. The third movement, “Notturno”, opened by the cello, is especially famous and often played alone."
+        "en": "A string quartet composed in 1881 and dedicated to Borodin’s wife, Ekaterina. The third movement, “Notturno”, opened by the cello, is especially famous and often played alone.",
+        "de": "Ein Streichquartett, 1881 komponiert und Borodins Frau Jekaterina gewidmet. Der dritte Satz „Notturno“, vom Violoncello eröffnet, ist besonders berühmt und wird oft einzeln gespielt.",
+        "fr": "Quatuor à cordes composé en 1881 et dédié à l’épouse de Borodine, Ekaterina. Le troisième mouvement, « Notturno », ouvert par le violoncelle, est particulièrement célèbre et souvent joué seul.",
+        "es": "Cuarteto de cuerda compuesto en 1881 y dedicado a la esposa de Borodín, Yekaterina. El tercer movimiento, «Notturno», iniciado por el violonchelo, es especialmente famoso y se toca a menudo por separado.",
+        "it": "Quartetto per archi composto nel 1881 e dedicato alla moglie di Borodin, Ekaterina. Il terzo movimento, «Notturno», aperto dal violoncello, è particolarmente celebre e spesso eseguito da solo."
+      },
+      "titles": {
+        "de": "Streichquartett Nr. 2 D-Dur",
+        "fr": "Quatuor à cordes n° 2 en ré majeur",
+        "es": "Cuarteto de cuerda n.º 2 en re mayor",
+        "it": "Quartetto per archi n. 2 in re maggiore"
       }
     },
     "bruch-kol-nidrei": {
@@ -1748,7 +2668,17 @@
       ],
       "summary": {
         "ja": "1880年に作曲された、チェロと管弦楽のための作品です。ユダヤ教の祈り「コル・ニドレ」の旋律などのユダヤの旋律に基づいています。",
-        "en": "A work for cello and orchestra composed in 1880. It is based on Jewish melodies, including the chant of the Kol Nidre prayer."
+        "en": "A work for cello and orchestra composed in 1880. It is based on Jewish melodies, including the chant of the Kol Nidre prayer.",
+        "de": "Ein Werk für Violoncello und Orchester, 1880 komponiert. Es beruht auf jüdischen Melodien, darunter der Gesang des Kol-Nidre-Gebets.",
+        "fr": "Œuvre pour violoncelle et orchestre composée en 1880. Elle s’appuie sur des mélodies juives, dont le chant de la prière du Kol Nidre.",
+        "es": "Obra para violonchelo y orquesta compuesta en 1880. Se basa en melodías judías, entre ellas el canto de la oración del Kol Nidre.",
+        "it": "Opera per violoncello e orchestra composta nel 1880. Si basa su melodie ebraiche, tra cui il canto della preghiera del Kol Nidre."
+      },
+      "titles": {
+        "de": "Kol Nidrei",
+        "fr": "Kol Nidrei",
+        "es": "Kol Nidrei",
+        "it": "Kol Nidrei"
       }
     },
     "corelli-christmas-concerto": {
@@ -1760,7 +2690,17 @@
       ],
       "summary": {
         "ja": "コレッリの死後、1714年に出版された合奏協奏曲集 作品6の第8曲です。「クリスマスの夜のために作られた」と記され、終曲の穏やかな「パストラーレ」で知られます。",
-        "en": "The eighth of Corelli’s Op. 6 concerti grossi, published in 1714 after his death. Marked “made for the night of Christmas”, it is famous for its gentle closing Pastorale."
+        "en": "The eighth of Corelli’s Op. 6 concerti grossi, published in 1714 after his death. Marked “made for the night of Christmas”, it is famous for its gentle closing Pastorale.",
+        "de": "Das achte der Concerti grossi op. 6 von Corelli, 1714 nach seinem Tod veröffentlicht. Mit dem Vermerk „für die Weihnachtsnacht gemacht“ ist es berühmt für seine sanfte Schluss-Pastorale.",
+        "fr": "Huitième des concerti grossi op. 6 de Corelli, publiés en 1714 après sa mort. Portant la mention « fait pour la nuit de Noël », il est célèbre pour sa douce Pastorale finale.",
+        "es": "El octavo de los concerti grossi op. 6 de Corelli, publicados en 1714 tras su muerte. Con la indicación «hecho para la noche de Navidad», es famoso por su apacible Pastoral final.",
+        "it": "L’ottavo dei concerti grossi op. 6 di Corelli, pubblicati nel 1714 dopo la sua morte. Recante l’indicazione «fatto per la notte di Natale», è celebre per la dolce Pastorale conclusiva."
+      },
+      "titles": {
+        "de": "Concerto grosso g-Moll „Weihnachtskonzert“",
+        "fr": "Concerto grosso en sol mineur « pour la nuit de Noël »",
+        "es": "Concerto grosso en sol menor «Concierto de Navidad»",
+        "it": "Concerto grosso in sol minore «per la notte di Natale»"
       }
     },
     "dohnanyi-serenade-op10": {
@@ -1771,7 +2711,17 @@
       ],
       "summary": {
         "ja": "1902年に作曲された、ヴァイオリン・ヴィオラ・チェロのための5楽章のセレナードです。弦楽三重奏のレパートリーの中でも、色彩豊かな作品として人気があります。",
-        "en": "A five-movement serenade for violin, viola and cello, composed in 1902. It is one of the most colourful and popular works in the string trio repertoire."
+        "en": "A five-movement serenade for violin, viola and cello, composed in 1902. It is one of the most colourful and popular works in the string trio repertoire.",
+        "de": "Eine fünfsätzige Serenade für Violine, Viola und Violoncello, 1902 komponiert. Sie ist eines der farbigsten und beliebtesten Werke des Streichtrio-Repertoires.",
+        "fr": "Sérénade en cinq mouvements pour violon, alto et violoncelle, composée en 1902. C’est l’une des œuvres les plus colorées et les plus appréciées du répertoire du trio à cordes.",
+        "es": "Serenata en cinco movimientos para violín, viola y violonchelo, compuesta en 1902. Es una de las obras más coloridas y populares del repertorio para trío de cuerda.",
+        "it": "Serenata in cinque movimenti per violino, viola e violoncello, composta nel 1902. È una delle opere più colorate e amate del repertorio per trio d’archi."
+      },
+      "titles": {
+        "de": "Serenade für Streichtrio C-Dur",
+        "fr": "Sérénade pour trio à cordes en do majeur",
+        "es": "Serenata para trío de cuerda en do mayor",
+        "it": "Serenata per trio d’archi in do maggiore"
       }
     },
     "dont-24-etudes": {
@@ -1783,7 +2733,17 @@
       ],
       "summary": {
         "ja": "ウィーンのヴァイオリン奏者・教育者ヤーコプ・ドントによる練習曲集です。上級者向けの内容で、パガニーニのカプリースに進む前の準備としても使われます。",
-        "en": "Études by the Viennese violinist and teacher Jakob Dont. Aimed at advanced players, they are often used as preparation for Paganini’s Caprices."
+        "en": "Études by the Viennese violinist and teacher Jakob Dont. Aimed at advanced players, they are often used as preparation for Paganini’s Caprices.",
+        "de": "Etüden des Wiener Geigers und Pädagogen Jakob Dont. Sie richten sich an fortgeschrittene Spieler und werden oft zur Vorbereitung auf Paganinis Capricen verwendet.",
+        "fr": "Études du violoniste et pédagogue viennois Jakob Dont. Destinées aux instrumentistes avancés, elles servent souvent de préparation aux Caprices de Paganini.",
+        "es": "Estudios del violinista y pedagogo vienés Jakob Dont. Dirigidos a intérpretes avanzados, se usan a menudo como preparación para los Caprichos de Paganini.",
+        "it": "Studi del violinista e didatta viennese Jakob Dont. Rivolti a esecutori avanzati, sono spesso usati come preparazione ai Capricci di Paganini."
+      },
+      "titles": {
+        "de": "24 Etüden und Capricen",
+        "fr": "24 Études et caprices",
+        "es": "24 estudios y caprichos",
+        "it": "24 studi e capricci"
       }
     },
     "goltermann-cello-concertos": {
@@ -1794,7 +2754,17 @@
       ],
       "summary": {
         "ja": "ドイツのチェロ奏者・作曲家ゲオルク・ゴルターマンのチェロ協奏曲（第1〜6番）をまとめたものです。歌う旋律と無理のない技巧をもち、チェロ学習者の協奏曲として使われています。",
-        "en": "The six cello concertos of the German cellist and composer Georg Goltermann. Melodious and idiomatic, they are widely used as student concertos for cellists."
+        "en": "The six cello concertos of the German cellist and composer Georg Goltermann. Melodious and idiomatic, they are widely used as student concertos for cellists.",
+        "de": "Die sechs Cellokonzerte des deutschen Cellisten und Komponisten Georg Goltermann. Melodiös und instrumentengerecht, werden sie häufig als Schülerkonzerte verwendet.",
+        "fr": "Les six concertos pour violoncelle du violoncelliste et compositeur allemand Georg Goltermann. Mélodieux et bien écrits pour l’instrument, ils sont très utilisés comme concertos d’élève.",
+        "es": "Los seis conciertos para violonchelo del violonchelista y compositor alemán Georg Goltermann. Melodiosos e idiomáticos, se usan ampliamente como conciertos de estudio.",
+        "it": "I sei concerti per violoncello del violoncellista e compositore tedesco Georg Goltermann. Melodiosi e ben scritti per lo strumento, sono molto usati come concerti per studenti."
+      },
+      "titles": {
+        "de": "Cellokonzerte Nr. 1–6",
+        "fr": "Concertos pour violoncelle n° 1 à 6",
+        "es": "Conciertos para violonchelo n.º 1–6",
+        "it": "Concerti per violoncello n. 1–6"
       }
     },
     "gounod-ave-maria": {
@@ -1806,7 +2776,17 @@
       ],
       "summary": {
         "ja": "バッハの《平均律クラヴィーア曲集》第1巻の前奏曲第1番を伴奏にして、グノーが旋律を付けた作品です。1853年に「瞑想曲」として作られ、のちに「アヴェ・マリア」の歌詞が付けられました。",
-        "en": "Gounod set his own melody over the first prelude of Bach’s Well-Tempered Clavier, Book 1. Composed in 1853 as a “Méditation”, it later received the words of the “Ave Maria”."
+        "en": "Gounod set his own melody over the first prelude of Bach’s Well-Tempered Clavier, Book 1. Composed in 1853 as a “Méditation”, it later received the words of the “Ave Maria”.",
+        "de": "Gounod setzte eine eigene Melodie über das erste Präludium aus Bachs Wohltemperiertem Klavier, Teil 1. 1853 als „Méditation“ komponiert, erhielt es später den Text des „Ave Maria“.",
+        "fr": "Gounod posa sa propre mélodie sur le premier prélude du Clavier bien tempéré de Bach, livre 1. Composée en 1853 sous le titre de « Méditation », elle reçut plus tard les paroles de l’« Ave Maria ».",
+        "es": "Gounod superpuso una melodía propia al primer preludio de El clave bien temperado de Bach, libro 1. Compuesta en 1853 como «Méditation», más tarde recibió el texto del «Ave María».",
+        "it": "Gounod sovrappose una propria melodia al primo preludio del Clavicembalo ben temperato di Bach, libro 1. Composta nel 1853 come «Méditation», ricevette in seguito il testo dell’«Ave Maria»."
+      },
+      "titles": {
+        "de": "Ave Maria (über Bachs Präludium)",
+        "fr": "Ave Maria (sur le prélude de Bach)",
+        "es": "Ave María (sobre el preludio de Bach)",
+        "it": "Ave Maria (sul preludio di Bach)"
       }
     },
     "halvorsen-passacaglia": {
@@ -1818,7 +2798,17 @@
       ],
       "summary": {
         "ja": "1894年、ノルウェーの作曲家ヨハン・ハルヴォルセンが、ヘンデルのクラヴィーア組曲第7番のパッサカイユをもとに作った二重奏曲です。主題に続いて技巧的な変奏が次々に現れます。",
-        "en": "A duo composed in 1894 by the Norwegian composer Johan Halvorsen, based on the passacaille from Handel’s Keyboard Suite No. 7. A string of virtuoso variations follows the theme."
+        "en": "A duo composed in 1894 by the Norwegian composer Johan Halvorsen, based on the passacaille from Handel’s Keyboard Suite No. 7. A string of virtuoso variations follows the theme.",
+        "de": "Ein Duo, 1894 vom norwegischen Komponisten Johan Halvorsen komponiert, nach der Passacaille aus Händels Cembalosuite Nr. 7. Auf das Thema folgt eine Reihe virtuoser Variationen.",
+        "fr": "Duo composé en 1894 par le compositeur norvégien Johan Halvorsen, d’après la passacaille de la Suite pour clavier n° 7 de Haendel. Une série de variations virtuoses suit le thème.",
+        "es": "Dúo compuesto en 1894 por el compositor noruego Johan Halvorsen, basado en la passacaglia de la Suite para teclado n.º 7 de Händel. Al tema le sigue una serie de variaciones virtuosas.",
+        "it": "Duo composto nel 1894 dal compositore norvegese Johan Halvorsen, basato sulla passacaglia della Suite per tastiera n. 7 di Händel. Al tema segue una serie di variazioni virtuosistiche."
+      },
+      "titles": {
+        "de": "Passacaglia (nach Händel)",
+        "fr": "Passacaille (d’après Haendel)",
+        "es": "Passacaglia (según Händel)",
+        "it": "Passacaglia (da Händel)"
       }
     },
     "kayser-36-etudes": {
@@ -1830,7 +2820,17 @@
       ],
       "summary": {
         "ja": "ドイツのヴァイオリン奏者・教育者ハインリヒ・エルンスト・カイザーによる練習曲集（全3巻）です。初中級の段階で、弓の使い方やポジション移動を身につける教材として広く使われています。",
-        "en": "Études in three books by the German violinist and teacher Heinrich Ernst Kayser. They are a standard tool at the early-intermediate stage for bowing and shifting."
+        "en": "Études in three books by the German violinist and teacher Heinrich Ernst Kayser. They are a standard tool at the early-intermediate stage for bowing and shifting.",
+        "de": "Etüden in drei Heften des deutschen Geigers und Pädagogen Heinrich Ernst Kayser. Sie sind ein Standardwerkzeug in der frühen Mittelstufe für Bogenführung und Lagenwechsel.",
+        "fr": "Études en trois cahiers du violoniste et pédagogue allemand Heinrich Ernst Kayser. Elles sont un outil de référence au début du niveau intermédiaire pour le travail de l’archet et des démanchés.",
+        "es": "Estudios en tres cuadernos del violinista y pedagogo alemán Heinrich Ernst Kayser. Son una herramienta habitual en el nivel intermedio inicial para el arco y los cambios de posición.",
+        "it": "Studi in tre fascicoli del violinista e didatta tedesco Heinrich Ernst Kayser. Sono uno strumento classico al livello intermedio iniziale per l’arcata e i cambi di posizione."
+      },
+      "titles": {
+        "de": "36 Etüden, Hefte 1–3",
+        "fr": "36 Études, cahiers 1 à 3",
+        "es": "36 estudios, cuadernos 1–3",
+        "it": "36 studi, fascicoli 1–3"
       }
     },
     "kreisler-march-of-the-toy-soldiers": {
@@ -1842,7 +2842,17 @@
       ],
       "summary": {
         "ja": "おもちゃの兵隊の行進を描いた、軽快な行進曲風の小品です。クライスラーによるヴァイオリンとピアノのための版を収録しています。",
-        "en": "A jaunty little march depicting toy soldiers on parade, in Fritz Kreisler’s version for violin and piano."
+        "en": "A jaunty little march depicting toy soldiers on parade, in Fritz Kreisler’s version for violin and piano.",
+        "de": "Ein munterer kleiner Marsch, der Zinnsoldaten bei der Parade schildert, in Fritz Kreislers Fassung für Violine und Klavier.",
+        "fr": "Petite marche enjouée dépeignant des soldats de plomb à la parade, dans la version pour violon et piano de Fritz Kreisler.",
+        "es": "Una alegre marcha breve que retrata soldaditos de plomo desfilando, en la versión para violín y piano de Fritz Kreisler.",
+        "it": "Una vivace marcetta che ritrae soldatini di piombo in parata, nella versione per violino e pianoforte di Fritz Kreisler."
+      },
+      "titles": {
+        "de": "Marche des petits soldats de plomb",
+        "fr": "Marche des petits soldats de plomb",
+        "es": "Marche des petits soldats de plomb",
+        "it": "Marche des petits soldats de plomb"
       }
     },
     "kreisler-marche-miniature-viennoise": {
@@ -1853,7 +2863,17 @@
       ],
       "summary": {
         "ja": "クライスラーによるヴァイオリンとピアノのための小品で、ウィーンらしい洒落た味わいの行進曲です。演奏会のアンコールにもよく取り上げられます。",
-        "en": "A short piece for violin and piano by Kreisler, a march with a stylish Viennese lilt. It is a popular encore."
+        "en": "A short piece for violin and piano by Kreisler, a march with a stylish Viennese lilt. It is a popular encore.",
+        "de": "Ein kurzes Stück für Violine und Klavier von Kreisler, ein Marsch mit elegantem Wiener Schwung. Es ist eine beliebte Zugabe.",
+        "fr": "Courte pièce pour violon et piano de Kreisler, une marche au balancement viennois élégant. C’est un bis apprécié.",
+        "es": "Pieza breve para violín y piano de Kreisler, una marcha con elegante aire vienés. Es una propina muy popular.",
+        "it": "Breve brano per violino e pianoforte di Kreisler, una marcia dall’elegante andamento viennese. È un bis molto amato."
+      },
+      "titles": {
+        "de": "Marche miniature viennoise",
+        "fr": "Marche miniature viennoise",
+        "es": "Marche miniature viennoise",
+        "it": "Marche miniature viennoise"
       }
     },
     "kreisler-praeludium-and-allegro": {
@@ -1864,7 +2884,17 @@
       ],
       "summary": {
         "ja": "18世紀の作曲家プニャーニの作品として発表されましたが、1935年にクライスラー自身の作曲であることが明かされました。重厚な前奏曲と、急速で技巧的なアレグロからなります。",
-        "en": "Presented as a work by the 18th-century composer Gaetano Pugnani until Kreisler revealed his authorship in 1935. A weighty prelude leads to a fast, brilliant Allegro."
+        "en": "Presented as a work by the 18th-century composer Gaetano Pugnani until Kreisler revealed his authorship in 1935. A weighty prelude leads to a fast, brilliant Allegro.",
+        "de": "Als Werk des Komponisten Gaetano Pugnani aus dem 18. Jahrhundert ausgegeben, bis Kreisler 1935 seine Urheberschaft enthüllte. Ein gewichtiges Präludium führt zu einem schnellen, brillanten Allegro.",
+        "fr": "Présentée comme une œuvre du compositeur du XVIIIe siècle Gaetano Pugnani, jusqu’à ce que Kreisler en révèle la paternité en 1935. Un prélude solennel mène à un Allegro rapide et brillant.",
+        "es": "Presentada como obra del compositor del siglo XVIII Gaetano Pugnani hasta que Kreisler reveló su autoría en 1935. Un solemne preludio conduce a un Allegro rápido y brillante.",
+        "it": "Presentato come opera del compositore settecentesco Gaetano Pugnani finché Kreisler ne rivelò la paternità nel 1935. Un solenne preludio conduce a un Allegro rapido e brillante."
+      },
+      "titles": {
+        "de": "Praeludium und Allegro (im Stile von Pugnani)",
+        "fr": "Praeludium et Allegro (dans le style de Pugnani)",
+        "es": "Praeludium y Allegro (al estilo de Pugnani)",
+        "it": "Praeludium e Allegro (nello stile di Pugnani)"
       }
     },
     "kreisler-pulcinella": {
@@ -1875,7 +2905,17 @@
       ],
       "summary": {
         "ja": "クライスラーによるヴァイオリンとピアノのための小品です。イタリアの即興喜劇の道化役プルチネッラにちなむ、軽やかでユーモラスな作品です。",
-        "en": "A short piece for violin and piano by Kreisler, named after Pulcinella, the clown of Italian commedia dell’arte. Light and humorous in character."
+        "en": "A short piece for violin and piano by Kreisler, named after Pulcinella, the clown of Italian commedia dell’arte. Light and humorous in character.",
+        "de": "Ein kurzes Stück für Violine und Klavier von Kreisler, benannt nach Pulcinella, dem Spaßmacher der italienischen Commedia dell’arte. Von leichtem, humorvollem Charakter.",
+        "fr": "Courte pièce pour violon et piano de Kreisler, qui doit son nom à Pulcinella, le bouffon de la commedia dell’arte italienne. D’un caractère léger et plein d’humour.",
+        "es": "Pieza breve para violín y piano de Kreisler, que debe su nombre a Pulcinella, el bufón de la commedia dell’arte italiana. De carácter ligero y humorístico.",
+        "it": "Breve brano per violino e pianoforte di Kreisler, intitolato a Pulcinella, la maschera della commedia dell’arte italiana. Di carattere leggero e umoristico."
+      },
+      "titles": {
+        "de": "Pulcinella",
+        "fr": "Pulcinella",
+        "es": "Pulcinella",
+        "it": "Pulcinella"
       }
     },
     "kreisler-romance": {
