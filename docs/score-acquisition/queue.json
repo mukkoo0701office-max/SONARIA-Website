@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "string_quartet",
-    "last_work": "Op.3 / Hob.III:13–18 attribution audit (excluded from verified Haydn)",
-    "note": "Next: Haydn genuine Op.9 quartet collection; first check queue and main for edition duplicates. Op.3 held due attribution to Roman Hoffstetter."
+    "last_work": "Op.9 Nos.1–6 inventory re-audit",
+    "note": "Next Op.17, but first verify main's existing Op.9 collection edition imslp-106760 against queue and live site. No new candidate added."
   },
   "items": [
     {
@@ -1217,15 +1217,76 @@
         "edition": "not_selected",
         "parts": "listed_unverified",
         "pdf_integrity": "unchecked",
-        "duplication": "unverified_existing_site_inventory_not_located",
+        "duplication": "main_contains_haydn_string_quartets_op9_work_and_imslp_106760_edition; edition_pdf_identity_unverified",
         "rights": "unverified_japan_republication",
         "publish": "not_approved"
       },
       "rights_status": "unknown",
-      "notes": "IMSLP metadata only. Op.3 Nos.1-6 attributed on IMSLP to Roman Hoffstetter, not Joseph Haydn; these are intentionally skipped from Haydn queue. Claude must compare editions and confirm the score/part PDFs.",
-      "updated_at": "2026-11-27",
+      "notes": "IMSLP metadata only. Op.3 Nos.1-6 attributed on IMSLP to Roman Hoffstetter, not Joseph Haydn; these are intentionally skipped from Haydn queue. Claude must compare editions and confirm the score/part PDFs. Main catalog already lists haydn-string-quartets-op9, edition imslp-106760 with 4 assets; NOT a new work. Check whether queue file IDs match existing assets before acquisition. No PDF or rights approval.",
+      "updated_at": "2026-11-29",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "106803",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+        "publisher": "T. Trautwein",
+        "editor": "unknown",
+        "publication_date": "circa 1840–1845",
+        "scope": "Op.9 No.1; PDF not inspected",
+        "evidence": "IMSLP Scores listing, checked 2026-11-29T00:15:00+09:00; #887812 is collection score; individual No.2 score not identified"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "106760",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "106761",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "106762",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "106763",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "different_edition",
+        "evidence": "Trautwein c.1840–45 or Heckel c.1855 score vs Litolff c.1870 parts; PDF contents not compared"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "checked_at": "2026-11-29T00:15:00+09:00",
+          "verified": "IMSLP page metadata only; score IDs and four Litolff part IDs; no PDF download or inspection"
+        }
+      ]
     },
     {
       "id": "haydn-op9-no2-imslp-research",
@@ -1262,15 +1323,78 @@
         "edition": "not_selected",
         "parts": "listed_unverified",
         "pdf_integrity": "unchecked",
-        "duplication": "unverified_existing_site_inventory_not_located",
+        "duplication": "main_contains_haydn_string_quartets_op9_work_and_imslp_106760_edition; edition_pdf_identity_unverified",
         "rights": "unverified_japan_republication",
         "publish": "not_approved"
       },
       "rights_status": "unknown",
-      "notes": "IMSLP metadata only. Op.3 Nos.1-6 attributed on IMSLP to Roman Hoffstetter, not Joseph Haydn; these are intentionally skipped from Haydn queue. Claude must compare editions and confirm the score/part PDFs.",
-      "updated_at": "2026-11-27",
+      "notes": "IMSLP metadata only. Op.3 Nos.1-6 attributed on IMSLP to Roman Hoffstetter, not Joseph Haydn; these are intentionally skipped from Haydn queue. Claude must compare editions and confirm the score/part PDFs. Main catalog already lists haydn-string-quartets-op9, edition imslp-106760 with 4 assets; NOT a new work. Check whether queue file IDs match existing assets before acquisition. No PDF or rights approval.",
+      "updated_at": "2026-11-29",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "unverified",
+        "imslp_file_id": "887812",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+        "publisher": "K. Ferd. Heckel",
+        "editor": "unknown",
+        "publication_date": "circa 1855",
+        "scope": "Op.9 collection; No.2 section not inspected",
+        "evidence": "IMSLP Scores listing, checked 2026-11-29T00:15:00+09:00; #887812 is collection score; individual No.2 score not identified"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "106760",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "106761",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "106762",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "106763",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "different_edition",
+        "evidence": "Trautwein c.1840–45 or Heckel c.1855 score vs Litolff c.1870 parts; PDF contents not compared"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "individual score for Op.9 No.2; collection #887812 section unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "checked_at": "2026-11-29T00:15:00+09:00",
+          "verified": "IMSLP page metadata only; score IDs and four Litolff part IDs; no PDF download or inspection"
+        }
+      ]
     },
     {
       "id": "haydn-op9-no3-imslp-research",
@@ -1307,15 +1431,76 @@
         "edition": "not_selected",
         "parts": "listed_unverified",
         "pdf_integrity": "unchecked",
-        "duplication": "unverified_existing_site_inventory_not_located",
+        "duplication": "main_contains_haydn_string_quartets_op9_work_and_imslp_106760_edition; edition_pdf_identity_unverified",
         "rights": "unverified_japan_republication",
         "publish": "not_approved"
       },
       "rights_status": "unknown",
-      "notes": "IMSLP metadata only. Op.3 Nos.1-6 attributed on IMSLP to Roman Hoffstetter, not Joseph Haydn; these are intentionally skipped from Haydn queue. Claude must compare editions and confirm the score/part PDFs.",
-      "updated_at": "2026-11-27",
+      "notes": "IMSLP metadata only. Op.3 Nos.1-6 attributed on IMSLP to Roman Hoffstetter, not Joseph Haydn; these are intentionally skipped from Haydn queue. Claude must compare editions and confirm the score/part PDFs. Main catalog already lists haydn-string-quartets-op9, edition imslp-106760 with 4 assets; NOT a new work. Check whether queue file IDs match existing assets before acquisition. No PDF or rights approval.",
+      "updated_at": "2026-11-29",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "106804",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+        "publisher": "T. Trautwein",
+        "editor": "unknown",
+        "publication_date": "circa 1840–1845",
+        "scope": "Op.9 No.3; PDF not inspected",
+        "evidence": "IMSLP Scores listing, checked 2026-11-29T00:15:00+09:00; #887812 is collection score; individual No.2 score not identified"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "106760",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "106761",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "106762",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "106763",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "different_edition",
+        "evidence": "Trautwein c.1840–45 or Heckel c.1855 score vs Litolff c.1870 parts; PDF contents not compared"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "checked_at": "2026-11-29T00:15:00+09:00",
+          "verified": "IMSLP page metadata only; score IDs and four Litolff part IDs; no PDF download or inspection"
+        }
+      ]
     },
     {
       "id": "haydn-op9-no4-trautwein-litolff",
@@ -1354,15 +1539,76 @@
         "edition": "source_metadata_multiple_editions_checked_pdf_uninspected",
         "parts": "Litolff_and_Henle_collections_listed_unverified",
         "pdf_integrity": "unchecked",
-        "duplication": "unverified_existing_site_inventory_not_located",
+        "duplication": "main_contains_haydn_string_quartets_op9_work_and_imslp_106760_edition; edition_pdf_identity_unverified",
         "rights": "unknown_japan_regional_reprint_and_urtext",
         "publish": "not_approved"
       },
       "rights_status": "unknown",
-      "notes": "IMSLP lists 1969 Henle urtext EU-designated PDFs; never treat EU listing as permission in Japan. Compare historic Trautwein/Litolff for safe, readable score+parts; do not duplicate collection file assets across works. Publisher/parts data from collection page, not PDF page checks.",
-      "updated_at": "2026-11-27",
+      "notes": "IMSLP lists 1969 Henle urtext EU-designated PDFs; never treat EU listing as permission in Japan. Compare historic Trautwein/Litolff for safe, readable score+parts; do not duplicate collection file assets across works. Publisher/parts data from collection page, not PDF page checks. Main catalog already lists haydn-string-quartets-op9, edition imslp-106760 with 4 assets; NOT a new work. Check whether queue file IDs match existing assets before acquisition. No PDF or rights approval.",
+      "updated_at": "2026-11-29",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "106805",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+        "publisher": "T. Trautwein",
+        "editor": "unknown",
+        "publication_date": "circa 1840–1845",
+        "scope": "Op.9 No.4; PDF not inspected",
+        "evidence": "IMSLP Scores listing, checked 2026-11-29T00:15:00+09:00; #887812 is collection score; individual No.2 score not identified"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "106760",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "106761",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "106762",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "106763",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "different_edition",
+        "evidence": "Trautwein c.1840–45 or Heckel c.1855 score vs Litolff c.1870 parts; PDF contents not compared"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "checked_at": "2026-11-29T00:15:00+09:00",
+          "verified": "IMSLP page metadata only; score IDs and four Litolff part IDs; no PDF download or inspection"
+        }
+      ]
     },
     {
       "id": "haydn-op9-no5-trautwein-litolff",
@@ -1401,15 +1647,76 @@
         "edition": "source_metadata_multiple_editions_checked_pdf_uninspected",
         "parts": "Litolff_and_Henle_collections_listed_unverified",
         "pdf_integrity": "unchecked",
-        "duplication": "unverified_existing_site_inventory_not_located",
+        "duplication": "main_contains_haydn_string_quartets_op9_work_and_imslp_106760_edition; edition_pdf_identity_unverified",
         "rights": "unknown_japan_regional_reprint_and_urtext",
         "publish": "not_approved"
       },
       "rights_status": "unknown",
-      "notes": "IMSLP lists 1969 Henle urtext EU-designated PDFs; never treat EU listing as permission in Japan. Compare historic Trautwein/Litolff for safe, readable score+parts; do not duplicate collection file assets across works. Publisher/parts data from collection page, not PDF page checks.",
-      "updated_at": "2026-11-27",
+      "notes": "IMSLP lists 1969 Henle urtext EU-designated PDFs; never treat EU listing as permission in Japan. Compare historic Trautwein/Litolff for safe, readable score+parts; do not duplicate collection file assets across works. Publisher/parts data from collection page, not PDF page checks. Main catalog already lists haydn-string-quartets-op9, edition imslp-106760 with 4 assets; NOT a new work. Check whether queue file IDs match existing assets before acquisition. No PDF or rights approval.",
+      "updated_at": "2026-11-29",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "106806",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+        "publisher": "T. Trautwein",
+        "editor": "unknown",
+        "publication_date": "circa 1840–1845",
+        "scope": "Op.9 No.5; PDF not inspected",
+        "evidence": "IMSLP Scores listing, checked 2026-11-29T00:15:00+09:00; #887812 is collection score; individual No.2 score not identified"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "106760",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "106761",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "106762",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "106763",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "different_edition",
+        "evidence": "Trautwein c.1840–45 or Heckel c.1855 score vs Litolff c.1870 parts; PDF contents not compared"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "checked_at": "2026-11-29T00:15:00+09:00",
+          "verified": "IMSLP page metadata only; score IDs and four Litolff part IDs; no PDF download or inspection"
+        }
+      ]
     },
     {
       "id": "haydn-op9-no6-trautwein-litolff",
@@ -1448,15 +1755,76 @@
         "edition": "source_metadata_multiple_editions_checked_pdf_uninspected",
         "parts": "Litolff_and_Henle_collections_listed_unverified",
         "pdf_integrity": "unchecked",
-        "duplication": "unverified_existing_site_inventory_not_located",
+        "duplication": "main_contains_haydn_string_quartets_op9_work_and_imslp_106760_edition; edition_pdf_identity_unverified",
         "rights": "unknown_japan_regional_reprint_and_urtext",
         "publish": "not_approved"
       },
       "rights_status": "unknown",
-      "notes": "IMSLP lists 1969 Henle urtext EU-designated PDFs; never treat EU listing as permission in Japan. Compare historic Trautwein/Litolff for safe, readable score+parts; do not duplicate collection file assets across works. Publisher/parts data from collection page, not PDF page checks.",
-      "updated_at": "2026-11-27",
+      "notes": "IMSLP lists 1969 Henle urtext EU-designated PDFs; never treat EU listing as permission in Japan. Compare historic Trautwein/Litolff for safe, readable score+parts; do not duplicate collection file assets across works. Publisher/parts data from collection page, not PDF page checks. Main catalog already lists haydn-string-quartets-op9, edition imslp-106760 with 4 assets; NOT a new work. Check whether queue file IDs match existing assets before acquisition. No PDF or rights approval.",
+      "updated_at": "2026-11-29",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "106807",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+        "publisher": "T. Trautwein",
+        "editor": "unknown",
+        "publication_date": "circa 1840–1845",
+        "scope": "Op.9 No.6; PDF not inspected",
+        "evidence": "IMSLP Scores listing, checked 2026-11-29T00:15:00+09:00; #887812 is collection score; individual No.2 score not identified"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "106760",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "106761",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "106762",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "106763",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "publisher": "Collection Litolff",
+          "editor": "unknown",
+          "scope": "Op.9 complete collection; individual work/page boundaries not inspected",
+          "evidence": "IMSLP Parts listing 2026-11-29T00:15:00+09:00"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "different_edition",
+        "evidence": "Trautwein c.1840–45 or Heckel c.1855 score vs Litolff c.1870 parts; PDF contents not compared"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.9_%28Haydn%2C_Joseph%29",
+          "checked_at": "2026-11-29T00:15:00+09:00",
+          "verified": "IMSLP page metadata only; score IDs and four Litolff part IDs; no PDF download or inspection"
+        }
+      ]
     },
     {
       "id": "haydn-op17-no1-altmann-litolff",
@@ -14944,7 +15312,7 @@
       "notes": "Candidate only. Monochrome cello part #48981 is from later reissue and cannot be certified as same issue as first-edition score #23143. No PDFs fetched, quality, movements, engraving consistency, Japanese rights and public deployment unverified."
     }
   ],
-  "last_updated": "2026-11-28",
+  "last_updated": "2026-11-29",
   "authenticity_audit": {
     "date": "2026-11-27",
     "scope": "early Haydn quartets Op.0, Op.1 and Op.2 plus historically misattributed Op.3",
@@ -15142,15 +15510,17 @@
     "notes": "No live site verification. Main catalog source can lag deployment. Rights pending; no publication action."
   },
   "last_site_reconciliation": {
-    "checked_at": "2026-11-28T23:19:48+09:00",
+    "checked_at": "2026-11-29T00:15:00+09:00",
     "main_catalog_path": "frontend/src/data/scores/catalog.json",
     "main_catalog_sha": "4cd09cd46263fbaaf53282aadfb22151c0821d2b",
     "main_catalog_work_count": 203,
-    "main_matching_op3_works": 0,
+    "main_matching_op9_works": 1,
+    "main_matching_work_id": "haydn-string-quartets-op9",
+    "main_matching_edition_id": "imslp-106760",
     "work_branch": "coordination/gpt-claude-score-queue",
     "queue_items": 196,
     "live_site_status": "unverified_canonical_production_url_not_established",
-    "site_configuration": "frontend/next.config.ts NEXT_PUBLIC_SITE_URL defaults empty; GitHub Pages preview not production",
-    "note": "Main catalog compared for Op.3/Hob.III:13–18/Hoffstetter. Live site and PDF links not independently verified. No rights or publication changes."
+    "site_configuration": "frontend/next.config.ts NEXT_PUBLIC_SITE_URL defaults empty; GitHub Pages is preview, not production",
+    "note": "Main already has Op.9 collection and four assets; exact PDF identity, part scope, and published site remain unverified. No new candidates, rights, or publication changes."
   }
 }
