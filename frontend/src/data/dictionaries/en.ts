@@ -1005,7 +1005,7 @@ export const en: Dictionary = {
     bowing: {
       title: "Add fingerings and bowings to this score?",
       lead: "We mark up your violin part with fingerings and bowings that balance playability and musicality.",
-      priceLines: { fingering: (p) => `Fingerings only: ${p} per page`, bowing: (p) => `Bowings only: ${p} per page`, both: (p) => `Fingerings and bowings: ${p} per page` },
+      priceLines: { fingering: "Fingerings only: {price} per page", bowing: "Bowings only: {price} per page", both: "Fingerings and bowings: {price} per page" },
       priceNote: { jp: "Prices for Japan (JPY, tax included).", intl: "Prices for requests from outside Japan (USD, tax included).", unknown: "We could not detect your region, so prices for Japan (JPY) are shown provisionally." },
       cta: "Learn more about the service",
       note: "Full payment is required before work begins (we start once payment is confirmed).",

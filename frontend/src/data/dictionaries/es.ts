@@ -1000,7 +1000,7 @@ export const es: Dictionary = {
     bowing: {
       title: "¿Añadir digitaciones y arcos a esta partitura?",
       lead: "Anotamos tu parte de violín con digitaciones y arcos que equilibran facilidad de ejecución y musicalidad.",
-      priceLines: { fingering: (p) => `Solo digitaciones: ${p} por página`, bowing: (p) => `Solo arcos: ${p} por página`, both: (p) => `Digitaciones y arcos: ${p} por página` },
+      priceLines: { fingering: "Solo digitaciones: {price} por página", bowing: "Solo arcos: {price} por página", both: "Digitaciones y arcos: {price} por página" },
       priceNote: { jp: "Precios para Japón (JPY, impuestos incluidos).", intl: "Precios para solicitudes desde fuera de Japón (USD, impuestos incluidos).", unknown: "No hemos podido determinar tu región, así que se muestran provisionalmente los precios para Japón (JPY)." },
       cta: "Más información sobre el servicio",
       note: "Se requiere el pago completo antes de empezar el trabajo (empezamos en cuanto confirmamos el pago).",

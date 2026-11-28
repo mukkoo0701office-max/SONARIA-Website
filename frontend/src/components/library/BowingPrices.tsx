@@ -23,7 +23,7 @@ export default function BowingPrices({ t }: { t: Dictionary["library"]["bowing"]
       <ul className="mt-2 grid gap-0.5 text-[13px]">
         {items.map((k) => {
           const amount = unitPrice(prices, "bowing", k, r) ?? unitPrice(currentPrices(SEED_PRICES, "9999-12-31"), "bowing", k, r);
-          return amount == null ? null : <li key={k}>・{t.priceLines[k](formatMoney(amount, currencyOf(r)))}</li>;
+          return amount == null ? null : <li key={k}>・{t.priceLines[k].replace("{price}", formatMoney(amount, currencyOf(r)))}</li>;
         })}
       </ul>
       {region !== undefined && <p className="mt-1 text-xs text-muted">{t.priceNote[region ?? "unknown"]}</p>}

@@ -1000,7 +1000,7 @@ export const it: Dictionary = {
     bowing: {
       title: "Aggiungere diteggiature e arcate a questo spartito?",
       lead: "Annotiamo la tua parte di violino con diteggiature e arcate che uniscono comodità esecutiva e musicalità.",
-      priceLines: { fingering: (p) => `Solo diteggiature: ${p} a pagina`, bowing: (p) => `Solo arcate: ${p} a pagina`, both: (p) => `Diteggiature e arcate: ${p} a pagina` },
+      priceLines: { fingering: "Solo diteggiature: {price} a pagina", bowing: "Solo arcate: {price} a pagina", both: "Diteggiature e arcate: {price} a pagina" },
       priceNote: { jp: "Prezzi per il Giappone (JPY, tasse incluse).", intl: "Prezzi per richieste da fuori del Giappone (USD, tasse incluse).", unknown: "Non è stato possibile determinare la tua regione, quindi sono mostrati provvisoriamente i prezzi per il Giappone (JPY)." },
       cta: "Scopri di più sul servizio",
       note: "È richiesto il pagamento completo prima dell’inizio del lavoro (iniziamo non appena confermato il pagamento).",

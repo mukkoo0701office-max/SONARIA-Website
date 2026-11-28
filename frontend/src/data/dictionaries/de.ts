@@ -1000,7 +1000,7 @@ export const de: Dictionary = {
     bowing: {
       title: "Fingersätze und Bogenstriche für diese Noten?",
       lead: "Wir richten Ihre Violinstimme mit Fingersätzen und Bogenstrichen ein, die Spielbarkeit und Musikalität verbinden.",
-      priceLines: { fingering: (p) => `Nur Fingersätze: ${p} pro Seite`, bowing: (p) => `Nur Bogenstriche: ${p} pro Seite`, both: (p) => `Fingersätze und Bogenstriche: ${p} pro Seite` },
+      priceLines: { fingering: "Nur Fingersätze: {price} pro Seite", bowing: "Nur Bogenstriche: {price} pro Seite", both: "Fingersätze und Bogenstriche: {price} pro Seite" },
       priceNote: { jp: "Preise für Japan (JPY, inkl. Steuern).", intl: "Preise für Anfragen von außerhalb Japans (USD, inkl. Steuern).", unknown: "Ihre Region konnte nicht ermittelt werden, daher werden vorläufig die Preise für Japan (JPY) angezeigt." },
       cta: "Mehr über den Service",
       note: "Der volle Betrag ist vor Arbeitsbeginn zu zahlen (wir beginnen, sobald die Zahlung bestätigt ist).",
