@@ -600,8 +600,9 @@ export type Dictionary = {
     bowing: {
       title: string;
       lead: string;
-      // 料金は料金マスタから（地域に応じて円／ドル）。文言だけを辞書に持つ
-      priceLines: Record<"fingering" | "bowing" | "both", (price: string) => string>;
+      // 料金は料金マスタから（地域に応じて円／ドル）。文言だけを辞書に持つ。{price} に金額が入る
+      // 注: クライアント部品に渡すため関数にしない（サーバー部品から関数は渡せない）
+      priceLines: Record<"fingering" | "bowing" | "both", string>;
       priceNote: Record<"jp" | "intl" | "unknown", string>;
       cta: string;
       note: string;

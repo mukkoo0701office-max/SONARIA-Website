@@ -312,13 +312,15 @@ const reachable = (u) => { const x = new URL(u); return `${API_URL}${x.pathname}
 const tinyPdf = new Blob(["%PDF-1.4\n1 0 obj<<>>endobj\ntrailer<<>>\n%%EOF\n"], { type: "application/pdf" });
 async function uploadOne(ip) {
   const r = await askUpload({ name: "score.pdf", size: tinyPdf.size, type: "application/pdf" }, { ip });
-  assert.equal(r.status, 200, await r.clone().text());
-  const { path, uploadUrl } = await r.json();
+  const text = await r.text();
+  assert.equal(r.status, 200, text);
+  const { path, uploadUrl } = JSON.parse(text);
   const form = new FormData();
   form.append("cacheControl", "3600");
   form.append("", tinyPdf, "score.pdf");
   const put = await fetch(reachable(uploadUrl), { method: "PUT", headers: { "x-upsert": "false", apikey: ANON_KEY }, body: form });
-  assert.equal(put.status, 200, await put.text());
+  const putText = await put.text();
+  assert.equal(put.status, 200, `${reachable(uploadUrl)} ${putText}`);
   return path;
 }
 let uploadedPath = null;
@@ -335,10 +337,11 @@ await check("PDF を送り、そのパスを付けて申込できる（保存先
   const b = bowing("jp");
   b.bowing = { ...b.bowing, files: [{ path: uploadedPath, name: "score.pdf", size: tinyPdf.size, extra: "x" }] };
   const r = await post(b, { ip: "203.0.113.82" });
-  assert.equal(r.status, 200, await r.clone().text());
-  const { receipt } = await r.json();
-  const files = JSON.parse(psql(`select (payload -> 'bowing' -> 'files')::text from public.submissions where receipt_no = '${receipt}'`));
-  assert.deepEqual(files, [{ path: uploadedPath, name: "score.pdf", size: tinyPdf.size }]);
+  const text = await r.text();
+  assert.equal(r.status, 200, text);
+  const { receipt } = JSON.parse(text);
+  const stored = psql(`select coalesce((payload -> 'bowing' -> 'files')::text, 'null') from public.submissions where receipt_no = '${receipt}'`);
+  assert.deepEqual(JSON.parse(stored || "null"), [{ path: uploadedPath, name: "score.pdf", size: tinyPdf.size }], `receipt=${receipt} stored=${stored}`);
 });
 
 await check("アップロードしていないパス・形の違うパスは拒否", async () => {
@@ -369,7 +372,8 @@ await check("アップロード URL の発行回数を制限する", async () =>
 if (SERVICE_ROLE_KEY) {
   const admin = asUser(await signIn("admin@example.com", "admin-pass-123456"));
   await check("管理人は添付ファイルを短時間の署名付き URL で開ける", async () => {
-    const r = await admin(`../storage/v1/object/sign/submission-files/${uploadedPath}`, { method: "POST", body: JSON.stringify({ expiresIn: 60 }) });
+    const token = await signIn("admin@example.com", "admin-pass-123456");
+    const r = await fetch(`${API_URL}/storage/v1/object/sign/submission-files/${uploadedPath}`, { method: "POST", headers: { apikey: ANON_KEY, Authorization: `Bearer ${token}`, "Content-Type": "application/json" }, body: JSON.stringify({ expiresIn: 60 }) });
     assert.equal(r.status, 200, await r.clone().text());
     const { signedURL } = await r.json();
     const f = await fetch(`${API_URL}/storage/v1${signedURL}`);

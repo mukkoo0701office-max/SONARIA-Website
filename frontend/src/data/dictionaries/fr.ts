@@ -975,7 +975,7 @@ export const fr: Dictionary = {
     bowing: {
       title: "Ajouter doigtés et coups d’archet à cette partition ?",
       lead: "Nous annotons votre partie de violon de doigtés et de coups d’archet alliant jouabilité et musicalité.",
-      priceLines: { fingering: (p) => `Doigtés seuls : ${p} par page`, bowing: (p) => `Coups d’archet seuls : ${p} par page`, both: (p) => `Doigtés et coups d’archet : ${p} par page` },
+      priceLines: { fingering: "Doigtés seuls : {price} par page", bowing: "Coups d’archet seuls : {price} par page", both: "Doigtés et coups d’archet : {price} par page" },
       priceNote: { jp: "Tarifs pour le Japon (JPY, taxes comprises).", intl: "Tarifs pour les demandes hors du Japon (USD, taxes comprises).", unknown: "Nous n’avons pas pu déterminer votre région : les tarifs pour le Japon (JPY) sont affichés à titre provisoire." },
       cta: "En savoir plus sur le service",
       note: "Le paiement intégral est demandé avant le début du travail (nous commençons dès réception du paiement).",
