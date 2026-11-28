@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { bucket, changeRatio, lastDays, lastMonths, revenueByPeriod, summarizeRevenue, trafficByDay } from "../src/admin/aggregate.ts";
+import { bucket, changeRatio, todoCounts, lastDays, lastMonths, revenueByPeriod, summarizeRevenue, trafficByDay } from "../src/admin/aggregate.ts";
 
 const entry = (o) => ({ id: "x", category: "lesson", amount: 0, currency: "JPY", occurredOn: "2026-11-01", fee: 0, expense: 0, refund: 0, paymentStatus: "paid", source: "manual", certainty: "confirmed", ...o });
 
@@ -39,4 +39,17 @@ test("日別のアクセスを週・月にまとめる", () => {
   assert.equal(pv[0], 5);
   assert.deepEqual(bucket(days, pv, "week").values, [5, 7]);
   assert.deepEqual(bucket(days, pv, "month").values, [12]);
+});
+
+test("今日やること: 新規・金額の確定待ち・入金待ち（カード／振込）・制作中を数える", () => {
+  const c = todoCounts([
+    { kind: "bowing", caseStatus: "new" },
+    { kind: "recording", caseStatus: "scheduling", billing: { confirmed: { amount: 9000, currency: "JPY", at: "" } } },
+    { kind: "bowing", caseStatus: "awaiting_payment", billing: { paymentMethod: "bank_transfer", confirmed: { amount: 1000, currency: "JPY", at: "" } } },
+    { kind: "performance", caseStatus: "awaiting_payment", billing: { paymentMethod: "card", confirmed: { amount: 100, currency: "USD", at: "" } } },
+    { kind: "recording", caseStatus: "in_progress", billing: { confirmed: { amount: 9000, currency: "JPY", at: "" } } },
+    { kind: "lesson", caseStatus: "new" },
+    { kind: "bowing", caseStatus: "cancelled" },
+  ]);
+  assert.deepEqual(c, { new: 2, scheduling: 1, priceToConfirm: 1, awaitingCard: 1, awaitingBank: 1, inProgress: 1 });
 });

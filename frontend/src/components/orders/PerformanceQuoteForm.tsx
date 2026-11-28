@@ -107,7 +107,9 @@ export default function PerformanceQuoteForm({ locale }: { locale: Locale }) {
   function payload() {
     return {
       kind: "performance_quote",
-      locale,
+      // 受付関数・DB は返信言語として ja / en だけを受け付ける。欧州 4 言語のページからは en で送り、表示していた言語は pageLocale に残す
+      locale: jaOrEn(locale),
+      pageLocale: locale,
       schedule: { mode, dates: mode === "undecided" ? [] : filledDates, period: mode === "undecided" ? period.trim() : "" },
       budget,
       ensemble,

@@ -15,6 +15,7 @@ export const adminRoutes = {
   calendar: "/admin/calendar/",
   teachers: "/admin/teachers/",
   revenue: "/admin/revenue/",
+  prices: "/admin/prices/",
   ads: "/admin/ads/",
   analytics: "/admin/analytics/",
   pdf: "/admin/pdf/",

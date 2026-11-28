@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   bowingPagesMax,
-  bowingUnitPrice,
   deliveryOptions,
   lessonCandidateDays,
   lessonCandidatesMax,
@@ -15,7 +14,6 @@ import {
   recordingInstruments,
   recordingTracksMax,
   services,
-  taxNotePending,
   type BowingType,
   type DeliveryId,
   type LessonPlanId,
@@ -24,17 +22,22 @@ import {
 } from "@/data/orders/config";
 import { getDictionary } from "@/data/dictionaries";
 import { pagePaths } from "@/data/site";
-import { localizedPath, type Locale } from "@/lib/i18n";
+import { jaOrEn, localizedPath, type Locale } from "@/lib/i18n";
 import { clampInt, quoteBowing, quoteRecording } from "@/lib/orders/pricing";
+import { currencyOf, currentPrices, formatMoney, SEED_PRICES, unitPrice, type PriceRow, type Region } from "@/lib/orders/priceEngine";
+import { loadPriceRows } from "@/lib/orders/priceTable";
+import { guessRegion, todayTokyo } from "@/lib/orders/region";
 import { candidateDays, endsAfter, isPast, validCandidates, type Candidate, type CandidateDay } from "@/lib/orders/schedule";
 import { submitOrder, withReceipt, type SubmitResult } from "@/lib/orders/submit";
 
 type Props = { locale: Locale };
 type Step = "edit" | "confirm" | "done";
-type Errors = Partial<Record<"trial" | "plan" | "candidates" | "tracks" | "name" | "email" | "consent", string>>;
+type Errors = Partial<Record<"trial" | "plan" | "candidates" | "tracks" | "billing" | "name" | "email" | "consent", string>>;
+type PaymentMethod = "card" | "bank_transfer";
+const bowingTypes: readonly BowingType[] = ["bowing", "fingering", "both"];
+const seedPrices = currentPrices(SEED_PRICES, "9999-12-31");
 type Line = { label: string; amount: number };
 
-const yen = (n: number) => `¥${n.toLocaleString("en-US")}`;
 const factorText = (tenths: number) => (tenths / 10).toFixed(1);
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -82,6 +85,20 @@ export default function ServiceOrderForm({ locale }: Props) {
   const [remarks, setRemarks] = useState("");
   const [consent, setConsent] = useState(false);
 
+  // 料金と通貨（docs/payments/PAYMENTS_DESIGN.md）。通貨は請求先の地域で決まり、表示言語とは関係しない
+  const [priceRows, setPriceRows] = useState<readonly PriceRow[]>(SEED_PRICES);
+  const [billingRegion, setBillingRegion] = useState<Region | null>(null);
+  const [regionGuessed, setRegionGuessed] = useState(false);
+  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("card");
+  useEffect(() => {
+    loadPriceRows().then(setPriceRows);
+    const g = guessRegion();
+    if (g) {
+      setBillingRegion((r) => r ?? g);
+      setRegionGuessed(true);
+    }
+  }, []);
+
   const headingRef = useRef<HTMLHeadingElement>(null);
   const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({});
 
@@ -109,28 +126,39 @@ export default function ServiceOrderForm({ locale }: Props) {
   const planInfo = lessonPlans.find((p) => p.id === plan) ?? null;
   const deliveryOf = (id: DeliveryId) => deliveryOptions.find((o) => o.id === id) ?? deliveryOptions[deliveryOptions.length - 1];
 
-  const bowingQuote = quoteBowing(bowingType, pages, bowingUnitPrice, deliveryOf(delivery.bowing));
-  const recordingQuote = quoteRecording(recordingInstruments, tracks, deliveryOf(delivery.recording));
+  // 表示用の単価。料金マスタ（取得できなければ初期値）から、請求先の地域に応じて引く。レッスンは東京での対面のため常に円
+  const region: Region = billingRegion ?? "jp";
+  const prices = currentPrices(priceRows, todayTokyo(now ?? new Date()));
+  const price = (svc: string, item: string, reg: Region) => unitPrice(prices, svc, item, reg) ?? unitPrice(seedPrices, svc, item, reg) ?? 0;
+  const currency = service === "lesson" ? "JPY" : currencyOf(region);
+  const fmt = (n: number) => formatMoney(n, currency);
+  const bowingPrices = Object.fromEntries(bowingTypes.map((k) => [k, price("bowing", k, region)])) as Record<BowingType, number>;
+  const recordingItems = recordingInstruments.map((i) => ({ ...i, unitPrice: price("recording", i.id, region) }));
+  const lessonPrice = (id: LessonPlanId) => price("lesson", id, "jp");
+
+  const bowingQuote = quoteBowing(bowingType, pages, bowingPrices, deliveryOf(delivery.bowing));
+  const recordingQuote = quoteRecording(recordingItems, tracks, deliveryOf(delivery.recording));
   const valid = now ? validCandidates(candidates, days.map((d) => d.date), lessonStartTimes, now, lessonTimeZone) : [];
 
   // 明細（小計 → 基本料金 → 納期係数 → 合計）
   const summary = useMemo((): { lines: Line[]; base: number | null; factor: number | null; total: number | null } => {
     if (service === "lesson") {
       if (!planInfo) return { lines: [], base: null, factor: null, total: null };
-      return { lines: [{ label: t.summary.lineLesson(t.lesson.plans[planInfo.id]), amount: planInfo.price }], base: null, factor: null, total: planInfo.price };
+      const p = lessonPrice(planInfo.id);
+      return { lines: [{ label: t.summary.lineLesson(t.lesson.plans[planInfo.id]), amount: p }], base: null, factor: null, total: p };
     }
     if (service === "bowing") {
-      const lines: Line[] = [{ label: t.summary.lineBowing(t.bowing.types[bowingType], yen(bowingQuote.unitPrice), pages), amount: bowingQuote.base }];
+      const lines: Line[] = [{ label: t.summary.lineBowing(t.bowing.types[bowingType], fmt(bowingQuote.unitPrice), pages), amount: bowingQuote.base }];
       return { lines, base: bowingQuote.base, factor: deliveryOf(delivery.bowing).factorTenths, total: bowingQuote.total };
     }
     if (recordingQuote.lines.length === 0) return { lines: [], base: null, factor: null, total: null };
     const lines = recordingQuote.lines.map((l) => ({
-      label: t.summary.lineTrack(`${t.recording.instruments[l.id as RecordingInstrument]}${l.outsourced ? `（${t.recording.outsourced}）` : ""}`, yen(l.unitPrice), l.tracks),
+      label: t.summary.lineTrack(`${t.recording.instruments[l.id as RecordingInstrument]}${l.outsourced ? `（${t.recording.outsourced}）` : ""}`, fmt(l.unitPrice), l.tracks),
       amount: l.subtotal,
     }));
     return { lines, base: recordingQuote.base, factor: deliveryOf(delivery.recording).factorTenths, total: recordingQuote.total };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [service, planInfo, bowingType, pages, tracks, delivery, locale]);
+  }, [service, planInfo, bowingType, pages, tracks, delivery, locale, region, priceRows]);
 
   const errors: Errors = {};
   if (service === "lesson") {
@@ -139,6 +167,7 @@ export default function ServiceOrderForm({ locale }: Props) {
     if (valid.length === 0) errors.candidates = t.lesson.noCandidates;
   }
   if (service === "recording" && recordingQuote.tracks === 0) errors.tracks = t.recording.noTracks;
+  if (service !== "lesson" && !billingRegion) errors.billing = t.billing.heading;
   if (!name.trim()) errors.name = t.common.nameRequired;
   if (!emailPattern.test(email.trim())) errors.email = t.common.emailInvalid;
   if (!consent) errors.consent = t.common.consentRequired;
@@ -180,7 +209,7 @@ export default function ServiceOrderForm({ locale }: Props) {
     const rows: [string, string][] = [[t.tabsLabel, t.tabs[service]]];
     if (service === "lesson") {
       rows.push([t.lesson.trialQuestion, trialTaken === "yes" ? t.lesson.trialYes : t.lesson.trialNo]);
-      if (planInfo) rows.push([t.lesson.plan, `${t.lesson.plans[planInfo.id]} ${yen(planInfo.price)}`]);
+      if (planInfo) rows.push([t.lesson.plan, `${t.lesson.plans[planInfo.id]} ${fmt(lessonPrice(planInfo.id))}`]);
       valid.forEach((c, i) => rows.push([t.lesson.priority(i + 1), `${dayText(c.date)} ${c.time}`]));
     }
     if (service === "bowing") {
@@ -193,7 +222,11 @@ export default function ServiceOrderForm({ locale }: Props) {
       if (tracks.other > 0 && otherDetail.trim()) rows.push([t.recording.otherDetail, otherDetail.trim()]);
       rows.push([t.delivery.heading, t.delivery.options[delivery.recording]]);
     }
-    if (summary.total != null) rows.push([t.summary.total, yen(summary.total)]);
+    if (service !== "lesson" && billingRegion) {
+      rows.push([t.billing.heading, t.billing.options[billingRegion]]);
+      rows.push([t.payment.heading, t.payment.options[billingRegion === "jp" ? paymentMethod : "card"]]);
+    }
+    if (summary.total != null) rows.push([t.summary.total, fmt(summary.total)]);
     rows.push([t.common.name, name.trim()], [t.common.email, email.trim()]);
     if (remarks.trim()) rows.push([t.common.remarks, remarks.trim()]);
     return rows;
@@ -202,9 +235,16 @@ export default function ServiceOrderForm({ locale }: Props) {
   function payload() {
     return {
       service,
-      locale,
+      // 受付関数・DB は返信言語として ja / en だけを受け付ける。欧州 4 言語のページからは en で送り、表示していた言語は pageLocale に残す
+      locale: jaOrEn(locale),
+      pageLocale: locale,
       createdAt: new Date().toISOString(),
+      // 画面の概算（参考値）。確定はサーバーが料金マスタで計算し、管理人が確定する
       estimateTotal: summary.total,
+      // 請求先の地域・通貨・支払い方法（銀行振込は日本のみ）。レッスンは東京での対面のため日本扱い
+      billingRegion: service === "lesson" ? "jp" : billingRegion,
+      currency,
+      paymentMethod: service === "lesson" ? undefined : region === "jp" ? paymentMethod : "card",
       lesson: service === "lesson" ? { trialTaken, plan, candidates: valid } : undefined,
       bowing: service === "bowing" ? { type: bowingType, pages, score: score.trim(), delivery: delivery.bowing } : undefined,
       recording: service === "recording" ? { tracks, otherDetail: tracks.other > 0 ? otherDetail.trim() : "", delivery: delivery.recording } : undefined,
@@ -259,14 +299,14 @@ export default function ServiceOrderForm({ locale }: Props) {
           {summary.lines.map((l) => (
             <div key={l.label} className="flex justify-between gap-3">
               <dt>{l.label}</dt>
-              <dd className="shrink-0 tabular-nums">{yen(l.amount)}</dd>
+              <dd className="shrink-0 tabular-nums">{fmt(l.amount)}</dd>
             </div>
           ))}
           {summary.base != null && summary.factor != null && (
             <>
               <div className="flex justify-between gap-3 border-t border-line pt-2">
                 <dt>{t.summary.base}</dt>
-                <dd className="tabular-nums">{yen(summary.base)}</dd>
+                <dd className="tabular-nums">{fmt(summary.base)}</dd>
               </div>
               <div className="flex justify-between gap-3">
                 <dt>{t.summary.deliveryFactor}</dt>
@@ -276,15 +316,16 @@ export default function ServiceOrderForm({ locale }: Props) {
           )}
           <div className="flex justify-between gap-3 border-t border-navy pt-2 text-lg font-bold">
             <dt>{t.summary.total}</dt>
-            <dd className="tabular-nums">{yen(summary.total)}</dd>
+            <dd className="tabular-nums">{fmt(summary.total)}</dd>
           </div>
         </dl>
       )}
       {service === "bowing" && bowingType === "both" && (
-        <p className="mt-2 text-[13px] text-muted">{t.bowing.setDeal(yen(bowingQuote.listUnitPrice), yen(bowingQuote.unitPrice), yen(bowingQuote.setDiscountPerPage))}</p>
+        <p className="mt-2 text-[13px] text-muted">{t.bowing.setDeal(fmt(bowingQuote.listUnitPrice), fmt(bowingQuote.unitPrice), fmt(bowingQuote.setDiscountPerPage))}</p>
       )}
       <p className="mt-4 text-[12px] leading-relaxed text-muted">{t.estimateNote}</p>
-      {taxNotePending && <p className="mt-2 text-[12px] leading-relaxed text-muted">{t.taxNote}</p>}
+      <p className="mt-2 text-[12px] leading-relaxed text-muted">{t.taxNote}</p>
+      {service !== "lesson" && <p className="mt-2 text-[12px] leading-relaxed text-muted">{t.payment.timing}</p>}
     </section>
   );
 
@@ -390,7 +431,7 @@ export default function ServiceOrderForm({ locale }: Props) {
                         <span>
                           <span className="block font-bold">{t.lesson.plans[p.id]}</span>
                           <span className="block text-[13px]">
-                            {yen(p.price)}
+                            {fmt(lessonPrice(p.id))}
                             {p.minutes != null && ` · ${t.lesson.minutes(p.minutes)}`}
                             {p.firstTimeOnly && ` · ${t.lesson.firstTimeOnly}`}
                           </span>
@@ -483,18 +524,18 @@ export default function ServiceOrderForm({ locale }: Props) {
               <fieldset className="min-w-0">
                 <legend className="text-[15px] font-bold">{t.bowing.type} <Req t={t.required} /></legend>
                 <div className="mt-3 grid gap-2 sm:grid-cols-3">
-                  {(Object.keys(bowingUnitPrice) as BowingType[]).map((k) => (
+                  {bowingTypes.map((k) => (
                     <label key={k} className={`${optionBase} ${bowingType === k ? optionOn : optionOff}`}>
                       <input type="radio" name="bowingType" value={k} checked={bowingType === k} onChange={() => setBowingType(k)} className="mt-0.5 accent-navy" />
                       <span>
                         <span className="block font-bold">{t.bowing.types[k]}</span>
-                        <span className="block text-[13px]">{t.bowing.perPage(yen(bowingUnitPrice[k]))}</span>
+                        <span className="block text-[13px]">{t.bowing.perPage(fmt(bowingPrices[k]))}</span>
                       </span>
                     </label>
                   ))}
                 </div>
                 {bowingType === "both" && (
-                  <p className="mt-2 text-[13px] font-bold">{t.bowing.setDeal(yen(bowingUnitPrice.bowing + bowingUnitPrice.fingering), yen(bowingUnitPrice.both), yen(bowingUnitPrice.bowing + bowingUnitPrice.fingering - bowingUnitPrice.both))}</p>
+                  <p className="mt-2 text-[13px] font-bold">{t.bowing.setDeal(fmt(bowingPrices.bowing + bowingPrices.fingering), fmt(bowingPrices.both), fmt(bowingPrices.bowing + bowingPrices.fingering - bowingPrices.both))}</p>
                 )}
               </fieldset>
               <Stepper id="pages" label={t.bowing.pages} value={pages} min={1} max={bowingPagesMax} onChange={setPages} t={t} />
@@ -511,12 +552,12 @@ export default function ServiceOrderForm({ locale }: Props) {
               <fieldset className="min-w-0">
                 <legend className="text-[15px] font-bold">{t.recording.heading} <Req t={t.required} /></legend>
                 <div className="mt-3 grid gap-3 sm:grid-cols-2">
-                  {recordingInstruments.map((inst) => (
+                  {recordingItems.map((inst) => (
                     <div key={inst.id} className={`rounded-control border p-3 ${tracks[inst.id] > 0 ? optionOn : "border-line"}`}>
                       <div className="flex flex-wrap items-baseline justify-between gap-2">
                         <span className="font-bold">{t.recording.instruments[inst.id]}</span>
                         <span className="text-[13px]">
-                          {t.recording.perTrack(yen(inst.unitPrice))}
+                          {t.recording.perTrack(fmt(inst.unitPrice))}
                           {inst.outsourced && <span className="ml-2 rounded-tag border border-muted px-1.5 py-0.5 text-[11px] text-muted">{t.recording.outsourced}</span>}
                         </span>
                       </div>
@@ -545,6 +586,11 @@ export default function ServiceOrderForm({ locale }: Props) {
             </>
           )}
         </div>
+
+        {service === "lesson" && billingRegion === "intl" && <p className="text-[13px] text-muted">{t.lessonCurrencyNote}</p>}
+        {service !== "lesson" && (
+          <BillingFields t={t} region={billingRegion} guessed={regionGuessed} onRegion={setBillingRegion} method={paymentMethod} onMethod={setPaymentMethod} error={err("billing")} />
+        )}
 
         <fieldset className="min-w-0 grid gap-4 rounded-card border border-line bg-card p-5 sm:grid-cols-2 sm:p-6">
           <legend className="sr-only">{t.common.heading}</legend>
@@ -579,6 +625,46 @@ export default function ServiceOrderForm({ locale }: Props) {
 }
 
 type T = ReturnType<typeof getDictionary>["orderForm"];
+
+// 請求先の国・地域と支払い方法。銀行振込は日本のみ表示する（日本以外はカードのみ）
+function BillingFields({ t, region, guessed, onRegion, method, onMethod, error }: { t: T; region: Region | null; guessed: boolean; onRegion: (r: Region) => void; method: PaymentMethod; onMethod: (m: PaymentMethod) => void; error?: string | false }) {
+  return (
+    <div className="grid gap-5 rounded-card border border-line bg-card p-5 sm:p-6">
+      <fieldset className="min-w-0">
+        <legend className="text-[15px] font-bold">{t.billing.heading} <Req t={t.required} /></legend>
+        <p className="mt-1 text-[13px] text-muted">{t.billing.help}</p>
+        <div className="mt-3 grid gap-2 sm:grid-cols-2">
+          {(["jp", "intl"] as const).map((r) => (
+            <label key={r} className={`${optionBase} ${region === r ? optionOn : optionOff}`}>
+              <input type="radio" name="billingRegion" value={r} checked={region === r} onChange={() => onRegion(r)} aria-describedby={error ? "err-billing" : undefined} className="mt-0.5 accent-navy" />
+              <span className="font-bold">{t.billing.options[r]}</span>
+            </label>
+          ))}
+        </div>
+        {guessed && <p className="mt-2 text-[12px] text-muted">{t.billing.guessNote}</p>}
+        <FieldError id="err-billing" text={error} />
+      </fieldset>
+      {region && (
+        <fieldset className="min-w-0">
+          <legend className="text-[15px] font-bold">{t.payment.heading}</legend>
+          {region === "jp" ? (
+            <div className="mt-3 grid gap-2 sm:grid-cols-2">
+              {(["card", "bank_transfer"] as const).map((m) => (
+                <label key={m} className={`${optionBase} ${method === m ? optionOn : optionOff}`}>
+                  <input type="radio" name="paymentMethod" value={m} checked={method === m} onChange={() => onMethod(m)} className="mt-0.5 accent-navy" />
+                  <span className="font-bold">{t.payment.options[m]}</span>
+                </label>
+              ))}
+            </div>
+          ) : (
+            <p className="mt-2 text-[14px]">{t.payment.options.card}</p>
+          )}
+          <p className="mt-2 text-[13px] text-muted">{region === "jp" && method === "bank_transfer" ? t.payment.bankNote : region === "jp" ? t.payment.cardNote : `${t.payment.intlNote} ${t.payment.cardNote}`}</p>
+        </fieldset>
+      )}
+    </div>
+  );
+}
 
 function Req({ t }: { t: string }) {
   return <span className="ml-1 rounded-tag bg-navy px-1.5 py-0.5 align-middle text-[11px] font-normal text-white">{t}</span>;

@@ -33,7 +33,7 @@ export type ReadState = "unread" | "read";
 export type ReplyState = "unreplied" | "replied";
 
 /** 案件の進行状況 */
-export type CaseStatus = "new" | "scheduling" | "quoted" | "booked" | "in_progress" | "delivered" | "completed" | "cancelled";
+export type CaseStatus = "new" | "scheduling" | "quoted" | "awaiting_payment" | "paid" | "booked" | "in_progress" | "delivered" | "completed" | "cancelled";
 
 export type PaymentStatus = "none" | "unbilled" | "billed" | "paid" | "overdue" | "refunded";
 
@@ -44,6 +44,58 @@ export type ReplyDraft = { purpose: string; locale: "ja" | "en"; selected: strin
 /** 対応記録（タイムライン）。occurredAt が空なら実際の日時は不明（recordedAt は記録した日時） */
 export type ActivityKind = "reply_sent" | "email" | "line" | "phone" | "other" | "quote_sent" | "quote_changed" | "booked" | "invoiced" | "paid" | "refunded" | "completed" | "cancelled";
 export type CaseActivity = { id: string; inquiryId: string; kind: ActivityKind; occurredAt?: string; recordedAt: string; note?: string; amount?: number; data: Record<string, unknown>; important: boolean };
+
+// ── 料金・決済（docs/payments/PAYMENTS_DESIGN.md）────────────────
+// 金額は最小単位の整数（JPY は円、USD はセント）
+export type BillingRegion = "jp" | "intl";
+export type PaymentMethodPref = "card" | "bank_transfer";
+
+/** 受付時にサーバーが料金マスタで計算した金額（変更しない） */
+export type ServerQuote =
+  | { ok: true; currency: Currency; total: number; base: number; factorTenths: number; lines: { item: string; unitPrice: number; quantity: number; subtotal: number; effectiveFrom: string }[]; computedAt?: string }
+  | { ok: false; reason: "quote_required" | "unavailable" | "invalid"; computedAt?: string };
+
+export type CaseBilling = {
+  region?: BillingRegion; // 申告された請求先
+  regionDetected?: string; // 参考: アクセス元の国（ISO 3166-1 alpha-2）
+  currency?: Currency;
+  paymentMethod?: PaymentMethodPref;
+  serverQuote?: ServerQuote;
+  confirmed?: { amount: number; currency: Currency; at: string };
+};
+
+export type PaymentRecordStatus = "pending" | "link_sent" | "paid" | "underpaid" | "overpaid" | "failed" | "expired" | "cancelled" | "partially_refunded" | "refunded" | "disputed";
+export type PaymentRecord = {
+  id: string;
+  inquiryId: string;
+  purpose: "initial" | "additional";
+  method: PaymentMethodPref;
+  currency: Currency;
+  amount: number;
+  status: PaymentRecordStatus;
+  receivedAmount?: number;
+  refundedAmount: number;
+  notifiedAt?: string;
+  paidAt?: string;
+  checkoutUrl?: string;
+  expiresAt?: string;
+  note?: string;
+  createdAt: string;
+};
+
+/** 料金マスタの 1 行（public.price_items） */
+export type PriceItem = {
+  id: string;
+  service: string;
+  item: string;
+  mode: "per_unit" | "fixed" | "quote";
+  jpy: number | null;
+  usdCents: number | null;
+  effectiveFrom: ISODate;
+  active: boolean;
+  note?: string;
+  createdAt: string;
+};
 
 export type Inquiry = {
   id: string;
@@ -64,6 +116,8 @@ export type Inquiry = {
   booking?: Booking;
   payment?: Payment;
   internalMemo: string;
+  /** 請求先・通貨・金額（受付時の計算と確定金額） */
+  billing?: CaseBilling;
   attachments: { name: string; size: number }[]; // 実ファイルは非公開ストレージ（未接続）
   source: DataSource;
   /** 送信時の原文（変更しない）。これがある案件では、整理表示と返信文の組み立てが使える */

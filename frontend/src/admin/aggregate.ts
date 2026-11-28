@@ -1,7 +1,7 @@
 // 集計の純粋な関数（画面から切り離してテストする。tests/adminAggregate.test.mjs）。
 // 注: node のテストから直接読み込むため、型以外の import は書かない
 
-import type { AnalyticsMetric, RevenueCategory, RevenueEntry } from "./types";
+import type { AnalyticsMetric, Inquiry, RevenueCategory, RevenueEntry } from "./types";
 
 export const ym = (iso: string) => iso.slice(0, 7);
 
@@ -87,4 +87,19 @@ export function bucket(days: readonly string[], values: readonly number[], by: "
     out[out.length - 1] += values[i];
   });
   return { labels, values: out };
+}
+
+/** 今日やること（案件の件数）。運指・運弓・録音・演奏依頼は金額の確定と入金の確認を区別する。銀行振込の入金待ちは管理人の確認が必要なので別に数える */
+export function todoCounts(inquiries: readonly Pick<Inquiry, "kind" | "caseStatus" | "billing">[]) {
+  const open = inquiries.filter((i) => !["completed", "cancelled", "delivered"].includes(i.caseStatus));
+  const billed = (i: Pick<Inquiry, "kind">) => i.kind === "bowing" || i.kind === "recording" || i.kind === "performance";
+  const awaiting = open.filter((i) => i.caseStatus === "awaiting_payment");
+  return {
+    new: open.filter((i) => i.caseStatus === "new").length,
+    scheduling: open.filter((i) => i.caseStatus === "scheduling").length,
+    priceToConfirm: open.filter((i) => billed(i) && !i.billing?.confirmed).length,
+    awaitingCard: awaiting.filter((i) => i.billing?.paymentMethod !== "bank_transfer").length,
+    awaitingBank: awaiting.filter((i) => i.billing?.paymentMethod === "bank_transfer").length,
+    inProgress: open.filter((i) => i.caseStatus === "in_progress" || i.caseStatus === "paid").length,
+  };
 }

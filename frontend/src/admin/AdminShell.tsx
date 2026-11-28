@@ -7,8 +7,8 @@ import { useAdmin } from "./AdminContext";
 import { adminAuth } from "./auth";
 import { adminRoutes } from "./ui";
 
-type Section = "dashboard" | "inquiries" | "calendar" | "teachers" | "revenue" | "ads" | "analytics" | "pdf" | "notifications";
-const sections: Section[] = ["dashboard", "inquiries", "calendar", "teachers", "revenue", "ads", "analytics", "pdf", "notifications"];
+type Section = "dashboard" | "inquiries" | "calendar" | "teachers" | "revenue" | "prices" | "ads" | "analytics" | "pdf" | "notifications";
+const sections: Section[] = ["dashboard", "inquiries", "calendar", "teachers", "revenue", "prices", "ads", "analytics", "pdf", "notifications"];
 
 // 管理画面の共通レイアウト。セッションが無ければログイン画面へ戻す。
 // 注: これは画面の出し分けで、アクセス制御ではない。本当の制御はサーバー側（管理者 API がセッションを検証）で行う

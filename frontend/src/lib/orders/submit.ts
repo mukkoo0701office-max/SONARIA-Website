@@ -13,6 +13,12 @@ const RAW_SUPABASE_URL = (process.env.NEXT_PUBLIC_SUPABASE_URL ?? "").trim();
 const SUPABASE_URL = RAW_SUPABASE_URL && !/^https?:\/\//.test(RAW_SUPABASE_URL) ? `https://${RAW_SUPABASE_URL}` : RAW_SUPABASE_URL;
 const PUBLISHABLE_KEY = (process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ?? "").trim();
 
+/** Supabase の REST API（公開キーで読める範囲だけ）。未設定なら undefined */
+export function supabaseRest(): { url: string; key: string } | undefined {
+  if (!SUPABASE_URL || !PUBLISHABLE_KEY) return undefined;
+  return { url: `${SUPABASE_URL.replace(/\/$/, "")}/rest/v1`, key: PUBLISHABLE_KEY };
+}
+
 /** 受付関数の URL。未設定なら undefined（未接続） */
 export function submitEndpoint(): string | undefined {
   if (!SUPABASE_URL || !PUBLISHABLE_KEY) return undefined;
