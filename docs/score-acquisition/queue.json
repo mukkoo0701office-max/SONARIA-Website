@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "string_quartet",
-    "last_work": "Op.2 Nos.1–6 (retrospective inventory audit)",
-    "note": "Next review Haydn Op.3 attribution to Roman Hoffstetter before any candidate additions; continue historical candidate audit. Op.2 score and parts are different editions; no completeness approval."
+    "last_work": "Op.3 / Hob.III:13–18 attribution audit (excluded from verified Haydn)",
+    "note": "Next: Haydn genuine Op.9 quartet collection; first check queue and main for edition duplicates. Op.3 held due attribution to Roman Hoffstetter."
   },
   "items": [
     {
@@ -14965,7 +14965,45 @@
       "rights in Japan",
       "actual SONARIA installed score assets",
       "other spurious or doubtful catalogue entries"
-    ]
+    ],
+    "haydn_op3_20261128": {
+      "checked_at": "2026-11-28T23:19:48+09:00",
+      "historical_attribution": "Haydn Op.3 / Hob.III:13–18",
+      "current_imslp_composer": "Roman Hoffstetter",
+      "attribution_note": "IMSLP identifies Hoffstetter; scholarly attribution has been disputed. Do not register as verified Haydn works.",
+      "work_url": "https://imslp.org/wiki/String_Quartets%2C_Op.3_%28Hoffstetter%2C_Roman%29",
+      "score_options": [
+        {
+          "imslp_file_id": "456005",
+          "publisher": "Trautwein",
+          "year": "circa 1840–1845",
+          "editor": "unknown",
+          "scope": "six quartets complete score"
+        },
+        {
+          "imslp_file_id": "887280",
+          "publisher": "K. Ferd. Heckel",
+          "year": "circa 1855",
+          "editor": "unknown",
+          "scope": "six quartets complete score"
+        }
+      ],
+      "part_options": {
+        "violin_1": "939472",
+        "violin_2": "939473",
+        "viola": "939474",
+        "cello": "939475"
+      },
+      "part_edition": "Royal College of Music scan; publisher/editor for these parts not independently verified",
+      "status": "held_attribution_review",
+      "rights_status": "unknown",
+      "set_completeness": "unverified",
+      "quality": "not_pdf_inspected",
+      "new_candidate_count": 0,
+      "queue_duplicate_matches": 0,
+      "main_catalog_matching_records": 0,
+      "notes": "No candidate created under Haydn. Reassess as Hoffstetter only after dedicated composer-category and edition review; score and parts edition match unknown. IMSLP metadata only."
+    }
   },
   "violin_sonata_repertoire_audit": {
     "date": "2026-11-27",
@@ -15104,14 +15142,15 @@
     "notes": "No live site verification. Main catalog source can lag deployment. Rights pending; no publication action."
   },
   "last_site_reconciliation": {
-    "checked_at": "2026-11-28T22:15:33+09:00",
+    "checked_at": "2026-11-28T23:19:48+09:00",
     "main_catalog_path": "frontend/src/data/scores/catalog.json",
     "main_catalog_sha": "4cd09cd46263fbaaf53282aadfb22151c0821d2b",
     "main_catalog_work_count": 203,
-    "main_matching_haydn_op2_works": 2,
+    "main_matching_op3_works": 0,
     "work_branch": "coordination/gpt-claude-score-queue",
     "queue_items": 196,
     "live_site_status": "unverified_canonical_production_url_not_established",
-    "note": "Main catalog was fetched and searched for Op.2/Hob.III:7–12; no matching catalog records by these identifiers, but live site unavailable and alternate catalog naming may exist. Preview GitHub Pages is not canonical production. PDF references and published state not confirmed. No rights or PDF changes."
+    "site_configuration": "frontend/next.config.ts NEXT_PUBLIC_SITE_URL defaults empty; GitHub Pages preview not production",
+    "note": "Main catalog compared for Op.3/Hob.III:13–18/Hoffstetter. Live site and PDF links not independently verified. No rights or publication changes."
   }
 }
