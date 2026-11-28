@@ -19,7 +19,9 @@ enabled = false
 enabled = false
 
 [storage]
-enabled = false
+# 申込に添付する楽譜 PDF（非公開バケット submission-files。マイグレーション 20261129000007）
+enabled = true
+file_size_limit = "20MiB"
 
 [analytics]
 enabled = false
@@ -35,4 +37,7 @@ enabled = true
 
 # 公開の申し込み受付。JWT ではなく、関数内の検証（Origin・形式・送信回数制限・二重送信防止）で守る
 [functions.submit]
+verify_jwt = false
+
+[functions.upload-url]
 verify_jwt = false

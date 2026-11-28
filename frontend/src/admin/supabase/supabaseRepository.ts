@@ -22,7 +22,7 @@ import type {
   TeacherApplicationStatus,
   TeacherProfile,
 } from "../types";
-import { rest, SupabaseError } from "./client";
+import { rest, signedFileUrl, SupabaseError } from "./client";
 
 type Row = {
   id: string;
@@ -68,6 +68,12 @@ const CASE: readonly string[] = ["new", "scheduling", "quoted", "awaiting_paymen
 const TEACHER: readonly string[] = ["submitted", "under_review", "changes_requested", "approved", "published", "unpublished", "rejected"];
 
 type Obj = Record<string, unknown>;
+const FILE_PATH = /^pending\/\d{4}-\d{2}-\d{2}\/[0-9a-f-]{36}\.pdf$/;
+function attachmentsOf(payload: unknown): Inquiry["attachments"] {
+  const b = isObj(payload) && isObj(payload.bowing) ? payload.bowing : null;
+  const list = b && Array.isArray(b.files) ? b.files : [];
+  return list.filter((f): f is Obj => isObj(f) && typeof f.path === "string" && FILE_PATH.test(f.path)).map((f) => ({ name: str(f.name) || "score.pdf", size: typeof f.size === "number" ? f.size : 0, path: f.path as string }));
+}
 const isObj = (v: unknown): v is Obj => typeof v === "object" && v !== null && !Array.isArray(v);
 const str = (v: unknown) => (typeof v === "string" ? v : v == null ? "" : String(v));
 
@@ -75,6 +81,8 @@ const str = (v: unknown) => (typeof v === "string" ? v : v == null ? "" : String
 function flatten(v: unknown, prefix = "", out: { label: string; value: string }[] = []) {
   if (isObj(v)) {
     for (const [k, x] of Object.entries(v)) {
+      // 添付ファイルは「添付ファイル」欄に出す（保存先のパスを一覧に並べない）
+      if (prefix === "bowing" && k === "files") continue;
       if (prefix === "" && ["contact", "customer", "private", "agreements", "consent", "locale", "kind", "service", "createdAt", "status", "estimateTotal", "currency", "billingRegion", "paymentMethod"].includes(k)) continue;
       flatten(x, prefix ? `${prefix}.${k}` : k, out);
     }
@@ -135,7 +143,8 @@ function toInquiry(r: Row): Inquiry {
       serverQuote: r.server_quote ? (r.server_quote as unknown as ServerQuote) : undefined,
       confirmed: r.confirmed_amount != null && r.confirmed_currency ? { amount: r.confirmed_amount, currency: r.confirmed_currency, at: r.confirmed_at ?? "" } : undefined,
     },
-    attachments: [],
+    // 運指・運弓の楽譜 PDF（受付関数が実在を確かめた保存先のパス）
+    attachments: attachmentsOf(r.payload),
     source: "form",
     // 送信時の原文（整理表示と返信文の組み立てに使う）
     raw: { kind: r.kind, locale: r.locale, payload: r.payload, estimate: r.client_estimate, receiptNo: r.receipt_no, receivedAt: r.created_at },
@@ -261,6 +270,7 @@ export function createSupabaseRepository(): AdminRepository {
     async confirmPrice(id, amount, currency, note) {
       return toInquiry(await rest<Row>("rpc/admin_confirm_price", { method: "POST", body: { p_id: id, p_amount: amount, p_currency: currency, p_note: note ?? null } }));
     },
+    attachmentUrl: (path) => signedFileUrl("submission-files", path),
     async listPayments(id) {
       const rows = await rest<PaymentRowDb[]>(`payments?select=*&submission_id=eq.${encodeURIComponent(id)}&order=created_at.asc`);
       return rows.map(toPayment);

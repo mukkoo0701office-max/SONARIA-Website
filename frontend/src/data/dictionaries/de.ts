@@ -587,6 +587,7 @@ export const de: Dictionary = {
       help: "Ort, Dauer des Auftritts, Art der Veranstaltung, gewünschte Stücke usw.",
       placeholder: "z. B. Hochzeitsfeier in einem Hotel in Tokio. Etwa 30 Minuten während des Abendessens. Vor allem beliebte Klassik.",
     },
+    paymentNote: { card: "Sobald Sie unser Angebot annehmen, senden wir Ihnen einen Link zur Kartenzahlung per E-Mail. Die Buchung ist mit Zahlungseingang bestätigt.", bank: "Sobald Sie unser Angebot annehmen, senden wir Ihnen unsere Bankverbindung per E-Mail. Die Buchung ist mit Zahlungseingang bestätigt." },
     review: "Anfrage prüfen",
     submit: "Kostenloses Angebot anfordern",
     note: "Das Absenden dieses Formulars ist weder eine Buchung noch ein Vertrag. Preise werden nie automatisch festgelegt; wir senden Ihnen nach Prüfung Ihrer Anfrage ein Angebot.",
@@ -735,6 +736,17 @@ export const de: Dictionary = {
       pages: "Seiten",
       score: "Noten",
       scorePlaceholder: "z. B. Beethoven, Violinsonate Nr. 5 „Frühlingssonate“",
+      upload: {
+        label: "Noten als PDF (optional)",
+        help: "Sie können die Noten als PDF anhängen (bis 20 MB pro Datei, 3 Dateien). Nur Noten ohne urheberrechtliche Probleme. Ohne Anhang klären wir es nach Eingang Ihrer Anfrage per E-Mail.",
+        choose: "PDF auswählen",
+        uploading: "Wird hochgeladen …",
+        uploaded: "Angehängt",
+        remove: "Entfernen",
+        files: "Angehängte Noten",
+        waiting: "Bitte warten Sie, bis das Hochladen der PDF-Noten abgeschlossen ist.",
+        errors: { not_connected: "Online-Anhänge sind noch nicht verfügbar. Bitte senden Sie die Datei nach unserer Antwort per E-Mail.", pdf_only: "Es können nur PDF-Dateien angehängt werden.", too_large: "Dateien über 20 MB können nicht angehängt werden.", rate_limited: "Zu viele Uploads in kurzer Zeit. Bitte versuchen Sie es später erneut.", failed: "Hochladen fehlgeschlagen. Bitte versuchen Sie es erneut.", too_many: "Sie können bis zu 3 Dateien anhängen." },
+      },
     },
     recording: {
       heading: "Aufnahmen",
@@ -963,9 +975,10 @@ export const de: Dictionary = {
     bowing: {
       title: "Fingersätze und Bogenstriche für diese Noten?",
       lead: "Wir richten Ihre Violinstimme mit Fingersätzen und Bogenstrichen ein, die Spielbarkeit und Musikalität verbinden.",
-      prices: ["Nur Fingersätze: 1.000 ¥ pro Seite", "Nur Bogenstriche: 1.000 ¥ pro Seite", "Fingersätze und Bogenstriche: 1.500 ¥ pro Seite"],
+      priceLines: { fingering: "Nur Fingersätze: {price} pro Seite", bowing: "Nur Bogenstriche: {price} pro Seite", both: "Fingersätze und Bogenstriche: {price} pro Seite" },
+      priceNote: { jp: "Preise für Japan (JPY, inkl. Steuern).", intl: "Preise für Anfragen von außerhalb Japans (USD, inkl. Steuern).", unknown: "Ihre Region konnte nicht ermittelt werden, daher werden vorläufig die Preise für Japan (JPY) angezeigt." },
       cta: "Mehr über den Service",
-      note: "Das Online-Anfrageformular ist noch nicht verfügbar.",
+      note: "Der volle Betrag ist vor Arbeitsbeginn zu zahlen (wir beginnen, sobald die Zahlung bestätigt ist).",
     },
     ad: {
       label: "PR",

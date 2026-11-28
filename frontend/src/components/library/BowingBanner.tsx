@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Dictionary } from "@/data/dictionaries/types";
 import { pagePaths } from "@/data/site";
 import { localizedPath, type Locale } from "@/lib/i18n";
+import BowingPrices from "./BowingPrices";
 
 type Props = {
   locale: Locale;
@@ -20,11 +21,7 @@ export default function BowingBanner({ locale, t, context }: Props) {
     <aside className="my-6 rounded-card border border-navy bg-subtle p-[17px]">
       <h3 className="text-base font-bold text-navy">{t.title}</h3>
       <p className="mt-1.5 text-[13px]">{t.lead}</p>
-      <ul className="mt-2 grid gap-0.5 text-[13px]">
-        {t.prices.map((p) => (
-          <li key={p}>・{p}</li>
-        ))}
-      </ul>
+      <BowingPrices t={t} />
       <Link
         href={`${localizedPath(locale, pagePaths.apply)}?${params.toString()}`}
         className="mt-3 inline-block rounded-button border border-navy bg-navy px-4 py-2.5 text-[13px] font-semibold text-white hover:brightness-95"

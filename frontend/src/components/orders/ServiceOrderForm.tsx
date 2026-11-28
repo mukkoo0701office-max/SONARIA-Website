@@ -27,12 +27,15 @@ import { clampInt, quoteBowing, quoteRecording } from "@/lib/orders/pricing";
 import { currencyOf, currentPrices, formatMoney, SEED_PRICES, unitPrice, type PriceRow, type Region } from "@/lib/orders/priceEngine";
 import { loadPriceRows } from "@/lib/orders/priceTable";
 import { guessRegion, todayTokyo } from "@/lib/orders/region";
+import PaymentFields from "./PaymentFields";
+import ScoreUpload from "./ScoreUpload";
+import type { UploadedFile } from "@/lib/orders/upload";
 import { candidateDays, endsAfter, isPast, validCandidates, type Candidate, type CandidateDay } from "@/lib/orders/schedule";
 import { submitOrder, withReceipt, type SubmitResult } from "@/lib/orders/submit";
 
 type Props = { locale: Locale };
 type Step = "edit" | "confirm" | "done";
-type Errors = Partial<Record<"trial" | "plan" | "candidates" | "tracks" | "name" | "email" | "consent", string>>;
+type Errors = Partial<Record<"trial" | "plan" | "candidates" | "tracks" | "upload" | "name" | "email" | "consent", string>>;
 type PaymentMethod = "card" | "bank_transfer";
 const bowingTypes: readonly BowingType[] = ["bowing", "fingering", "both"];
 const seedPrices = currentPrices(SEED_PRICES, "9999-12-31");
@@ -71,6 +74,9 @@ export default function ServiceOrderForm({ locale }: Props) {
   const [bowingType, setBowingType] = useState<BowingType>("both");
   const [pages, setPages] = useState(1);
   const [score, setScore] = useState("");
+  // 添付した楽譜 PDF（送信済みのものだけ）と、送信中かどうか
+  const [scoreFiles, setScoreFiles] = useState<UploadedFile[]>([]);
+  const [uploading, setUploading] = useState(false);
 
   // 録音
   const [tracks, setTracks] = useState<Record<RecordingInstrument, number>>({ violin: 0, viola: 0, cello: 0, other: 0 });
@@ -166,6 +172,7 @@ export default function ServiceOrderForm({ locale }: Props) {
     if (valid.length === 0) errors.candidates = t.lesson.noCandidates;
   }
   if (service === "recording" && recordingQuote.tracks === 0) errors.tracks = t.recording.noTracks;
+  if (service === "bowing" && uploading) errors.upload = t.bowing.upload.waiting;
   if (!name.trim()) errors.name = t.common.nameRequired;
   if (!emailPattern.test(email.trim())) errors.email = t.common.emailInvalid;
   if (!consent) errors.consent = t.common.consentRequired;
@@ -213,6 +220,7 @@ export default function ServiceOrderForm({ locale }: Props) {
     if (service === "bowing") {
       rows.push([t.bowing.type, t.bowing.types[bowingType]], [t.bowing.pages, String(pages)]);
       if (score.trim()) rows.push([t.bowing.score, score.trim()]);
+      if (scoreFiles.length) rows.push([t.bowing.upload.files, scoreFiles.map((f) => f.name).join("\n")]);
       rows.push([t.delivery.heading, t.delivery.options[delivery.bowing]]);
     }
     if (service === "recording") {
@@ -245,7 +253,7 @@ export default function ServiceOrderForm({ locale }: Props) {
       currency,
       paymentMethod: service === "lesson" ? undefined : bankAvailable ? paymentMethod : "card",
       lesson: service === "lesson" ? { trialTaken, plan, candidates: valid } : undefined,
-      bowing: service === "bowing" ? { type: bowingType, pages, score: score.trim(), delivery: delivery.bowing } : undefined,
+      bowing: service === "bowing" ? { type: bowingType, pages, score: score.trim(), delivery: delivery.bowing, files: scoreFiles.length ? scoreFiles : undefined } : undefined,
       recording: service === "recording" ? { tracks, otherDetail: tracks.other > 0 ? otherDetail.trim() : "", delivery: delivery.recording } : undefined,
       customer: { name: name.trim(), email: email.trim(), remarks: remarks.trim() },
     };
@@ -542,6 +550,10 @@ export default function ServiceOrderForm({ locale }: Props) {
                 <label htmlFor="score" className="text-[15px] font-bold">{t.bowing.score} <Opt t={t.optional} /></label>
                 <input id="score" type="text" value={score} maxLength={200} onChange={(e) => setScore(e.target.value)} placeholder={t.bowing.scorePlaceholder} className={`${inputClass} mt-2`} />
               </div>
+              <div data-error={!!err("upload") || undefined}>
+                <ScoreUpload t={t.bowing.upload} onChange={setScoreFiles} onBusy={setUploading} />
+                <FieldError id="err-upload" text={err("upload")} />
+              </div>
               <DeliveryField value={delivery.bowing} onChange={(v) => setDelivery((d) => ({ ...d, bowing: v }))} t={t} name="delivery-bowing" />
             </>
           )}
@@ -624,37 +636,6 @@ export default function ServiceOrderForm({ locale }: Props) {
 }
 
 type T = ReturnType<typeof getDictionary>["orderForm"];
-
-// 料金の区分（自動判定の結果を伝えるだけ。選ぶ欄は置かない）と支払い方法。銀行振込は日本と判定できたときだけ表示する
-function PaymentFields({ t, region, method, onMethod }: { t: T; region: Region | null; method: PaymentMethod; onMethod: (m: PaymentMethod) => void }) {
-  const bank = region === "jp";
-  return (
-    <div className="grid gap-4 rounded-card border border-line bg-card p-5 sm:p-6">
-      <div>
-        <p className="text-[15px] font-bold">
-          {t.billing.heading}: {region ? t.billing.options[region] : `${t.billing.options.jp}（${t.billing.provisional}）`}
-        </p>
-        <p className="mt-1 text-[13px] text-muted">{region ? t.billing.autoNote : t.billing.unknownNote}</p>
-      </div>
-      <fieldset className="min-w-0">
-        <legend className="text-[15px] font-bold">{t.payment.heading}</legend>
-        {bank ? (
-          <div className="mt-3 grid gap-2 sm:grid-cols-2">
-            {(["card", "bank_transfer"] as const).map((m) => (
-              <label key={m} className={`${optionBase} ${method === m ? optionOn : optionOff}`}>
-                <input type="radio" name="paymentMethod" value={m} checked={method === m} onChange={() => onMethod(m)} className="mt-0.5 accent-navy" />
-                <span className="font-bold">{t.payment.options[m]}</span>
-              </label>
-            ))}
-          </div>
-        ) : (
-          <p className="mt-2 text-[14px]">{t.payment.options.card}</p>
-        )}
-        <p className="mt-2 text-[13px] text-muted">{bank && method === "bank_transfer" ? t.payment.bankNote : bank ? t.payment.cardNote : region === "intl" ? `${t.payment.intlNote} ${t.payment.cardNote}` : t.payment.cardNote}</p>
-      </fieldset>
-    </div>
-  );
-}
 
 function Req({ t }: { t: string }) {
   return <span className="ml-1 rounded-tag bg-navy px-1.5 py-0.5 align-middle text-[11px] font-normal text-white">{t}</span>;

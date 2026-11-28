@@ -113,6 +113,22 @@ export async function rest<T>(path: string, init: { method?: string; body?: unkn
   return (text ? JSON.parse(text) : null) as T;
 }
 
+/** 非公開ストレージのファイルを短時間だけ開ける URL（管理人の権限で発行。読めるのは管理人だけ: storage のポリシー） */
+export async function signedFileUrl(bucket: string, path: string, expiresIn = 300): Promise<string> {
+  const s = await currentSupabaseSession();
+  if (!s) throw new SupabaseError(401, "no_session");
+  const res = await fetch(`${URL_BASE}/storage/v1/object/sign/${bucket}/${path}`, {
+    method: "POST",
+    headers: { apikey: KEY, Authorization: `Bearer ${s.accessToken}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ expiresIn }),
+  });
+  if (!res.ok) throw new SupabaseError(res.status, await res.text().catch(() => ""));
+  const data = (await res.json()) as { signedURL?: string; signedUrl?: string };
+  const u = data.signedURL ?? data.signedUrl;
+  if (!u) throw new SupabaseError(500, "no_url");
+  return u.startsWith("http") ? u : `${URL_BASE}/storage/v1${u}`;
+}
+
 /** ログイン中のユーザーが管理人（public.admins）か */
 export async function isAdmin(): Promise<boolean> {
   try {

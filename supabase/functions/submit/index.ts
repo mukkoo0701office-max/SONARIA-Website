@@ -5,6 +5,7 @@
 import postgres from "npm:postgres@3.4.5";
 import { isAllowedOrigin, MAX_BODY_BYTES, UUID, validateSubmission } from "../_shared/validate.ts";
 import { buildNotifyMail } from "../_shared/notify.ts";
+import { attachedFiles, FILE_BUCKET } from "../_shared/files.ts";
 import { computeQuote, currencyOf, quoteInputFromPayload, regionFromPayload, type PriceRow, type Region } from "../_shared/pricing.ts";
 
 // 既定の許可 Origin（プレビュー）。本番ドメインが決まったら Secrets の ALLOWED_ORIGINS で追加する
@@ -131,11 +132,23 @@ Deno.serve(async (req) => {
   // 送信元 IP（Supabase のゲートウェイが付ける）。保存するのはソルト付きハッシュだけ
   const ip = (req.headers.get("x-forwarded-for") ?? "").split(",")[0].trim() || req.headers.get("x-real-ip") || "";
 
+  // 添付の楽譜 PDF（運指・運弓）: 形を検査し、実際にアップロード済みであることをデータベースで確かめる
+  const attached = attachedFiles(v.payload);
+  if (!attached.ok) return json(400, { error: "invalid", errors: [attached.error] }, origin);
+
   try {
+    if (attached.files.length) {
+      const paths = attached.files.map((f) => f.path);
+      const found = await sql`select name from storage.objects where bucket_id = ${FILE_BUCKET} and name = any(${sql.array(paths)})`;
+      if (found.length !== paths.length) return json(400, { error: "invalid", errors: ["files: not uploaded"] }, origin);
+      // 検査した形に置き換えて保存する（名前・大きさの長さをそろえる）
+      (v.payload.bowing as Record<string, unknown>).files = attached.files;
+    }
+    // 注: postgres.js は「文字列::jsonb」を JSON の文字列値として保存してしまうため、text を経由して変換する（server_quote と同じ）
     const rows = await sql`
       select result, receipt_no from private.accept_submission(
         ${ip}, ${key}::uuid, ${v.kind}, ${v.locale}, ${v.name}, ${v.email},
-        ${JSON.stringify(v.payload)}::jsonb, ${v.estimate}::int, ${maxPerHour}::int
+        ${JSON.stringify(v.payload)}::text::jsonb, ${v.estimate}::int, ${maxPerHour}::int
       )`;
     const r = rows[0] as { result: string; receipt_no: string | null } | undefined;
     if (!r) return json(500, { error: "server_error" }, origin);

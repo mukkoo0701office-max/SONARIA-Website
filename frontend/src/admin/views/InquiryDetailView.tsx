@@ -334,16 +334,17 @@ export default function InquiryDetailView() {
                   ) : (
                     <ul className="grid gap-1 text-[13px]">
                       {inq.attachments.map((a) => (
-                        <li key={a.name} className="flex justify-between gap-2">
-                          <span className="truncate">{a.name}</span>
-                          <span className="text-muted">{fmtNumber(Math.round(a.size / 1024), locale)} KB</span>
+                        <li key={a.path ?? a.name} className="flex flex-wrap items-center justify-between gap-2">
+                          <span className="min-w-0 break-all">{a.name}</span>
+                          <span className="flex items-center gap-2">
+                            <span className="text-muted">{fmtNumber(Math.round(a.size / 1024), locale)} KB</span>
+                            {a.path && <OpenFileButton path={a.path} label={t.detail.openFile} failed={t.detail.openFileFailed} />}
+                          </span>
                         </li>
                       ))}
                     </ul>
                   )}
-                  <div className="mt-3">
-                    <NotConnected>{t.detail.attachmentsNote}</NotConnected>
-                  </div>
+                  <p className="mt-3 text-[12px] text-muted">{t.detail.attachmentsNote}</p>
                 </Card>
 
                 <Card title={t.detail.removeTitle} id="d-remove">
@@ -434,6 +435,34 @@ export default function InquiryDetailView() {
           </>
         )}
       </LoadState>
+    </>
+  );
+}
+
+// 非公開の添付ファイルを開く。押したときに 5 分だけ有効な URL を発行して新しいタブで開く（URL は保存しない）
+function OpenFileButton({ path, label, failed }: { path: string; label: string; failed: string }) {
+  const { repo } = useAdmin();
+  const [error, setError] = useState(false);
+  async function open() {
+    setError(false);
+    // ポップアップを止められないよう、先にタブを開いてから URL を入れる
+    // 注: "noopener" を付けると戻り値が null になるため、開いたあとに opener を切る
+    const w = window.open("", "_blank");
+    if (w) w.opener = null;
+    try {
+      const url = repo ? await repo.attachmentUrl(path) : null;
+      if (!url) throw new Error("no_url");
+      if (w) w.location.href = url;
+      else window.location.assign(url);
+    } catch {
+      w?.close();
+      setError(true);
+    }
+  }
+  return (
+    <>
+      <button type="button" onClick={open} className={buttonSecondary}>{label}</button>
+      {error && <span role="alert" className="text-[12px] text-[#9b2c2c]">{failed}</span>}
     </>
   );
 }

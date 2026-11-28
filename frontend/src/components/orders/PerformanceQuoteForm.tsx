@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   ConsentField,
   FieldError,
@@ -28,7 +28,10 @@ import {
 import { getDictionary } from "@/data/dictionaries";
 import { pagePaths } from "@/data/site";
 import { jaOrEn, localizedPath, type Locale } from "@/lib/i18n";
+import type { Region } from "@/lib/orders/priceEngine";
+import { guessRegion } from "@/lib/orders/region";
 import { submitPerformanceQuote, withReceipt, type SubmitResult } from "@/lib/orders/submit";
+import PaymentFields, { type PaymentMethod } from "./PaymentFields";
 
 type Step = "edit" | "confirm" | "done";
 type DateRow = { date: string; slot: TimeSlot; time: string };
@@ -43,6 +46,7 @@ export default function PerformanceQuoteForm({ locale }: { locale: Locale }) {
   const dict = getDictionary(locale);
   const t = dict.performanceQuote;
   const f = dict.forms;
+  const o = dict.orderForm;
 
   const [step, setStep] = useState<Step>("edit");
   const [showErrors, setShowErrors] = useState(false);
@@ -61,6 +65,11 @@ export default function PerformanceQuoteForm({ locale }: { locale: Locale }) {
   const [email, setEmail] = useState("");
   const [consent, setConsent] = useState(false);
   const [trap, setTrap] = useState(""); // ハニーポット
+  // 地域は自動判定（利用者が選ぶ欄は置かない）。見積もりの通貨と、銀行振込を出すかどうかに使う
+  const [region, setRegion] = useState<Region | null>(null);
+  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("card");
+  useEffect(() => setRegion(guessRegion()), []);
+  const method: PaymentMethod = region === "jp" ? paymentMethod : "card";
 
   const headingRef = useRef<HTMLHeadingElement>(null);
 
@@ -99,6 +108,8 @@ export default function PerformanceQuoteForm({ locale }: { locale: Locale }) {
       [t.budget.heading, budget ? t.budget.options[budget] : ""],
       [t.ensemble.heading, [ensemble ? t.ensemble.options[ensemble] : "", instruments.trim()].filter(Boolean).join(" / ")],
       [t.remarks.heading, remarks.trim() || "—"],
+      [o.billing.heading, region ? o.billing.options[region] : `${o.billing.options.jp}（${o.billing.provisional}）`],
+      [o.payment.heading, o.payment.options[method]],
       [f.name, name.trim()],
       [f.email, email.trim()],
     ];
@@ -115,6 +126,10 @@ export default function PerformanceQuoteForm({ locale }: { locale: Locale }) {
       ensemble,
       instruments: instruments.trim(),
       remarks: remarks.trim(),
+      // 端末から推定した地域（参考値）と希望の支払い方法（銀行振込は日本のみ）。金額・通貨は管理人が見積もりで確定する
+      billingRegion: region,
+      regionSource: region ? "timezone" : "none",
+      paymentMethod: method,
       contact: { name: name.trim(), email: email.trim() },
       consent,
     };
@@ -276,6 +291,9 @@ export default function PerformanceQuoteForm({ locale }: { locale: Locale }) {
         <p className="mt-1 text-[12px] text-muted">{t.remarks.help}</p>
         <textarea id="pd-remarks" rows={5} maxLength={3000} value={remarks} onChange={(e) => setRemarks(e.target.value)} placeholder={t.remarks.placeholder} className={`${inputClass} mt-2`} />
       </section>
+
+      {/* 料金の区分・お支払い方法 */}
+      <PaymentFields t={o} region={region} method={paymentMethod} onMethod={setPaymentMethod} notes={t.paymentNote} />
 
       {/* 連絡先 */}
       <section className="grid min-w-0 gap-4 rounded-card border border-line bg-card p-5 sm:grid-cols-2 sm:p-6">

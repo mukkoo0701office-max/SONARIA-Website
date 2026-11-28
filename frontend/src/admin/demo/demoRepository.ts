@@ -86,6 +86,8 @@ export function createDemoRepository(today: Date = new Date()): AdminRepository 
       return wait(inq);
     },
     listPayments: (id) => wait(payments.filter((p) => p.inquiryId === id)),
+    // デモにはファイルの保存先が無い
+    attachmentUrl: async () => null,
     // 銀行振込（データベースの関数と同じ規則。再送の判定は requestId）
     async recordBankNotice(id, requestId, note) {
       const inq = db.inquiries.find((i) => i.id === id);
