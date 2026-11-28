@@ -5,7 +5,7 @@ import SiteFooter from "@/components/layout/SiteFooter";
 import SiteHeader from "@/components/layout/SiteHeader";
 import { partialLocalePaths } from "@/lib/localeAvailability";
 import { getDictionary } from "@/data/dictionaries";
-import { isLocale, locales } from "@/lib/i18n";
+import { isLocale, localeConfig, locales } from "@/lib/i18n";
 import { isIndexable, siteUrl } from "@/lib/seo";
 import "../globals.css";
 
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: dict.meta.siteTitle,
       description: dict.meta.siteDescription,
       type: "website",
-      locale: locale === "ja" ? "ja_JP" : "en_US",
+      locale: localeConfig(locale).ogLocale,
     },
     ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
     // 検索エンジンへの掲載は NEXT_PUBLIC_INDEXABLE=1 の本番ビルドだけ（lib/seo.ts）。プレビューは常に noindex
@@ -51,7 +51,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   // 一部の言語にしかないページ（言語の切り替えで、無いページへリンクしないため）
   const partial = partialLocalePaths();
   return (
-    <html lang={locale}>
+    <html lang={localeConfig(locale).htmlLang}>
       <body className="flex min-h-dvh flex-col">
         <a
           href="#main"
