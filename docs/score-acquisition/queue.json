@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Brahms",
     "stage": "cello_sonata",
-    "last_work": "Op.38",
-    "note": "Op.108 Simrock 1889 #28896 inspected as metadata only; main already contains standalone brahms-violin-sonata-3 with violin+piano assets and grouped old-site scores, edition identity unverified; skipped to prevent duplicate. Op.38 first-edition candidate added. Next Op.99."
+    "last_work": "Op.99",
+    "note": "Brahms original cello sonatas Op.38 and Op.99 researched. Next cycle: review earlier queue inventory and restart Haydn quartets where still unverified; do not add duplicates."
   },
   "items": [
     {
@@ -14315,6 +14315,11 @@
           "url": "https://imslp.org/wiki/Cello_Sonata_No.1%2C_Op.38_%28Brahms%2C_Johannes%29",
           "checked_at": "2026-11-28T19:19:47+09:00",
           "detail": "IMSLP #22992 score, #56206 cello; bibliographic metadata only"
+        },
+        {
+          "url": "https://imslp.org/wiki/Cello_Sonata_No.1%2C_Op.38_%28Brahms%2C_Johannes%29",
+          "checked_at": "2026-11-28T20:15:30+09:00",
+          "detail": "IMSLP #84396 monochrome complete score+cello part, 33pp, later issue, N. Simrock plate 6476; PDF not fetched."
         }
       ],
       "research_evidence": [
@@ -14332,7 +14337,95 @@
         "rights": "unverified_japan_republication",
         "publish": "not_approved"
       },
-      "notes": "Candidate only. Black-and-white requirement favors cello #56206, but score #22992 is a color scan with digital watermark and must be rejected or replaced with suitable monochrome source before selection. No PDF retrieved; page integrity, plate matching, rights and public-site status unresolved."
+      "notes": "Candidate only. Black-and-white requirement favors cello #56206, but score #22992 is a color scan with digital watermark and must be rejected or replaced with suitable monochrome source before selection. No PDF retrieved; page integrity, plate matching, rights and public-site status unresolved. IMSLP also lists monochrome combined complete score+cello #84396, N. Simrock 1866 plate 6476 later issue (33pp); candidate substitute for color #22992, but issue/quality unverified; do not mark approved."
+    },
+    {
+      "id": "brahms-cello-sonata-2-op99-simrock-first-1887",
+      "composer": "Johannes Brahms",
+      "category": "cello_sonata",
+      "work_title": "Cello Sonata No.2 in F major",
+      "opus_catalog": "Op.99",
+      "work_url": "https://imslp.org/wiki/Cello_Sonata_No.2%2C_Op.99_%28Brahms%2C_Johannes%29",
+      "edition": {
+        "publisher": "N. Simrock, Berlin",
+        "publication_date": "1887",
+        "editor": "First edition (no modern editor identified)",
+        "plate": "8750",
+        "imslp_file_id": "23143",
+        "scope": "Complete piano-cello score, 32pp; first edition",
+        "edition_comparison": "Simrock 1887 first-edition score #23143; later Universal Edition reissue has monochrome cello part #48981 and score #17530; do not assert same physical issue or matching engraving without inspection."
+      },
+      "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.2%2C_Op.99_%28Brahms%2C_Johannes%29",
+      "source_file_url": null,
+      "score_parts": [
+        "cello",
+        "piano"
+      ],
+      "status": "research_needed",
+      "rights_status": "unknown",
+      "owner": "gpt",
+      "updated_at": "2026-11-28",
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "23143",
+        "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.2%2C_Op.99_%28Brahms%2C_Johannes%29",
+        "publisher": "N. Simrock",
+        "editor": "First edition",
+        "publication_date": "1887",
+        "scope": "Complete score, 32pp, piano and cello staves; PDF uninspected",
+        "evidence": "IMSLP work-page metadata checked 2026-11-28 20:15 JST"
+      },
+      "part_inventory": {
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "48981",
+          "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.2%2C_Op.99_%28Brahms%2C_Johannes%29",
+          "publisher": "N. Simrock / Universal Edition reissue",
+          "editor": "First edition (reissue)",
+          "scope": "Monochrome cello part, 8pp; reissue after 1901, issue match not verified",
+          "evidence": "IMSLP work-page metadata checked 2026-11-28 20:15 JST; no PDF fetched"
+        },
+        "piano": {
+          "status": "identified",
+          "imslp_file_id": "23143",
+          "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.2%2C_Op.99_%28Brahms%2C_Johannes%29",
+          "publisher": "N. Simrock",
+          "editor": "First edition",
+          "scope": "Piano part in complete score; standalone piano-only part not identified",
+          "evidence": "IMSLP work-page metadata checked 2026-11-28 20:15 JST"
+        }
+      },
+      "score_part_edition_match": "unknown",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "Same-issue original 1887 separate cello part not verified",
+        "Independent piano-only part not identified (piano in complete score)",
+        "Four movements and physical edition match not PDF-verified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Cello_Sonata_No.2%2C_Op.99_%28Brahms%2C_Johannes%29",
+          "checked_at": "2026-11-28T20:15:30+09:00",
+          "detail": "IMSLP #23143 Simrock 1887 first-edition score; #48981 monochrome cello part from later UE reissue, not assumed same issue. Alternative Schott 1922 score #71286 cello #71287; Klengel Peters #274367 combined."
+        }
+      ],
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Cello_Sonata_No.2%2C_Op.99_%28Brahms%2C_Johannes%29",
+          "verified": "Brahms Op.99, 4 movements, cello+piano; first published Berlin N. Simrock April 1887 plate 8750; first edition score #23143; later UE reissue cello #48981."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified_different_issue",
+        "pdf_integrity": "unchecked",
+        "duplication": "main_203_works_no_exact_op99_entry_live_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "notes": "Candidate only. Monochrome cello part #48981 is from later reissue and cannot be certified as same issue as first-edition score #23143. No PDFs fetched, quality, movements, engraving consistency, Japanese rights and public deployment unverified."
     }
   ],
   "last_updated": "2026-11-28",
@@ -14495,18 +14588,17 @@
     "notes": "No live site verification. Main catalog source can lag deployment. Rights pending; no publication action."
   },
   "last_site_reconciliation": {
-    "checked_at": "2026-11-28T19:19:47+09:00",
+    "checked_at": "2026-11-28T20:15:30+09:00",
     "main_catalog_path": "frontend/src/data/scores/catalog.json",
     "main_catalog_blob_sha": "4cd09cd46263fbaaf53282aadfb22151c0821d2b",
     "main_catalog_work_count": 203,
-    "main_existing_work": "brahms-violin-sonata-3 and brahms-violin-sonatas (Op.108); Op.38 absent",
-    "main_existing_assets": "Op.108 has separate violin and piano assets plus grouped old-site score; provenance of existing edition unknown",
+    "main_existing_work": "No exact Brahms cello sonata Op.99 work identified in main catalog; live site unverified",
     "live_site_status": "unverified_canonical_url_not_established",
-    "site_url_evidence": "frontend/next.config.ts NEXT_PUBLIC_SITE_URL defaults empty; GitHub Pages preview is not proof of live deployment",
+    "site_url_evidence": "main frontend/next.config.ts NEXT_PUBLIC_SITE_URL defaults empty; GitHub Pages described as preview, not canonical Sakura production",
     "work_branch": "coordination/gpt-claude-score-queue",
     "pr_number": 10,
-    "pr_state": "open",
-    "edition_duplicate_status": "Op.108 skipped because matching edition cannot be excluded; Op.38 candidate not in main catalog but live site unverified",
-    "note": "No live site confirmation; no publication inferred. Main catalog SHA unchanged from prior audit. PDF content and rights unverified."
+    "pr_state": "open (GitHub open PR search)",
+    "edition_duplicate_status": "No Op.99 candidate previously in 195-item queue; no same edition detected in main catalog, public-site comparison incomplete",
+    "note": "main catalog and work-branch queue checked separately; no PDF fetched, no rights/publication changes."
   }
 }
