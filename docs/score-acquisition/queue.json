@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Beethoven",
     "stage": "violin_sonata",
-    "last_work": "Op.12 No.2",
-    "note": "Main catalog already contains violin sonatas Nos.1–10 as old-site editions; edition-level reconciliation in progress. Henle 1974 score listings for Nos.1–2 researched; separate violin parts, PDF quality and Japan rights unverified. Next inspect No.3 and historical editions without duplicating existing works."
+    "last_work": "Op.23",
+    "note": "IMSLP Peters/Joachim historical edition candidates Nos.3–4 metadata researched; existing work catalog entries must be edition-level reconciled. Public site and main edition inventory not fully verified; no absence claim. Next No.5 Op.24."
   },
   "items": [
     {
@@ -12518,6 +12518,184 @@
       "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null
+    },
+    {
+      "id": "beethoven-violin-sonata-3-peters-joachim-1901-research",
+      "composer": "Ludwig van Beethoven",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata No.3 in D major",
+      "opus_catalog": "Op.12 No.3",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_No.3%2C_Op.12_No.3_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "C.F. Peters",
+        "publication_date": "1901",
+        "editor": "Joseph Joachim",
+        "scope": "Complete piano-and-violin score (IMSLP metadata only)",
+        "imslp_file_id": "04219",
+        "plate": "8762",
+        "edition_comparison": "Historical Joachim/Peters edition; compare against old-site catalog edition and other critical editions before selection; PDF not inspected."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.3%2C_Op.12_No.3_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "04219",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.3%2C_Op.12_No.3_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "C.F. Peters",
+        "editor": "Joseph Joachim",
+        "publication_date": "1901",
+        "scope": "Complete score; page and movement completeness unverified",
+        "evidence": "IMSLP Scores and Parts listing; PDF not downloaded"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "04220",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.3%2C_Op.12_No.3_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "C.F. Peters",
+          "editor": "Joseph Joachim",
+          "scope": "Violin part; completeness unverified",
+          "evidence": "IMSLP Scores and Parts listing; PDF not downloaded"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.3%2C_Op.12_No.3_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "C.F. Peters",
+          "editor": "Joseph Joachim",
+          "scope": "Piano music in complete score; independent part not identified",
+          "evidence": "No separate piano part verified for this edition"
+        }
+      },
+      "score_part_edition_match": "same_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "independent_piano_part_not_identified",
+        "actual_pdf_completeness_unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.3%2C_Op.12_No.3_%28Beethoven%2C_Ludwig_van%29",
+          "score_file_id": "04219",
+          "violin_file_id": "04220",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP listing metadata only"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.3%2C_Op.12_No.3_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP lists C.F. Peters (1901), Joseph Joachim editor, score #04219, violin part #04220. PDF contents not examined."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_editor_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_edition_id_checked_main_catalog_edition_and_live_site_not_fully_verified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Existing SONARIA main reportedly includes Beethoven violin sonatas 1–10, so this is an alternate edition candidate only, NOT a newly absent work. Live site URL/deployment and main edition-level inventory not fully verified this run; do not assert missing. No rights approval or PDF access.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-violin-sonata-4-peters-joachim-1901-research",
+      "composer": "Ludwig van Beethoven",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata No.4 in A minor",
+      "opus_catalog": "Op.23",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_No.4%2C_Op.23_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "C.F. Peters",
+        "publication_date": "1901",
+        "editor": "Joseph Joachim",
+        "scope": "Complete piano-and-violin score (IMSLP metadata only)",
+        "imslp_file_id": "04221",
+        "plate": "8762",
+        "edition_comparison": "Historical Joachim/Peters edition; compare against old-site catalog edition and other critical editions before selection; PDF not inspected."
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.4%2C_Op.23_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "04221",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.4%2C_Op.23_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "C.F. Peters",
+        "editor": "Joseph Joachim",
+        "publication_date": "1901",
+        "scope": "Complete score; page and movement completeness unverified",
+        "evidence": "IMSLP Scores and Parts listing; PDF not downloaded"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "04222",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.4%2C_Op.23_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "C.F. Peters",
+          "editor": "Joseph Joachim",
+          "scope": "Violin part; completeness unverified",
+          "evidence": "IMSLP Scores and Parts listing; PDF not downloaded"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.4%2C_Op.23_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "C.F. Peters",
+          "editor": "Joseph Joachim",
+          "scope": "Piano music in complete score; independent part not identified",
+          "evidence": "No separate piano part verified for this edition"
+        }
+      },
+      "score_part_edition_match": "same_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "independent_piano_part_not_identified",
+        "actual_pdf_completeness_unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.4%2C_Op.23_%28Beethoven%2C_Ludwig_van%29",
+          "score_file_id": "04221",
+          "violin_file_id": "04222",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP listing metadata only"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.4%2C_Op.23_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP lists C.F. Peters (1901), Joseph Joachim editor, score #04221, violin part #04222. PDF contents not examined."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_editor_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_edition_id_checked_main_catalog_edition_and_live_site_not_fully_verified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Existing SONARIA main reportedly includes Beethoven violin sonatas 1–10, so this is an alternate edition candidate only, NOT a newly absent work. Live site URL/deployment and main edition-level inventory not fully verified this run; do not assert missing. No rights approval or PDF access.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
     }
   ],
   "last_updated": "2026-11-28",
@@ -12678,5 +12856,16 @@
     "site_duplicate_check": "Op.12 Nos.1-2 exist in main as works; Henle 1974 edition is distinct from old-site edition metadata, but PDF identity/hash not checked",
     "publication_status_changes": "none",
     "notes": "No live site verification. Main catalog source can lag deployment. Rights pending; no publication action."
+  },
+  "last_site_reconciliation": {
+    "checked_at": "2026-11-28",
+    "main_rules_checked": [
+      "CLAUDE.md",
+      "docs/workflow.md"
+    ],
+    "live_site_status": "unverified_official_url_not_established",
+    "main_work_inventory_status": "not_fully_verified",
+    "pr_queue_status": "checked",
+    "note": "No claim that candidate editions are absent from public site; verify work/edition/assets before Claude download."
   }
 }
