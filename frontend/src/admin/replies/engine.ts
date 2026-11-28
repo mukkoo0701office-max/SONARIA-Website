@@ -8,7 +8,7 @@
 //   - 署名は個人名ではなく SONARIA
 //   - 会場・演奏時間の質問は入れない（運営者が状況に応じて書き足す。2026-11-28 決定）
 
-import type { Locale } from "@/data/site";
+import type { Locale } from "@/lib/i18n";
 import type { Facts, SubmissionKind } from "./describe";
 
 export type Purpose =

@@ -3,7 +3,7 @@
 // 将来フォームの項目が増減しても、知らない項目は「その他の項目」として原文のまま出す（過去の回答を落とさない）。
 
 import { getDictionary } from "@/data/dictionaries";
-import type { Locale } from "@/data/site";
+import type { Locale } from "@/lib/i18n";
 import { lessonPlans } from "@/data/orders/config";
 
 export type SubmissionKind = "lesson" | "bowing" | "recording" | "performance_quote" | "teacher_application";
