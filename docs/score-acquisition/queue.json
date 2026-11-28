@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Beethoven",
     "stage": "cello_sonata",
-    "last_work": "Op.96",
-    "note": "Violin sonatas Nos.9-10 Peters/Joachim edition metadata researched; next Beethoven cello sonatas Op.5 Nos.1-2. Live published site not verified."
+    "last_work": "Op.5 No.2",
+    "note": "Op.5 Nos.1-2 Artaria 1797 first-edition parts candidates added; next Op.69. Live site not verified; main catalog checked 2026-11-28."
   },
   "items": [
     {
@@ -13202,6 +13202,202 @@
       "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null
+    },
+    {
+      "id": "beethoven-cello-sonata-op5-no1-artaria-1797",
+      "composer": "Ludwig van Beethoven",
+      "category": "cello_sonata",
+      "work_title": "Cello Sonata No.1 in F major",
+      "opus_catalog": "Op.5 No.1",
+      "work_url": "https://imslp.org/wiki/Cello_Sonata_No.1_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "Artaria",
+        "publication_date": "1797",
+        "editor": "First edition; named editor unknown",
+        "plate": "689",
+        "scope": "Piano and cello; original first-edition source",
+        "imslp_file_id": "50271",
+        "edition_comparison": "Historically authoritative first edition; no modern critical corrections assumed. Combined source for Op.5 Nos.1-2 exists; page-by-page and movement-level integrity not checked."
+      },
+      "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.1_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "piano",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/2_Cello_Sonatas%2C_Op.5_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP lists Vienna Artaria 1797 first edition, plate 689; collection covers both sonatas; grouped parts #50271, #894028 and separate piano/cello #520151/#520152."
+        },
+        {
+          "url": "https://imslp.org/wiki/Cello_Sonata_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP identifies Cello Sonata No.1 in F major, Op.5 No.1; PDF not inspected."
+        }
+      ],
+      "score_inventory": {
+        "status": "unverified",
+        "imslp_file_id": "50271",
+        "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.1_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "Artaria",
+        "editor": "First edition",
+        "publication_date": "1797",
+        "scope": "Complete parts bundle; NOT independently verified as a full score",
+        "evidence": "IMSLP metadata; file content not inspected"
+      },
+      "part_inventory": {
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": "520151",
+          "edition_url": "https://imslp.org/wiki/2_Cello_Sonatas%2C_Op.5_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Artaria",
+          "editor": "First edition",
+          "scope": "piano part; not PDF-verified",
+          "evidence": "IMSLP Scores and Parts metadata"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "520152",
+          "edition_url": "https://imslp.org/wiki/2_Cello_Sonatas%2C_Op.5_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Artaria",
+          "editor": "First edition",
+          "scope": "cello part; not PDF-verified",
+          "evidence": "IMSLP Scores and Parts metadata"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "same_edition",
+        "evidence": "IMSLP groups these assets under Artaria 1797 first edition; page-level match unverified"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "independent_full_score_not_identified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Cello_Sonata_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "detail": "IMSLP listing only, no PDF download or inspection"
+        },
+        {
+          "url": "https://imslp.org/wiki/2_Cello_Sonatas%2C_Op.5_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "detail": "Artaria first-edition source metadata; bundle contains both works, segmentation unverified"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_main_work_not_found_live_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Artaria first edition is historically significant but may contain original engraving errors. Score bundle is parts, not confirmed full score. Verify sonata-specific page boundaries and separate piano/cello parts; no published site verification. No rights or quality approval.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-cello-sonata-op5-no2-artaria-1797",
+      "composer": "Ludwig van Beethoven",
+      "category": "cello_sonata",
+      "work_title": "Cello Sonata No.2 in G minor",
+      "opus_catalog": "Op.5 No.2",
+      "work_url": "https://imslp.org/wiki/Cello_Sonata_No.2_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "Artaria",
+        "publication_date": "1797",
+        "editor": "First edition; named editor unknown",
+        "plate": "689",
+        "scope": "Piano and cello; original first-edition source",
+        "imslp_file_id": "534370",
+        "edition_comparison": "Historically authoritative first edition; no modern critical corrections assumed. Combined source for Op.5 Nos.1-2 exists; page-by-page and movement-level integrity not checked."
+      },
+      "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.2_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "piano",
+        "cello"
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/2_Cello_Sonatas%2C_Op.5_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP lists Vienna Artaria 1797 first edition, plate 689; collection covers both sonatas; grouped parts #50271, #894028 and separate piano/cello #520151/#520152."
+        },
+        {
+          "url": "https://imslp.org/wiki/Cello_Sonata_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP identifies Cello Sonata No.2 in G minor, Op.5 No.2; PDF not inspected."
+        }
+      ],
+      "score_inventory": {
+        "status": "unverified",
+        "imslp_file_id": "534370",
+        "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.2_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "Artaria",
+        "editor": "First edition",
+        "publication_date": "1797",
+        "scope": "Complete parts bundle; NOT independently verified as a full score",
+        "evidence": "IMSLP metadata; file content not inspected"
+      },
+      "part_inventory": {
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": "534371",
+          "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Artaria",
+          "editor": "First edition",
+          "scope": "piano part; not PDF-verified",
+          "evidence": "IMSLP Scores and Parts metadata"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "534372",
+          "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Artaria",
+          "editor": "First edition",
+          "scope": "cello part; not PDF-verified",
+          "evidence": "IMSLP Scores and Parts metadata"
+        }
+      },
+      "score_part_edition_match": {
+        "status": "same_edition",
+        "evidence": "IMSLP groups these assets under Artaria 1797 first edition; page-level match unverified"
+      },
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "independent_full_score_not_identified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Cello_Sonata_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "detail": "IMSLP listing only, no PDF download or inspection"
+        },
+        {
+          "url": "https://imslp.org/wiki/2_Cello_Sonatas%2C_Op.5_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "detail": "Artaria first-edition source metadata; bundle contains both works, segmentation unverified"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_main_work_not_found_live_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Artaria first edition is historically significant but may contain original engraving errors. Score bundle is parts, not confirmed full score. Verify sonata-specific page boundaries and separate piano/cello parts; no published site verification. No rights or quality approval.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
     }
   ],
   "last_updated": "2026-11-28",
@@ -13368,9 +13564,10 @@
     "main_catalog_path": "frontend/src/data/scores/catalog.json",
     "main_catalog_blob_sha": "4cd09cd46263fbaaf53282aadfb22151c0821d2b",
     "main_catalog_generated_at": "2026-11-27T04:22:18Z",
-    "main_no10": "work listed, old-site edition",
+    "main_catalog_work_count": 203,
+    "beethoven_cello_sonatas_in_main": 0,
     "live_site_status": "unverified_canonical_url_not_established",
-    "pr_state": "not_independently_verified",
-    "note": "Main source and branch queue checked; production URL and edition/PDF identity not established. No rights/publication changes."
+    "pr_state": "open_checked_2026-11-28",
+    "note": "Main catalog includes no Beethoven cello sonatas Op.5 Nos.1-2. GitHub Pages preview base path noted but not treated as production URL. No PDF or rights/publication changes."
   }
 }
