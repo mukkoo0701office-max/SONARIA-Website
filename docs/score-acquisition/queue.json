@@ -37,9 +37,9 @@
   ],
   "cursor": {
     "composer": "Brahms",
-    "stage": "violin_sonata",
-    "last_work": "Op.100",
-    "note": "Op.78 and Op.100 Simrock first editions researched as edition candidates; main has grouped Brahms violin sonatas Nos.1–3 old-site scores, identity of old PDFs not established; next Op.108."
+    "stage": "cello_sonata",
+    "last_work": "Op.38",
+    "note": "Op.108 Simrock 1889 #28896 inspected as metadata only; main already contains standalone brahms-violin-sonata-3 with violin+piano assets and grouped old-site scores, edition identity unverified; skipped to prevent duplicate. Op.38 first-edition candidate added. Next Op.99."
   },
   "items": [
     {
@@ -14246,6 +14246,93 @@
         "rights": "unknown"
       },
       "notes": "IMSLP labels first edition; #86367 score and #86368 violin part, Sibley scan. Main old-site edition has No.2 score PDF; edition identity/hash unknown. Rights in Japan unknown. No PDF download, approval, or publication."
+    },
+    {
+      "id": "brahms-cello-sonata-1-op38-simrock-first-1866",
+      "composer": "Johannes Brahms",
+      "category": "cello_sonata",
+      "work_title": "Cello Sonata No.1 in E minor",
+      "opus_catalog": "Op.38",
+      "work_url": "https://imslp.org/wiki/Cello_Sonata_No.1%2C_Op.38_%28Brahms%2C_Johannes%29",
+      "edition": {
+        "publisher": "N. Simrock, Bonn",
+        "publication_date": "1866",
+        "editor": "First edition (no modern editor identified)",
+        "plate": "6476",
+        "imslp_file_id": "22992",
+        "scope": "First-edition score and separate cello part; grayscale cello part and color watermarked score; inspect edition alignment",
+        "edition_comparison": "First-edition score #22992 (26pp) with cello part #56206 (8pp); combined later issue #84396 exists, but do not mix issues without checking."
+      },
+      "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.1%2C_Op.38_%28Brahms%2C_Johannes%29",
+      "source_file_url": null,
+      "score_parts": [
+        "cello",
+        "piano"
+      ],
+      "status": "research_needed",
+      "rights_status": "unknown",
+      "owner": "gpt",
+      "updated_at": "2026-11-28",
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "22992",
+        "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.1%2C_Op.38_%28Brahms%2C_Johannes%29",
+        "publisher": "N. Simrock",
+        "editor": "First edition",
+        "publication_date": "1866",
+        "scope": "Complete score, 26 pages; PDF uninspected",
+        "evidence": "IMSLP work-page score/parts metadata checked 2026-11-28 19:19 JST; PDF not retrieved"
+      },
+      "part_inventory": {
+        "cello": {
+          "status": "identified",
+          "imslp_file_id": "56206",
+          "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.1%2C_Op.38_%28Brahms%2C_Johannes%29",
+          "publisher": "N. Simrock",
+          "editor": "First edition",
+          "scope": "Separate cello part, 8 pages; PDF uninspected",
+          "evidence": "IMSLP work-page score/parts metadata checked 2026-11-28 19:19 JST; PDF not retrieved"
+        },
+        "piano": {
+          "status": "identified",
+          "imslp_file_id": "22992",
+          "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.1%2C_Op.38_%28Brahms%2C_Johannes%29",
+          "publisher": "N. Simrock",
+          "editor": "First edition",
+          "scope": "Piano part within complete score, not independently identified",
+          "evidence": "IMSLP work-page score/parts metadata checked 2026-11-28 19:19 JST; PDF not retrieved"
+        }
+      },
+      "score_part_edition_match": "unknown",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "Independent piano-only part not identified; piano part is in complete score",
+        "Score/part issue and movement completeness unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Cello_Sonata_No.1%2C_Op.38_%28Brahms%2C_Johannes%29",
+          "checked_at": "2026-11-28T19:19:47+09:00",
+          "detail": "IMSLP #22992 score, #56206 cello; bibliographic metadata only"
+        }
+      ],
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Cello_Sonata_No.1%2C_Op.38_%28Brahms%2C_Johannes%29",
+          "verified": "N. Simrock 1866 first edition plate 6476; score #22992, cello #56206; 3 movements"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "main_203_works_no_op38_entry_but_live_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "notes": "Candidate only. Black-and-white requirement favors cello #56206, but score #22992 is a color scan with digital watermark and must be rejected or replaced with suitable monochrome source before selection. No PDF retrieved; page integrity, plate matching, rights and public-site status unresolved."
     }
   ],
   "last_updated": "2026-11-28",
@@ -14408,19 +14495,18 @@
     "notes": "No live site verification. Main catalog source can lag deployment. Rights pending; no publication action."
   },
   "last_site_reconciliation": {
-    "checked_at": "2026-11-28T18:16:51+09:00",
+    "checked_at": "2026-11-28T19:19:47+09:00",
     "main_catalog_path": "frontend/src/data/scores/catalog.json",
     "main_catalog_blob_sha": "4cd09cd46263fbaaf53282aadfb22151c0821d2b",
     "main_catalog_work_count": 203,
-    "main_existing_work": "brahms-violin-sonatas (Nos.1-3)",
-    "main_existing_assets": "3 old-site score PDF references for Op.78/100/108; no separate violin part assets listed",
+    "main_existing_work": "brahms-violin-sonata-3 and brahms-violin-sonatas (Op.108); Op.38 absent",
+    "main_existing_assets": "Op.108 has separate violin and piano assets plus grouped old-site score; provenance of existing edition unknown",
     "live_site_status": "unverified_canonical_url_not_established",
-    "site_url_evidence": "frontend/next.config.ts NEXT_PUBLIC_SITE_URL defaults empty; GitHub Pages is preview only",
+    "site_url_evidence": "frontend/next.config.ts NEXT_PUBLIC_SITE_URL defaults empty; GitHub Pages preview is not proof of live deployment",
     "work_branch": "coordination/gpt-claude-score-queue",
     "pr_number": 10,
     "pr_state": "open",
-    "pr_head_sha_before": "8f763c30a3f9f0382e9aeda0012f185968f6611c",
-    "edition_duplicate_status": "Main old-site PDFs have unknown provenance/edition; no same-edition conclusion or rights approval",
-    "note": "Main catalog and work PR checked independently; no live-site verification, no publication inferred. Claude changes not conclusively attributable."
+    "edition_duplicate_status": "Op.108 skipped because matching edition cannot be excluded; Op.38 candidate not in main catalog but live site unverified",
+    "note": "No live site confirmation; no publication inferred. Main catalog SHA unchanged from prior audit. PDF content and rights unverified."
   }
 }
