@@ -3,7 +3,7 @@ import WorkList from "@/components/library/WorkList";
 import { getDictionary } from "@/data/dictionaries";
 import { categories, categoryLocales, composerLocales, featuredWorks, newestWorks, publishedComposers, worksByComposer } from "@/data/scores/catalog";
 import { libraryPaths } from "@/data/scores/paths";
-import { localizedPath, type Locale } from "@/lib/i18n";
+import { tr, localizedPath, type Locale } from "@/lib/i18n";
 
 // 楽譜検索ページの下に出す「作曲家から探す」「編成・曲種から探す」「おすすめ」「新着」。
 // 生成済み HTML にリンクが含まれるよう、サーバー側で描画する（検索エンジンが作品ページへたどれる）
@@ -37,7 +37,7 @@ export default function LibraryBrowse({ locale }: { locale: Locale }) {
           {publishedComposers.map((c) => (
             <li key={c.id}>
               <Link href={localizedPath(composerLocales(c).includes(locale) ? locale : "ja", libraryPaths.composer(c.id))} className={chip}>
-                {(c.short ?? c.name)[locale]} <span className="text-muted">({worksByComposer(c.id).length})</span>
+                {tr(c.short ?? c.name, locale)} <span className="text-muted">({worksByComposer(c.id).length})</span>
               </Link>
             </li>
           ))}
@@ -52,7 +52,7 @@ export default function LibraryBrowse({ locale }: { locale: Locale }) {
             {categories.map((c) => (
               <li key={c.id}>
                 <Link href={localizedPath(categoryLocales(c.id).includes(locale) ? locale : "ja", libraryPaths.category(c.id))} className={chip}>
-                  {c.name[locale]} <span className="text-muted">({c.works.length})</span>
+                  {tr(c.name, locale)} <span className="text-muted">({c.works.length})</span>
                 </Link>
               </li>
             ))}

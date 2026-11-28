@@ -8,7 +8,7 @@ import { getDictionary } from "@/data/dictionaries";
 import { eras, formations, genres, instruments, type WorkSummary } from "@/data/works";
 import { countBy, filtersFromSearch, filtersToSearch, initialFilters, matchesFilters, playersKey, sheetKeys, sortValues, type FacetKey, type ScoreFilters, type SortKey } from "@/lib/scores/filters";
 import { playerCounts, sheetKinds } from "@/lib/scores/sheetType";
-import type { Locale } from "@/lib/i18n";
+import { tr, type Locale } from "@/lib/i18n";
 
 // 承認済みプロトタイプ（prototypes/score-search-ui-v1.html）の検索 UI を部品化したもの。
 // 振る舞いの基準: docs/SONARIA_UI_DESIGN_SYSTEM_v1.0.md「Search page reference interaction contract」
@@ -52,8 +52,8 @@ export default function ScoreSearch({ locale, works, isDemoData }: { locale: Loc
         .filter((w) => matchesFilters(w, filters))
         .sort((a, b) => {
           if (filters.sort === "pdfCount") return b.pdfCount - a.pdfCount;
-          if (filters.sort === "composer") return a.composer[locale].localeCompare(b.composer[locale], locale) || a.title[locale].localeCompare(b.title[locale], locale);
-          return a.title[locale].localeCompare(b.title[locale], locale);
+          if (filters.sort === "composer") return tr(a.composer, locale).localeCompare(tr(b.composer, locale), locale) || tr(a.title, locale).localeCompare(tr(b.title, locale), locale);
+          return tr(a.title, locale).localeCompare(tr(b.title, locale), locale);
         }),
     [filters, locale, works],
   );
@@ -74,7 +74,7 @@ export default function ScoreSearch({ locale, works, isDemoData }: { locale: Loc
   // 作曲家の選択肢（作品数の多い順。表示名は作品データから）
   const composerOptions = useMemo(() => {
     const names = new Map<string, string>();
-    for (const w of works) names.set(w.composerId, w.composer[locale]);
+    for (const w of works) names.set(w.composerId, tr(w.composer, locale));
     return [...names.entries()]
       .map(([id, name]) => ({ id, name, n: counts.composer.get(id) ?? 0 }))
       .filter((c) => c.n > 0 || c.id === filters.composer)

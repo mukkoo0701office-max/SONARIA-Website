@@ -4,7 +4,7 @@ import { useState } from "react";
 import { amazonSearch } from "@/data/affiliate/amazonSearch";
 import { getDictionary } from "@/data/dictionaries";
 import { amazonKeyword, amazonSearchKinds, amazonSearchUrl, type AmazonSearchKind } from "@/lib/affiliate/amazonSearch";
-import type { Locale } from "@/lib/i18n";
+import { jaOrEn, type Locale } from "@/lib/i18n";
 
 type Props = {
   locale: Locale;
@@ -18,7 +18,7 @@ export default function AmazonSearchWidget({ locale, work }: Props) {
   const lib = getDictionary(locale).library;
   const t = lib.ad;
   const [kind, setKind] = useState<AmazonSearchKind>("score");
-  const keyword = amazonKeyword(work, kind, locale);
+  const keyword = amazonKeyword(work, kind, jaOrEn(locale));
   const s = lib.amazonSearch;
   return (
     <aside aria-labelledby="amazon-search" className="my-8 overflow-hidden rounded-card border border-line bg-card">

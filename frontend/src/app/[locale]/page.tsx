@@ -9,7 +9,7 @@ import { formations } from "@/data/works";
 import { libraryPaths } from "@/data/scores/paths";
 import { getDictionary } from "@/data/dictionaries";
 import { absoluteUrl } from "@/lib/seo";
-import { localizedPath, type Locale } from "@/lib/i18n";
+import { tr, localizedPath, type Locale } from "@/lib/i18n";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -25,7 +25,7 @@ export default async function HomePage({ params }: Props) {
   const topComposers = [...publishedComposers]
     .sort((a, b) => worksByComposer(b.id).length - worksByComposer(a.id).length || a.name.en.localeCompare(b.name.en))
     .slice(0, 8)
-    .map((c) => ({ id: c.id, name: (c.short ?? c.name)[locale], href: localizedPath(composerLocales(c).includes(locale) ? locale : "ja", libraryPaths.composer(c.id)) }));
+    .map((c) => ({ id: c.id, name: tr(c.short ?? c.name, locale), href: localizedPath(composerLocales(c).includes(locale) ? locale : "ja", libraryPaths.composer(c.id)) }));
   // 入力補完の候補に使う作曲家（作品がある全員）。リンク先は実在するページだけ
   const suggestComposers = publishedComposers.map((c) => ({
     id: c.id,

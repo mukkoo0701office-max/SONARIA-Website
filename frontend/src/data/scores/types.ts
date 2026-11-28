@@ -5,9 +5,10 @@
 //        → 版（Edition。権利の状態を持つ）→ ファイル（ScoreAsset。パート別の PDF）
 // 方針: 確認できない項目は null／未設定のままにし、画面にも構造化データにも出さない（推測で埋めない）。
 
-import type { Locale } from "@/lib/i18n";
+import type { Locale, LocalizedText } from "@/lib/i18n";
 
-export type Localized = Record<Locale, string>;
+// ja・en は必須、他の言語は任意（表示は tr() で、未訳なら英語・日本語で補う）
+export type Localized = LocalizedText;
 export type PartialLocalized = Partial<Record<Locale, string>>;
 
 /** 出典（作品情報・作曲家情報の根拠）。url が無い資料は書名などを label に書く */

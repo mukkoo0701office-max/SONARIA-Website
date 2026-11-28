@@ -73,6 +73,15 @@ jobs:
           if grep -rq --include="*.html" "pagead2.googlesyndication.com" out/; then echo "AdSense script must not load before it is connected"; exit 1; fi
           if grep -rq --include="*.html" "data-ad-slot-preview" out/; then echo "AdSense preview slot leaked into production build"; exit 1; fi
 
+      # 欧州 4 言語を公開しても型が崩れないこと（全言語を公開した状態を仮に作って型チェックし、元に戻す）
+      - name: Type check with all locales published
+        run: |
+          cp src/lib/i18n.ts /tmp/i18n.ts.bak
+          sed -i 's/^export const locales = .*/export const locales = ["ja", "en", "de", "fr", "es", "it"] as const;/' src/lib/i18n.ts
+          if npx tsc --noEmit -p .; then status=0; else status=1; fi
+          cp /tmp/i18n.ts.bak src/lib/i18n.ts
+          exit $status
+
       # 翻訳の状態（原文が更新された翻訳を検出。公開中の翻訳が古ければ失敗）
       - name: Translation status
         run: node scripts/translation-status.mjs

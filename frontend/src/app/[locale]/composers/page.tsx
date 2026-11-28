@@ -6,7 +6,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { getDictionary } from "@/data/dictionaries";
 import { composerLocales, publishedComposers, worksByComposer } from "@/data/scores/catalog";
 import { libraryPaths } from "@/data/scores/paths";
-import { isLocale, localizedPath, type Locale } from "@/lib/i18n";
+import { tr, isLocale, localizedPath, type Locale } from "@/lib/i18n";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -30,7 +30,7 @@ export default async function ComposersPage({ params }: Props) {
     name: lib.composer.indexTitle,
     itemListElement: publishedComposers.map((c, i) => {
       const url = absoluteUrl(localizedPath(composerLocales(c).includes(locale) ? locale : "ja", libraryPaths.composer(c.id)));
-      return { "@type": "ListItem", position: i + 1, name: c.name[locale], ...(url ? { url } : {}) };
+      return { "@type": "ListItem", position: i + 1, name: tr(c.name, locale), ...(url ? { url } : {}) };
     }),
   };
   return (
@@ -45,7 +45,7 @@ export default async function ComposersPage({ params }: Props) {
               href={localizedPath(composerLocales(c).includes(locale) ? locale : "ja", libraryPaths.composer(c.id))}
               className="block rounded-card border border-line bg-card p-[13px] hover:border-navy"
             >
-              <span className="block font-bold">{c.name[locale]}</span>
+              <span className="block font-bold">{tr(c.name, locale)}</span>
               <span className="mt-0.5 block text-xs text-muted">
                 {[c.born?.slice(0, 4), c.died?.slice(0, 4)].filter(Boolean).join("–")} ・ {lib.category.works(worksByComposer(c.id).length)}
                 {!composerLocales(c).includes(locale) && <> ・ {lib.onlyJapanese}</>}

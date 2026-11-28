@@ -20,7 +20,7 @@ import { getDictionary } from "@/data/dictionaries";
 import { prefectures } from "@/data/prefectures";
 import { pagePaths } from "@/data/site";
 import { audiences, instrumentCategories, instrumentCategoryOf, lessonFormats, type Audience, type Instrument, type LessonFormat } from "@/data/teachers";
-import { localizedPath, type Locale } from "@/lib/i18n";
+import { jaOrEn, tr, localizedPath, type Locale } from "@/lib/i18n";
 import { submitTeacherApplication, withReceipt, type SubmitResult } from "@/lib/orders/submit";
 
 type Step = "edit" | "confirm" | "done";
@@ -131,7 +131,7 @@ export default function TeacherRegistrationForm({ locale }: { locale: Locale }) 
   const err = (k: ErrorKey) => showErrors && errors[k];
   const labels = { required: f.required, optional: f.optional };
   const paren = (a: string, b: string) => (locale === "ja" ? `${a}（${b}）` : `${a} (${b})`);
-  const prefName = (code: string) => prefectures.find((p) => p.code === code)?.[locale] ?? "";
+  const prefName = (code: string) => tr(prefectures.find((p) => p.code === code), locale);
 
   function rows(): [string, string][] {
     return [
@@ -268,7 +268,7 @@ export default function TeacherRegistrationForm({ locale }: { locale: Locale }) 
               <option value="">{t.prefectureSelect}</option>
               {prefectures.map((p) => (
                 <option key={p.code} value={p.code}>
-                  {p[locale]}
+                  {tr(p, locale)}
                 </option>
               ))}
             </select>
@@ -400,9 +400,9 @@ export default function TeacherRegistrationForm({ locale }: { locale: Locale }) 
         <TextField id="tr-email" type="email" label={f.email} value={email} onChange={setEmail} required labels={labels} error={err("email")} help={t.emailHelp} autoComplete="email" />
         <p className="rounded-button bg-paper p-3 text-[12px] leading-relaxed text-muted sm:col-span-2">{t.documentsNote}</p>
         <div className="grid gap-3 sm:col-span-2">
-          <ConsentField id="tr-eligibility" checked={eligibility} onChange={setEligibility} text={t.eligibility} error={err("eligibility")} locale={locale} />
-          <ConsentField id="tr-publish" checked={publish} onChange={setPublish} text={t.publish} error={err("publish")} locale={locale} />
-          <ConsentField id="tr-consent" checked={consent} onChange={setConsent} text={f.consent} privacyLabel={f.privacyLink} privacyHref={localizedPath(locale, pagePaths.privacy)} error={err("consent")} locale={locale} />
+          <ConsentField id="tr-eligibility" checked={eligibility} onChange={setEligibility} text={t.eligibility} error={err("eligibility")} locale={jaOrEn(locale)} />
+          <ConsentField id="tr-publish" checked={publish} onChange={setPublish} text={t.publish} error={err("publish")} locale={jaOrEn(locale)} />
+          <ConsentField id="tr-consent" checked={consent} onChange={setConsent} text={f.consent} privacyLabel={f.privacyLink} privacyHref={localizedPath(locale, pagePaths.privacy)} error={err("consent")} locale={jaOrEn(locale)} />
         </div>
       </section>
 

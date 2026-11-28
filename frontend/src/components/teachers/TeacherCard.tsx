@@ -3,7 +3,7 @@ import Tag from "@/components/ui/Tag";
 import type { Dictionary } from "@/data/dictionaries/types";
 import { findPrefecture } from "@/data/prefectures";
 import type { Teacher } from "@/data/teachers";
-import type { Locale } from "@/lib/i18n";
+import { tr, type Locale } from "@/lib/i18n";
 
 type Props = {
   teacher: Teacher;
@@ -28,14 +28,14 @@ export default function TeacherCard({ teacher, locale, t, profileHref }: Props) 
         </div>
         <div className="flex-1">
           <div className="flex flex-wrap items-center gap-2">
-            <h2 className="text-base font-bold leading-snug">{teacher.displayName[locale]}</h2>
+            <h2 className="text-base font-bold leading-snug">{tr(teacher.displayName, locale)}</h2>
             {teacher.isDemo && (
               <span className="rounded-tag border border-line px-1.5 py-0.5 text-[10px] text-muted">{t.demoBadge}</span>
             )}
           </div>
           <p className="mt-0.5 text-xs text-muted">
-            {pref ? pref[locale] : ""}
-            {teacher.station ? ` · ${t.nearestStation(teacher.station[locale])}` : ""}
+            {pref ? tr(pref, locale) : ""}
+            {teacher.station ? ` · ${t.nearestStation(tr(teacher.station, locale))}` : ""}
           </p>
           {teacher.travel && <p className="mt-0.5 text-xs text-muted">{t.travel(teacher.travel.minutes)}</p>}
         </div>
@@ -50,7 +50,7 @@ export default function TeacherCard({ teacher, locale, t, profileHref }: Props) 
         ))}
       </div>
 
-      <p className="mb-3 text-[13px] leading-relaxed text-muted">{teacher.intro[locale]}</p>
+      <p className="mb-3 text-[13px] leading-relaxed text-muted">{tr(teacher.intro, locale)}</p>
 
       {/* 承認済み B案: まず SONARIA 内の簡易プロフィールへ */}
       <Link

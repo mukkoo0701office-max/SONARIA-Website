@@ -8,7 +8,7 @@ import { getDictionary } from "@/data/dictionaries";
 import { prefectures } from "@/data/prefectures";
 import { pagePaths } from "@/data/site";
 import { instrumentCategories, type InstrumentCategory, type LessonFormat } from "@/data/teachers";
-import { localizedPath, type Locale } from "@/lib/i18n";
+import { tr, localizedPath, type Locale } from "@/lib/i18n";
 import { buildTeacherQuery } from "@/lib/teacherQuery";
 
 // トップページの講師簡易検索（トップページ改修指示書 §4）。
@@ -76,7 +76,7 @@ export default function TeacherQuickSearch({ locale }: { locale: Locale }) {
             <option value="all">{dict.teachers.prefectureAll}</option>
             {prefectures.map((p) => (
               <option key={p.code} value={p.code}>
-                {p[locale]}
+                {tr(p, locale)}
               </option>
             ))}
           </select>

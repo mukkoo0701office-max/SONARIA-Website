@@ -16,7 +16,7 @@ import { getDictionary } from "@/data/dictionaries";
 import { catalogLabel, composerLocales, usesRemotePdf, composerOf, getWork, isSampleCatalog, partOrder, relatedWorks, workLocales, worksForLocale } from "@/data/scores/catalog";
 import type { Work } from "@/data/scores/types";
 import { pagePaths } from "@/data/site";
-import { isLocale, localizedPath, type Locale } from "@/lib/i18n";
+import { tr, isLocale, localizedPath, type Locale } from "@/lib/i18n";
 import { withBasePath } from "@/lib/paths";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
 
@@ -46,8 +46,8 @@ function load(p: Params): { locale: Locale; work: Work } | null {
 }
 
 function partLabel(t: ReturnType<typeof getDictionary>["library"], locale: Locale, a: Work["editions"][number]["assets"][number]): string {
-  const base = a.part === "other" && a.label ? a.label[locale] : t.parts[a.part];
-  return a.part !== "other" && a.label ? `${base}（${a.label[locale]}）` : base;
+  const base = a.part === "other" && a.label ? tr(a.label, locale) : t.parts[a.part];
+  return a.part !== "other" && a.label ? `${base}（${tr(a.label, locale)}）` : base;
 }
 
 function instrumentation(t: ReturnType<typeof getDictionary>["library"], w: Work): string {
@@ -66,11 +66,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return pageMetadata({
     locale,
     path: `/scores/${work.id}/`,
-    title: t.work.metaTitle((c.short ?? c.name)[locale], work.title[locale], catalogLabel(work)),
-    description: t.work.metaDescription(c.name[locale], work.title[locale], catalogLabel(work), parts),
+    title: t.work.metaTitle(tr(c.short ?? c.name, locale), tr(work.title, locale), catalogLabel(work)),
+    description: t.work.metaDescription(tr(c.name, locale), tr(work.title, locale), catalogLabel(work), parts),
     availableLocales: workLocales(work),
     type: "article",
-    image: preview ? { url: preview.file, width: preview.width, height: preview.height, alt: t.work.previewAlt(work.title[locale]) } : null,
+    image: preview ? { url: preview.file, width: preview.width, height: preview.height, alt: t.work.previewAlt(tr(work.title, locale)) } : null,
   });
 }
 
@@ -100,7 +100,7 @@ export default async function WorkPage({ params }: Props) {
   const ld = {
     "@context": "https://schema.org",
     "@type": "MusicComposition",
-    name: work.title[locale],
+    name: tr(work.title, locale),
     ...(work.title.original ? { alternateName: [work.title.original, ...(work.aliases ?? [])] } : work.aliases?.length ? { alternateName: work.aliases } : {}),
     ...(pageUrl ? { url: pageUrl } : {}),
     inLanguage: locale,
@@ -112,7 +112,7 @@ export default async function WorkPage({ params }: Props) {
       ...(c.died ? { deathDate: c.died } : {}),
     },
     ...(catalogText ? { musicCompositionForm: t.genre[work.genre], identifier: catalogText } : { musicCompositionForm: t.genre[work.genre] }),
-    ...(work.key ? { musicalKey: work.key[locale] } : {}),
+    ...(work.key ? { musicalKey: tr(work.key, locale) } : {}),
     ...(work.composed ? { dateCreated: work.composed } : {}),
     dateModified: work.updatedAt,
     workExample: work.editions.flatMap((e) =>
@@ -120,7 +120,7 @@ export default async function WorkPage({ params }: Props) {
         const fileUrl = absoluteUrl(a.file);
         return {
           "@type": "SheetMusic",
-          name: `${work.title[locale]} – ${partLabel(t, locale, a)}`,
+          name: `${tr(work.title, locale)} – ${partLabel(t, locale, a)}`,
           encodingFormat: "application/pdf",
           isAccessibleForFree: true,
           ...(fileUrl ? { url: fileUrl } : {}),
@@ -138,33 +138,33 @@ export default async function WorkPage({ params }: Props) {
         items={[
           { label: t.home, href: localizedPath(locale, "/") },
           { label: t.scores, href: localizedPath(locale, pagePaths.scores) },
-          { label: (c.short ?? c.name)[locale], href: composerPage },
-          { label: work.title[locale] },
+          { label: tr(c.short ?? c.name, locale), href: composerPage },
+          { label: tr(work.title, locale) },
         ]}
       />
       {isSampleCatalog && <p className="mt-4 rounded-card border border-line bg-subtle p-3 text-xs">{t.sampleNotice}</p>}
 
       <header className="mt-5">
         <h1 className="text-2xl font-bold leading-snug">
-          {work.title[locale]}
+          {tr(work.title, locale)}
           {catalogText && <span className="ml-2 text-lg font-semibold text-muted">{catalogText}</span>}
         </h1>
-        {work.title.original && work.title.original !== work.title[locale] && <p className="mt-1 text-sm text-muted" lang="und">{work.title.original}</p>}
+        {work.title.original && work.title.original !== tr(work.title, locale) && <p className="mt-1 text-sm text-muted" lang="und">{work.title.original}</p>}
         <p className="mt-2 flex items-center gap-2 text-sm">
           {c.portrait && (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={withBasePath(c.portrait.file)} width={36} height={48} alt={c.portrait.alt[locale]} className="aspect-[3/4] w-9 rounded border border-line object-cover" />
+            <img src={withBasePath(c.portrait.file)} width={36} height={48} alt={tr(c.portrait.alt, locale)} className="aspect-[3/4] w-9 rounded border border-line object-cover" />
           )}
           <Link href={composerPage} className="text-navy underline">
-            {c.name[locale]}
+            {tr(c.name, locale)}
           </Link>
-          {c.name.original !== c.name[locale] && <span className="ml-2 text-muted">{c.name.original}</span>}
+          {c.name.original !== tr(c.name, locale) && <span className="ml-2 text-muted">{c.name.original}</span>}
         </p>
       </header>
 
       {work.summary && (
         <div className="mt-4 max-w-[68ch]">
-          <p className="text-[15px] leading-[1.9]">{work.summary[locale]}</p>
+          <p className="text-[15px] leading-[1.9]">{tr(work.summary, locale)}</p>
           {reference?.url && (
             <p className="mt-1 text-xs text-muted">
               {tw.summaryReference}:{" "}
@@ -181,16 +181,16 @@ export default async function WorkPage({ params }: Props) {
           {tw.facts}
         </h2>
         <dl className="grid gap-2.5 rounded-card border border-line bg-card p-[17px] text-[13px]">
-          <Fact term={tw.composer}>{c.name[locale]}</Fact>
+          <Fact term={tw.composer}>{tr(c.name, locale)}</Fact>
           {catalogText && <Fact term={tw.catalogNumber}>{catalogText}</Fact>}
-          {work.key && <Fact term={tw.key}>{work.key[locale]}</Fact>}
+          {work.key && <Fact term={tw.key}>{tr(work.key, locale)}</Fact>}
           {work.composed && <Fact term={tw.composed}>{work.composed}</Fact>}
           <Fact term={tw.instrumentation}>{instrumentation(t, work)}</Fact>
           {work.movements && work.movements.length > 0 && (
             <Fact term={tw.movements}>
               <ol className="grid gap-0.5">
                 {work.movements.map((m, i) => (
-                  <li key={i}>{m[locale]}</li>
+                  <li key={i}>{tr(m, locale)}</li>
                 ))}
               </ol>
             </Fact>
@@ -214,7 +214,7 @@ export default async function WorkPage({ params }: Props) {
         <p className="mt-1 text-xs text-muted">{usesRemotePdf ? tw.scoresLeadRemote : tw.scoresLead}</p>
         {work.editions.map((e) => (
           <div key={e.id} className="mt-4">
-            <h3 className="text-[15px] font-bold">{e.label[locale]}</h3>
+            <h3 className="text-[15px] font-bold">{tr(e.label, locale)}</h3>
             {/* 運営者の決定（2026-11-28）: 本番では権利確認前の表示をしない。プレビューだけ運営者向けに表示 */}
             {e.rights.status === "pending" && process.env.NEXT_PUBLIC_PREVIEW === "1" && (
               <p className="mt-1.5 rounded-button border border-navy bg-subtle px-2.5 py-1.5 text-xs font-semibold text-navy">{tw.pendingRights}</p>
@@ -248,7 +248,7 @@ export default async function WorkPage({ params }: Props) {
         <BowingBanner
           locale={locale}
           t={t.bowing}
-          context={{ title: work.title[locale], composer: c.name[locale], workId: work.id, parts: partNames, assets: assets.map((a) => a.id) }}
+          context={{ title: tr(work.title, locale), composer: tr(c.name, locale), workId: work.id, parts: partNames, assets: assets.map((a) => a.id) }}
         />
       </section>
 
@@ -338,7 +338,7 @@ export default async function WorkPage({ params }: Props) {
       ) : work.affiliate && work.affiliate.length > 0 ? (
         <AffiliateSlot placement="work" t={t.ad} links={work.affiliate} />
       ) : (
-        <AmazonSearchBanner t={t.ad} s={t.amazonSearch} composer={(c.short ?? c.name)[locale]} keyword={t.amazonSearch.bannerKeyword((c.short ?? c.name)[locale])} />
+        <AmazonSearchBanner t={t.ad} s={t.amazonSearch} composer={tr(c.short ?? c.name, locale)} keyword={t.amazonSearch.bannerKeyword(tr(c.short ?? c.name, locale))} />
       )}
 
       <JsonLd data={ld} />

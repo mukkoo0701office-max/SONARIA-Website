@@ -10,7 +10,7 @@ import { getDictionary } from "@/data/dictionaries";
 import { categories, categoryLocales, getCategory } from "@/data/scores/catalog";
 import { libraryPaths } from "@/data/scores/paths";
 import { pagePaths } from "@/data/site";
-import { isLocale, localizedPath } from "@/lib/i18n";
+import { tr, isLocale, localizedPath } from "@/lib/i18n";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
 
 // 編成別・曲種別のカテゴリページ（catalog.ts の categories から自動生成）。
@@ -44,8 +44,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return pageMetadata({
     locale,
     path: libraryPaths.category(cat.id),
-    title: t.metaTitle(cat.name[locale]),
-    description: t.metaDescription(cat.name[locale], cat.works.length),
+    title: t.metaTitle(tr(cat.name, locale)),
+    description: t.metaDescription(tr(cat.name, locale), cat.works.length),
     availableLocales: categoryLocales(cat.id),
   });
 }
@@ -58,11 +58,11 @@ export default async function CategoryPage({ params }: Props) {
   const ld = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: cat.name[locale],
+    name: tr(cat.name, locale),
     numberOfItems: cat.works.length,
     itemListElement: cat.works.map((w, i) => {
       const url = absoluteUrl(workHref(w, locale));
-      return { "@type": "ListItem", position: i + 1, name: w.title[locale], ...(url ? { url } : {}) };
+      return { "@type": "ListItem", position: i + 1, name: tr(w.title, locale), ...(url ? { url } : {}) };
     }),
   };
   return (
@@ -72,11 +72,11 @@ export default async function CategoryPage({ params }: Props) {
         items={[
           { label: lib.home, href: localizedPath(locale, "/") },
           { label: lib.scores, href: localizedPath(locale, pagePaths.scores) },
-          { label: cat.name[locale] },
+          { label: tr(cat.name, locale) },
         ]}
       />
-      <h1 className="mt-5 text-2xl font-bold">{cat.name[locale]}</h1>
-      <p className="mt-2 text-[15px] leading-[1.9]">{cat.intro[locale]}</p>
+      <h1 className="mt-5 text-2xl font-bold">{tr(cat.name, locale)}</h1>
+      <p className="mt-2 text-[15px] leading-[1.9]">{tr(cat.intro, locale)}</p>
       {/* Google AdSense（1 枠）。ページ下部の広告・アフィリエイト枠と並ばないよう、作品一覧の前に置く */}
       <AdSenseSlot unit="category-before-list" t={lib.adsense} />
       <p className="mt-4 text-xs text-muted">{lib.category.works(cat.works.length)}</p>

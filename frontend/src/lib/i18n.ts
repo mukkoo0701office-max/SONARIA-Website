@@ -77,6 +77,16 @@ export function pickLocalized(text: LocalizedText, locale: SupportedLocale): { t
   return { text: "", locale, fallback: true };
 }
 
+/** 表示用の文（翻訳が無ければ補う。ja・en 以外の言語を公開しても、未訳の項目は英語・日本語で表示される） */
+export function tr(text: LocalizedText | { ja: string; en: string } | null | undefined, locale: SupportedLocale): string {
+  return text ? pickLocalized(text as LocalizedText, locale).text : "";
+}
+
+/** ja・en だけを受け付ける処理（申込フォーム・管理画面・外部検索語など）に渡す言語。日本語以外は英語 */
+export function jaOrEn(locale: SupportedLocale): "ja" | "en" {
+  return locale === "ja" ? "ja" : "en";
+}
+
 /**
  * hreflang の対応表（言語 → URL）。存在する言語だけを入れ、全ページで同じ表になる（相互参照）。
  * x-default は言語を自動で振り分けるトップ（/）ではなく、各ページの既定言語（日本語）の URL を指す。
