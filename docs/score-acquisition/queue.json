@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Beethoven",
     "stage": "cello_sonata",
-    "last_work": "Op.5 No.2",
-    "note": "Op.5 Nos.1-2 Artaria 1797 first-edition parts candidates added; next Op.69. Live site not verified; main catalog checked 2026-11-28."
+    "last_work": "Op.69",
+    "note": "Op.69 Breitkopf 1809 first edition parts listed; next Op.102 No.1. Live site and main inventory not fully verified 2026-11-28."
   },
   "items": [
     {
@@ -13395,6 +13395,91 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Artaria first edition is historically significant but may contain original engraving errors. Score bundle is parts, not confirmed full score. Verify sonata-specific page boundaries and separate piano/cello parts; no published site verification. No rights or quality approval.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-cello-sonata-op69-breitkopf-1809",
+      "composer": "Ludwig van Beethoven",
+      "category": "cello_sonata",
+      "work_title": "Cello Sonata No.3 in A major",
+      "opus_catalog": "Op.69",
+      "work_url": "https://imslp.org/wiki/Cello_Sonata_No.3%2C_Op.69_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "Breitkopf und Härtel",
+        "publication_date": "1809",
+        "editor": "First edition (no named editor)",
+        "plate": "1328",
+        "imslp_file_id": "51179",
+        "scope": "Complete parts; separate piano and cello part scans #520155 and #520156"
+      },
+      "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.3%2C_Op.69_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "piano",
+        "cello"
+      ],
+      "score_inventory": {
+        "status": "unverified",
+        "imslp_file_id": null,
+        "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.3%2C_Op.69_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "Breitkopf und Härtel",
+        "editor": "First edition",
+        "publication_date": "1809",
+        "scope": "First edition is separate parts; complete full score of same edition not identified",
+        "evidence": "IMSLP first edition listed as Complete Parts, not Complete Score"
+      },
+      "part_inventory": {
+        "piano": {
+          "status": "identified",
+          "imslp_file_id": "520155",
+          "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.3%2C_Op.69_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Breitkopf und Härtel",
+          "editor": "First edition",
+          "scope": "25 pp; PDF not inspected",
+          "evidence": "IMSLP Scores and Parts listing"
+        },
+        "cello": {
+          "status": "identified",
+          "imslp_file_id": "520156",
+          "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.3%2C_Op.69_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Breitkopf und Härtel",
+          "editor": "First edition",
+          "scope": "7 pp; PDF not inspected",
+          "evidence": "IMSLP Scores and Parts listing"
+        }
+      },
+      "score_part_edition_match": "unknown",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "complete_score_same_edition_unidentified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Cello_Sonata_No.3%2C_Op.69_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP metadata only; PDFs not downloaded or opened"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Cello_Sonata_No.3%2C_Op.69_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "Op.69 A major, three movements, first edition Leipzig Breitkopf und Härtel 1809 plate 1328; parts #51179 #520155 #520156"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_checked_site_and_main_not_fully_verified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only; original first edition parts; do not mislabel #51179 as full score. Same-edition full score unidentified. Main catalog and live deployment not fully verified; do not assert absent. Separate Breitkopf 1863 score #51977 and cello part #314760 exist, but must not silently mix editions.",
       "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null
