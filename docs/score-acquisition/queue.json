@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Beethoven",
     "stage": "violin_sonata",
-    "last_work": "Op.23",
-    "note": "IMSLP Peters/Joachim historical edition candidates Nos.3–4 metadata researched; existing work catalog entries must be edition-level reconciled. Public site and main edition inventory not fully verified; no absence claim. Next No.5 Op.24."
+    "last_work": "Op.30 No.1",
+    "note": "Nos.5–6 edition metadata investigated. Public site URL and main edition inventory still unverified; next No.7 Op.30 No.2."
   },
   "items": [
     {
@@ -12696,6 +12696,172 @@
       "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null
+    },
+    {
+      "id": "beethoven-violin-sonata-5-peters-joachim-1901-research",
+      "composer": "Ludwig van Beethoven",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata No.5 in F major (Spring)",
+      "opus_catalog": "Op.24",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_No.5%2C_Op.24_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "C.F. Peters",
+        "publication_date": "1901",
+        "editor": "Joseph Joachim",
+        "imslp_file_id": "04223",
+        "plate": "8762",
+        "scope": "violin and piano; historical edition, PDF not inspected"
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.5%2C_Op.24_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "04223",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.5%2C_Op.24_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "C.F. Peters",
+        "editor": "Joseph Joachim",
+        "scope": "complete score; not a full score when null",
+        "evidence": "https://imslp.org/wiki/Violin_Sonata_No.5%2C_Op.24_%28Beethoven%2C_Ludwig_van%29"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "04224",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.5%2C_Op.24_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "C.F. Peters",
+          "editor": "Joseph Joachim",
+          "scope": "violin part",
+          "evidence": "https://imslp.org/wiki/Violin_Sonata_No.5%2C_Op.24_%28Beethoven%2C_Ludwig_van%29"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.5%2C_Op.24_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "C.F. Peters",
+          "editor": "Joseph Joachim",
+          "scope": "piano part; score may include piano when separately verified",
+          "evidence": "https://imslp.org/wiki/Violin_Sonata_No.5%2C_Op.24_%28Beethoven%2C_Ludwig_van%29"
+        }
+      },
+      "score_part_edition_match": "same_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.5%2C_Op.24_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP listing only; PDF not downloaded or inspected"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.5%2C_Op.24_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP work and edition metadata; source PDF not inspected"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_id_checked_site_edition_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Historical edited score and violin part from same Peters/Joachim listing. Compare with Breitkopf 1863 score #51962 and violin part #314659; do not conflate editions. Existing public site and main edition inventory not fully reconciled; do not claim absent. No rights approval.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-violin-sonata-6-first-edition-1803-research",
+      "composer": "Ludwig van Beethoven",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata No.6 in A major",
+      "opus_catalog": "Op.30 No.1",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_No.6%2C_Op.30_No.1_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "Bureau des Arts et d'Industrie",
+        "publication_date": "1803",
+        "editor": "First edition (not named modern editor)",
+        "imslp_file_id": null,
+        "plate": "65",
+        "scope": "violin and piano; historical edition, PDF not inspected"
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.6%2C_Op.30_No.1_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "unverified",
+        "imslp_file_id": null,
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.6%2C_Op.30_No.1_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "Bureau des Arts et d'Industrie",
+        "editor": "First edition (not named modern editor)",
+        "scope": "complete score; not a full score when null",
+        "evidence": "https://imslp.org/wiki/Violin_Sonata_No.6%2C_Op.30_No.1_%28Beethoven%2C_Ludwig_van%29"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "520137",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.6%2C_Op.30_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Bureau des Arts et d'Industrie",
+          "editor": "First edition (not named modern editor)",
+          "scope": "violin part",
+          "evidence": "https://imslp.org/wiki/Violin_Sonata_No.6%2C_Op.30_No.1_%28Beethoven%2C_Ludwig_van%29"
+        },
+        "piano": {
+          "status": "identified",
+          "imslp_file_id": "520136",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.6%2C_Op.30_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Bureau des Arts et d'Industrie",
+          "editor": "First edition (not named modern editor)",
+          "scope": "piano part; score may include piano when separately verified",
+          "evidence": "https://imslp.org/wiki/Violin_Sonata_No.6%2C_Op.30_No.1_%28Beethoven%2C_Ludwig_van%29"
+        }
+      },
+      "score_part_edition_match": "unknown",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "verified complete score for same edition"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.6%2C_Op.30_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP listing only; PDF not downloaded or inspected"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.6%2C_Op.30_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP work and edition metadata; source PDF not inspected"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_id_checked_site_edition_inventory_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "First-edition piano #520136 and violin #520137 listed separately. Manuscript full score #810011 is not the same edition. Piano part must not be misclassified as full score; no verified full score for this edition. Existing public site and main edition inventory not fully reconciled; do not claim absent. No rights approval.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
     }
   ],
   "last_updated": "2026-11-28",
@@ -12866,6 +13032,6 @@
     "live_site_status": "unverified_official_url_not_established",
     "main_work_inventory_status": "not_fully_verified",
     "pr_queue_status": "checked",
-    "note": "No claim that candidate editions are absent from public site; verify work/edition/assets before Claude download."
+    "note": "Live published site not independently accessed; main queue.json absent. Do not infer work/edition absence from incomplete comparison."
   }
 }
