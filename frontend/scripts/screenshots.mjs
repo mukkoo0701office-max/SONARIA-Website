@@ -81,6 +81,24 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
     check("mobile: swipe does not navigate", page.url().endsWith("/ja/"), page.url());
   }
 
+  // 言語の切り替え: ヘッダーとフッターに「日本語 | English」。今の言語を強調し、同じページの英語版へ移動する
+  await page.goto(`${base}/ja/scores/`, { waitUntil: "networkidle" });
+  const headerSwitch = page.locator('header nav[aria-label="言語"]');
+  const footerSwitch = page.locator('footer nav[aria-label="言語"]');
+  check(`${vpName}: language switch in header and footer`, (await headerSwitch.isVisible()) && (await footerSwitch.count()) === 1);
+  check(`${vpName}: current language is marked`, (await headerSwitch.locator('[aria-current="true"]').innerText()).includes("日本語"));
+  const headerBox = await page.locator("header").first().boundingBox();
+  check(`${vpName}: header does not wrap with language switch`, (headerBox?.height ?? 999) <= (vpName === "mobile" ? 80 : 140), `h=${headerBox?.height}`);
+  await page.locator("header").first().screenshot({ path: `${outDir}/${vpName}-header-language.png` });
+  await footerSwitch.scrollIntoViewIfNeeded();
+  await footerSwitch.screenshot({ path: `${outDir}/${vpName}-footer-language.png` });
+  await headerSwitch.locator("a", { hasText: "English" }).click();
+  await page.waitForURL(/\/en\/scores\//, { timeout: 5000 }).catch(() => {});
+  check(`${vpName}: switching keeps the same page`, /\/en\/scores\/$/.test(new URL(page.url()).pathname), page.url());
+  const cookies = await page.context().cookies();
+  check(`${vpName}: chosen language is remembered`, cookies.some((c) => c.value === "en"));
+  await page.context().clearCookies();
+
   // 入力補完: 候補が出る → 矢印キーと Enter で作曲家ページへ
   await page.goto(`${base}/ja/`, { waitUntil: "networkidle" });
   await page.locator("#quick-score-q").scrollIntoViewIfNeeded();
