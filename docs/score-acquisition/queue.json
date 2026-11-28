@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Beethoven",
     "stage": "cello_sonata",
-    "last_work": "Op.69",
-    "note": "Op.69 Breitkopf 1809 first edition parts listed; next Op.102 No.1. Live site and main inventory not fully verified 2026-11-28."
+    "last_work": "Op.102 No.2",
+    "note": "Five numbered Beethoven cello sonatas surveyed; next Brahms string quartets. Main catalog 203 works, no Beethoven cello sonatas identified; deployed site URL not verified. 2026-11-28."
   },
   "items": [
     {
@@ -13483,6 +13483,177 @@
       "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null
+    },
+    {
+      "id": "beethoven-cello-sonata-op102-no1-artaria-1819",
+      "composer": "Ludwig van Beethoven",
+      "category": "cello_sonata",
+      "work_title": "Cello Sonata No.4 in C major",
+      "opus_catalog": "Op.102 No.1",
+      "work_url": "https://imslp.org/wiki/Cello_Sonata_No.4%2C_Op.102_No.1_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "Artaria",
+        "publication_date": "1819",
+        "editor": "Historical edition; no named modern editor",
+        "plate": "2579",
+        "scope": "Cello and piano original scoring",
+        "imslp_file_id": "51299",
+        "edition_comparison": "Artaria 1819 is second edition, NOT Simrock 1816 first edition. #51299 is listed as complete score and cello part; separate piano and cello parts #520160/#520161. Contents and same-edition correspondence require PDF verification."
+      },
+      "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.4%2C_Op.102_No.1_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "piano",
+        "cello"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "51299",
+        "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.4%2C_Op.102_No.1_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "Artaria",
+        "editor": "historical edition",
+        "publication_date": "1819",
+        "scope": "IMSLP-listed score or bundle; PDF not inspected",
+        "evidence": "IMSLP Scores and Parts metadata"
+      },
+      "part_inventory": {
+        "piano": {
+          "status": "identified",
+          "imslp_file_id": "520160",
+          "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.4%2C_Op.102_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Artaria",
+          "editor": "historical edition",
+          "scope": "PDF not inspected; standalone part listed",
+          "evidence": "IMSLP Scores and Parts listing"
+        },
+        "cello": {
+          "status": "identified",
+          "imslp_file_id": "520161",
+          "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.4%2C_Op.102_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Artaria",
+          "editor": "historical edition",
+          "scope": "PDF not inspected; standalone part listed",
+          "evidence": "IMSLP Scores and Parts listing"
+        }
+      },
+      "score_part_edition_match": "unknown",
+      "set_completeness": "unverified",
+      "missing_assets": [],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Cello_Sonata_No.4%2C_Op.102_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP metadata only; PDF not downloaded or inspected"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Cello_Sonata_No.4%2C_Op.102_No.1_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "Artaria 1819 is second edition, NOT Simrock 1816 first edition. #51299 is listed as complete score and cello part; separate piano and cello parts #520160/#520161. Contents and same-edition correspondence require PDF verification."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_and_main_catalog_checked_live_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Artaria 1819 is second edition, NOT Simrock 1816 first edition. #51299 is listed as complete score and cello part; separate piano and cello parts #520160/#520161. Contents and same-edition correspondence require PDF verification. No PDF download, quality pass, rights approval or publication.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-cello-sonata-op102-no2-simrock-1816",
+      "composer": "Ludwig van Beethoven",
+      "category": "cello_sonata",
+      "work_title": "Cello Sonata No.5 in D major",
+      "opus_catalog": "Op.102 No.2",
+      "work_url": "https://imslp.org/wiki/Cello_Sonata_No.5%2C_Op.102_No.2_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "N. Simrock",
+        "publication_date": "1816",
+        "editor": "Historical edition; no named modern editor",
+        "plate": "1338",
+        "scope": "Cello and piano original scoring",
+        "imslp_file_id": "51304",
+        "edition_comparison": "Simrock 1816 first edition complete score #51304. Artaria 1819 complete parts #51305 belong to a DIFFERENT edition and must not be treated as same-edition parts. Original cello+piano, 3 movements. Historical source; no named editor; verify score/parts and editorial errors."
+      },
+      "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.5%2C_Op.102_No.2_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "piano",
+        "cello"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "51304",
+        "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.5%2C_Op.102_No.2_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "N. Simrock",
+        "editor": "historical edition",
+        "publication_date": "1816",
+        "scope": "IMSLP-listed score or bundle; PDF not inspected",
+        "evidence": "IMSLP Scores and Parts metadata"
+      },
+      "part_inventory": {
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.5%2C_Op.102_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "N. Simrock",
+          "editor": "historical edition",
+          "scope": "PDF not inspected; standalone part not identified for same edition",
+          "evidence": "IMSLP Scores and Parts listing"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Cello_Sonata_No.5%2C_Op.102_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "N. Simrock",
+          "editor": "historical edition",
+          "scope": "PDF not inspected; standalone part not identified for same edition",
+          "evidence": "IMSLP Scores and Parts listing"
+        }
+      },
+      "score_part_edition_match": "unknown",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "piano_part_same_edition_unidentified",
+        "cello_part_same_edition_unidentified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Cello_Sonata_No.5%2C_Op.102_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP metadata only; PDF not downloaded or inspected"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Cello_Sonata_No.5%2C_Op.102_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "Simrock 1816 first edition complete score #51304. Artaria 1819 complete parts #51305 belong to a DIFFERENT edition and must not be treated as same-edition parts. Original cello+piano, 3 movements. Historical source; no named editor; verify score/parts and editorial errors."
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_and_main_catalog_checked_live_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Candidate only. Simrock 1816 first edition complete score #51304. Artaria 1819 complete parts #51305 belong to a DIFFERENT edition and must not be treated as same-edition parts. Original cello+piano, 3 movements. Historical source; no named editor; verify score/parts and editorial errors. No PDF download, quality pass, rights approval or publication.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
     }
   ],
   "last_updated": "2026-11-28",
@@ -13648,11 +13819,10 @@
     "checked_at": "2026-11-28",
     "main_catalog_path": "frontend/src/data/scores/catalog.json",
     "main_catalog_blob_sha": "4cd09cd46263fbaaf53282aadfb22151c0821d2b",
-    "main_catalog_generated_at": "2026-11-27T04:22:18Z",
     "main_catalog_work_count": 203,
     "beethoven_cello_sonatas_in_main": 0,
     "live_site_status": "unverified_canonical_url_not_established",
-    "pr_state": "open_checked_2026-11-28",
-    "note": "Main catalog includes no Beethoven cello sonatas Op.5 Nos.1-2. GitHub Pages preview base path noted but not treated as production URL. No PDF or rights/publication changes."
+    "pr_state": "not_independently_verified",
+    "note": "Checked main catalog; Op.102 Nos.1-2 not identified as Beethoven cello sonatas. GitHub Pages preview configuration is not proof of production deployment. PDF hashes and publication status unverified."
   }
 }
