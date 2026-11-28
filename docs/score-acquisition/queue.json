@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Beethoven",
     "stage": "violin_sonata",
-    "last_work": "Op.30 No.1",
-    "note": "Nos.5–6 edition metadata investigated. Public site URL and main edition inventory still unverified; next No.7 Op.30 No.2."
+    "last_work": "Op.30 No.3",
+    "note": "Nos.7–8 edition candidates checked against IMSLP. Public production URL and main edition inventory remain unverified; next No.9 Op.47."
   },
   "items": [
     {
@@ -12859,6 +12859,176 @@
       },
       "rights_status": "unknown",
       "notes": "First-edition piano #520136 and violin #520137 listed separately. Manuscript full score #810011 is not the same edition. Piano part must not be misclassified as full score; no verified full score for this edition. Existing public site and main edition inventory not fully reconciled; do not claim absent. No rights approval.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-violin-sonata-op30-no2-bureau-first-edition",
+      "composer": "Ludwig van Beethoven",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata No.7",
+      "opus_catalog": "Op.30 No.2",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_No.7%2C_Op.30_No.2_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "Bureau des Arts et d'Industrie",
+        "publication_date": "1803",
+        "editor": "First edition? (unconfirmed)",
+        "imslp_file_id": "51055",
+        "scope": "Holograph full score #51055 (ca.1802), separate first-edition? complete parts #51056, different sources; violin/piano parts not individually mapped"
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.7%2C_Op.30_No.2_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "51055",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.7%2C_Op.30_No.2_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "Autograph manuscript",
+        "editor": "not applicable",
+        "publication_date": "ca.1802",
+        "scope": "complete score listed; PDF uninspected",
+        "evidence": "https://imslp.org/wiki/Violin_Sonata_No.7%2C_Op.30_No.2_%28Beethoven%2C_Ludwig_van%29"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "unverified",
+          "imslp_file_id": "51056",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.7%2C_Op.30_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Bureau des Arts et d'Industrie",
+          "editor": "First edition? (unconfirmed)",
+          "scope": "complete parts bundle; violin segmentation unverified",
+          "evidence": "https://imslp.org/wiki/Violin_Sonata_No.7%2C_Op.30_No.2_%28Beethoven%2C_Ludwig_van%29"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": "51056",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.7%2C_Op.30_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "Bureau des Arts et d'Industrie",
+          "editor": "First edition? (unconfirmed)",
+          "scope": "separate piano part not independently confirmed",
+          "evidence": "https://imslp.org/wiki/Violin_Sonata_No.7%2C_Op.30_No.2_%28Beethoven%2C_Ludwig_van%29"
+        }
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "independently verified piano part",
+        "PDF completeness and legibility"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.7%2C_Op.30_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "finding": "IMSLP score/part file IDs and edition metadata checked on work page; PDFs not opened"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.7%2C_Op.30_No.2_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP listing for score/parts and edition metadata; no PDF inspection"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "part_listings_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_no_matching_edition_found_main_and_public_site_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Existing SONARIA work may already exist; edition-level match with main/public deployment not verified. Do not publish, download, or approve rights.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-violin-sonata-op30-no3-peters-joachim",
+      "composer": "Ludwig van Beethoven",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata No.8",
+      "opus_catalog": "Op.30 No.3",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_No.8%2C_Op.30_No.3_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "C.F. Peters",
+        "publication_date": "1901",
+        "editor": "Joseph Joachim",
+        "imslp_file_id": "04229",
+        "scope": "Complete score 20 pages and violin part 7 pages; piano separate part not established"
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.8%2C_Op.30_No.3_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "04229",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.8%2C_Op.30_No.3_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "C.F. Peters",
+        "editor": "Joseph Joachim",
+        "publication_date": "1901",
+        "scope": "complete score listed; PDF uninspected",
+        "evidence": "https://imslp.org/wiki/Violin_Sonata_No.8%2C_Op.30_No.3_%28Beethoven%2C_Ludwig_van%29"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "04230",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.8%2C_Op.30_No.3_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "C.F. Peters",
+          "editor": "Joseph Joachim",
+          "scope": "violin part 7 pp listed",
+          "evidence": "https://imslp.org/wiki/Violin_Sonata_No.8%2C_Op.30_No.3_%28Beethoven%2C_Ludwig_van%29"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.8%2C_Op.30_No.3_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "C.F. Peters",
+          "editor": "Joseph Joachim",
+          "scope": "separate piano part not independently confirmed",
+          "evidence": "https://imslp.org/wiki/Violin_Sonata_No.8%2C_Op.30_No.3_%28Beethoven%2C_Ludwig_van%29"
+        }
+      },
+      "score_part_edition_match": "same_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "independently verified piano part",
+        "PDF completeness and legibility"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.8%2C_Op.30_No.3_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "finding": "IMSLP score/part file IDs and edition metadata checked on work page; PDFs not opened"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.8%2C_Op.30_No.3_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "IMSLP listing for score/parts and edition metadata; no PDF inspection"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "part_listings_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_no_matching_edition_found_main_and_public_site_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Existing SONARIA work may already exist; edition-level match with main/public deployment not verified. Do not publish, download, or approve rights.",
       "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null
