@@ -144,10 +144,11 @@ Deno.serve(async (req) => {
       // 検査した形に置き換えて保存する（名前・大きさの長さをそろえる）
       (v.payload.bowing as Record<string, unknown>).files = attached.files;
     }
+    // 注: postgres.js は「文字列::jsonb」を JSON の文字列値として保存してしまうため、text を経由して変換する（server_quote と同じ）
     const rows = await sql`
       select result, receipt_no from private.accept_submission(
         ${ip}, ${key}::uuid, ${v.kind}, ${v.locale}, ${v.name}, ${v.email},
-        ${JSON.stringify(v.payload)}::jsonb, ${v.estimate}::int, ${maxPerHour}::int
+        ${JSON.stringify(v.payload)}::text::jsonb, ${v.estimate}::int, ${maxPerHour}::int
       )`;
     const r = rows[0] as { result: string; receipt_no: string | null } | undefined;
     if (!r) return json(500, { error: "server_error" }, origin);

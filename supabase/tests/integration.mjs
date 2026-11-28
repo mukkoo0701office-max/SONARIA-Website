@@ -325,6 +325,20 @@ async function uploadOne(ip) {
 }
 let uploadedPath = null;
 
+await check("申込の内容（payload）は JSON のオブジェクトとして保存される（文字列ではない）", async () => {
+  const r = await (await post(bowing("jp"), { ip: "203.0.113.79" })).json();
+  assert.equal(psql(`select jsonb_typeof(payload) from public.submissions where receipt_no = '${r.receipt}'`), "object");
+  assert.equal(psql(`select payload -> 'bowing' ->> 'type' from public.submissions where receipt_no = '${r.receipt}'`), "bowing");
+});
+
+await check("以前の形（文字列として保存された payload）は移行で直る", async () => {
+  // 20261129000008 の移行と同じ処理を、わざと文字列で入れた行に当てて確かめる
+  const id = psql(`insert into public.submissions (receipt_no, kind, locale, contact_name, contact_email, payload, idempotency_key)
+    values ('SN-000000-TEST1', 'bowing', 'ja', 't', 't@example.com', to_jsonb('{"service":"bowing","bowing":{"type":"both"}}'::text), gen_random_uuid()) returning id`);
+  psql(`select private.repair_string_payloads()`);
+  assert.equal(psql(`select payload -> 'bowing' ->> 'type' from public.submissions where id = '${id}'`), "both");
+});
+
 await check("アップロード URL: PDF 以外・20 MB 超・許可していない Origin は拒否", async () => {
   assert.equal((await askUpload({ name: "a.png", size: 100, type: "image/png" })).status, 400);
   assert.equal((await askUpload({ name: "a.pdf", size: 21 * 1024 * 1024, type: "application/pdf" })).status, 400);
