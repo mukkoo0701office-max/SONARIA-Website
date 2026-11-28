@@ -37,9 +37,9 @@
   ],
   "cursor": {
     "composer": "Beethoven",
-    "stage": "violin_sonata",
-    "last_work": "Op.30 No.3",
-    "note": "Nos.7–8 edition candidates checked against IMSLP. Public production URL and main edition inventory remain unverified; next No.9 Op.47."
+    "stage": "cello_sonata",
+    "last_work": "Op.96",
+    "note": "Violin sonatas Nos.9-10 Peters/Joachim edition metadata researched; next Beethoven cello sonatas Op.5 Nos.1-2. Live published site not verified."
   },
   "items": [
     {
@@ -13032,6 +13032,176 @@
       "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null
+    },
+    {
+      "id": "beethoven-violin-sonata-9-peters-joachim-1901",
+      "composer": "Ludwig van Beethoven",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata No.9 (Kreutzer)",
+      "opus_catalog": "Op.47",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_No.9%2C_Op.47_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "C.F. Peters",
+        "publication_date": "1901",
+        "editor": "Joseph Joachim",
+        "imslp_file_id": "04231",
+        "scope": "43 pp. score; 13 pp. violin part; edition No.3031 plate 8762; physical PDF uninspected"
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.9%2C_Op.47_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "04231",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.9%2C_Op.47_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "C.F. Peters",
+        "editor": "Joseph Joachim",
+        "scope": "complete score listed; PDF not opened",
+        "evidence": "https://imslp.org/wiki/Violin_Sonata_No.9%2C_Op.47_%28Beethoven%2C_Ludwig_van%29",
+        "publication_date": "1901"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "04232",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.9%2C_Op.47_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "C.F. Peters",
+          "editor": "Joseph Joachim",
+          "scope": "independent violin part listed; PDF not opened",
+          "evidence": "https://imslp.org/wiki/Violin_Sonata_No.9%2C_Op.47_%28Beethoven%2C_Ludwig_van%29"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.9%2C_Op.47_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "C.F. Peters",
+          "editor": "Joseph Joachim",
+          "scope": "piano part incorporated in complete score; independent piano part not established",
+          "evidence": "https://imslp.org/wiki/Violin_Sonata_No.9%2C_Op.47_%28Beethoven%2C_Ludwig_van%29"
+        }
+      },
+      "score_part_edition_match": "same_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "independent piano part not established (piano included in score)",
+        "PDF legibility, all movements and score-part correspondence unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.9%2C_Op.47_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "finding": "IMSLP work page lists C.F. Peters 1901 Joseph Joachim complete score and violin part IDs; PDFs not downloaded or inspected"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.9%2C_Op.47_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "publisher, editor, file identifiers and instrumentation from IMSLP listing; quality and rights unverified"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_pdf_uninspected",
+        "parts": "listed_not_pdf_inspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_no_same_edition; main work record and live site edition identity not fully verified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Main catalog includes at least No.10 old-site edition; new Peters edition is a candidate, not proof of absence on live site. Historical publisher/editor does not certify PDF reliability or reuse rights.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "beethoven-violin-sonata-10-peters-joachim-1901",
+      "composer": "Ludwig van Beethoven",
+      "category": "violin_sonata",
+      "work_title": "Violin Sonata No.10",
+      "opus_catalog": "Op.96",
+      "work_url": "https://imslp.org/wiki/Violin_Sonata_No.10%2C_Op.96_%28Beethoven%2C_Ludwig_van%29",
+      "edition": {
+        "publisher": "C.F. Peters",
+        "publication_date": "1901",
+        "editor": "Joseph Joachim",
+        "imslp_file_id": "04233",
+        "scope": "25 pp. score; 7 pp. violin part; edition No.3031 plate 8762; physical PDF uninspected"
+      },
+      "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.10%2C_Op.96_%28Beethoven%2C_Ludwig_van%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin",
+        "piano"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "04233",
+        "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.10%2C_Op.96_%28Beethoven%2C_Ludwig_van%29",
+        "publisher": "C.F. Peters",
+        "editor": "Joseph Joachim",
+        "scope": "complete score listed; PDF not opened",
+        "evidence": "https://imslp.org/wiki/Violin_Sonata_No.10%2C_Op.96_%28Beethoven%2C_Ludwig_van%29",
+        "publication_date": "1901"
+      },
+      "part_inventory": {
+        "violin": {
+          "status": "identified",
+          "imslp_file_id": "04234",
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.10%2C_Op.96_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "C.F. Peters",
+          "editor": "Joseph Joachim",
+          "scope": "independent violin part listed; PDF not opened",
+          "evidence": "https://imslp.org/wiki/Violin_Sonata_No.10%2C_Op.96_%28Beethoven%2C_Ludwig_van%29"
+        },
+        "piano": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/Violin_Sonata_No.10%2C_Op.96_%28Beethoven%2C_Ludwig_van%29",
+          "publisher": "C.F. Peters",
+          "editor": "Joseph Joachim",
+          "scope": "piano part incorporated in complete score; independent piano part not established",
+          "evidence": "https://imslp.org/wiki/Violin_Sonata_No.10%2C_Op.96_%28Beethoven%2C_Ludwig_van%29"
+        }
+      },
+      "score_part_edition_match": "same_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "independent piano part not established (piano included in score)",
+        "PDF legibility, all movements and score-part correspondence unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.10%2C_Op.96_%28Beethoven%2C_Ludwig_van%29",
+          "checked_at": "2026-11-28",
+          "finding": "IMSLP work page lists C.F. Peters 1901 Joseph Joachim complete score and violin part IDs; PDFs not downloaded or inspected"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/Violin_Sonata_No.10%2C_Op.96_%28Beethoven%2C_Ludwig_van%29",
+          "verified": "publisher, editor, file identifiers and instrumentation from IMSLP listing; quality and rights unverified"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "source_metadata_checked_pdf_uninspected",
+        "parts": "listed_not_pdf_inspected",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_no_same_edition; main work record and live site edition identity not fully verified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Main catalog includes at least No.10 old-site edition; new Peters edition is a candidate, not proof of absence on live site. Historical publisher/editor does not certify PDF reliability or reuse rights.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
     }
   ],
   "last_updated": "2026-11-28",
@@ -13195,13 +13365,12 @@
   },
   "last_site_reconciliation": {
     "checked_at": "2026-11-28",
-    "main_rules_checked": [
-      "CLAUDE.md",
-      "docs/workflow.md"
-    ],
-    "live_site_status": "unverified_official_url_not_established",
-    "main_work_inventory_status": "not_fully_verified",
-    "pr_queue_status": "checked",
-    "note": "Live published site not independently accessed; main queue.json absent. Do not infer work/edition absence from incomplete comparison."
+    "main_catalog_path": "frontend/src/data/scores/catalog.json",
+    "main_catalog_blob_sha": "4cd09cd46263fbaaf53282aadfb22151c0821d2b",
+    "main_catalog_generated_at": "2026-11-27T04:22:18Z",
+    "main_no10": "work listed, old-site edition",
+    "live_site_status": "unverified_canonical_url_not_established",
+    "pr_state": "not_independently_verified",
+    "note": "Main source and branch queue checked; production URL and edition/PDF identity not established. No rights/publication changes."
   }
 }
