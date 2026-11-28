@@ -7,10 +7,11 @@ import { getDictionary } from "@/data/dictionaries";
 import { headerNav, pagePaths, type PageKey } from "@/data/site";
 import { localizedPath, stripLocale, type Locale } from "@/lib/i18n";
 import LanguageSwitcher from "./LanguageSwitcher";
+import type { PartialLocalePaths } from "@/lib/localeSwitch";
 
 // 画面上部に固定するヘッダー（トップページ改修指示書 §2）。
 // PC（lg 以上）はロゴ行の下に横並びのナビ、スマホ・タブレットはハンバーガーメニュー。
-export default function SiteHeader({ locale }: { locale: Locale }) {
+export default function SiteHeader({ locale, partial = {} }: { locale: Locale; partial?: PartialLocalePaths }) {
   const dict = getDictionary(locale);
   const pathname = usePathname();
   const current = stripLocale(pathname);
@@ -51,7 +52,7 @@ export default function SiteHeader({ locale }: { locale: Locale }) {
         </Link>
 
         <div className="flex items-center gap-2">
-          <LanguageSwitcher locale={locale} label={dict.common.languageLabel} names={dict.common.languageNames} />
+          <LanguageSwitcher locale={locale} label={dict.common.languageLabel} names={dict.common.languageNames} partial={partial} />
           <button
             ref={buttonRef}
             type="button"
