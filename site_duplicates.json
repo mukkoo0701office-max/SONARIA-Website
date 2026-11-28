@@ -1,0 +1,2532 @@
+{
+ "schema_version": 1,
+ "source_queue_last_updated": "2026-11-29",
+ "counts": {
+  "new": 171,
+  "duplicate_published": 25
+ },
+ "results": [
+  {
+   "id": "haydn-op1-no1-peters-merton",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.1 No.1; Hob.III:1",
+   "keys": [
+    "hob:iii:1",
+    "op:1-1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op1-no2-peters-merton",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.1 No.2; Hob.III:2",
+   "keys": [
+    "hob:iii:2",
+    "op:1-2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op1-no3-peters-merton",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.1 No.3; Hob.III:3",
+   "keys": [
+    "hob:iii:3",
+    "op:1-3"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op1-no4-peters-merton",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.1 No.4; Hob.III:4",
+   "keys": [
+    "hob:iii:4",
+    "op:1-4"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op1-no5-peters-merton",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.1 No.5; Hob.III:5",
+   "keys": [
+    "hob:iii:5",
+    "op:1-5"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op1-no6-peters-merton",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.1 No.6; Hob.III:6",
+   "keys": [
+    "hob:iii:6",
+    "op:1-6"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op2-no1-peters-merton",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.2 No.1; Hob.III:7",
+   "keys": [
+    "hob:iii:7",
+    "op:2-1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op2-no2-peters-merton",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.2 No.2; Hob.III:8",
+   "keys": [
+    "hob:iii:8",
+    "op:2-2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op2-no3-peters-merton",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.2 No.3; Hob.III:9",
+   "keys": [
+    "hob:iii:9",
+    "op:2-3"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op2-no4-peters-merton",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.2 No.4; Hob.III:10",
+   "keys": [
+    "hob:iii:10",
+    "op:2-4"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op2-no5-peters-merton",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.2 No.5; Hob.III:11",
+   "keys": [
+    "hob:iii:11",
+    "op:2-5"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op2-no6-peters-merton",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.2 No.6; Hob.III:12",
+   "keys": [
+    "hob:iii:12",
+    "op:2-6"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op9-no1-imslp-research",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.9 No.1; Hob.III:19",
+   "keys": [
+    "hob:iii:19",
+    "op:9-1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op9-no2-imslp-research",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.9 No.2; Hob.III:20",
+   "keys": [
+    "hob:iii:20",
+    "op:9-2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op9-no3-imslp-research",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.9 No.3; Hob.III:21",
+   "keys": [
+    "hob:iii:21",
+    "op:9-3"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op9-no4-trautwein-litolff",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.9 No.4; Hob.III:22",
+   "keys": [
+    "hob:iii:22",
+    "op:9-4"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op9-no5-trautwein-litolff",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.9 No.5; Hob.III:23",
+   "keys": [
+    "hob:iii:23",
+    "op:9-5"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op9-no6-trautwein-litolff",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.9 No.6; Hob.III:24",
+   "keys": [
+    "hob:iii:24",
+    "op:9-6"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op17-no1-altmann-litolff",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.17 No.1; Hob.III:25",
+   "keys": [
+    "hob:iii:25",
+    "op:17-1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op17-no2-altmann-litolff",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.17 No.2; Hob.III:26",
+   "keys": [
+    "hob:iii:26",
+    "op:17-2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op17-no3-altmann-litolff",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.17 No.3; Hob.III:27",
+   "keys": [
+    "hob:iii:27",
+    "op:17-3"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op17-no4-eulenburg-litolff",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.17 No.4; Hob.III:28",
+   "keys": [
+    "hob:iii:28",
+    "op:17-4"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op17-no5-eulenburg-litolff",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.17 No.5; Hob.III:29",
+   "keys": [
+    "hob:iii:29",
+    "op:17-5"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op17-no6-eulenburg-litolff",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.17 No.6; Hob.III:30",
+   "keys": [
+    "hob:iii:30",
+    "op:17-6"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op20-no1-eulenburg-blundell",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.20 No.1; Hob.III:31",
+   "keys": [
+    "hob:iii:31",
+    "op:20-1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op20-no2-eulenburg-blundell",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.20 No.2; Hob.III:32",
+   "keys": [
+    "hob:iii:32",
+    "op:20-2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op20-no3-eulenburg-blundell",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.20 No.3; Hob.III:33",
+   "keys": [
+    "hob:iii:33",
+    "op:20-3"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op20-no4-source-editions",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.20 No.4; Hob.III:34",
+   "keys": [
+    "hob:iii:34",
+    "op:20-4"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "haydn-string-quartet-op20-4",
+     "title": "弦楽四重奏曲 ニ長調",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:20-4"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "haydn-op20-no5-source-editions",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.20 No.5; Hob.III:35",
+   "keys": [
+    "hob:iii:35",
+    "op:20-5"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op20-no6-source-editions",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.20 No.6; Hob.III:36",
+   "keys": [
+    "hob:iii:36",
+    "op:20-6"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op33-no1-eulenburg-sieber",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.33 No.1; Hob.III:37",
+   "keys": [
+    "hob:iii:37",
+    "op:33-1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op33-no2-eulenburg-sieber",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.33 No.2; Hob.III:38",
+   "keys": [
+    "hob:iii:38",
+    "op:33-2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op33-no3-eulenburg-sieber",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.33 No.3; Hob.III:39",
+   "keys": [
+    "hob:iii:39",
+    "op:33-3"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op33-no4-eulenburg-sieber",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.33 No.4; Hob.III:40",
+   "keys": [
+    "hob:iii:40",
+    "op:33-4"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op33-no5-eulenburg-sieber",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.33 No.5; Hob.III:41",
+   "keys": [
+    "hob:iii:41",
+    "op:33-5"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op33-no6-eulenburg-sieber",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.33 No.6; Hob.III:42",
+   "keys": [
+    "hob:iii:42",
+    "op:33-6"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op42-imslp-edition-research",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.42; Hob.III:43",
+   "keys": [
+    "hob:iii:43",
+    "op:42"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op50-1-imslp-edition-research",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.50 No.1; Hob.III:44",
+   "keys": [
+    "hob:iii:44",
+    "op:50-1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op50-2-imslp-edition-research",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.50 No.2; Hob.III:45",
+   "keys": [
+    "hob:iii:45",
+    "op:50-2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op50-3-imslp-edition-research",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.50 No.3; Hob.III:46",
+   "keys": [
+    "hob:iii:46",
+    "op:50-3"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op50-no4-artaria-litolff",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.50 No.4; Hob.III:47",
+   "keys": [
+    "hob:iii:47",
+    "op:50-4"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op50-no5-artaria-litolff",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.50 No.5; Hob.III:48",
+   "keys": [
+    "hob:iii:48",
+    "op:50-5"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op50-no6-artaria-litolff",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.50 No.6; Hob.III:49",
+   "keys": [
+    "hob:iii:49",
+    "op:50-6"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op54-no1-eulenburg-historical",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.54 No.1; Hob.III:58",
+   "keys": [
+    "hob:iii:58",
+    "op:54-1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op54-no2-eulenburg-historical",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.54 No.2; Hob.III:57",
+   "keys": [
+    "hob:iii:57",
+    "op:54-2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op54-no3-eulenburg-historical",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.54 No.3; Hob.III:59",
+   "keys": [
+    "hob:iii:59",
+    "op:54-3"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op55-no1-pleyel-score-parts",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.55 No.1; Hob.III:60",
+   "keys": [
+    "hob:iii:60",
+    "op:55-1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op55-no2-pleyel-score-parts",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.55 No.2; Hob.III:61",
+   "keys": [
+    "hob:iii:61",
+    "op:55-2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op55-no3-pleyel-score-parts",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.55 No.3; Hob.III:62",
+   "keys": [
+    "hob:iii:62",
+    "op:55-3"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op64-no1-pleyel-parts",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.64 No.1; Hob.III:65",
+   "keys": [
+    "hob:iii:65",
+    "op:64-1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op64-no2-pleyel-parts",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.64 No.2; Hob.III:68",
+   "keys": [
+    "hob:iii:68",
+    "op:64-2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op64-no3-pleyel-parts",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.64 No.3; Hob.III:67",
+   "keys": [
+    "hob:iii:67",
+    "op:64-3"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op64-no4-pleyel-parts",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.64 No.4; Hob.III:66",
+   "keys": [
+    "hob:iii:66",
+    "op:64-4"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op64-no5-pleyel-parts",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.64 No.5; Hob.III:63",
+   "keys": [
+    "hob:iii:63",
+    "op:64-5"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "haydn-string-quartet-lark",
+     "title": "弦楽四重奏曲 ニ長調《ひばり》",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:64-5"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "haydn-op64-no6-pleyel-parts",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.64 No.6; Hob.III:64",
+   "keys": [
+    "hob:iii:64",
+    "op:64-6"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op71-no1-hummel-pleyel-collection",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.71 No.1; Hob.III:69",
+   "keys": [
+    "hob:iii:69",
+    "op:71-1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op71-no2-hummel-pleyel-collection",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.71 No.2; Hob.III:70",
+   "keys": [
+    "hob:iii:70",
+    "op:71-2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op71-no3-hummel-pleyel-collection",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.71 No.3; Hob.III:71",
+   "keys": [
+    "hob:iii:71",
+    "op:71-3"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op74-no1-imslp-imbault-hummel",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.74 No.1; Hob.III:72",
+   "keys": [
+    "hob:iii:72",
+    "op:74-1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op74-no2-imslp-imbault-hummel",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.74 No.2; Hob.III:73",
+   "keys": [
+    "hob:iii:73",
+    "op:74-2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op74-no3-imslp-imbault-hummel",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.74 No.3; Hob.III:74",
+   "keys": [
+    "hob:iii:74",
+    "op:74-3"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op76-no1-hummel-1799-parts",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.76 No.1; Hob.III:75",
+   "keys": [
+    "hob:iii:75",
+    "op:76-1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op76-no2-hummel-1799-parts",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.76 No.2; Hob.III:76",
+   "keys": [
+    "hob:iii:76",
+    "op:76-2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op76-no3-hummel-1799-parts",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.76 No.3; Hob.III:77",
+   "keys": [
+    "hob:iii:77",
+    "op:76-3"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "haydn-string-quartet-emperor",
+     "title": "弦楽四重奏曲 ハ長調《皇帝》",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:76-3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "haydn-op76-no4-heckel-longman-set",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.76 No.4; Hob.III:78",
+   "keys": [
+    "hob:iii:78",
+    "op:76-4"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op76-no5-heckel-longman-set",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.76 No.5; Hob.III:79",
+   "keys": [
+    "hob:iii:79",
+    "op:76-5"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op76-no6-heckel-longman-set",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.76 No.6; Hob.III:80",
+   "keys": [
+    "hob:iii:80",
+    "op:76-6"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op77-no1-heckel-peters-score-parts",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.77 No.1; Hob.III:81",
+   "keys": [
+    "hob:iii:81",
+    "op:77-1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op77-no2-heckel-peters-score-parts",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.77 No.2; Hob.III:82",
+   "keys": [
+    "hob:iii:82",
+    "op:77-2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op103-hobiii83-incomplete-score-parts",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.103; Hob.III:83",
+   "keys": [
+    "hob:iii:83",
+    "op:103"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op51-seven-last-words-quartet-version-edition-review",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.51; Hob.III:50–56; related orchestral Hob.XX:1",
+   "keys": [
+    "hob:iii:50",
+    "hob:xx:1",
+    "op:51"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-op1-no0-hobii6-early-quartet",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Op.1 No.0 (Op.0); Hob.II:6",
+   "keys": [
+    "hob:ii:6",
+    "op:0",
+    "op:1-0"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-divertimento-hobiii-d3-manuscript-quartet",
+   "composer_id": "haydn",
+   "category": "string_quartet",
+   "opus_catalog": "Hob.III:D3",
+   "keys": [
+    "hob:iii:d3"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-violin-sonata-g-hobxv32-op70",
+   "composer_id": "haydn",
+   "category": "violin_sonata",
+   "opus_catalog": "Op.70; after Hob.XV:32 (see scholarly attribution notes)",
+   "keys": [
+    "hob:xv:32",
+    "op:70"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-arr-violin-sonata-no2-after-hobxvi24",
+   "composer_id": "haydn",
+   "category": "violin_sonata_arrangement",
+   "opus_catalog": "Violin Sonatas collection No.2 (arr. after Hob.XVI:24)",
+   "keys": [
+    "hob:xvi:24"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-arr-violin-sonata-no3-after-hobxvi25",
+   "composer_id": "haydn",
+   "category": "violin_sonata_arrangement",
+   "opus_catalog": "Violin Sonatas collection No.3 (arr. after Hob.XVI:25)",
+   "keys": [
+    "hob:xvi:25"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-arr-violin-sonata-no4-after-hobxvi26",
+   "composer_id": "haydn",
+   "category": "violin_sonata_arrangement",
+   "opus_catalog": "Violin Sonatas collection No.4 (arr. after Hob.XVI:26)",
+   "keys": [
+    "hob:xvi:26"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-arr-violin-sonata-no5-after-hobxvi43",
+   "composer_id": "haydn",
+   "category": "violin_sonata_arrangement",
+   "opus_catalog": "Violin Sonatas collection No.5 (arr. after Hob.XVI:43)",
+   "keys": [
+    "hob:xvi:43"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-arr-violin-sonata-no6-after-hobii11",
+   "composer_id": "haydn",
+   "category": "violin_sonata_arrangement",
+   "opus_catalog": "Violin Sonatas collection No.6 (arr. after Hob.II:11)",
+   "keys": [
+    "hob:ii:11"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-arr-violin-sonata-no7-after-hobiii82",
+   "composer_id": "haydn",
+   "category": "violin_sonata_arrangement",
+   "opus_catalog": "Violin Sonatas collection No.7 (arr. after Hob.III:82)",
+   "keys": [
+    "hob:iii:82"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-arr-violin-sonata-no8-after-hobiii81",
+   "composer_id": "haydn",
+   "category": "violin_sonata_arrangement",
+   "opus_catalog": "Violin Sonatas collection No.8 (arr. after Hob.III:81)",
+   "keys": [
+    "hob:iii:81"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-violin-viola-hobvi1-doblinger-parts",
+   "composer_id": "haydn",
+   "category": "string_duo_violin_viola",
+   "opus_catalog": "Hob.VI:1",
+   "keys": [
+    "hob:vi:1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-violin-viola-hobvi2-doblinger-parts",
+   "composer_id": "haydn",
+   "category": "string_duo_violin_viola",
+   "opus_catalog": "Hob.VI:2",
+   "keys": [
+    "hob:vi:2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-violin-viola-hobvi3-doblinger-parts",
+   "composer_id": "haydn",
+   "category": "string_duo_violin_viola",
+   "opus_catalog": "Hob.VI:3",
+   "keys": [
+    "hob:vi:3"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-violin-viola-hobvi4-score-parts-discovery",
+   "composer_id": "haydn",
+   "category": "string_duo_violin_viola",
+   "opus_catalog": "Hob.VI:4",
+   "keys": [
+    "hob:vi:4"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-violin-viola-hobvi5-score-parts-discovery",
+   "composer_id": "haydn",
+   "category": "string_duo_violin_viola",
+   "opus_catalog": "Hob.VI:5",
+   "keys": [
+    "hob:vi:5"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-violin-viola-hobvi6-score-parts-discovery",
+   "composer_id": "haydn",
+   "category": "string_duo_violin_viola",
+   "opus_catalog": "Hob.VI:6",
+   "keys": [
+    "hob:vi:6"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-arr-cello-piano-grutzmacher-sonata-no1",
+   "composer_id": "haydn",
+   "category": "cello_sonata_arrangement",
+   "opus_catalog": "Grützmacher cello adaptation of Haydn Violin Sonatas collection No.1; underlying Hob.XV:32",
+   "keys": [
+    "hob:xv:32"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-arr-cello-piano-grutzmacher-sonata-no2",
+   "composer_id": "haydn",
+   "category": "cello_sonata_arrangement",
+   "opus_catalog": "Grützmacher cello adaptation of Haydn Violin Sonatas collection No.2; underlying Hob.XVI:24",
+   "keys": [
+    "hob:xvi:24"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-arr-cello-piano-grutzmacher-sonata-no3",
+   "composer_id": "haydn",
+   "category": "cello_sonata_arrangement",
+   "opus_catalog": "Grützmacher cello adaptation of Haydn historical Violin Sonatas collection No.3; underlying Hob.XVI:25",
+   "keys": [
+    "hob:xvi:25"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-arr-cello-piano-grutzmacher-sonata-no4",
+   "composer_id": "haydn",
+   "category": "cello_sonata_arrangement",
+   "opus_catalog": "Grützmacher cello adaptation of Haydn historical Violin Sonatas collection No.4; underlying Hob.XVI:26",
+   "keys": [
+    "hob:xvi:26"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-arr-cello-piano-grutzmacher-sonata-no5",
+   "composer_id": "haydn",
+   "category": "cello_sonata_arrangement",
+   "opus_catalog": "Grützmacher cello adaptation of Haydn historical Violin Sonatas collection No.5; underlying Hob.XVI:43",
+   "keys": [
+    "hob:xvi:43"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-arr-cello-piano-grutzmacher-sonata-no6",
+   "composer_id": "haydn",
+   "category": "cello_sonata_arrangement",
+   "opus_catalog": "Grützmacher arrangement of Haydn historical Violin Sonata collection No.6; after Hob.II:11 / Hob.XVI:15",
+   "keys": [
+    "hob:ii:11",
+    "hob:xvi:15"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-arr-cello-piano-grutzmacher-sonata-no7",
+   "composer_id": "haydn",
+   "category": "cello_sonata_arrangement",
+   "opus_catalog": "Grützmacher arrangement of Haydn historical Violin Sonata collection No.7; after Hob.III:82 / Op.77 No.2",
+   "keys": [
+    "hob:iii:82",
+    "op:77-2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "haydn-arr-cello-piano-grutzmacher-sonata-no8",
+   "composer_id": "haydn",
+   "category": "cello_sonata_arrangement",
+   "opus_catalog": "Grützmacher arrangement of Haydn historical Violin Sonata collection No.8; after Hob.III:81 / Op.77 No.1",
+   "keys": [
+    "hob:iii:81",
+    "op:77-1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-k80-73f-breitkopf-1881-score-parts",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.80/73f",
+   "keys": [
+    "k:73f",
+    "k:80"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-k155-134a-breitkopf1881-score-parts",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.155/134a",
+   "keys": [
+    "k:134a",
+    "k:155"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-k156-134b-breitkopf1881-score-parts",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.156/134b",
+   "keys": [
+    "k:134b",
+    "k:156"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-k157-breitkopf-peters",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.157",
+   "keys": [
+    "k:157"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-k158-breitkopf-peters",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.158",
+   "keys": [
+    "k:158"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-k159-breitkopf-peters",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.159",
+   "keys": [
+    "k:159"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-string-quartet-no7-k160159a-breitkopf-1881",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.160/159a",
+   "keys": [
+    "k:159a",
+    "k:160"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-string-quartet-no8-k168-breitkopf-1881",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.168",
+   "keys": [
+    "k:168"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-string-quartet-no9-k169-breitkopf-1881",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.169",
+   "keys": [
+    "k:169"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-string-quartet-no10-k170-breitkopf-1882",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.170",
+   "keys": [
+    "k:170"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-string-quartet-no11-k171-breitkopf-1882",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.171",
+   "keys": [
+    "k:171"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-string-quartet-no12-k172-breitkopf-1882",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.172",
+   "keys": [
+    "k:172"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-string-quartet-no13-k173-breitkopf-1882",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.173",
+   "keys": [
+    "k:173"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-string-quartet-no14-k387-breitkopf-1882",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.387",
+   "keys": [
+    "k:387"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-string-quartet-no15-k421-breitkopf-1882",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.421/417b",
+   "keys": [
+    "k:417b",
+    "k:421"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-string-quartet-no16-k428-breitkopf-1882",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.428/421b",
+   "keys": [
+    "k:421b",
+    "k:428"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-string-quartet-no17-k458-breitkopf-1882",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.458",
+   "keys": [
+    "k:458"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-string-quartet-no18-k464-breitkopf-1882",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.464",
+   "keys": [
+    "k:464"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-string-quartet-no19-k465-breitkopf-1882",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.465",
+   "keys": [
+    "k:465"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "mozart-string-quartet-dissonance",
+     "title": "弦楽四重奏曲第19番 ハ長調《不協和音》",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "k:465"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mozart-string-quartet-no20-k499-breitkopf-1882",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.499",
+   "keys": [
+    "k:499"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-string-quartet-no21-k575-breitkopf-1882",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.575",
+   "keys": [
+    "k:575"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-string-quartet-no22-k589-breitkopf-1882",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.589",
+   "keys": [
+    "k:589"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-string-quartet-no23-k590-breitkopf-1882",
+   "composer_id": "mozart",
+   "category": "string_quartet",
+   "opus_catalog": "K.590",
+   "keys": [
+    "k:590"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k6-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.6",
+   "keys": [
+    "k:6"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k7-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.7",
+   "keys": [
+    "k:7"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k8-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.8",
+   "keys": [
+    "k:8"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k9-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.9",
+   "keys": [
+    "k:9"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k10-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.10",
+   "keys": [
+    "k:10"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k11-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.11",
+   "keys": [
+    "k:11"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k12-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.12",
+   "keys": [
+    "k:12"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k13-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.13",
+   "keys": [
+    "k:13"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k14-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.14",
+   "keys": [
+    "k:14"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k15-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.15",
+   "keys": [
+    "k:15"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k26-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.26",
+   "keys": [
+    "k:26"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k27-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.27",
+   "keys": [
+    "k:27"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k28-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.28",
+   "keys": [
+    "k:28"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k29-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.29",
+   "keys": [
+    "k:29"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k30-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.30",
+   "keys": [
+    "k:30"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k31-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.31",
+   "keys": [
+    "k:31"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k296-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.296",
+   "keys": [
+    "k:296"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k301-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.301/293a",
+   "keys": [
+    "k:293a",
+    "k:301"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k302-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.302/293b",
+   "keys": [
+    "k:293b",
+    "k:302"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k303-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.303/293c",
+   "keys": [
+    "k:293c",
+    "k:303"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k304-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.304/300c",
+   "keys": [
+    "k:300c",
+    "k:304"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k305-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.305/293d",
+   "keys": [
+    "k:293d",
+    "k:305"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k306-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.306/300l",
+   "keys": [
+    "k:300l",
+    "k:306"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k376-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.376/374d",
+   "keys": [
+    "k:374d",
+    "k:376"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k377-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.377/374e",
+   "keys": [
+    "k:374e",
+    "k:377"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k378-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.378/317d",
+   "keys": [
+    "k:317d",
+    "k:378"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k379-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.379/373a",
+   "keys": [
+    "k:373a",
+    "k:379"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k380-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.380/374f",
+   "keys": [
+    "k:374f",
+    "k:380"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k402-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.402/385e",
+   "keys": [
+    "k:385e",
+    "k:402"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k403-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.403/385c",
+   "keys": [
+    "k:385c",
+    "k:403"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k404-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.404/385d",
+   "keys": [
+    "k:385d",
+    "k:404"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k454-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.454",
+   "keys": [
+    "k:454"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k481-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.481",
+   "keys": [
+    "k:481"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k526-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.526",
+   "keys": [
+    "k:526"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-sonata-k547-breitkopf-1879",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.547",
+   "keys": [
+    "k:547"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-fragment-anh48-385e",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.Anh.48/385E",
+   "keys": [],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-fragment-anh50-526a",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.Anh.50/526a",
+   "keys": [],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "mozart-violin-fragment-anh47-546a",
+   "composer_id": "mozart",
+   "category": "violin_sonata",
+   "opus_catalog": "K.Anh.47/546a",
+   "keys": [],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "beethoven-op18-no1-roentgen-breitkopf-parts",
+   "composer_id": "beethoven",
+   "category": "string_quartet",
+   "opus_catalog": "Op.18 No.1",
+   "keys": [
+    "op:18-1"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-string-quartet-1",
+     "title": "弦楽四重奏曲第1番 ヘ長調",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:18-1"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-op18-no2-roentgen-breitkopf-parts",
+   "composer_id": "beethoven",
+   "category": "string_quartet",
+   "opus_catalog": "Op.18 No.2",
+   "keys": [
+    "op:18-2"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-string-quartet-2",
+     "title": "弦楽四重奏曲第2番 ト長調",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:18-2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-op18-no3-roentgen-breitkopf-parts",
+   "composer_id": "beethoven",
+   "category": "string_quartet",
+   "opus_catalog": "Op.18 No.3",
+   "keys": [
+    "op:18-3"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-string-quartet-3",
+     "title": "弦楽四重奏曲第3番 ニ長調",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:18-3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-op18-no4-roentgen-breitkopf-parts",
+   "composer_id": "beethoven",
+   "category": "string_quartet",
+   "opus_catalog": "Op.18 No.4",
+   "keys": [
+    "op:18-4"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-string-quartet-4",
+     "title": "弦楽四重奏曲第4番 ハ短調",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:18-4"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-op18-no5-roentgen-breitkopf-parts",
+   "composer_id": "beethoven",
+   "category": "string_quartet",
+   "opus_catalog": "Op.18 No.5",
+   "keys": [
+    "op:18-5"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-string-quartet-5",
+     "title": "弦楽四重奏曲第5番 イ長調",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:18-5"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-op18-no6-roentgen-breitkopf-parts",
+   "composer_id": "beethoven",
+   "category": "string_quartet",
+   "opus_catalog": "Op.18 No.6",
+   "keys": [
+    "op:18-6"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-string-quartet-6",
+     "title": "弦楽四重奏曲第6番 変ロ長調",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:18-6"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-op59-no1-simrock-parts-breitkopf-score",
+   "composer_id": "beethoven",
+   "category": "string_quartet",
+   "opus_catalog": "Op.59 No.1",
+   "keys": [
+    "op:59-1"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-string-quartet-7",
+     "title": "弦楽四重奏曲第7番 ヘ長調《ラズモフスキー第1番》",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:59-1"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-op59-no2-simrock-parts-breitkopf-score",
+   "composer_id": "beethoven",
+   "category": "string_quartet",
+   "opus_catalog": "Op.59 No.2",
+   "keys": [
+    "op:59-2"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-string-quartet-8",
+     "title": "弦楽四重奏曲第8番 ホ短調《ラズモフスキー第2番》",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:59-2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-op59-no3-simrock-parts-breitkopf-score",
+   "composer_id": "beethoven",
+   "category": "string_quartet",
+   "opus_catalog": "Op.59 No.3",
+   "keys": [
+    "op:59-3"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-string-quartet-9",
+     "title": "弦楽四重奏曲第9番 ハ長調《ラズモフスキー第3番》",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:59-3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-op74-first-edition-parts-breitkopf-score",
+   "composer_id": "beethoven",
+   "category": "string_quartet",
+   "opus_catalog": "Op.74",
+   "keys": [
+    "op:74"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "beethoven-op95-first-edition-parts-breitkopf-score",
+   "composer_id": "beethoven",
+   "category": "string_quartet",
+   "opus_catalog": "Op.95",
+   "keys": [
+    "op:95"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "beethoven-op127-breitkopf-score-historical-parts",
+   "composer_id": "beethoven",
+   "category": "string_quartet",
+   "opus_catalog": "Op.127",
+   "keys": [
+    "op:127"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "beethoven-op130-breitkopf-score-historical-parts",
+   "composer_id": "beethoven",
+   "category": "string_quartet",
+   "opus_catalog": "Op.130",
+   "keys": [
+    "op:130"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "beethoven-op131-breitkopf-score-schott-parts",
+   "composer_id": "beethoven",
+   "category": "string_quartet",
+   "opus_catalog": "Op.131",
+   "keys": [
+    "op:131"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "beethoven-op132-breitkopf-score-schott-parts",
+   "composer_id": "beethoven",
+   "category": "string_quartet",
+   "opus_catalog": "Op.132",
+   "keys": [
+    "op:132"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "beethoven-op135-breitkopf-score-schlesinger-parts",
+   "composer_id": "beethoven",
+   "category": "string_quartet",
+   "opus_catalog": "Op.135",
+   "keys": [
+    "op:135"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "beethoven-op133-breitkopf-score-artaria-parts",
+   "composer_id": "beethoven",
+   "category": "string_quartet",
+   "opus_catalog": "Op.133",
+   "keys": [
+    "op:133"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "beethoven-violin-sonata-1-henle-1974-research",
+   "composer_id": "beethoven",
+   "category": "violin_sonata",
+   "opus_catalog": "Op.12 No.1",
+   "keys": [
+    "op:12-1"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-violin-sonata-1",
+     "title": "ヴァイオリン・ソナタ第1番 ニ長調",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:12-1"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-violin-sonata-2-henle-1974-research",
+   "composer_id": "beethoven",
+   "category": "violin_sonata",
+   "opus_catalog": "Op.12 No.2",
+   "keys": [
+    "op:12-2"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-violin-sonata-2",
+     "title": "ヴァイオリン・ソナタ第2番 イ長調",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:12-2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-violin-sonata-3-peters-joachim-1901-research",
+   "composer_id": "beethoven",
+   "category": "violin_sonata",
+   "opus_catalog": "Op.12 No.3",
+   "keys": [
+    "op:12-3"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-violin-sonata-3",
+     "title": "ヴァイオリン・ソナタ第3番 変ホ長調",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:12-3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-violin-sonata-4-peters-joachim-1901-research",
+   "composer_id": "beethoven",
+   "category": "violin_sonata",
+   "opus_catalog": "Op.23",
+   "keys": [
+    "op:23"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-violin-sonata-4",
+     "title": "ヴァイオリン・ソナタ第4番 イ短調",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:23"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-violin-sonata-5-peters-joachim-1901-research",
+   "composer_id": "beethoven",
+   "category": "violin_sonata",
+   "opus_catalog": "Op.24",
+   "keys": [
+    "op:24"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-violin-sonata-5",
+     "title": "ヴァイオリン・ソナタ第5番 ヘ長調《春》",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:24"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-violin-sonata-6-first-edition-1803-research",
+   "composer_id": "beethoven",
+   "category": "violin_sonata",
+   "opus_catalog": "Op.30 No.1",
+   "keys": [
+    "op:30-1"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-violin-sonata-6",
+     "title": "ヴァイオリン・ソナタ第6番 イ長調",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:30-1"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-violin-sonata-op30-no2-bureau-first-edition",
+   "composer_id": "beethoven",
+   "category": "violin_sonata",
+   "opus_catalog": "Op.30 No.2",
+   "keys": [
+    "op:30-2"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-violin-sonata-7",
+     "title": "ヴァイオリン・ソナタ第7番 ハ短調",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:30-2"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-violin-sonata-op30-no3-peters-joachim",
+   "composer_id": "beethoven",
+   "category": "violin_sonata",
+   "opus_catalog": "Op.30 No.3",
+   "keys": [
+    "op:30-3"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-violin-sonata-8",
+     "title": "ヴァイオリン・ソナタ第8番 ト長調",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:30-3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-violin-sonata-9-peters-joachim-1901",
+   "composer_id": "beethoven",
+   "category": "violin_sonata",
+   "opus_catalog": "Op.47",
+   "keys": [
+    "op:47"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-violin-sonata-9",
+     "title": "ヴァイオリン・ソナタ第9番 イ長調《クロイツェル》",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:47"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-violin-sonata-10-peters-joachim-1901",
+   "composer_id": "beethoven",
+   "category": "violin_sonata",
+   "opus_catalog": "Op.96",
+   "keys": [
+    "op:96"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "beethoven-violin-sonata-10",
+     "title": "ヴァイオリン・ソナタ第10番 ト長調",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:96"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "beethoven-cello-sonata-op5-no1-artaria-1797",
+   "composer_id": "beethoven",
+   "category": "cello_sonata",
+   "opus_catalog": "Op.5 No.1",
+   "keys": [
+    "op:5-1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "beethoven-cello-sonata-op5-no2-artaria-1797",
+   "composer_id": "beethoven",
+   "category": "cello_sonata",
+   "opus_catalog": "Op.5 No.2",
+   "keys": [
+    "op:5-2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "beethoven-cello-sonata-op69-breitkopf-1809",
+   "composer_id": "beethoven",
+   "category": "cello_sonata",
+   "opus_catalog": "Op.69",
+   "keys": [
+    "op:69"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "beethoven-cello-sonata-op102-no1-artaria-1819",
+   "composer_id": "beethoven",
+   "category": "cello_sonata",
+   "opus_catalog": "Op.102 No.1",
+   "keys": [
+    "op:102-1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "beethoven-cello-sonata-op102-no2-simrock-1816",
+   "composer_id": "beethoven",
+   "category": "cello_sonata",
+   "opus_catalog": "Op.102 No.2",
+   "keys": [
+    "op:102-2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "brahms-string-quartet-op51-no1-simrock-1873",
+   "composer_id": "brahms",
+   "category": "string_quartet",
+   "opus_catalog": "Op.51 No.1",
+   "keys": [
+    "op:51-1"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "brahms-string-quartet-op51-no2-simrock-1873",
+   "composer_id": "brahms",
+   "category": "string_quartet",
+   "opus_catalog": "Op.51 No.2",
+   "keys": [
+    "op:51-2"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "brahms-string-quartet-op67-simrock-1876",
+   "composer_id": "brahms",
+   "category": "string_quartet",
+   "opus_catalog": "Op.67",
+   "keys": [
+    "op:67"
+   ],
+   "verdict": "new",
+   "site_matches": [],
+   "queue_same_work": [
+    "brahms-string-quartet-op67-breitkopf-gal-1926"
+   ]
+  },
+  {
+   "id": "brahms-string-quartet-op67-breitkopf-gal-1926",
+   "composer_id": "brahms",
+   "category": "string_quartet",
+   "opus_catalog": "Op.67",
+   "keys": [
+    "op:67"
+   ],
+   "verdict": "new",
+   "site_matches": [],
+   "queue_same_work": [
+    "brahms-string-quartet-op67-simrock-1876"
+   ]
+  },
+  {
+   "id": "brahms-violin-sonata-1-op78-simrock-first",
+   "composer_id": "brahms",
+   "category": "violin_sonata",
+   "opus_catalog": "Op.78",
+   "keys": [
+    "op:78"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "brahms-violin-sonata-1",
+     "title": "ヴァイオリン・ソナタ第1番 ト長調《雨の歌》",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:78"
+     ]
+    },
+    {
+     "site_id": "brahms-violin-sonatas",
+     "title": "ヴァイオリン・ソナタ（第1〜3番）",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:78"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "brahms-violin-sonata-2-op100-simrock-first",
+   "composer_id": "brahms",
+   "category": "violin_sonata",
+   "opus_catalog": "Op.100",
+   "keys": [
+    "op:100"
+   ],
+   "verdict": "duplicate_published",
+   "site_matches": [
+    {
+     "site_id": "brahms-violin-sonata-2",
+     "title": "ヴァイオリン・ソナタ第2番 イ長調",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:100"
+     ]
+    },
+    {
+     "site_id": "brahms-violin-sonatas",
+     "title": "ヴァイオリン・ソナタ（第1〜3番）",
+     "where": "published",
+     "same_scoring": true,
+     "matched": [
+      "op:100"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "brahms-cello-sonata-1-op38-simrock-first-1866",
+   "composer_id": "brahms",
+   "category": "cello_sonata",
+   "opus_catalog": "Op.38",
+   "keys": [
+    "op:38"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  },
+  {
+   "id": "brahms-cello-sonata-2-op99-simrock-first-1887",
+   "composer_id": "brahms",
+   "category": "cello_sonata",
+   "opus_catalog": "Op.99",
+   "keys": [
+    "op:99"
+   ],
+   "verdict": "new",
+   "site_matches": []
+  }
+ ]
+}
