@@ -24,7 +24,7 @@ import {
 } from "@/data/orders/config";
 import { getDictionary } from "@/data/dictionaries";
 import { pagePaths } from "@/data/site";
-import { localizedPath, type Locale } from "@/lib/i18n";
+import { jaOrEn, localizedPath, type Locale } from "@/lib/i18n";
 import { clampInt, quoteBowing, quoteRecording } from "@/lib/orders/pricing";
 import { candidateDays, endsAfter, isPast, validCandidates, type Candidate, type CandidateDay } from "@/lib/orders/schedule";
 import { submitOrder, withReceipt, type SubmitResult } from "@/lib/orders/submit";
@@ -202,7 +202,9 @@ export default function ServiceOrderForm({ locale }: Props) {
   function payload() {
     return {
       service,
-      locale,
+      // 受付関数・DB は返信言語として ja / en だけを受け付ける。欧州 4 言語のページからは en で送り、表示していた言語は pageLocale に残す
+      locale: jaOrEn(locale),
+      pageLocale: locale,
       createdAt: new Date().toISOString(),
       estimateTotal: summary.total,
       lesson: service === "lesson" ? { trialTaken, plan, candidates: valid } : undefined,
