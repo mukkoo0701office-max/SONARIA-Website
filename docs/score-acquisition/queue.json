@@ -37,9 +37,9 @@
   ],
   "cursor": {
     "composer": "Brahms",
-    "stage": "string_quartet",
-    "last_work": "Op.51 No.2",
-    "note": "Next Brahms String Quartet No.3 Op.67. Live deployment URL not verified; main catalog checked separately 2026-11-28."
+    "stage": "violin_sonata",
+    "last_work": "Op.67",
+    "note": "Brahms original string quartets Op.51 Nos.1-2 and Op.67 researched; next violin sonata No.1 Op.78. Live deployment URL unverified."
   },
   "items": [
     {
@@ -13862,6 +13862,219 @@
       "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null
+    },
+    {
+      "composer": "Johannes Brahms",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.3 in B-flat major",
+      "opus_catalog": "Op.67",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.3%2C_Op.67_%28Brahms%2C_Johannes%29",
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.3%2C_Op.67_%28Brahms%2C_Johannes%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin1",
+        "violin2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "rights_status": "unknown",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null,
+      "set_completeness": "unverified",
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.3%2C_Op.67_%28Brahms%2C_Johannes%29",
+          "checked_at": "2026-11-28T17:20:55+09:00",
+          "scope": "IMSLP metadata only; no PDFs downloaded or inspected"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_and_main_catalog_checked_live_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "id": "brahms-string-quartet-op67-simrock-1876",
+      "edition": {
+        "publisher": "N. Simrock",
+        "publication_date": "1876",
+        "editor": "First edition",
+        "plate": "score 7892; parts 7893",
+        "scope": "2 violins, viola, cello",
+        "imslp_file_id": "93521",
+        "edition_comparison": "First-edition bibliographic provenance; different plate numbers for score and parts; content matching and all movements unverified."
+      },
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "93521",
+        "edition_url": "https://imslp.org/wiki/String_Quartet_No.3%2C_Op.67_%28Brahms%2C_Johannes%29",
+        "publisher": "N. Simrock",
+        "editor": "First edition",
+        "publication_date": "1876",
+        "scope": "IMSLP complete score listing; PDF uninspected",
+        "evidence": "IMSLP Scores metadata 2026-11-28"
+      },
+      "part_inventory": {
+        "violin1": {
+          "status": "identified",
+          "imslp_file_id": "94385",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.3%2C_Op.67_%28Brahms%2C_Johannes%29",
+          "publisher": "N. Simrock",
+          "editor": "First edition",
+          "scope": "IMSLP listing; PDF uninspected",
+          "evidence": "IMSLP Parts metadata 2026-11-28"
+        },
+        "violin2": {
+          "status": "identified",
+          "imslp_file_id": "94386",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.3%2C_Op.67_%28Brahms%2C_Johannes%29",
+          "publisher": "N. Simrock",
+          "editor": "First edition",
+          "scope": "IMSLP listing; PDF uninspected",
+          "evidence": "IMSLP Parts metadata 2026-11-28"
+        },
+        "viola": {
+          "status": "identified",
+          "imslp_file_id": "94387",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.3%2C_Op.67_%28Brahms%2C_Johannes%29",
+          "publisher": "N. Simrock",
+          "editor": "First edition",
+          "scope": "IMSLP listing; PDF uninspected",
+          "evidence": "IMSLP Parts metadata 2026-11-28"
+        },
+        "cello": {
+          "status": "identified",
+          "imslp_file_id": "94388",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.3%2C_Op.67_%28Brahms%2C_Johannes%29",
+          "publisher": "N. Simrock",
+          "editor": "First edition",
+          "scope": "IMSLP listing; PDF uninspected",
+          "evidence": "IMSLP Parts metadata 2026-11-28"
+        }
+      },
+      "score_part_edition_match": "unknown",
+      "missing_assets": [],
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.3%2C_Op.67_%28Brahms%2C_Johannes%29",
+          "verified": "IMSLP score #93521; four parts 94385, 94386, 94387, 94388; N. Simrock 1876; PDF not inspected"
+        }
+      ],
+      "notes": "First-edition bibliographic provenance; different plate numbers for score and parts; content matching and all movements unverified. Japanese republication rights unknown; no download, approval, or publication."
+    },
+    {
+      "composer": "Johannes Brahms",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.3 in B-flat major",
+      "opus_catalog": "Op.67",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.3%2C_Op.67_%28Brahms%2C_Johannes%29",
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.3%2C_Op.67_%28Brahms%2C_Johannes%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin1",
+        "violin2",
+        "viola",
+        "cello"
+      ],
+      "status": "research_needed",
+      "rights_status": "unknown",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null,
+      "set_completeness": "unverified",
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.3%2C_Op.67_%28Brahms%2C_Johannes%29",
+          "checked_at": "2026-11-28T17:20:55+09:00",
+          "scope": "IMSLP metadata only; no PDFs downloaded or inspected"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_and_main_catalog_checked_live_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "id": "brahms-string-quartet-op67-breitkopf-gal-1926",
+      "edition": {
+        "publisher": "Breitkopf & Härtel",
+        "publication_date": "1926-1927",
+        "editor": "Hans Gál",
+        "plate": "J.B.24",
+        "scope": "2 violins, viola, cello",
+        "imslp_file_id": "242312",
+        "edition_comparison": "Edited collected-works score; editorial copyright and Japan republication rights require separate review. Same-edition independent parts not identified."
+      },
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "242312",
+        "edition_url": "https://imslp.org/wiki/String_Quartet_No.3%2C_Op.67_%28Brahms%2C_Johannes%29",
+        "publisher": "Breitkopf & Härtel",
+        "editor": "Hans Gál",
+        "publication_date": "1926-1927",
+        "scope": "IMSLP complete score listing; PDF uninspected",
+        "evidence": "IMSLP Scores metadata 2026-11-28"
+      },
+      "part_inventory": {
+        "violin1": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.3%2C_Op.67_%28Brahms%2C_Johannes%29",
+          "publisher": null,
+          "editor": null,
+          "scope": "Matching edition part not identified",
+          "evidence": "IMSLP metadata review 2026-11-28"
+        },
+        "violin2": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.3%2C_Op.67_%28Brahms%2C_Johannes%29",
+          "publisher": null,
+          "editor": null,
+          "scope": "Matching edition part not identified",
+          "evidence": "IMSLP metadata review 2026-11-28"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.3%2C_Op.67_%28Brahms%2C_Johannes%29",
+          "publisher": null,
+          "editor": null,
+          "scope": "Matching edition part not identified",
+          "evidence": "IMSLP metadata review 2026-11-28"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": null,
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.3%2C_Op.67_%28Brahms%2C_Johannes%29",
+          "publisher": null,
+          "editor": null,
+          "scope": "Matching edition part not identified",
+          "evidence": "IMSLP metadata review 2026-11-28"
+        }
+      },
+      "score_part_edition_match": "unknown",
+      "missing_assets": [
+        "violin1",
+        "violin2",
+        "viola",
+        "cello"
+      ],
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.3%2C_Op.67_%28Brahms%2C_Johannes%29",
+          "verified": "IMSLP score #242312; same-edition parts not identified; Breitkopf & Härtel 1926-1927; PDF not inspected"
+        }
+      ],
+      "notes": "Edited collected-works score; editorial copyright and Japan republication rights require separate review. Same-edition independent parts not identified. Japanese republication rights unknown; no download, approval, or publication."
     }
   ],
   "last_updated": "2026-11-28",
@@ -14024,14 +14237,16 @@
     "notes": "No live site verification. Main catalog source can lag deployment. Rights pending; no publication action."
   },
   "last_site_reconciliation": {
-    "checked_at": "2026-11-28T16:14:56+09:00",
+    "checked_at": "2026-11-28T17:20:55+09:00",
     "main_catalog_path": "frontend/src/data/scores/catalog.json",
     "main_catalog_blob_sha": "4cd09cd46263fbaaf53282aadfb22151c0821d2b",
     "main_catalog_work_count": 203,
-    "brahms_op51_matches_in_main": 2,
+    "brahms_op67_matches_in_main": 0,
     "live_site_status": "unverified_canonical_url_not_established",
+    "site_url_evidence": "frontend/next.config.ts NEXT_PUBLIC_SITE_URL defaults empty; GitHub Pages is preview only",
     "work_branch": "coordination/gpt-claude-score-queue",
-    "pr_state": "not_independently_verified",
-    "note": "Main catalog checked; live deployed website could not be confirmed. Next.js config NEXT_PUBLIC_SITE_URL defaults empty, GitHub Pages is preview only. No publication state inferred; no PDFs downloaded."
+    "pr_state": "open",
+    "pr_head_sha_before": "25f1926a4783344c9d8144e824d83042d4b2020e",
+    "note": "Main catalog and PR queue independently checked. Live site not verified; no publication inferred. Score/part PDFs not inspected."
   }
 }
