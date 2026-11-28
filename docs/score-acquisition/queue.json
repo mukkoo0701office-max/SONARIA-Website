@@ -36,10 +36,10 @@
     }
   ],
   "cursor": {
-    "composer": "Beethoven",
-    "stage": "cello_sonata",
-    "last_work": "Op.102 No.2",
-    "note": "Five numbered Beethoven cello sonatas surveyed; next Brahms string quartets. Main catalog 203 works, no Beethoven cello sonatas identified; deployed site URL not verified. 2026-11-28."
+    "composer": "Brahms",
+    "stage": "string_quartet",
+    "last_work": "Op.51 No.2",
+    "note": "Next Brahms String Quartet No.3 Op.67. Live deployment URL not verified; main catalog checked separately 2026-11-28."
   },
   "items": [
     {
@@ -13654,6 +13654,214 @@
       "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null
+    },
+    {
+      "id": "brahms-string-quartet-op51-no1-simrock-1873",
+      "composer": "Johannes Brahms",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.1 in C minor",
+      "opus_catalog": "Op.51 No.1",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.1%2C_Op.51_No.1_%28Brahms%2C_Johannes%29",
+      "edition": {
+        "publisher": "N. Simrock",
+        "publication_date": "1873",
+        "editor": "First edition (no named modern editor)",
+        "plate": "score 7378; parts 7380",
+        "scope": "2 violins, viola, cello; original quartet",
+        "imslp_file_id": "23065",
+        "edition_comparison": "1873 first-edition score and four separate first-edition parts; score/part plate numbers differ, note-by-note matching not verified"
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.1%2C_Op.51_No.1_%28Brahms%2C_Johannes%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin1",
+        "violin2",
+        "viola",
+        "cello"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "23065",
+        "edition_url": "https://imslp.org/wiki/String_Quartet_No.1%2C_Op.51_No.1_%28Brahms%2C_Johannes%29",
+        "publisher": "N. Simrock",
+        "editor": "First edition",
+        "publication_date": "1873",
+        "scope": "IMSLP complete score listing; PDF uninspected",
+        "evidence": "IMSLP Scores metadata 2026-11-28"
+      },
+      "part_inventory": {
+        "violin1": {
+          "status": "identified",
+          "imslp_file_id": "478622",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.1%2C_Op.51_No.1_%28Brahms%2C_Johannes%29",
+          "publisher": "N. Simrock",
+          "editor": "First edition",
+          "scope": "IMSLP part listing only; PDF uninspected",
+          "evidence": "IMSLP Parts metadata 2026-11-28"
+        },
+        "violin2": {
+          "status": "identified",
+          "imslp_file_id": "478623",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.1%2C_Op.51_No.1_%28Brahms%2C_Johannes%29",
+          "publisher": "N. Simrock",
+          "editor": "First edition",
+          "scope": "IMSLP part listing only; PDF uninspected",
+          "evidence": "IMSLP Parts metadata 2026-11-28"
+        },
+        "viola": {
+          "status": "identified",
+          "imslp_file_id": "478624",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.1%2C_Op.51_No.1_%28Brahms%2C_Johannes%29",
+          "publisher": "N. Simrock",
+          "editor": "First edition",
+          "scope": "IMSLP part listing only; PDF uninspected",
+          "evidence": "IMSLP Parts metadata 2026-11-28"
+        },
+        "cello": {
+          "status": "identified",
+          "imslp_file_id": "478625",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.1%2C_Op.51_No.1_%28Brahms%2C_Johannes%29",
+          "publisher": "N. Simrock",
+          "editor": "First edition",
+          "scope": "IMSLP part listing only; PDF uninspected",
+          "evidence": "IMSLP Parts metadata 2026-11-28"
+        }
+      },
+      "score_part_edition_match": "unknown",
+      "set_completeness": "unverified",
+      "missing_assets": [],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.1%2C_Op.51_No.1_%28Brahms%2C_Johannes%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP page metadata verified; score and four parts identified; PDFs not downloaded or inspected"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.1%2C_Op.51_No.1_%28Brahms%2C_Johannes%29",
+          "verified": "Simrock 1873 first-edition score #23065, four parts #478622, #478623, #478624, #478625; same-edition content correspondence unverified"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_and_main_catalog_checked_live_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Historical first edition, strong bibliographic provenance but performance-text errors, scan integrity, page completeness, Japanese republication rights and live SONARIA listing remain unverified. No download, approval or publication.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
+    },
+    {
+      "id": "brahms-string-quartet-op51-no2-simrock-1873",
+      "composer": "Johannes Brahms",
+      "category": "string_quartet",
+      "work_title": "String Quartet No.2 in A minor",
+      "opus_catalog": "Op.51 No.2",
+      "work_url": "https://imslp.org/wiki/String_Quartet_No.2%2C_Op.51_No.2_%28Brahms%2C_Johannes%29",
+      "edition": {
+        "publisher": "N. Simrock",
+        "publication_date": "1873",
+        "editor": "First edition (no named modern editor)",
+        "plate": "score 7379; parts 7381",
+        "scope": "2 violins, viola, cello; original quartet",
+        "imslp_file_id": "23066",
+        "edition_comparison": "1873 first-edition score and four separate first-edition parts; score/part plate numbers differ, note-by-note matching not verified"
+      },
+      "edition_url": "https://imslp.org/wiki/String_Quartet_No.2%2C_Op.51_No.2_%28Brahms%2C_Johannes%29",
+      "source_file_url": null,
+      "score_parts": [
+        "violin1",
+        "violin2",
+        "viola",
+        "cello"
+      ],
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "23066",
+        "edition_url": "https://imslp.org/wiki/String_Quartet_No.2%2C_Op.51_No.2_%28Brahms%2C_Johannes%29",
+        "publisher": "N. Simrock",
+        "editor": "First edition",
+        "publication_date": "1873",
+        "scope": "IMSLP complete score listing; PDF uninspected",
+        "evidence": "IMSLP Scores metadata 2026-11-28"
+      },
+      "part_inventory": {
+        "violin1": {
+          "status": "identified",
+          "imslp_file_id": "248965",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.2%2C_Op.51_No.2_%28Brahms%2C_Johannes%29",
+          "publisher": "N. Simrock",
+          "editor": "First edition",
+          "scope": "IMSLP part listing only; PDF uninspected",
+          "evidence": "IMSLP Parts metadata 2026-11-28"
+        },
+        "violin2": {
+          "status": "identified",
+          "imslp_file_id": "248966",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.2%2C_Op.51_No.2_%28Brahms%2C_Johannes%29",
+          "publisher": "N. Simrock",
+          "editor": "First edition",
+          "scope": "IMSLP part listing only; PDF uninspected",
+          "evidence": "IMSLP Parts metadata 2026-11-28"
+        },
+        "viola": {
+          "status": "identified",
+          "imslp_file_id": "248967",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.2%2C_Op.51_No.2_%28Brahms%2C_Johannes%29",
+          "publisher": "N. Simrock",
+          "editor": "First edition",
+          "scope": "IMSLP part listing only; PDF uninspected",
+          "evidence": "IMSLP Parts metadata 2026-11-28"
+        },
+        "cello": {
+          "status": "identified",
+          "imslp_file_id": "248968",
+          "edition_url": "https://imslp.org/wiki/String_Quartet_No.2%2C_Op.51_No.2_%28Brahms%2C_Johannes%29",
+          "publisher": "N. Simrock",
+          "editor": "First edition",
+          "scope": "IMSLP part listing only; PDF uninspected",
+          "evidence": "IMSLP Parts metadata 2026-11-28"
+        }
+      },
+      "score_part_edition_match": "unknown",
+      "set_completeness": "unverified",
+      "missing_assets": [],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.2%2C_Op.51_No.2_%28Brahms%2C_Johannes%29",
+          "checked_at": "2026-11-28",
+          "scope": "IMSLP page metadata verified; score and four parts identified; PDFs not downloaded or inspected"
+        }
+      ],
+      "status": "research_needed",
+      "research_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartet_No.2%2C_Op.51_No.2_%28Brahms%2C_Johannes%29",
+          "verified": "Simrock 1873 first-edition score #23066, four parts #248965, #248966, #248967, #248968; same-edition content correspondence unverified"
+        }
+      ],
+      "checklist": {
+        "work_identity": "source_metadata_checked",
+        "edition": "publisher_metadata_checked_pdf_uninspected",
+        "parts": "listed_unverified",
+        "pdf_integrity": "unchecked",
+        "duplication": "queue_and_main_catalog_checked_live_unverified",
+        "rights": "unverified_japan_republication",
+        "publish": "not_approved"
+      },
+      "rights_status": "unknown",
+      "notes": "Historical first edition, strong bibliographic provenance but performance-text errors, scan integrity, page completeness, Japanese republication rights and live SONARIA listing remain unverified. No download, approval or publication.",
+      "updated_at": "2026-11-28",
+      "owner": "gpt",
+      "publication_url": null
     }
   ],
   "last_updated": "2026-11-28",
@@ -13816,13 +14024,14 @@
     "notes": "No live site verification. Main catalog source can lag deployment. Rights pending; no publication action."
   },
   "last_site_reconciliation": {
-    "checked_at": "2026-11-28",
+    "checked_at": "2026-11-28T16:14:56+09:00",
     "main_catalog_path": "frontend/src/data/scores/catalog.json",
     "main_catalog_blob_sha": "4cd09cd46263fbaaf53282aadfb22151c0821d2b",
     "main_catalog_work_count": 203,
-    "beethoven_cello_sonatas_in_main": 0,
+    "brahms_op51_matches_in_main": 2,
     "live_site_status": "unverified_canonical_url_not_established",
+    "work_branch": "coordination/gpt-claude-score-queue",
     "pr_state": "not_independently_verified",
-    "note": "Checked main catalog; Op.102 Nos.1-2 not identified as Beethoven cello sonatas. GitHub Pages preview configuration is not proof of production deployment. PDF hashes and publication status unverified."
+    "note": "Main catalog checked; live deployed website could not be confirmed. Next.js config NEXT_PUBLIC_SITE_URL defaults empty, GitHub Pages is preview only. No publication state inferred; no PDFs downloaded."
   }
 }
