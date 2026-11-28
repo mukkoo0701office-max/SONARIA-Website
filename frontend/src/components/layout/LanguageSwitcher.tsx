@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { LOCALE_COOKIE, locales, stripLocale, type Locale } from "@/lib/i18n";
+import { switchTarget, type PartialLocalePaths } from "@/lib/localeSwitch";
 
 type Props = {
   locale: Locale;
@@ -10,11 +11,13 @@ type Props = {
   names: Record<Locale, string>;
   /** ヘッダー（小さめ）とフッター（ゆったり）で大きさを変える */
   size?: "compact" | "regular";
+  /** 一部の言語にしかないページ。無い言語へは 1 つ上の階層へ移動する */
+  partial?: PartialLocalePaths;
 };
 
 // 言語の切り替え「日本語 | English」。国旗は使わない。今の言語を強調し、押すと同じページの別言語へ移動する。
 // 選んだ言語は Cookie に保存し、次回以降は自動判定より優先する（.htaccess も同じ Cookie を見る）
-export default function LanguageSwitcher({ locale, label, names, size = "compact" }: Props) {
+export default function LanguageSwitcher({ locale, label, names, size = "compact", partial = {} }: Props) {
   const pathname = usePathname();
   const router = useRouter();
   const rest = stripLocale(pathname ?? "/");
@@ -38,14 +41,14 @@ export default function LanguageSwitcher({ locale, label, names, size = "compact
               )}
               {/* next/link はプレビューの basePath（/SONARIA-Website）を自動で付ける */}
               <Link
-                href={`/${code}${rest}`}
+                href={`/${code}${switchTarget(rest, code, partial)}`}
                 hrefLang={code}
                 lang={code}
                 aria-current={current ? "true" : undefined}
                 onClick={(e) => {
                   remember(code);
                   // 検索条件（クエリ）があれば引き継ぐ
-                  if (!current && window.location.search) {
+                  if (!current && window.location.search && switchTarget(rest, code, partial) === rest) {
                     e.preventDefault();
                     router.push(`/${code}${rest}${window.location.search}`);
                   }

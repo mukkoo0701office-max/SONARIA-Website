@@ -3,11 +3,12 @@ import { getDictionary } from "@/data/dictionaries";
 import { footerNav, pagePaths, socialLinks } from "@/data/site";
 import { localizedPath, type Locale } from "@/lib/i18n";
 import LanguageSwitcher from "./LanguageSwitcher";
+import type { PartialLocalePaths } from "@/lib/localeSwitch";
 
 // フッター（トップページ改修指示書 §6）。
 // SNS は URL が未設定（null）のあいだリンクにせず「準備中」と表示する（不正なページへ移動させない）。
 // 仮: 各 SNS の公式アイコンは、それぞれのブランドガイドラインに沿った素材が届いてから差し替える。
-export default function SiteFooter({ locale }: { locale: Locale }) {
+export default function SiteFooter({ locale, partial = {} }: { locale: Locale; partial?: PartialLocalePaths }) {
   const dict = getDictionary(locale);
 
   return (
@@ -85,7 +86,7 @@ export default function SiteFooter({ locale }: { locale: Locale }) {
         <div className="mx-auto flex max-w-wide flex-wrap items-center justify-between gap-3 px-4 py-5 lg:px-6">
           <p className="text-xs text-muted">{dict.footer.copyright}</p>
           {/* ヘッダーと同じ切り替え（同じ Cookie を使うので状態は共有される） */}
-          <LanguageSwitcher locale={locale} label={dict.common.languageLabel} names={dict.common.languageNames} size="regular" />
+          <LanguageSwitcher locale={locale} label={dict.common.languageLabel} names={dict.common.languageNames} size="regular" partial={partial} />
         </div>
       </div>
     </footer>

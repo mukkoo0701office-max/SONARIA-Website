@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import SiteFooter from "@/components/layout/SiteFooter";
 import SiteHeader from "@/components/layout/SiteHeader";
+import { partialLocalePaths } from "@/lib/localeAvailability";
 import { getDictionary } from "@/data/dictionaries";
 import { isLocale, locales } from "@/lib/i18n";
 import { isIndexable, siteUrl } from "@/lib/seo";
@@ -47,6 +48,8 @@ export default async function LocaleLayout({ children, params }: Props) {
   if (!isLocale(locale)) notFound();
   const dict = getDictionary(locale);
 
+  // 一部の言語にしかないページ（言語の切り替えで、無いページへリンクしないため）
+  const partial = partialLocalePaths();
   return (
     <html lang={locale}>
       <body className="flex min-h-dvh flex-col">
@@ -56,12 +59,12 @@ export default async function LocaleLayout({ children, params }: Props) {
         >
           {dict.common.skipToContent}
         </a>
-        <SiteHeader locale={locale} />
+        <SiteHeader locale={locale} partial={partial} />
         {/* 各ページが自分で幅を決める（トップは広め、検索ページは承認済みの 780px） */}
         <main id="main" className="flex-1">
           {children}
         </main>
-        <SiteFooter locale={locale} />
+        <SiteFooter locale={locale} partial={partial} />
         <GoogleAnalytics />
       </body>
     </html>
