@@ -129,6 +129,7 @@ function toInquiry(r: Row): Inquiry {
     billing: {
       region: r.region ?? undefined,
       regionDetected: r.region_detected ?? undefined,
+      regionGuess: isObj(r.payload) && ((r.payload as Record<string, unknown>).billingRegion === "jp" || (r.payload as Record<string, unknown>).billingRegion === "intl") ? ((r.payload as Record<string, unknown>).billingRegion as "jp" | "intl") : undefined,
       currency: r.currency ?? undefined,
       paymentMethod: r.payment_method ?? undefined,
       serverQuote: r.server_quote ? (r.server_quote as unknown as ServerQuote) : undefined,
@@ -263,6 +264,18 @@ export function createSupabaseRepository(): AdminRepository {
     async listPayments(id) {
       const rows = await rest<PaymentRowDb[]>(`payments?select=*&submission_id=eq.${encodeURIComponent(id)}&order=created_at.asc`);
       return rows.map(toPayment);
+    },
+    async recordBankNotice(id, requestId, note) {
+      return toPayment(await rest<PaymentRowDb>("rpc/admin_record_bank_notice", { method: "POST", body: { p_id: id, p_request_id: requestId, p_note: note ?? null } }));
+    },
+    async recordBankReceipt(paymentId, amount, receivedOn, requestId, note) {
+      return toPayment(await rest<PaymentRowDb>("rpc/admin_record_bank_receipt", { method: "POST", body: { p_payment: paymentId, p_amount: amount, p_received_on: receivedOn, p_request_id: requestId, p_note: note ?? null } }));
+    },
+    async recordBankRefund(paymentId, amount, requestId, note) {
+      return toPayment(await rest<PaymentRowDb>("rpc/admin_record_bank_refund", { method: "POST", body: { p_payment: paymentId, p_amount: amount, p_request_id: requestId, p_note: note ?? null } }));
+    },
+    async cancelPayment(paymentId, note) {
+      return toPayment(await rest<PaymentRowDb>("rpc/admin_cancel_payment", { method: "POST", body: { p_payment: paymentId, p_note: note ?? null } }));
     },
 
     async listTeacherApplications() {

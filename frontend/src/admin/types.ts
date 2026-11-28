@@ -56,8 +56,9 @@ export type ServerQuote =
   | { ok: false; reason: "quote_required" | "unavailable" | "invalid"; computedAt?: string };
 
 export type CaseBilling = {
-  region?: BillingRegion; // 申告された請求先
-  regionDetected?: string; // 参考: アクセス元の国（ISO 3166-1 alpha-2）
+  region?: BillingRegion; // 自動判定した料金区分（サーバーの判定を優先、無ければ端末のタイムゾーン）。確定は管理人の確定金額
+  regionDetected?: string; // 参考: サーバーで判定したアクセス元の国（ISO 3166-1 alpha-2）
+  regionGuess?: BillingRegion; // 参考: 端末のタイムゾーンからの推定
   currency?: Currency;
   paymentMethod?: PaymentMethodPref;
   serverQuote?: ServerQuote;

@@ -722,7 +722,7 @@ export const ja: Dictionary = {
     taxNote: "表示価格はすべて税込みです。",
     required: "必須",
     optional: "任意",
-    billing: { heading: "請求先の国・地域", options: { jp: "日本", intl: "日本以外" }, help: "お支払いの通貨が決まります（日本は円、日本以外は米ドル）。表示言語とは関係ありません。", guessNote: "お使いの環境から推定して選んでいます。違う場合は変更してください。" },
+    billing: { heading: "料金の区分", options: { jp: "日本（円）", intl: "日本以外（米ドル）" }, provisional: "仮", autoNote: "アクセスした地域から自動で判定しています（日本は円、日本以外は米ドル）。表示言語とは関係ありません。お支払いの前に確定金額をメールでお知らせします。", unknownNote: "地域を判定できなかったため、円で仮に表示しています。お支払いの前に確定金額をメールでお知らせします。" },
     payment: {
       heading: "お支払い方法",
       options: { card: "クレジットカード", bank_transfer: "銀行振込" },

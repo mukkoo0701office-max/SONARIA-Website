@@ -66,8 +66,10 @@ async function saveServerQuote(receipt: string, payload: unknown, detected: stri
   try {
     // 注: postgres.js は「::jsonb」だけだと文字列を JSON の文字列値として保存するため、text を経由して変換する
     const input = quoteInputFromPayload(payload);
-    // 請求先は申告を正とする。申告がなければアクセス元の国、それも無ければ未確定（通貨を決めない）
-    const region: Region | null = regionFromPayload(payload) ?? (detected ? (detected === "JP" ? "jp" : "intl") : null);
+    // 地域は自動判定（2026-11-29 運営者決定: 利用者が選ぶ欄は置かない）。
+    // サーバーで判定できたアクセス元の国を優先し、無ければ端末のタイムゾーンからの推定、どちらも無ければ未確定（通貨を決めない）。
+    // どちらも誤りうる（VPN・旅行）ので、最終的な金額と通貨は支払い前に管理人が確定する
+    const region: Region | null = detected ? (detected === "JP" ? "jp" : "intl") : regionFromPayload(payload);
     const p = (typeof payload === "object" && payload !== null ? payload : {}) as Record<string, unknown>;
     // 銀行振込は日本のみ（日本以外はカードに寄せる）
     const method = p.paymentMethod === "bank_transfer" && region === "jp" ? "bank_transfer" : p.paymentMethod === "card" || p.paymentMethod === "bank_transfer" ? "card" : null;

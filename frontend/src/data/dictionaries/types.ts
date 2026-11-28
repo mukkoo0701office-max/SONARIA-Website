@@ -387,7 +387,7 @@ export type Dictionary = {
     required: string;
     optional: string;
     /** 請求先の国・地域（通貨が決まる。言語とは無関係） */
-    billing: { heading: string; options: Record<"jp" | "intl", string>; help: string; guessNote: string };
+    billing: { heading: string; options: Record<"jp" | "intl", string>; provisional: string; autoNote: string; unknownNote: string };
     /** 支払い方法（銀行振込は日本のみ）と支払いの時期 */
     payment: { heading: string; options: Record<"card" | "bank_transfer", string>; cardNote: string; bankNote: string; intlNote: string; timing: string };
     lessonCurrencyNote: string;

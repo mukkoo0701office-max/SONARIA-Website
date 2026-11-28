@@ -32,7 +32,7 @@ import { submitOrder, withReceipt, type SubmitResult } from "@/lib/orders/submit
 
 type Props = { locale: Locale };
 type Step = "edit" | "confirm" | "done";
-type Errors = Partial<Record<"trial" | "plan" | "candidates" | "tracks" | "billing" | "name" | "email" | "consent", string>>;
+type Errors = Partial<Record<"trial" | "plan" | "candidates" | "tracks" | "name" | "email" | "consent", string>>;
 type PaymentMethod = "card" | "bank_transfer";
 const bowingTypes: readonly BowingType[] = ["bowing", "fingering", "both"];
 const seedPrices = currentPrices(SEED_PRICES, "9999-12-31");
@@ -85,18 +85,14 @@ export default function ServiceOrderForm({ locale }: Props) {
   const [remarks, setRemarks] = useState("");
   const [consent, setConsent] = useState(false);
 
-  // 料金と通貨（docs/payments/PAYMENTS_DESIGN.md）。通貨は請求先の地域で決まり、表示言語とは関係しない
+  // 料金と通貨（docs/payments/PAYMENTS_DESIGN.md）。通貨はアクセス地域から自動で決まり、表示言語とは関係しない。
+  // 2026-11-29 運営者決定: 利用者が通貨・地域を選ぶ欄は置かない。判定の誤りは、支払い前に管理人が確定金額で直す
   const [priceRows, setPriceRows] = useState<readonly PriceRow[]>(SEED_PRICES);
   const [billingRegion, setBillingRegion] = useState<Region | null>(null);
-  const [regionGuessed, setRegionGuessed] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("card");
   useEffect(() => {
     loadPriceRows().then(setPriceRows);
-    const g = guessRegion();
-    if (g) {
-      setBillingRegion((r) => r ?? g);
-      setRegionGuessed(true);
-    }
+    setBillingRegion(guessRegion());
   }, []);
 
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -126,8 +122,11 @@ export default function ServiceOrderForm({ locale }: Props) {
   const planInfo = lessonPlans.find((p) => p.id === plan) ?? null;
   const deliveryOf = (id: DeliveryId) => deliveryOptions.find((o) => o.id === id) ?? deliveryOptions[deliveryOptions.length - 1];
 
-  // 表示用の単価。料金マスタ（取得できなければ初期値）から、請求先の地域に応じて引く。レッスンは東京での対面のため常に円
+  // 表示用の単価。料金マスタ（取得できなければ初期値）から、判定した地域に応じて引く。判定できなければ円で仮表示。
+  // レッスンは東京での対面のため常に円
   const region: Region = billingRegion ?? "jp";
+  // 銀行振込は日本と判定できたときだけ選べる（判定できない場合はカードのみ）
+  const bankAvailable = billingRegion === "jp";
   const prices = currentPrices(priceRows, todayTokyo(now ?? new Date()));
   const price = (svc: string, item: string, reg: Region) => unitPrice(prices, svc, item, reg) ?? unitPrice(seedPrices, svc, item, reg) ?? 0;
   const currency = service === "lesson" ? "JPY" : currencyOf(region);
@@ -167,7 +166,6 @@ export default function ServiceOrderForm({ locale }: Props) {
     if (valid.length === 0) errors.candidates = t.lesson.noCandidates;
   }
   if (service === "recording" && recordingQuote.tracks === 0) errors.tracks = t.recording.noTracks;
-  if (service !== "lesson" && !billingRegion) errors.billing = t.billing.heading;
   if (!name.trim()) errors.name = t.common.nameRequired;
   if (!emailPattern.test(email.trim())) errors.email = t.common.emailInvalid;
   if (!consent) errors.consent = t.common.consentRequired;
@@ -222,9 +220,9 @@ export default function ServiceOrderForm({ locale }: Props) {
       if (tracks.other > 0 && otherDetail.trim()) rows.push([t.recording.otherDetail, otherDetail.trim()]);
       rows.push([t.delivery.heading, t.delivery.options[delivery.recording]]);
     }
-    if (service !== "lesson" && billingRegion) {
-      rows.push([t.billing.heading, t.billing.options[billingRegion]]);
-      rows.push([t.payment.heading, t.payment.options[billingRegion === "jp" ? paymentMethod : "card"]]);
+    if (service !== "lesson") {
+      rows.push([t.billing.heading, billingRegion ? t.billing.options[billingRegion] : `${t.billing.options.jp}（${t.billing.provisional}）`]);
+      rows.push([t.payment.heading, t.payment.options[bankAvailable ? paymentMethod : "card"]]);
     }
     if (summary.total != null) rows.push([t.summary.total, fmt(summary.total)]);
     rows.push([t.common.name, name.trim()], [t.common.email, email.trim()]);
@@ -241,10 +239,11 @@ export default function ServiceOrderForm({ locale }: Props) {
       createdAt: new Date().toISOString(),
       // 画面の概算（参考値）。確定はサーバーが料金マスタで計算し、管理人が確定する
       estimateTotal: summary.total,
-      // 請求先の地域・通貨・支払い方法（銀行振込は日本のみ）。レッスンは東京での対面のため日本扱い
+      // 端末から推定した地域（参考値。確定はサーバーと管理人）・通貨・支払い方法（銀行振込は日本のみ）。レッスンは東京での対面のため日本扱い
       billingRegion: service === "lesson" ? "jp" : billingRegion,
+      regionSource: service === "lesson" ? "lesson" : billingRegion ? "timezone" : "none",
       currency,
-      paymentMethod: service === "lesson" ? undefined : region === "jp" ? paymentMethod : "card",
+      paymentMethod: service === "lesson" ? undefined : bankAvailable ? paymentMethod : "card",
       lesson: service === "lesson" ? { trialTaken, plan, candidates: valid } : undefined,
       bowing: service === "bowing" ? { type: bowingType, pages, score: score.trim(), delivery: delivery.bowing } : undefined,
       recording: service === "recording" ? { tracks, otherDetail: tracks.other > 0 ? otherDetail.trim() : "", delivery: delivery.recording } : undefined,
@@ -589,7 +588,7 @@ export default function ServiceOrderForm({ locale }: Props) {
 
         {service === "lesson" && billingRegion === "intl" && <p className="text-[13px] text-muted">{t.lessonCurrencyNote}</p>}
         {service !== "lesson" && (
-          <BillingFields t={t} region={billingRegion} guessed={regionGuessed} onRegion={setBillingRegion} method={paymentMethod} onMethod={setPaymentMethod} error={err("billing")} />
+          <PaymentFields t={t} region={billingRegion} method={paymentMethod} onMethod={setPaymentMethod} />
         )}
 
         <fieldset className="min-w-0 grid gap-4 rounded-card border border-line bg-card p-5 sm:grid-cols-2 sm:p-6">
@@ -626,42 +625,33 @@ export default function ServiceOrderForm({ locale }: Props) {
 
 type T = ReturnType<typeof getDictionary>["orderForm"];
 
-// 請求先の国・地域と支払い方法。銀行振込は日本のみ表示する（日本以外はカードのみ）
-function BillingFields({ t, region, guessed, onRegion, method, onMethod, error }: { t: T; region: Region | null; guessed: boolean; onRegion: (r: Region) => void; method: PaymentMethod; onMethod: (m: PaymentMethod) => void; error?: string | false }) {
+// 料金の区分（自動判定の結果を伝えるだけ。選ぶ欄は置かない）と支払い方法。銀行振込は日本と判定できたときだけ表示する
+function PaymentFields({ t, region, method, onMethod }: { t: T; region: Region | null; method: PaymentMethod; onMethod: (m: PaymentMethod) => void }) {
+  const bank = region === "jp";
   return (
-    <div className="grid gap-5 rounded-card border border-line bg-card p-5 sm:p-6">
+    <div className="grid gap-4 rounded-card border border-line bg-card p-5 sm:p-6">
+      <div>
+        <p className="text-[15px] font-bold">
+          {t.billing.heading}: {region ? t.billing.options[region] : `${t.billing.options.jp}（${t.billing.provisional}）`}
+        </p>
+        <p className="mt-1 text-[13px] text-muted">{region ? t.billing.autoNote : t.billing.unknownNote}</p>
+      </div>
       <fieldset className="min-w-0">
-        <legend className="text-[15px] font-bold">{t.billing.heading} <Req t={t.required} /></legend>
-        <p className="mt-1 text-[13px] text-muted">{t.billing.help}</p>
-        <div className="mt-3 grid gap-2 sm:grid-cols-2">
-          {(["jp", "intl"] as const).map((r) => (
-            <label key={r} className={`${optionBase} ${region === r ? optionOn : optionOff}`}>
-              <input type="radio" name="billingRegion" value={r} checked={region === r} onChange={() => onRegion(r)} aria-describedby={error ? "err-billing" : undefined} className="mt-0.5 accent-navy" />
-              <span className="font-bold">{t.billing.options[r]}</span>
-            </label>
-          ))}
-        </div>
-        {guessed && <p className="mt-2 text-[12px] text-muted">{t.billing.guessNote}</p>}
-        <FieldError id="err-billing" text={error} />
+        <legend className="text-[15px] font-bold">{t.payment.heading}</legend>
+        {bank ? (
+          <div className="mt-3 grid gap-2 sm:grid-cols-2">
+            {(["card", "bank_transfer"] as const).map((m) => (
+              <label key={m} className={`${optionBase} ${method === m ? optionOn : optionOff}`}>
+                <input type="radio" name="paymentMethod" value={m} checked={method === m} onChange={() => onMethod(m)} className="mt-0.5 accent-navy" />
+                <span className="font-bold">{t.payment.options[m]}</span>
+              </label>
+            ))}
+          </div>
+        ) : (
+          <p className="mt-2 text-[14px]">{t.payment.options.card}</p>
+        )}
+        <p className="mt-2 text-[13px] text-muted">{bank && method === "bank_transfer" ? t.payment.bankNote : bank ? t.payment.cardNote : region === "intl" ? `${t.payment.intlNote} ${t.payment.cardNote}` : t.payment.cardNote}</p>
       </fieldset>
-      {region && (
-        <fieldset className="min-w-0">
-          <legend className="text-[15px] font-bold">{t.payment.heading}</legend>
-          {region === "jp" ? (
-            <div className="mt-3 grid gap-2 sm:grid-cols-2">
-              {(["card", "bank_transfer"] as const).map((m) => (
-                <label key={m} className={`${optionBase} ${method === m ? optionOn : optionOff}`}>
-                  <input type="radio" name="paymentMethod" value={m} checked={method === m} onChange={() => onMethod(m)} className="mt-0.5 accent-navy" />
-                  <span className="font-bold">{t.payment.options[m]}</span>
-                </label>
-              ))}
-            </div>
-          ) : (
-            <p className="mt-2 text-[14px]">{t.payment.options.card}</p>
-          )}
-          <p className="mt-2 text-[13px] text-muted">{region === "jp" && method === "bank_transfer" ? t.payment.bankNote : region === "jp" ? t.payment.cardNote : `${t.payment.intlNote} ${t.payment.cardNote}`}</p>
-        </fieldset>
-      )}
     </div>
   );
 }

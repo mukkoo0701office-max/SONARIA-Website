@@ -22,6 +22,9 @@ export type Purpose =
   | "thanks"
   | "follow_up"
   | "payment_thanks"
+  | "payment_card"
+  | "payment_bank"
+  | "work_started"
   | "cancel"
   | "decline"
   | "received"
@@ -31,20 +34,24 @@ export type Purpose =
 
 /** フォームの種類ごとに選べる返信の目的（並び順＝表示順） */
 export const purposesByKind: Record<SubmissionKind, Purpose[]> = {
-  performance_quote: ["first_reply", "quote", "booking", "thanks", "follow_up", "payment_thanks", "cancel", "decline"],
+  performance_quote: ["first_reply", "quote", "payment_card", "payment_bank", "payment_thanks", "booking", "thanks", "follow_up", "cancel", "decline"],
   lesson: ["first_reply", "booking", "reschedule", "follow_up", "cancel", "decline"],
-  bowing: ["first_reply", "quote", "delivery", "revision", "follow_up", "payment_thanks", "decline"],
-  recording: ["first_reply", "quote", "delivery", "revision", "follow_up", "payment_thanks", "decline"],
+  bowing: ["first_reply", "quote", "payment_card", "payment_bank", "payment_thanks", "work_started", "delivery", "revision", "follow_up", "cancel", "decline"],
+  recording: ["first_reply", "quote", "payment_card", "payment_bank", "payment_thanks", "work_started", "delivery", "revision", "follow_up", "cancel", "decline"],
   teacher_application: ["received", "request_info", "approved", "rejected"],
 };
 
-/** 運営者が画面で入力する値（金額・日時は自動で入れない） */
-export type InputKey = "quote_amount" | "booking_datetime" | "deadline";
+/** 運営者が画面で入力する値（金額・日時は自動で入れない）。
+ * confirmed_amount だけは例外で、「料金・お支払い」で確定した金額（通貨つき）を画面が入れる（推測した金額ではないため） */
+export type InputKey = "quote_amount" | "booking_datetime" | "deadline" | "confirmed_amount" | "pay_by" | "payment_link" | "bank_account";
 export const inputsByPurpose: Partial<Record<Purpose, InputKey[]>> = {
   quote: ["quote_amount", "deadline"],
   booking: ["booking_datetime"],
   reschedule: ["booking_datetime"],
   delivery: [],
+  payment_card: ["payment_link", "pay_by", "deadline"],
+  payment_bank: ["bank_account", "pay_by", "deadline"],
+  work_started: ["deadline"],
 };
 
 type Text = { ja: string; en: string };
@@ -73,6 +80,9 @@ export const subjects: Record<Purpose, Text> = {
   thanks: { ja: "ありがとうございました｜SONARIA（{case_number}）", en: "Thank you | SONARIA ({case_number})" },
   follow_up: { ja: "先日のご依頼について｜SONARIA（{case_number}）", en: "Following up on your request | SONARIA ({case_number})" },
   payment_thanks: { ja: "ご入金を確認しました｜SONARIA（{case_number}）", en: "Payment received | SONARIA ({case_number})" },
+  payment_card: { ja: "お支払いのご案内（クレジットカード）｜SONARIA（{case_number}）", en: "Payment request (credit card) | SONARIA ({case_number})" },
+  payment_bank: { ja: "お振込みのご案内｜SONARIA（{case_number}）", en: "Bank transfer details | SONARIA ({case_number})" },
+  work_started: { ja: "作業を開始しました｜SONARIA（{case_number}）", en: "We have started work | SONARIA ({case_number})" },
   cancel: { ja: "キャンセルを承りました｜SONARIA（{case_number}）", en: "Your cancellation | SONARIA ({case_number})" },
   decline: { ja: "ご依頼について｜SONARIA（{case_number}）", en: "About your request | SONARIA ({case_number})" },
   received: { ja: "講師登録の申請を受け付けました｜SONARIA（{case_number}）", en: "We received your teacher application | SONARIA ({case_number})" },
@@ -287,6 +297,76 @@ export const blocks: Block[] = [
     purposes: ["revision"],
     order: 20,
     text: { ja: "修正のご依頼を承りました。対応して、改めてお送りします。", en: "We have received your revision request and will send the updated files soon." },
+  },
+
+  // ── お支払い（カード・銀行振込）・作業開始 ─────────────────
+  // 全サービス作業開始前の全額先払い。金額は「料金・お支払い」の確定金額だけを使う（2026-11-28 運営者決定）
+  {
+    key: "pay_card",
+    title: { ja: "カード決済の案内", en: "Card payment" },
+    kinds: ["performance_quote", "bowing", "recording"],
+    purposes: ["payment_card"],
+    order: 20,
+    text: {
+      ja: "お支払い金額は {confirmed_amount}（税込み）です。下記のリンクから、クレジットカードでお支払いください。\n{payment_link}\nお支払いの期限: {pay_by}",
+      en: "The total is {confirmed_amount} (tax included). Please pay by credit card using the link below.\n{payment_link}\nPlease pay by: {pay_by}",
+    },
+  },
+  {
+    key: "pay_bank",
+    title: { ja: "振込先の案内", en: "Bank transfer" },
+    kinds: ["performance_quote", "bowing", "recording"],
+    purposes: ["payment_bank"],
+    order: 20,
+    text: {
+      ja: "お支払い金額は {confirmed_amount}（税込み）です。下記の口座へお振り込みください。\n{bank_account}\nお振込みの期限: {pay_by}\nお振込みの名義は、ご依頼のお名前でお願いします（異なる場合はお知らせください）。",
+      en: "The total is {confirmed_amount} (tax included). Please transfer it to the account below.\n{bank_account}\nPlease transfer by: {pay_by}\nPlease use the name on your request as the sender name (let us know if it differs).",
+    },
+  },
+  {
+    key: "pay_start_after",
+    title: { ja: "入金後に開始", en: "Work starts after payment" },
+    kinds: ["bowing", "recording"],
+    purposes: ["payment_card", "payment_bank"],
+    order: 30,
+    text: { ja: "ご入金を確認しましたら作業を始め、{deadline} までにお届けします。", en: "We will start as soon as we confirm your payment and deliver by {deadline}." },
+  },
+  {
+    key: "pay_perf_after",
+    title: { ja: "入金で予約確定", en: "Booking confirmed on payment" },
+    kinds: ["performance_quote"],
+    purposes: ["payment_card", "payment_bank"],
+    order: 30,
+    text: { ja: "ご入金の確認をもって、ご予約の確定とさせていただきます。", en: "Your booking is confirmed once we receive your payment." },
+  },
+  {
+    // キャンセル・返金規定（2026-11-29 運営者決定）。演奏依頼の規定は未決定のため運指・運弓と録音だけ
+    key: "pay_cancel_policy",
+    title: { ja: "キャンセル・返金の規定", en: "Cancellation policy" },
+    kinds: ["bowing", "recording"],
+    purposes: ["quote", "payment_card", "payment_bank"],
+    order: 35,
+    text: {
+      ja: "キャンセルについて: 作業を始める前のキャンセルは、お支払い済みの金額を全額返金します。作業を始めた後のキャンセル・返金はお受けできません（当方の不備による修正は無償で対応します）。",
+      en: "Cancellation: if you cancel before we start work, we refund the full amount. Once work has started, we cannot accept cancellations or refunds (we will fix any errors on our side free of charge).",
+    },
+  },
+  {
+    key: "work_started",
+    title: { ja: "作業開始", en: "Work started" },
+    kinds: ["bowing", "recording"],
+    purposes: ["work_started"],
+    order: 20,
+    text: { ja: "ご入金を確認し、作業を始めました。{deadline} までにお届けする予定です。", en: "We have received your payment and started work. We expect to deliver by {deadline}." },
+  },
+  {
+    key: "cancel_refund",
+    title: { ja: "全額返金の案内", en: "Full refund" },
+    kinds: ["performance_quote", "bowing", "recording"],
+    purposes: ["cancel"],
+    order: 25,
+    optional: true,
+    text: { ja: "お支払い済みの {confirmed_amount} は全額返金します。お手元に届くまで数日かかる場合があります。", en: "We will refund the full {confirmed_amount}. It may take a few days to reach you." },
   },
 
   // ── 共通（フォロー・入金・キャンセル・お断り） ─────────────
