@@ -38,8 +38,8 @@
   "cursor": {
     "composer": "Haydn",
     "stage": "string_quartet",
-    "last_work": "Op.1 Nos.1–6 (retrospective inventory audit)",
-    "note": "Next review Haydn Op.2 grouped scores and four-part inventory; preserve historical candidate ordering. Op.1 Trautwein score differs from Peters parts; no set completeness approval."
+    "last_work": "Op.2 Nos.1–6 (retrospective inventory audit)",
+    "note": "Next review Haydn Op.3 attribution to Roman Hoffstetter before any candidate additions; continue historical candidate audit. Op.2 score and parts are different editions; no completeness approval."
   },
   "items": [
     {
@@ -542,9 +542,71 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Confirm exact pages, score and parts completeness, quality and Japan rights. Op.2 collection bundle shared across three works; no duplicated PDF asset. No claim of absence from SONARIA.",
-      "updated_at": "2026-11-27",
+      "updated_at": "2026-11-28",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "456723",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+        "publisher": "Trautwein, Berlin",
+        "editor": "unknown",
+        "publication_date": "circa 1840–1845",
+        "scope": "Op.2 complete collection, 94 pages; separate edition from Peters/Merton parts",
+        "evidence": "IMSLP Scores listing, metadata only; PDF not inspected"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "71575",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.1–3 grouped complete parts; Violin 1 pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "71575",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.1–3 grouped complete parts; Violin 2 pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "71575",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.1–3 grouped complete parts; Viola pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "71575",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.1–3 grouped complete parts; Cello pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        }
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "same-edition full score matching Peters/Merton parts not identified",
+        "individual four-part page and movement coverage unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "imslp_file_id": "456723",
+          "checked_at": "2026-11-28T22:15:33+09:00",
+          "finding": "IMSLP score #456723 (Trautwein, c.1840–45, 94 pp); alternate Heckel #887277; Peters/Merton combined parts #71575 (c.1890, reprint 2002). Distinct editions. No PDF acquired; no quality or rights approval."
+        }
+      ]
     },
     {
       "id": "haydn-op2-no2-peters-merton",
@@ -590,9 +652,71 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Confirm exact pages, score and parts completeness, quality and Japan rights. Op.2 collection bundle shared across three works; no duplicated PDF asset. No claim of absence from SONARIA.",
-      "updated_at": "2026-11-27",
+      "updated_at": "2026-11-28",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "456723",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+        "publisher": "Trautwein, Berlin",
+        "editor": "unknown",
+        "publication_date": "circa 1840–1845",
+        "scope": "Op.2 complete collection, 94 pages; separate edition from Peters/Merton parts",
+        "evidence": "IMSLP Scores listing, metadata only; PDF not inspected"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "71575",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.1–3 grouped complete parts; Violin 1 pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "71575",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.1–3 grouped complete parts; Violin 2 pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "71575",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.1–3 grouped complete parts; Viola pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "71575",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.1–3 grouped complete parts; Cello pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        }
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "same-edition full score matching Peters/Merton parts not identified",
+        "individual four-part page and movement coverage unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "imslp_file_id": "456723",
+          "checked_at": "2026-11-28T22:15:33+09:00",
+          "finding": "IMSLP score #456723 (Trautwein, c.1840–45, 94 pp); alternate Heckel #887277; Peters/Merton combined parts #71575 (c.1890, reprint 2002). Distinct editions. No PDF acquired; no quality or rights approval."
+        }
+      ]
     },
     {
       "id": "haydn-op2-no3-peters-merton",
@@ -642,7 +766,7 @@
       },
       "rights_status": "unknown",
       "notes": "Candidate only. Confirm exact pages, score and parts completeness, quality and Japan rights. Op.2 collection bundle shared across three works; no duplicated PDF asset. No claim of absence from SONARIA. IMPORTANT AUTHENTICITY AUDIT: Henle scholarly preface identifies Op.2 No.3 as early sextet with two horns Hob.II:21, not a genuine string quartet. Hold. DISTINCT GENRE AUDIT: Sextet Hob.II:21 for 2 horns plus 4 strings, retrospectively arranged as 4-part Op.2 No.3. Do not present this as an original genuine four-string Haydn quartet. Preserve historic printed opus attribution in alternate titles but not original-work genre. No publication approval.",
-      "updated_at": "2026-11-27",
+      "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null,
       "original_work_genre": "sextet_not_original_quartet",
@@ -652,7 +776,69 @@
         "classification": "Sextet Hob.II:21 for 2 horns plus 4 strings, retrospectively arranged as 4-part Op.2 No.3",
         "eligible_for_authentic_original_string_quartets": false,
         "allow_as_labeled_arrangement_only_after_review": true
-      }
+      },
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "456723",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+        "publisher": "Trautwein, Berlin",
+        "editor": "unknown",
+        "publication_date": "circa 1840–1845",
+        "scope": "Op.2 complete collection, 94 pages; separate edition from Peters/Merton parts",
+        "evidence": "IMSLP Scores listing, metadata only; PDF not inspected"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "71575",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.1–3 grouped complete parts; Violin 1 pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "71575",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.1–3 grouped complete parts; Violin 2 pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "71575",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.1–3 grouped complete parts; Viola pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "71575",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.1–3 grouped complete parts; Cello pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        }
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "same-edition full score matching Peters/Merton parts not identified",
+        "individual four-part page and movement coverage unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "imslp_file_id": "456723",
+          "checked_at": "2026-11-28T22:15:33+09:00",
+          "finding": "IMSLP score #456723 (Trautwein, c.1840–45, 94 pp); alternate Heckel #887277; Peters/Merton combined parts #71575 (c.1890, reprint 2002). Distinct editions. No PDF acquired; no quality or rights approval."
+        }
+      ]
     },
     {
       "id": "haydn-op2-no4-peters-merton",
@@ -698,9 +884,71 @@
       },
       "rights_status": "unknown",
       "notes": "Research-only candidate. Peters/Merton PDF groups three quartets: register one shared asset, not three duplicate PDFs. Actual score contents, print quality, Japanese rights, and SONARIA inventory need independent review by Claude.",
-      "updated_at": "2026-11-27",
+      "updated_at": "2026-11-28",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "456723",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+        "publisher": "Trautwein, Berlin",
+        "editor": "unknown",
+        "publication_date": "circa 1840–1845",
+        "scope": "Op.2 complete collection, 94 pages; separate edition from Peters/Merton parts",
+        "evidence": "IMSLP Scores listing, metadata only; PDF not inspected"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "71576",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.4–6 grouped complete parts; Violin 1 pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "71576",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.4–6 grouped complete parts; Violin 2 pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "71576",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.4–6 grouped complete parts; Viola pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "71576",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.4–6 grouped complete parts; Cello pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        }
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "same-edition full score matching Peters/Merton parts not identified",
+        "individual four-part page and movement coverage unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "imslp_file_id": "456723",
+          "checked_at": "2026-11-28T22:15:33+09:00",
+          "finding": "IMSLP score #456723 (Trautwein, c.1840–45, 94 pp); alternate Heckel #887277; Peters/Merton combined parts #71576 (c.1890, reprint 2002). Distinct editions. No PDF acquired; no quality or rights approval."
+        }
+      ]
     },
     {
       "id": "haydn-op2-no5-peters-merton",
@@ -750,7 +998,7 @@
       },
       "rights_status": "unknown",
       "notes": "Research-only candidate. Peters/Merton PDF groups three quartets: register one shared asset, not three duplicate PDFs. Actual score contents, print quality, Japanese rights, and SONARIA inventory need independent review by Claude. IMPORTANT AUTHENTICITY AUDIT: Henle scholarly preface identifies Op.2 No.5 as early sextet with two horns Hob.II:22, not a genuine string quartet. Hold. DISTINCT GENRE AUDIT: Sextet Hob.II:22 for 2 horns plus 4 strings, retrospectively arranged as 4-part Op.2 No.5. Do not present this as an original genuine four-string Haydn quartet. Preserve historic printed opus attribution in alternate titles but not original-work genre. No publication approval.",
-      "updated_at": "2026-11-27",
+      "updated_at": "2026-11-28",
       "owner": "gpt",
       "publication_url": null,
       "original_work_genre": "sextet_not_original_quartet",
@@ -760,7 +1008,69 @@
         "classification": "Sextet Hob.II:22 for 2 horns plus 4 strings, retrospectively arranged as 4-part Op.2 No.5",
         "eligible_for_authentic_original_string_quartets": false,
         "allow_as_labeled_arrangement_only_after_review": true
-      }
+      },
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "456723",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+        "publisher": "Trautwein, Berlin",
+        "editor": "unknown",
+        "publication_date": "circa 1840–1845",
+        "scope": "Op.2 complete collection, 94 pages; separate edition from Peters/Merton parts",
+        "evidence": "IMSLP Scores listing, metadata only; PDF not inspected"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "71576",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.4–6 grouped complete parts; Violin 1 pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "71576",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.4–6 grouped complete parts; Violin 2 pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "71576",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.4–6 grouped complete parts; Viola pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "71576",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.4–6 grouped complete parts; Cello pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        }
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "same-edition full score matching Peters/Merton parts not identified",
+        "individual four-part page and movement coverage unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "imslp_file_id": "456723",
+          "checked_at": "2026-11-28T22:15:33+09:00",
+          "finding": "IMSLP score #456723 (Trautwein, c.1840–45, 94 pp); alternate Heckel #887277; Peters/Merton combined parts #71576 (c.1890, reprint 2002). Distinct editions. No PDF acquired; no quality or rights approval."
+        }
+      ]
     },
     {
       "id": "haydn-op2-no6-peters-merton",
@@ -806,9 +1116,71 @@
       },
       "rights_status": "unknown",
       "notes": "Research-only candidate. Peters/Merton PDF groups three quartets: register one shared asset, not three duplicate PDFs. Actual score contents, print quality, Japanese rights, and SONARIA inventory need independent review by Claude.",
-      "updated_at": "2026-11-27",
+      "updated_at": "2026-11-28",
       "owner": "gpt",
-      "publication_url": null
+      "publication_url": null,
+      "score_inventory": {
+        "status": "identified",
+        "imslp_file_id": "456723",
+        "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+        "publisher": "Trautwein, Berlin",
+        "editor": "unknown",
+        "publication_date": "circa 1840–1845",
+        "scope": "Op.2 complete collection, 94 pages; separate edition from Peters/Merton parts",
+        "evidence": "IMSLP Scores listing, metadata only; PDF not inspected"
+      },
+      "part_inventory": {
+        "violin_1": {
+          "status": "unverified",
+          "imslp_file_id": "71576",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.4–6 grouped complete parts; Violin 1 pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        },
+        "violin_2": {
+          "status": "unverified",
+          "imslp_file_id": "71576",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.4–6 grouped complete parts; Violin 2 pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        },
+        "viola": {
+          "status": "unverified",
+          "imslp_file_id": "71576",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.4–6 grouped complete parts; Viola pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        },
+        "cello": {
+          "status": "unverified",
+          "imslp_file_id": "71576",
+          "edition_url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "publisher": "C.F. Peters (Merton reprint)",
+          "editor": "unknown",
+          "scope": "Op.2 Nos.4–6 grouped complete parts; Cello pages not individually verified",
+          "evidence": "IMSLP combined parts listing only; individual part boundaries and movement coverage not inspected"
+        }
+      },
+      "score_part_edition_match": "different_edition",
+      "set_completeness": "unverified",
+      "missing_assets": [
+        "same-edition full score matching Peters/Merton parts not identified",
+        "individual four-part page and movement coverage unverified"
+      ],
+      "asset_audit_evidence": [
+        {
+          "url": "https://imslp.org/wiki/String_Quartets%2C_Op.2_%28Haydn%2C_Joseph%29",
+          "imslp_file_id": "456723",
+          "checked_at": "2026-11-28T22:15:33+09:00",
+          "finding": "IMSLP score #456723 (Trautwein, c.1840–45, 94 pp); alternate Heckel #887277; Peters/Merton combined parts #71576 (c.1890, reprint 2002). Distinct editions. No PDF acquired; no quality or rights approval."
+        }
+      ]
     },
     {
       "id": "haydn-op9-no1-imslp-research",
@@ -14732,12 +15104,14 @@
     "notes": "No live site verification. Main catalog source can lag deployment. Rights pending; no publication action."
   },
   "last_site_reconciliation": {
-    "checked_at": "2026-11-28T21:18:54+09:00",
+    "checked_at": "2026-11-28T22:15:33+09:00",
     "main_catalog_path": "frontend/src/data/scores/catalog.json",
-    "main_catalog_status": "not_retrieved_this_run",
+    "main_catalog_sha": "4cd09cd46263fbaaf53282aadfb22151c0821d2b",
+    "main_catalog_work_count": 203,
+    "main_matching_haydn_op2_works": 2,
     "work_branch": "coordination/gpt-claude-score-queue",
     "queue_items": 196,
-    "live_site_status": "unverified_canonical_url_not_established",
-    "note": "Previous main catalog evidence is historical only; fresh main catalog and production site comparison incomplete. Do not infer absent/published. No PDF or rights changes."
+    "live_site_status": "unverified_canonical_production_url_not_established",
+    "note": "Main catalog was fetched and searched for Op.2/Hob.III:7–12; no matching catalog records by these identifiers, but live site unavailable and alternate catalog naming may exist. Preview GitHub Pages is not canonical production. PDF references and published state not confirmed. No rights or PDF changes."
   }
 }
