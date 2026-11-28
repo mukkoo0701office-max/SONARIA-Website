@@ -1,5 +1,5728 @@
 {
   "_about": "翻訳の状態（docs/i18n/I18N_FOUNDATION.md）。翻訳を追加・更新したら、その単位の sourceHash と status を更新する。sourceHash は node scripts/translation-status.mjs --hash <source> で出せる。CI が原文の変更を検出し、公開中の翻訳が古くなったら失敗する",
-  "statuses": ["untranslated", "in_progress", "review", "approved", "published"],
-  "units": []
+  "statuses": [
+    "untranslated",
+    "in_progress",
+    "review",
+    "approved",
+    "published"
+  ],
+  "units": [
+    {
+      "id": "dictionary",
+      "locale": "de",
+      "source": "dictionary",
+      "sourceHash": "fe12f4b224e55ee3",
+      "status": "published",
+      "note": "Claude 訳をそのまま公開（2026-11-28 運営者決定・ネイティブ校閲なし）"
+    },
+    {
+      "id": "work:accolay-violin-concerto-1",
+      "locale": "de",
+      "source": "workText:accolay-violin-concerto-1",
+      "sourceHash": "7221ef65b0d366cd",
+      "status": "published"
+    },
+    {
+      "id": "work:arensky-piano-trio-1",
+      "locale": "de",
+      "source": "workText:arensky-piano-trio-1",
+      "sourceHash": "9d17793760cbe9d8",
+      "status": "published"
+    },
+    {
+      "id": "work:arensky-piano-trio-2",
+      "locale": "de",
+      "source": "workText:arensky-piano-trio-2",
+      "sourceHash": "2b75efb47a86ed19",
+      "status": "published"
+    },
+    {
+      "id": "work:arensky-piano-trios",
+      "locale": "de",
+      "source": "workText:arensky-piano-trios",
+      "sourceHash": "c832b929bade8ce3",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-air-on-the-g-string",
+      "locale": "de",
+      "source": "workText:bach-air-on-the-g-string",
+      "sourceHash": "837e360aa5acb5d2",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-cello-suites",
+      "locale": "de",
+      "source": "workText:bach-cello-suites",
+      "sourceHash": "aaeda8f720a4302f",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-double-violin-concerto",
+      "locale": "de",
+      "source": "workText:bach-double-violin-concerto",
+      "sourceHash": "710f10288dc42a61",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-jesu-joy-of-mans-desiring",
+      "locale": "de",
+      "source": "workText:bach-jesu-joy-of-mans-desiring",
+      "sourceHash": "d9569ac735117608",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-sonatas-and-partitas",
+      "locale": "de",
+      "source": "workText:bach-sonatas-and-partitas",
+      "sourceHash": "be2cced7939f5042",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-violin-concerto-1",
+      "locale": "de",
+      "source": "workText:bach-violin-concerto-1",
+      "sourceHash": "0da3bdb2eb9252c0",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-violin-concerto-2",
+      "locale": "de",
+      "source": "workText:bach-violin-concerto-2",
+      "sourceHash": "6bec69490dcd0388",
+      "status": "published"
+    },
+    {
+      "id": "work:bartok-violin-concerto-2",
+      "locale": "de",
+      "source": "workText:bartok-violin-concerto-2",
+      "sourceHash": "0ff4f17b528ab58c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-duo-violin-cello",
+      "locale": "de",
+      "source": "workText:beethoven-duo-violin-cello",
+      "sourceHash": "037b09f3dcda5453",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-piano-trio-1",
+      "locale": "de",
+      "source": "workText:beethoven-piano-trio-1",
+      "sourceHash": "3e48e52d840b587a",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-romance-2",
+      "locale": "de",
+      "source": "workText:beethoven-romance-2",
+      "sourceHash": "556a31617f8f943c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-serenade-op8",
+      "locale": "de",
+      "source": "workText:beethoven-serenade-op8",
+      "sourceHash": "350d69cd3bb588db",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-1",
+      "locale": "de",
+      "source": "workText:beethoven-string-quartet-1",
+      "sourceHash": "2be786f274254248",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-2",
+      "locale": "de",
+      "source": "workText:beethoven-string-quartet-2",
+      "sourceHash": "ee9a4f868a05f23c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-3",
+      "locale": "de",
+      "source": "workText:beethoven-string-quartet-3",
+      "sourceHash": "75a11f0732a98894",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-4",
+      "locale": "de",
+      "source": "workText:beethoven-string-quartet-4",
+      "sourceHash": "67ae2ade227a5f0f",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-5",
+      "locale": "de",
+      "source": "workText:beethoven-string-quartet-5",
+      "sourceHash": "8d7cfa6b6e3c6450",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-6",
+      "locale": "de",
+      "source": "workText:beethoven-string-quartet-6",
+      "sourceHash": "4f89f32adac630da",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-7",
+      "locale": "de",
+      "source": "workText:beethoven-string-quartet-7",
+      "sourceHash": "a520241cb777383c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-8",
+      "locale": "de",
+      "source": "workText:beethoven-string-quartet-8",
+      "sourceHash": "8d017e0e490bf679",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-9",
+      "locale": "de",
+      "source": "workText:beethoven-string-quartet-9",
+      "sourceHash": "2c09850193140a36",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-trio-op3",
+      "locale": "de",
+      "source": "workText:beethoven-string-trio-op3",
+      "sourceHash": "ed46b10a6136046c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-1",
+      "locale": "de",
+      "source": "workText:beethoven-violin-sonata-1",
+      "sourceHash": "8524e4e380d44c42",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-10",
+      "locale": "de",
+      "source": "workText:beethoven-violin-sonata-10",
+      "sourceHash": "3695a879340db553",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-2",
+      "locale": "de",
+      "source": "workText:beethoven-violin-sonata-2",
+      "sourceHash": "460b327dd3871f21",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-3",
+      "locale": "de",
+      "source": "workText:beethoven-violin-sonata-3",
+      "sourceHash": "f365e0aed4cba2fc",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-4",
+      "locale": "de",
+      "source": "workText:beethoven-violin-sonata-4",
+      "sourceHash": "38a4cdbe5e99cae8",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-5",
+      "locale": "de",
+      "source": "workText:beethoven-violin-sonata-5",
+      "sourceHash": "a6def1d0c3995b6f",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-6",
+      "locale": "de",
+      "source": "workText:beethoven-violin-sonata-6",
+      "sourceHash": "7d1f5c1d31573b80",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-7",
+      "locale": "de",
+      "source": "workText:beethoven-violin-sonata-7",
+      "sourceHash": "f1ce393089a25830",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-8",
+      "locale": "de",
+      "source": "workText:beethoven-violin-sonata-8",
+      "sourceHash": "7e42762d3de3fff9",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-9",
+      "locale": "de",
+      "source": "workText:beethoven-violin-sonata-9",
+      "sourceHash": "351e4ae3ff481bf9",
+      "status": "published"
+    },
+    {
+      "id": "work:beriot-violin-concerto-9",
+      "locale": "de",
+      "source": "workText:beriot-violin-concerto-9",
+      "sourceHash": "67fa8312f54f3131",
+      "status": "published"
+    },
+    {
+      "id": "work:bizet-arlesienne-adagietto",
+      "locale": "de",
+      "source": "workText:bizet-arlesienne-adagietto",
+      "sourceHash": "999ffceb76ab0a45",
+      "status": "published"
+    },
+    {
+      "id": "work:borodin-string-quartet-2",
+      "locale": "de",
+      "source": "workText:borodin-string-quartet-2",
+      "sourceHash": "2ba1807deb321ad9",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-fae-sonata",
+      "locale": "de",
+      "source": "workText:brahms-fae-sonata",
+      "sourceHash": "6b17c666b7f1585e",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-quartet-1",
+      "locale": "de",
+      "source": "workText:brahms-piano-quartet-1",
+      "sourceHash": "45764a7f4414159c",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-quartet-3",
+      "locale": "de",
+      "source": "workText:brahms-piano-quartet-3",
+      "sourceHash": "241fd1e4708783d8",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-trio-1",
+      "locale": "de",
+      "source": "workText:brahms-piano-trio-1",
+      "sourceHash": "3c0370d9df9eead2",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-trio-2",
+      "locale": "de",
+      "source": "workText:brahms-piano-trio-2",
+      "sourceHash": "f973a9145c76b603",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-trio-3",
+      "locale": "de",
+      "source": "workText:brahms-piano-trio-3",
+      "sourceHash": "4182f91ff0287ddf",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-concerto",
+      "locale": "de",
+      "source": "workText:brahms-violin-concerto",
+      "sourceHash": "55e34a127c8349b1",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-sonata-1",
+      "locale": "de",
+      "source": "workText:brahms-violin-sonata-1",
+      "sourceHash": "7f4c6d6fbb011bbc",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-sonata-2",
+      "locale": "de",
+      "source": "workText:brahms-violin-sonata-2",
+      "sourceHash": "8b9033c9ddff9de2",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-sonata-3",
+      "locale": "de",
+      "source": "workText:brahms-violin-sonata-3",
+      "sourceHash": "126c31e144c5e2e8",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-sonatas",
+      "locale": "de",
+      "source": "workText:brahms-violin-sonatas",
+      "sourceHash": "72e2fc5a2904ee73",
+      "status": "published"
+    },
+    {
+      "id": "work:bruch-kol-nidrei",
+      "locale": "de",
+      "source": "workText:bruch-kol-nidrei",
+      "sourceHash": "5f754e7f4cd95f33",
+      "status": "published"
+    },
+    {
+      "id": "work:bruch-violin-concerto-1",
+      "locale": "de",
+      "source": "workText:bruch-violin-concerto-1",
+      "sourceHash": "1504e88c3d8640eb",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-ballade-1",
+      "locale": "de",
+      "source": "workText:chopin-ballade-1",
+      "sourceHash": "8b0c9c4002b68be5",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-ballade-2",
+      "locale": "de",
+      "source": "workText:chopin-ballade-2",
+      "sourceHash": "0c5d3f1653c2657a",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-ballade-3",
+      "locale": "de",
+      "source": "workText:chopin-ballade-3",
+      "sourceHash": "50693f93c669fe4f",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-ballade-4",
+      "locale": "de",
+      "source": "workText:chopin-ballade-4",
+      "sourceHash": "5cec672dd009c2c4",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-piano-trio",
+      "locale": "de",
+      "source": "workText:chopin-piano-trio",
+      "sourceHash": "cb61052c175f0a4c",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-scherzo-1",
+      "locale": "de",
+      "source": "workText:chopin-scherzo-1",
+      "sourceHash": "3db07318f4062057",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-scherzo-2",
+      "locale": "de",
+      "source": "workText:chopin-scherzo-2",
+      "sourceHash": "529af82fde0b05b6",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-scherzo-3",
+      "locale": "de",
+      "source": "workText:chopin-scherzo-3",
+      "sourceHash": "766293bc31934f2b",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-scherzo-4",
+      "locale": "de",
+      "source": "workText:chopin-scherzo-4",
+      "sourceHash": "353dae9364ebc1a8",
+      "status": "published"
+    },
+    {
+      "id": "work:corelli-christmas-concerto",
+      "locale": "de",
+      "source": "workText:corelli-christmas-concerto",
+      "sourceHash": "f220a53ed1a7f1ac",
+      "status": "published"
+    },
+    {
+      "id": "work:corelli-la-folia",
+      "locale": "de",
+      "source": "workText:corelli-la-folia",
+      "sourceHash": "ceffd68236d412ac",
+      "status": "published"
+    },
+    {
+      "id": "work:dohnanyi-serenade-op10",
+      "locale": "de",
+      "source": "workText:dohnanyi-serenade-op10",
+      "sourceHash": "f914b12300fa139a",
+      "status": "published"
+    },
+    {
+      "id": "work:dont-24-etudes",
+      "locale": "de",
+      "source": "workText:dont-24-etudes",
+      "sourceHash": "99800488da40914c",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-cello-concerto",
+      "locale": "de",
+      "source": "workText:dvorak-cello-concerto",
+      "sourceHash": "977bd533f092471a",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-four-romantic-pieces",
+      "locale": "de",
+      "source": "workText:dvorak-four-romantic-pieces",
+      "sourceHash": "a26bb545bbcf6780",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-humoresque",
+      "locale": "de",
+      "source": "workText:dvorak-humoresque",
+      "sourceHash": "d45caf45aad9a3cd",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-serenade-for-strings",
+      "locale": "de",
+      "source": "workText:dvorak-serenade-for-strings",
+      "sourceHash": "def66d225af2499f",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-slavonic-dance-op46-2",
+      "locale": "de",
+      "source": "workText:dvorak-slavonic-dance-op46-2",
+      "sourceHash": "25252c0b148466cf",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-slavonic-dance-op72-2",
+      "locale": "de",
+      "source": "workText:dvorak-slavonic-dance-op72-2",
+      "sourceHash": "430367b8c0de46de",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-violin-concerto",
+      "locale": "de",
+      "source": "workText:dvorak-violin-concerto",
+      "sourceHash": "146ec5cd4ad24c1e",
+      "status": "published"
+    },
+    {
+      "id": "work:elgar-cello-concerto",
+      "locale": "de",
+      "source": "workText:elgar-cello-concerto",
+      "sourceHash": "06eb6303ac150479",
+      "status": "published"
+    },
+    {
+      "id": "work:elgar-chanson-de-matin",
+      "locale": "de",
+      "source": "workText:elgar-chanson-de-matin",
+      "sourceHash": "685ada95358f4b9d",
+      "status": "published"
+    },
+    {
+      "id": "work:elgar-salut-damour",
+      "locale": "de",
+      "source": "workText:elgar-salut-damour",
+      "sourceHash": "383e5c38ea834c5e",
+      "status": "published"
+    },
+    {
+      "id": "work:elgar-serenade-for-strings",
+      "locale": "de",
+      "source": "workText:elgar-serenade-for-strings",
+      "sourceHash": "7684b3eaf9051e90",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-cello-sonatas",
+      "locale": "de",
+      "source": "workText:faure-cello-sonatas",
+      "sourceHash": "e227cd19d071d328",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-elegie",
+      "locale": "de",
+      "source": "workText:faure-elegie",
+      "sourceHash": "d2cec1a4dc1e6d78",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-piano-quartet-1",
+      "locale": "de",
+      "source": "workText:faure-piano-quartet-1",
+      "sourceHash": "084400b85004201a",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-piano-trio",
+      "locale": "de",
+      "source": "workText:faure-piano-trio",
+      "sourceHash": "9d4559e29770c51a",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-sicilienne",
+      "locale": "de",
+      "source": "workText:faure-sicilienne",
+      "sourceHash": "e4943c1662f3b1af",
+      "status": "published"
+    },
+    {
+      "id": "work:glazunov-violin-concerto",
+      "locale": "de",
+      "source": "workText:glazunov-violin-concerto",
+      "sourceHash": "a1d59a3f86b0b0c5",
+      "status": "published"
+    },
+    {
+      "id": "work:goltermann-cello-concertos",
+      "locale": "de",
+      "source": "workText:goltermann-cello-concertos",
+      "sourceHash": "b305445b0ba9d39d",
+      "status": "published"
+    },
+    {
+      "id": "work:gounod-ave-maria",
+      "locale": "de",
+      "source": "workText:gounod-ave-maria",
+      "sourceHash": "430783a6d5fd3fc2",
+      "status": "published"
+    },
+    {
+      "id": "work:grieg-holberg-suite",
+      "locale": "de",
+      "source": "workText:grieg-holberg-suite",
+      "sourceHash": "7841b71696bb858a",
+      "status": "published"
+    },
+    {
+      "id": "work:halvorsen-passacaglia",
+      "locale": "de",
+      "source": "workText:halvorsen-passacaglia",
+      "sourceHash": "e7f58c702b06cb7e",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-cello-concerto-1",
+      "locale": "de",
+      "source": "workText:haydn-cello-concerto-1",
+      "sourceHash": "67824b0e68f044ed",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-cello-concerto-c-popper",
+      "locale": "de",
+      "source": "workText:haydn-cello-concerto-c-popper",
+      "sourceHash": "2ce20b404fbb3a8f",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartet-emperor",
+      "locale": "de",
+      "source": "workText:haydn-string-quartet-emperor",
+      "sourceHash": "3ee8e88a3bee7389",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartet-lark",
+      "locale": "de",
+      "source": "workText:haydn-string-quartet-lark",
+      "sourceHash": "71d1ec1440f80a69",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartet-op20-4",
+      "locale": "de",
+      "source": "workText:haydn-string-quartet-op20-4",
+      "sourceHash": "605fc84fd2ee6c07",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op1-1-3",
+      "locale": "de",
+      "source": "workText:haydn-string-quartets-op1-1-3",
+      "sourceHash": "8f8efde21c30f3d5",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op17",
+      "locale": "de",
+      "source": "workText:haydn-string-quartets-op17",
+      "sourceHash": "cbfacca2f25a3c3a",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op2-1-3",
+      "locale": "de",
+      "source": "workText:haydn-string-quartets-op2-1-3",
+      "sourceHash": "d3a888918b054dfa",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op2-4-6",
+      "locale": "de",
+      "source": "workText:haydn-string-quartets-op2-4-6",
+      "sourceHash": "a57a6bc0c1a226bc",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op20",
+      "locale": "de",
+      "source": "workText:haydn-string-quartets-op20",
+      "sourceHash": "47db772982168ac6",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op9",
+      "locale": "de",
+      "source": "workText:haydn-string-quartets-op9",
+      "sourceHash": "94cc71f28fc8a382",
+      "status": "published"
+    },
+    {
+      "id": "work:kayser-36-etudes",
+      "locale": "de",
+      "source": "workText:kayser-36-etudes",
+      "sourceHash": "a59b126f02194dc1",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-liebesfreud",
+      "locale": "de",
+      "source": "workText:kreisler-liebesfreud",
+      "sourceHash": "161a075f00acd4c8",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-liebesleid",
+      "locale": "de",
+      "source": "workText:kreisler-liebesleid",
+      "sourceHash": "4d2ad64c9f6f2c1e",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-march-of-the-toy-soldiers",
+      "locale": "de",
+      "source": "workText:kreisler-march-of-the-toy-soldiers",
+      "sourceHash": "8716715dbbb8f50a",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-marche-miniature-viennoise",
+      "locale": "de",
+      "source": "workText:kreisler-marche-miniature-viennoise",
+      "sourceHash": "ba1cbc005afe8134",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-praeludium-and-allegro",
+      "locale": "de",
+      "source": "workText:kreisler-praeludium-and-allegro",
+      "sourceHash": "095eb9ac75935c0b",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-pulcinella",
+      "locale": "de",
+      "source": "workText:kreisler-pulcinella",
+      "sourceHash": "6344616f0f0d7ff7",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-romance",
+      "locale": "de",
+      "source": "workText:kreisler-romance",
+      "sourceHash": "c221b1f3b6859bc7",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-rondino-beethoven",
+      "locale": "de",
+      "source": "workText:kreisler-rondino-beethoven",
+      "sourceHash": "039647f162caff01",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-schon-rosmarin",
+      "locale": "de",
+      "source": "workText:kreisler-schon-rosmarin",
+      "sourceHash": "fe11af4388b252b9",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-sicilienne-et-rigaudon",
+      "locale": "de",
+      "source": "workText:kreisler-sicilienne-et-rigaudon",
+      "sourceHash": "034e4f0929dc07a6",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-syncopation",
+      "locale": "de",
+      "source": "workText:kreisler-syncopation",
+      "sourceHash": "e549497cd02d53e1",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-tambourin-chinois",
+      "locale": "de",
+      "source": "workText:kreisler-tambourin-chinois",
+      "sourceHash": "75de874891dc2cda",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-variations-corelli",
+      "locale": "de",
+      "source": "workText:kreisler-variations-corelli",
+      "sourceHash": "cfee31490511be02",
+      "status": "published"
+    },
+    {
+      "id": "work:kreutzer-42-etudes",
+      "locale": "de",
+      "source": "workText:kreutzer-42-etudes",
+      "sourceHash": "fc964ce3175a9327",
+      "status": "published"
+    },
+    {
+      "id": "work:lalo-symphonie-espagnole",
+      "locale": "de",
+      "source": "workText:lalo-symphonie-espagnole",
+      "sourceHash": "58c55e8a98e29155",
+      "status": "published"
+    },
+    {
+      "id": "work:leclair-sonatas-two-violins-op12",
+      "locale": "de",
+      "source": "workText:leclair-sonatas-two-violins-op12",
+      "sourceHash": "4fbf9cacf73e6c8c",
+      "status": "published"
+    },
+    {
+      "id": "work:leclair-sonatas-two-violins-op3",
+      "locale": "de",
+      "source": "workText:leclair-sonatas-two-violins-op3",
+      "sourceHash": "e35a1fd41d6e5764",
+      "status": "published"
+    },
+    {
+      "id": "work:massenet-meditation-thais",
+      "locale": "de",
+      "source": "workText:massenet-meditation-thais",
+      "sourceHash": "49f78b98cb3f1faf",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-piano-trio-1",
+      "locale": "de",
+      "source": "workText:mendelssohn-piano-trio-1",
+      "sourceHash": "e7e751c770fb728f",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-piano-trio-2",
+      "locale": "de",
+      "source": "workText:mendelssohn-piano-trio-2",
+      "sourceHash": "46f8eac3a904d88a",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-1",
+      "locale": "de",
+      "source": "workText:mendelssohn-string-quartet-1",
+      "sourceHash": "02eb4381aa741822",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-2",
+      "locale": "de",
+      "source": "workText:mendelssohn-string-quartet-2",
+      "sourceHash": "48c97b8b0cc95825",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-3",
+      "locale": "de",
+      "source": "workText:mendelssohn-string-quartet-3",
+      "sourceHash": "d223a1e2f005dbe1",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-4",
+      "locale": "de",
+      "source": "workText:mendelssohn-string-quartet-4",
+      "sourceHash": "e899f39abd3e7ac4",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-5",
+      "locale": "de",
+      "source": "workText:mendelssohn-string-quartet-5",
+      "sourceHash": "ed555b372c42b65f",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-6",
+      "locale": "de",
+      "source": "workText:mendelssohn-string-quartet-6",
+      "sourceHash": "bd18cb3bc313a561",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-violin-concerto",
+      "locale": "de",
+      "source": "workText:mendelssohn-violin-concerto",
+      "sourceHash": "ba8520472d9dd985",
+      "status": "published"
+    },
+    {
+      "id": "work:monti-csardas",
+      "locale": "de",
+      "source": "workText:monti-csardas",
+      "sourceHash": "61c89dde51819101",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-12-duos-k487",
+      "locale": "de",
+      "source": "workText:mozart-12-duos-k487",
+      "sourceHash": "14449cbf0995c2d8",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-clarinet-concerto",
+      "locale": "de",
+      "source": "workText:mozart-clarinet-concerto",
+      "sourceHash": "0ff5cb9affd7f0d5",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-divertimento-k136",
+      "locale": "de",
+      "source": "workText:mozart-divertimento-k136",
+      "sourceHash": "4b67ffb5e6bd7119",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-divertimento-k137",
+      "locale": "de",
+      "source": "workText:mozart-divertimento-k137",
+      "sourceHash": "c7726f2bad89c1c4",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-divertimento-k563",
+      "locale": "de",
+      "source": "workText:mozart-divertimento-k563",
+      "sourceHash": "eee43b54027a95f4",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-duos-violin-viola",
+      "locale": "de",
+      "source": "workText:mozart-duos-violin-viola",
+      "sourceHash": "696461b2632c65c4",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-eine-kleine-nachtmusik",
+      "locale": "de",
+      "source": "workText:mozart-eine-kleine-nachtmusik",
+      "sourceHash": "fbbdddc6f1b2fd89",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-oboe-concerto",
+      "locale": "de",
+      "source": "workText:mozart-oboe-concerto",
+      "sourceHash": "47d4de23fad147db",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-preludes-and-fugues-k404a",
+      "locale": "de",
+      "source": "workText:mozart-preludes-and-fugues-k404a",
+      "sourceHash": "3942640a7f6957a9",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-rondo-k373",
+      "locale": "de",
+      "source": "workText:mozart-rondo-k373",
+      "sourceHash": "8e2768d58e53d135",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-string-quartet-dissonance",
+      "locale": "de",
+      "source": "workText:mozart-string-quartet-dissonance",
+      "sourceHash": "6a236c6bb33c3d0e",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-variations-k265",
+      "locale": "de",
+      "source": "workText:mozart-variations-k265",
+      "sourceHash": "497097455e3aa566",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-violin-concertos-3-5",
+      "locale": "de",
+      "source": "workText:mozart-violin-concertos-3-5",
+      "sourceHash": "871d5cbce4af9614",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-violin-duos-op70",
+      "locale": "de",
+      "source": "workText:mozart-violin-duos-op70",
+      "sourceHash": "5da322d6bbeb0487",
+      "status": "published"
+    },
+    {
+      "id": "work:pachelbel-canon",
+      "locale": "de",
+      "source": "workText:pachelbel-canon",
+      "sourceHash": "4aeb61662a8fffa5",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-24-caprices",
+      "locale": "de",
+      "source": "workText:paganini-24-caprices",
+      "sourceHash": "770c9f90042b9a60",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-cantabile",
+      "locale": "de",
+      "source": "workText:paganini-cantabile",
+      "sourceHash": "37c212153df1f9e8",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-carnival-of-venice",
+      "locale": "de",
+      "source": "workText:paganini-carnival-of-venice",
+      "sourceHash": "e1c43d213c1593a8",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-kreisler-la-campanella",
+      "locale": "de",
+      "source": "workText:paganini-kreisler-la-campanella",
+      "sourceHash": "a394299a6f9488d4",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-violin-concerto-1",
+      "locale": "de",
+      "source": "workText:paganini-violin-concerto-1",
+      "sourceHash": "27a892a3a3376ddd",
+      "status": "published"
+    },
+    {
+      "id": "work:popper-cello-concertos",
+      "locale": "de",
+      "source": "workText:popper-cello-concertos",
+      "sourceHash": "51350f720885555d",
+      "status": "published"
+    },
+    {
+      "id": "work:prokofiev-violin-concerto-1",
+      "locale": "de",
+      "source": "workText:prokofiev-violin-concerto-1",
+      "sourceHash": "c398180abf7ea7eb",
+      "status": "published"
+    },
+    {
+      "id": "work:rachmaninoff-vocalise",
+      "locale": "de",
+      "source": "workText:rachmaninoff-vocalise",
+      "sourceHash": "661fc4fc739c6203",
+      "status": "published"
+    },
+    {
+      "id": "work:ravel-string-quartet",
+      "locale": "de",
+      "source": "workText:ravel-string-quartet",
+      "sourceHash": "2fc16323f261134e",
+      "status": "published"
+    },
+    {
+      "id": "work:respighi-ancient-airs-and-dances",
+      "locale": "de",
+      "source": "workText:respighi-ancient-airs-and-dances",
+      "sourceHash": "89afade9b2bd430c",
+      "status": "published"
+    },
+    {
+      "id": "work:rode-24-caprices",
+      "locale": "de",
+      "source": "workText:rode-24-caprices",
+      "sourceHash": "202c976a0733c89f",
+      "status": "published"
+    },
+    {
+      "id": "work:roussel-string-trio",
+      "locale": "de",
+      "source": "workText:roussel-string-trio",
+      "sourceHash": "8628cf2235718221",
+      "status": "published"
+    },
+    {
+      "id": "work:saint-saens-danse-macabre",
+      "locale": "de",
+      "source": "workText:saint-saens-danse-macabre",
+      "sourceHash": "8e6258bb59f517f1",
+      "status": "published"
+    },
+    {
+      "id": "work:saint-saens-havanaise",
+      "locale": "de",
+      "source": "workText:saint-saens-havanaise",
+      "sourceHash": "a05f36c256cee66b",
+      "status": "published"
+    },
+    {
+      "id": "work:saint-saens-introduction-and-rondo-capriccioso",
+      "locale": "de",
+      "source": "workText:saint-saens-introduction-and-rondo-capriccioso",
+      "sourceHash": "26f24adbaac09d19",
+      "status": "published"
+    },
+    {
+      "id": "work:saint-saens-violin-concerto-3",
+      "locale": "de",
+      "source": "workText:saint-saens-violin-concerto-3",
+      "sourceHash": "84abdbe4172474db",
+      "status": "published"
+    },
+    {
+      "id": "work:sarasate-carmen-fantasy",
+      "locale": "de",
+      "source": "workText:sarasate-carmen-fantasy",
+      "sourceHash": "b0f9501940850af1",
+      "status": "published"
+    },
+    {
+      "id": "work:sarasate-introduction-and-tarantella",
+      "locale": "de",
+      "source": "workText:sarasate-introduction-and-tarantella",
+      "sourceHash": "f884743d8912edaf",
+      "status": "published"
+    },
+    {
+      "id": "work:sarasate-zapateado",
+      "locale": "de",
+      "source": "workText:sarasate-zapateado",
+      "sourceHash": "88eb733c38da8216",
+      "status": "published"
+    },
+    {
+      "id": "work:sarasate-zigeunerweisen",
+      "locale": "de",
+      "source": "workText:sarasate-zigeunerweisen",
+      "sourceHash": "d41cad28c2c8688a",
+      "status": "published"
+    },
+    {
+      "id": "work:schradieck-school-of-violin-technics",
+      "locale": "de",
+      "source": "workText:schradieck-school-of-violin-technics",
+      "sourceHash": "e00cf869e16e5da7",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-arpeggione-sonata-cello",
+      "locale": "de",
+      "source": "workText:schubert-arpeggione-sonata-cello",
+      "sourceHash": "2d921b29eaaf24b7",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-arpeggione-sonata-viola",
+      "locale": "de",
+      "source": "workText:schubert-arpeggione-sonata-viola",
+      "sourceHash": "da924bde058ea19c",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-ave-maria",
+      "locale": "de",
+      "source": "workText:schubert-ave-maria",
+      "sourceHash": "791c019335a64a09",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-piano-trio-2",
+      "locale": "de",
+      "source": "workText:schubert-piano-trio-2",
+      "sourceHash": "e1d1847eb86f16a0",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-string-trio-d471",
+      "locale": "de",
+      "source": "workText:schubert-string-trio-d471",
+      "sourceHash": "d9c5e7aeb95209fc",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-string-trio-d581",
+      "locale": "de",
+      "source": "workText:schubert-string-trio-d581",
+      "sourceHash": "6590ceac317a06dc",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-cello-concerto",
+      "locale": "de",
+      "source": "workText:schumann-cello-concerto",
+      "sourceHash": "9840fc77db2cd602",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-marchenbilder",
+      "locale": "de",
+      "source": "workText:schumann-marchenbilder",
+      "sourceHash": "a823f586776393ca",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-piano-trio-1",
+      "locale": "de",
+      "source": "workText:schumann-piano-trio-1",
+      "sourceHash": "979ef07628b25d29",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-piano-trio-2",
+      "locale": "de",
+      "source": "workText:schumann-piano-trio-2",
+      "sourceHash": "f2de6b88d4ad4ad8",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-piano-trio-3",
+      "locale": "de",
+      "source": "workText:schumann-piano-trio-3",
+      "sourceHash": "dc242bbcc1f90d0d",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-three-romances",
+      "locale": "de",
+      "source": "workText:schumann-three-romances",
+      "sourceHash": "9c7243b9ac227e6b",
+      "status": "published"
+    },
+    {
+      "id": "work:seitz-student-concerto-2",
+      "locale": "de",
+      "source": "workText:seitz-student-concerto-2",
+      "sourceHash": "635d98150f9d0fad",
+      "status": "published"
+    },
+    {
+      "id": "work:seitz-student-concerto-5",
+      "locale": "de",
+      "source": "workText:seitz-student-concerto-5",
+      "sourceHash": "90d88572da83fe62",
+      "status": "published"
+    },
+    {
+      "id": "work:sevcik-violin-studies",
+      "locale": "de",
+      "source": "workText:sevcik-violin-studies",
+      "sourceHash": "b76248c108fd4b4b",
+      "status": "published"
+    },
+    {
+      "id": "work:sibelius-andante-festivo",
+      "locale": "de",
+      "source": "workText:sibelius-andante-festivo",
+      "sourceHash": "4d33b667a97ef70e",
+      "status": "published"
+    },
+    {
+      "id": "work:sibelius-violin-concerto",
+      "locale": "de",
+      "source": "workText:sibelius-violin-concerto",
+      "sourceHash": "c8044a68061fecb0",
+      "status": "published"
+    },
+    {
+      "id": "work:strauss-r-string-quartet-op2",
+      "locale": "de",
+      "source": "workText:strauss-r-string-quartet-op2",
+      "sourceHash": "692eb0ecc46bd07d",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-meditation-op42-1",
+      "locale": "de",
+      "source": "workText:tchaikovsky-meditation-op42-1",
+      "sourceHash": "0ff4a5cff07820f2",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-piano-trio",
+      "locale": "de",
+      "source": "workText:tchaikovsky-piano-trio",
+      "sourceHash": "d18336997c7863c2",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-rococo-variations",
+      "locale": "de",
+      "source": "workText:tchaikovsky-rococo-variations",
+      "sourceHash": "c8cf267256b20e88",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-serenade-for-strings",
+      "locale": "de",
+      "source": "workText:tchaikovsky-serenade-for-strings",
+      "sourceHash": "5bc0029c97674e08",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-violin-concerto",
+      "locale": "de",
+      "source": "workText:tchaikovsky-violin-concerto",
+      "sourceHash": "6dc48aaa98d43d6e",
+      "status": "published"
+    },
+    {
+      "id": "work:viotti-violin-concerto-22",
+      "locale": "de",
+      "source": "workText:viotti-violin-concerto-22",
+      "sourceHash": "b8404eb15ca1e3a8",
+      "status": "published"
+    },
+    {
+      "id": "work:vitali-chaconne",
+      "locale": "de",
+      "source": "workText:vitali-chaconne",
+      "sourceHash": "e2d886a8075154fe",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-concerto-four-violins-rv580",
+      "locale": "de",
+      "source": "workText:vivaldi-concerto-four-violins-rv580",
+      "sourceHash": "cdcb4ffcab9f4a66",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-concerto-two-violins-rv522",
+      "locale": "de",
+      "source": "workText:vivaldi-concerto-two-violins-rv522",
+      "sourceHash": "05b5dae06927be5b",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-four-seasons-autumn",
+      "locale": "de",
+      "source": "workText:vivaldi-four-seasons-autumn",
+      "sourceHash": "5111146dc006812a",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-four-seasons-spring",
+      "locale": "de",
+      "source": "workText:vivaldi-four-seasons-spring",
+      "sourceHash": "191c065753dd9aca",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-four-seasons-summer",
+      "locale": "de",
+      "source": "workText:vivaldi-four-seasons-summer",
+      "sourceHash": "69a0de678308698a",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-four-seasons-winter",
+      "locale": "de",
+      "source": "workText:vivaldi-four-seasons-winter",
+      "sourceHash": "5e7a1d5832bbe472",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-violin-concerto-g-minor",
+      "locale": "de",
+      "source": "workText:vivaldi-violin-concerto-g-minor",
+      "sourceHash": "ec54b163d21cd641",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-violin-concerto-rv356",
+      "locale": "de",
+      "source": "workText:vivaldi-violin-concerto-rv356",
+      "sourceHash": "3779021ace17ce68",
+      "status": "published"
+    },
+    {
+      "id": "work:warlock-capriol-suite",
+      "locale": "de",
+      "source": "workText:warlock-capriol-suite",
+      "sourceHash": "2ecbd1f1c78c7f15",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-legende",
+      "locale": "de",
+      "source": "workText:wieniawski-legende",
+      "sourceHash": "59a4d23a42daef3e",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-polonaise-1",
+      "locale": "de",
+      "source": "workText:wieniawski-polonaise-1",
+      "sourceHash": "7416fbfadc47147c",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-polonaise-2",
+      "locale": "de",
+      "source": "workText:wieniawski-polonaise-2",
+      "sourceHash": "9c265e6c219b7711",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-scherzo-tarantelle",
+      "locale": "de",
+      "source": "workText:wieniawski-scherzo-tarantelle",
+      "sourceHash": "65c7946d53eb7abe",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-violin-concerto-1",
+      "locale": "de",
+      "source": "workText:wieniawski-violin-concerto-1",
+      "sourceHash": "ecea6cadd72ff82a",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-violin-concerto-2",
+      "locale": "de",
+      "source": "workText:wieniawski-violin-concerto-2",
+      "sourceHash": "5afbf677d1d8bd7f",
+      "status": "published"
+    },
+    {
+      "id": "work:ysaye-six-sonatas",
+      "locale": "de",
+      "source": "workText:ysaye-six-sonatas",
+      "sourceHash": "119d20c9836b08fd",
+      "status": "published"
+    },
+    {
+      "id": "dictionary",
+      "locale": "fr",
+      "source": "dictionary",
+      "sourceHash": "fe12f4b224e55ee3",
+      "status": "published",
+      "note": "Claude 訳をそのまま公開（2026-11-28 運営者決定・ネイティブ校閲なし）"
+    },
+    {
+      "id": "work:accolay-violin-concerto-1",
+      "locale": "fr",
+      "source": "workText:accolay-violin-concerto-1",
+      "sourceHash": "7221ef65b0d366cd",
+      "status": "published"
+    },
+    {
+      "id": "work:arensky-piano-trio-1",
+      "locale": "fr",
+      "source": "workText:arensky-piano-trio-1",
+      "sourceHash": "9d17793760cbe9d8",
+      "status": "published"
+    },
+    {
+      "id": "work:arensky-piano-trio-2",
+      "locale": "fr",
+      "source": "workText:arensky-piano-trio-2",
+      "sourceHash": "2b75efb47a86ed19",
+      "status": "published"
+    },
+    {
+      "id": "work:arensky-piano-trios",
+      "locale": "fr",
+      "source": "workText:arensky-piano-trios",
+      "sourceHash": "c832b929bade8ce3",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-air-on-the-g-string",
+      "locale": "fr",
+      "source": "workText:bach-air-on-the-g-string",
+      "sourceHash": "837e360aa5acb5d2",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-cello-suites",
+      "locale": "fr",
+      "source": "workText:bach-cello-suites",
+      "sourceHash": "aaeda8f720a4302f",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-double-violin-concerto",
+      "locale": "fr",
+      "source": "workText:bach-double-violin-concerto",
+      "sourceHash": "710f10288dc42a61",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-jesu-joy-of-mans-desiring",
+      "locale": "fr",
+      "source": "workText:bach-jesu-joy-of-mans-desiring",
+      "sourceHash": "d9569ac735117608",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-sonatas-and-partitas",
+      "locale": "fr",
+      "source": "workText:bach-sonatas-and-partitas",
+      "sourceHash": "be2cced7939f5042",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-violin-concerto-1",
+      "locale": "fr",
+      "source": "workText:bach-violin-concerto-1",
+      "sourceHash": "0da3bdb2eb9252c0",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-violin-concerto-2",
+      "locale": "fr",
+      "source": "workText:bach-violin-concerto-2",
+      "sourceHash": "6bec69490dcd0388",
+      "status": "published"
+    },
+    {
+      "id": "work:bartok-violin-concerto-2",
+      "locale": "fr",
+      "source": "workText:bartok-violin-concerto-2",
+      "sourceHash": "0ff4f17b528ab58c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-duo-violin-cello",
+      "locale": "fr",
+      "source": "workText:beethoven-duo-violin-cello",
+      "sourceHash": "037b09f3dcda5453",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-piano-trio-1",
+      "locale": "fr",
+      "source": "workText:beethoven-piano-trio-1",
+      "sourceHash": "3e48e52d840b587a",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-romance-2",
+      "locale": "fr",
+      "source": "workText:beethoven-romance-2",
+      "sourceHash": "556a31617f8f943c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-serenade-op8",
+      "locale": "fr",
+      "source": "workText:beethoven-serenade-op8",
+      "sourceHash": "350d69cd3bb588db",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-1",
+      "locale": "fr",
+      "source": "workText:beethoven-string-quartet-1",
+      "sourceHash": "2be786f274254248",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-2",
+      "locale": "fr",
+      "source": "workText:beethoven-string-quartet-2",
+      "sourceHash": "ee9a4f868a05f23c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-3",
+      "locale": "fr",
+      "source": "workText:beethoven-string-quartet-3",
+      "sourceHash": "75a11f0732a98894",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-4",
+      "locale": "fr",
+      "source": "workText:beethoven-string-quartet-4",
+      "sourceHash": "67ae2ade227a5f0f",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-5",
+      "locale": "fr",
+      "source": "workText:beethoven-string-quartet-5",
+      "sourceHash": "8d7cfa6b6e3c6450",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-6",
+      "locale": "fr",
+      "source": "workText:beethoven-string-quartet-6",
+      "sourceHash": "4f89f32adac630da",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-7",
+      "locale": "fr",
+      "source": "workText:beethoven-string-quartet-7",
+      "sourceHash": "a520241cb777383c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-8",
+      "locale": "fr",
+      "source": "workText:beethoven-string-quartet-8",
+      "sourceHash": "8d017e0e490bf679",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-9",
+      "locale": "fr",
+      "source": "workText:beethoven-string-quartet-9",
+      "sourceHash": "2c09850193140a36",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-trio-op3",
+      "locale": "fr",
+      "source": "workText:beethoven-string-trio-op3",
+      "sourceHash": "ed46b10a6136046c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-1",
+      "locale": "fr",
+      "source": "workText:beethoven-violin-sonata-1",
+      "sourceHash": "8524e4e380d44c42",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-10",
+      "locale": "fr",
+      "source": "workText:beethoven-violin-sonata-10",
+      "sourceHash": "3695a879340db553",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-2",
+      "locale": "fr",
+      "source": "workText:beethoven-violin-sonata-2",
+      "sourceHash": "460b327dd3871f21",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-3",
+      "locale": "fr",
+      "source": "workText:beethoven-violin-sonata-3",
+      "sourceHash": "f365e0aed4cba2fc",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-4",
+      "locale": "fr",
+      "source": "workText:beethoven-violin-sonata-4",
+      "sourceHash": "38a4cdbe5e99cae8",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-5",
+      "locale": "fr",
+      "source": "workText:beethoven-violin-sonata-5",
+      "sourceHash": "a6def1d0c3995b6f",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-6",
+      "locale": "fr",
+      "source": "workText:beethoven-violin-sonata-6",
+      "sourceHash": "7d1f5c1d31573b80",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-7",
+      "locale": "fr",
+      "source": "workText:beethoven-violin-sonata-7",
+      "sourceHash": "f1ce393089a25830",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-8",
+      "locale": "fr",
+      "source": "workText:beethoven-violin-sonata-8",
+      "sourceHash": "7e42762d3de3fff9",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-9",
+      "locale": "fr",
+      "source": "workText:beethoven-violin-sonata-9",
+      "sourceHash": "351e4ae3ff481bf9",
+      "status": "published"
+    },
+    {
+      "id": "work:beriot-violin-concerto-9",
+      "locale": "fr",
+      "source": "workText:beriot-violin-concerto-9",
+      "sourceHash": "67fa8312f54f3131",
+      "status": "published"
+    },
+    {
+      "id": "work:bizet-arlesienne-adagietto",
+      "locale": "fr",
+      "source": "workText:bizet-arlesienne-adagietto",
+      "sourceHash": "999ffceb76ab0a45",
+      "status": "published"
+    },
+    {
+      "id": "work:borodin-string-quartet-2",
+      "locale": "fr",
+      "source": "workText:borodin-string-quartet-2",
+      "sourceHash": "2ba1807deb321ad9",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-fae-sonata",
+      "locale": "fr",
+      "source": "workText:brahms-fae-sonata",
+      "sourceHash": "6b17c666b7f1585e",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-quartet-1",
+      "locale": "fr",
+      "source": "workText:brahms-piano-quartet-1",
+      "sourceHash": "45764a7f4414159c",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-quartet-3",
+      "locale": "fr",
+      "source": "workText:brahms-piano-quartet-3",
+      "sourceHash": "241fd1e4708783d8",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-trio-1",
+      "locale": "fr",
+      "source": "workText:brahms-piano-trio-1",
+      "sourceHash": "3c0370d9df9eead2",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-trio-2",
+      "locale": "fr",
+      "source": "workText:brahms-piano-trio-2",
+      "sourceHash": "f973a9145c76b603",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-trio-3",
+      "locale": "fr",
+      "source": "workText:brahms-piano-trio-3",
+      "sourceHash": "4182f91ff0287ddf",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-concerto",
+      "locale": "fr",
+      "source": "workText:brahms-violin-concerto",
+      "sourceHash": "55e34a127c8349b1",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-sonata-1",
+      "locale": "fr",
+      "source": "workText:brahms-violin-sonata-1",
+      "sourceHash": "7f4c6d6fbb011bbc",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-sonata-2",
+      "locale": "fr",
+      "source": "workText:brahms-violin-sonata-2",
+      "sourceHash": "8b9033c9ddff9de2",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-sonata-3",
+      "locale": "fr",
+      "source": "workText:brahms-violin-sonata-3",
+      "sourceHash": "126c31e144c5e2e8",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-sonatas",
+      "locale": "fr",
+      "source": "workText:brahms-violin-sonatas",
+      "sourceHash": "72e2fc5a2904ee73",
+      "status": "published"
+    },
+    {
+      "id": "work:bruch-kol-nidrei",
+      "locale": "fr",
+      "source": "workText:bruch-kol-nidrei",
+      "sourceHash": "5f754e7f4cd95f33",
+      "status": "published"
+    },
+    {
+      "id": "work:bruch-violin-concerto-1",
+      "locale": "fr",
+      "source": "workText:bruch-violin-concerto-1",
+      "sourceHash": "1504e88c3d8640eb",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-ballade-1",
+      "locale": "fr",
+      "source": "workText:chopin-ballade-1",
+      "sourceHash": "8b0c9c4002b68be5",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-ballade-2",
+      "locale": "fr",
+      "source": "workText:chopin-ballade-2",
+      "sourceHash": "0c5d3f1653c2657a",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-ballade-3",
+      "locale": "fr",
+      "source": "workText:chopin-ballade-3",
+      "sourceHash": "50693f93c669fe4f",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-ballade-4",
+      "locale": "fr",
+      "source": "workText:chopin-ballade-4",
+      "sourceHash": "5cec672dd009c2c4",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-piano-trio",
+      "locale": "fr",
+      "source": "workText:chopin-piano-trio",
+      "sourceHash": "cb61052c175f0a4c",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-scherzo-1",
+      "locale": "fr",
+      "source": "workText:chopin-scherzo-1",
+      "sourceHash": "3db07318f4062057",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-scherzo-2",
+      "locale": "fr",
+      "source": "workText:chopin-scherzo-2",
+      "sourceHash": "529af82fde0b05b6",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-scherzo-3",
+      "locale": "fr",
+      "source": "workText:chopin-scherzo-3",
+      "sourceHash": "766293bc31934f2b",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-scherzo-4",
+      "locale": "fr",
+      "source": "workText:chopin-scherzo-4",
+      "sourceHash": "353dae9364ebc1a8",
+      "status": "published"
+    },
+    {
+      "id": "work:corelli-christmas-concerto",
+      "locale": "fr",
+      "source": "workText:corelli-christmas-concerto",
+      "sourceHash": "f220a53ed1a7f1ac",
+      "status": "published"
+    },
+    {
+      "id": "work:corelli-la-folia",
+      "locale": "fr",
+      "source": "workText:corelli-la-folia",
+      "sourceHash": "ceffd68236d412ac",
+      "status": "published"
+    },
+    {
+      "id": "work:dohnanyi-serenade-op10",
+      "locale": "fr",
+      "source": "workText:dohnanyi-serenade-op10",
+      "sourceHash": "f914b12300fa139a",
+      "status": "published"
+    },
+    {
+      "id": "work:dont-24-etudes",
+      "locale": "fr",
+      "source": "workText:dont-24-etudes",
+      "sourceHash": "99800488da40914c",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-cello-concerto",
+      "locale": "fr",
+      "source": "workText:dvorak-cello-concerto",
+      "sourceHash": "977bd533f092471a",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-four-romantic-pieces",
+      "locale": "fr",
+      "source": "workText:dvorak-four-romantic-pieces",
+      "sourceHash": "a26bb545bbcf6780",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-humoresque",
+      "locale": "fr",
+      "source": "workText:dvorak-humoresque",
+      "sourceHash": "d45caf45aad9a3cd",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-serenade-for-strings",
+      "locale": "fr",
+      "source": "workText:dvorak-serenade-for-strings",
+      "sourceHash": "def66d225af2499f",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-slavonic-dance-op46-2",
+      "locale": "fr",
+      "source": "workText:dvorak-slavonic-dance-op46-2",
+      "sourceHash": "25252c0b148466cf",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-slavonic-dance-op72-2",
+      "locale": "fr",
+      "source": "workText:dvorak-slavonic-dance-op72-2",
+      "sourceHash": "430367b8c0de46de",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-violin-concerto",
+      "locale": "fr",
+      "source": "workText:dvorak-violin-concerto",
+      "sourceHash": "146ec5cd4ad24c1e",
+      "status": "published"
+    },
+    {
+      "id": "work:elgar-cello-concerto",
+      "locale": "fr",
+      "source": "workText:elgar-cello-concerto",
+      "sourceHash": "06eb6303ac150479",
+      "status": "published"
+    },
+    {
+      "id": "work:elgar-chanson-de-matin",
+      "locale": "fr",
+      "source": "workText:elgar-chanson-de-matin",
+      "sourceHash": "685ada95358f4b9d",
+      "status": "published"
+    },
+    {
+      "id": "work:elgar-salut-damour",
+      "locale": "fr",
+      "source": "workText:elgar-salut-damour",
+      "sourceHash": "383e5c38ea834c5e",
+      "status": "published"
+    },
+    {
+      "id": "work:elgar-serenade-for-strings",
+      "locale": "fr",
+      "source": "workText:elgar-serenade-for-strings",
+      "sourceHash": "7684b3eaf9051e90",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-cello-sonatas",
+      "locale": "fr",
+      "source": "workText:faure-cello-sonatas",
+      "sourceHash": "e227cd19d071d328",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-elegie",
+      "locale": "fr",
+      "source": "workText:faure-elegie",
+      "sourceHash": "d2cec1a4dc1e6d78",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-piano-quartet-1",
+      "locale": "fr",
+      "source": "workText:faure-piano-quartet-1",
+      "sourceHash": "084400b85004201a",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-piano-trio",
+      "locale": "fr",
+      "source": "workText:faure-piano-trio",
+      "sourceHash": "9d4559e29770c51a",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-sicilienne",
+      "locale": "fr",
+      "source": "workText:faure-sicilienne",
+      "sourceHash": "e4943c1662f3b1af",
+      "status": "published"
+    },
+    {
+      "id": "work:glazunov-violin-concerto",
+      "locale": "fr",
+      "source": "workText:glazunov-violin-concerto",
+      "sourceHash": "a1d59a3f86b0b0c5",
+      "status": "published"
+    },
+    {
+      "id": "work:goltermann-cello-concertos",
+      "locale": "fr",
+      "source": "workText:goltermann-cello-concertos",
+      "sourceHash": "b305445b0ba9d39d",
+      "status": "published"
+    },
+    {
+      "id": "work:gounod-ave-maria",
+      "locale": "fr",
+      "source": "workText:gounod-ave-maria",
+      "sourceHash": "430783a6d5fd3fc2",
+      "status": "published"
+    },
+    {
+      "id": "work:grieg-holberg-suite",
+      "locale": "fr",
+      "source": "workText:grieg-holberg-suite",
+      "sourceHash": "7841b71696bb858a",
+      "status": "published"
+    },
+    {
+      "id": "work:halvorsen-passacaglia",
+      "locale": "fr",
+      "source": "workText:halvorsen-passacaglia",
+      "sourceHash": "e7f58c702b06cb7e",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-cello-concerto-1",
+      "locale": "fr",
+      "source": "workText:haydn-cello-concerto-1",
+      "sourceHash": "67824b0e68f044ed",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-cello-concerto-c-popper",
+      "locale": "fr",
+      "source": "workText:haydn-cello-concerto-c-popper",
+      "sourceHash": "2ce20b404fbb3a8f",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartet-emperor",
+      "locale": "fr",
+      "source": "workText:haydn-string-quartet-emperor",
+      "sourceHash": "3ee8e88a3bee7389",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartet-lark",
+      "locale": "fr",
+      "source": "workText:haydn-string-quartet-lark",
+      "sourceHash": "71d1ec1440f80a69",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartet-op20-4",
+      "locale": "fr",
+      "source": "workText:haydn-string-quartet-op20-4",
+      "sourceHash": "605fc84fd2ee6c07",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op1-1-3",
+      "locale": "fr",
+      "source": "workText:haydn-string-quartets-op1-1-3",
+      "sourceHash": "8f8efde21c30f3d5",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op17",
+      "locale": "fr",
+      "source": "workText:haydn-string-quartets-op17",
+      "sourceHash": "cbfacca2f25a3c3a",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op2-1-3",
+      "locale": "fr",
+      "source": "workText:haydn-string-quartets-op2-1-3",
+      "sourceHash": "d3a888918b054dfa",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op2-4-6",
+      "locale": "fr",
+      "source": "workText:haydn-string-quartets-op2-4-6",
+      "sourceHash": "a57a6bc0c1a226bc",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op20",
+      "locale": "fr",
+      "source": "workText:haydn-string-quartets-op20",
+      "sourceHash": "47db772982168ac6",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op9",
+      "locale": "fr",
+      "source": "workText:haydn-string-quartets-op9",
+      "sourceHash": "94cc71f28fc8a382",
+      "status": "published"
+    },
+    {
+      "id": "work:kayser-36-etudes",
+      "locale": "fr",
+      "source": "workText:kayser-36-etudes",
+      "sourceHash": "a59b126f02194dc1",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-liebesfreud",
+      "locale": "fr",
+      "source": "workText:kreisler-liebesfreud",
+      "sourceHash": "161a075f00acd4c8",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-liebesleid",
+      "locale": "fr",
+      "source": "workText:kreisler-liebesleid",
+      "sourceHash": "4d2ad64c9f6f2c1e",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-march-of-the-toy-soldiers",
+      "locale": "fr",
+      "source": "workText:kreisler-march-of-the-toy-soldiers",
+      "sourceHash": "8716715dbbb8f50a",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-marche-miniature-viennoise",
+      "locale": "fr",
+      "source": "workText:kreisler-marche-miniature-viennoise",
+      "sourceHash": "ba1cbc005afe8134",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-praeludium-and-allegro",
+      "locale": "fr",
+      "source": "workText:kreisler-praeludium-and-allegro",
+      "sourceHash": "095eb9ac75935c0b",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-pulcinella",
+      "locale": "fr",
+      "source": "workText:kreisler-pulcinella",
+      "sourceHash": "6344616f0f0d7ff7",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-romance",
+      "locale": "fr",
+      "source": "workText:kreisler-romance",
+      "sourceHash": "c221b1f3b6859bc7",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-rondino-beethoven",
+      "locale": "fr",
+      "source": "workText:kreisler-rondino-beethoven",
+      "sourceHash": "039647f162caff01",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-schon-rosmarin",
+      "locale": "fr",
+      "source": "workText:kreisler-schon-rosmarin",
+      "sourceHash": "fe11af4388b252b9",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-sicilienne-et-rigaudon",
+      "locale": "fr",
+      "source": "workText:kreisler-sicilienne-et-rigaudon",
+      "sourceHash": "034e4f0929dc07a6",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-syncopation",
+      "locale": "fr",
+      "source": "workText:kreisler-syncopation",
+      "sourceHash": "e549497cd02d53e1",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-tambourin-chinois",
+      "locale": "fr",
+      "source": "workText:kreisler-tambourin-chinois",
+      "sourceHash": "75de874891dc2cda",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-variations-corelli",
+      "locale": "fr",
+      "source": "workText:kreisler-variations-corelli",
+      "sourceHash": "cfee31490511be02",
+      "status": "published"
+    },
+    {
+      "id": "work:kreutzer-42-etudes",
+      "locale": "fr",
+      "source": "workText:kreutzer-42-etudes",
+      "sourceHash": "fc964ce3175a9327",
+      "status": "published"
+    },
+    {
+      "id": "work:lalo-symphonie-espagnole",
+      "locale": "fr",
+      "source": "workText:lalo-symphonie-espagnole",
+      "sourceHash": "58c55e8a98e29155",
+      "status": "published"
+    },
+    {
+      "id": "work:leclair-sonatas-two-violins-op12",
+      "locale": "fr",
+      "source": "workText:leclair-sonatas-two-violins-op12",
+      "sourceHash": "4fbf9cacf73e6c8c",
+      "status": "published"
+    },
+    {
+      "id": "work:leclair-sonatas-two-violins-op3",
+      "locale": "fr",
+      "source": "workText:leclair-sonatas-two-violins-op3",
+      "sourceHash": "e35a1fd41d6e5764",
+      "status": "published"
+    },
+    {
+      "id": "work:massenet-meditation-thais",
+      "locale": "fr",
+      "source": "workText:massenet-meditation-thais",
+      "sourceHash": "49f78b98cb3f1faf",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-piano-trio-1",
+      "locale": "fr",
+      "source": "workText:mendelssohn-piano-trio-1",
+      "sourceHash": "e7e751c770fb728f",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-piano-trio-2",
+      "locale": "fr",
+      "source": "workText:mendelssohn-piano-trio-2",
+      "sourceHash": "46f8eac3a904d88a",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-1",
+      "locale": "fr",
+      "source": "workText:mendelssohn-string-quartet-1",
+      "sourceHash": "02eb4381aa741822",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-2",
+      "locale": "fr",
+      "source": "workText:mendelssohn-string-quartet-2",
+      "sourceHash": "48c97b8b0cc95825",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-3",
+      "locale": "fr",
+      "source": "workText:mendelssohn-string-quartet-3",
+      "sourceHash": "d223a1e2f005dbe1",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-4",
+      "locale": "fr",
+      "source": "workText:mendelssohn-string-quartet-4",
+      "sourceHash": "e899f39abd3e7ac4",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-5",
+      "locale": "fr",
+      "source": "workText:mendelssohn-string-quartet-5",
+      "sourceHash": "ed555b372c42b65f",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-6",
+      "locale": "fr",
+      "source": "workText:mendelssohn-string-quartet-6",
+      "sourceHash": "bd18cb3bc313a561",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-violin-concerto",
+      "locale": "fr",
+      "source": "workText:mendelssohn-violin-concerto",
+      "sourceHash": "ba8520472d9dd985",
+      "status": "published"
+    },
+    {
+      "id": "work:monti-csardas",
+      "locale": "fr",
+      "source": "workText:monti-csardas",
+      "sourceHash": "61c89dde51819101",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-12-duos-k487",
+      "locale": "fr",
+      "source": "workText:mozart-12-duos-k487",
+      "sourceHash": "14449cbf0995c2d8",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-clarinet-concerto",
+      "locale": "fr",
+      "source": "workText:mozart-clarinet-concerto",
+      "sourceHash": "0ff5cb9affd7f0d5",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-divertimento-k136",
+      "locale": "fr",
+      "source": "workText:mozart-divertimento-k136",
+      "sourceHash": "4b67ffb5e6bd7119",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-divertimento-k137",
+      "locale": "fr",
+      "source": "workText:mozart-divertimento-k137",
+      "sourceHash": "c7726f2bad89c1c4",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-divertimento-k563",
+      "locale": "fr",
+      "source": "workText:mozart-divertimento-k563",
+      "sourceHash": "eee43b54027a95f4",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-duos-violin-viola",
+      "locale": "fr",
+      "source": "workText:mozart-duos-violin-viola",
+      "sourceHash": "696461b2632c65c4",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-eine-kleine-nachtmusik",
+      "locale": "fr",
+      "source": "workText:mozart-eine-kleine-nachtmusik",
+      "sourceHash": "fbbdddc6f1b2fd89",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-oboe-concerto",
+      "locale": "fr",
+      "source": "workText:mozart-oboe-concerto",
+      "sourceHash": "47d4de23fad147db",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-preludes-and-fugues-k404a",
+      "locale": "fr",
+      "source": "workText:mozart-preludes-and-fugues-k404a",
+      "sourceHash": "3942640a7f6957a9",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-rondo-k373",
+      "locale": "fr",
+      "source": "workText:mozart-rondo-k373",
+      "sourceHash": "8e2768d58e53d135",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-string-quartet-dissonance",
+      "locale": "fr",
+      "source": "workText:mozart-string-quartet-dissonance",
+      "sourceHash": "6a236c6bb33c3d0e",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-variations-k265",
+      "locale": "fr",
+      "source": "workText:mozart-variations-k265",
+      "sourceHash": "497097455e3aa566",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-violin-concertos-3-5",
+      "locale": "fr",
+      "source": "workText:mozart-violin-concertos-3-5",
+      "sourceHash": "871d5cbce4af9614",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-violin-duos-op70",
+      "locale": "fr",
+      "source": "workText:mozart-violin-duos-op70",
+      "sourceHash": "5da322d6bbeb0487",
+      "status": "published"
+    },
+    {
+      "id": "work:pachelbel-canon",
+      "locale": "fr",
+      "source": "workText:pachelbel-canon",
+      "sourceHash": "4aeb61662a8fffa5",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-24-caprices",
+      "locale": "fr",
+      "source": "workText:paganini-24-caprices",
+      "sourceHash": "770c9f90042b9a60",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-cantabile",
+      "locale": "fr",
+      "source": "workText:paganini-cantabile",
+      "sourceHash": "37c212153df1f9e8",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-carnival-of-venice",
+      "locale": "fr",
+      "source": "workText:paganini-carnival-of-venice",
+      "sourceHash": "e1c43d213c1593a8",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-kreisler-la-campanella",
+      "locale": "fr",
+      "source": "workText:paganini-kreisler-la-campanella",
+      "sourceHash": "a394299a6f9488d4",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-violin-concerto-1",
+      "locale": "fr",
+      "source": "workText:paganini-violin-concerto-1",
+      "sourceHash": "27a892a3a3376ddd",
+      "status": "published"
+    },
+    {
+      "id": "work:popper-cello-concertos",
+      "locale": "fr",
+      "source": "workText:popper-cello-concertos",
+      "sourceHash": "51350f720885555d",
+      "status": "published"
+    },
+    {
+      "id": "work:prokofiev-violin-concerto-1",
+      "locale": "fr",
+      "source": "workText:prokofiev-violin-concerto-1",
+      "sourceHash": "c398180abf7ea7eb",
+      "status": "published"
+    },
+    {
+      "id": "work:rachmaninoff-vocalise",
+      "locale": "fr",
+      "source": "workText:rachmaninoff-vocalise",
+      "sourceHash": "661fc4fc739c6203",
+      "status": "published"
+    },
+    {
+      "id": "work:ravel-string-quartet",
+      "locale": "fr",
+      "source": "workText:ravel-string-quartet",
+      "sourceHash": "2fc16323f261134e",
+      "status": "published"
+    },
+    {
+      "id": "work:respighi-ancient-airs-and-dances",
+      "locale": "fr",
+      "source": "workText:respighi-ancient-airs-and-dances",
+      "sourceHash": "89afade9b2bd430c",
+      "status": "published"
+    },
+    {
+      "id": "work:rode-24-caprices",
+      "locale": "fr",
+      "source": "workText:rode-24-caprices",
+      "sourceHash": "202c976a0733c89f",
+      "status": "published"
+    },
+    {
+      "id": "work:roussel-string-trio",
+      "locale": "fr",
+      "source": "workText:roussel-string-trio",
+      "sourceHash": "8628cf2235718221",
+      "status": "published"
+    },
+    {
+      "id": "work:saint-saens-danse-macabre",
+      "locale": "fr",
+      "source": "workText:saint-saens-danse-macabre",
+      "sourceHash": "8e6258bb59f517f1",
+      "status": "published"
+    },
+    {
+      "id": "work:saint-saens-havanaise",
+      "locale": "fr",
+      "source": "workText:saint-saens-havanaise",
+      "sourceHash": "a05f36c256cee66b",
+      "status": "published"
+    },
+    {
+      "id": "work:saint-saens-introduction-and-rondo-capriccioso",
+      "locale": "fr",
+      "source": "workText:saint-saens-introduction-and-rondo-capriccioso",
+      "sourceHash": "26f24adbaac09d19",
+      "status": "published"
+    },
+    {
+      "id": "work:saint-saens-violin-concerto-3",
+      "locale": "fr",
+      "source": "workText:saint-saens-violin-concerto-3",
+      "sourceHash": "84abdbe4172474db",
+      "status": "published"
+    },
+    {
+      "id": "work:sarasate-carmen-fantasy",
+      "locale": "fr",
+      "source": "workText:sarasate-carmen-fantasy",
+      "sourceHash": "b0f9501940850af1",
+      "status": "published"
+    },
+    {
+      "id": "work:sarasate-introduction-and-tarantella",
+      "locale": "fr",
+      "source": "workText:sarasate-introduction-and-tarantella",
+      "sourceHash": "f884743d8912edaf",
+      "status": "published"
+    },
+    {
+      "id": "work:sarasate-zapateado",
+      "locale": "fr",
+      "source": "workText:sarasate-zapateado",
+      "sourceHash": "88eb733c38da8216",
+      "status": "published"
+    },
+    {
+      "id": "work:sarasate-zigeunerweisen",
+      "locale": "fr",
+      "source": "workText:sarasate-zigeunerweisen",
+      "sourceHash": "d41cad28c2c8688a",
+      "status": "published"
+    },
+    {
+      "id": "work:schradieck-school-of-violin-technics",
+      "locale": "fr",
+      "source": "workText:schradieck-school-of-violin-technics",
+      "sourceHash": "e00cf869e16e5da7",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-arpeggione-sonata-cello",
+      "locale": "fr",
+      "source": "workText:schubert-arpeggione-sonata-cello",
+      "sourceHash": "2d921b29eaaf24b7",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-arpeggione-sonata-viola",
+      "locale": "fr",
+      "source": "workText:schubert-arpeggione-sonata-viola",
+      "sourceHash": "da924bde058ea19c",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-ave-maria",
+      "locale": "fr",
+      "source": "workText:schubert-ave-maria",
+      "sourceHash": "791c019335a64a09",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-piano-trio-2",
+      "locale": "fr",
+      "source": "workText:schubert-piano-trio-2",
+      "sourceHash": "e1d1847eb86f16a0",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-string-trio-d471",
+      "locale": "fr",
+      "source": "workText:schubert-string-trio-d471",
+      "sourceHash": "d9c5e7aeb95209fc",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-string-trio-d581",
+      "locale": "fr",
+      "source": "workText:schubert-string-trio-d581",
+      "sourceHash": "6590ceac317a06dc",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-cello-concerto",
+      "locale": "fr",
+      "source": "workText:schumann-cello-concerto",
+      "sourceHash": "9840fc77db2cd602",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-marchenbilder",
+      "locale": "fr",
+      "source": "workText:schumann-marchenbilder",
+      "sourceHash": "a823f586776393ca",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-piano-trio-1",
+      "locale": "fr",
+      "source": "workText:schumann-piano-trio-1",
+      "sourceHash": "979ef07628b25d29",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-piano-trio-2",
+      "locale": "fr",
+      "source": "workText:schumann-piano-trio-2",
+      "sourceHash": "f2de6b88d4ad4ad8",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-piano-trio-3",
+      "locale": "fr",
+      "source": "workText:schumann-piano-trio-3",
+      "sourceHash": "dc242bbcc1f90d0d",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-three-romances",
+      "locale": "fr",
+      "source": "workText:schumann-three-romances",
+      "sourceHash": "9c7243b9ac227e6b",
+      "status": "published"
+    },
+    {
+      "id": "work:seitz-student-concerto-2",
+      "locale": "fr",
+      "source": "workText:seitz-student-concerto-2",
+      "sourceHash": "635d98150f9d0fad",
+      "status": "published"
+    },
+    {
+      "id": "work:seitz-student-concerto-5",
+      "locale": "fr",
+      "source": "workText:seitz-student-concerto-5",
+      "sourceHash": "90d88572da83fe62",
+      "status": "published"
+    },
+    {
+      "id": "work:sevcik-violin-studies",
+      "locale": "fr",
+      "source": "workText:sevcik-violin-studies",
+      "sourceHash": "b76248c108fd4b4b",
+      "status": "published"
+    },
+    {
+      "id": "work:sibelius-andante-festivo",
+      "locale": "fr",
+      "source": "workText:sibelius-andante-festivo",
+      "sourceHash": "4d33b667a97ef70e",
+      "status": "published"
+    },
+    {
+      "id": "work:sibelius-violin-concerto",
+      "locale": "fr",
+      "source": "workText:sibelius-violin-concerto",
+      "sourceHash": "c8044a68061fecb0",
+      "status": "published"
+    },
+    {
+      "id": "work:strauss-r-string-quartet-op2",
+      "locale": "fr",
+      "source": "workText:strauss-r-string-quartet-op2",
+      "sourceHash": "692eb0ecc46bd07d",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-meditation-op42-1",
+      "locale": "fr",
+      "source": "workText:tchaikovsky-meditation-op42-1",
+      "sourceHash": "0ff4a5cff07820f2",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-piano-trio",
+      "locale": "fr",
+      "source": "workText:tchaikovsky-piano-trio",
+      "sourceHash": "d18336997c7863c2",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-rococo-variations",
+      "locale": "fr",
+      "source": "workText:tchaikovsky-rococo-variations",
+      "sourceHash": "c8cf267256b20e88",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-serenade-for-strings",
+      "locale": "fr",
+      "source": "workText:tchaikovsky-serenade-for-strings",
+      "sourceHash": "5bc0029c97674e08",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-violin-concerto",
+      "locale": "fr",
+      "source": "workText:tchaikovsky-violin-concerto",
+      "sourceHash": "6dc48aaa98d43d6e",
+      "status": "published"
+    },
+    {
+      "id": "work:viotti-violin-concerto-22",
+      "locale": "fr",
+      "source": "workText:viotti-violin-concerto-22",
+      "sourceHash": "b8404eb15ca1e3a8",
+      "status": "published"
+    },
+    {
+      "id": "work:vitali-chaconne",
+      "locale": "fr",
+      "source": "workText:vitali-chaconne",
+      "sourceHash": "e2d886a8075154fe",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-concerto-four-violins-rv580",
+      "locale": "fr",
+      "source": "workText:vivaldi-concerto-four-violins-rv580",
+      "sourceHash": "cdcb4ffcab9f4a66",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-concerto-two-violins-rv522",
+      "locale": "fr",
+      "source": "workText:vivaldi-concerto-two-violins-rv522",
+      "sourceHash": "05b5dae06927be5b",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-four-seasons-autumn",
+      "locale": "fr",
+      "source": "workText:vivaldi-four-seasons-autumn",
+      "sourceHash": "5111146dc006812a",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-four-seasons-spring",
+      "locale": "fr",
+      "source": "workText:vivaldi-four-seasons-spring",
+      "sourceHash": "191c065753dd9aca",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-four-seasons-summer",
+      "locale": "fr",
+      "source": "workText:vivaldi-four-seasons-summer",
+      "sourceHash": "69a0de678308698a",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-four-seasons-winter",
+      "locale": "fr",
+      "source": "workText:vivaldi-four-seasons-winter",
+      "sourceHash": "5e7a1d5832bbe472",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-violin-concerto-g-minor",
+      "locale": "fr",
+      "source": "workText:vivaldi-violin-concerto-g-minor",
+      "sourceHash": "ec54b163d21cd641",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-violin-concerto-rv356",
+      "locale": "fr",
+      "source": "workText:vivaldi-violin-concerto-rv356",
+      "sourceHash": "3779021ace17ce68",
+      "status": "published"
+    },
+    {
+      "id": "work:warlock-capriol-suite",
+      "locale": "fr",
+      "source": "workText:warlock-capriol-suite",
+      "sourceHash": "2ecbd1f1c78c7f15",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-legende",
+      "locale": "fr",
+      "source": "workText:wieniawski-legende",
+      "sourceHash": "59a4d23a42daef3e",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-polonaise-1",
+      "locale": "fr",
+      "source": "workText:wieniawski-polonaise-1",
+      "sourceHash": "7416fbfadc47147c",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-polonaise-2",
+      "locale": "fr",
+      "source": "workText:wieniawski-polonaise-2",
+      "sourceHash": "9c265e6c219b7711",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-scherzo-tarantelle",
+      "locale": "fr",
+      "source": "workText:wieniawski-scherzo-tarantelle",
+      "sourceHash": "65c7946d53eb7abe",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-violin-concerto-1",
+      "locale": "fr",
+      "source": "workText:wieniawski-violin-concerto-1",
+      "sourceHash": "ecea6cadd72ff82a",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-violin-concerto-2",
+      "locale": "fr",
+      "source": "workText:wieniawski-violin-concerto-2",
+      "sourceHash": "5afbf677d1d8bd7f",
+      "status": "published"
+    },
+    {
+      "id": "work:ysaye-six-sonatas",
+      "locale": "fr",
+      "source": "workText:ysaye-six-sonatas",
+      "sourceHash": "119d20c9836b08fd",
+      "status": "published"
+    },
+    {
+      "id": "dictionary",
+      "locale": "es",
+      "source": "dictionary",
+      "sourceHash": "fe12f4b224e55ee3",
+      "status": "published",
+      "note": "Claude 訳をそのまま公開（2026-11-28 運営者決定・ネイティブ校閲なし）"
+    },
+    {
+      "id": "work:accolay-violin-concerto-1",
+      "locale": "es",
+      "source": "workText:accolay-violin-concerto-1",
+      "sourceHash": "7221ef65b0d366cd",
+      "status": "published"
+    },
+    {
+      "id": "work:arensky-piano-trio-1",
+      "locale": "es",
+      "source": "workText:arensky-piano-trio-1",
+      "sourceHash": "9d17793760cbe9d8",
+      "status": "published"
+    },
+    {
+      "id": "work:arensky-piano-trio-2",
+      "locale": "es",
+      "source": "workText:arensky-piano-trio-2",
+      "sourceHash": "2b75efb47a86ed19",
+      "status": "published"
+    },
+    {
+      "id": "work:arensky-piano-trios",
+      "locale": "es",
+      "source": "workText:arensky-piano-trios",
+      "sourceHash": "c832b929bade8ce3",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-air-on-the-g-string",
+      "locale": "es",
+      "source": "workText:bach-air-on-the-g-string",
+      "sourceHash": "837e360aa5acb5d2",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-cello-suites",
+      "locale": "es",
+      "source": "workText:bach-cello-suites",
+      "sourceHash": "aaeda8f720a4302f",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-double-violin-concerto",
+      "locale": "es",
+      "source": "workText:bach-double-violin-concerto",
+      "sourceHash": "710f10288dc42a61",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-jesu-joy-of-mans-desiring",
+      "locale": "es",
+      "source": "workText:bach-jesu-joy-of-mans-desiring",
+      "sourceHash": "d9569ac735117608",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-sonatas-and-partitas",
+      "locale": "es",
+      "source": "workText:bach-sonatas-and-partitas",
+      "sourceHash": "be2cced7939f5042",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-violin-concerto-1",
+      "locale": "es",
+      "source": "workText:bach-violin-concerto-1",
+      "sourceHash": "0da3bdb2eb9252c0",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-violin-concerto-2",
+      "locale": "es",
+      "source": "workText:bach-violin-concerto-2",
+      "sourceHash": "6bec69490dcd0388",
+      "status": "published"
+    },
+    {
+      "id": "work:bartok-violin-concerto-2",
+      "locale": "es",
+      "source": "workText:bartok-violin-concerto-2",
+      "sourceHash": "0ff4f17b528ab58c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-duo-violin-cello",
+      "locale": "es",
+      "source": "workText:beethoven-duo-violin-cello",
+      "sourceHash": "037b09f3dcda5453",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-piano-trio-1",
+      "locale": "es",
+      "source": "workText:beethoven-piano-trio-1",
+      "sourceHash": "3e48e52d840b587a",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-romance-2",
+      "locale": "es",
+      "source": "workText:beethoven-romance-2",
+      "sourceHash": "556a31617f8f943c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-serenade-op8",
+      "locale": "es",
+      "source": "workText:beethoven-serenade-op8",
+      "sourceHash": "350d69cd3bb588db",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-1",
+      "locale": "es",
+      "source": "workText:beethoven-string-quartet-1",
+      "sourceHash": "2be786f274254248",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-2",
+      "locale": "es",
+      "source": "workText:beethoven-string-quartet-2",
+      "sourceHash": "ee9a4f868a05f23c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-3",
+      "locale": "es",
+      "source": "workText:beethoven-string-quartet-3",
+      "sourceHash": "75a11f0732a98894",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-4",
+      "locale": "es",
+      "source": "workText:beethoven-string-quartet-4",
+      "sourceHash": "67ae2ade227a5f0f",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-5",
+      "locale": "es",
+      "source": "workText:beethoven-string-quartet-5",
+      "sourceHash": "8d7cfa6b6e3c6450",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-6",
+      "locale": "es",
+      "source": "workText:beethoven-string-quartet-6",
+      "sourceHash": "4f89f32adac630da",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-7",
+      "locale": "es",
+      "source": "workText:beethoven-string-quartet-7",
+      "sourceHash": "a520241cb777383c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-8",
+      "locale": "es",
+      "source": "workText:beethoven-string-quartet-8",
+      "sourceHash": "8d017e0e490bf679",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-9",
+      "locale": "es",
+      "source": "workText:beethoven-string-quartet-9",
+      "sourceHash": "2c09850193140a36",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-trio-op3",
+      "locale": "es",
+      "source": "workText:beethoven-string-trio-op3",
+      "sourceHash": "ed46b10a6136046c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-1",
+      "locale": "es",
+      "source": "workText:beethoven-violin-sonata-1",
+      "sourceHash": "8524e4e380d44c42",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-10",
+      "locale": "es",
+      "source": "workText:beethoven-violin-sonata-10",
+      "sourceHash": "3695a879340db553",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-2",
+      "locale": "es",
+      "source": "workText:beethoven-violin-sonata-2",
+      "sourceHash": "460b327dd3871f21",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-3",
+      "locale": "es",
+      "source": "workText:beethoven-violin-sonata-3",
+      "sourceHash": "f365e0aed4cba2fc",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-4",
+      "locale": "es",
+      "source": "workText:beethoven-violin-sonata-4",
+      "sourceHash": "38a4cdbe5e99cae8",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-5",
+      "locale": "es",
+      "source": "workText:beethoven-violin-sonata-5",
+      "sourceHash": "a6def1d0c3995b6f",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-6",
+      "locale": "es",
+      "source": "workText:beethoven-violin-sonata-6",
+      "sourceHash": "7d1f5c1d31573b80",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-7",
+      "locale": "es",
+      "source": "workText:beethoven-violin-sonata-7",
+      "sourceHash": "f1ce393089a25830",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-8",
+      "locale": "es",
+      "source": "workText:beethoven-violin-sonata-8",
+      "sourceHash": "7e42762d3de3fff9",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-9",
+      "locale": "es",
+      "source": "workText:beethoven-violin-sonata-9",
+      "sourceHash": "351e4ae3ff481bf9",
+      "status": "published"
+    },
+    {
+      "id": "work:beriot-violin-concerto-9",
+      "locale": "es",
+      "source": "workText:beriot-violin-concerto-9",
+      "sourceHash": "67fa8312f54f3131",
+      "status": "published"
+    },
+    {
+      "id": "work:bizet-arlesienne-adagietto",
+      "locale": "es",
+      "source": "workText:bizet-arlesienne-adagietto",
+      "sourceHash": "999ffceb76ab0a45",
+      "status": "published"
+    },
+    {
+      "id": "work:borodin-string-quartet-2",
+      "locale": "es",
+      "source": "workText:borodin-string-quartet-2",
+      "sourceHash": "2ba1807deb321ad9",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-fae-sonata",
+      "locale": "es",
+      "source": "workText:brahms-fae-sonata",
+      "sourceHash": "6b17c666b7f1585e",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-quartet-1",
+      "locale": "es",
+      "source": "workText:brahms-piano-quartet-1",
+      "sourceHash": "45764a7f4414159c",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-quartet-3",
+      "locale": "es",
+      "source": "workText:brahms-piano-quartet-3",
+      "sourceHash": "241fd1e4708783d8",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-trio-1",
+      "locale": "es",
+      "source": "workText:brahms-piano-trio-1",
+      "sourceHash": "3c0370d9df9eead2",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-trio-2",
+      "locale": "es",
+      "source": "workText:brahms-piano-trio-2",
+      "sourceHash": "f973a9145c76b603",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-trio-3",
+      "locale": "es",
+      "source": "workText:brahms-piano-trio-3",
+      "sourceHash": "4182f91ff0287ddf",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-concerto",
+      "locale": "es",
+      "source": "workText:brahms-violin-concerto",
+      "sourceHash": "55e34a127c8349b1",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-sonata-1",
+      "locale": "es",
+      "source": "workText:brahms-violin-sonata-1",
+      "sourceHash": "7f4c6d6fbb011bbc",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-sonata-2",
+      "locale": "es",
+      "source": "workText:brahms-violin-sonata-2",
+      "sourceHash": "8b9033c9ddff9de2",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-sonata-3",
+      "locale": "es",
+      "source": "workText:brahms-violin-sonata-3",
+      "sourceHash": "126c31e144c5e2e8",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-sonatas",
+      "locale": "es",
+      "source": "workText:brahms-violin-sonatas",
+      "sourceHash": "72e2fc5a2904ee73",
+      "status": "published"
+    },
+    {
+      "id": "work:bruch-kol-nidrei",
+      "locale": "es",
+      "source": "workText:bruch-kol-nidrei",
+      "sourceHash": "5f754e7f4cd95f33",
+      "status": "published"
+    },
+    {
+      "id": "work:bruch-violin-concerto-1",
+      "locale": "es",
+      "source": "workText:bruch-violin-concerto-1",
+      "sourceHash": "1504e88c3d8640eb",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-ballade-1",
+      "locale": "es",
+      "source": "workText:chopin-ballade-1",
+      "sourceHash": "8b0c9c4002b68be5",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-ballade-2",
+      "locale": "es",
+      "source": "workText:chopin-ballade-2",
+      "sourceHash": "0c5d3f1653c2657a",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-ballade-3",
+      "locale": "es",
+      "source": "workText:chopin-ballade-3",
+      "sourceHash": "50693f93c669fe4f",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-ballade-4",
+      "locale": "es",
+      "source": "workText:chopin-ballade-4",
+      "sourceHash": "5cec672dd009c2c4",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-piano-trio",
+      "locale": "es",
+      "source": "workText:chopin-piano-trio",
+      "sourceHash": "cb61052c175f0a4c",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-scherzo-1",
+      "locale": "es",
+      "source": "workText:chopin-scherzo-1",
+      "sourceHash": "3db07318f4062057",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-scherzo-2",
+      "locale": "es",
+      "source": "workText:chopin-scherzo-2",
+      "sourceHash": "529af82fde0b05b6",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-scherzo-3",
+      "locale": "es",
+      "source": "workText:chopin-scherzo-3",
+      "sourceHash": "766293bc31934f2b",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-scherzo-4",
+      "locale": "es",
+      "source": "workText:chopin-scherzo-4",
+      "sourceHash": "353dae9364ebc1a8",
+      "status": "published"
+    },
+    {
+      "id": "work:corelli-christmas-concerto",
+      "locale": "es",
+      "source": "workText:corelli-christmas-concerto",
+      "sourceHash": "f220a53ed1a7f1ac",
+      "status": "published"
+    },
+    {
+      "id": "work:corelli-la-folia",
+      "locale": "es",
+      "source": "workText:corelli-la-folia",
+      "sourceHash": "ceffd68236d412ac",
+      "status": "published"
+    },
+    {
+      "id": "work:dohnanyi-serenade-op10",
+      "locale": "es",
+      "source": "workText:dohnanyi-serenade-op10",
+      "sourceHash": "f914b12300fa139a",
+      "status": "published"
+    },
+    {
+      "id": "work:dont-24-etudes",
+      "locale": "es",
+      "source": "workText:dont-24-etudes",
+      "sourceHash": "99800488da40914c",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-cello-concerto",
+      "locale": "es",
+      "source": "workText:dvorak-cello-concerto",
+      "sourceHash": "977bd533f092471a",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-four-romantic-pieces",
+      "locale": "es",
+      "source": "workText:dvorak-four-romantic-pieces",
+      "sourceHash": "a26bb545bbcf6780",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-humoresque",
+      "locale": "es",
+      "source": "workText:dvorak-humoresque",
+      "sourceHash": "d45caf45aad9a3cd",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-serenade-for-strings",
+      "locale": "es",
+      "source": "workText:dvorak-serenade-for-strings",
+      "sourceHash": "def66d225af2499f",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-slavonic-dance-op46-2",
+      "locale": "es",
+      "source": "workText:dvorak-slavonic-dance-op46-2",
+      "sourceHash": "25252c0b148466cf",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-slavonic-dance-op72-2",
+      "locale": "es",
+      "source": "workText:dvorak-slavonic-dance-op72-2",
+      "sourceHash": "430367b8c0de46de",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-violin-concerto",
+      "locale": "es",
+      "source": "workText:dvorak-violin-concerto",
+      "sourceHash": "146ec5cd4ad24c1e",
+      "status": "published"
+    },
+    {
+      "id": "work:elgar-cello-concerto",
+      "locale": "es",
+      "source": "workText:elgar-cello-concerto",
+      "sourceHash": "06eb6303ac150479",
+      "status": "published"
+    },
+    {
+      "id": "work:elgar-chanson-de-matin",
+      "locale": "es",
+      "source": "workText:elgar-chanson-de-matin",
+      "sourceHash": "685ada95358f4b9d",
+      "status": "published"
+    },
+    {
+      "id": "work:elgar-salut-damour",
+      "locale": "es",
+      "source": "workText:elgar-salut-damour",
+      "sourceHash": "383e5c38ea834c5e",
+      "status": "published"
+    },
+    {
+      "id": "work:elgar-serenade-for-strings",
+      "locale": "es",
+      "source": "workText:elgar-serenade-for-strings",
+      "sourceHash": "7684b3eaf9051e90",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-cello-sonatas",
+      "locale": "es",
+      "source": "workText:faure-cello-sonatas",
+      "sourceHash": "e227cd19d071d328",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-elegie",
+      "locale": "es",
+      "source": "workText:faure-elegie",
+      "sourceHash": "d2cec1a4dc1e6d78",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-piano-quartet-1",
+      "locale": "es",
+      "source": "workText:faure-piano-quartet-1",
+      "sourceHash": "084400b85004201a",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-piano-trio",
+      "locale": "es",
+      "source": "workText:faure-piano-trio",
+      "sourceHash": "9d4559e29770c51a",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-sicilienne",
+      "locale": "es",
+      "source": "workText:faure-sicilienne",
+      "sourceHash": "e4943c1662f3b1af",
+      "status": "published"
+    },
+    {
+      "id": "work:glazunov-violin-concerto",
+      "locale": "es",
+      "source": "workText:glazunov-violin-concerto",
+      "sourceHash": "a1d59a3f86b0b0c5",
+      "status": "published"
+    },
+    {
+      "id": "work:goltermann-cello-concertos",
+      "locale": "es",
+      "source": "workText:goltermann-cello-concertos",
+      "sourceHash": "b305445b0ba9d39d",
+      "status": "published"
+    },
+    {
+      "id": "work:gounod-ave-maria",
+      "locale": "es",
+      "source": "workText:gounod-ave-maria",
+      "sourceHash": "430783a6d5fd3fc2",
+      "status": "published"
+    },
+    {
+      "id": "work:grieg-holberg-suite",
+      "locale": "es",
+      "source": "workText:grieg-holberg-suite",
+      "sourceHash": "7841b71696bb858a",
+      "status": "published"
+    },
+    {
+      "id": "work:halvorsen-passacaglia",
+      "locale": "es",
+      "source": "workText:halvorsen-passacaglia",
+      "sourceHash": "e7f58c702b06cb7e",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-cello-concerto-1",
+      "locale": "es",
+      "source": "workText:haydn-cello-concerto-1",
+      "sourceHash": "67824b0e68f044ed",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-cello-concerto-c-popper",
+      "locale": "es",
+      "source": "workText:haydn-cello-concerto-c-popper",
+      "sourceHash": "2ce20b404fbb3a8f",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartet-emperor",
+      "locale": "es",
+      "source": "workText:haydn-string-quartet-emperor",
+      "sourceHash": "3ee8e88a3bee7389",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartet-lark",
+      "locale": "es",
+      "source": "workText:haydn-string-quartet-lark",
+      "sourceHash": "71d1ec1440f80a69",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartet-op20-4",
+      "locale": "es",
+      "source": "workText:haydn-string-quartet-op20-4",
+      "sourceHash": "605fc84fd2ee6c07",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op1-1-3",
+      "locale": "es",
+      "source": "workText:haydn-string-quartets-op1-1-3",
+      "sourceHash": "8f8efde21c30f3d5",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op17",
+      "locale": "es",
+      "source": "workText:haydn-string-quartets-op17",
+      "sourceHash": "cbfacca2f25a3c3a",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op2-1-3",
+      "locale": "es",
+      "source": "workText:haydn-string-quartets-op2-1-3",
+      "sourceHash": "d3a888918b054dfa",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op2-4-6",
+      "locale": "es",
+      "source": "workText:haydn-string-quartets-op2-4-6",
+      "sourceHash": "a57a6bc0c1a226bc",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op20",
+      "locale": "es",
+      "source": "workText:haydn-string-quartets-op20",
+      "sourceHash": "47db772982168ac6",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op9",
+      "locale": "es",
+      "source": "workText:haydn-string-quartets-op9",
+      "sourceHash": "94cc71f28fc8a382",
+      "status": "published"
+    },
+    {
+      "id": "work:kayser-36-etudes",
+      "locale": "es",
+      "source": "workText:kayser-36-etudes",
+      "sourceHash": "a59b126f02194dc1",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-liebesfreud",
+      "locale": "es",
+      "source": "workText:kreisler-liebesfreud",
+      "sourceHash": "161a075f00acd4c8",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-liebesleid",
+      "locale": "es",
+      "source": "workText:kreisler-liebesleid",
+      "sourceHash": "4d2ad64c9f6f2c1e",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-march-of-the-toy-soldiers",
+      "locale": "es",
+      "source": "workText:kreisler-march-of-the-toy-soldiers",
+      "sourceHash": "8716715dbbb8f50a",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-marche-miniature-viennoise",
+      "locale": "es",
+      "source": "workText:kreisler-marche-miniature-viennoise",
+      "sourceHash": "ba1cbc005afe8134",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-praeludium-and-allegro",
+      "locale": "es",
+      "source": "workText:kreisler-praeludium-and-allegro",
+      "sourceHash": "095eb9ac75935c0b",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-pulcinella",
+      "locale": "es",
+      "source": "workText:kreisler-pulcinella",
+      "sourceHash": "6344616f0f0d7ff7",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-romance",
+      "locale": "es",
+      "source": "workText:kreisler-romance",
+      "sourceHash": "c221b1f3b6859bc7",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-rondino-beethoven",
+      "locale": "es",
+      "source": "workText:kreisler-rondino-beethoven",
+      "sourceHash": "039647f162caff01",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-schon-rosmarin",
+      "locale": "es",
+      "source": "workText:kreisler-schon-rosmarin",
+      "sourceHash": "fe11af4388b252b9",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-sicilienne-et-rigaudon",
+      "locale": "es",
+      "source": "workText:kreisler-sicilienne-et-rigaudon",
+      "sourceHash": "034e4f0929dc07a6",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-syncopation",
+      "locale": "es",
+      "source": "workText:kreisler-syncopation",
+      "sourceHash": "e549497cd02d53e1",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-tambourin-chinois",
+      "locale": "es",
+      "source": "workText:kreisler-tambourin-chinois",
+      "sourceHash": "75de874891dc2cda",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-variations-corelli",
+      "locale": "es",
+      "source": "workText:kreisler-variations-corelli",
+      "sourceHash": "cfee31490511be02",
+      "status": "published"
+    },
+    {
+      "id": "work:kreutzer-42-etudes",
+      "locale": "es",
+      "source": "workText:kreutzer-42-etudes",
+      "sourceHash": "fc964ce3175a9327",
+      "status": "published"
+    },
+    {
+      "id": "work:lalo-symphonie-espagnole",
+      "locale": "es",
+      "source": "workText:lalo-symphonie-espagnole",
+      "sourceHash": "58c55e8a98e29155",
+      "status": "published"
+    },
+    {
+      "id": "work:leclair-sonatas-two-violins-op12",
+      "locale": "es",
+      "source": "workText:leclair-sonatas-two-violins-op12",
+      "sourceHash": "4fbf9cacf73e6c8c",
+      "status": "published"
+    },
+    {
+      "id": "work:leclair-sonatas-two-violins-op3",
+      "locale": "es",
+      "source": "workText:leclair-sonatas-two-violins-op3",
+      "sourceHash": "e35a1fd41d6e5764",
+      "status": "published"
+    },
+    {
+      "id": "work:massenet-meditation-thais",
+      "locale": "es",
+      "source": "workText:massenet-meditation-thais",
+      "sourceHash": "49f78b98cb3f1faf",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-piano-trio-1",
+      "locale": "es",
+      "source": "workText:mendelssohn-piano-trio-1",
+      "sourceHash": "e7e751c770fb728f",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-piano-trio-2",
+      "locale": "es",
+      "source": "workText:mendelssohn-piano-trio-2",
+      "sourceHash": "46f8eac3a904d88a",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-1",
+      "locale": "es",
+      "source": "workText:mendelssohn-string-quartet-1",
+      "sourceHash": "02eb4381aa741822",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-2",
+      "locale": "es",
+      "source": "workText:mendelssohn-string-quartet-2",
+      "sourceHash": "48c97b8b0cc95825",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-3",
+      "locale": "es",
+      "source": "workText:mendelssohn-string-quartet-3",
+      "sourceHash": "d223a1e2f005dbe1",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-4",
+      "locale": "es",
+      "source": "workText:mendelssohn-string-quartet-4",
+      "sourceHash": "e899f39abd3e7ac4",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-5",
+      "locale": "es",
+      "source": "workText:mendelssohn-string-quartet-5",
+      "sourceHash": "ed555b372c42b65f",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-6",
+      "locale": "es",
+      "source": "workText:mendelssohn-string-quartet-6",
+      "sourceHash": "bd18cb3bc313a561",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-violin-concerto",
+      "locale": "es",
+      "source": "workText:mendelssohn-violin-concerto",
+      "sourceHash": "ba8520472d9dd985",
+      "status": "published"
+    },
+    {
+      "id": "work:monti-csardas",
+      "locale": "es",
+      "source": "workText:monti-csardas",
+      "sourceHash": "61c89dde51819101",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-12-duos-k487",
+      "locale": "es",
+      "source": "workText:mozart-12-duos-k487",
+      "sourceHash": "14449cbf0995c2d8",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-clarinet-concerto",
+      "locale": "es",
+      "source": "workText:mozart-clarinet-concerto",
+      "sourceHash": "0ff5cb9affd7f0d5",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-divertimento-k136",
+      "locale": "es",
+      "source": "workText:mozart-divertimento-k136",
+      "sourceHash": "4b67ffb5e6bd7119",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-divertimento-k137",
+      "locale": "es",
+      "source": "workText:mozart-divertimento-k137",
+      "sourceHash": "c7726f2bad89c1c4",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-divertimento-k563",
+      "locale": "es",
+      "source": "workText:mozart-divertimento-k563",
+      "sourceHash": "eee43b54027a95f4",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-duos-violin-viola",
+      "locale": "es",
+      "source": "workText:mozart-duos-violin-viola",
+      "sourceHash": "696461b2632c65c4",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-eine-kleine-nachtmusik",
+      "locale": "es",
+      "source": "workText:mozart-eine-kleine-nachtmusik",
+      "sourceHash": "fbbdddc6f1b2fd89",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-oboe-concerto",
+      "locale": "es",
+      "source": "workText:mozart-oboe-concerto",
+      "sourceHash": "47d4de23fad147db",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-preludes-and-fugues-k404a",
+      "locale": "es",
+      "source": "workText:mozart-preludes-and-fugues-k404a",
+      "sourceHash": "3942640a7f6957a9",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-rondo-k373",
+      "locale": "es",
+      "source": "workText:mozart-rondo-k373",
+      "sourceHash": "8e2768d58e53d135",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-string-quartet-dissonance",
+      "locale": "es",
+      "source": "workText:mozart-string-quartet-dissonance",
+      "sourceHash": "6a236c6bb33c3d0e",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-variations-k265",
+      "locale": "es",
+      "source": "workText:mozart-variations-k265",
+      "sourceHash": "497097455e3aa566",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-violin-concertos-3-5",
+      "locale": "es",
+      "source": "workText:mozart-violin-concertos-3-5",
+      "sourceHash": "871d5cbce4af9614",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-violin-duos-op70",
+      "locale": "es",
+      "source": "workText:mozart-violin-duos-op70",
+      "sourceHash": "5da322d6bbeb0487",
+      "status": "published"
+    },
+    {
+      "id": "work:pachelbel-canon",
+      "locale": "es",
+      "source": "workText:pachelbel-canon",
+      "sourceHash": "4aeb61662a8fffa5",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-24-caprices",
+      "locale": "es",
+      "source": "workText:paganini-24-caprices",
+      "sourceHash": "770c9f90042b9a60",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-cantabile",
+      "locale": "es",
+      "source": "workText:paganini-cantabile",
+      "sourceHash": "37c212153df1f9e8",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-carnival-of-venice",
+      "locale": "es",
+      "source": "workText:paganini-carnival-of-venice",
+      "sourceHash": "e1c43d213c1593a8",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-kreisler-la-campanella",
+      "locale": "es",
+      "source": "workText:paganini-kreisler-la-campanella",
+      "sourceHash": "a394299a6f9488d4",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-violin-concerto-1",
+      "locale": "es",
+      "source": "workText:paganini-violin-concerto-1",
+      "sourceHash": "27a892a3a3376ddd",
+      "status": "published"
+    },
+    {
+      "id": "work:popper-cello-concertos",
+      "locale": "es",
+      "source": "workText:popper-cello-concertos",
+      "sourceHash": "51350f720885555d",
+      "status": "published"
+    },
+    {
+      "id": "work:prokofiev-violin-concerto-1",
+      "locale": "es",
+      "source": "workText:prokofiev-violin-concerto-1",
+      "sourceHash": "c398180abf7ea7eb",
+      "status": "published"
+    },
+    {
+      "id": "work:rachmaninoff-vocalise",
+      "locale": "es",
+      "source": "workText:rachmaninoff-vocalise",
+      "sourceHash": "661fc4fc739c6203",
+      "status": "published"
+    },
+    {
+      "id": "work:ravel-string-quartet",
+      "locale": "es",
+      "source": "workText:ravel-string-quartet",
+      "sourceHash": "2fc16323f261134e",
+      "status": "published"
+    },
+    {
+      "id": "work:respighi-ancient-airs-and-dances",
+      "locale": "es",
+      "source": "workText:respighi-ancient-airs-and-dances",
+      "sourceHash": "89afade9b2bd430c",
+      "status": "published"
+    },
+    {
+      "id": "work:rode-24-caprices",
+      "locale": "es",
+      "source": "workText:rode-24-caprices",
+      "sourceHash": "202c976a0733c89f",
+      "status": "published"
+    },
+    {
+      "id": "work:roussel-string-trio",
+      "locale": "es",
+      "source": "workText:roussel-string-trio",
+      "sourceHash": "8628cf2235718221",
+      "status": "published"
+    },
+    {
+      "id": "work:saint-saens-danse-macabre",
+      "locale": "es",
+      "source": "workText:saint-saens-danse-macabre",
+      "sourceHash": "8e6258bb59f517f1",
+      "status": "published"
+    },
+    {
+      "id": "work:saint-saens-havanaise",
+      "locale": "es",
+      "source": "workText:saint-saens-havanaise",
+      "sourceHash": "a05f36c256cee66b",
+      "status": "published"
+    },
+    {
+      "id": "work:saint-saens-introduction-and-rondo-capriccioso",
+      "locale": "es",
+      "source": "workText:saint-saens-introduction-and-rondo-capriccioso",
+      "sourceHash": "26f24adbaac09d19",
+      "status": "published"
+    },
+    {
+      "id": "work:saint-saens-violin-concerto-3",
+      "locale": "es",
+      "source": "workText:saint-saens-violin-concerto-3",
+      "sourceHash": "84abdbe4172474db",
+      "status": "published"
+    },
+    {
+      "id": "work:sarasate-carmen-fantasy",
+      "locale": "es",
+      "source": "workText:sarasate-carmen-fantasy",
+      "sourceHash": "b0f9501940850af1",
+      "status": "published"
+    },
+    {
+      "id": "work:sarasate-introduction-and-tarantella",
+      "locale": "es",
+      "source": "workText:sarasate-introduction-and-tarantella",
+      "sourceHash": "f884743d8912edaf",
+      "status": "published"
+    },
+    {
+      "id": "work:sarasate-zapateado",
+      "locale": "es",
+      "source": "workText:sarasate-zapateado",
+      "sourceHash": "88eb733c38da8216",
+      "status": "published"
+    },
+    {
+      "id": "work:sarasate-zigeunerweisen",
+      "locale": "es",
+      "source": "workText:sarasate-zigeunerweisen",
+      "sourceHash": "d41cad28c2c8688a",
+      "status": "published"
+    },
+    {
+      "id": "work:schradieck-school-of-violin-technics",
+      "locale": "es",
+      "source": "workText:schradieck-school-of-violin-technics",
+      "sourceHash": "e00cf869e16e5da7",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-arpeggione-sonata-cello",
+      "locale": "es",
+      "source": "workText:schubert-arpeggione-sonata-cello",
+      "sourceHash": "2d921b29eaaf24b7",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-arpeggione-sonata-viola",
+      "locale": "es",
+      "source": "workText:schubert-arpeggione-sonata-viola",
+      "sourceHash": "da924bde058ea19c",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-ave-maria",
+      "locale": "es",
+      "source": "workText:schubert-ave-maria",
+      "sourceHash": "791c019335a64a09",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-piano-trio-2",
+      "locale": "es",
+      "source": "workText:schubert-piano-trio-2",
+      "sourceHash": "e1d1847eb86f16a0",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-string-trio-d471",
+      "locale": "es",
+      "source": "workText:schubert-string-trio-d471",
+      "sourceHash": "d9c5e7aeb95209fc",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-string-trio-d581",
+      "locale": "es",
+      "source": "workText:schubert-string-trio-d581",
+      "sourceHash": "6590ceac317a06dc",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-cello-concerto",
+      "locale": "es",
+      "source": "workText:schumann-cello-concerto",
+      "sourceHash": "9840fc77db2cd602",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-marchenbilder",
+      "locale": "es",
+      "source": "workText:schumann-marchenbilder",
+      "sourceHash": "a823f586776393ca",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-piano-trio-1",
+      "locale": "es",
+      "source": "workText:schumann-piano-trio-1",
+      "sourceHash": "979ef07628b25d29",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-piano-trio-2",
+      "locale": "es",
+      "source": "workText:schumann-piano-trio-2",
+      "sourceHash": "f2de6b88d4ad4ad8",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-piano-trio-3",
+      "locale": "es",
+      "source": "workText:schumann-piano-trio-3",
+      "sourceHash": "dc242bbcc1f90d0d",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-three-romances",
+      "locale": "es",
+      "source": "workText:schumann-three-romances",
+      "sourceHash": "9c7243b9ac227e6b",
+      "status": "published"
+    },
+    {
+      "id": "work:seitz-student-concerto-2",
+      "locale": "es",
+      "source": "workText:seitz-student-concerto-2",
+      "sourceHash": "635d98150f9d0fad",
+      "status": "published"
+    },
+    {
+      "id": "work:seitz-student-concerto-5",
+      "locale": "es",
+      "source": "workText:seitz-student-concerto-5",
+      "sourceHash": "90d88572da83fe62",
+      "status": "published"
+    },
+    {
+      "id": "work:sevcik-violin-studies",
+      "locale": "es",
+      "source": "workText:sevcik-violin-studies",
+      "sourceHash": "b76248c108fd4b4b",
+      "status": "published"
+    },
+    {
+      "id": "work:sibelius-andante-festivo",
+      "locale": "es",
+      "source": "workText:sibelius-andante-festivo",
+      "sourceHash": "4d33b667a97ef70e",
+      "status": "published"
+    },
+    {
+      "id": "work:sibelius-violin-concerto",
+      "locale": "es",
+      "source": "workText:sibelius-violin-concerto",
+      "sourceHash": "c8044a68061fecb0",
+      "status": "published"
+    },
+    {
+      "id": "work:strauss-r-string-quartet-op2",
+      "locale": "es",
+      "source": "workText:strauss-r-string-quartet-op2",
+      "sourceHash": "692eb0ecc46bd07d",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-meditation-op42-1",
+      "locale": "es",
+      "source": "workText:tchaikovsky-meditation-op42-1",
+      "sourceHash": "0ff4a5cff07820f2",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-piano-trio",
+      "locale": "es",
+      "source": "workText:tchaikovsky-piano-trio",
+      "sourceHash": "d18336997c7863c2",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-rococo-variations",
+      "locale": "es",
+      "source": "workText:tchaikovsky-rococo-variations",
+      "sourceHash": "c8cf267256b20e88",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-serenade-for-strings",
+      "locale": "es",
+      "source": "workText:tchaikovsky-serenade-for-strings",
+      "sourceHash": "5bc0029c97674e08",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-violin-concerto",
+      "locale": "es",
+      "source": "workText:tchaikovsky-violin-concerto",
+      "sourceHash": "6dc48aaa98d43d6e",
+      "status": "published"
+    },
+    {
+      "id": "work:viotti-violin-concerto-22",
+      "locale": "es",
+      "source": "workText:viotti-violin-concerto-22",
+      "sourceHash": "b8404eb15ca1e3a8",
+      "status": "published"
+    },
+    {
+      "id": "work:vitali-chaconne",
+      "locale": "es",
+      "source": "workText:vitali-chaconne",
+      "sourceHash": "e2d886a8075154fe",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-concerto-four-violins-rv580",
+      "locale": "es",
+      "source": "workText:vivaldi-concerto-four-violins-rv580",
+      "sourceHash": "cdcb4ffcab9f4a66",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-concerto-two-violins-rv522",
+      "locale": "es",
+      "source": "workText:vivaldi-concerto-two-violins-rv522",
+      "sourceHash": "05b5dae06927be5b",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-four-seasons-autumn",
+      "locale": "es",
+      "source": "workText:vivaldi-four-seasons-autumn",
+      "sourceHash": "5111146dc006812a",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-four-seasons-spring",
+      "locale": "es",
+      "source": "workText:vivaldi-four-seasons-spring",
+      "sourceHash": "191c065753dd9aca",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-four-seasons-summer",
+      "locale": "es",
+      "source": "workText:vivaldi-four-seasons-summer",
+      "sourceHash": "69a0de678308698a",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-four-seasons-winter",
+      "locale": "es",
+      "source": "workText:vivaldi-four-seasons-winter",
+      "sourceHash": "5e7a1d5832bbe472",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-violin-concerto-g-minor",
+      "locale": "es",
+      "source": "workText:vivaldi-violin-concerto-g-minor",
+      "sourceHash": "ec54b163d21cd641",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-violin-concerto-rv356",
+      "locale": "es",
+      "source": "workText:vivaldi-violin-concerto-rv356",
+      "sourceHash": "3779021ace17ce68",
+      "status": "published"
+    },
+    {
+      "id": "work:warlock-capriol-suite",
+      "locale": "es",
+      "source": "workText:warlock-capriol-suite",
+      "sourceHash": "2ecbd1f1c78c7f15",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-legende",
+      "locale": "es",
+      "source": "workText:wieniawski-legende",
+      "sourceHash": "59a4d23a42daef3e",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-polonaise-1",
+      "locale": "es",
+      "source": "workText:wieniawski-polonaise-1",
+      "sourceHash": "7416fbfadc47147c",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-polonaise-2",
+      "locale": "es",
+      "source": "workText:wieniawski-polonaise-2",
+      "sourceHash": "9c265e6c219b7711",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-scherzo-tarantelle",
+      "locale": "es",
+      "source": "workText:wieniawski-scherzo-tarantelle",
+      "sourceHash": "65c7946d53eb7abe",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-violin-concerto-1",
+      "locale": "es",
+      "source": "workText:wieniawski-violin-concerto-1",
+      "sourceHash": "ecea6cadd72ff82a",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-violin-concerto-2",
+      "locale": "es",
+      "source": "workText:wieniawski-violin-concerto-2",
+      "sourceHash": "5afbf677d1d8bd7f",
+      "status": "published"
+    },
+    {
+      "id": "work:ysaye-six-sonatas",
+      "locale": "es",
+      "source": "workText:ysaye-six-sonatas",
+      "sourceHash": "119d20c9836b08fd",
+      "status": "published"
+    },
+    {
+      "id": "dictionary",
+      "locale": "it",
+      "source": "dictionary",
+      "sourceHash": "fe12f4b224e55ee3",
+      "status": "published",
+      "note": "Claude 訳をそのまま公開（2026-11-28 運営者決定・ネイティブ校閲なし）"
+    },
+    {
+      "id": "work:accolay-violin-concerto-1",
+      "locale": "it",
+      "source": "workText:accolay-violin-concerto-1",
+      "sourceHash": "7221ef65b0d366cd",
+      "status": "published"
+    },
+    {
+      "id": "work:arensky-piano-trio-1",
+      "locale": "it",
+      "source": "workText:arensky-piano-trio-1",
+      "sourceHash": "9d17793760cbe9d8",
+      "status": "published"
+    },
+    {
+      "id": "work:arensky-piano-trio-2",
+      "locale": "it",
+      "source": "workText:arensky-piano-trio-2",
+      "sourceHash": "2b75efb47a86ed19",
+      "status": "published"
+    },
+    {
+      "id": "work:arensky-piano-trios",
+      "locale": "it",
+      "source": "workText:arensky-piano-trios",
+      "sourceHash": "c832b929bade8ce3",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-air-on-the-g-string",
+      "locale": "it",
+      "source": "workText:bach-air-on-the-g-string",
+      "sourceHash": "837e360aa5acb5d2",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-cello-suites",
+      "locale": "it",
+      "source": "workText:bach-cello-suites",
+      "sourceHash": "aaeda8f720a4302f",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-double-violin-concerto",
+      "locale": "it",
+      "source": "workText:bach-double-violin-concerto",
+      "sourceHash": "710f10288dc42a61",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-jesu-joy-of-mans-desiring",
+      "locale": "it",
+      "source": "workText:bach-jesu-joy-of-mans-desiring",
+      "sourceHash": "d9569ac735117608",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-sonatas-and-partitas",
+      "locale": "it",
+      "source": "workText:bach-sonatas-and-partitas",
+      "sourceHash": "be2cced7939f5042",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-violin-concerto-1",
+      "locale": "it",
+      "source": "workText:bach-violin-concerto-1",
+      "sourceHash": "0da3bdb2eb9252c0",
+      "status": "published"
+    },
+    {
+      "id": "work:bach-violin-concerto-2",
+      "locale": "it",
+      "source": "workText:bach-violin-concerto-2",
+      "sourceHash": "6bec69490dcd0388",
+      "status": "published"
+    },
+    {
+      "id": "work:bartok-violin-concerto-2",
+      "locale": "it",
+      "source": "workText:bartok-violin-concerto-2",
+      "sourceHash": "0ff4f17b528ab58c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-duo-violin-cello",
+      "locale": "it",
+      "source": "workText:beethoven-duo-violin-cello",
+      "sourceHash": "037b09f3dcda5453",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-piano-trio-1",
+      "locale": "it",
+      "source": "workText:beethoven-piano-trio-1",
+      "sourceHash": "3e48e52d840b587a",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-romance-2",
+      "locale": "it",
+      "source": "workText:beethoven-romance-2",
+      "sourceHash": "556a31617f8f943c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-serenade-op8",
+      "locale": "it",
+      "source": "workText:beethoven-serenade-op8",
+      "sourceHash": "350d69cd3bb588db",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-1",
+      "locale": "it",
+      "source": "workText:beethoven-string-quartet-1",
+      "sourceHash": "2be786f274254248",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-2",
+      "locale": "it",
+      "source": "workText:beethoven-string-quartet-2",
+      "sourceHash": "ee9a4f868a05f23c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-3",
+      "locale": "it",
+      "source": "workText:beethoven-string-quartet-3",
+      "sourceHash": "75a11f0732a98894",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-4",
+      "locale": "it",
+      "source": "workText:beethoven-string-quartet-4",
+      "sourceHash": "67ae2ade227a5f0f",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-5",
+      "locale": "it",
+      "source": "workText:beethoven-string-quartet-5",
+      "sourceHash": "8d7cfa6b6e3c6450",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-6",
+      "locale": "it",
+      "source": "workText:beethoven-string-quartet-6",
+      "sourceHash": "4f89f32adac630da",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-7",
+      "locale": "it",
+      "source": "workText:beethoven-string-quartet-7",
+      "sourceHash": "a520241cb777383c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-8",
+      "locale": "it",
+      "source": "workText:beethoven-string-quartet-8",
+      "sourceHash": "8d017e0e490bf679",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-quartet-9",
+      "locale": "it",
+      "source": "workText:beethoven-string-quartet-9",
+      "sourceHash": "2c09850193140a36",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-string-trio-op3",
+      "locale": "it",
+      "source": "workText:beethoven-string-trio-op3",
+      "sourceHash": "ed46b10a6136046c",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-1",
+      "locale": "it",
+      "source": "workText:beethoven-violin-sonata-1",
+      "sourceHash": "8524e4e380d44c42",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-10",
+      "locale": "it",
+      "source": "workText:beethoven-violin-sonata-10",
+      "sourceHash": "3695a879340db553",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-2",
+      "locale": "it",
+      "source": "workText:beethoven-violin-sonata-2",
+      "sourceHash": "460b327dd3871f21",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-3",
+      "locale": "it",
+      "source": "workText:beethoven-violin-sonata-3",
+      "sourceHash": "f365e0aed4cba2fc",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-4",
+      "locale": "it",
+      "source": "workText:beethoven-violin-sonata-4",
+      "sourceHash": "38a4cdbe5e99cae8",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-5",
+      "locale": "it",
+      "source": "workText:beethoven-violin-sonata-5",
+      "sourceHash": "a6def1d0c3995b6f",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-6",
+      "locale": "it",
+      "source": "workText:beethoven-violin-sonata-6",
+      "sourceHash": "7d1f5c1d31573b80",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-7",
+      "locale": "it",
+      "source": "workText:beethoven-violin-sonata-7",
+      "sourceHash": "f1ce393089a25830",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-8",
+      "locale": "it",
+      "source": "workText:beethoven-violin-sonata-8",
+      "sourceHash": "7e42762d3de3fff9",
+      "status": "published"
+    },
+    {
+      "id": "work:beethoven-violin-sonata-9",
+      "locale": "it",
+      "source": "workText:beethoven-violin-sonata-9",
+      "sourceHash": "351e4ae3ff481bf9",
+      "status": "published"
+    },
+    {
+      "id": "work:beriot-violin-concerto-9",
+      "locale": "it",
+      "source": "workText:beriot-violin-concerto-9",
+      "sourceHash": "67fa8312f54f3131",
+      "status": "published"
+    },
+    {
+      "id": "work:bizet-arlesienne-adagietto",
+      "locale": "it",
+      "source": "workText:bizet-arlesienne-adagietto",
+      "sourceHash": "999ffceb76ab0a45",
+      "status": "published"
+    },
+    {
+      "id": "work:borodin-string-quartet-2",
+      "locale": "it",
+      "source": "workText:borodin-string-quartet-2",
+      "sourceHash": "2ba1807deb321ad9",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-fae-sonata",
+      "locale": "it",
+      "source": "workText:brahms-fae-sonata",
+      "sourceHash": "6b17c666b7f1585e",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-quartet-1",
+      "locale": "it",
+      "source": "workText:brahms-piano-quartet-1",
+      "sourceHash": "45764a7f4414159c",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-quartet-3",
+      "locale": "it",
+      "source": "workText:brahms-piano-quartet-3",
+      "sourceHash": "241fd1e4708783d8",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-trio-1",
+      "locale": "it",
+      "source": "workText:brahms-piano-trio-1",
+      "sourceHash": "3c0370d9df9eead2",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-trio-2",
+      "locale": "it",
+      "source": "workText:brahms-piano-trio-2",
+      "sourceHash": "f973a9145c76b603",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-piano-trio-3",
+      "locale": "it",
+      "source": "workText:brahms-piano-trio-3",
+      "sourceHash": "4182f91ff0287ddf",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-concerto",
+      "locale": "it",
+      "source": "workText:brahms-violin-concerto",
+      "sourceHash": "55e34a127c8349b1",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-sonata-1",
+      "locale": "it",
+      "source": "workText:brahms-violin-sonata-1",
+      "sourceHash": "7f4c6d6fbb011bbc",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-sonata-2",
+      "locale": "it",
+      "source": "workText:brahms-violin-sonata-2",
+      "sourceHash": "8b9033c9ddff9de2",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-sonata-3",
+      "locale": "it",
+      "source": "workText:brahms-violin-sonata-3",
+      "sourceHash": "126c31e144c5e2e8",
+      "status": "published"
+    },
+    {
+      "id": "work:brahms-violin-sonatas",
+      "locale": "it",
+      "source": "workText:brahms-violin-sonatas",
+      "sourceHash": "72e2fc5a2904ee73",
+      "status": "published"
+    },
+    {
+      "id": "work:bruch-kol-nidrei",
+      "locale": "it",
+      "source": "workText:bruch-kol-nidrei",
+      "sourceHash": "5f754e7f4cd95f33",
+      "status": "published"
+    },
+    {
+      "id": "work:bruch-violin-concerto-1",
+      "locale": "it",
+      "source": "workText:bruch-violin-concerto-1",
+      "sourceHash": "1504e88c3d8640eb",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-ballade-1",
+      "locale": "it",
+      "source": "workText:chopin-ballade-1",
+      "sourceHash": "8b0c9c4002b68be5",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-ballade-2",
+      "locale": "it",
+      "source": "workText:chopin-ballade-2",
+      "sourceHash": "0c5d3f1653c2657a",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-ballade-3",
+      "locale": "it",
+      "source": "workText:chopin-ballade-3",
+      "sourceHash": "50693f93c669fe4f",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-ballade-4",
+      "locale": "it",
+      "source": "workText:chopin-ballade-4",
+      "sourceHash": "5cec672dd009c2c4",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-piano-trio",
+      "locale": "it",
+      "source": "workText:chopin-piano-trio",
+      "sourceHash": "cb61052c175f0a4c",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-scherzo-1",
+      "locale": "it",
+      "source": "workText:chopin-scherzo-1",
+      "sourceHash": "3db07318f4062057",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-scherzo-2",
+      "locale": "it",
+      "source": "workText:chopin-scherzo-2",
+      "sourceHash": "529af82fde0b05b6",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-scherzo-3",
+      "locale": "it",
+      "source": "workText:chopin-scherzo-3",
+      "sourceHash": "766293bc31934f2b",
+      "status": "published"
+    },
+    {
+      "id": "work:chopin-scherzo-4",
+      "locale": "it",
+      "source": "workText:chopin-scherzo-4",
+      "sourceHash": "353dae9364ebc1a8",
+      "status": "published"
+    },
+    {
+      "id": "work:corelli-christmas-concerto",
+      "locale": "it",
+      "source": "workText:corelli-christmas-concerto",
+      "sourceHash": "f220a53ed1a7f1ac",
+      "status": "published"
+    },
+    {
+      "id": "work:corelli-la-folia",
+      "locale": "it",
+      "source": "workText:corelli-la-folia",
+      "sourceHash": "ceffd68236d412ac",
+      "status": "published"
+    },
+    {
+      "id": "work:dohnanyi-serenade-op10",
+      "locale": "it",
+      "source": "workText:dohnanyi-serenade-op10",
+      "sourceHash": "f914b12300fa139a",
+      "status": "published"
+    },
+    {
+      "id": "work:dont-24-etudes",
+      "locale": "it",
+      "source": "workText:dont-24-etudes",
+      "sourceHash": "99800488da40914c",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-cello-concerto",
+      "locale": "it",
+      "source": "workText:dvorak-cello-concerto",
+      "sourceHash": "977bd533f092471a",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-four-romantic-pieces",
+      "locale": "it",
+      "source": "workText:dvorak-four-romantic-pieces",
+      "sourceHash": "a26bb545bbcf6780",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-humoresque",
+      "locale": "it",
+      "source": "workText:dvorak-humoresque",
+      "sourceHash": "d45caf45aad9a3cd",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-serenade-for-strings",
+      "locale": "it",
+      "source": "workText:dvorak-serenade-for-strings",
+      "sourceHash": "def66d225af2499f",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-slavonic-dance-op46-2",
+      "locale": "it",
+      "source": "workText:dvorak-slavonic-dance-op46-2",
+      "sourceHash": "25252c0b148466cf",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-slavonic-dance-op72-2",
+      "locale": "it",
+      "source": "workText:dvorak-slavonic-dance-op72-2",
+      "sourceHash": "430367b8c0de46de",
+      "status": "published"
+    },
+    {
+      "id": "work:dvorak-violin-concerto",
+      "locale": "it",
+      "source": "workText:dvorak-violin-concerto",
+      "sourceHash": "146ec5cd4ad24c1e",
+      "status": "published"
+    },
+    {
+      "id": "work:elgar-cello-concerto",
+      "locale": "it",
+      "source": "workText:elgar-cello-concerto",
+      "sourceHash": "06eb6303ac150479",
+      "status": "published"
+    },
+    {
+      "id": "work:elgar-chanson-de-matin",
+      "locale": "it",
+      "source": "workText:elgar-chanson-de-matin",
+      "sourceHash": "685ada95358f4b9d",
+      "status": "published"
+    },
+    {
+      "id": "work:elgar-salut-damour",
+      "locale": "it",
+      "source": "workText:elgar-salut-damour",
+      "sourceHash": "383e5c38ea834c5e",
+      "status": "published"
+    },
+    {
+      "id": "work:elgar-serenade-for-strings",
+      "locale": "it",
+      "source": "workText:elgar-serenade-for-strings",
+      "sourceHash": "7684b3eaf9051e90",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-cello-sonatas",
+      "locale": "it",
+      "source": "workText:faure-cello-sonatas",
+      "sourceHash": "e227cd19d071d328",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-elegie",
+      "locale": "it",
+      "source": "workText:faure-elegie",
+      "sourceHash": "d2cec1a4dc1e6d78",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-piano-quartet-1",
+      "locale": "it",
+      "source": "workText:faure-piano-quartet-1",
+      "sourceHash": "084400b85004201a",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-piano-trio",
+      "locale": "it",
+      "source": "workText:faure-piano-trio",
+      "sourceHash": "9d4559e29770c51a",
+      "status": "published"
+    },
+    {
+      "id": "work:faure-sicilienne",
+      "locale": "it",
+      "source": "workText:faure-sicilienne",
+      "sourceHash": "e4943c1662f3b1af",
+      "status": "published"
+    },
+    {
+      "id": "work:glazunov-violin-concerto",
+      "locale": "it",
+      "source": "workText:glazunov-violin-concerto",
+      "sourceHash": "a1d59a3f86b0b0c5",
+      "status": "published"
+    },
+    {
+      "id": "work:goltermann-cello-concertos",
+      "locale": "it",
+      "source": "workText:goltermann-cello-concertos",
+      "sourceHash": "b305445b0ba9d39d",
+      "status": "published"
+    },
+    {
+      "id": "work:gounod-ave-maria",
+      "locale": "it",
+      "source": "workText:gounod-ave-maria",
+      "sourceHash": "430783a6d5fd3fc2",
+      "status": "published"
+    },
+    {
+      "id": "work:grieg-holberg-suite",
+      "locale": "it",
+      "source": "workText:grieg-holberg-suite",
+      "sourceHash": "7841b71696bb858a",
+      "status": "published"
+    },
+    {
+      "id": "work:halvorsen-passacaglia",
+      "locale": "it",
+      "source": "workText:halvorsen-passacaglia",
+      "sourceHash": "e7f58c702b06cb7e",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-cello-concerto-1",
+      "locale": "it",
+      "source": "workText:haydn-cello-concerto-1",
+      "sourceHash": "67824b0e68f044ed",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-cello-concerto-c-popper",
+      "locale": "it",
+      "source": "workText:haydn-cello-concerto-c-popper",
+      "sourceHash": "2ce20b404fbb3a8f",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartet-emperor",
+      "locale": "it",
+      "source": "workText:haydn-string-quartet-emperor",
+      "sourceHash": "3ee8e88a3bee7389",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartet-lark",
+      "locale": "it",
+      "source": "workText:haydn-string-quartet-lark",
+      "sourceHash": "71d1ec1440f80a69",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartet-op20-4",
+      "locale": "it",
+      "source": "workText:haydn-string-quartet-op20-4",
+      "sourceHash": "605fc84fd2ee6c07",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op1-1-3",
+      "locale": "it",
+      "source": "workText:haydn-string-quartets-op1-1-3",
+      "sourceHash": "8f8efde21c30f3d5",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op17",
+      "locale": "it",
+      "source": "workText:haydn-string-quartets-op17",
+      "sourceHash": "cbfacca2f25a3c3a",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op2-1-3",
+      "locale": "it",
+      "source": "workText:haydn-string-quartets-op2-1-3",
+      "sourceHash": "d3a888918b054dfa",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op2-4-6",
+      "locale": "it",
+      "source": "workText:haydn-string-quartets-op2-4-6",
+      "sourceHash": "a57a6bc0c1a226bc",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op20",
+      "locale": "it",
+      "source": "workText:haydn-string-quartets-op20",
+      "sourceHash": "47db772982168ac6",
+      "status": "published"
+    },
+    {
+      "id": "work:haydn-string-quartets-op9",
+      "locale": "it",
+      "source": "workText:haydn-string-quartets-op9",
+      "sourceHash": "94cc71f28fc8a382",
+      "status": "published"
+    },
+    {
+      "id": "work:kayser-36-etudes",
+      "locale": "it",
+      "source": "workText:kayser-36-etudes",
+      "sourceHash": "a59b126f02194dc1",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-liebesfreud",
+      "locale": "it",
+      "source": "workText:kreisler-liebesfreud",
+      "sourceHash": "161a075f00acd4c8",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-liebesleid",
+      "locale": "it",
+      "source": "workText:kreisler-liebesleid",
+      "sourceHash": "4d2ad64c9f6f2c1e",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-march-of-the-toy-soldiers",
+      "locale": "it",
+      "source": "workText:kreisler-march-of-the-toy-soldiers",
+      "sourceHash": "8716715dbbb8f50a",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-marche-miniature-viennoise",
+      "locale": "it",
+      "source": "workText:kreisler-marche-miniature-viennoise",
+      "sourceHash": "ba1cbc005afe8134",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-praeludium-and-allegro",
+      "locale": "it",
+      "source": "workText:kreisler-praeludium-and-allegro",
+      "sourceHash": "095eb9ac75935c0b",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-pulcinella",
+      "locale": "it",
+      "source": "workText:kreisler-pulcinella",
+      "sourceHash": "6344616f0f0d7ff7",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-romance",
+      "locale": "it",
+      "source": "workText:kreisler-romance",
+      "sourceHash": "c221b1f3b6859bc7",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-rondino-beethoven",
+      "locale": "it",
+      "source": "workText:kreisler-rondino-beethoven",
+      "sourceHash": "039647f162caff01",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-schon-rosmarin",
+      "locale": "it",
+      "source": "workText:kreisler-schon-rosmarin",
+      "sourceHash": "fe11af4388b252b9",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-sicilienne-et-rigaudon",
+      "locale": "it",
+      "source": "workText:kreisler-sicilienne-et-rigaudon",
+      "sourceHash": "034e4f0929dc07a6",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-syncopation",
+      "locale": "it",
+      "source": "workText:kreisler-syncopation",
+      "sourceHash": "e549497cd02d53e1",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-tambourin-chinois",
+      "locale": "it",
+      "source": "workText:kreisler-tambourin-chinois",
+      "sourceHash": "75de874891dc2cda",
+      "status": "published"
+    },
+    {
+      "id": "work:kreisler-variations-corelli",
+      "locale": "it",
+      "source": "workText:kreisler-variations-corelli",
+      "sourceHash": "cfee31490511be02",
+      "status": "published"
+    },
+    {
+      "id": "work:kreutzer-42-etudes",
+      "locale": "it",
+      "source": "workText:kreutzer-42-etudes",
+      "sourceHash": "fc964ce3175a9327",
+      "status": "published"
+    },
+    {
+      "id": "work:lalo-symphonie-espagnole",
+      "locale": "it",
+      "source": "workText:lalo-symphonie-espagnole",
+      "sourceHash": "58c55e8a98e29155",
+      "status": "published"
+    },
+    {
+      "id": "work:leclair-sonatas-two-violins-op12",
+      "locale": "it",
+      "source": "workText:leclair-sonatas-two-violins-op12",
+      "sourceHash": "4fbf9cacf73e6c8c",
+      "status": "published"
+    },
+    {
+      "id": "work:leclair-sonatas-two-violins-op3",
+      "locale": "it",
+      "source": "workText:leclair-sonatas-two-violins-op3",
+      "sourceHash": "e35a1fd41d6e5764",
+      "status": "published"
+    },
+    {
+      "id": "work:massenet-meditation-thais",
+      "locale": "it",
+      "source": "workText:massenet-meditation-thais",
+      "sourceHash": "49f78b98cb3f1faf",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-piano-trio-1",
+      "locale": "it",
+      "source": "workText:mendelssohn-piano-trio-1",
+      "sourceHash": "e7e751c770fb728f",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-piano-trio-2",
+      "locale": "it",
+      "source": "workText:mendelssohn-piano-trio-2",
+      "sourceHash": "46f8eac3a904d88a",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-1",
+      "locale": "it",
+      "source": "workText:mendelssohn-string-quartet-1",
+      "sourceHash": "02eb4381aa741822",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-2",
+      "locale": "it",
+      "source": "workText:mendelssohn-string-quartet-2",
+      "sourceHash": "48c97b8b0cc95825",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-3",
+      "locale": "it",
+      "source": "workText:mendelssohn-string-quartet-3",
+      "sourceHash": "d223a1e2f005dbe1",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-4",
+      "locale": "it",
+      "source": "workText:mendelssohn-string-quartet-4",
+      "sourceHash": "e899f39abd3e7ac4",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-5",
+      "locale": "it",
+      "source": "workText:mendelssohn-string-quartet-5",
+      "sourceHash": "ed555b372c42b65f",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-string-quartet-6",
+      "locale": "it",
+      "source": "workText:mendelssohn-string-quartet-6",
+      "sourceHash": "bd18cb3bc313a561",
+      "status": "published"
+    },
+    {
+      "id": "work:mendelssohn-violin-concerto",
+      "locale": "it",
+      "source": "workText:mendelssohn-violin-concerto",
+      "sourceHash": "ba8520472d9dd985",
+      "status": "published"
+    },
+    {
+      "id": "work:monti-csardas",
+      "locale": "it",
+      "source": "workText:monti-csardas",
+      "sourceHash": "61c89dde51819101",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-12-duos-k487",
+      "locale": "it",
+      "source": "workText:mozart-12-duos-k487",
+      "sourceHash": "14449cbf0995c2d8",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-clarinet-concerto",
+      "locale": "it",
+      "source": "workText:mozart-clarinet-concerto",
+      "sourceHash": "0ff5cb9affd7f0d5",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-divertimento-k136",
+      "locale": "it",
+      "source": "workText:mozart-divertimento-k136",
+      "sourceHash": "4b67ffb5e6bd7119",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-divertimento-k137",
+      "locale": "it",
+      "source": "workText:mozart-divertimento-k137",
+      "sourceHash": "c7726f2bad89c1c4",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-divertimento-k563",
+      "locale": "it",
+      "source": "workText:mozart-divertimento-k563",
+      "sourceHash": "eee43b54027a95f4",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-duos-violin-viola",
+      "locale": "it",
+      "source": "workText:mozart-duos-violin-viola",
+      "sourceHash": "696461b2632c65c4",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-eine-kleine-nachtmusik",
+      "locale": "it",
+      "source": "workText:mozart-eine-kleine-nachtmusik",
+      "sourceHash": "fbbdddc6f1b2fd89",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-oboe-concerto",
+      "locale": "it",
+      "source": "workText:mozart-oboe-concerto",
+      "sourceHash": "47d4de23fad147db",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-preludes-and-fugues-k404a",
+      "locale": "it",
+      "source": "workText:mozart-preludes-and-fugues-k404a",
+      "sourceHash": "3942640a7f6957a9",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-rondo-k373",
+      "locale": "it",
+      "source": "workText:mozart-rondo-k373",
+      "sourceHash": "8e2768d58e53d135",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-string-quartet-dissonance",
+      "locale": "it",
+      "source": "workText:mozart-string-quartet-dissonance",
+      "sourceHash": "6a236c6bb33c3d0e",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-variations-k265",
+      "locale": "it",
+      "source": "workText:mozart-variations-k265",
+      "sourceHash": "497097455e3aa566",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-violin-concertos-3-5",
+      "locale": "it",
+      "source": "workText:mozart-violin-concertos-3-5",
+      "sourceHash": "871d5cbce4af9614",
+      "status": "published"
+    },
+    {
+      "id": "work:mozart-violin-duos-op70",
+      "locale": "it",
+      "source": "workText:mozart-violin-duos-op70",
+      "sourceHash": "5da322d6bbeb0487",
+      "status": "published"
+    },
+    {
+      "id": "work:pachelbel-canon",
+      "locale": "it",
+      "source": "workText:pachelbel-canon",
+      "sourceHash": "4aeb61662a8fffa5",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-24-caprices",
+      "locale": "it",
+      "source": "workText:paganini-24-caprices",
+      "sourceHash": "770c9f90042b9a60",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-cantabile",
+      "locale": "it",
+      "source": "workText:paganini-cantabile",
+      "sourceHash": "37c212153df1f9e8",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-carnival-of-venice",
+      "locale": "it",
+      "source": "workText:paganini-carnival-of-venice",
+      "sourceHash": "e1c43d213c1593a8",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-kreisler-la-campanella",
+      "locale": "it",
+      "source": "workText:paganini-kreisler-la-campanella",
+      "sourceHash": "a394299a6f9488d4",
+      "status": "published"
+    },
+    {
+      "id": "work:paganini-violin-concerto-1",
+      "locale": "it",
+      "source": "workText:paganini-violin-concerto-1",
+      "sourceHash": "27a892a3a3376ddd",
+      "status": "published"
+    },
+    {
+      "id": "work:popper-cello-concertos",
+      "locale": "it",
+      "source": "workText:popper-cello-concertos",
+      "sourceHash": "51350f720885555d",
+      "status": "published"
+    },
+    {
+      "id": "work:prokofiev-violin-concerto-1",
+      "locale": "it",
+      "source": "workText:prokofiev-violin-concerto-1",
+      "sourceHash": "c398180abf7ea7eb",
+      "status": "published"
+    },
+    {
+      "id": "work:rachmaninoff-vocalise",
+      "locale": "it",
+      "source": "workText:rachmaninoff-vocalise",
+      "sourceHash": "661fc4fc739c6203",
+      "status": "published"
+    },
+    {
+      "id": "work:ravel-string-quartet",
+      "locale": "it",
+      "source": "workText:ravel-string-quartet",
+      "sourceHash": "2fc16323f261134e",
+      "status": "published"
+    },
+    {
+      "id": "work:respighi-ancient-airs-and-dances",
+      "locale": "it",
+      "source": "workText:respighi-ancient-airs-and-dances",
+      "sourceHash": "89afade9b2bd430c",
+      "status": "published"
+    },
+    {
+      "id": "work:rode-24-caprices",
+      "locale": "it",
+      "source": "workText:rode-24-caprices",
+      "sourceHash": "202c976a0733c89f",
+      "status": "published"
+    },
+    {
+      "id": "work:roussel-string-trio",
+      "locale": "it",
+      "source": "workText:roussel-string-trio",
+      "sourceHash": "8628cf2235718221",
+      "status": "published"
+    },
+    {
+      "id": "work:saint-saens-danse-macabre",
+      "locale": "it",
+      "source": "workText:saint-saens-danse-macabre",
+      "sourceHash": "8e6258bb59f517f1",
+      "status": "published"
+    },
+    {
+      "id": "work:saint-saens-havanaise",
+      "locale": "it",
+      "source": "workText:saint-saens-havanaise",
+      "sourceHash": "a05f36c256cee66b",
+      "status": "published"
+    },
+    {
+      "id": "work:saint-saens-introduction-and-rondo-capriccioso",
+      "locale": "it",
+      "source": "workText:saint-saens-introduction-and-rondo-capriccioso",
+      "sourceHash": "26f24adbaac09d19",
+      "status": "published"
+    },
+    {
+      "id": "work:saint-saens-violin-concerto-3",
+      "locale": "it",
+      "source": "workText:saint-saens-violin-concerto-3",
+      "sourceHash": "84abdbe4172474db",
+      "status": "published"
+    },
+    {
+      "id": "work:sarasate-carmen-fantasy",
+      "locale": "it",
+      "source": "workText:sarasate-carmen-fantasy",
+      "sourceHash": "b0f9501940850af1",
+      "status": "published"
+    },
+    {
+      "id": "work:sarasate-introduction-and-tarantella",
+      "locale": "it",
+      "source": "workText:sarasate-introduction-and-tarantella",
+      "sourceHash": "f884743d8912edaf",
+      "status": "published"
+    },
+    {
+      "id": "work:sarasate-zapateado",
+      "locale": "it",
+      "source": "workText:sarasate-zapateado",
+      "sourceHash": "88eb733c38da8216",
+      "status": "published"
+    },
+    {
+      "id": "work:sarasate-zigeunerweisen",
+      "locale": "it",
+      "source": "workText:sarasate-zigeunerweisen",
+      "sourceHash": "d41cad28c2c8688a",
+      "status": "published"
+    },
+    {
+      "id": "work:schradieck-school-of-violin-technics",
+      "locale": "it",
+      "source": "workText:schradieck-school-of-violin-technics",
+      "sourceHash": "e00cf869e16e5da7",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-arpeggione-sonata-cello",
+      "locale": "it",
+      "source": "workText:schubert-arpeggione-sonata-cello",
+      "sourceHash": "2d921b29eaaf24b7",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-arpeggione-sonata-viola",
+      "locale": "it",
+      "source": "workText:schubert-arpeggione-sonata-viola",
+      "sourceHash": "da924bde058ea19c",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-ave-maria",
+      "locale": "it",
+      "source": "workText:schubert-ave-maria",
+      "sourceHash": "791c019335a64a09",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-piano-trio-2",
+      "locale": "it",
+      "source": "workText:schubert-piano-trio-2",
+      "sourceHash": "e1d1847eb86f16a0",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-string-trio-d471",
+      "locale": "it",
+      "source": "workText:schubert-string-trio-d471",
+      "sourceHash": "d9c5e7aeb95209fc",
+      "status": "published"
+    },
+    {
+      "id": "work:schubert-string-trio-d581",
+      "locale": "it",
+      "source": "workText:schubert-string-trio-d581",
+      "sourceHash": "6590ceac317a06dc",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-cello-concerto",
+      "locale": "it",
+      "source": "workText:schumann-cello-concerto",
+      "sourceHash": "9840fc77db2cd602",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-marchenbilder",
+      "locale": "it",
+      "source": "workText:schumann-marchenbilder",
+      "sourceHash": "a823f586776393ca",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-piano-trio-1",
+      "locale": "it",
+      "source": "workText:schumann-piano-trio-1",
+      "sourceHash": "979ef07628b25d29",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-piano-trio-2",
+      "locale": "it",
+      "source": "workText:schumann-piano-trio-2",
+      "sourceHash": "f2de6b88d4ad4ad8",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-piano-trio-3",
+      "locale": "it",
+      "source": "workText:schumann-piano-trio-3",
+      "sourceHash": "dc242bbcc1f90d0d",
+      "status": "published"
+    },
+    {
+      "id": "work:schumann-three-romances",
+      "locale": "it",
+      "source": "workText:schumann-three-romances",
+      "sourceHash": "9c7243b9ac227e6b",
+      "status": "published"
+    },
+    {
+      "id": "work:seitz-student-concerto-2",
+      "locale": "it",
+      "source": "workText:seitz-student-concerto-2",
+      "sourceHash": "635d98150f9d0fad",
+      "status": "published"
+    },
+    {
+      "id": "work:seitz-student-concerto-5",
+      "locale": "it",
+      "source": "workText:seitz-student-concerto-5",
+      "sourceHash": "90d88572da83fe62",
+      "status": "published"
+    },
+    {
+      "id": "work:sevcik-violin-studies",
+      "locale": "it",
+      "source": "workText:sevcik-violin-studies",
+      "sourceHash": "b76248c108fd4b4b",
+      "status": "published"
+    },
+    {
+      "id": "work:sibelius-andante-festivo",
+      "locale": "it",
+      "source": "workText:sibelius-andante-festivo",
+      "sourceHash": "4d33b667a97ef70e",
+      "status": "published"
+    },
+    {
+      "id": "work:sibelius-violin-concerto",
+      "locale": "it",
+      "source": "workText:sibelius-violin-concerto",
+      "sourceHash": "c8044a68061fecb0",
+      "status": "published"
+    },
+    {
+      "id": "work:strauss-r-string-quartet-op2",
+      "locale": "it",
+      "source": "workText:strauss-r-string-quartet-op2",
+      "sourceHash": "692eb0ecc46bd07d",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-meditation-op42-1",
+      "locale": "it",
+      "source": "workText:tchaikovsky-meditation-op42-1",
+      "sourceHash": "0ff4a5cff07820f2",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-piano-trio",
+      "locale": "it",
+      "source": "workText:tchaikovsky-piano-trio",
+      "sourceHash": "d18336997c7863c2",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-rococo-variations",
+      "locale": "it",
+      "source": "workText:tchaikovsky-rococo-variations",
+      "sourceHash": "c8cf267256b20e88",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-serenade-for-strings",
+      "locale": "it",
+      "source": "workText:tchaikovsky-serenade-for-strings",
+      "sourceHash": "5bc0029c97674e08",
+      "status": "published"
+    },
+    {
+      "id": "work:tchaikovsky-violin-concerto",
+      "locale": "it",
+      "source": "workText:tchaikovsky-violin-concerto",
+      "sourceHash": "6dc48aaa98d43d6e",
+      "status": "published"
+    },
+    {
+      "id": "work:viotti-violin-concerto-22",
+      "locale": "it",
+      "source": "workText:viotti-violin-concerto-22",
+      "sourceHash": "b8404eb15ca1e3a8",
+      "status": "published"
+    },
+    {
+      "id": "work:vitali-chaconne",
+      "locale": "it",
+      "source": "workText:vitali-chaconne",
+      "sourceHash": "e2d886a8075154fe",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-concerto-four-violins-rv580",
+      "locale": "it",
+      "source": "workText:vivaldi-concerto-four-violins-rv580",
+      "sourceHash": "cdcb4ffcab9f4a66",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-concerto-two-violins-rv522",
+      "locale": "it",
+      "source": "workText:vivaldi-concerto-two-violins-rv522",
+      "sourceHash": "05b5dae06927be5b",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-four-seasons-autumn",
+      "locale": "it",
+      "source": "workText:vivaldi-four-seasons-autumn",
+      "sourceHash": "5111146dc006812a",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-four-seasons-spring",
+      "locale": "it",
+      "source": "workText:vivaldi-four-seasons-spring",
+      "sourceHash": "191c065753dd9aca",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-four-seasons-summer",
+      "locale": "it",
+      "source": "workText:vivaldi-four-seasons-summer",
+      "sourceHash": "69a0de678308698a",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-four-seasons-winter",
+      "locale": "it",
+      "source": "workText:vivaldi-four-seasons-winter",
+      "sourceHash": "5e7a1d5832bbe472",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-violin-concerto-g-minor",
+      "locale": "it",
+      "source": "workText:vivaldi-violin-concerto-g-minor",
+      "sourceHash": "ec54b163d21cd641",
+      "status": "published"
+    },
+    {
+      "id": "work:vivaldi-violin-concerto-rv356",
+      "locale": "it",
+      "source": "workText:vivaldi-violin-concerto-rv356",
+      "sourceHash": "3779021ace17ce68",
+      "status": "published"
+    },
+    {
+      "id": "work:warlock-capriol-suite",
+      "locale": "it",
+      "source": "workText:warlock-capriol-suite",
+      "sourceHash": "2ecbd1f1c78c7f15",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-legende",
+      "locale": "it",
+      "source": "workText:wieniawski-legende",
+      "sourceHash": "59a4d23a42daef3e",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-polonaise-1",
+      "locale": "it",
+      "source": "workText:wieniawski-polonaise-1",
+      "sourceHash": "7416fbfadc47147c",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-polonaise-2",
+      "locale": "it",
+      "source": "workText:wieniawski-polonaise-2",
+      "sourceHash": "9c265e6c219b7711",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-scherzo-tarantelle",
+      "locale": "it",
+      "source": "workText:wieniawski-scherzo-tarantelle",
+      "sourceHash": "65c7946d53eb7abe",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-violin-concerto-1",
+      "locale": "it",
+      "source": "workText:wieniawski-violin-concerto-1",
+      "sourceHash": "ecea6cadd72ff82a",
+      "status": "published"
+    },
+    {
+      "id": "work:wieniawski-violin-concerto-2",
+      "locale": "it",
+      "source": "workText:wieniawski-violin-concerto-2",
+      "sourceHash": "5afbf677d1d8bd7f",
+      "status": "published"
+    },
+    {
+      "id": "work:ysaye-six-sonatas",
+      "locale": "it",
+      "source": "workText:ysaye-six-sonatas",
+      "sourceHash": "119d20c9836b08fd",
+      "status": "published"
+    }
+  ]
 }

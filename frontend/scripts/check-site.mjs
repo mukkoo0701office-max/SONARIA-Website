@@ -53,15 +53,15 @@ const noindexPages = new Set();
 for (const file of htmlFiles) {
   const rel = "/" + path.relative(outDir, file).split(path.sep).join("/");
   const html = fs.readFileSync(file, "utf8");
-  const isPage = rel.endsWith("/index.html") && /^\/(ja|en)\//.test(rel);
+  const isPage = rel.endsWith("/index.html") && /^\/(ja|en|de|fr|es|it)\//.test(rel);
   if (!isPage) continue;
   const pagePath = rel.replace(/index\.html$/, "");
   const lang = pagePath.split("/")[1];
   if (pagePath.includes("/_none/")) errors.push(`${pagePath}: 仮ページ（_none）が残っています（postbuild で削除されるはず）`);
   stats.pages++;
-  if (/^\/(ja|en)\/scores\/(?!category\/)[^/]+\/$/.test(pagePath)) stats.workPages++;
-  if (/^\/(ja|en)\/composers\/[^/]+\/$/.test(pagePath)) stats.composerPages++;
-  if (/^\/(ja|en)\/scores\/category\/[^/]+\/$/.test(pagePath)) stats.categoryPages++;
+  if (/^\/(ja|en|de|fr|es|it)\/scores\/(?!category\/)[^/]+\/$/.test(pagePath)) stats.workPages++;
+  if (/^\/(ja|en|de|fr|es|it)\/composers\/[^/]+\/$/.test(pagePath)) stats.composerPages++;
+  if (/^\/(ja|en|de|fr|es|it)\/scores\/category\/[^/]+\/$/.test(pagePath)) stats.categoryPages++;
 
   const title = html.match(/<title>([^<]*)<\/title>/)?.[1];
   if (!title) errors.push(`${pagePath}: title がありません`);

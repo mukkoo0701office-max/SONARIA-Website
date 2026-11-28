@@ -19,18 +19,18 @@ export type LocaleConfig = {
   fallback: SupportedLocale | null;
 };
 
-// 欧州 4 言語は Phase 2 以降で順に公開する（2026-11-28 決定: 10 言語ではなく欧州の代表言語に絞る）
+// 2026-11-28 決定: 10 言語ではなく欧州の代表言語（独仏西伊）に絞り、6 言語で確定。4 言語は Claude の訳をそのまま公開
 export const localeRegistry: readonly LocaleConfig[] = [
   { code: "ja", nativeName: "日本語", htmlLang: "ja", ogLocale: "ja_JP", intl: "ja-JP", published: true, fallback: null },
   { code: "en", nativeName: "English", htmlLang: "en", ogLocale: "en_US", intl: "en-US", published: true, fallback: null },
-  { code: "de", nativeName: "Deutsch", htmlLang: "de", ogLocale: "de_DE", intl: "de-DE", published: false, fallback: "en" },
-  { code: "fr", nativeName: "Français", htmlLang: "fr", ogLocale: "fr_FR", intl: "fr-FR", published: false, fallback: "en" },
-  { code: "es", nativeName: "Español", htmlLang: "es", ogLocale: "es_ES", intl: "es-ES", published: false, fallback: "en" },
-  { code: "it", nativeName: "Italiano", htmlLang: "it", ogLocale: "it_IT", intl: "it-IT", published: false, fallback: "en" },
+  { code: "de", nativeName: "Deutsch", htmlLang: "de", ogLocale: "de_DE", intl: "de-DE", published: true, fallback: "en" },
+  { code: "fr", nativeName: "Français", htmlLang: "fr", ogLocale: "fr_FR", intl: "fr-FR", published: true, fallback: "en" },
+  { code: "es", nativeName: "Español", htmlLang: "es", ogLocale: "es_ES", intl: "es-ES", published: true, fallback: "en" },
+  { code: "it", nativeName: "Italiano", htmlLang: "it", ogLocale: "it_IT", intl: "it-IT", published: true, fallback: "en" },
 ];
 
 /** 公開中の言語。言語を公開するときは、localeRegistry の published と、ここの両方を変える */
-export const locales = ["ja", "en"] as const;
+export const locales = ["ja", "en", "de", "fr", "es", "it"] as const;
 export type Locale = (typeof locales)[number];
 
 export const defaultLocale: Locale = "ja";

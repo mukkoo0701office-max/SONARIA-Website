@@ -8,11 +8,11 @@ test("公開中の言語（locales）は登録表の published と一致する",
   assert.deepEqual([...locales], localeRegistry.filter((l) => l.published).map((l) => l.code));
 });
 
-test("日英はそのまま公開、欧州 4 言語は未公開で登録されている", () => {
-  assert.deepEqual([...locales], ["ja", "en"]);
+test("6 言語（日英独仏西伊）を公開し、欧州 4 言語は英語で補う", () => {
+  assert.deepEqual([...locales], ["ja", "en", "de", "fr", "es", "it"]);
   for (const c of ["de", "fr", "es", "it"]) {
     const l = localeRegistry.find((x) => x.code === c);
-    assert.ok(l && l.published === false && l.fallback === "en", c);
+    assert.ok(l && l.published === true && l.fallback === "en", c);
   }
   assert.equal(new Set(supportedLocales).size, supportedLocales.length);
 });

@@ -22,10 +22,23 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   page.on("pageerror", (e) => errors.push(e.message));
   page.on("console", (m) => m.type() === "error" && errors.push(m.text()));
 
-  for (const lang of ["ja", "en"]) {
+  // 6 言語すべてのトップ。欧州 4 言語は文言が長いので、横にはみ出していないかも確認する
+  for (const lang of ["ja", "en", "de", "fr", "es", "it"]) {
     await page.goto(`${base}/${lang}/`, { waitUntil: "networkidle" });
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    check(`${vpName}: ${lang} home has no horizontal overflow`, overflow <= 0, String(overflow));
     await shot(page, `${vpName}-${lang}-home`);
     await shot(page, `${vpName}-${lang}-home-top`, false);
+  }
+
+  // 言語の切り替え（3 言語以上はドロップダウン）。ドイツ語のヘッダーで開いた状態を撮る
+  await page.goto(`${base}/de/`, { waitUntil: "networkidle" });
+  const langSummary = page.locator("header details > summary").first();
+  if (await langSummary.isVisible()) {
+    await langSummary.click();
+    const items = await page.locator("header details[open] a").count();
+    check(`${vpName}: language dropdown lists 6 languages`, items === 6, String(items));
+    await shot(page, `${vpName}-de-language-menu`, false);
   }
 
   await page.goto(`${base}/ja/`, { waitUntil: "networkidle" });
@@ -289,7 +302,7 @@ for (const [vpName, viewport] of Object.entries(viewports)) {
   await shot(page, `${vpName}-ja-privacy`);
 
   // 管理人プロフィール: note・X のカード（新しいタブ・rel）
-  for (const lang of ["ja", "en"]) {
+  for (const lang of ["ja", "en", "de"]) {
     await page.goto(`${base}/${lang}/profile/`, { waitUntil: "networkidle" });
     const cards = page.locator('section[aria-labelledby="curator-channels"] a[target="_blank"]');
     const hrefs = await cards.evaluateAll((els) => els.map((e) => `${e.getAttribute("href")} ${e.getAttribute("rel")}`));
