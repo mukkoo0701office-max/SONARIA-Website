@@ -334,7 +334,7 @@ await check("申込の内容（payload）は JSON のオブジェクトとして
 await check("以前の形（文字列として保存された payload）は移行で直る", async () => {
   // 20261129000008 の移行と同じ処理を、わざと文字列で入れた行に当てて確かめる
   const id = psql(`insert into public.submissions (receipt_no, kind, locale, contact_name, contact_email, payload, idempotency_key)
-    values ('SN-000000-TEST1', 'bowing', 'ja', 't', 't@example.com', to_jsonb('{"service":"bowing","bowing":{"type":"both"}}'::text), gen_random_uuid()) returning id`);
+    values ('SN-000000-TEST1', 'bowing', 'ja', 't', 't@example.com', to_jsonb('{"service":"bowing","bowing":{"type":"both"}}'::text), gen_random_uuid()) returning id`).split("\n")[0].trim();
   psql(`select private.repair_string_payloads()`);
   assert.equal(psql(`select payload -> 'bowing' ->> 'type' from public.submissions where id = '${id}'`), "both");
 });
