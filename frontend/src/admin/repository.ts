@@ -24,8 +24,7 @@ import type {
   SuspiciousClient,
   TeacherApplication,
   TeacherApplicationStatus,
-  TrafficBreakdown,
-} from "./types";
+  TrafficBreakdown,, ActivityKind, CaseActivity, ReplyDraft } from "./types";
 
 export type RepositoryKind = "demo" | "server";
 
@@ -42,6 +41,12 @@ export interface AdminRepository {
   /** 返信を送る。メール送信サービスが未接続なら status: "not_connected" を返し、送ったことにしない */
   sendReply(inquiryId: string, draft: Pick<InquiryMessage, "subject" | "body" | "templateId">): Promise<InquiryMessage>;
   listStatusHistory(inquiryId: string): Promise<InquiryStatusHistory[]>;
+  /** 返信の下書き（自動保存） */
+  getReplyDraft(inquiryId: string): Promise<ReplyDraft | null>;
+  saveReplyDraft(inquiryId: string, draft: Omit<ReplyDraft, "updatedAt">): Promise<void>;
+  /** 対応記録（requestId で二重保存を防ぐ） */
+  addActivity(inquiryId: string, a: { kind: ActivityKind; requestId: string; note?: string; amount?: number; occurredAt?: string; data?: Record<string, unknown> }): Promise<void>;
+  listActivities(inquiryId: string): Promise<CaseActivity[]>;
   /** 迷惑な送信として一覧から外す（データは残る） */
   hideInquiry(id: string): Promise<void>;
   /** 完全に削除する（元に戻せない） */

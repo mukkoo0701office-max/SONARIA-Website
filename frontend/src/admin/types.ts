@@ -2,6 +2,10 @@
 // 設計: docs/admin/ADMIN_SYSTEM_DESIGN.md。PR #7 の Supabase スキーマ（applications など）とも対応づけられるようにしている。
 // 金額は最小単位の整数（円なら 1 円単位）で持つ。日時は ISO 8601 文字列（UTC またはオフセット付き）
 
+// 送信時の原文（Supabase の申し込みだけ。デモの一部にもある）
+import type { RawSubmission } from "./replies/describe";
+export type { RawSubmission };
+
 export type ISODate = string; // YYYY-MM-DD
 export type ISODateTime = string; // YYYY-MM-DDTHH:mm:ss+09:00 など
 export type Currency = "JPY" | "USD";
@@ -33,6 +37,14 @@ export type CaseStatus = "new" | "scheduling" | "quoted" | "booked" | "in_progre
 
 export type PaymentStatus = "none" | "unbilled" | "billed" | "paid" | "overdue" | "refunded";
 
+
+/** 返信の下書き（案件ごとに 1 件。自動保存） */
+export type ReplyDraft = { purpose: string; locale: "ja" | "en"; selected: string[]; inputs: Record<string, string>; subject: string; body: string; updatedAt: string };
+
+/** 対応記録（タイムライン）。occurredAt が空なら実際の日時は不明（recordedAt は記録した日時） */
+export type ActivityKind = "reply_sent" | "email" | "line" | "phone" | "other" | "quote_sent" | "quote_changed" | "booked" | "invoiced" | "paid" | "refunded" | "completed" | "cancelled";
+export type CaseActivity = { id: string; inquiryId: string; kind: ActivityKind; occurredAt?: string; recordedAt: string; note?: string; amount?: number; data: Record<string, unknown>; important: boolean };
+
 export type Inquiry = {
   id: string;
   receiptNo: string; // 受付番号（例: SNR-20261127-0001）
@@ -54,6 +66,8 @@ export type Inquiry = {
   internalMemo: string;
   attachments: { name: string; size: number }[]; // 実ファイルは非公開ストレージ（未接続）
   source: DataSource;
+  /** 送信時の原文（変更しない）。これがある案件では、整理表示と返信文の組み立てが使える */
+  raw?: RawSubmission;
 };
 
 export type InquiryMessage = {

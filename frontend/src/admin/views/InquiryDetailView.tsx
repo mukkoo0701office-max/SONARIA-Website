@@ -8,6 +8,9 @@ import { fmtDate, fmtMoney, fmtNumber } from "../i18n";
 import { caseStatuses, type InquiryPatch } from "../repository";
 import { caseTone } from "../theme";
 import type { CaseStatus, Inquiry, InquiryMessage, PaymentStatus } from "../types";
+import ActivityTimeline from "./reply/ActivityTimeline";
+import ReplyComposer from "./reply/ReplyComposer";
+import SubmissionContent from "./reply/SubmissionContent";
 import { adminRoutes, Badge, buttonDanger, buttonPrimary, buttonSecondary, Card, Field, inputClass, LoadState, Modal, NotConnected, PageTitle } from "../ui";
 
 const paymentStatuses: PaymentStatus[] = ["none", "unbilled", "billed", "paid", "overdue", "refunded"];
@@ -22,10 +25,10 @@ export default function InquiryDetailView() {
   const data = useAdminData(
     async (r) => {
       if (!id) return null;
-      const [inquiry, messages, history, templates] = await Promise.all([r.getInquiry(id), r.listMessages(id), r.listStatusHistory(id), r.listTemplates()]);
+      const [inquiry, messages, history, templates, activities] = await Promise.all([r.getInquiry(id), r.listMessages(id), r.listStatusHistory(id), r.listTemplates(), r.listActivities(id)]);
       // 開いたら既読にする
       if (inquiry && inquiry.readState === "unread") await r.updateInquiry(id, { readState: "read" });
-      return inquiry ? { inquiry: { ...inquiry, readState: "read" as const }, messages, history, templates } : null;
+      return inquiry ? { inquiry: { ...inquiry, readState: "read" as const }, messages, history, templates, activities } : null;
     },
     [id],
   );
@@ -147,6 +150,9 @@ export default function InquiryDetailView() {
 
             <div className="grid gap-4 xl:grid-cols-[1fr_380px]">
               <div className="grid min-w-0 gap-4">
+                {inq.raw ? (
+                  <SubmissionContent raw={inq.raw} />
+                ) : (
                 <Card title={t.detail.request} id="d-request">
                   <dl className="grid gap-0 text-[14px]">
                     {inq.fields.map((f) => (
@@ -161,7 +167,14 @@ export default function InquiryDetailView() {
                     </div>
                   </dl>
                 </Card>
+                )}
 
+                {inq.raw ? (
+                  <>
+                    <ReplyComposer inq={{ ...inq, raw: inq.raw }} onRecorded={data.reload} />
+                    <ActivityTimeline inq={inq} activities={data.data?.activities ?? []} />
+                  </>
+                ) : (
                 <Card title={t.detail.reply} id="d-reply">
                   <NotConnected>{t.detail.mailNotConnected}</NotConnected>
                   {sendResult && (
@@ -196,6 +209,7 @@ export default function InquiryDetailView() {
                     </div>
                   </div>
                 </Card>
+                )}
 
                 <Card title={t.detail.history} id="d-history">
                   {data.data && data.data.messages.filter((m) => m.status !== "draft").length === 0 ? (

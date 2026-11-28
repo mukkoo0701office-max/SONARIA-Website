@@ -5,13 +5,16 @@
 
 import type { AdminRepository, InquiryPatch } from "../repository";
 import type {
+  ActivityKind,
   AdSettings,
+  CaseActivity,
   CaseStatus,
   Inquiry,
   InquiryKind,
   InquiryMessage,
   InquiryStatusHistory,
   PdfAccessPolicy,
+  ReplyDraft,
   TeacherApplication,
   TeacherApplicationStatus,
   TeacherProfile,
@@ -102,8 +105,13 @@ function toInquiry(r: Row): Inquiry {
     internalMemo: r.admin_note ?? "",
     attachments: [],
     source: "form",
+    // 送信時の原文（整理表示と返信文の組み立てに使う）
+    raw: { kind: r.kind, locale: r.locale, payload: r.payload, estimate: r.client_estimate, receiptNo: r.receipt_no, receivedAt: r.created_at },
   };
 }
+
+type DraftRow = { purpose: string; locale: "ja" | "en"; selected: string[]; inputs: Record<string, string>; subject: string; body: string; updated_at: string };
+type ActivityRow = { id: string; submission_id: string; kind: ActivityKind; occurred_at: string | null; recorded_at: string; note: string | null; amount: number | null; data: Record<string, unknown>; important: boolean };
 
 function toTeacher(r: Row): TeacherApplication {
   const pub = isObj(r.payload.public) ? r.payload.public : {};
@@ -176,6 +184,26 @@ export function createSupabaseRepository(): AdminRepository {
       const rows = await rest<EventRow[]>(`submission_events?select=*&submission_id=eq.${encodeURIComponent(inquiryId)}&order=changed_at.asc`);
       return rows.map(
         (e): InquiryStatusHistory => ({ id: e.id, inquiryId: e.submission_id, from: (e.from_status as CaseStatus | null) ?? null, to: e.to_status as CaseStatus, note: e.note ?? undefined, changedAt: e.changed_at, changedBy: e.changed_by ?? "" }),
+      );
+    },
+    async getReplyDraft(id) {
+      const rows = await rest<DraftRow[]>(`reply_drafts?select=*&submission_id=eq.${encodeURIComponent(id)}&limit=1`);
+      const d = rows[0];
+      return d ? ({ purpose: d.purpose, locale: d.locale, selected: d.selected, inputs: d.inputs ?? {}, subject: d.subject, body: d.body, updatedAt: d.updated_at } satisfies ReplyDraft) : null;
+    },
+    async saveReplyDraft(id, d) {
+      await rest("rpc/admin_save_reply_draft", { method: "POST", body: { p_submission: id, p_purpose: d.purpose, p_locale: d.locale, p_selected: d.selected, p_inputs: d.inputs, p_subject: d.subject, p_body: d.body } });
+    },
+    async addActivity(id, a) {
+      await rest("rpc/admin_add_activity", {
+        method: "POST",
+        body: { p_submission: id, p_kind: a.kind, p_request_id: a.requestId, p_note: a.note ?? null, p_amount: a.amount ?? null, p_occurred_at: a.occurredAt ?? null, p_data: a.data ?? {} },
+      });
+    },
+    async listActivities(id) {
+      const rows = await rest<ActivityRow[]>(`case_activities?select=*&submission_id=eq.${encodeURIComponent(id)}&order=recorded_at.asc`);
+      return rows.map(
+        (x): CaseActivity => ({ id: x.id, inquiryId: x.submission_id, kind: x.kind, occurredAt: x.occurred_at ?? undefined, recordedAt: x.recorded_at, note: x.note ?? undefined, amount: x.amount ?? undefined, data: x.data ?? {}, important: x.important }),
       );
     },
     async hideInquiry(id) {

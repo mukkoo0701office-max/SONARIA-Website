@@ -2,7 +2,7 @@
 // メール送信・外部サービスへの接続は一切しない。返信は status: "not_connected" で記録する
 
 import type { AdminRepository, InquiryPatch } from "../repository";
-import type { InquiryMessage, PdfAccessGrant, PdfAccessPolicy, SuspiciousClient, TeacherApplicationStatus } from "../types";
+import type { CaseActivity, InquiryMessage, PdfAccessGrant, PdfAccessPolicy, ReplyDraft, SuspiciousClient, TeacherApplicationStatus } from "../types";
 import { createDemoData, isoDateTime, type DemoDataset } from "./demoData";
 
 const wait = <T,>(v: T) => new Promise<T>((resolve) => setTimeout(() => resolve(structuredClone(v)), 120));
@@ -12,6 +12,31 @@ export function createDemoRepository(today: Date = new Date()): AdminRepository 
   let seq = 1000;
   const nextId = (p: string) => `${p}-${++seq}`;
   const now = () => isoDateTime(new Date());
+  const drafts = new Map<string, ReplyDraft>();
+  const activities: CaseActivity[] = [];
+  // 返信文の組み立てを試せるよう、1 件目（演奏依頼）に送信時の原文を付ける（デモ）
+  const first = db.inquiries.find((i) => i.id === "demo-inq-1");
+  if (first) {
+    const d = (n: number) => isoDateTime(new Date(today.getTime() + n * 86400000)).slice(0, 10);
+    first.raw = {
+      kind: "performance_quote",
+      locale: "ja",
+      receiptNo: first.receiptNo,
+      receivedAt: first.receivedAt,
+      estimate: null,
+      payload: {
+        kind: "performance_quote",
+        locale: "ja",
+        schedule: { mode: "candidates", dates: [{ date: d(48), slot: "afternoon", time: "" }, { date: d(55), slot: "afternoon", time: "" }], period: "" },
+        budget: "100to200k",
+        ensemble: "quartet",
+        instruments: "",
+        remarks: "ホテルの宴会場で、歓談中に30分ほど。（デモデータ）",
+        contact: { name: first.requester.name, email: first.requester.email },
+        consent: true,
+      },
+    };
+  }
 
   return {
     kind: "demo",
@@ -44,6 +69,21 @@ export function createDemoRepository(today: Date = new Date()): AdminRepository 
       return wait(msg);
     },
     listStatusHistory: (inquiryId) => wait(db.statusHistory.filter((h) => h.inquiryId === inquiryId)),
+    getReplyDraft: (id) => wait(drafts.get(id) ?? null),
+    async saveReplyDraft(id, draft) {
+      drafts.set(id, { ...draft, updatedAt: now() });
+      await wait(null);
+    },
+    async addActivity(id, a) {
+      if (activities.some((x) => x.data.requestId === a.requestId)) return;
+      const important = ["quote_sent", "quote_changed", "booked", "invoiced", "paid", "refunded", "completed", "cancelled"].includes(a.kind);
+      activities.push({ id: nextId("demo-act"), inquiryId: id, kind: a.kind, occurredAt: a.occurredAt, recordedAt: now(), note: a.note, amount: a.amount, data: { ...a.data, requestId: a.requestId }, important });
+      const inq = db.inquiries.find((i) => i.id === id);
+      if (inq && ["reply_sent", "email", "line", "phone"].includes(a.kind)) inq.replyState = "replied";
+      if (a.kind === "reply_sent") drafts.delete(id);
+      await wait(null);
+    },
+    listActivities: (id) => wait(activities.filter((x) => x.inquiryId === id)),
     async hideInquiry(id) {
       db.inquiries = db.inquiries.filter((i) => i.id !== id);
       await wait(null);

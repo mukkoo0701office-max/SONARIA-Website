@@ -216,6 +216,28 @@ if (SERVICE_ROLE_KEY) {
     assert.equal(psql(`select count(*) from public.submission_events where submission_id = '${delId}'`), "0");
   });
 
+  await check("返信の下書きを保存でき、送った記録は二重にならず、送ったら下書きが消える", async () => {
+    const id = psql("select id from public.submissions where kind = 'teacher_application' limit 1");
+    const d = await admin("rpc/admin_save_reply_draft", { method: "POST", body: JSON.stringify({ p_submission: id, p_purpose: "received", p_locale: "ja", p_selected: ["salutation"], p_inputs: {}, p_subject: "件名", p_body: "本文" }) });
+    assert.equal(d.status, 200, await d.text());
+    const got = await (await admin(`reply_drafts?select=subject,body&submission_id=eq.${id}`)).json();
+    assert.equal(got[0]?.body, "本文");
+    const denied = await someone("rpc/admin_save_reply_draft", { method: "POST", body: JSON.stringify({ p_submission: id, p_purpose: "x", p_locale: "ja", p_selected: [], p_inputs: {}, p_subject: "", p_body: "" }) });
+    assert.notEqual(denied.status, 200);
+    const rid = crypto.randomUUID();
+    const body = JSON.stringify({ p_submission: id, p_kind: "reply_sent", p_request_id: rid, p_data: { subject: "件名", body: "本文" } });
+    const [a, b] = await Promise.all([admin("rpc/admin_add_activity", { method: "POST", body }), admin("rpc/admin_add_activity", { method: "POST", body })]);
+    assert.equal(a.status, 200, await a.text());
+    assert.equal(b.status, 200);
+    assert.equal(psql(`select count(*) from public.case_activities where request_id = '${rid}'`), "1");
+    assert.equal(psql(`select count(*) from public.reply_drafts where submission_id = '${id}'`), "0");
+    assert.ok(psql(`select replied_at is not null from public.submissions where id = '${id}'`) === "t");
+    assert.equal(psql(`select occurred_at is null from public.case_activities where request_id = '${rid}'`), "t");
+    const someoneRead = await someone(`case_activities?select=id&submission_id=eq.${id}`);
+    const txt = await someoneRead.text();
+    assert.ok(someoneRead.status !== 200 || txt === "[]", txt.slice(0, 80));
+  });
+
   await check("ログイン直後の管理人判定（is_admin）が正しい", async () => {
     assert.equal(await (await admin("rpc/is_admin", { method: "POST", body: "{}" })).text(), "true");
     assert.equal(await (await someone("rpc/is_admin", { method: "POST", body: "{}" })).text(), "false");
