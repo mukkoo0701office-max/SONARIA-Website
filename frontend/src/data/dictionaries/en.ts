@@ -592,6 +592,7 @@ export const en: Dictionary = {
       help: "Venue, length of the performance, type of event, preferred pieces, and so on.",
       placeholder: "e.g. Wedding reception at a hotel in Tokyo. About 30 minutes during dinner. Mainly classical favourites.",
     },
+    paymentNote: { card: "Once you accept our quote, we will email you a card payment link. Your booking is confirmed when we receive payment.", bank: "Once you accept our quote, we will email you our bank details. Your booking is confirmed when we receive payment." },
     review: "Review your request",
     submit: "Request a free quote",
     note: "Sending this form is not a booking or contract. Prices are never fixed automatically; we send a quote after reviewing your request.",
@@ -740,6 +741,17 @@ export const en: Dictionary = {
       pages: "Pages",
       score: "Score",
       scorePlaceholder: "e.g. Beethoven Violin Sonata No. 5 “Spring”",
+      upload: {
+        label: "Score PDF (optional)",
+        help: "You can attach the score as a PDF (up to 20 MB per file, 3 files). Only scores free of copyright issues. If you do not attach one, we will arrange it by email after receiving your request.",
+        choose: "Choose PDF",
+        uploading: "Uploading…",
+        uploaded: "Attached",
+        remove: "Remove",
+        files: "Attached scores",
+        waiting: "Please wait until the score PDF has finished uploading.",
+        errors: { not_connected: "Online attachments are not available yet. Please send the file by email after we reply.", pdf_only: "Only PDF files can be attached.", too_large: "Files over 20 MB cannot be attached.", rate_limited: "Too many uploads in a short time. Please try again later.", failed: "Upload failed. Please try again.", too_many: "You can attach up to 3 files." },
+      },
     },
     recording: {
       heading: "Recording",
@@ -968,9 +980,10 @@ export const en: Dictionary = {
     bowing: {
       title: "Add fingerings and bowings to this score?",
       lead: "We mark up your violin part with fingerings and bowings that balance playability and musicality.",
-      prices: ["Fingerings only: ¥1,000 per page", "Bowings only: ¥1,000 per page", "Fingerings and bowings: ¥1,500 per page"],
+      priceLines: { fingering: (p) => `Fingerings only: ${p} per page`, bowing: (p) => `Bowings only: ${p} per page`, both: (p) => `Fingerings and bowings: ${p} per page` },
+      priceNote: { jp: "Prices for Japan (JPY, tax included).", intl: "Prices for requests from outside Japan (USD, tax included).", unknown: "We could not detect your region, so prices for Japan (JPY) are shown provisionally." },
       cta: "Learn more about the service",
-      note: "The online request form is not available yet.",
+      note: "Full payment is required before work begins (we start once payment is confirmed).",
     },
     ad: {
       label: "PR",

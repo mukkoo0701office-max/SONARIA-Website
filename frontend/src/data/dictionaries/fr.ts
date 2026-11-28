@@ -587,6 +587,7 @@ export const fr: Dictionary = {
       help: "Lieu, durée de la prestation, type d’événement, morceaux souhaités, etc.",
       placeholder: "ex. Réception de mariage dans un hôtel de Tokyo. Environ 30 minutes pendant le dîner. Surtout des classiques populaires.",
     },
+    paymentNote: { card: "Dès que vous acceptez notre devis, nous vous envoyons par e-mail un lien de paiement par carte. La réservation est confirmée à réception du paiement.", bank: "Dès que vous acceptez notre devis, nous vous envoyons nos coordonnées bancaires par e-mail. La réservation est confirmée à réception du paiement." },
     review: "Vérifier votre demande",
     submit: "Demander un devis gratuit",
     note: "L’envoi de ce formulaire ne constitue ni une réservation ni un contrat. Les prix ne sont jamais fixés automatiquement ; nous vous envoyons un devis après avoir étudié votre demande.",
@@ -735,6 +736,17 @@ export const fr: Dictionary = {
       pages: "Pages",
       score: "Partition",
       scorePlaceholder: "ex. Beethoven, Sonate pour violon n° 5 « Le Printemps »",
+      upload: {
+        label: "Partition en PDF (facultatif)",
+        help: "Vous pouvez joindre la partition en PDF (20 Mo maximum par fichier, 3 fichiers). Uniquement des partitions libres de droits. Sans pièce jointe, nous en discuterons par e-mail après réception de votre demande.",
+        choose: "Choisir un PDF",
+        uploading: "Envoi en cours…",
+        uploaded: "Jointe",
+        remove: "Retirer",
+        files: "Partitions jointes",
+        waiting: "Veuillez patienter jusqu’à la fin de l’envoi de la partition PDF.",
+        errors: { not_connected: "L’envoi de pièces jointes en ligne n’est pas encore disponible. Envoyez le fichier par e-mail après notre réponse.", pdf_only: "Seuls les fichiers PDF peuvent être joints.", too_large: "Les fichiers de plus de 20 Mo ne peuvent pas être joints.", rate_limited: "Trop d’envois en peu de temps. Veuillez réessayer plus tard.", failed: "L’envoi a échoué. Veuillez réessayer.", too_many: "Vous pouvez joindre 3 fichiers au maximum." },
+      },
     },
     recording: {
       heading: "Enregistrement",
@@ -963,9 +975,10 @@ export const fr: Dictionary = {
     bowing: {
       title: "Ajouter doigtés et coups d’archet à cette partition ?",
       lead: "Nous annotons votre partie de violon de doigtés et de coups d’archet alliant jouabilité et musicalité.",
-      prices: ["Doigtés seuls : 1 000 ¥ par page", "Coups d’archet seuls : 1 000 ¥ par page", "Doigtés et coups d’archet : 1 500 ¥ par page"],
+      priceLines: { fingering: (p) => `Doigtés seuls : ${p} par page`, bowing: (p) => `Coups d’archet seuls : ${p} par page`, both: (p) => `Doigtés et coups d’archet : ${p} par page` },
+      priceNote: { jp: "Tarifs pour le Japon (JPY, taxes comprises).", intl: "Tarifs pour les demandes hors du Japon (USD, taxes comprises).", unknown: "Nous n’avons pas pu déterminer votre région : les tarifs pour le Japon (JPY) sont affichés à titre provisoire." },
       cta: "En savoir plus sur le service",
-      note: "Le formulaire de demande en ligne n’est pas encore disponible.",
+      note: "Le paiement intégral est demandé avant le début du travail (nous commençons dès réception du paiement).",
     },
     ad: {
       label: "PR",

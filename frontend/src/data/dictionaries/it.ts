@@ -587,6 +587,7 @@ export const it: Dictionary = {
       help: "Luogo, durata dell’esibizione, tipo di evento, brani desiderati, ecc.",
       placeholder: "es. Ricevimento di nozze in un hotel di Tokyo. Circa 30 minuti durante la cena. Soprattutto classici famosi.",
     },
+    paymentNote: { card: "Quando accetti il nostro preventivo, ti inviamo via e-mail un link per il pagamento con carta. La prenotazione è confermata alla ricezione del pagamento.", bank: "Quando accetti il nostro preventivo, ti inviamo via e-mail le nostre coordinate bancarie. La prenotazione è confermata alla ricezione del pagamento." },
     review: "Controlla la richiesta",
     submit: "Richiedi un preventivo gratuito",
     note: "L’invio di questo modulo non costituisce né una prenotazione né un contratto. I prezzi non vengono mai fissati automaticamente: ti invieremo un preventivo dopo aver valutato la richiesta.",
@@ -735,6 +736,17 @@ export const it: Dictionary = {
       pages: "Pagine",
       score: "Spartito",
       scorePlaceholder: "es. Beethoven, Sonata per violino n. 5 «La primavera»",
+      upload: {
+        label: "Spartito in PDF (facoltativo)",
+        help: "Puoi allegare lo spartito in PDF (fino a 20 MB per file, 3 file). Solo spartiti privi di problemi di diritto d’autore. Se non alleghi nulla, ne parleremo via e-mail dopo aver ricevuto la richiesta.",
+        choose: "Scegli PDF",
+        uploading: "Caricamento…",
+        uploaded: "Allegato",
+        remove: "Rimuovi",
+        files: "Spartiti allegati",
+        waiting: "Attendi il termine del caricamento dello spartito PDF.",
+        errors: { not_connected: "Gli allegati online non sono ancora disponibili. Invia il file via e-mail dopo la nostra risposta.", pdf_only: "Si possono allegare solo file PDF.", too_large: "Non si possono allegare file oltre i 20 MB.", rate_limited: "Troppi caricamenti in poco tempo. Riprova più tardi.", failed: "Caricamento non riuscito. Riprova.", too_many: "Puoi allegare fino a 3 file." },
+      },
     },
     recording: {
       heading: "Registrazione",
@@ -963,9 +975,10 @@ export const it: Dictionary = {
     bowing: {
       title: "Aggiungere diteggiature e arcate a questo spartito?",
       lead: "Annotiamo la tua parte di violino con diteggiature e arcate che uniscono comodità esecutiva e musicalità.",
-      prices: ["Solo diteggiature: 1.000 ¥ a pagina", "Solo arcate: 1.000 ¥ a pagina", "Diteggiature e arcate: 1.500 ¥ a pagina"],
+      priceLines: { fingering: (p) => `Solo diteggiature: ${p} a pagina`, bowing: (p) => `Solo arcate: ${p} a pagina`, both: (p) => `Diteggiature e arcate: ${p} a pagina` },
+      priceNote: { jp: "Prezzi per il Giappone (JPY, tasse incluse).", intl: "Prezzi per richieste da fuori del Giappone (USD, tasse incluse).", unknown: "Non è stato possibile determinare la tua regione, quindi sono mostrati provvisoriamente i prezzi per il Giappone (JPY)." },
       cta: "Scopri di più sul servizio",
-      note: "Il modulo di richiesta online non è ancora disponibile.",
+      note: "È richiesto il pagamento completo prima dell’inizio del lavoro (iniziamo non appena confermato il pagamento).",
     },
     ad: {
       label: "PR",

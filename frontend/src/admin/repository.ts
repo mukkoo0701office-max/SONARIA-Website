@@ -68,6 +68,8 @@ export interface AdminRepository {
   /** 金額の確定（決済済みなら拒否される。未払いの古い請求は取り消される） */
   confirmPrice(inquiryId: string, amount: number, currency: Currency, note?: string): Promise<Inquiry>;
   listPayments(inquiryId: string): Promise<PaymentRecord[]>;
+  /** 添付ファイルを開く URL（短時間だけ有効）。ファイルの保存先が無い環境では null */
+  attachmentUrl(path: string): Promise<string | null>;
   // 銀行振込の手動管理（Phase 4）。requestId は同じ操作の再送を 1 回にまとめるための ID（画面で 1 操作ごとに作る）
   /** 振込案内を送ったことの記録（確定金額・円のみ）。案件は「入金待ち」へ */
   recordBankNotice(inquiryId: string, requestId: string, note?: string): Promise<PaymentRecord>;

@@ -303,8 +303,80 @@ await check("請求先が不明なら通貨を決めない（金額を作らな�
   assert.equal(q.q, null);
 });
 
+// ── 楽譜 PDF のアップロード（Phase 5） ──
+const uploadEndpoint = `${API_URL}/functions/v1/upload-url`;
+const askUpload = (body, { origin = ORIGIN, ip = "203.0.113.80" } = {}) =>
+  fetch(uploadEndpoint, { method: "POST", headers: { "Content-Type": "application/json", apikey: ANON_KEY, Origin: origin, "X-Forwarded-For": ip }, body: JSON.stringify(body) });
+// 関数の中の SUPABASE_URL はコンテナ内の名前（kong）なので、テストからは API_URL に置き換えて送る
+const reachable = (u) => { const x = new URL(u); return `${API_URL}${x.pathname}${x.search}`; };
+const tinyPdf = new Blob(["%PDF-1.4\n1 0 obj<<>>endobj\ntrailer<<>>\n%%EOF\n"], { type: "application/pdf" });
+async function uploadOne(ip) {
+  const r = await askUpload({ name: "score.pdf", size: tinyPdf.size, type: "application/pdf" }, { ip });
+  assert.equal(r.status, 200, await r.clone().text());
+  const { path, uploadUrl } = await r.json();
+  const form = new FormData();
+  form.append("cacheControl", "3600");
+  form.append("", tinyPdf, "score.pdf");
+  const put = await fetch(reachable(uploadUrl), { method: "PUT", headers: { "x-upsert": "false", apikey: ANON_KEY }, body: form });
+  assert.equal(put.status, 200, await put.text());
+  return path;
+}
+let uploadedPath = null;
+
+await check("アップロード URL: PDF 以外・20 MB 超・許可していない Origin は拒否", async () => {
+  assert.equal((await askUpload({ name: "a.png", size: 100, type: "image/png" })).status, 400);
+  assert.equal((await askUpload({ name: "a.pdf", size: 21 * 1024 * 1024, type: "application/pdf" })).status, 400);
+  assert.equal((await askUpload({ name: "a.pdf", size: 100, type: "application/pdf" }, { origin: "https://evil.example" })).status, 403);
+});
+
+await check("PDF を送り、そのパスを付けて申込できる（保存先は検査済みの形）", async () => {
+  uploadedPath = await uploadOne("203.0.113.81");
+  assert.match(uploadedPath, /^pending\/\d{4}-\d{2}-\d{2}\/[0-9a-f-]{36}\.pdf$/);
+  const b = bowing("jp");
+  b.bowing = { ...b.bowing, files: [{ path: uploadedPath, name: "score.pdf", size: tinyPdf.size, extra: "x" }] };
+  const r = await post(b, { ip: "203.0.113.82" });
+  assert.equal(r.status, 200, await r.clone().text());
+  const { receipt } = await r.json();
+  const files = JSON.parse(psql(`select (payload -> 'bowing' -> 'files')::text from public.submissions where receipt_no = '${receipt}'`));
+  assert.deepEqual(files, [{ path: uploadedPath, name: "score.pdf", size: tinyPdf.size }]);
+});
+
+await check("アップロードしていないパス・形の違うパスは拒否", async () => {
+  const b = bowing("jp");
+  b.bowing = { ...b.bowing, files: [{ path: `pending/2026-01-01/${crypto.randomUUID()}.pdf`, name: "x.pdf", size: 10 }] };
+  assert.equal((await post(b, { ip: "203.0.113.83" })).status, 400);
+  b.bowing.files = [{ path: "../secret.pdf", name: "x.pdf", size: 10 }];
+  assert.equal((await post(b, { ip: "203.0.113.84" })).status, 400);
+});
+
+await check("利用者（公開キー）は添付ファイルを読めない・一覧できない", async () => {
+  const r = await fetch(`${API_URL}/storage/v1/object/submission-files/${uploadedPath}`, { headers: { apikey: ANON_KEY, Authorization: `Bearer ${ANON_KEY}` } });
+  assert.notEqual(r.status, 200);
+  const l = await fetch(`${API_URL}/storage/v1/object/list/submission-files`, { method: "POST", headers: { apikey: ANON_KEY, Authorization: `Bearer ${ANON_KEY}`, "Content-Type": "application/json" }, body: JSON.stringify({ prefix: "pending" }) });
+  const t = await l.text();
+  assert.ok(l.status !== 200 || t === "[]", t.slice(0, 80));
+});
+
+await check("アップロード URL の発行回数を制限する", async () => {
+  let limited = false;
+  for (let i = 0; i < 25 && !limited; i++) {
+    const r = await askUpload({ name: "a.pdf", size: 100, type: "application/pdf" }, { ip: "203.0.113.85" });
+    if (r.status === 429) limited = true;
+  }
+  assert.ok(limited);
+});
+
 if (SERVICE_ROLE_KEY) {
   const admin = asUser(await signIn("admin@example.com", "admin-pass-123456"));
+  await check("管理人は添付ファイルを短時間の署名付き URL で開ける", async () => {
+    const r = await admin(`../storage/v1/object/sign/submission-files/${uploadedPath}`, { method: "POST", body: JSON.stringify({ expiresIn: 60 }) });
+    assert.equal(r.status, 200, await r.clone().text());
+    const { signedURL } = await r.json();
+    const f = await fetch(`${API_URL}/storage/v1${signedURL}`);
+    assert.equal(f.status, 200);
+    assert.match(await f.text(), /^%PDF/);
+  });
+
   const rec = await (await post(bowing("jp"), { ip: "203.0.113.56" })).json();
   const id = psql(`select id from public.submissions where receipt_no = '${rec.receipt}'`);
   const rpc = (name, body) => admin(`rpc/${name}`, { method: "POST", body: JSON.stringify(body) });

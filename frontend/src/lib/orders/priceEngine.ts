@@ -162,7 +162,7 @@ export function quoteInputFromPayload(payload: unknown): QuoteInput | null {
   return null;
 }
 
-/** 請求先の地域。申告（billingRegion）を正とする。読めなければ null */
+/** 端末から推定した地域（billingRegion）。参考値で、サーバーはアクセス元の国を優先する。読めなければ null */
 export function regionFromPayload(payload: unknown): Region | null {
   if (typeof payload !== "object" || payload === null) return null;
   const v = (payload as Record<string, unknown>).billingRegion;

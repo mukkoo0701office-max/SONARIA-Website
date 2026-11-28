@@ -119,7 +119,7 @@ export type Inquiry = {
   internalMemo: string;
   /** 請求先・通貨・金額（受付時の計算と確定金額） */
   billing?: CaseBilling;
-  attachments: { name: string; size: number }[]; // 実ファイルは非公開ストレージ（未接続）
+  attachments: { name: string; size: number; path?: string }[]; // path があれば非公開ストレージ（submission-files）の実ファイル
   source: DataSource;
   /** 送信時の原文（変更しない）。これがある案件では、整理表示と返信文の組み立てが使える */
   raw?: RawSubmission;

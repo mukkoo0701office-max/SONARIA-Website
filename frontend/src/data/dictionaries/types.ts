@@ -294,6 +294,8 @@ export type Dictionary = {
     budget: { heading: string; options: Record<BudgetRange, string>; note: string };
     ensemble: { heading: string; options: Record<PerformanceEnsemble, string>; notes: Record<PerformanceEnsemble, string>; instruments: string; instrumentsPlaceholder: string };
     remarks: { heading: string; help: string; placeholder: string };
+    /** お支払い方法の説明（演奏依頼は見積もりの確定後に支払い） */
+    paymentNote: { card: string; bank: string };
     review: string;
     submit: string;
     note: string;
@@ -425,6 +427,18 @@ export type Dictionary = {
       pages: string;
       score: string;
       scorePlaceholder: string;
+      /** 楽譜 PDF の添付（任意・PDF のみ・1 ファイル 20 MB・3 ファイルまで） */
+      upload: {
+        label: string;
+        help: string;
+        choose: string;
+        uploading: string;
+        uploaded: string;
+        remove: string;
+        files: string;
+        waiting: string;
+        errors: Record<"not_connected" | "pdf_only" | "too_large" | "rate_limited" | "failed" | "too_many", string>;
+      };
     };
     recording: {
       heading: string;
@@ -586,7 +600,9 @@ export type Dictionary = {
     bowing: {
       title: string;
       lead: string;
-      prices: readonly string[];
+      // 料金は料金マスタから（地域に応じて円／ドル）。文言だけを辞書に持つ
+      priceLines: Record<"fingering" | "bowing" | "both", (price: string) => string>;
+      priceNote: Record<"jp" | "intl" | "unknown", string>;
       cta: string;
       note: string;
     };

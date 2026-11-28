@@ -587,6 +587,7 @@ export const es: Dictionary = {
       help: "Lugar, duración de la actuación, tipo de evento, obras deseadas, etc.",
       placeholder: "p. ej. Banquete de boda en un hotel de Tokio. Unos 30 minutos durante la cena. Sobre todo clásicos populares.",
     },
+    paymentNote: { card: "Cuando aceptes nuestro presupuesto, te enviaremos por correo electrónico un enlace de pago con tarjeta. La reserva se confirma al recibir el pago.", bank: "Cuando aceptes nuestro presupuesto, te enviaremos nuestros datos bancarios por correo electrónico. La reserva se confirma al recibir el pago." },
     review: "Revisar la solicitud",
     submit: "Solicitar presupuesto gratuito",
     note: "Enviar este formulario no supone una reserva ni un contrato. Los precios nunca se fijan automáticamente; te enviaremos un presupuesto tras revisar tu solicitud.",
@@ -735,6 +736,17 @@ export const es: Dictionary = {
       pages: "Páginas",
       score: "Partitura",
       scorePlaceholder: "p. ej. Beethoven, Sonata para violín n.º 5 «Primavera»",
+      upload: {
+        label: "Partitura en PDF (opcional)",
+        help: "Puedes adjuntar la partitura en PDF (hasta 20 MB por archivo, 3 archivos). Solo partituras sin problemas de derechos de autor. Si no adjuntas ninguna, lo acordaremos por correo electrónico tras recibir tu solicitud.",
+        choose: "Elegir PDF",
+        uploading: "Subiendo…",
+        uploaded: "Adjuntada",
+        remove: "Quitar",
+        files: "Partituras adjuntas",
+        waiting: "Espera a que termine de subirse la partitura en PDF.",
+        errors: { not_connected: "Los adjuntos en línea aún no están disponibles. Envía el archivo por correo electrónico cuando te respondamos.", pdf_only: "Solo se pueden adjuntar archivos PDF.", too_large: "No se pueden adjuntar archivos de más de 20 MB.", rate_limited: "Demasiadas subidas en poco tiempo. Inténtalo de nuevo más tarde.", failed: "No se ha podido subir. Inténtalo de nuevo.", too_many: "Puedes adjuntar hasta 3 archivos." },
+      },
     },
     recording: {
       heading: "Grabación",
@@ -963,9 +975,10 @@ export const es: Dictionary = {
     bowing: {
       title: "¿Añadir digitaciones y arcos a esta partitura?",
       lead: "Anotamos tu parte de violín con digitaciones y arcos que equilibran facilidad de ejecución y musicalidad.",
-      prices: ["Solo digitaciones: 1.000 ¥ por página", "Solo arcos: 1.000 ¥ por página", "Digitaciones y arcos: 1.500 ¥ por página"],
+      priceLines: { fingering: (p) => `Solo digitaciones: ${p} por página`, bowing: (p) => `Solo arcos: ${p} por página`, both: (p) => `Digitaciones y arcos: ${p} por página` },
+      priceNote: { jp: "Precios para Japón (JPY, impuestos incluidos).", intl: "Precios para solicitudes desde fuera de Japón (USD, impuestos incluidos).", unknown: "No hemos podido determinar tu región, así que se muestran provisionalmente los precios para Japón (JPY)." },
       cta: "Más información sobre el servicio",
-      note: "El formulario de solicitud en línea aún no está disponible.",
+      note: "Se requiere el pago completo antes de empezar el trabajo (empezamos en cuanto confirmamos el pago).",
     },
     ad: {
       label: "PR",

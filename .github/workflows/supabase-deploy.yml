@@ -83,6 +83,8 @@ jobs:
         run: |
           Y=""; supabase functions deploy --help 2>&1 | grep -q -- '--yes' && Y=--yes
           supabase functions deploy submit --project-ref "$PROJECT_REF" --no-verify-jwt $Y
+          # 楽譜 PDF のアップロード URL の発行（決済導入 Phase 5）
+          supabase functions deploy upload-url --project-ref "$PROJECT_REF" --no-verify-jwt $Y
 
       - name: Smoke test (no data written)
         run: |
