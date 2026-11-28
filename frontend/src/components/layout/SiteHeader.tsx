@@ -52,7 +52,7 @@ export default function SiteHeader({ locale, partial = {} }: { locale: Locale; p
         </Link>
 
         <div className="flex items-center gap-2">
-          <LanguageSwitcher locale={locale} label={dict.common.languageLabel} names={dict.common.languageNames} partial={partial} />
+          <LanguageSwitcher locale={locale} label={dict.common.languageLabel} partial={partial} />
           <button
             ref={buttonRef}
             type="button"

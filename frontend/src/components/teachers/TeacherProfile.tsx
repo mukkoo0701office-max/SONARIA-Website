@@ -7,7 +7,7 @@ import { getDictionary } from "@/data/dictionaries";
 import { findPrefecture } from "@/data/prefectures";
 import { pagePaths } from "@/data/site";
 import { findTeacher, type Teacher } from "@/data/teachers";
-import { localizedPath, type Locale } from "@/lib/i18n";
+import { tr, localizedPath, type Locale } from "@/lib/i18n";
 
 // 講師の簡易プロフィール（承認済み B案）。
 // 静的書き出しのため、URL は /teachers/profile/?id=... とし、id はマウント後に読む。
@@ -61,7 +61,7 @@ export default function TeacherProfile({ locale }: { locale: Locale }) {
             </Link>
             <span aria-hidden="true"> / </span>
           </li>
-          <li aria-current="page">{teacher.displayName[locale]}</li>
+          <li aria-current="page">{tr(teacher.displayName, locale)}</li>
         </ol>
       </nav>
 
@@ -71,7 +71,7 @@ export default function TeacherProfile({ locale }: { locale: Locale }) {
         </p>
       )}
 
-      <h1 className="mt-5 text-2xl font-bold">{teacher.displayName[locale]}</h1>
+      <h1 className="mt-5 text-2xl font-bold">{tr(teacher.displayName, locale)}</h1>
 
       <dl className="mt-6 grid gap-5 rounded-card border border-line bg-card p-[17px] text-[13px]">
         <div>
@@ -85,8 +85,8 @@ export default function TeacherProfile({ locale }: { locale: Locale }) {
         <div>
           <dt className="mb-1.5 font-semibold">{t.area}</dt>
           <dd>
-            {pref ? pref[locale] : ""}
-            {teacher.station ? ` · ${tt.nearestStation(teacher.station[locale])}` : ""}
+            {pref ? tr(pref, locale) : ""}
+            {teacher.station ? ` · ${tt.nearestStation(tr(teacher.station, locale))}` : ""}
             {teacher.travel && <span className="block text-muted">{tt.travel(teacher.travel.minutes)}</span>}
           </dd>
         </div>
@@ -109,13 +109,13 @@ export default function TeacherProfile({ locale }: { locale: Locale }) {
         <div>
           <dt className="mb-1.5 font-semibold">{t.education}</dt>
           <dd>
-            {teacher.education[locale]}
+            {tr(teacher.education, locale)}
             {!teacher.education.verified && <span className="ml-2 text-muted">— {t.selfDeclared}</span>}
           </dd>
         </div>
         <div>
           <dt className="mb-1.5 font-semibold">{t.intro}</dt>
-          <dd className="leading-relaxed">{teacher.intro[locale]}</dd>
+          <dd className="leading-relaxed">{tr(teacher.intro, locale)}</dd>
         </div>
       </dl>
 

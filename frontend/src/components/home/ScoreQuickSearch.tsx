@@ -8,7 +8,7 @@ import { getDictionary } from "@/data/dictionaries";
 import { pagePaths } from "@/data/site";
 import { libraryPaths } from "@/data/scores/paths";
 import { genres, instruments, type Formation, type Genre, type Instrument, type WorkSummary } from "@/data/works";
-import { localizedPath, type Locale } from "@/lib/i18n";
+import { jaOrEn, localizedPath, type Locale } from "@/lib/i18n";
 import { countBy, filtersToSearch, initialFilters, matchesFilters, playersKey, sheetKeys, type ScoreFilters } from "@/lib/scores/filters";
 import { playerCounts, sheetKinds, type PlayersFilter, type SheetFilter } from "@/lib/scores/sheetType";
 import { suggest, type SuggestComposer } from "@/lib/scores/suggest";
@@ -57,7 +57,7 @@ export default function ScoreQuickSearch({ locale, works, composers, formations,
   const [active, setActive] = useState(-1);
   const options: Option[] = useMemo(() => {
     const linkable = works.filter((w): w is WorkSummary & { slug: string } => !!w.slug);
-    const r = suggest(filters.q, linkable, suggestComposers, locale);
+    const r = suggest(filters.q, linkable, suggestComposers, jaOrEn(locale));
     if (!r.composers.length && !r.works.length) return [];
     const hrefOf = new Map(suggestComposers.map((c) => [c.id, c.href]));
     const q = filters.q.trim();

@@ -8,7 +8,8 @@
 //   - 署名は個人名ではなく SONARIA
 //   - 会場・演奏時間の質問は入れない（運営者が状況に応じて書き足す。2026-11-28 決定）
 
-import type { Locale } from "@/lib/i18n";
+// 管理画面と返信文は日本語・英語だけ（多言語化の対象外。docs/i18n/I18N_FOUNDATION.md）
+type Locale = "ja" | "en";
 import type { Facts, SubmissionKind } from "./describe";
 
 export type Purpose =

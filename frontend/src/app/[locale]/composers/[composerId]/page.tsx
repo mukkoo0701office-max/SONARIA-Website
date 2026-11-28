@@ -11,7 +11,7 @@ import { getDictionary } from "@/data/dictionaries";
 import { composerLocales, getComposer, isSampleCatalog, publishedComposers, worksByComposer } from "@/data/scores/catalog";
 import { libraryPaths } from "@/data/scores/paths";
 import type { Composer } from "@/data/scores/types";
-import { isLocale, localizedPath, type Locale } from "@/lib/i18n";
+import { tr, isLocale, localizedPath, type Locale } from "@/lib/i18n";
 import { withBasePath } from "@/lib/paths";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
 
@@ -51,11 +51,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return pageMetadata({
     locale,
     path: libraryPaths.composer(c.id),
-    title: t.metaTitle(c.name[locale]),
-    description: t.metaDescription(c.name[locale], worksByComposer(c.id).length),
+    title: t.metaTitle(tr(c.name, locale)),
+    description: t.metaDescription(tr(c.name, locale), worksByComposer(c.id).length),
     availableLocales: composerLocales(c),
     type: "profile",
-    image: c.portrait ? { url: c.portrait.file, width: c.portrait.width, height: c.portrait.height, alt: c.portrait.alt[locale] } : null,
+    image: c.portrait ? { url: c.portrait.file, width: c.portrait.width, height: c.portrait.height, alt: tr(c.portrait.alt, locale) } : null,
   });
 }
 
@@ -79,7 +79,7 @@ export default async function ComposerPage({ params }: Props) {
     ...(pageUrl ? { url: pageUrl } : {}),
     ...(c.born ? { birthDate: c.born } : {}),
     ...(c.died ? { deathDate: c.died } : {}),
-    ...(c.nationality ? { nationality: c.nationality[locale] } : {}),
+    ...(c.nationality ? { nationality: tr(c.nationality, locale) } : {}),
     ...(c.portrait && absoluteUrl(c.portrait.file) ? { image: absoluteUrl(c.portrait.file) } : {}),
     ...(c.externalIds?.wikidata ? { sameAs: [`https://www.wikidata.org/wiki/${c.externalIds.wikidata}`] } : {}),
   };
@@ -91,7 +91,7 @@ export default async function ComposerPage({ params }: Props) {
         items={[
           { label: lib.home, href: localizedPath(locale, "/") },
           { label: lib.composers, href: localizedPath(locale, libraryPaths.composers) },
-          { label: c.name[locale] },
+          { label: tr(c.name, locale) },
         ]}
       />
       {isSampleCatalog && <p className="mt-4 rounded-card border border-line bg-subtle p-3 text-xs">{lib.sampleNotice}</p>}
@@ -104,14 +104,14 @@ export default async function ComposerPage({ params }: Props) {
               src={withBasePath(c.portrait.file)}
               width={c.portrait.width}
               height={c.portrait.height}
-              alt={c.portrait.alt[locale]}
+              alt={tr(c.portrait.alt, locale)}
               className="aspect-[3/4] w-full rounded border border-line bg-card object-cover"
             />
           </figure>
         )}
         <div>
-          <h1 className="text-2xl font-bold leading-snug">{c.name[locale]}</h1>
-          {c.name.original !== c.name[locale] && <p className="mt-1 text-sm text-muted">{c.name.original}</p>}
+          <h1 className="text-2xl font-bold leading-snug">{tr(c.name, locale)}</h1>
+          {c.name.original !== tr(c.name, locale) && <p className="mt-1 text-sm text-muted">{c.name.original}</p>}
           <dl className="mt-3 grid gap-1 text-[13px]">
             {span && (
               <div>
@@ -122,7 +122,7 @@ export default async function ComposerPage({ params }: Props) {
             {c.nationality && (
               <div>
                 <dt className="inline text-muted">{t.nationality}: </dt>
-                <dd className="inline">{c.nationality[locale]}</dd>
+                <dd className="inline">{tr(c.nationality, locale)}</dd>
               </div>
             )}
           </dl>
@@ -140,7 +140,7 @@ export default async function ComposerPage({ params }: Props) {
           </h2>
           <ul className="mt-2 grid gap-0.5 text-[14px]">
             {c.notableWorks.map((w) => (
-              <li key={w.ja}>・{w[locale]}</li>
+              <li key={w.ja}>・{tr(w, locale)}</li>
             ))}
           </ul>
         </section>
@@ -165,7 +165,7 @@ export default async function ComposerPage({ params }: Props) {
             {related.map((r) => (
               <li key={r.id}>
                 <Link href={localizedPath(composerLocales(r).includes(locale) ? locale : "ja", libraryPaths.composer(r.id))} className="inline-block rounded-full border border-line bg-card px-3 py-1.5 text-[13px] hover:border-navy">
-                  {r.name[locale]}
+                  {tr(r.name, locale)}
                 </Link>
               </li>
             ))}

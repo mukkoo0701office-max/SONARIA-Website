@@ -19,7 +19,7 @@ import {
   type Audience,
   type LessonFormat,
 } from "@/data/teachers";
-import { localizedPath, type Locale } from "@/lib/i18n";
+import { tr, localizedPath, type Locale } from "@/lib/i18n";
 import { normalizeForSearch } from "@/lib/normalize";
 import {
   buildTeacherQuery,
@@ -164,7 +164,7 @@ export default function TeacherSearch({ locale }: { locale: Locale }) {
           id="teacher-pref"
           label={t.prefecture}
           value={filters.pref}
-          options={[{ value: "all", label: t.prefectureAll }, ...prefectures.map((p) => ({ value: p.code, label: p[locale] }))]}
+          options={[{ value: "all", label: t.prefectureAll }, ...prefectures.map((p) => ({ value: p.code, label: tr(p, locale) }))]}
           onChange={(v) => update({ pref: v })}
         />
         <fieldset className="my-4">

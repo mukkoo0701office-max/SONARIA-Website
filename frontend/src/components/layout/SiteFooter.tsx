@@ -86,7 +86,7 @@ export default function SiteFooter({ locale, partial = {} }: { locale: Locale; p
         <div className="mx-auto flex max-w-wide flex-wrap items-center justify-between gap-3 px-4 py-5 lg:px-6">
           <p className="text-xs text-muted">{dict.footer.copyright}</p>
           {/* ヘッダーと同じ切り替え（同じ Cookie を使うので状態は共有される） */}
-          <LanguageSwitcher locale={locale} label={dict.common.languageLabel} names={dict.common.languageNames} size="regular" partial={partial} />
+          <LanguageSwitcher locale={locale} label={dict.common.languageLabel} size="regular" partial={partial} />
         </div>
       </div>
     </footer>

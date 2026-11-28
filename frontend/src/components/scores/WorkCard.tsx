@@ -4,7 +4,7 @@ import Link from "next/link";
 import Tag from "@/components/ui/Tag";
 import type { Dictionary } from "@/data/dictionaries/types";
 import type { WorkSummary } from "@/data/works";
-import { localizedPath, type Locale } from "@/lib/i18n";
+import { tr, localizedPath, type Locale } from "@/lib/i18n";
 
 type Props = {
   work: WorkSummary;
@@ -18,7 +18,7 @@ type Props = {
 
 export default function WorkCard({ work, locale, t, open, favorite, onToggleOpen, onToggleFavorite }: Props) {
   const detailsId = `work-details-${work.id}`;
-  const title = work.title[locale];
+  const title = tr(work.title, locale);
   const href = work.slug ? localizedPath(work.hasEnglish ? locale : "ja", `/scores/${work.slug}/`) : null;
 
   return (
@@ -37,7 +37,7 @@ export default function WorkCard({ work, locale, t, open, favorite, onToggleOpen
               title
             )}
           </h2>
-          <div className="text-xs text-muted">{work.composer[locale]}</div>
+          <div className="text-xs text-muted">{tr(work.composer, locale)}</div>
         </div>
         {/* 仮: 保存はメモリ上のみ（再読み込みで消える）。永続化はプライバシー設計後 */}
         <button

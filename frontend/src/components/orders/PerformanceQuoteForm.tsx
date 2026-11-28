@@ -27,7 +27,7 @@ import {
 } from "@/data/orders/performance";
 import { getDictionary } from "@/data/dictionaries";
 import { pagePaths } from "@/data/site";
-import { localizedPath, type Locale } from "@/lib/i18n";
+import { jaOrEn, localizedPath, type Locale } from "@/lib/i18n";
 import { submitPerformanceQuote, withReceipt, type SubmitResult } from "@/lib/orders/submit";
 
 type Step = "edit" | "confirm" | "done";
@@ -281,7 +281,7 @@ export default function PerformanceQuoteForm({ locale }: { locale: Locale }) {
         <TextField id="pd-name" label={f.name} value={name} onChange={setName} required labels={labels} error={err("name")} autoComplete="name" />
         <TextField id="pd-email" type="email" label={f.email} value={email} onChange={setEmail} required labels={labels} error={err("email")} autoComplete="email" />
         <div className="sm:col-span-2">
-          <ConsentField id="pd-consent" checked={consent} onChange={setConsent} text={f.consent} privacyLabel={f.privacyLink} privacyHref={localizedPath(locale, pagePaths.privacy)} error={err("consent")} locale={locale} />
+          <ConsentField id="pd-consent" checked={consent} onChange={setConsent} text={f.consent} privacyLabel={f.privacyLink} privacyHref={localizedPath(locale, pagePaths.privacy)} error={err("consent")} locale={jaOrEn(locale)} />
         </div>
       </section>
 

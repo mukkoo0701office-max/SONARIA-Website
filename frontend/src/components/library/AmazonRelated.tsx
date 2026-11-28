@@ -1,6 +1,6 @@
 import type { Dictionary } from "@/data/dictionaries/types";
 import type { AmazonItem } from "@/data/affiliate/amazon";
-import type { Locale } from "@/lib/i18n";
+import { tr, type Locale } from "@/lib/i18n";
 
 // 作品ページの「関連する市販楽譜・書籍」（Amazon アソシエイト）。商品が無ければ何も表示しない。
 // 広告であることと、アソシエイトの開示文を必ず表示する（Amazon アソシエイト・プログラム運営規約）
@@ -20,7 +20,7 @@ export default function AmazonRelated({ items, locale, t }: { items: AmazonItem[
             <a href={i.url} target="_blank" rel="sponsored nofollow noopener noreferrer" className="text-navy underline">
               {i.title}
             </a>
-            {i.note && <span className="mt-0.5 block text-xs text-muted">{i.note[locale]}</span>}
+            {i.note && <span className="mt-0.5 block text-xs text-muted">{tr(i.note, locale)}</span>}
           </li>
         ))}
       </ul>

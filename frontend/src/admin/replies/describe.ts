@@ -3,7 +3,8 @@
 // 将来フォームの項目が増減しても、知らない項目は「その他の項目」として原文のまま出す（過去の回答を落とさない）。
 
 import { getDictionary } from "@/data/dictionaries";
-import type { Locale } from "@/lib/i18n";
+// 管理画面と返信文は日本語・英語だけ（多言語化の対象外。docs/i18n/I18N_FOUNDATION.md）
+type Locale = "ja" | "en";
 import { lessonPlans } from "@/data/orders/config";
 
 export type SubmissionKind = "lesson" | "bowing" | "recording" | "performance_quote" | "teacher_application";
